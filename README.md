@@ -2,13 +2,13 @@
 
 ## Background
 
-In order to help guide the general direction of DAaaS and what we think can help quickly on-board data scientists to a public cloud environment a proof of concept prototype has been created.
+In order to help guide the general direction of DAaaS and what we think can help quickly on-board data scientists to a public cloud environment a proof of concept prototype has been created using primarily open source technologies.
 
-Firstly, we're interested in leveraging the tools and experience that we have already obtained at Statistics Canada. This would mean utilizing Kubernetes (via Azure Kubernetes Service) to orchestrate all of the data science workloads. The Terraform configuration (Infrastructure as Code) already exists and we can launch a cluster within a day with our common platform tools and the various data analytics tools; KubeFlow, Jupyterhub, and the Databricks operator to name a few, as well as access to CPU and GPU machines. The Databricks operator allows us to manage Databricks from a unified control plane, utilizing Desired State Configuration. All these tools align with industry standards for data analytics.
+Firstly, we're interested in leveraging the tools and experience that we have already obtained at Statistics Canada. This would mean utilizing Kubernetes (via Azure Kubernetes Service) to orchestrate all of the data science workloads. The Terraform configuration (Infrastructure as Code) already exists and we have launched a cluster within a day with all of our common platform tools and the various data analytics tools; KubeFlow, Jupyterhub, and the Databricks operator to name a few, as well as access to CPU and GPU machines that can autoscale on demand. The Databricks operator allows us to manage Databricks from a unified control plane, utilizing Desired State Configuration and showcases an example of how Kubernetes can control PAAS services. All these tools align with industry standards for data analytics.
 
-To learn more about why Kubernetes is a good fit to manage Azure Databricks, we recommend quickly reading over the first half of the [Azure Data Bricks Operator](https://blog.openshift.com/wp-content/uploads/OpenShift-Commons-MSFT-Azure-Databricks-Operator.pdf) presentation by Microsoft which essentially describes vision. Then to see how Kubeflow can launch complex databricks operations as a pipeline which can be one of many potential outcomes; please see these [examples](https://github.com/kubeflow/pipelines/tree/0708cd723e088696ee86d523576c2daf08b5aa01/samples/contrib/azure-samples/kfp-azure-databricks). Additionally, in the links below we highlighted some reference architectures.
+> Note: To learn more about why Kubernetes is a good fit to manage Azure Databricks, we recommend quickly reading over the first half of the [Azure Data Bricks Operator](https://blog.openshift.com/wp-content/uploads/OpenShift-Commons-MSFT-Azure-Databricks-Operator.pdf) presentation by Microsoft which essentially describes vision. Then to see how Kubeflow can launch complex databricks operations as a pipeline which can be one of many potential outcomes; please see these [examples](https://github.com/kubeflow/pipelines/tree/0708cd723e088696ee86d523576c2daf08b5aa01/samples/contrib/azure-samples/kfp-azure-databricks). Additionally, in the links below we highlighted some reference architectures.
 
-Statistics Canada has experience operating Kubernetes and data analytics/science pipelines on top of it. And since Kubernetes is a general computation orchestrator, we can run supporting services, applications, and more following a common deployment and management methodology. And with the integration with Kubernetes Role-Based Access Control (RBAC) and the Open Policy Agent, we can have fine-grained control over the configuration of data analytics pipelines.
+Statistics Canada has experience operating Kubernetes and data analytics/science pipelines on top of it. Since Kubernetes is a general computation orchestrator, we can run supporting services, applications, and more following a common deployment and management methodology. Additionally with the integration with Kubernetes Role-Based Access Control (RBAC) and the Open Policy Agent, we can have fine-grained control over the configuration of data analytics pipelines.
 
 ## Key Highlights
 
@@ -39,7 +39,7 @@ When you want to work with cloud native services in `Azure`, `AWS`, `GCP`, etc. 
   * Launch customizable Spark notebooks through Kubernetes objects, which call the Databricks API (and the operator also updates the status of the job in Kubernetes)
   * Interact with Kubernetes secrets backed by Azure Keyvault enabling secure storage
 
-## Azure Kubernetes
+## Azure Kubernetes Service
 
 ![aks](images/aks_ui.png "Azure Kubernetes Service")
 
@@ -54,13 +54,16 @@ What can you do it with / what have we done with it?
 * Base for all of the components discussed later
 * Access to different machine types (CPU, GPU and high-memory) based on use-case
 
-### Links
+### Services
 
 * https://istio-kiali.example.ca
 * https://grafana.example.ca
 * https://istio-grafana.example.ca (private)
 * https://prometheus.example.ca (private)
 * https://alertmanager.example.ca (private)
+
+### Source Code
+
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
 * https://github.com/StatCan/charts
@@ -98,13 +101,15 @@ The below picture demonstrates sharing a workspace with other contributors.
 
 ![kubeflow shared workspaces](images/kubeflow_workspaces.png "Kubeflow shared workspaces")
 
-### Links
+### Source Code
 
+* https://github.com/StatCan/gpu-toleration-injector
+* https://github.com/StatCan/kubeflow-containers
+* https://github.com/StatCan/kubeflow-controller
 * https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
-* https://github.com/kubeflow/pipelines/tree/master/samples/contrib/azure-samples/databricks-pipelines
 
-## SHINY
+## Shiny
 
 ![shiny server](images/shiny_ui.png "Shiny Server")
 
@@ -124,7 +129,7 @@ The below picture demonstrates the file share containing all R applications serv
 
 ![azure files](images/shiny_azure_files.png "Shiny with Azure Files mount point")
 
-### Links
+#### Source Code
 
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/shiny/actions
@@ -147,7 +152,7 @@ What can you do it with / what have we done with it?
 
 The above picture demonstrates the action which builds and deploys the COVID-19 application.
 
-### Links
+### Source Code
 
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/covid19/actions
@@ -170,6 +175,10 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
 * https://github.com/StatCan/charts
 * https://github.com/StatCan/covid19
+* https://github.com/StatCan/daaas
+* https://github.com/StatCan/gpu-toleration-injector
+* https://github.com/StatCan/kubeflow-containers
+* https://github.com/StatCan/kubeflow-controller
 * https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
 * https://github.com/StatCan/shiny
@@ -178,6 +187,9 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 
 * https://github.com/StatCan/charts/actions
 * https://github.com/StatCan/covid19/actions
+* https://github.com/StatCan/gpu-toleration-injector/actions
+* https://github.com/StatCan/kubeflow-containers/actions
+* https://github.com/StatCan/kubeflow-controller/actions
 * https://github.com/StatCan/kubeflow-github-action/actions
 * https://github.com/StatCan/shiny/actions
 
@@ -188,9 +200,6 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://covid19.example.ca
 * https://istio-kiali.example.ca
 * https://grafana.example.ca
-
-#### Private through Port-Forward
-
-* https://istio-grafana.example.ca
-* https://prometheus.example.ca
-* https://alertmanager.example.ca
+* https://istio-grafana.example.ca (private)
+* https://prometheus.example.ca (private)
+* https://alertmanager.example.ca (private)
