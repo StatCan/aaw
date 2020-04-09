@@ -67,6 +67,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
 * https://github.com/StatCan/charts
+* https://github.com/StatCan/gatekeeper-policies
 * https://govcloud.ca
 * https://govcloud.blob.core.windows.net/docs/azure-aks-platform.pdf
 
@@ -176,6 +177,7 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://github.com/StatCan/charts
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/daaas
+* https://github.com/StatCan/gatekeeper-policies
 * https://github.com/StatCan/gpu-toleration-injector
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
