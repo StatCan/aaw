@@ -79,7 +79,9 @@ Kubeflow is a suite of tools for running Machine Learning (ML) workflows on Kube
 
 What can you do it with / what have we done with it?
 
-* Created and Open sourced GitHub Action for KubeFlow (upgrade API, and added support for X-Auth-Token)
+* Created and open sourced GitHub Action for KubeFlow (upgrade API, and added support for X-Auth-Token)
+* Authorization done via OpenID Connect (OIDC)
+* Cluster will autoscale automatically based on demand
 * Pipeline created from GitHub Actions
 * Pipelines controlled through code
 * Pipelines calling PAAS services like DataBricks
@@ -102,13 +104,86 @@ The below picture demonstrates sharing a workspace with other contributors.
 
 ![kubeflow shared workspaces](images/kubeflow_workspaces.png "Kubeflow shared workspaces")
 
-### Source Code
+#### Source Code
 
 * https://github.com/StatCan/gpu-toleration-injector
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
 * https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
+
+## Kubeflow Containers
+
+![kubeflow containers](images/kubeflow_containers.png "Kubeflow Containers")
+
+Created a set of of ready-to-run container images for various types of roles related to data science. We provide a convenient and tailored experience of Jupyter including all the tools data scientists need to do their work.
+
+What can you do it with / what have we done with it?
+
+* Built and deployed all container images to Azure Container Registry via GitHub Actions
+* Extended from the officially supported Jupyter container images providing additional data science tools
+* Task-specific images based on required tools
+  * Geomatics (R and Geo specific tooling)
+  * Machine learning (Tensorflow, Tensorboard, Keras, etc)
+  * Full workspace: VS Code, VNC Server, and other graphical tools
+* Images are built for CPU compute and GPU compute (NVIDIA/CUDA)
+
+![kubeflow containers github action](images/kubeflow_containers_action.png "Build and Deploy container images to Azure Container Registry")
+
+The above picture demonstrates the GitHub Actions workflow to build and deploy container images to the Azure Container Registry.
+
+#### Source Code
+
+* https://github.com/StatCan/kubeflow-containers
+* https://github.com/StatCan/kubeflow-containers/actions
+
+## Jupyter Notebooks (Examples)
+
+![jupyter notebooks](images/jupyter_notebooks.png "Jupyter Notebooks")
+
+We have created a variety of example Jupyter Notebooks utilizing the data science tools deployed. This includes simple examples to complete, training to model serving pipelines (MLOps).
+
+What can you do it with / what have we done with it?
+
+* Languages: Python, R
+* Technologies: Tensorflow, PyTorch, Keras
+* Storage: Accessing data stored in S3-compatible storage
+* Integration with PAaaS offerings: Azure Databricks and MLflow
+* Demonstration of a fully baked end to end pipeline from training to model serving in Kubeflow
+* Custom data science containers / algorithms for analyzing, processing, and training data:
+   * [Tensorflow Transform](https://github.com/StatCan/datascience-containers/blob/master/preprocessing/tft/src/transform.py) for preprocessing raw data to data used to train a ML model
+   * [Tensorflow Boosted Trees Classifier](https://github.com/StatCan/datascience-containers/blob/master/training/dnntrainer/src/trainer/boosted.py) to predict and work with structured data
+   * [Prediction](https://github.com/StatCan/datascience-containers/blob/master/training/predict/src/predict.py) runs data through the predicted model
+   * [Confusion Matrix](https://github.com/StatCan/datascience-containers/blob/master/metrics/confusion_matrix/src/confusion_matrix.py) for visualization of algorithm performance
+   * [Receiver Operating Characteristic](https://github.com/StatCan/datascience-containers/blob/master/metrics/roc/src/roc.py) for performance measurement for classification problem
+   * [Tensorflow Serving](https://github.com/StatCan/datascience-containers/blob/master/serving/deployer/src/deploy.sh) for delivering and updating the model
+
+![advanced pipeline example](images/jupyter_notebooks_kubeflow.png "Advanced pipeline example")
+
+The above picture demonstrates an advanced learning and training pipeline on Kubeflow.
+
+#### Source Code
+
+* https://github.com/StatCan/datascience-containers
+* https://github.com/StatCan/jupyter-notebooks
+
+## MinIO
+
+![minio ui](images/minio_ui.png "Minio UI")
+
+MinIO provides an S3-compatible API to access data stored locally or within an Azure Blob storage account.
+
+What can you do it with / what have we done with it?
+
+* Expose acccess to data stored in an Azure Blob storage account via an S3-compatible API
+  * Available for use within Kubeflow pipelines and from Jupyter notebooks
+* Basic SQL-like access to data files
+* Intend to provide a MinIO service for each project backed by an Azure Storage account
+  * Leverage the MinIO operator for MinIO lifecycle management
+
+![minio api](images/minio_api.png "Jupyter notebook interacting with MinIO")
+
+The above picture demonstrates a Jupyter Notebook interacting with MinIO through an API.
 
 ## Shiny
 
@@ -119,6 +194,7 @@ Shiny is an application server for serving R-based visualization applications cr
 What can you do it with / what have we done with it?
 
 * Launched Shiny Server to AKS via GitHub Actions
+* Created a helm chart to be called by GitHub Actions
 * Shiny Server extended behind Nginx proxy
 * Integrated with Azure Files for application hosting
 
@@ -134,6 +210,7 @@ The below picture demonstrates the file share containing all R applications serv
 
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/shiny/actions
+* https://github.com/StatCan/charts/tree/master/stable/shiny
 
 ## NodeJS (https://covid19.example.ca)
 
@@ -144,6 +221,7 @@ Covid-19 is an interactive, animated COVID-19 coronavirus map to track the outbr
 What can you do it with / what have we done with it?
 
 * Launched NodeJS react application to AKS via GitHub Actions
+* Created a helm chart to be called by GitHub Actions
 * Forked popular open source repo on GitHub and containerized
 * Started to work on french interface and design improvements
 * Looking at integrating with the Statistics Canada dataset
@@ -157,6 +235,84 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/covid19/actions
+* https://github.com/StatCan/charts/tree/master/stable/covid
+
+## .NET (https://oc.example.ca)
+
+![portal ui](images/portal_ui.png "Portal UI")
+
+The main portal for the DAaaS platform which will provide data scientists with both the list of supported services as well useful datasets that they can leverage in their machine learning journey. The portal will also offer helpful documentation, resources, tutorials, and support for the multiple types of data scientists using the platform.
+
+What can you do it with / what have we done with it?
+
+* Launched OrchardCMS application to AKS via GitHub Actions
+* Created a helm chart to be called by GitHub Actions
+* Working on latest iteration of the mockup templates
+* The addition of content as well as helpful datasets to leverage
+
+![portal github action](images/portal_action.png "Deploy Portal to AKS")
+
+The above picture demonstrates the action which builds and deploys the Portal web application.
+
+### Source Code
+
+* https://github.com/StatCan/StatCan.OrchardCore
+* https://github.com/StatCan/StatCan.OrchardCore/actions
+* https://github.com/StatCan/charts/tree/master/stable/orchard-cms
+
+## MLflow (https://mlflow.example.ca)
+
+![mlflow ui](images/mlflow_ui.png "MLflow UI")
+
+Launched MLflow alongside with its web ui in a highly available fashion on top of Kubernetes. MLflow was configured to use an Azure storage account for the backend artifact store.
+
+> Note: With MLflow 1.1, you can now run MLflow Projects on Kubernetes clusters. Any MLflow Project with a Docker Environment is supported. MLflow executes your Project code as a Kubernetes Job and periodically monitors its status until completion.
+
+What can you do it with / what have we done with it?
+
+* Launched MLflow python application to AKS via GitHub Actions
+* Created a helm chart to be called by GitHub Actions
+* Extended container image to support Azure storage backend for the artifact store
+* File store is configured as an persistent volume
+* Artifact store is configured as an Azure storage account
+* Efficient use of Gunicorn workers
+
+![mlflow github action](images/mlflow_action.png "Deploy MLflow to AKS")
+
+The above picture demonstrates the action which builds and deploys the Mlflow application.
+
+### Source Code
+
+* https://github.com/StatCan/mlflow
+* https://github.com/StatCan/mlflow/actions
+* https://github.com/StatCan/charts/tree/master/stable/mlflow
+
+## Dremio (https://dremio.example.ca)
+
+![dremio ui](images/dremio_ui.png "Dremio UI")
+
+We experimented with Dremio to provide a common way of accessing data stored in various sources (e.g., Azure Storage account, Azure Data Lake, S3, MSSQL, etc.).
+
+What can you do it with / what have we done with it?
+
+* Launched the Open Source version with the Helm chart (Highly available, with Zookeeper or Etcd backend)
+* Currently experimental due to limitations in authentication in the free version
+* Support for many data sources:
+  * Azure Storage Account
+  * Azure Data Lake
+  * S3
+  * MSSQL / MySQL / PostgreSQL
+  * Elasticsearch
+
+![dremio github action](images/dremio_action.png "Deploy Dremio to AKS")
+
+The above picture demonstrates the action which builds and deploys the Dremio application.
+
+### Source Code
+
+* https://github.com/StatCan/dremio
+* https://github.com/StatCan/dremio/actions
+* https://github.com/StatCan/charts/tree/master/stable/dremio
 
 ## Important Links
 
@@ -177,23 +333,31 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://github.com/StatCan/charts
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/daaas
+* https://github.com/StatCan/datascience-containers
+* https://github.com/StatCan/dremio
 * https://github.com/StatCan/gatekeeper-policies
+* https://github.com/StatCan/jupyter-notebooks
 * https://github.com/StatCan/gpu-toleration-injector
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
 * https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
+* https://github.com/StatCan/mlflow
 * https://github.com/StatCan/shiny
+* https://github.com/StatCan/statcan.orchardcore
 
 #### GitHub Actions
 
 * https://github.com/StatCan/charts/actions
 * https://github.com/StatCan/covid19/actions
+* https://github.com/StatCan/dremio/actions
 * https://github.com/StatCan/gpu-toleration-injector/actions
 * https://github.com/StatCan/kubeflow-containers/actions
 * https://github.com/StatCan/kubeflow-controller/actions
 * https://github.com/StatCan/kubeflow-github-action/actions
+* https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/shiny/actions
+* https://github.com/StatCan/StatCan.OrchardCore/actions
 
 #### Public
 
@@ -205,3 +369,9 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://istio-grafana.example.ca (private)
 * https://prometheus.example.ca (private)
 * https://alertmanager.example.ca (private)
+
+#### Recommended Reading
+
+* https://kubeflow.org/docs/started/getting-started/
+* https://towardsdatascience.com/tagged/kubernetes
+* https://medium.com/kredaro-engineering/ai-tales-building-machine-learning-pipeline-using-kubeflow-and-minio-4b88da30437b
