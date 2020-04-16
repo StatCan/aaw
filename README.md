@@ -10,6 +10,8 @@ Firstly, we're interested in leveraging the tools and experience that we have al
 
 Statistics Canada has experience operating Kubernetes and data analytics/science pipelines on top of it. Since Kubernetes is a general computation orchestrator, we can run supporting services, applications, and more following a common deployment and management methodology. Additionally with the integration with Kubernetes Role-Based Access Control (RBAC) and the Open Policy Agent, we can have fine-grained control over the configuration of data analytics pipelines.
 
+> Note: We had to remove all references to the hostname at the moment but hope in the future can make available.
+
 ## Key Highlights
 
 When you want to work with cloud native services in `Azure`, `AWS`, `GCP`, etc. you start to think about how you can nicely manage these services without having to have a whole second paradigm in your flows and actually deliver and bring disparate systems up.
@@ -237,7 +239,7 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://github.com/StatCan/covid19/actions
 * https://github.com/StatCan/charts/tree/master/stable/covid
 
-## .NET (https://oc.example.ca)
+## .NET (https://portal.example.ca)
 
 ![portal ui](images/portal_ui.png "Portal UI")
 
@@ -366,6 +368,7 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 #### Public
 
 * https://kubeflow.example.ca
+* https://portal.example.ca
 * https://shiny.example.ca
 * https://covid19.example.ca
 * https://istio-kiali.example.ca
