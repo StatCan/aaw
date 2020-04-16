@@ -330,6 +330,8 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan?q=daaas
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
+* https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private)
+* https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private (private)
 * https://github.com/StatCan/charts
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/daaas
@@ -358,6 +360,8 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/shiny/actions
 * https://github.com/StatCan/StatCan.OrchardCore/actions
+* https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions (private)
+* https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/actions (private)
 
 #### Public
 
