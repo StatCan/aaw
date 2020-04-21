@@ -4,8 +4,13 @@ site_description: User guide for the DAaaS Covid-19 Platform
 copyright: Copyright &copy; 2020 Statistics Canada
 theme:
   name: material
-  features:
-    - tabs
+  custom_dir: .theme
+  #features:
+  #  - tabs
+  palette:
+    primary: indigo
+    accent: teal
+  show_sidebar: false
   #logo: images/statcan.png
 
 #theme: readthedocs
@@ -14,6 +19,7 @@ markdown_extensions:
       baselevel: 2
   - attr_list
   - admonition
+  - codehilite
 
 # TODO: Fix the slack link
 extra:
@@ -21,7 +27,7 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/statcan/daaas
     - icon: fontawesome/brands/slack
-      link: https://github.com/statcan/daaas
+      link: https://statcan-analytics.slack.com
 
 
 repo_name: statcan/daaas
@@ -30,15 +36,15 @@ repo_url: https://github.com/statcan/daaas
 
 # Page tree
 nav:
-  - Getting Started: index.md
+  - Home: index.md
+  - Getting Started: Getting-Started.md
   - Analysis:
-    - Kubeflow: 1-Experiments/1-Kubeflow.md
-    - ML-Workspaces: 1-Experiments/2-ML-Workspaces.md
+    - Kubeflow: 1-Experiments/Kubeflow.md
+    - ML-Workspaces: 1-Experiments/ML-Workspaces.md
   - Publishing:
-    - R Shiny: 2-Publishing/1-R-Shiny.md
+    - R Shiny: 2-Publishing/R-Shiny.md
   - Exploring:
-    - Getting your data: 3-Exploring/1-Minio.md
+    - Getting your data: 3-Exploring/Minio.md
   - Pipelines:
-    - Kubeflow Pipelines: 4-Pipelines/1-Kubeflow-Pipelines.md
-  - Help/Contact:
-    - Help: help.md
+    - Kubeflow Pipelines: 4-Pipelines/Kubeflow-Pipelines.md
+  - Help/Contact: Help.md
