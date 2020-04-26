@@ -41,6 +41,19 @@ When you want to work with cloud native services in `Azure`, `AWS`, `GCP`, etc. 
   * Launch customizable Spark notebooks through Kubernetes objects, which call the Databricks API (and the operator also updates the status of the job in Kubernetes)
   * Interact with Kubernetes secrets backed by Azure Keyvault enabling secure storage
 
+# Platform Components
+  - [.NET](#.net)
+  - [Azure Kubernetes Service](#azure-kubernetes-service)
+  - [Dremio](#dremio)
+  - [Hashicorp Vault](#hashicorp-vault)
+  - [Jupyter Notebooks (Examples)](#jupyter-notebooks-examples)
+  - [Kubeflow](#kubeflow)
+  - [Kubeflow Containers](#kubeflow-containers)
+  - [MinIO](#minio)
+  - [MLflow](#mlflow)
+  - [NodeJS](#nodejs)
+  - [Shiny](#shiny)
+
 ## Azure Kubernetes Service
 
 ![aks](images/aks_ui.png "Azure Kubernetes Service")
@@ -239,7 +252,7 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://github.com/StatCan/covid19/actions
 * https://github.com/StatCan/charts/tree/master/stable/covid
 
-## .NET (https://portal.example.ca)
+## [.NET](https://portal.example.ca)
 
 ![portal ui](images/portal_ui.png "Portal UI")
 
@@ -262,7 +275,7 @@ The above picture demonstrates the action which builds and deploys the Portal we
 * https://github.com/StatCan/StatCan.OrchardCore/actions
 * https://github.com/StatCan/charts/tree/master/stable/orchard-cms
 
-## MLflow (https://mlflow.example.ca)
+## [MLflow](https://mlflow.example.ca)
 
 ![mlflow ui](images/mlflow_ui.png "MLflow UI")
 
@@ -289,7 +302,7 @@ The above picture demonstrates the action which builds and deploys the Mlflow ap
 * https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/charts/tree/master/stable/mlflow
 
-## Dremio (https://dremio.example.ca)
+## [Dremio](https://dremio.example.ca)
 
 ![dremio ui](images/dremio_ui.png "Dremio UI")
 
@@ -315,6 +328,15 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan/dremio
 * https://github.com/StatCan/dremio/actions
 * https://github.com/StatCan/charts/tree/master/stable/dremio
+
+## Hashicorp Vault
+
+A Hashicorp Vault instance provides secrets management for the platform through identity-based access. 
+
+What can you do it with / what have we done with it?
+* Launched the open-source version with the Helm chart
+* Users can the secrets they have access to using their own accounts
+* Secrets can be injected into pods via the [Agent Sidecar Injector](https://www.vaultproject.io/docs/platform/k8s/injector)
 
 ## Important Links
 
