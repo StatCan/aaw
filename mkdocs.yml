@@ -1,0 +1,50 @@
+site_name: Covid-19 Advanced Analytics Workspace
+site_url: https://statcan.github.io/daaas/
+site_description: User guide for the DAaaS Covid-19 Platform
+copyright: Copyright &copy; 2020 Statistics Canada
+theme:
+  name: material
+  custom_dir: .theme
+  #features:
+  #  - tabs
+  palette:
+    primary: indigo
+    accent: teal
+  show_sidebar: false
+  #logo: images/statcan.png
+
+#theme: readthedocs
+markdown_extensions:
+  - toc:
+      baselevel: 2
+  - attr_list
+  - admonition
+  - codehilite
+
+# TODO: Fix the slack link
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/statcan/daaas
+    - icon: fontawesome/brands/slack
+      link: https://statcan-analytics.slack.com
+
+
+repo_name: statcan/daaas
+repo_url: https://github.com/statcan/daaas
+
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started: Getting-Started.md
+  - Analysis:
+    - Kubeflow: 1-Experiments/Kubeflow.md
+    - ML-Workspaces: 1-Experiments/ML-Workspaces.md
+  - Publishing:
+    - R Shiny: 2-Publishing/R-Shiny.md
+  - Exploring:
+    - Getting your data: 3-Exploring/Minio.md
+  - Pipelines:
+    - Kubeflow Pipelines: 4-Pipelines/Kubeflow-Pipelines.md
+  - Help/Contact: Help.md
