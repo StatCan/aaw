@@ -335,7 +335,7 @@ A Hashicorp Vault instance provides secrets management for the platform through 
 
 What can you do it with / what have we done with it?
 * Launched the open-source version with the Helm chart
-* Users can the secrets they have access to using their own accounts
+* Users can access the secrets they have access to using their own accounts
 * Secrets can be injected into pods via the [Agent Sidecar Injector](https://www.vaultproject.io/docs/platform/k8s/injector)
 
 ## Important Links
