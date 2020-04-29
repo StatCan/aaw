@@ -10,9 +10,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-#     strategy:
-#       matrix:
-#         python-version: [3.5, 3.6, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
@@ -34,4 +31,3 @@ jobs:
     - name: Build and publish
       run: |
         mkdocs gh-deploy
-
