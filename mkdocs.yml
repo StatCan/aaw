@@ -4,7 +4,6 @@ site_description: User guide for the DAaaS Covid-19 Platform
 copyright: Copyright &copy; 2020 Statistics Canada
 theme:
   name: material
-  custom_dir: .theme
   #features:
   #  - tabs
   palette:

@@ -1,8 +1,8 @@
-# Experiments with Kubeflow 
+# Getting started with Kubeflow
 
 ## What does Kubeflow do?
 
-Kubeflow runs your workspaces. You can have notebook servers (called Jupyter
+Kubeflow runs your **workspaces**. You can have notebook servers (called Jupyter
 Servers), and in them you can create analyses in R and Python with interactive
 visuals. You can save & upload data, download it, and create shared workspaces
 for your team.
@@ -11,9 +11,9 @@ for your team.
 
 **Let's get started!**
 
-## Create a Server
+# Create a Server
 
-### Log into Kubeflow
+## Log into Kubeflow
 
 - Log into [the azure portal](https://portal.azure.com) **using your
   cloud.statcan credentials**.
@@ -24,7 +24,7 @@ for your team.
     ![Azure Portal: Choose the `@cloud.statcan.ca` address](../images/azure-login.png)
 
 
-- After logging into Azure, log into [kubeflow](https://kubeflow.covid.cloud.statcan.ca)
+- After logging into Azure, log into [kubeflow](https://kubeflow.example.ca)
 
 
 ??? failure "Why am I getting "Missing url parameter: code"?"
@@ -48,7 +48,7 @@ for your team.
 
 - Then click **+ New Server**
 
-### Configuring your server
+## Configuring your server
 
 - You will get a template to create your notebook server.
   **Note:** the name must be lowercase letters with hypens. **No spaces, and no underscores.**
@@ -65,7 +65,7 @@ for your team.
 - If you want to use a gpu, check if the image says **cpu** or **gpu**.
  
  
-### CPU and Memory 
+## CPU and Memory 
 
 - At the time of writing (April 21, 2020) there are two types of computers in
   the cluster
@@ -82,7 +82,7 @@ for your team.
 !!! note "Use GPU machines responsibly"
     There are fewer GPU machines than CPU machines, so use them responsibly.
     
-### Storing your data
+## Storing your data
 
 - You'll want to create a data volume! You'll be able to save your work here,
   and if you shut down your server, you'll be able to just remount your old data
@@ -98,7 +98,7 @@ for your team.
     to find your old disk, but it takes time.)
  
  
-### And... Create!!!
+## And... Create!!!
 
 - If you're satisfied with the settings, you can now create the server! It may
   take a few minutes to spin up depending on the resources you asked for. (GPUs
@@ -107,5 +107,26 @@ for your team.
 !!! success "Your server is running"
     If all goes well, your server should be running!!! You will now have the
     option to connect, and [try out Jupyter!](/1-Experiments/Jupyter)
+
  
- 
+# Share your workspace
+
+In kubeflow every user has a **namespace**. Your namespace belongs to you, and
+it's where all your resources live. If you want to collaborate with someone you
+need to share a namespace. So you can do that either by sharing your own
+namespace, or more preferably, **by creating a team namespace**. 
+
+## Create a new shared namespace
+
+The link to create a new namespace is here
+- TODO THERE IS NO LINK YET.
+
+## Manage contributors
+
+You can add or remove people from a namespace you own through the **Manage
+Contributors** menu in kubeflow.
+
+![Contributors Menu](../images/kubeflow_contributors.png)
+
+!!! success "Now you and your colleagues can share access to a server!"
+    Now you can share a server with colleagues! Try it out!
