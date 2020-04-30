@@ -44,7 +44,7 @@ for your team.
 
 - Navigate to the Jupyter Servers tab
 
-![Kubeflow Manages the Jupyter Servers](../images/kubeflow_ui.png)
+![Kubeflow Manages the Jupyter Servers](../images/readme/kubeflow_ui.png)
 
 - Then click **+ New Server**
 

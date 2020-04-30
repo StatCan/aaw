@@ -1,14 +1,10 @@
 name: Publish
-
 on:
   push:
     branches: [ master ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
@@ -22,4 +18,6 @@ jobs:
 #        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build and publish
       run: |
+        rm -f docs/images
+        mv images docs/images
         mkdocs gh-deploy

@@ -35,11 +35,12 @@ repo_url: https://github.com/statcan/daaas
 
 # Page tree
 nav:
-  - Home: index.md
-  - Getting Started: Getting-Started.md
+  - Getting Started: index.md
   - Analysis:
     - Kubeflow: 1-Experiments/Kubeflow.md
+    - Jupyter: 1-Experiments/Jupyter.md
     - ML-Workspaces: 1-Experiments/ML-Workspaces.md
+    - DataBricks: 1-Experiments/Databricks.md
   - Publishing:
     - R Shiny: 2-Publishing/R-Shiny.md
   - Exploring:
