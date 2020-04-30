@@ -373,6 +373,7 @@ What can you do it with / what have we done with it?
 #### Source Code
 
 * https://github.com/StatCan?q=daaas
+* https://github.com/StatCan/actions
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas
 * https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private)
@@ -380,17 +381,21 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/charts
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/daaas
+* https://github.com/StatCan/daaas-containers
 * https://github.com/StatCan/datascience-containers
 * https://github.com/StatCan/dremio
 * https://github.com/StatCan/gatekeeper-policies
 * https://github.com/StatCan/jupyter-notebooks
 * https://github.com/StatCan/gpu-toleration-injector
+* https://github.com/StatCan/kubecost
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
 * https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
+* https://github.com/StatCan/minio
 * https://github.com/StatCan/mlflow
 * https://github.com/StatCan/pachyderm
+* https://github.com/StatCan/R-dashboards
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/statcan.orchardcore
 * https://github.com/StatCan/terraform-vault (private)
@@ -400,13 +405,18 @@ What can you do it with / what have we done with it?
 
 * https://github.com/StatCan/charts/actions
 * https://github.com/StatCan/covid19/actions
+* https://github.com/StatCan/daaas/actions
+* https://github.com/StatCan/daaas-containers/actions
 * https://github.com/StatCan/dremio/actions
+* https://github.com/StatCan/kubecost/actions
 * https://github.com/StatCan/gpu-toleration-injector/actions
 * https://github.com/StatCan/kubeflow-containers/actions
 * https://github.com/StatCan/kubeflow-controller/actions
 * https://github.com/StatCan/kubeflow-github-action/actions
+* https://github.com/StatCan/minio/actions
 * https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/pachyderm/actions
+* https://github.com/StatCan/R-dashboards/actions
 * https://github.com/StatCan/shiny/actions
 * https://github.com/StatCan/StatCan.OrchardCore/actions
 * https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions (private)
