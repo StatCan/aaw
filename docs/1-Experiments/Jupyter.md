@@ -8,7 +8,30 @@ a server (that you set up in the last section) you can do really big analyses on
 centralized hardware! Adding as much horsepower as you need! And because it's on
 the cloud, you can share it with your colleagues too.
 
-![Embed your visualizations](../images/jupyter_scikit.png)
+### Explore your data
+
+Jupyter comes with a number of features (and we can add more)
+
+- Integrated visuals within your notebook
+- Data volume for storing your data
+- You can share your workspace with colleagues.
+
+![Interactive Widgets](../images/jupyter_visual.png)
+
+
+### IDE in the browser
+
+Create for exploring, and also great for writing code
+
+- Linting and a debugger
+- Git integration
+- Built in Terminal
+- Light/Dark theme (change settings at the top)
+
+![IDE features](../images/jupyter_ide.png)
+
+**More information on Jupyter [here](https://jupyter.org)**
+
 
 
 ## Get started with the examples
@@ -37,7 +60,7 @@ pip install --user your_package_name
 ```
 
 **Don't forget to restart your jupyter kernel afterwards, to make new packages
-available.****
+available.**
 
 ??? tip "Make sure to restart the Jupyter kernel after installing new software"
     If you install software in a terminal, but your jupyter kernel was already
@@ -54,49 +77,11 @@ You can upload and download data to/from Jupyterhub directly in the menu. There
 is an upload button at the top, and you can right-click most files or folders to
 download them.
 
-# TODO S3 browser?
- 
- 
- 
- 
- 
- 
- 
-!!! warning "Phasellus posuere in sem ut cursus"
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
- 
-!!! note
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-    
-!!! success
-    Lorem ipsum dolor sit amt, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-    
-!!! tip
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-    
-!!! failure
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
- 
-!!! danger
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
 
-!!! example
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+## Shareable "Bucket" storage
 
+**The other option** is high-volume storage with [Object
+Storage](https://en.wikipedia.org/wiki/Object_storage). Because storage is
+important for experiments, publishing, and exploring datasets, it has its own section.
 
-
-
+**Refer to the [Storage Section](/Storage)**

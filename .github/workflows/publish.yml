@@ -20,4 +20,4 @@ jobs:
       run: |
         rm -f docs/images
         mv images docs/images
-        mkdocs gh-deploy
+        mkdocs gh-deploy --force

@@ -7,7 +7,7 @@ Servers), and in them you can create analyses in R and Python with interactive
 visuals. You can save & upload data, download it, and create shared workspaces
 for your team.
 
-![Kubeflow Manages the Jupyter Servers](../images/jupyter_in_action.png)
+![Kubeflow Manages the Jupyter Servers](../images/jupyter_visual.png)
 
 **Let's get started!**
 
@@ -70,8 +70,8 @@ for your team.
 - At the time of writing (April 21, 2020) there are two types of computers in
   the cluster
 
-  - **CPU:** D8s v3 `(8 vcpus, 32 GiB memory)`
-  - **GPU:** NC6s_v3 `(6 vcpus, 112 GiB memory)`
+  - **CPU:** D16s v3 `(16 vcpus, 64 GiB memory)`
+  - **GPU:** NC6s_v3 `(6 vcpus, 112 GiB memory, ? GPUs)`
   
   Because of this, if you request too much RAM or too many CPUs, it may be hard
   or impossible to satisfy your request.
@@ -82,6 +82,7 @@ for your team.
 !!! note "Use GPU machines responsibly"
     There are fewer GPU machines than CPU machines, so use them responsibly.
     
+    
 ## Storing your data
 
 - You'll want to create a data volume! You'll be able to save your work here,
@@ -91,12 +92,9 @@ for your team.
 
 ![Create a Data Volume](../images/kubeflow_volumes.png)
  
-!!! danger "Remember the volume name"
-    At the moment we don't have an interface for searching for old volumes. This
-    will hopefully be added soon, but for now you need to remember the name of
-    your old volume if you want to remount it. (There is a way for engineering
-    to find your old disk, but it takes time.)
- 
+!!! tip "Check for old volumes by looking at the Existing option"
+    When you create your server you have the option of reusing an old volume
+    or creating a new one. You probably want to reuse your old volume.
  
 ## And... Create!!!
 

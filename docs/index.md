@@ -2,7 +2,7 @@
 
 ![The DAaaS Platform](images/readme/portal_ui.png)
 
-**Link to the portal [here](portal.example.ca)**
+**Link to the portal [here](https://portal.example.ca)**
 
 We'll break down the standard tasks into three categories
 
