@@ -2,7 +2,7 @@
 
 ![Advanced Analytics Workspace homepage](images/readme/portal_ui.png)
 
-The **[Advanced Analytics Workspace portal](portal.covid.cloud.statcan.ca)** is
+The **[Advanced Analytics Workspace portal](https://portal.example.ca)** is
 a great place to discover and connect to the available resources we'll be
 talking about here.
 
