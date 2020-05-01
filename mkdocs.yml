@@ -19,6 +19,7 @@ markdown_extensions:
   - attr_list
   - admonition
   - codehilite
+  - pymdownx.details
 
 # TODO: Fix the slack link
 extra:
@@ -41,10 +42,12 @@ nav:
     - Jupyter: 1-Experiments/Jupyter.md
     - ML-Workspaces: 1-Experiments/ML-Workspaces.md
     - DataBricks: 1-Experiments/Databricks.md
+    - MLflow: 1-Experiments/MLflow.md
   - Publishing:
     - R Shiny: 2-Publishing/R-Shiny.md
-  - Exploring:
-    - Getting your data: 3-Exploring/Minio.md
+    - Custom: 2-Publishing/Custom.md
   - Pipelines:
-    - Kubeflow Pipelines: 4-Pipelines/Kubeflow-Pipelines.md
+    - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
+    - Pachyderm: 3-Pipelines/Pachyderm.md
+  - Storage: Storage.md
   - Help/Contact: Help.md
