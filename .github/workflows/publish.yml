@@ -16,8 +16,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 mkdocs mkdocs-material
 #        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Build and publish
+    - name: Build
       run: |
-        rm -f docs/images
-        mv images docs/images
-        mkdocs gh-deploy --force
+        mkdocs build -c -f mkdocs-en.yml
+        mkdocs build -c -f mkdocs-fr.yml
+        cp docs/index.html site/
+    - name: Publish
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'

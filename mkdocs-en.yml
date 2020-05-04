@@ -1,9 +1,18 @@
-site_name: Covid-19 Advanced Analytics Workspace
-site_url: https://statcan.github.io/daaas/
+site_name: COVID-19 Advanced Analytics Workspace
+site_url: https://statcan.github.io/daaas/en/
 site_description: User guide for the DAaaS Covid-19 Platform
 copyright: Copyright &copy; 2020 Statistics Canada
+
+docs_dir: docs/en
+site_dir: site/en
+
+repo_name: statcan/daaas
+repo_url: https://github.com/statcan/daaas
+edit_uri: edit/master/docs/en
+
 theme:
   name: material
+  language: en
   #features:
   #  - tabs
   palette:
@@ -12,7 +21,6 @@ theme:
   show_sidebar: false
   #logo: images/statcan.png
 
-#theme: readthedocs
 markdown_extensions:
   - toc:
       baselevel: 2
@@ -21,18 +29,12 @@ markdown_extensions:
   - codehilite
   - pymdownx.details
 
-# TODO: Fix the slack link
 extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/statcan/daaas
     - icon: fontawesome/brands/slack
-      link: https://statcan-analytics.slack.com
-
-
-repo_name: statcan/daaas
-repo_url: https://github.com/statcan/daaas
-
+      link: https://statcan-aaw.slack.com
 
 # Page tree
 nav:
