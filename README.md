@@ -43,7 +43,7 @@ When you want to work with cloud native services in `Azure`, `AWS`, `GCP`, etc. 
 
 ## Azure Kubernetes Service
 
-![aks](images/readme/aks_ui.png "Azure Kubernetes Service")
+![aks](docs/en/images/readme/aks_ui.png "Azure Kubernetes Service")
 
 Launched a secured Cloud Native Platform for Government based on the version we open sourced to the [GC Accelerators](https://github.com/canada-ca-terraform-modules?q=kubernetes). The platform is built using open source software projects, primarily from the Cloud Native Computing Foundation (CNCF).
 
@@ -75,7 +75,7 @@ What can you do it with / what have we done with it?
 
 ## Kubeflow
 
-![kubeflow](images/readme/kubeflow_ui.png "Kubeflow")
+![kubeflow](docs/en/images/readme/kubeflow_ui.png "Kubeflow")
 
 Kubeflow is a suite of tools for running Machine Learning (ML) workflows on Kubernetes. It is an open-source tool used by large research institutions (like CERN) for machine learning workloads and backed by a large community (10k stars on GitHub). It has been deployed into our AKS cluster, and connected to the Statistics Canada Cloud user directory for authentication and will be expanded to others through integration with GitHub authentication.
 
@@ -90,21 +90,21 @@ What can you do it with / what have we done with it?
 * Shared and individual workspaces for Jupyter Notebooks
 * Launched KubeFlow via Kustomize to AKS
 
-![kubeflow pipeline](images/readme/kubeflow_pipeline.png "Kubeflow Pipeline")
+![kubeflow pipeline](docs/en/images/readme/kubeflow_pipeline.png "Kubeflow Pipeline")
 
 The two images demonstrate a pipeline definition and an execution.
 
 These pipelines were deployed through GitHub Actions, and the bottom one was executed in an Azure Databricks cluster.
 
-![kubeflow controlling databricks](images/readme/kubeflow_databricks.png "KubeFlow controlling DataBricks")
+![kubeflow controlling databricks](docs/en/images/readme/kubeflow_databricks.png "KubeFlow controlling DataBricks")
 
-![kubeflow github action](images/readme/kubeflow_action.png "GitHub action running DataBricks Pipeline")
+![kubeflow github action](docs/en/images/readme/kubeflow_action.png "GitHub action running DataBricks Pipeline")
 
 The above picture demonstrates the GitHub Action deploying the pipeline.
 
 The below picture demonstrates sharing a workspace with other contributors.
 
-![kubeflow shared workspaces](images/readme/kubeflow_workspaces.png "Kubeflow shared workspaces")
+![kubeflow shared workspaces](docs/en/images/readme/kubeflow_workspaces.png "Kubeflow shared workspaces")
 
 #### Source Code
 
@@ -116,7 +116,7 @@ The below picture demonstrates sharing a workspace with other contributors.
 
 ## Kubeflow Containers
 
-![kubeflow containers](images/readme/kubeflow_containers.png "Kubeflow Containers")
+![kubeflow containers](docs/en/images/readme/kubeflow_containers.png "Kubeflow Containers")
 
 Created a set of of ready-to-run container images for various types of roles related to data science. We provide a convenient and tailored experience of Jupyter including all the tools data scientists need to do their work.
 
@@ -130,7 +130,7 @@ What can you do it with / what have we done with it?
   * Full workspace: VS Code, VNC Server, and other graphical tools
 * Images are built for CPU compute and GPU compute (NVIDIA/CUDA)
 
-![kubeflow containers github action](images/readme/kubeflow_containers_action.png "Build and Deploy container images to Azure Container Registry")
+![kubeflow containers github action](docs/en/images/readme/kubeflow_containers_action.png "Build and Deploy container images to Azure Container Registry")
 
 The above picture demonstrates the GitHub Actions workflow to build and deploy container images to the Azure Container Registry.
 
@@ -141,7 +141,7 @@ The above picture demonstrates the GitHub Actions workflow to build and deploy c
 
 ## Jupyter Notebooks (Examples)
 
-![jupyter notebooks](images/readme/jupyter_notebooks.png "Jupyter Notebooks")
+![jupyter notebooks](docs/en/images/readme/jupyter_notebooks.png "Jupyter Notebooks")
 
 We have created a variety of example Jupyter Notebooks utilizing the data science tools deployed. This includes simple examples to complete, training to model serving pipelines (MLOps).
 
@@ -160,7 +160,7 @@ What can you do it with / what have we done with it?
    * [Receiver Operating Characteristic](https://github.com/StatCan/datascience-containers/blob/master/metrics/roc/src/roc.py) for performance measurement for classification problem
    * [Tensorflow Serving](https://github.com/StatCan/datascience-containers/blob/master/serving/deployer/src/deploy.sh) for delivering and updating the model
 
-![advanced pipeline example](images/readme/jupyter_notebooks_kubeflow.png "Advanced pipeline example")
+![advanced pipeline example](docs/en/images/readme/jupyter_notebooks_kubeflow.png "Advanced pipeline example")
 
 The above picture demonstrates an advanced learning and training pipeline on Kubeflow.
 
@@ -171,7 +171,7 @@ The above picture demonstrates an advanced learning and training pipeline on Kub
 
 ## MinIO
 
-![minio ui](images/readme/minio_ui.png "Minio UI")
+![minio ui](docs/en/images/readme/minio_ui.png "Minio UI")
 
 MinIO provides an S3-compatible API to access data stored locally or within an Azure Blob storage account.
 
@@ -193,13 +193,13 @@ Different types of tenants:
 * Application Level (High Storage)
 * Premium (SSD and improved IOPS)
 
-![minio api](images/readme/minio_api.png "Jupyter notebook interacting with MinIO")
+![minio api](docs/en/images/readme/minio_api.png "Jupyter notebook interacting with MinIO")
 
 The above picture demonstrates a Jupyter Notebook interacting with MinIO through an API.
 
 ## Shiny
 
-![shiny server](images/readme/shiny_ui.png "Shiny Server")
+![shiny server](docs/en/images/readme/shiny_ui.png "Shiny Server")
 
 Shiny is an application server for serving R-based visualization applications created by data scientists.
 
@@ -210,13 +210,13 @@ What can you do it with / what have we done with it?
 * Shiny Server extended behind Nginx proxy
 * Integrated with Azure Files for application hosting
 
-![shiny github action](images/readme/shiny_action.png "Deploy Shiny to AKS")
+![shiny github action](docs/en/images/readme/shiny_action.png "Deploy Shiny to AKS")
 
 The above picture demonstrates the GitHub Actions workflow to build and deploy it to AKS.
 
 The below picture demonstrates the file share containing all R applications served by Shiny.
 
-![azure files](images/readme/shiny_azure_files.png "Shiny with Azure Files mount point")
+![azure files](docs/en/images/readme/shiny_azure_files.png "Shiny with Azure Files mount point")
 
 #### Source Code
 
@@ -226,7 +226,7 @@ The below picture demonstrates the file share containing all R applications serv
 
 ## NodeJS (https://covid19.example.ca)
 
-![covid map](images/readme/covid_ui.png "Covid-19 Map")
+![covid map](docs/en/images/readme/covid_ui.png "Covid-19 Map")
 
 Covid-19 is an interactive, animated COVID-19 coronavirus map to track the outbreak over time by country and by region for selected countries (including China, Italy, Korea, Japan, France, Germany, United States). It was launched into our environment to demonstrate running web applications and we saw opportunity to improve it to better demonstrate the spread of COVID-19 across Canada.
 
@@ -239,7 +239,7 @@ What can you do it with / what have we done with it?
 * Looking at integrating with the Statistics Canada dataset
 * Looking at feasibility of KubeFlow (Machine Learning) to add spread prediction
 
-![covid github action](images/readme/covid_action.png "Deploy Covid-19 to AKS")
+![covid github action](docs/en/images/readme/covid_action.png "Deploy Covid-19 to AKS")
 
 The above picture demonstrates the action which builds and deploys the COVID-19 application.
 
@@ -251,7 +251,7 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 
 ## .NET (https://portal.example.ca)
 
-![portal ui](images/readme/portal_ui.png "Portal UI")
+![portal ui](docs/en/images/readme/portal_ui.png "Portal UI")
 
 The main portal for the DAaaS platform which will provide data scientists with both the list of supported services as well useful datasets that they can leverage in their machine learning journey. The portal will also offer helpful documentation, resources, tutorials, and support for the multiple types of data scientists using the platform.
 
@@ -262,7 +262,7 @@ What can you do it with / what have we done with it?
 * Working on latest iteration of the mockup templates
 * The addition of content as well as helpful datasets to leverage
 
-![portal github action](images/readme/portal_action.png "Deploy Portal to AKS")
+![portal github action](docs/en/images/readme/portal_action.png "Deploy Portal to AKS")
 
 The above picture demonstrates the action which builds and deploys the Portal web application.
 
@@ -274,7 +274,7 @@ The above picture demonstrates the action which builds and deploys the Portal we
 
 ## MLflow (https://mlflow.example.ca)
 
-![mlflow ui](images/readme/mlflow_ui.png "MLflow UI")
+![mlflow ui](docs/en/images/readme/mlflow_ui.png "MLflow UI")
 
 Launched MLflow alongside with its web ui in a highly available fashion on top of Kubernetes. MLflow was configured to use an Azure storage account for the backend artifact store.
 
@@ -289,7 +289,7 @@ What can you do it with / what have we done with it?
 * Artifact store is configured as an Azure storage account
 * Efficient use of Gunicorn workers
 
-![mlflow github action](images/readme/mlflow_action.png "Deploy MLflow to AKS")
+![mlflow github action](docs/en/images/readme/mlflow_action.png "Deploy MLflow to AKS")
 
 The above picture demonstrates the action which builds and deploys the Mlflow application.
 
@@ -301,7 +301,7 @@ The above picture demonstrates the action which builds and deploys the Mlflow ap
 
 ## Dremio (https://dremio.example.ca)
 
-![dremio ui](images/readme/dremio_ui.png "Dremio UI")
+![dremio ui](docs/en/images/readme/dremio_ui.png "Dremio UI")
 
 We experimented with Dremio to provide a common way of accessing data stored in various sources (e.g., Azure Storage account, Azure Data Lake, S3, MSSQL, etc.).
 
@@ -316,7 +316,7 @@ What can you do it with / what have we done with it?
   * MSSQL / MySQL / PostgreSQL
   * Elasticsearch
 
-![dremio github action](images/readme/dremio_action.png "Deploy Dremio to AKS")
+![dremio github action](docs/en/images/readme/dremio_action.png "Deploy Dremio to AKS")
 
 The above picture demonstrates the action which builds and deploys the Dremio application.
 
@@ -344,7 +344,7 @@ What can you do it with / what have we done with it?
 
 ## Vault (https://vault.example.ca)
 
-![vault ui](images/readme/vault_ui.png "Vault UI")
+![vault ui](docs/en/images/readme/vault_ui.png "Vault UI")
 
 Launched Vault alongside with its web ui to provide a centralized place to secure, store and tightly control access to tokens, passwords, and certificates.
 
