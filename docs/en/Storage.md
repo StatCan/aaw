@@ -69,7 +69,7 @@ in, simply use **OpenID** as below
 ![Buckets / Object Storage](images/minio_self_serve_login.png)
 
 Once you are logged in, you are allowed to create a personal bucket with the
-format `firstname.lastname`. Picture below.
+format `firstname-lastname`. Picture below.
 
 
 ![Buckets / Object Storage](images/minio_self_serve_bucket.png)
