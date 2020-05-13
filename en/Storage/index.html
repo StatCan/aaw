@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.5">
+      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
     
     
       
@@ -23,9 +23,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.df84b5fe.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b9ffd7b.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.8435c73a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
       
       
         
@@ -482,6 +482,19 @@
     Programmatic Access
   </a>
   
+    <nav class="md-nav" aria-label="Programmatic Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-with-mc" class="md-nav__link">
+    Connecting with mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -585,6 +598,19 @@
     Programmatic Access
   </a>
   
+    <nav class="md-nav" aria-label="Programmatic Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-with-mc" class="md-nav__link">
+    Connecting with mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -617,76 +643,124 @@
                 <h2 id="storage">Storage</h2>
 <p>The platform has a range of different types of storage meant for a variety of
 use-cases, so this storage section applies whether you're experimenting,
-creating pipelines, or publishing. </p>
+creating pipelines, or publishing.</p>
 <p>At the surface, there are two kinds of storage</p>
 <ul>
-<li>
-<p>Disks (also called Volumes)</p>
-</li>
-<li>
-<p>Buckets (S3 or "Blob" storage)</p>
-</li>
+<li>Disks (also called Volumes)</li>
+<li>Buckets (S3 or "Blob" storage)</li>
 </ul>
 <h3 id="disks">Disks</h3>
-<p><img alt="Data Volumes" src="../images/kubeflow_existing_volume.png" /></p>
-<p>Disks are the familiar Hard-drive/SDD style file systems! You can mount the
-disks into your Kubeflow server, and even if you delete your server, you can
-remount the disks, as they are never destroyed by default. This is a super
-simple way to store your data, and if you share a workspace with a team, your
-whole team can use the same server's disk just like a shared drive.</p>
+<p>Disks are the familiar hard drive (or SSD) style file systems! You use them
+directly in Kubeflow when you add workspace and data volumes to your notebook
+server. They are automatically mounted at the directory you choose, and serve as
+a reliable way to preserve your data. Even if you delete your server later, you
+can still remount your disks to a new one – by default they are never destroyed.</p>
+<p><img alt="Adding an existing volume to a new notebook server" src="../images/kubeflow_existing_volume.png" /></p>
+<p>This is a super simple way to store your data. And if you share a workspace with
+a team, your whole team can use the same server's disk just like a shared drive.</p>
 <h3 id="buckets">Buckets</h3>
-<p><img alt="Buckets / Object Storage" src="../images/minio_self_serve_bucket.png" /></p>
 <p>Buckets are slightly more complicated, but they are good at three things:</p>
 <ul>
-<li>Large amounts of data</li>
 <li>
-<p>Buckets can be huge. Way bigger than hard-drives. And they are fast.</p>
+<p><strong>Large amounts of data</strong><br />
+  Buckets can be huge: way bigger than hard drives. And they are fast.</p>
 </li>
 <li>
-<p>Sharing</p>
+<p><strong>Sharing</strong><br />
+  You can share files from a bucket by sharing a URL that you can get through a
+  simple web interface. This is great for sharing data with people outside of
+  your workspace.</p>
 </li>
 <li>
-<p>You can share files from a bucket by sharing a URL that you can get through
-    a simple web interface. This is great for sharing data with people outside
-    of your workspace.</p>
+<p><strong>Programmatic Access</strong><br />
+  Most importantly, it's much easier for pipelines and web browsers to access
+  data from buckets than from a hard drive. So if you want to use pipelines, you
+  basically have to configure them to work with a bucket.</p>
 </li>
-<li>
-<p>Programmatic Access</p>
-</li>
-<li>Most importantly, it's much easier for pipelines and web-browsers to access
-    data from buckets than from a hard drive. So if you want to use pipelines,
-    you basically have to configure them to work with a bucket.</li>
 </ul>
 <h2 id="bucket-storage">Bucket Storage</h2>
-<p>We have four available storage instances buckets</p>
-<p><strong>Self-Serve</strong></p>
+<p>We have four available types of bucket storage.</p>
+<p><strong>Self-Serve:</strong></p>
 <ul>
-<li>
-<p><a href="https://minimal-tenant1-minio.example.ca">Minimal</a></p>
-</li>
-<li>
-<p><a href="https://premium-tenant1-minio.example.ca">Premium</a></p>
-</li>
-<li>
-<p><a href="https://pachyderm-tenant1-minio.example.ca">Pachyderm</a></p>
-</li>
+<li><a href="https://minimal-tenant1-minio.example.ca">Minimal</a></li>
+<li><a href="https://premium-tenant1-minio.example.ca">Premium</a></li>
+<li><a href="https://pachyderm-tenant1-minio.example.ca">Pachyderm</a></li>
 </ul>
-<p><strong>Publicly Available</strong></p>
+<p><strong>Publicly Available:</strong></p>
 <ul>
 <li><a href="https://datasets.example.ca">Public (Read-Only)</a></li>
 </ul>
 <h3 id="self-serve">Self-Serve</h3>
 <p>In any of the three self-serve options, you can create a personal bucket. To log
-in, simply use <strong>OpenID</strong> as below</p>
-<p><img alt="Buckets / Object Storage" src="../images/minio_self_serve_login.png" /></p>
+in, simply use the <strong>OpenID</strong> option seen below.</p>
+<p><img alt="Minio sign-in view, indicating the OpenID option" src="../images/minio_self_serve_login.png" /></p>
 <p>Once you are logged in, you are allowed to create a personal bucket with the
-format <code>firstname.lastname</code>. Picture below.</p>
-<p><img alt="Buckets / Object Storage" src="../images/minio_self_serve_bucket.png" /></p>
+format <code>firstname-lastname</code>.</p>
+<p><img alt="Minio browser with personal bucket using first name, last name format (hyphenated)" src="../images/minio_self_serve_bucket.png" /></p>
 <h3 id="sharing">Sharing</h3>
-<p>You can easily share individual files.</p>
-<p><img alt="Minio File Sharing" src="../images/minio_self_serve_share.png" /></p>
+<p>You can easily share individual files. Just use the "share" option for a
+specific file and you will be provided a link that you can send to a
+collaborator!</p>
+<p><img alt="Minio browser with a shareable link to a file" src="../images/minio_self_serve_share.png" /></p>
 <h3 id="programmatic-access">Programmatic Access</h3>
-<p>TODO: Ask Will &amp; Zach</p>
+<p>We are currently working on letting you access your bucket storage via a folder
+in your notebook, but in the meantime you can access it programmatically with
+the command line tool <code>mc</code>, or via S3 API calls in R or Python.</p>
+<!-- prettier-ignore -->
+
+<div class="admonition danger">
+<p class="admonition-title">Required Kubeflow configuration</p>
+<p>If you want to enable bucket storage for your notebook, select "Inject credentials to access MinIO object storage" from the <strong>Configurations</strong> menu when you create your server. Otherwise, your server won't know how to sign-in to your personal storage.
+<img alt="Kubeflow notebook server creation with &quot;Inject credentials to access MinIO object storage&quot; option selected" src="../images/kubeflow_minio_option.png" /></p>
+</div>
+<!-- prettier-ignore -->
+
+<div class="admonition tip">
+<p class="admonition-title">See the example notebooks!</p>
+<p>There is a template provided for connecting in <code>R</code>, <code>python</code>, or by the
+command line, provided in <code>jupyter-notebooks/self-serve-storage</code>. You can
+copy-paste and edit these examples! They should suit most of your needs.</p>
+</div>
+<h4 id="connecting-with-mc">Connecting with <code>mc</code></h4>
+<p>To connect, simply run the following (replace <code>FULLNAME=blair-drummond</code> with
+your actual <code>firstname-lastname</code>)</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+<span class="nv">FULLNAME</span><span class="o">=</span>blair-drummond
+
+<span class="c1"># Get the credentials</span>
+<span class="nb">source</span> /vault/secrets/minio-minimal-tenant1
+
+<span class="c1"># Add the storage under the alias &quot;minio-minimal&quot;</span>
+mc config host add minio-minimal <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
+
+<span class="c1"># Create a bucket under your name</span>
+<span class="c1"># NOTE: You can *only* create buckets named with your FIRSTNAME-LASTNAME. Any</span>
+<span class="c1"># other name will be rejected.</span>
+
+<span class="c1"># Private bucket (&quot;mb&quot; = &quot;make bucket&quot;)</span>
+mc mb minio-minimal/<span class="si">${</span><span class="nv">FULLNAME</span><span class="si">}</span>
+
+<span class="c1"># Shared bucket</span>
+mc mb minio-minimal/shared/<span class="si">${</span><span class="nv">FULLNAME</span><span class="si">}</span>
+
+<span class="c1"># There you go! Now you can copy over files or folders!</span>
+<span class="o">[</span> -f test.txt <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;This is a test&quot;</span> &gt; test.txt
+mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">FULLNAME</span><span class="si">}</span>/test.txt
+</code></pre></div>
+
+
+<p>Now open
+<a href="https://minimal-tenant1-minio.example.ca">minimal-tenant1-minio.example.ca</a>,
+you will see your test file there!</p>
+<p>You can use <code>mc</code> to copy files to/from the bucket. It is very fast. You can also
+use <code>mc --help</code> to see what other options you have, like
+<code>mc ls minio-minimal/FIRSTNAME-LASTNAME/</code> to list the contents of your bucket.</p>
+<!-- prettier-ignore -->
+
+<details class="tip"><summary>Other storage options</summary><p>To use one of our other storage options: <code>pachyderm</code> or <code>premium</code>, simply
+replace <code>minimal</code> in the above program with the type you need.</p>
+</details>
                 
               
               
@@ -779,8 +853,8 @@ format <code>firstname.lastname</code>. Picture below.</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.83fe6e3c.min.js"></script>
-      <script src="../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({

@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.5">
+      <meta name="generator" content="mkdocs-1.1.1, mkdocs-material-5.1.6">
     
     
       
@@ -23,9 +23,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.df84b5fe.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b9ffd7b.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.8435c73a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
       
       
         
@@ -52,7 +52,7 @@
   
     
     
-    <body dir="" data-md-color-primary="indigo" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="teal">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -70,7 +70,7 @@
     </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="">
+  <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://statcan.github.io/daaas/fr/" title="Espace d'analyse avancée du COVID-19" class="md-header-nav__button md-logo" aria-label="Espace d'analyse avancée du COVID-19">
       
   
@@ -108,7 +108,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -116,7 +116,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -156,7 +156,7 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://statcan.github.io/daaas/fr/" title="Espace d'analyse avancée du COVID-19" class="md-nav__button md-logo" aria-label="Espace d'analyse avancée du COVID-19">
       
@@ -482,6 +482,19 @@
     Programmatic Access
   </a>
   
+    <nav class="md-nav" aria-label="Programmatic Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-with-mc" class="md-nav__link">
+    Connecting with mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -585,6 +598,19 @@
     Programmatic Access
   </a>
   
+    <nav class="md-nav" aria-label="Programmatic Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-with-mc" class="md-nav__link">
+    Connecting with mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -680,13 +706,69 @@ whole team can use the same server's disk just like a shared drive.</p>
 in, simply use <strong>OpenID</strong> as below</p>
 <p><img alt="Buckets / Object Storage" src="../images/minio_self_serve_login.png" /></p>
 <p>Once you are logged in, you are allowed to create a personal bucket with the
-format <code>firstname.lastname</code>. Picture below.</p>
+format <code>firstname-lastname</code>. Picture below.</p>
 <p><img alt="Buckets / Object Storage" src="../images/minio_self_serve_bucket.png" /></p>
 <h3 id="sharing">Sharing</h3>
 <p>You can easily share individual files.</p>
 <p><img alt="Minio File Sharing" src="../images/minio_self_serve_share.png" /></p>
 <h3 id="programmatic-access">Programmatic Access</h3>
-<p>TODO: Ask Will &amp; Zach</p>
+<p>There is a plan in the works to let you access your bucket-storage just with a folder
+but in the meantime you can access it programmatically with the command line tool <code>mc</code>, 
+or via S3 API calls in R or Python</p>
+<div class="admonition danger">
+<p class="admonition-title">Must set a kubeflow configuration</p>
+<p>You must check the box to inject the credentials in order to proceed.
+<img alt="Minio Credentials Option" src="../images/kubeflow_minio_option.png" />
+Otherwise, your notebook server won't have access.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">See the example notebooks!</p>
+<p>There is a template provided for connecting in <code>R</code>, <code>python</code>, or by the commandline,
+provided in <code>jupyter-notebooks/self-serve-storage</code>. You can copy-paste and edit these
+examples! They should suite most of your needs.</p>
+</div>
+<h4 id="connecting-with-mc">Connecting with <code>mc</code></h4>
+<p>To connect, simply run the following (replace <code>FULLNAME=blair-drummond</code> with your actual <code>firstname-lastname</code>)</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+
+<span class="nv">FULLNAME</span><span class="o">=</span>blair-drummond
+
+<span class="c1"># Get the credentials</span>
+<span class="nb">source</span> /vault/secrets/minio-minimal-tenant1
+
+<span class="c1"># Add the storage under the alias &quot;minio-minimal&quot;</span>
+mc config host add minio-minimal <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
+
+<span class="c1"># Create a bucket under your name</span>
+<span class="c1"># NOTE: Everyone gets their own bucket FIRSTNAME-LASTNAME</span>
+<span class="c1"># but your cannot just create another bucket.</span>
+
+<span class="c1"># The private bucket. &quot;mb&quot; = make bucket</span>
+mc mb minio-minimal/<span class="si">${</span><span class="nv">FULLNAME</span><span class="si">}</span>
+
+<span class="c1"># The shared bucket</span>
+mc mb minio-minimal/shared/<span class="si">${</span><span class="nv">FULLNAME</span><span class="si">}</span>
+
+<span class="c1"># There you go! Now you can copy over files or folders!</span>
+<span class="o">[</span> -f test.txt <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;This is a test&quot;</span> &gt; test.txt
+mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">FULLNAME</span><span class="si">}</span>/test.txt
+</code></pre></div>
+
+
+<p>Now open <a href="https://minimal-tenant1-minio.example.ca">minimal-tenant1-minio.example.ca</a>, you will see your test file there!</p>
+<p>You can use <code>mc</code> to copy files to/from the bucket. It is very fast. You can also use <code>mc --help</code> to see what other options you have,
+like <code>mc ls minio-minimal/FIRSTNAME-LASTNAME/</code> to list the contents of your bucket.</p>
+<details class="tip"><summary>Other storage options</summary><p>To use one of the other storage options; </p>
+<ul>
+<li>
+<p>pachyderm</p>
+</li>
+<li>
+<p>premium</p>
+</li>
+</ul>
+<p>Simply replace <code>minimal</code> in the above program with one of these.</p>
+</details>
                 
               
               
@@ -703,7 +785,7 @@ format <code>firstname.lastname</code>. Picture below.</p>
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
           <a href="../3-Pipelines/Pachyderm/" title="Pachyderm" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
@@ -779,8 +861,8 @@ format <code>firstname.lastname</code>. Picture below.</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.83fe6e3c.min.js"></script>
-      <script src="../assets/javascripts/bundle.7e1cb91c.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "", "search.config.separator": "", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      <script src="../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
       
       <script>
         app = initialize({
