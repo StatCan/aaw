@@ -69,7 +69,7 @@ in, simply use **OpenID** as below
 ![Buckets / Object Storage](images/minio_self_serve_login.png)
 
 Once you are logged in, you are allowed to create a personal bucket with the
-format `firstname.lastname`. Picture below.
+format `firstname-lastname`. Picture below.
 
 
 ![Buckets / Object Storage](images/minio_self_serve_bucket.png)
@@ -83,4 +83,62 @@ You can easily share individual files.
 
 ## Programmatic Access
 
-TODO: Ask Will & Zach
+There is a plan in the works to let you access your bucket-storage just with a folder
+but in the meantime you can access it programmatically with the command line tool `mc`, 
+or via S3 API calls in R or Python
+
+!!! danger "Must set a kubeflow configuration"
+    You must check the box to inject the credentials in order to proceed.
+    ![Minio Credentials Option](images/kubeflow_minio_option.png)
+	Otherwise, your notebook server won't have access.
+
+!!! tip "See the example notebooks!"
+    There is a template provided for connecting in `R`, `python`, or by the commandline,
+	provided in `jupyter-notebooks/self-serve-storage`. You can copy-paste and edit these
+	examples! They should suite most of your needs.
+	
+### Connecting with `mc`
+
+To connect, simply run the following (replace `FULLNAME=blair-drummond` with your actual `firstname-lastname`)
+
+```sh
+#!/bin/sh
+
+FULLNAME=blair-drummond
+
+# Get the credentials
+source /vault/secrets/minio-minimal-tenant1
+
+# Add the storage under the alias "minio-minimal"
+mc config host add minio-minimal $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+
+# Create a bucket under your name
+# NOTE: Everyone gets their own bucket FIRSTNAME-LASTNAME
+# but your cannot just create another bucket.
+
+# The private bucket. "mb" = make bucket
+mc mb minio-minimal/${FULLNAME}
+
+# The shared bucket
+mc mb minio-minimal/shared/${FULLNAME}
+
+# There you go! Now you can copy over files or folders!
+[ -f test.txt ] || echo "This is a test" > test.txt
+mc cp test.txt minio-minimal/${FULLNAME}/test.txt
+```
+
+Now open [minimal-tenant1-minio.example.ca](https://minimal-tenant1-minio.example.ca), you will see your test file there!
+
+You can use `mc` to copy files to/from the bucket. It is very fast. You can also use `mc --help` to see what other options you have,
+like `mc ls minio-minimal/FIRSTNAME-LASTNAME/` to list the contents of your bucket.
+
+
+??? tip "Other storage options"
+    To use one of the other storage options; 
+
+	- pachyderm
+
+	- premium
+
+	Simply replace `minimal` in the above program with one of these.
+	
