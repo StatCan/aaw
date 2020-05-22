@@ -1,87 +1,91 @@
 # Jupyter
 
-## Friendly R and Python experience
+## Expérience conviviale de R et Python
 
-Jupyter gives you **notebooks** to write your code and make visualizations. You
-can quickly iterate, visualize, and sahre your analyses. Because it's running on
-a server (that you set up in the last section) you can do really big analyses on
-centralized hardware! Adding as much horsepower as you need! And because it's on
-the cloud, you can share it with your colleagues too.
+Jupyter vous donne des **bloc-notes** pour écrire votre code et faire des visualisations. 
+Vous pouvez rapidement itérer, visualiser et partager vos analyses. Puisque Jupyter est exécuté
+sur un serveur (que vous avez mis en place dans la dernière section), il vous permet d'effectuer 
+de très grandes analyses sur un matériel centralisé! Ajoutez autant de puissance qu’il vous faut! 
+Et puisque c’est dans le nuage, vous pouvez aussi le partager avec vos collègues.
 
-### Explore your data
+### Explorez vos données
 
-Jupyter comes with a number of features (and we can add more)
+Jupyter offre un certain nombre de fonctionnalités (et nous pouvons en ajouter d’autres)
 
-- Integrated visuals within your notebook
-- Data volume for storing your data
-- You can share your workspace with colleagues.
+- Éléments visuels intégrés dans votre bloc-notes
+- Volume de données pour le stockage de vos données
+- Possibilité de partager votre espace de travail avec vos collègues
 
-![Interactive Widgets](../images/jupyter_visual.png)
-
-
-### IDE in the browser
-
-Create for exploring, and also great for writing code
-
-- Linting and a debugger
-- Git integration
-- Built in Terminal
-- Light/Dark theme (change settings at the top)
-
-![IDE features](../images/jupyter_ide.png)
-
-**More information on Jupyter [here](https://jupyter.org)**
+![gadgets logiciels interactifs](../images/jupyter_visual.png)
 
 
+### Environnement de développement dans le navigateur
 
-## Get started with the examples
+Créez pour explorer, et aussi pour écrire du code
 
-When you started your server, it got loaded with a bunch of example notebooks.
-Great notebooks to start with are `R/01-R-Notebook-Demo.ipynb`, or the notebooks
-in `scikitlearn`. `pytorch` and `tensorflow` are great if you are familiar with
-machine learning. The `mapreduce-pipeline` and `ai-pipeline` are more advanced.
+- Linting et débogage
+- Intégration Git
+- Terminal intégré
+- Thème clair/foncé (changer les paramètres en haut)
 
-??? danger "Some notebooks only work in certain server versions"
-    For instance, `gdal` is only in the geomatics image. So if you use another
-    image then a notebook using gdal might not work.
+![Fonctionnalités de l’environnement de développement](../images/jupyter_ide.png)
+
+**Plus de renseignements sur Jupyter [ici](https://jupyter.org)**
+
+
+
+## Commencez par les exemples
+
+Lorsque vous avez démarré votre serveur, il a été chargé de modèles de bloc-notes.
+Parmi les bons blocs-notes pour commencer, il y a `R/01-R-Notebook-Demo.ipynb` et ceux dans
+dans `scikitlearn`. Les bloc-notes `pytorch` et `tensorflow` sont excellents si vous connaissez
+l’apprentissage automatique. `mapreduce-pipeline` et `ai-pipeline` sont plus avancés.
+
+??? danger "Certains bloc-notes ne fonctionnent que dans certaines versions de serveur"
+    Par exemple, `gdal` ne fonctionne que dans l’image géomatique. Donc, si vous utilisez une autre
+    image, un bloc-notes utilisant `gdal` pourrait ne pas fonctionner.
     
-## Adding software
+## Ajout de logiciels
 
-You do not have `sudo` in Jupyter, but you can use 
+Vous n’avez pas `sudo` dans Jupyter, mais vous pouvez utiliser 
 
 ```sh
 conda install --use-local your_package_name
 ```
 
-or
+ou
 
 ```sh
 pip install --user your_package_name
 ```
 
-**Don't forget to restart your jupyter kernel afterwards, to make new packages
-available.**
 
-??? tip "Make sure to restart the Jupyter kernel after installing new software"
-    If you install software in a terminal, but your jupyter kernel was already
-    running, then it will not be updated.
+**N’oubliez pas de redémarrer votre noyau Jupyter par la suite, pour accéder à de nouvelles trousses.**
+
+??? conseil "Assurez-vous de redémarrer le noyau Jupyter après l’installation d’un nouveau logiciel".
+    Si vous installez un logiciel dans un terminal, mais que votre noyau Jupyter était déjà
+    en cours d’exécution, il ne sera pas mis à jour.
     
-??? tip "Is there something that you can't install?"
-    If you need something installed, reach us or [open a github issue](https://github.com/StatCan/kubeflow-containers).
-    We can add it to the default software.
+??? conseil "Y a-t-il quelque chose que vous ne pouvez pas installer?"
+    Si vous avez besoin d’installer quelque chose, communiquez avec nous 
+    ou [ouvrir une question GitHub](https://github.com/StatCan/kubeflow-containers).
+    Nous pouvons l’ajouter au logiciel par défaut.
  
  
-# Getting Data in and out of Jupyter
+# Entrer et sortir des données de Jupyter
  
-You can upload and download data to/from Jupyterhub directly in the menu. There
-is an upload button at the top, and you can right-click most files or folders to
-download them.
+Vous pouvez télécharger et charger des données vers ou depuis Jupyterhub directement dans le menu. 
+Il y a un bouton de chargement en haut, et vous pouvez cliquer avec le bouton droit de la souris 
+sur la plupart des fichiers ou dossiers pour les télécharger.
 
 
-## Shareable "Bucket" storage
 
-**The other option** is high-volume storage with [Object
-Storage](https://en.wikipedia.org/wiki/Object_storage). Because storage is
-important for experiments, publishing, and exploring datasets, it has its own section.
+## Stockage partagé en compartiment
 
-**Refer to the [Storage Section](/Storage)**
+**L’autre option** est le stockage de gros volumes avec 
+[Stockage d’objets](https://en.wikipedia.org/wiki/Object_storage).
+Étant donné que le stockage est important pour les expérimentations, la diffusion 
+et l’exploration des ensembles de données, une section lui est consacré
+
+
+**Consultez la [section sur le stockage](/Stockage)**

@@ -1,40 +1,40 @@
-# Getting started with Kubeflow
+# Démarrer avec Kubeflow
 
-## What does Kubeflow do?
+## Que fait Kubeflow?
 
-Kubeflow runs your **workspaces**. You can have notebook servers (called Jupyter
-Servers), and in them you can create analyses in R and Python with interactive
-visuals. You can save & upload data, download it, and create shared workspaces
-for your team.
+Kubeflow exécute vos **espaces de travail**. Vous pouvez avoir des serveurs de bloc-notes 
+(appelés serveurs Jupyter), et vous pouvez y créer des analyses en R et Python avec des
+visuels interactifs. Vous pouvez enregistrer et charger des données, télécharger des données,
+et créer des espaces de travail partagés pour votre équipe.
 
-![Kubeflow Manages the Jupyter Servers](../images/jupyter_visual.png)
+![Kubeflow prend en charge les serveurs Jupyter](../images/jupyter_visual.png)
 
-**Let's get started!**
+**Commençons sans plus tarder!**
 
-# Create a Server
+# Créer un serveur
 
-## Log into Kubeflow
+## Se connecter à Kubeflow
 
-- Log into [the azure portal](https://portal.azure.com) **using your
-  cloud.statcan credentials**.
+- Connectez-vous au [portail Azure](https://portal.azure.com) **à l’aide de vos
+  justificatifs d’identité cloud.statcan**.
  
-??? warning "Log into the Azure Portal using your Cloud Credentials"
-    You have to login to the azure portal **using your statcan credentials**.
-    `first.lastname@cloud.statcan.ca`. You can do that here [at the azure portal](https://portal.azure.com).
-    ![Azure Portal: Choose the `@cloud.statcan.ca` address](../images/azure-login.png)
+??? avertissement "Connectez-vous au portail Azure au moyen de vos justificatifs d’identité dans le nuage"
+    Vous devez vous connecter au portail Azure **au moyen de vos justificatifs d’identité StatCan** :
+    `prenom.nom@cloud.statcan.ca`. Vous pouvez le faire ici [sur le portail Azure](https://portal.azure.com).
+    ![Portail Azure : choisissez l’adresse `@cloud.statcan.ca`](../images/azure-login.png)
 
 
-- After logging into Azure, log into [kubeflow](https://kubeflow.example.ca)
+- Après avoir ouvert une session dans Azure, connectez-vous à [kubeflow](https://kubeflow.example.ca)
 
 
-??? failure "Why am I getting "Missing url parameter: code"?"
-    If you try to log into kubeflow and you get the message 
-    > Missing url parameter: code
+??? échec "Pourquoi est-ce que je reçois le message "Paramètre URL manquant : code"?"
+    Si vous essayez de vous connecter à Kubeflow et que vous obtenez le message 
+    > Paramètre URL manquant : code
 
-    It is because you are signed in with the wrong Azure account. You must sign
-    in with your cloud credentials.
+    c’est parce que vous êtes connecté avec le mauvais compte Azure. Vous devez vous connecter
+    avec vos justificatifs d’identité dans le nuage.
 
-    ![This means you're in the wrong account](../images/missing_parameter_code.png)
+    ![Cela signifie que vous êtes dans le mauvais compte](../images/missing_parameter_code.png)
     
 
 
@@ -42,89 +42,89 @@ for your team.
 
 
 
-- Navigate to the Jupyter Servers tab
+- Allez à l’onglet des serveurs Jupyter
 
-![Kubeflow Manages the Jupyter Servers](../images/readme/kubeflow_ui.png)
+![Kubeflow prend en charge les serveurs Jupyter](../images/readme/kubeflow_ui.png)
 
-- Then click **+ New Server**
+- Cliquez ensuite sur **+ Nouveau serveur**.
 
-## Configuring your server
+## Configuration de votre serveur
 
-- You will get a template to create your notebook server.
-  **Note:** the name must be lowercase letters with hypens. **No spaces, and no underscores.**
+- Vous recevrez un modèle pour créer votre serveur de bloc-notes.
+  **Nota :** Le nom doit être en minuscules avec des tirets. **Pas d'espace ou de trait de soulignement.**
 
 
-- **You'll need to choose an image** You will probably want one of
+- **Vous devrez choisir une image** Vous voudrez probablement une image de :
 
-    - **Machine Learning**
-    - **Geomatics**
-    - **Minimal**
+    - **Apprentissage automatique**
+    - **Géomatique**
+    - **Minime**
 
-![Choose an Image](../images/kubeflow_choose_an_image.png)
+![Choisissez une image](../images/kubeflow_choose_an_image.png)
 
-- If you want to use a gpu, check if the image says **cpu** or **gpu**.
+- Si vous voulez utiliser un processeur graphique (GPU), vérifiez si l’image indique **CPU** ou **GPU**.
  
  
-## CPU and Memory 
+## Unité centrale (CPU) et mémoire vive 
 
-- At the time of writing (April 21, 2020) there are two types of computers in
-  the cluster
+- Au moment de la rédaction du présent document (21 avril 2020), il y a deux types d’ordinateurs dans
+  la grappe
 
-  - **CPU:** D16s v3 `(16 vcpus, 64 GiB memory)`
-  - **GPU:** NC6s_v3 `(6 vcpus, 112 GiB memory, ? GPUs)`
+  - **CPU :** D16s v3 `(16 unités centrales virtuelles, mémoire vive de 64 Go)`
+  - **GPU :** NC6s_v3 `(6 unités centrales virtuelles, mémoire vive de 112 Go, ? cartes graphiques)`
   
-  Because of this, if you request too much RAM or too many CPUs, it may be hard
-  or impossible to satisfy your request.
+  Pour cette raison, si vous demandez trop de mémoire vive ou trop de CPU, il pourrait être difficile
+  ou impossible de satisfaire votre demande.
   
-  In the future (possibly when you read this) there may be larger machines made
-  available, so you may have looser restrictions.
+  Il est possible que plus tard (peut-être lorsque vous lirez ceci), des appareils plus puissants soient
+  disponibles, et que les restrictions soient moins strictes.
   
-!!! note "Use GPU machines responsibly"
-    There are fewer GPU machines than CPU machines, so use them responsibly.
+!!! Nota "Utilisez les GPU de manière responsable"
+    Il y a moins d'appareils avec GPU que d'appareils avec CPU, alors utilisez-les de manière responsable.
     
     
-## Storing your data
+## Stockage de vos données
 
-- You'll want to create a data volume! You'll be able to save your work here,
-  and if you shut down your server, you'll be able to just remount your old data
-  by entering the name of your old disk. **It is important that you remember the
-  volume's name.**
+- Vous voudrez créer un volume de données. Vous pouvez enregistrer votre travail dans ce volume de données,
+  et si vous éteignez votre serveur, vous pourrez simplement remonter vos anciennes données
+  en saisissant le nom de votre ancien disque. **Il est important que vous vous souveniez du
+  nom du volume.**
 
-![Create a Data Volume](../images/kubeflow_volumes.png)
+![Créer un volume de données](../images/kubeflow_volumes.png)
  
-!!! tip "Check for old volumes by looking at the Existing option"
-    When you create your server you have the option of reusing an old volume
-    or creating a new one. You probably want to reuse your old volume.
+!!! conseil "Trouvez des anciens volumes en jetant un coup l'oeil à l’option Existant"
+    Lorsque vous créez votre serveur, vous avez la possibilité de réutiliser un ancien volume
+    ou d’en créer un nouveau. Vous souhaiterez probablement réutiliser votre ancien volume.
  
-## And... Create!!!
+## Et... Créez!!!
 
-- If you're satisfied with the settings, you can now create the server! It may
-  take a few minutes to spin up depending on the resources you asked for. (GPUs
-  take longer.)
+- Si vous êtes satisfait des paramètres, vous pouvez maintenant créer le serveur! 
+  Il se peut que cela prenne quelques minutes pour se mettre en route, selon les ressources 
+  que vous avez demandées. (Les GPU prennent plus de temps.)
  
-!!! success "Your server is running"
-    If all goes well, your server should be running!!! You will now have the
-    option to connect, and [try out Jupyter!](/1-Experiments/Jupyter)
+!!! succès « Votre serveur est en fonctionnement »
+    Si tout va bien, votre serveur devrait fonctionner! Vous aurez désormais
+    la possibilité de connecter et [d’essayer Jupyter.](/1-Experiments/Jupyter)
 
  
-# Share your workspace
+# Partager votre espace de travail
 
-In kubeflow every user has a **namespace**. Your namespace belongs to you, and
-it's where all your resources live. If you want to collaborate with someone you
-need to share a namespace. So you can do that either by sharing your own
-namespace, or more preferably, **by creating a team namespace**. 
+Dans Kubeflow, chaque utilisateur dispose d’un **espace de noms**. Cet espace vous appartient, 
+et toutes vous ressources s'y trouvent. Si vous souhaitez collaborer avec quelqu’un, vous
+devez partager un espace de noms. Pour ce faire, pouvez partager votre propre
+espace de noms ou, préférablement, **créer un espace de noms d’équipe**. 
 
-## Create a new shared namespace
+## Créer un nouvel espace de noms partagé
 
-The link to create a new namespace is here
-- TODO THERE IS NO LINK YET.
+Le lien pour créer un nouvel espace de noms est ici :
+- À FAIRE, IL N’Y A PAS ENCORE DE LIEN.
 
-## Manage contributors
+## Gérer les contributeurs
 
-You can add or remove people from a namespace you own through the **Manage
-Contributors** menu in kubeflow.
+Vous pouvez ajouter ou supprimer des personnes d’un espace de noms 
+que vous possédez à partir du menu **Gérer les contributeurs** dans Kubeflow.
 
-![Contributors Menu](../images/kubeflow_contributors.png)
+![Menu des contributeurs](../images/kubeflow_contributors.png)
 
-!!! success "Now you and your colleagues can share access to a server!"
-    Now you can share a server with colleagues! Try it out!
+!!! succès "Vos collègues et vous pouvez maintenant partager l’accès à un serveur!"
+    Vous pouvez maintenant partager un serveur avec vos collègues! Essayez-le!
