@@ -1,17 +1,17 @@
 # Pachyderm
 
  
-!!! tip "Check for old volumes by looking at the Existing option"
-    When you create your server you have the option of reusing an old volume
-    or creating a new one. You probably want to reuse your old volume.
+!!! conseil "Recherchez les anciens volumes en examinant l’option Existant"
+    Lorsque vous créez votre serveur, vous pouvez réutiliser un ancien volume 
+    ou en créer un nouveau. Vous souhaiterez probablement réutiliser votre ancien volume.
 
 
-??? failure "Why am I getting "Missing url parameter: code"?"
-    If you try to log into kubeflow and you get the message 
-    > Missing url parameter: code
+??? échec "Pourquoi est-ce que je reçois le message "Paramètre URL manquant : code"?"
+    Si vous essayez de vous connecter à Kubeflow et que vous obtenez le message 
+    > Paramètre URL manquant : code
 
-    It is because you are signed in with the wrong Azure account. You must sign
-    in with your cloud credentials.
+    c’est parce que vous vous êtes connecté avec le mauvais compte Azure. 
+    Vous devez vous connecter avec vos justificatifs d’identité dans le nuage.
 
-    ![This means you're in the wrong account](../images/missing_parameter_code.png)
+    ![Cela signifie que vous êtes dans le mauvais compte](../images/missing_parameter_code.png)
     

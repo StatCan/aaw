@@ -1,9 +1,10 @@
-# Experiments with Kubeflow 
+# Expérimentations avec Kubeflow 
 
-You have to login to the azure portal **using your statcan credentials**.
-`first.lastname@cloud.statcan.ca`. You can do that here [at the azure portal](https://portal.azure.com).
+Vous devez vous connecter au portail Azure **au moyen de vos justificatifs d’identité StatCan**.
+`prenom.nom@cloud.statcan.ca`. Vous pouvez le faire ici [sur le portail Azure](https://portal.azure.com).
 
-![Azure Portal: Choose the `@cloud.statcan.ca` address](../images/azure-login.png)
+![Portail Azure : choisissez l’adresse `@cloud.statcan.ca`](../images/azure-login.png)
 
-## Getting Started with notebooks
+## Démarrer avec les bloc-notes
+
 
