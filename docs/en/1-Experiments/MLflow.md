@@ -65,6 +65,8 @@ Artifacts can be saved using **mlflow.log_artifact(name of the graph)**
 
 The saved artifact can be seen in artifacts folder from mlruns and also from artifacts in MLflow UI.
 
+![Logged Artifacts](../images/Artifacts_mlflow.PNG)
+
 #### How to save model in MLflow?
 
 ML flow allows you to save the model that is being trained. Models can be saved in artifacts using **mlflow.log_model(model name)**
