@@ -70,8 +70,8 @@ et cr&eacute;er des espaces de travail partag&eacute;s pour votre &eacute;quipe.
 - Au moment de la r&eacute;daction du pr&eacute;sent document (21 avril 2020), il y a deux types d&#146;ordinateurs dans
   la grappe
 
-  - **CPU :** D16s v3 `(16 unit&eacute;s centrales virtuelles, m&eacute;moire vive de 64 Go)`
-  - **GPU :** NC6s_v3 `(6 unit&eacute;s centrales virtuelles, m&eacute;moire vive de 112 Go, ? cartes graphiques)`
+  - **CPU :** D16s v3 `(16 unites centrales virtuelles, memoire vive de 64 Go)`
+  - **GPU :** NC6s_v3 `(6 unites centrales virtuelles, memoire vive de 112 Go, 1 cartes graphiques)`
   
   Pour cette raison, si vous demandez trop de m&eacute;moire vive ou trop de CPU, il pourrait &ecirc;tre difficile
   ou impossible de satisfaire votre demande.

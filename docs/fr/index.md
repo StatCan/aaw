@@ -26,14 +26,14 @@ deux premi&egrave;res, car elles sont les plus largement applicables.
 
 ![Bloc-notes Jupyter](images/jupyter_in_action.png)
 
-[**En savoir plus**](1-Exp&eacute;rimentation/Jupyter)
+[**En savoir plus**](1-Experiences/Jupyter)
 
 ## Bureaux avec espace de travail ML
 
 Il est plus facile de partager les bloc-notes que les bureaux, mais nous avons aussi la possibilit&eacute;
 d'ex&eacute;cuter un bureau complet, muni des applications typiques, directement dans votre navigateur.
 
-[**En savoir plus**](1-Exp&eacute;rimentation/espaces de travail ML)
+[**En savoir plus**](1-Experiences/ML-Workspaces)
 
 # Pour la diffusion
 
@@ -47,7 +47,7 @@ Nous disposons d'un serveur R-Shiny pour l'h&eacute;bergement des applications R
 ![Serveur R-Shiny](images/readme/shiny_ui.png)
  
 Pour cr&eacute;er un tableau de bord R-Shiny, il suffit de soumettre une demande d'extraction (&laquo; pull request &raquo;) GitHub
-&agrave; notre [r&eacute;pertoire R-Dashboards GitHub] (https://github.com/StatCan/R-dashboards). 
+&agrave; notre [r&eacute;pertoire R-Dashboards GitHub](https://github.com/StatCan/R-dashboards). 
 
 # Pour la production
 

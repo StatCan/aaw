@@ -74,7 +74,7 @@ Pour vous connecter, il vous suffit d'utiliser **OpenID** comme ci-dessous.
 ![Compartiments/Stockage d'objets](images/minio_self_serve_login.png)
 
 Une fois que vous &ecirc;tes connect&eacute;, vous pouvez cr&eacute;er un compartiment personnel 
-selon le format `prenom.nom`. Voir la photo ci-dessous.
+selon le format `prenom-nom`. Voir la photo ci-dessous.
 
 
 ![Compartiments/Stockage d'objets](images/minio_self_serve_bucket.png)
@@ -88,4 +88,4 @@ Vous pouvez facilement partager des fichiers individuels.
 
 ## Acc&egrave;s &agrave; la programmation
 
-&Agrave; FAIRE : Demander &agrave; Will et Zach
+Pas encore traduit.
