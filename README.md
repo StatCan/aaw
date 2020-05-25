@@ -58,11 +58,11 @@ What can you do it with / what have we done with it?
 
 ### Services
 
-* https://istio-kiali.example.ca
-* https://grafana.example.ca
-* https://istio-grafana.example.ca (private)
-* https://prometheus.example.ca (private)
-* https://alertmanager.example.ca (private)
+* https://istio-kiali.covid.cloud.statcan.ca (private)
+* https://grafana.covid.cloud.statcan.ca
+* https://istio-grafana.covid.cloud.statcan.ca (private)
+* https://prometheus.covid.cloud.statcan.ca (private)
+* https://alertmanager.covid.cloud.statcan.ca (private)
 
 ### Source Code
 
@@ -224,7 +224,7 @@ The below picture demonstrates the file share containing all R applications serv
 * https://github.com/StatCan/shiny/actions
 * https://github.com/StatCan/charts/tree/master/stable/shiny
 
-## NodeJS (https://covid19.example.ca)
+## NodeJS (https://covid19.covid.cloud.statcan.ca)
 
 ![covid map](docs/en/images/readme/covid_ui.png "Covid-19 Map")
 
@@ -249,7 +249,7 @@ The above picture demonstrates the action which builds and deploys the COVID-19 
 * https://github.com/StatCan/covid19/actions
 * https://github.com/StatCan/charts/tree/master/stable/covid
 
-## .NET (https://portal.example.ca)
+## .NET (https://portal.covid.cloud.statcan.ca)
 
 ![portal ui](docs/en/images/readme/portal_ui.png "Portal UI")
 
@@ -272,7 +272,7 @@ The above picture demonstrates the action which builds and deploys the Portal we
 * https://github.com/StatCan/StatCan.OrchardCore/actions
 * https://github.com/StatCan/charts/tree/master/stable/orchard-cms
 
-## MLflow (https://mlflow.example.ca)
+## MLflow (https://mlflow.covid.cloud.statcan.ca)
 
 ![mlflow ui](docs/en/images/readme/mlflow_ui.png "MLflow UI")
 
@@ -299,7 +299,7 @@ The above picture demonstrates the action which builds and deploys the Mlflow ap
 * https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/charts/tree/master/stable/mlflow
 
-## Dremio (https://dremio.example.ca)
+## Dremio (https://dremio.covid.cloud.statcan.ca)
 
 ![dremio ui](docs/en/images/readme/dremio_ui.png "Dremio UI")
 
@@ -326,7 +326,7 @@ The above picture demonstrates the action which builds and deploys the Dremio ap
 * https://github.com/StatCan/dremio/actions
 * https://github.com/StatCan/charts/tree/master/stable/dremio
 
-## Pachyderm (https://pachyderm.example.ca)
+## Pachyderm (https://pachyderm.covid.cloud.statcan.ca)
 
 Launched Pachyderm a data science platform that combines Data Lineage with End-to-End Pipelines on Kubernetes
 
@@ -342,7 +342,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/pachyderm
 * https://github.com/StatCan/pachyderm/actions
 
-## Vault (https://vault.example.ca)
+## Vault (https://vault.covid.cloud.statcan.ca)
 
 ![vault ui](docs/en/images/readme/vault_ui.png "Vault UI")
 
@@ -424,15 +424,15 @@ What can you do it with / what have we done with it?
 
 #### Public
 
-* https://kubeflow.example.ca
-* https://portal.example.ca
-* https://shiny.example.ca
-* https://covid19.example.ca
-* https://istio-kiali.example.ca
-* https://grafana.example.ca
-* https://istio-grafana.example.ca (private)
-* https://prometheus.example.ca (private)
-* https://alertmanager.example.ca (private)
+* https://kubeflow.covid.cloud.statcan.ca
+* https://portal.covid.cloud.statcan.ca
+* https://shiny.covid.cloud.statcan.ca
+* https://covid19.covid.cloud.statcan.ca
+* https://istio-kiali.covid.cloud.statcan.ca
+* https://grafana.covid.cloud.statcan.ca
+* https://istio-grafana.covid.cloud.statcan.ca (private)
+* https://prometheus.covid.cloud.statcan.ca (private)
+* https://alertmanager.covid.cloud.statcan.ca (private)
 
 #### Recommended Reading
 

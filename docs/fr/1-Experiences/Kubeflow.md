@@ -24,7 +24,7 @@ et cr&eacute;er des espaces de travail partag&eacute;s pour votre &eacute;quipe.
     ![Portail Azure : choisissez l&#146;adresse `@cloud.statcan.ca`](../images/azure-login.png)
 
 
-- Apr&egrave;s avoir ouvert une session dans Azure, connectez-vous &agrave; [kubeflow](https://kubeflow.example.ca)
+- Apr&egrave;s avoir ouvert une session dans Azure, connectez-vous &agrave; [kubeflow](https://kubeflow.covid.cloud.statcan.ca)
 
 
 ??? failure "Pourquoi est-ce que je re&ccedil;ois le message "Param&egrave;tre URL manquant : code"?"

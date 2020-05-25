@@ -54,15 +54,15 @@ Nous offrons quatre compartiments d'instances de stockage :
 
 **Libre-service**
 
-- [Minimal](https://minimal-tenant1-minio.example.ca)
+- [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)
 
-- [Premium](https://premium-tenant1-minio.example.ca)
+- [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)
 
-- [Pachyderm](https://pachyderm-tenant1-minio.example.ca)
+- [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca)
 
 **Accessible au grand public**
 
-- [Public (en lecture seule)](https://datasets.example.ca)
+- [Public (en lecture seule)](https://datasets.covid.cloud.statcan.ca)
 
 
 ## Libre-service

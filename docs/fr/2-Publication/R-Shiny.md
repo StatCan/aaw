@@ -16,7 +16,7 @@ Si vous avez d'autres biblioth&egrave;ques R &agrave; installer, envoyez votre l
 !!! example "Voir le tableau de bord ci-dessus"
     Le tableau de bord ci-dessus se trouve dans Github. Jetez un coup d'oeil &agrave; 
     [la source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard) et 
-    voyez le tableau de bord en direct [shiny.example.ca/bus-dashboard](https://shiny.example.ca/bus-dashboard).
+    voyez le tableau de bord en direct [shiny.covid.cloud.statcan.ca/bus-dashboard](https://shiny.covid.cloud.statcan.ca/bus-dashboard).
     
 
 # Int&eacute;gration de tableaux de bord sur vos sites Web
