@@ -48,12 +48,8 @@ The ML workspace is an all-in-one web-based IDE specialized for machine learning
   <a href="#git-integration">Git Integration</a> •
   <a href="#file-sharing">File Sharing</a> •
   <a href="#access-ports">Access Ports</a> •
-  <a href="#tensorboard">Tensorboard</a> •
-  <a href="#extensibility">Extensibility</a> •
   <a href="#hardware-monitoring">Hardware Monitoring</a> •
-  <a href="#ssh-access">SSH Access</a> •
   <a href="#remote-development">Remote Development</a> •
-  <a href="#run-as-a-job">Job Execution</a>
 </p>
 
 The workspace is equipped with a selection of best-in-class open-source development tools to help with the machine learning workflow. Many of these tools can be started from the `Open Tool` menu from Jupyter (the main application of the workspace):
