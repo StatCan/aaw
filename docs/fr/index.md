@@ -1,83 +1,84 @@
-# SALUT Starting on the Advanced Analytics Workspace
+# D&eacute;marrer sur l'espace de travail d'analyse avanc&eacute;e
 
-![Advanced Analytics Workspace homepage](images/readme/portal_ui.png)
+![Page d'accueil de l'espace de travail d'analyse avanc&eacute;e](images/readme/portal_ui.png)
 
-The **[Advanced Analytics Workspace portal](https://portal.example.ca)** is
-a great place to discover and connect to the available resources we'll be
-talking about here.
+Le **[portail de l'espace de travail d'analyse avanc&eacute;e](https://portal.example.ca)**
+est un excellent endroit o&ugrave; explorer les ressources dont il sera question ici, et y acc&eacute;der.
 
-We'll break down the standard tasks into three categories:
+Nous allons r&eacute;partir les t&acirc;ches standard en trois cat&eacute;gories :
 
-  1. **Experimentation / Analysis**
-  2. **Publishing**
-  3. **Large scale production**
+  1. **Exp&eacute;rimentation et analyse**
+  2. **Diffusion**
+  3. **Production &agrave; grande &eacute;chelle**
 
-All are important, and we will address all of them, but we'll focus on the first
-two as these are most widely applicable.
+Nous aborderons les trois, mais nous nous concentrerons sur les
+deux premi&egrave;res, car elles sont les plus largement applicables.
 
-# For Experiments
+# Pour l'exp&eacute;rimentation et l'analyse
 
-<!-- ![Kubeflow](images/logo-kubeflow.png){: style="max-height:200px"} -->
+<!--! [Kubeflow](images/logo-kubeflow.png){ : style="max-height:200px"} -->
 
-## Jupyter notebooks
+## Bloc-notes Jupyter
 
-  - `R`, `Python`, and `Julia`
-  - Choose the CPU/RAM you need, big or small, to fit your analysis
-  - Share your workspace with your team, along with the data and notebooks within
+  - `R`, `Python` et `Julia`
+  - Choisissez l'unit&eacute; centrale ou la m&eacute;moire vive dont vous avez besoin, petite ou grande, pour votre analyse
+  - Partagez votre espace de travail avec votre &eacute;quipe, y compris les donn&eacute;es et les bloc-notes qui s'y trouvent
 
-![Jupyter Notebooks](images/jupyter_in_action.png)
+![Bloc-notes Jupyter](images/jupyter_in_action.png)
 
-[**Learn More**](1-Experiments/Jupyter)
+[**En savoir plus**](1-Experiences/Jupyter)
 
-## Desktops with ML-Workspace
+## Bureaux avec espace de travail ML
 
-Notebooks are more easily shared than desktops, but we also have the ability to
-run a full desktop, with typical applications, right inside your browser.
+Il est plus facile de partager les bloc-notes que les bureaux, mais nous avons aussi la possibilit&eacute;
+d'ex&eacute;cuter un bureau complet, muni des applications typiques, directement dans votre navigateur.
 
-[**Learn More**](1-Experiments/ML-Workspaces)
+[**En savoir plus**](1-Experiences/ML-Workspaces)
 
-# For Publishing
+# Pour la diffusion
 
 ## R Shiny
 
-![R Shiny](images/logo-RStudio.png){: style="max-height:100px; display: block; margin-left: auto; margin-right: auto;"}
+![R Shiny](images/logo-RStudio.png){ : style="max-height:100px; display : block; margin-left : auto; margin-right : auto;"}
 
-The platform is designed to host any kind of open source application you want.
-We have an R-Shiny server for hosting R-Shiny apps
+La plateforme est con&ccedil;ue pour accueillir le type d'application &agrave; source ouverte de votre choix.
+Nous disposons d'un serveur R-Shiny pour l'h&eacute;bergement des applications R-Shiny
 
- ![R Shiny Server](images/readme/shiny_ui.png)
+![Serveur R-Shiny](images/readme/shiny_ui.png)
  
-To create any an R-Shiny Dashboard, you just have to submit a Github Pull
-request to our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards). 
+Pour cr&eacute;er un tableau de bord R-Shiny, il suffit de soumettre une demande d'extraction (&laquo; pull request &raquo;) GitHub
+&agrave; notre [r&eacute;pertoire R-Dashboards GitHub](https://github.com/StatCan/R-dashboards). 
 
-# For Production
+# Pour la production
 
-If an experiment turns into a product, then one of the following may be needed:
+Si une exp&eacute;rimentation se transforme en produit, l'un des &eacute;l&eacute;ments suivants peut &ecirc;tre n&eacute;cessaire :
 
-  - Kubeflow pipelines for high-volume/intensity work
-  - Automation pipelines
+  - des pipelines Kubeflow pour les travaux &agrave; haut volume ou uhaute intensit&eacute;
+  - des pipelines d'automatisation
  
-![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
+![Pipelines Kubeflow](images/readme/kubeflow_pipeline.png)
 
-!!! tip "Ask for help in production"
-    The Advanced Analytics Workspace support staff are happy to help with
-    production oriented use cases, and we can probably save you lots of time.
-    Don't be shy to [ask us for help](Help)!
+!!! tip "Demander de l'aide pour la production"
+    Le personnel de soutien de l'espace de travail d'analyse avanc&eacute;e est heureux 
+    de vous aider pour les cas d'utilisation orient&eacute;s vers la production, 
+    et nous pouvons probablement vous faire gagner beaucoup de temps.
+    N'h&eacute;sitez pas &agrave; [nous demander pour de l'aide](Aide)!
 
-# How do I get data? How do I submit data?
+# Comment obtenir des donn&eacute;es? Comment envoyer des donn&eacute;es?
 
-![Browse Datasets](images/readme/minio_ui.png)
+![Parcourir les ensembles de donn&eacute;es](images/readme/minio_ui.png)
 
- - Every workspace can be equipped with its own storage.
+ - Chaque espace de travail peut &ecirc;tre &eacute;quip&eacute; de son propre stockage.
 
- - There are also storage buckets to publish datasets; either for internal use
-   or for wider release.
+ - Il existe &eacute;galement des compartiments ("buckets") de stockage pour la publication 
+   d'ensembles de donn&eacute;es, pour usage interne ou diffusion plus large.
 
-We will give an overview of the technologies here, and in the next sections
-there will be a more in-depth FAQ of each of them. 
+Nous donnerons un aper&ccedil;u des technologies ici. Des renseignements plus pr&eacute;cis sur
+chacune d'entre elles seront fouris dans les sections suivantes. 
 
-!!! example "Browse some datasets"
-    Browse some [datasets](https://datasets.example.ca) here. These
-    data sets are meant to store widely shared data. Either data that has been
-    brought it, or data to be released out as a product. **As always, ensure
-    that the data is not sensitive.**
+!!! example "Parcourir quelques ensembles de donn&eacute;es"
+    Parcourez quelques [ensembles de donn&eacute;es](https://datasets.example.ca) ici. 
+    Ces ensembles de donn&eacute;es ont &eacute;t&eacute; con&ccedil;us pour stocker des donn&eacute;es largement partag&eacute;es. 
+    Il peut s'agir de donn&eacute;es qui ont &eacute;t&eacute; introduites, ou de donn&eacute;es qui seront diffus&eacute;es
+    sous forme de produit. **Comme toujours, veillez &agrave; ce qu'il ne s'agisse pas de donn&eacute;es 
+    de nature d&eacute;licate.**

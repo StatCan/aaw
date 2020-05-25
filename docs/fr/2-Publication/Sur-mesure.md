@@ -1,23 +1,21 @@
-# Custom Webapps
+# Applications Web personnalis&eacute;es
 
-We can deploy anything as long as it's open source and we can put it in a Docker
-container. For instance, NodeJS apps, Flask or Dash apps. Etc.
+Nous pouvons tout d&eacute;ployer, dans la mesure o&ugrave; il s'agit de logiciel libre, et nous 
+pouvons le mettre dans un conteneur Docker (p. ex. applications NodeJS, Flask, Dash).
 
-![Example of a NodeJS App](../images/readme/covid_ui.png)
-
-
-!!! example "See the source code for this app"
-    We just push these kinds of applications through Github into the server.
-    The source for the above app is here [github.com/StatCan/covid19](https://github.com/StatCan/covid19)
+![Exemple d'une application NodeJS](../images/readme/covid_ui.png)
 
 
+!!! example "Voir le code de source de cette application"
+    Nous int&eacute;grons ces types d'applications au serveur au moyen de GitHub.
+    La source de l'application ci-dessus est ici : [github.com/StatCan/covid19](https://github.com/StatCan/covid19).
 
-# How to get your app hosted
 
-If you already have a webapp in a git repository, then as soon as it's
-Dockerized, we can fork the Git repository into the StatCan github repository
-and point a url to it. To update it, you'll just interact with the Statcan
-Github repository with Pull Requests.
 
-**Contact us if you have questions.**
+# Comment faire h&eacute;berger votre application
+
+Si vous avez d&eacute;j&agrave; une application Web dans un r&eacute;pertoire Git, d&egrave;s qu'elle est plac&eacute;e dans un conteneur Docker, nous pouvons int&eacute;grer le r&eacute;pertoire Git dans le r&eacute;pertoire GitHub de StatCan et pointer une URL vers elle. Pour la mettre &agrave; jour, il vous suffit d'interagir avec le r&eacute;pertoire GitHub de StatCan au moyen de demandes d'extraction.
+
+
+**Si vous avez des questions, n'h&eacute;sitez pas &agrave; communiquer avec nous.**
 
