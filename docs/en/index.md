@@ -2,7 +2,7 @@
 
 ![Advanced Analytics Workspace homepage](images/readme/portal_ui.png)
 
-The **[Advanced Analytics Workspace portal](https://portal.example.ca)** is
+The **[Advanced Analytics Workspace portal](https://portal.covid.cloud.statcan.ca)** is
 a great place to discover and connect to the available resources we'll be
 talking about here.
 
@@ -77,7 +77,7 @@ We will give an overview of the technologies here, and in the next sections
 there will be a more in-depth FAQ of each of them. 
 
 !!! example "Browse some datasets"
-    Browse some [datasets](https://datasets.example.ca) here. These
+    Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These
     data sets are meant to store widely shared data. Either data that has been
     brought it, or data to be released out as a product. **As always, ensure
     that the data is not sensitive.**

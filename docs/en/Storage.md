@@ -45,13 +45,13 @@ We have four available types of bucket storage.
 
 **Self-Serve:**
 
-- [Minimal](https://minimal-tenant1-minio.example.ca)
-- [Premium](https://premium-tenant1-minio.example.ca)
-- [Pachyderm](https://pachyderm-tenant1-minio.example.ca)
+- [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)
+- [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)
+- [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca)
 
 **Publicly Available:**
 
-- [Public (Read-Only)](https://datasets.example.ca)
+- [Public (Read-Only)](https://datasets.covid.cloud.statcan.ca)
 
 ## Self-Serve
 
@@ -122,7 +122,7 @@ mc cp test.txt minio-minimal/${FULLNAME}/test.txt
 ```
 
 Now open
-[minimal-tenant1-minio.example.ca](https://minimal-tenant1-minio.example.ca),
+[minimal-tenant1-minio.covid.cloud.statcan.ca](https://minimal-tenant1-minio.covid.cloud.statcan.ca),
 you will see your test file there!
 
 You can use `mc` to copy files to/from the bucket. It is very fast. You can also

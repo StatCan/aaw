@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TRUE="not-telling-you-the-hostname.ca"
+TRUE="covid.cloud.statcan.ca"
 FAKE="example.ca"
 
-find . -type f -name '*.md' | tee >(xargs sed -i "s/$TRUE/$FAKE/g")
+find . -type f -name '*.md' | tee >(xargs sed -i "s/$FAKE/$TRUE/g")

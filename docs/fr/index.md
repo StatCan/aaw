@@ -2,7 +2,7 @@
 
 ![Page d'accueil de l'espace de travail d'analyse avanc&eacute;e](images/readme/portal_ui.png)
 
-Le **[portail de l'espace de travail d'analyse avanc&eacute;e](https://portal.example.ca)**
+Le **[portail de l'espace de travail d'analyse avanc&eacute;e](https://portal.covid.cloud.statcan.ca)**
 est un excellent endroit o&ugrave; explorer les ressources dont il sera question ici, et y acc&eacute;der.
 
 Nous allons r&eacute;partir les t&acirc;ches standard en trois cat&eacute;gories :
@@ -77,7 +77,7 @@ Nous donnerons un aper&ccedil;u des technologies ici. Des renseignements plus pr
 chacune d'entre elles seront fouris dans les sections suivantes. 
 
 !!! example "Parcourir quelques ensembles de donn&eacute;es"
-    Parcourez quelques [ensembles de donn&eacute;es](https://datasets.example.ca) ici. 
+    Parcourez quelques [ensembles de donn&eacute;es](https://datasets.covid.cloud.statcan.ca) ici. 
     Ces ensembles de donn&eacute;es ont &eacute;t&eacute; con&ccedil;us pour stocker des donn&eacute;es largement partag&eacute;es. 
     Il peut s'agir de donn&eacute;es qui ont &eacute;t&eacute; introduites, ou de donn&eacute;es qui seront diffus&eacute;es
     sous forme de produit. **Comme toujours, veillez &agrave; ce qu'il ne s'agisse pas de donn&eacute;es 

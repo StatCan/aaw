@@ -24,7 +24,7 @@ for your team.
     ![Azure Portal: Choose the `@cloud.statcan.ca` address](../images/azure-login.png)
 
 
-- After logging into Azure, log into [kubeflow](https://kubeflow.example.ca)
+- After logging into Azure, log into [kubeflow](https://kubeflow.covid.cloud.statcan.ca)
 
 
 ??? failure "Why am I getting "Missing url parameter: code"?"

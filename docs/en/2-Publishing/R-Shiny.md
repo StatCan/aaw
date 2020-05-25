@@ -20,7 +20,7 @@ repository](https://github.com/StatCan/shiny) by creating a Github Issue and we 
 
 !!! example "See the above dashboard here"
     The above dashboard is in Github. Take a look at [the source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard), and
-    see the dashboard live [shiny.example.ca/bus-dashboard](https://shiny.example.ca/bus-dashboard)
+    see the dashboard live [shiny.covid.cloud.statcan.ca/bus-dashboard](https://shiny.covid.cloud.statcan.ca/bus-dashboard)
 
 
 # Embedding dashboards into your websites
