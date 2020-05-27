@@ -73,6 +73,8 @@ ML flow allows you to save the model that is being trained. Models can be saved 
 
 or Models can be directly saved to local directory using **mlflow.save_model(model name)**
 
+![Saved_Model](../images/Save_model.PNG)
+
 
 
 
