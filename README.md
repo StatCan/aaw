@@ -1,4 +1,4 @@
-# DAaaS Proof of Concept
+# Data Analytics as a Service
 
 ## Background
 
@@ -108,10 +108,10 @@ The below picture demonstrates sharing a workspace with other contributors.
 
 #### Source Code
 
+* https://github.com/StatCan/actions/tree/master/kubeflow-databricks
 * https://github.com/StatCan/gpu-toleration-injector
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
-* https://github.com/StatCan/kubeflow-github-action
 * https://github.com/StatCan/kubeflow-manifest
 
 ## Kubeflow Containers
@@ -390,19 +390,22 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/kubecost
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
-* https://github.com/StatCan/kubeflow-github-action
+* https://github.com/StatCan/kubeflow-containers-desktop
 * https://github.com/StatCan/kubeflow-manifest
 * https://github.com/StatCan/minio
 * https://github.com/StatCan/mlflow
+* https://github.com/StatCan/mlflow-operator
 * https://github.com/StatCan/pachyderm
 * https://github.com/StatCan/R-dashboards
+* https://github.com/StatCan/R-notebooks
 * https://github.com/StatCan/shiny
 * https://github.com/StatCan/statcan.orchardcore
-* https://github.com/StatCan/terraform-vault (private)
+* https://github.com/StatCan/terraform-vault-daaas (private)
 * https://github.com/StatCan/vault-plugin-secrets-minio
 
 #### GitHub Actions
 
+* https://github.com/StatCan/actions/actions
 * https://github.com/StatCan/charts/actions
 * https://github.com/StatCan/covid19/actions
 * https://github.com/StatCan/daaas/actions
@@ -412,7 +415,6 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/gpu-toleration-injector/actions
 * https://github.com/StatCan/kubeflow-containers/actions
 * https://github.com/StatCan/kubeflow-controller/actions
-* https://github.com/StatCan/kubeflow-github-action/actions
 * https://github.com/StatCan/minio/actions
 * https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/pachyderm/actions
