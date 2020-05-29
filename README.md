@@ -382,7 +382,6 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/covid19
 * https://github.com/StatCan/daaas
 * https://github.com/StatCan/daaas-containers
-* https://github.com/StatCan/datascience-containers
 * https://github.com/StatCan/dremio
 * https://github.com/StatCan/gatekeeper-policies
 * https://github.com/StatCan/jupyter-notebooks
