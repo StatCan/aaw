@@ -45,10 +45,13 @@ We have four available types of bucket storage.
 
 **Self-Serve:**
 
-- [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)
-- [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)
-- [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca)
+| storage type                                                        | description                                                                 |
+|:--------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)     | By default, use this one. It is HDD backed storage.                         |
+| [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)     | Use this if you need very high read/write speeds, like for neural networks. |
+| [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca) | You will only need this if you're using Pachyderm Pipelines.                |
 
+ 
 **Publicly Available:**
 
 - [Public (Read-Only)](https://datasets.covid.cloud.statcan.ca)
@@ -64,6 +67,11 @@ Once you are logged in, you are allowed to create a personal bucket with the
 format `firstname-lastname`.
 
 ![Minio browser with personal bucket using first name, last name format (hyphenated)](images/minio_self_serve_bucket.png)
+
+!!! failure "Cannot yet share files from Minio with OpenID"
+    Due to [an upstream bug in Minio](https://github.com/minio/minio/issues/8935) you cannot share files yet. 
+    This will hopefully be resolved soon. In the meantime, it **does** work if you use your access key and secret key,
+    which you can get from Kubeflow.
 
 ## Sharing
 
