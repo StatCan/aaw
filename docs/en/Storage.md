@@ -48,7 +48,7 @@ We have four available types of bucket storage.
 | storage type                                                        | description                                                                 |
 |:--------------------------------------------------------------------|:----------------------------------------------------------------------------|
 | [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)     | By default, use this one. It is HDD backed storage.                         |
-| [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)     | Use this if you need very high read/write speeds, like for neural networks. |
+| [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)     | Use this if you need very high read/write speeds, like for training models on very large datasets. |
 | [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca) | You will only need this if you're using Pachyderm Pipelines.                |
 
  
