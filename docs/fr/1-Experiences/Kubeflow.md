@@ -106,7 +106,6 @@ et cr&eacute;er des espaces de travail partag&eacute;s pour votre &eacute;quipe.
     Si tout va bien, votre serveur devrait fonctionner! Vous aurez d&eacute;sormais
     la possibilit&eacute; de connecter et [d&#146;essayer Jupyter.](/1-Experiments/Jupyter)
 
- 
 # Partager votre espace de travail
 
 Dans Kubeflow, chaque utilisateur dispose d&#146;un **espace de noms**. Cet espace vous appartient, 
