@@ -114,17 +114,16 @@ it's where all your resources live. If you want to collaborate with someone you
 need to share a namespace. So you can do that either by sharing your own
 namespace, or more preferably, **by creating a team namespace**. 
 
-## Create a new shared namespace
-
-The link to create a new namespace is here
-- TODO THERE IS NO LINK YET.
+The link to create a new namespace is in the **&#8942;** menu on [the kubeflow section of the portal](https://portal.covid.cloud.statcan.ca/#kubeflow). 
 
 ## Manage contributors
 
-You can add or remove people from a namespace you own through the **Manage
+You can add or remove people from a namespace you already own through the **Manage
 Contributors** menu in kubeflow.
 
 ![Contributors Menu](../images/kubeflow_contributors.png)
 
 !!! success "Now you and your colleagues can share access to a server!"
     Now you can share a server with colleagues! Try it out!
+
+**For more details on collaboration on the platform, see [Collaboration](/Collaboration).**
