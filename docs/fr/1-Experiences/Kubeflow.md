@@ -127,3 +127,6 @@ que vous poss&eacute;dez &agrave; partir du menu **G&eacute;rer les contributeur
 
 !!! success "Vos coll&egrave;gues et vous pouvez maintenant partager l&#146;acc&egrave;s &agrave; un serveur!"
     Vous pouvez maintenant partager un serveur avec vos coll&egrave;gues! Essayez-le!
+
+
+**For more details on collaboration on the platform, see [Collaboration](/Collaboration).**

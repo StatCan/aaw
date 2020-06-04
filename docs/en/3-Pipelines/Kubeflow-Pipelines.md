@@ -7,11 +7,19 @@ In the context of the Advanced Analytics Workspace, Kubeflow Pipelines are inter
 * The Kubeflow [UI](../1-Experiments/Kubeflow.md), where from the Pipelines menu you can upload pipelines, view the pipelines you have and their results, etc.
 * The Kubeflow Pipelines python [SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/), accessible through the [Jupyter Notebook Servers](../1-Experiments/Kubeflow.md#create-a-server), where you can define your components and pipelines, submit them to run now, or even save them for later.
 
-This document provides a brief explanation of KubeFlow Pipelines and how to get started with them on the Advanced Analytics Workspace.  More comprehensive pipeline examples specifically made for this platform are available on [github](https://github.com/StatCan/jupyter-notebooks) (and mirrored automatically to every Notebook Server at `/jupyter-notebooks`), as well as from [public sources](https://github.com/kubeflow/pipelines/tree/master/samples).  See [here](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/) for a more detailed general explanation of Kubeflow Pipelines.
+??? example "More examples in the notebooks" 
+    More comprehensive pipeline examples specifically made for this platform are available on [github](https://github.com/StatCan/jupyter-notebooks) (and in every Notebook Server at `/jupyter-notebooks`). You can also check out [public sources](https://github.com/kubeflow/pipelines/tree/master/samples).  
+	
+	
+	See [here](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/) for a more detailed general explanation of Kubeflow Pipelines.
+ 
+![A Kubeflow Pipeline](../images/kf-pipeline_with_result.png)
  
 # What are Pipelines and How do they Work?
 
-A [*pipeline*](https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/) in Kubeflow Pipelines consists of one or more [*pipeline components*](https://www.kubeflow.org/docs/pipelines/overview/concepts/component/) chained together to form a workflow as a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (effectively a flow chart that describes the order of operations within your pipeline).  As a rough analogy a *pipeline* is the script that you'd run to do your work while the *components* are the functions that script calls upon to make that happen.  So the *pipeline* describes the entire workflow of what you want to accomplish, while the *pipeline components* each describe individual steps in that process (such as pulling columns from a data store, transforming data, or training a model).  Each *component* is (ideally) a single purpose operation (eg: if during preprocessing you need to remove a column and merge two data sources, do those as two separate, single purpose, operations rather than a single component.  
+A [*pipeline*](https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/) in Kubeflow Pipelines consists of one or more [*pipeline components*](https://www.kubeflow.org/docs/pipelines/overview/concepts/component/) chained together to form a workflow. The components are like functions, and then the pipeline just connects them together.
+
+The *pipeline* describes the entire workflow of what you want to accomplish, while the *pipeline components* each describe individual steps in that process (such as pulling columns from a data store, transforming data, or training a model).  Each *component* should be **modular**, and ideally **reusable**.
 
 At their core, each *component* has:
  
@@ -24,7 +32,30 @@ A *pipeline* then, using the above *components*, defines the logic for how *comp
  1. pass the output from ComponentA to ComponentB and ComponentC
  1. ...
  
-*Pipelines* are also defined by YAML files (these YAML file pipelines are what you would pass to Kubeflow to run your pipeline).
+!!! example "Example of a pipeline"
+    Here's an example 
+
+        #!/bin/python3
+        dsl.pipeline(
+            name="Estimate Pi", 
+            description='Estimate Pi using a Map-Reduce pattern'
+        )
+        def compute_pi():
+    
+            # Create a "sample" operation for each seed passed to the pipeline
+            seeds = (1,2,3,4,5,6,7,8,9,10)
+            sample_ops = [sample_op(seed) for seed in seeds]
+    
+            # Get the results, before we feed into two different pipelines.
+            # The results are extracted from the output_file.json files, 
+            # are available from the sample_op instances through the .outputs attribute
+            outputs = [s.outputs['output'] for s in sample_ops]
+    
+            _generate_plot_op = generate_plot_op(outputs)
+            _average_op = average_op(outputs)
+	
+	You can find the full pipeline in the [`map-reduce-pipeline` example](https://github.com/StatCan/jupyter-notebooks)
+ 
  
 # Define and run your first Pipeline
 

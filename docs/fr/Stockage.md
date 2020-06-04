@@ -54,11 +54,16 @@ Nous offrons quatre compartiments d'instances de stockage :
 
 **Libre-service**
 
-- [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)
 
-- [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)
+| storage type                                                        | description                                                                 |
+|:--------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| [Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca)     | By default, use this one. It is HDD backed storage.                         |
+| [Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca)     | Use this if you need very high read/write speeds, like for training models on very large datasets. |
+| [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca) | You will only need this if you're using Pachyderm Pipelines.                |
 
-- [Pachyderm](https://pachyderm-tenant1-minio.covid.cloud.statcan.ca)
+
+
+
 
 **Accessible au grand public**
 
@@ -78,6 +83,14 @@ selon le format `prenom-nom`. Voir la photo ci-dessous.
 
 
 ![Compartiments/Stockage d'objets](images/minio_self_serve_bucket.png)
+
+
+!!! failure "Cannot yet share files from Minio with OpenID"
+    Due to [an upstream bug in Minio](https://github.com/minio/minio/issues/8935) you cannot share files yet. 
+    This will hopefully be resolved soon. In the meantime, it **does** work if you use your access key and secret key,
+    which you can get from Kubeflow.
+
+
 
 ## Partage
 
