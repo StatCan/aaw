@@ -102,9 +102,10 @@ et cr&eacute;er des espaces de travail partag&eacute;s pour votre &eacute;quipe.
   Il se peut que cela prenne quelques minutes pour se mettre en route, selon les ressources 
   que vous avez demand&eacute;es. (Les GPU prennent plus de temps.)
  
+
 !!! success "Votre serveur est en fonctionnement" 
     Si tout va bien, votre serveur devrait fonctionner! Vous aurez d&eacute;sormais
-    la possibilit&eacute; de connecter et [d&#146;essayer Jupyter.](/1-Experiments/Jupyter)
+    la possibilit&eacute; de connecter et [d&#146;essayer Jupyter.](/1-Experiences/Jupyter)
 
  
 # Partager votre espace de travail

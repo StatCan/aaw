@@ -104,7 +104,7 @@ for your team.
  
 !!! success "Your server is running"
     If all goes well, your server should be running!!! You will now have the
-    option to connect, and [try out Jupyter!](/1-Experiments/Jupyter)
+    option to connect, and [try out Jupyter!](/daaas/en/1-Experiments/Jupyter)
 
  
 # Share your workspace

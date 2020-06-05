@@ -51,6 +51,7 @@ nav:
     - MLflow: 1-Experiences/MLflow.md
   - Publication:
     - R Shiny: 2-Publication/R-Shiny.md
+    - PowerBI: 2-Publishing/PowerBI.md
     - Sur mesure: 2-Publication/Sur-mesure.md
   - Pipelines:
     - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
