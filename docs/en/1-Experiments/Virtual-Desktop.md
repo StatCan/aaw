@@ -1,3 +1,0 @@
-# Virtual Desktop
-
-Coming soon…
