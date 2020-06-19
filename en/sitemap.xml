@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://statcan.github.io/daaas/en/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/1-Experiments/Kubeflow/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/1-Experiments/Jupyter/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/1-Experiments/ML-Workspaces/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/1-Experiments/Databricks/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/1-Experiments/MLflow/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/2-Publishing/R-Shiny/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/2-Publishing/PowerBI/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/2-Publishing/Custom/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/3-Pipelines/Kubeflow-Pipelines/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/3-Pipelines/Pachyderm/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Storage/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Help/</loc>
-     <lastmod>2020-06-05</lastmod>
+     <lastmod>2020-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
