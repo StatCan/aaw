@@ -41,6 +41,44 @@ When you want to work with cloud native services in `Azure`, `AWS`, `GCP`, etc. 
   * Launch customizable Spark notebooks through Kubernetes objects, which call the Databricks API (and the operator also updates the status of the job in Kubernetes)
   * Interact with Kubernetes secrets backed by Azure Keyvault enabling secure storage
 
+## Security
+
+We have currently completed all of the Priority 1 (P1) security controls during the security assessment process of the Kubernetes platform within the Statistics Canada IT Security team.
+
+* Kubernetes CIS benchmarks (KubeBench)
+* Docker Bench Security (DockerBench)
+* ITSG-33 Baseline Policies / TBS recommended controls
+
+We have leveraged the following tools / practices to assist with the above security controls.
+
+### GateKeeper
+
+All of the Kubernetes Clusters (SDLC) which includes DAaaS have GateKeeper installed on top of them. GateKeeper is a validating / mutating webhook that enforces CRD-based policiies executed by the Open Policy Agent for the Kubernetes Platform.
+
+* https://github.com/StatCan/gatekeeper-policies
+
+This repo contains common policies needed in Pod Security Policy but implemented as Constraints and Constraint Templates with Gatekeeper.
+
+A Pod Security Policy is a cluster-level resource that controls security sensitive aspects of the pod specification. The PodSecurityPolicy objects define a set of conditions that a pod must run with in order to be accepted into the system, as well as defaults for the related fields.
+
+### Starboard
+
+Starboard integrates security tools into the Kubernetes environment, so that users can find and view the risks that relate to different resources in a Kubernetes-native way. Starboard provides custom security resources definitions to work with a range of existing security tools. In addition, Starboard provides a kubectl-compatible command-line tool and an Octant plug-in that make security reports available through familiar Kubernetes tools.
+
+* https://github.com/aquasecurity/starboard
+
+We are leveraging the following CustomResourceDefinitions (CRDs) that relate to both security and compliance checks in all of our Kubernetes clusters (SDLC). While Starboard does provide more  these are the three that we primarily use to increase our security posture.
+
+| Name                | Shortnames  | APIGROUP               | Namespaced | Kind               |
+|---------------------|-------------|------------------------|------------|--------------------|
+| vulnerabilities     | vulns, vuln | aquasecurity.github.io | true       | Vulnerability      |
+| ciskubebenchreports | kubebench   | aquasecurity.github.io | false      | CISKubeBenchReport |
+| kubehunterreports   | kubehunter  | aquasecurity.github.io | false      | KubeHunterReport   |
+
+1. **Vulnerabilities**: Behind the scenes, this uses [Trivy](https://github.com/aquasecurity/trivy) to identify vulnerabilities in the container images associated with the specified deployment.
+1. **CIS KubeBench Reports**: Behind the scenes, this uses [KubeBench](https://github.com/aquasecurity/kube-bench) which checks whether Kubernetes is deployed securely by running the checks documented in the [CIS Kubernetes Benchmark](https://www.cisecurity.org/benchmark/kubernetes/). Tests are configured with YAML files, making this tool easy to update as test specifications evolve.
+1. **KubeHunter Reports**: Behind the scenes, this uses [KubeHunter](https://github.com/aquasecurity/kube-hunter) which hunts for security weaknesses in Kubernetes clusters. The tool was developed to increase awareness and visibility for security issues in Kubernetes environments.
+
 ## Azure Kubernetes Service
 
 ![aks](docs/en/images/readme/aks_ui.png "Azure Kubernetes Service")
@@ -387,10 +425,12 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/jupyter-notebooks
 * https://github.com/StatCan/gpu-toleration-injector
 * https://github.com/StatCan/kubecost
+* https://github.com/StatCan/kubeflow
 * https://github.com/StatCan/kubeflow-containers
 * https://github.com/StatCan/kubeflow-controller
 * https://github.com/StatCan/kubeflow-containers-desktop
 * https://github.com/StatCan/kubeflow-manifest
+* https://github.com/StatCan/matomo
 * https://github.com/StatCan/minio
 * https://github.com/StatCan/mlflow
 * https://github.com/StatCan/mlflow-operator
@@ -414,6 +454,7 @@ What can you do it with / what have we done with it?
 * https://github.com/StatCan/gpu-toleration-injector/actions
 * https://github.com/StatCan/kubeflow-containers/actions
 * https://github.com/StatCan/kubeflow-controller/actions
+* https://github.com/StatCan/matomo/actions
 * https://github.com/StatCan/minio/actions
 * https://github.com/StatCan/mlflow/actions
 * https://github.com/StatCan/pachyderm/actions
