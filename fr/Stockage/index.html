@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
@@ -496,6 +496,19 @@
     Acc&egrave;s &agrave; la programmation
   </a>
   
+    <nav class="md-nav" aria-label="Acc&egrave;s &agrave; la programmation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexion-a-laide-de-mc" class="md-nav__link">
+    Connexion à l’aide de mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -599,6 +612,19 @@
     Acc&egrave;s &agrave; la programmation
   </a>
   
+    <nav class="md-nav" aria-label="Acc&egrave;s &agrave; la programmation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connexion-a-laide-de-mc" class="md-nav__link">
+    Connexion à l’aide de mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -643,13 +669,15 @@ de cr&eacute;er des pipelines, ou d'&eacute;diter.  </p>
 </li>
 </ul>
 <h3 id="disques">Disques</h3>
-<p><img alt="Volumes de donn&eacute;es" src="../images/kubeflow_existing_volume.png" /></p>
 <p>Les disques sont les syst&egrave;mes de fichiers courants de type disque dur ou SSD. 
 Vous pouvez monter les disques dans votre serveur Kubeflow, et m&ecirc;me si vous 
 supprimez votre serveur, vous pouvez remonter les disques, car ils ne sont jamais 
 d&eacute;truits par d&eacute;faut. C'est un moyen tr&egrave;s simple de stocker vos donn&eacute;es, 
 et si vous partagez un espace de travail avec une &eacute;quipe, tous les membres peuvent 
 utiliser le disque du m&ecirc;me serveur (comme un lecteur partag&eacute;).</p>
+<p><img alt="Ajout d’un volume existant à un nouveau serveur de bloc-notes" src="../images/kubeflow_existing_volume.png" />
+C’est un moyen très simple de stocker vos données. Si vous partagez un espace de travail avec
+une équipe, tous les membres peuvent utiliser le disque du même serveur comme un lecteur partagé.</p>
 <h3 id="compartiments">Compartiments</h3>
 <p><img alt="Compartiments/Stockage d'objets" src="../images/minio_self_serve_bucket.png" /></p>
 <p>Les compartiments sont un peu plus compliqu&eacute;s, mais ils pr&eacute;sentent trois avantages :</p>
@@ -677,7 +705,7 @@ utiliser le disque du m&ecirc;me serveur (comme un lecteur partag&eacute;).</p>
     les configurer pour qu'ils fonctionnent avec un compartiment.</li>
 </ul>
 <h2 id="stockage-en-compartiment">Stockage en compartiment</h2>
-<p>Nous offrons quatre compartiments d'instances de stockage :</p>
+<p>Nous avons quatre types de stockage en compartiment.</p>
 <p><strong>Libre-service</strong></p>
 <ul>
 <li>
@@ -695,17 +723,69 @@ utiliser le disque du m&ecirc;me serveur (comme un lecteur partag&eacute;).</p>
 <li><a href="https://datasets.covid.cloud.statcan.ca">Public (en lecture seule)</a></li>
 </ul>
 <h3 id="libre-service">Libre-service</h3>
-<p>Dans chacune des trois options de libre-service, vous pouvez cr&eacute;er un compartiment personnel. 
-Pour vous connecter, il vous suffit d'utiliser <strong>OpenID</strong> comme ci-dessous.</p>
-<p><img alt="Compartiments/Stockage d'objets" src="../images/minio_self_serve_login.png" /></p>
+<p>Dans chacune des trois options de libre-service, vous pouvez créer un compartiment personnel. Pour ouvrir
+une session, il vous d’utiliser <strong>OpenID</strong>, comme indiqué ci-dessous.</p>
+<p><img alt="Compartiments / Stockage d’objets" src="../images/minio_self_serve_login.png" /> <img alt="Vue d’ouverture de session Minio, indiquant l’option OpenID" src="../images/minio_self_serve_login.png" /></p>
 <p>Une fois que vous &ecirc;tes connect&eacute;, vous pouvez cr&eacute;er un compartiment personnel 
-selon le format <code>prenom-nom</code>. Voir la photo ci-dessous.</p>
-<p><img alt="Compartiments/Stockage d'objets" src="../images/minio_self_serve_bucket.png" /></p>
+selon le format <code>prenom-nom</code>. </p>
+<p><img alt="Compartiments/Stockage d’objets" src="../images/minio_self_serve_bucket.png" />  <img alt="Navigateur Minio avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d’union)" src="../images/minio_self_serve_bucket.png" /></p>
 <h3 id="partage">Partage</h3>
-<p>Vous pouvez facilement partager des fichiers individuels.</p>
-<p><img alt="Partage de fichiers Minio" src="../images/minio_self_serve_share.png" /></p>
+<p>Vous pouvez facilement partager des fichiers individuels. Utilisez simplement l’option "partager" pour
+un fichier particulier, et vous recevrez un lien que vous pourrez envoyer à un
+<img alt="Partage de fichiers Minio" src="../images/minio_self_serve_share.png" /> collaborateur.</p>
+<p><img alt="Navigateur Minio avec lien partageable vers un fichier" src="../images/minio_self_serve_share.png" /></p>
 <h3 id="accs-la-programmation">Acc&egrave;s &agrave; la programmation</h3>
-<p>Pas encore traduit.</p>
+<p>Nous travaillons actuellement à un moyen de vous permettre d’accéder à votre stockage de compartiment par l’intermédiaire d’un dossier
+dans votre bloc-notes, mais en attendant, vous pouvez y accéder par programme en utilisant
+l’outil de ligne de commande <code>mc</code>, ou par l’intermédiaire des appels d’API S3 dans R ou Python.</p>
+<!-- prettier-ignore -->
+
+<div class="admonition danger">
+<p class="admonition-title">Configuration Kuberflow requise</p>
+<p>Si vous souhaitez activer le stockage en compartiment pour votre bloc-notes, sélectionnez "Injecter les justificatifs d'identité pour accéder au stockage d'objets MinIO" à partir du menu <strong>Configurations</strong> lorsque vous créez votre serveur. Sinon, votre serveur ne saura pas comment se connecter à votre stockage personnel.
+<img alt="Création d’un serveur de bloc-notes Kubeflow avec l’option &quot;Injecter les justificatifs d'identité pour accéder au stockage d'objets MinIO&quot; sélectionnée" src="../images/kubeflow_minio_option.png" /></p>
+</div>
+<!-- prettier-ignore -->
+
+<div class="admonition tip">
+<p class="admonition-title">Voir les exemples de blocs-notes!</p>
+<p>Un modèle est fourni pour se connecter dans <code>R</code>, <code>python</code>, ou par
+la ligne de commande fournie dans <code>jupyter-notebooks/self-serve-storage</code>. Vous pouvez
+copier-coller et modifier ces exemples. Ils devraient répondre à la plupart de vos besoins.</p>
+</div>
+<h4 id="connexion-a-laide-de-mc">Connexion à l’aide de <code>mc</code></h4>
+<p>Pour vous connecter, exécutez la commande suivante (remplacer <code>NOMCOMPLET=blair-drummond</code> par
+votre <code>nom-prénom</code> réel) :</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+<span class="nv">NOMCOMPLET</span><span class="o">=</span>blair-drummond
+<span class="c1"># Obtenir les justificatifs d’identité</span>
+<span class="nb">source</span> /vault/secrets/minio-minimal-tenant1
+<span class="c1"># Ajouter le stockage sous le pseudonyme &quot;minio-minimal&quot;</span>
+mc config host add minio-minimal <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
+<span class="c1"># Créer un compartiment à votre nom</span>
+<span class="c1"># NOTE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOM. </span>
+<span class="c1"># Tout autre nom sera rejeté.</span>
+<span class="c1"># Compartiment privé (&quot;mb&quot; = &quot;créer compartiment&quot;)</span>
+mc mb minio-minimal/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
+<span class="c1"># Compartiment partagé</span>
+mc mb minio-minimal/shared/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
+<span class="c1"># Voilà! Vous pouvez maintenant copier des fichiers ou des dossiers!</span>
+<span class="o">[</span> -f test.txt <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Ceci est un test&quot;</span> &gt; test.txt
+mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>/test.txt
+</code></pre></div>
+
+
+<p>Maintenant, ouvrez le document
+<a href="https://minimal-tenant1-minio.example.ca">minimal-tenant1-minio.example.ca</a>,
+Vous y verrez votre fichier de test.</p>
+<p>Vous pouvez utiliser <code>mc</code> pour copier des fichiers vers/depuis le compartiment. Cette opération est très rapide. Vous pouvez également
+utiliser <code>mc --help</code> pour voir les autres options qui s’offrent à vous, comme
+<code>mc ls minio-minimal/PRÉNOM-NOM/</code> pour afficher le contenu de votre compartiment.</p>
+<!-- prettier-ignore -->
+
+<details class="tip"><summary>Autres options de stockage</summary><p>Pour utiliser une de nos autres options de stockage, <code>pachyderm</code> ou <code>premium</code>, 
+remplacez simplement  la valeur <code>minimal</code> dans le programme ci-dessus par le type dont vous avez besoin.</p>
+</details>
                 
               
               
@@ -799,14 +879,14 @@ selon le format <code>prenom-nom</code>. Voir la photo ci-dessous.</p>
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      <script src="../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.7a2ea5ba.min.js"
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
