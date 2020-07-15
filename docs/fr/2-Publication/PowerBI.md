@@ -1,29 +1,36 @@
-# Loading data into PowerBI
+Nous ne proposons pas de serveur PowerBI, mais vous pouvez extraire vos données
+dans PowerBI à partir de notre système de stockage et les utiliser comme une
+fiche de données `pandas`.
 
-We do not offer a PowerBI server, but you can pull your data into PowerBI from our Storage system, and use the data as a `pandas` dataframe.
+![Tableau de bord sur PowerBI](../images/powerbi_dashboard.png)
 
-![PowerBI Dashboard](../images/powerbi_dashboard.png)
+## Ce dont vous aurez besoin
 
-## What you'll need
+1. Un ordinateur avec PowerBI et Python 3.6
 
-1. A computer with PowerBI, and Python3.6
+2. Vos `ACCESS_KEY` et `SECRET_KEY` MinIO (voir [Stockage](/daaas/fr/Stockage))
 
-2. Your Minio `ACCESS_KEY` and `SECRET_KEY` on hand. (See [Storage](/daaas/en/Storage))
+## Connectez-vous
 
+### Configurez PowerBI
 
-## Get connected
+Ouvrez votre système PowerBI et ouvrez
+[démarrage rapide de PowerBI](https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
+dans votre éditeur de texte préféré.
 
-### Set up PowerBI
-Open up your PowerBI system, and open up this [PowerBI quickstart](https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py) in your favorite text editor.
+Assurez-vous que `pandas`, `boto3` et `numpy` sont installés et que vous
+utilisez le bon environnement virtuel Conda (le cas échéant).
 
-You'll have to make sure that `pandas`, `boto3`, and `numpy` are installed, and that you're using the right Conda Virtual Env (if applicable)
+![Installez les dépendances](../images/powerbi_cmd_prompt.png)
 
-![Install the dependencies](../images/powerbi_cmd_prompt.png)
+Ensuite, assurez-vous que PowerBI utilise le bon environnement Python. Vous
+pouvez modifier cet élément à partir du menu des options. Le chemin d'accès
+exact est indiqué dans le guide de démarrage rapide.
 
-You'll then need to make sure that PowerBI is using the correct Python environment. This is modified from the options menu, and the exact path is specified in the quickstart guide.
+### Modifiez votre script Python
 
-### Edit your python script
+Ensuite, modifiez votre script Python pour utiliser vos `ACCESS_KEY` et
+`SECRET_KEY` MinIO, puis cliquez sur "Get Data" et copiez-le en tant que script
+Python.
 
-Then, edit your Python script to use your Minio `ACCESS_KEY` and `SECRET_KEY`, and then click "Get Data" and copy it in as a Python Script. 
-
-![Run your Python Script](../images/powerbi_python.png)
+![Exécutez votre script Python.](../images/powerbi_python.png)

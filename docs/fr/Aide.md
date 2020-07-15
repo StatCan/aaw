@@ -1,8 +1,12 @@
-# Have questions? or feedback?
+# Vous avez des questions ou des commentaires?
 
-Come join us on the [Advanced Analytics Workspace Slack channel](https://statcan-aaw.slack.com)! You will find a bunch of other users of the platform there who may be able to answer your questions, and some of the engineers will usually be present on the channel. You can ask questions and provide feedback there.
+Joignez-vous à nous sur le
+[canal Slack de l’espace de travail en analytique avancée](https://statcan-aaw.slack.com)!
+Vous trouverez de nombreux utilisateurs de la plateforme qui pourront peut-être
+répondre à vos questions. Quelques ingénieurs sont aussi habituellement
+présents. Vous pouvez poser des questions et soumettre vos commentaires.
 
 - [Slack (fr)](https://statcan-eaa.slack.com)
 
-We will also post notices there if there are updates or downtime.
-
+Nous publierons également des avis de mise à jour et d’interruption sur le canal
+Slack.

@@ -1,101 +1,140 @@
-# Collaboration on the Advanced Analytics Workspace
+# Collaboration en matière d’espace de travail en analytique avancée
 
+Il existe de nombreuses façons de collaborer sur la plateforme, et ce qui vous
+convient le mieux dépend des _éléments que vous partagez_ et du _nombre de
+personnes avec qui vous souhaitez partager des éléments_. Nous pouvons répartir
+les _éléments partageables_ en **données** et en **code**. Nous pouvons aussi
+répartir l'ensemble des groupes avec lesquels vous partagez des éléments en
+**privé**, **équipe** et **StatCan**. Cela conduit au tableau d’options suivant
+:
 
-There are lots of ways to collaborate on the platform, and what's best for you depends on *what you're sharing* and *how many people you want to share with*. We can roughly break the *sharable things* into **Data** and **Code**, and we can share the scope of who you're sharing with **No one** v.s. **My Team** v.s. **Everyone**. This leads to the following table of options
+|             |             **Privé**              |            **Équipe**             |     **StatCan**      |
+| :---------: | :--------------------------------: | :-------------------------------: | :------------------: |
+|  **Code**   | GitLab/GitHub ou dossier personnel | GitLab/GitHub ou dossier d’équipe |    GitLab/GitHub     |
+| **Données** | Dossier ou compartiment personnel  | Dossier ou compartiment d’équipe  | Compartiment partagé |
 
+??? question "Quelle est la différence entre un compartiment et un dossier?" Les
+compartiments s’apparentent au stockage réseau. Voir la
+[section sur le stockage](/Storage) pour obtenir des précisions supplémentaires
+sur les différences entre ces deux concepts.
 
-|                 | **Private**                                | **Team**                                 | **Statcan**   |
-|:--------------:|:------------------------------------------:|:----------------------------------------:|:-------------:|
-| **Code**       | Gitlab/Github or personal folder | Gitlab/Github or team folder | Gitlab/Github |
-| **Data**       | personal folder or bucket                    | team folder or bucket                    | shared Bucket  |
+Les accès **privé** et **équipe** sont configurés au moyen des **espaces de
+nommage**. Nous commençons donc par parler de Kubeflow et des espaces de nommage
+Kubeflow.
 
-??? question "What is the difference between a bucket and a folder?"
-    Buckets are like Network Storage. See the [Storage section](/Storage) section for more discussion of the differences between these two ideas.
+Ensuite, les **données** et le **code** sont mieux pris en charge au moyen
+d’outils légèrement différents. C’est pourquoi nous allons les aborder en deux
+temps. Pour les données, nous parlons de **compartiments et MinIO**. Pour le
+code, nous parlons de **Git**, **GitLab** et **GitHub**.
 
+C’est sur quoi repose la structure de cette page :
 
-The way that **Private** v.s. **Team** based access is configured is with **namespaces**. So we start by talking about Kubeflow and Kubeflow namespaces.
+– Collaboration en équipe (applicable au code et aux données) – Partage du code
+– Partage des données
 
+# Collaboration en équipe
 
-Then, **Data** and **Code** are better handled with slightly different tools, so we discuss the two seperately. With Data we discuss **buckets and Minio**, and with Code we discuss **git**, **Gitlab**, and **Github**.
+## Que fait Kubeflow?
 
-This motivates the structure of this page
+Kubeflow exécute vos **espaces de travail**. Vous pouvez avoir des serveurs de
+blocs-notes (appelés serveurs Jupyter) et vous pouvez y créer des analyses en R
+et en Python en utilisant des éléments visuels interactifs. Vous pouvez
+enregistrer, téléverser et télécharger des données. Votre équipe peut travailler
+à vos côtés.
 
-- Team Based Collaboration (applicable to Code and Data)
-- Sharing Code
-- Sharing Data
+## Demande d’un espace de nommage
 
+Par défaut, chaque personne obtient son _propre_ espace de nommage,
+`prénom-nom`. Si vous souhaitez créer un espace de nommage pour une équipe,
+présentez la demande dans le portail : **Cliquez sur le &#8942; de
+[la section Kubeflow du portail](https://portal.covid.cloud.statcan.ca/#kubeflow)**.
 
+!!! avertissement "L’espace de nommage ne doit comprendre aucun caractère
+spécial autre que le trait d’union." Le nom doit seulement comprendre des
+lettres minuscules `de a à z` et des traits d’union. Sinon, il sera impossible
+de créer l’espace de nommage.
 
+**Vous recevrez un avis par courriel vous indiquant que l’espace de nommage est
+créé.** Une fois que l’espace de nommage partagé est créé, vous pouvez y accéder
+comme tous les autres espaces de nommage dont vous disposez par l’entremise de
+l’interface utilisateur Kubeflow, comme il est indiqué ci-après. Vous pourrez
+ensuite gérer la liste des collaborateurs sous l’onglet de **gestion des
+contributeurs** de Kubeflow, où vous pourrez ajouter vos collègues à l’espace de
+nommage partagé.
 
-# Team Based Collaboration
+![Menu des contributeurs](/images/kubeflow_contributors.png)
 
-## What does Kubeflow do?
+Pour changer d’espace de nommage, allez en haut de votre fenêtre, juste à droite
+du logo de Kubeflow.
 
-Kubeflow runs your **workspaces**. You can have notebook servers (called Jupyter
-Servers), and in them you can create analyses in R and Python with interactive
-visuals. You can save & upload data, download it, and your team can work along side you.
+![Sélectionnez votre espace de nommage](/images/kubeflow_manage_contributors.png)
 
-## Requesting a namespace
+# Code partagé
 
-By default, everyone gets their own *personal* namespace, `firstname-lastname`. But if you want to create a namespace for a team, then there is a button to submit a request for a namespace on the portal. **Click the &#8942; menu on [the kubeflow section of the portal](https://portal.covid.cloud.statcan.ca/#kubeflow)**.
+Les équipes ont deux options (mais vous pouvez combiner les deux) :
 
-!!! warning "The namespace cannot have special characters other than hypens"
-    The namespace name must only be lowercase letters `a-z` with dashes. Otherwise,
-    the namespace will not be created.
+## Partager un espace de travail dans Kubeflow
 
+Le partage dans Kubeflow présente l’avantage suivant : il est à structure libre
+et il fonctionne mieux pour les fichiers `.ipynb` (blocs-notes
+IPython/blocs-notes Jupyter). Cette méthode vous permet également de partager un
+environnement de calcul, de sorte que vous pouvez partager des ressources très
+facilement. Lorsque vous partagez un espace de travail, vous partagez :
 
-**You will receive an email notification when the namespace is created.** Once the shared namespace is created, you can access it the same as any other namespace you have through the Kubeflow UI, like shown below. You will then be able to manage the collaborators list through the kubeflow **Manage Contributors** tab, where you can add your colleagues to the shared namespace.
+– un compartiment privé et partagé (`/team-name` et `/shared/team-name`); – tous
+les serveurs de blocs-notes dans l’espace de nommage Kubeflow.
 
-![Contributors Menu](/images/kubeflow_contributors.png)
+## Partager avec Git, au moyen de GitLab ou de GitHub
 
-To switch namespaces, take a look at the top of your window, just to the right of the Kubeflow Logo.
+Le partage au moyen de Git présente l’avantage suivant : il permet de travailler
+avec des utilisateurs de tous les espaces de nommage. De plus, le fait de
+conserver le code dans Git est un excellent moyen de gérer les grands projets de
+logiciels.
 
-![Select your Namespace](/images/kubeflow_manage_contributors.png)
+!!! remarque "N’oubliez pas d’obtenir une licence d'utilisation!" Si votre code
+est public, suivez les directives de l’équipe de l'innovation et utilisez une
+licence appropriée si vous réalisez des tâches pour le compte de Statistique
+Canada.
 
-# Shared Code
+## Recommandation : combinez les deux.
 
-Teams have two options (but you can combine both!):
+Il est sage de toujours utiliser Git. L’utilisation de Git de concert avec des
+espaces de travail partagés est un bon moyen de combiner le partage ponctuel
+(par l'entremise de fichiers) tout en assurant l’organisation et le suivi de
+votre code.
 
-## Share a workspace in Kubeflow
+# Stockage partagé
 
-The advantage of sharing inside Kubeflow is that it's more free-form and it works better for `.ipynb` files (IPython Notebooks/Jupyter Notebooks). This method also lets you share a compute environment, so you can share resources very easily. When you share a workspace, you share
+## Partage avec votre équipe
 
-- A Private & Shared bucket (`/team-name` and `/shared/team-name`)
-- All notebook servers in the Kubeflow Namespace
+Une fois que vous avez un espace de nommage partagé, deux méthodes de stockage
+partagé s’offrent à vous :
 
-## Share with git, using Gitlab or Github
+| Option de stockage                                 | Avantages                                                                                            |
+| :------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| Serveurs/espaces de travail Jupyter partagés       | Mieux adaptés aux petits fichiers, aux blocs-notes et aux petites expériences.                       |
+| Compartiments partagés (voir [Stockage](/Storage)) | Mieux adaptés à une utilisation dans les pipelines et les interfaces API et aux fichiers volumineux. |
 
-The advantage of sharing with git is that it works with users across namespaces, and keeping code in git is a great way to manage large software projects. 
+Pour en savoir plus sur la technologie sous-jacente, consultez la
+[section sur le stockage](/Storage).
 
-!!! note "Don't forget to include a License!"
-    If your code is public, do not forget to keep with the Innovation Team's guidelines and use a proper License if your work is done for Statistics Canada.
+## Partage avec StatCan
 
-## Recommendation: Combine both
-
-It's a great idea to always use git, and using git along with shared workspaces is a great way to combine ad-hoc sharing (through files) while also keeping your code organized and tracked.
-
-# Shared Storage
-
-## Sharing with your team
-
-Once you have a shared namespace, you have two shared storage approaches 
-
-| Storage Option                             |   Benefits                                                            |
-|:-------------------------------------------|:----------------------------------------------------------------------|
-| Shared Jupyter Servers/Workspaces          |      More amenable to small files, notebooks, and little experiments. |
-| Shared Buckets (see [Storage](/Storage))   |      Better suited for use in pipelines, APIs, and for large files.   |
-
-To learn more about the technology behind these, check out the [Storage section](/Storage).
-
-## Sharing with Statcan
-
-In addition to private buckets, or team-shared private buckets, you can also place your files in *shared storage*. Within all bucket storage options (`minimal`, `premium`, `pachyderm`), you have a private bucket, **and** a folder inside of the `shared` bucket. Take a look, for instance, at the link below:
+En plus des compartiments privés et des compartiments privés partagés en équipe,
+vous pouvez également placer vos fichiers dans un espace de _stockage partagé_.
+Toutes les options de stockage en compartiments (`minimal`, `supérieur`,
+`éléphantesque`) offrent un compartiment privé **et** un dossier à l’intérieur
+du compartiment `partagé`. Par exemple, consultez le lien ci-dessous :
 
 - [`shared/blair-drummond/`](https://minimal-tenant1-minio.covid.cloud.statcan.ca/minio/shared/blair-drummond/)
 
+Tous les utilisateurs **connectés** peuvent visualiser et consulter ces fichiers
+librement.
 
-Any **logged in** user can see these files and read them freely.
+## Partage avec le monde
 
-## Sharing with the world
-
-Ask about that one in our [Slack channel](https://statcan-aaw.slaock.com). There are many ways to do this from the IT side, but it's important for it to go through proper processes, so this is not done in a "self-serve" way that the others are. That said, it is totally possible.
+Renseignez-vous à ce sujet sur notre
+[canal Slack](https://statcan-aaw.slaock.com). Il existe de nombreuses méthodes
+de partage avec le monde du point de vue informatique. Cependant, comme il est
+important de respecter les processus appropriés, on n’utilise pas le
+libre-service, comme dans les autres cas. Cela dit, c’est possible.

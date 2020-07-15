@@ -1,188 +1,251 @@
-# Overview
+Vue d’ensemble
 
-[Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/) is a platform for building machine learning workflows for deployment in a Kubernetes environment.  It enables authoring *pipelines* that encapsulate analytical workflows (transforming data, training models, building visuals, etc.).  These *pipelines* can be shared, reused, and scheduled, and are built to run on compute provided via Kubernetes. 
+Kubeflow Pipelines est une plateforme de création de flux de production
+d’apprentissage automatique pouvant être déployés dans un environnement
+Kubernetes. Il permet de créer des pipelines qui encapsulent les flux de
+production analytiques (transformation de données, modèles de formation,
+construction d’éléments visuels, etc.). Ces pipelines peuvent être mis en
+commun, réutilisés et programmés. Ils sont créés de façon à être exécutés avec
+les calculs fournis par Kubernetes.
 
-In the context of the Advanced Analytics Workspace, Kubeflow Pipelines are interacted with through:
+Dans le contexte de l’espace de travail en analytique avancée, vous pouvez
+interagir avec les pipelines Kubeflow par l’entremise :
 
-* The Kubeflow [UI](../1-Experiments/Kubeflow.md), where from the Pipelines menu you can upload pipelines, view the pipelines you have and their results, etc.
-* The Kubeflow Pipelines python [SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/), accessible through the [Jupyter Notebook Servers](../1-Experiments/Kubeflow.md#create-a-server), where you can define your components and pipelines, submit them to run now, or even save them for later.
+- de [l’interface utilisateur](../1-Experiments/Kubeflow.md) de Kubeflow, où, à
+  partir du menu Pipelines, vous pouvez télécharger des pipelines, visualiser
+  les pipelines que vous possédez et leurs résultats, etc.
 
-??? example "More examples in the notebooks" 
-    More comprehensive pipeline examples specifically made for this platform are available on [github](https://github.com/StatCan/jupyter-notebooks) (and in every Notebook Server at `/jupyter-notebooks`). You can also check out [public sources](https://github.com/kubeflow/pipelines/tree/master/samples).  
-	
-	
-	See [here](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/) for a more detailed general explanation of Kubeflow Pipelines.
- 
-![A Kubeflow Pipeline](../images/kf-pipeline_with_result.png)
- 
-# What are Pipelines and How do they Work?
+- de la trousse [SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/)
+  en Python de Kubeflow Pipelines, accessible dans les serveurs de bloc-notes
+  Jupyter, où vous pouvez définir vos composants et pipelines, les soumettre
+  pour les exécuter immédiatement, ou même les enregistrer pour plus tard.
 
-A [*pipeline*](https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/) in Kubeflow Pipelines consists of one or more [*pipeline components*](https://www.kubeflow.org/docs/pipelines/overview/concepts/component/) chained together to form a workflow. The components are like functions, and then the pipeline just connects them together.
+??? exemple "Des exemples supplémentaires dans les bloc-notes" Des exemples plus
+exhaustifs de pipelines produits expressément pour cette plateforme sont
+accessibles dans [github](https://github.com/StatCan/jupyter-notebooks) (et dans
+chaque serveur de bloc-notes à /jupyter-notebooks). Vous pouvez également
+consulter des sources publiques.
 
-The *pipeline* describes the entire workflow of what you want to accomplish, while the *pipeline components* each describe individual steps in that process (such as pulling columns from a data store, transforming data, or training a model).  Each *component* should be **modular**, and ideally **reusable**.
+Cliquez
+[ici](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/) pour
+obtenir une explication générale détaillée de Kubeflow.
 
-At their core, each *component* has:
- 
- *  a standalone application, packaged as a [docker images](https://docs.docker.com/get-started/), for doing the actual work.  The code in the docker image could be a shell script, python script, or anything else you can run from a Linux terminal
- *  A description of how Kubeflow Pipelines runs the code (where is the image, what command line arguments does it accept, what outputs does it generate), as a YAML file
- 
-A *pipeline* then, using the above *components*, defines the logic for how *components* are connected, such as:
- 
- 1. run ComponentA
- 1. pass the output from ComponentA to ComponentB and ComponentC
- 1. ...
- 
-!!! example "Example of a pipeline"
-    Here's an example 
+![Un pipeline Kubeflow](../images/kf-pipeline_with_result.png)
 
-        #!/bin/python3
-        dsl.pipeline(
-            name="Estimate Pi", 
-            description='Estimate Pi using a Map-Reduce pattern'
-        )
-        def compute_pi():
-    
-            # Create a "sample" operation for each seed passed to the pipeline
-            seeds = (1,2,3,4,5,6,7,8,9,10)
-            sample_ops = [sample_op(seed) for seed in seeds]
-    
-            # Get the results, before we feed into two different pipelines.
-            # The results are extracted from the output_file.json files, 
-            # are available from the sample_op instances through the .outputs attribute
-            outputs = [s.outputs['output'] for s in sample_ops]
-    
-            _generate_plot_op = generate_plot_op(outputs)
-            _average_op = average_op(outputs)
-	
-	You can find the full pipeline in the [`map-reduce-pipeline` example](https://github.com/StatCan/jupyter-notebooks)
- 
- 
-# Define and run your first Pipeline
+# Qu’est-ce qu’un pipeline et comment fonctionne-t-il?
 
-While *pipelines* and *components* are defined by YAML files, the python [SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/) let's you define them from python code.  The following is an example of how to define a [simple pipeline](https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb) using the python SDK.  
+Dans Kubeflow Pipelines, un pipeline comprend un ou plusieurs composants de
+pipeline enchaînés pour former un flux de production. Les composants sont comme
+des fonctions que le pipeline connecte ensemble.
 
-The objective of our pipeline is, given five numbers, compute:
+Le _pipeline_ décrit l’ensemble du flux de production de ce que vous souhaitez
+accomplir, tandis que les _composants de pipeline_ décrivent chacune des étapes
+distinctes de ce processus (comme le fait d’extraire des colonnes d’un stock de
+données, de transformer des données ou d’entraîner un modèle). Chaque
+**composant** doit être **modulaire** et idéalement **réutilisable**.
 
-1. The average of the first three numbers
-1. The average of the last two numbers
-3. The average of the results of (1) and (2) 
+Essentiellement, chaque _composant_ a :
 
-To do this, we define a *pipeline* that uses our average *component* to do the computations.  
+- une application autonome, présentée sous forme d’image de menu fixe
+  (https://docs.docker.com/get-started/), pour effectuer le travail proprement
+  dit .le code dans l’image de menu fixe peut être une séquence de commandes en
+  langage naturel, un script Python ou tout autre code pouvant être exécuté à
+  partir d’un terminal Linux
+- une description de la manière dont Kubeflow Pipelines exécute le code
+  (l’emplacement de l’image, les arguments de la ligne de commande qu’il
+  accepte, les résultats qu’il produit), sous forme de fichier YAML.
 
-The *average* component is defined by a docker image with a simple python script that:
- * accepts one or more numbers as command line arguments 
- * returns the average of these numbers, written to the file `out.txt` within its container
+Un _pipeline_ définit ensuite la logique de connexion des composants, par
+exemple :
 
-To tell Kubeflow Pipelines how to use this image, we define our average *component* through a ContainerOp which tells Kubeflow our image's API.  The ContainerOp instance sets the docker image location, how to pass arguments to it, and what outputs to pull from the container.  To actually use these ContainerOp's in our pipeline, we build factory functions like `average_op` (as we'll probably want more than just one average *component*).  
+1. exécuter ComposantA
+2. transmettre le résultat du ComposantA au ComposantB et au ComposantC
+3. ...
+
+!!! exemple "Exemple d’un pipeline" Voici un exemple :
+
+#!/bin/python3 dsl.pipeline( name="Estimer Pi", description='Estimer Pi au moyen
+d’un modèle Map-Reduce' ) def compute_pi():
+
+# Créer un "exemple" d’opération pour chaque valeur de départ transmise au pipeline
+
+seeds = (1,2,3,4,5,6,7,8,9,10) sample_ops = [sample_op(seed) for seed in seeds]
+
+# Obtenir les résultats avant de les transmettre à deux pipelines distincts
+
+# Les résultats sont extraits des fichiers output_file.json et
+
+# sont disponibles à partir des instances sample_op par l’entremise de l’attribut .outputs
+
+outputs = [s.outputs['output'] for s in sample_ops]
+
+\_generate_plot_op = generate_plot_op(outputs) \_average_op =
+average_op(outputs)
+
+Vous pouvez trouver le pipeline complet dans
+[l’exemple `map-reduce-pipeline`](https://github.com/StatCan/jupyter-notebooks)
+
+# Définir et exécuter votre premier pipeline
+
+Bien que les _pipelines_ et les _composants_ soient définis par des fichiers
+YAML, la trousse
+[SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/) en Python vous
+permet de les définir à partir du code Python. Voici un exemple de définition
+d’un
+[pipeline simple](https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb)
+en utilisant la trousse SDK en Python.
+
+L’objectif de notre pipeline est de calculer, au moyen de cinq nombres, les
+valeurs suivantes :
+
+1. la moyenne des trois premiers nombres;
+2. la moyenne des deux derniers nombres;
+3. la moyenne des résultats de (1) et de (2).
+
+Pour ce faire, nous définissons un _pipeline_ qui utilise notre _composant_
+moyen pour effectuer les calculs.
+
+Le composant moyen est défini par une image de menu fixe au moyen d’un script
+Python qui :
+
+- accepte un ou plusieurs nombres comme arguments de ligne de commande
+- renvoie la moyenne de ces nombres, enregistrée dans le fichier out.txt dans
+  son conteneur.
+
+Pour indiquer à Kubeflow Pipelines comment utiliser cette image, nous
+définissons notre _composant_ moyen par l’entremise d’un ContainerOp, qui
+indique à Kubeflow l’interface API de notre image. L’instance ContainerOp
+définit l’emplacement de l’image du menu fixe, la façon de lui transmettre des
+arguments et les résultats à extraire du conteneur. Pour utiliser réellement ces
+ContainerOp dans notre pipeline, nous créons des fonctions de fabrique comme
+average*op (car nous voudrons probablement plus d’un \_composant* moyen).
 
 ```
 from kfp import dsl
 
-def average_op(*numbers):
-    """
-    Factory for average ContainerOps
-    
-    Accepts an arbitrary number of input numbers, returning a ContainerOp that passes those
-    numbers to the underlying docker image for averaging
-    
-    Returns output collected from ./out.txt from inside the container
+def average_op(\*numbers):
+    """ Fabrique de ContainerOp moyen
+
+    Accepte un nombre arbitraire de nombres d’entrée, en renvoyant un ContainerOp
+    qui transmet ces nombres à l’image du menu fixe sous-jacent pour faire la
+    moyenne
+
+    Renvoie le résultat recueilli à partir du fichier ./out.txt à l’intérieur du
+    conteneur
 
     """
-    # Input validation
+
+    # Validation d’entrée
+
     if len(numbers) < 1:
-        raise ValueError("Must specify at least one number to take the average of")
-        
+        raise ValueError("Doit préciser au moins un nombre à partir duquel calculer la moyenne")
+
     return dsl.ContainerOp(
-        name="averge",  # What will show up on the pipeline viewer
-        image="k8scc01covidacr.azurecr.io/kfp-components/average:v1",  # The image that KFP runs to do the work
-        arguments=numbers,  # Passes each number as a separate (string) command line argument
-        # Script inside container writes the result (as a string) to out.txt, which 
-        # KFP reads for us and brings back here as a string
-        file_outputs={'data': './out.txt'},  
+        name="averge", # Élément affiché dans la visionneuse de pipeline
+        image="k8scc01covidacr.azurecr.io/kfp-components/average:v1", # L’image
+        exécutée par Kuberflow Pipelines pour faire le travail arguments=numbers,
+        #transmet chaque nombre comme un argument de ligne de commande (chaîne) distinct
+        # Le script à l’intérieur du conteneur enregistre le résultat (sous forme de chaîne de caractères) dans le fichier out.txt, que
+        # Kuberflow Pipelines lit pour nous et récupère sous forme de chaîne.
+        file_outputs={'data': './out.txt'},
     )
 ```
 
-We define our pipeline as a python function that uses our above ComponentOp factories, decorated by the @dsl.pipeline decorator.  Our pipeline uses our *average* component by passing it numbers, and we use the *average* results by passing them to later functions through accessing `avg_*.output`.
+Nous définissons notre pipeline comme une fonction Python qui utilise les
+fabriques de ComponentOp ci-dessus, décorées par l’élément décoratif
+@dsl.pipeline. Notre pipeline utilise notre composant _moyen_ en lui
+transmettant des nombres. Puis, nous utilisons les résultats _moyens_ en les
+transmettant à des fonctions plus tard par l’accès à `avg\_\*.output`.
 
 ```
 @dsl.pipeline(
-    name="my pipeline's name"
+    name="nom de mon pipeline"
 )
 def my_pipeline(a, b, c, d, e):
     """
-    Averaging pipeline which accepts five numbers and does some averaging operations on them
+    Calcul de moyenne de pipeline, qui accepte cinq nombres et effectue quelques calculs de moyenne sur ceux-ci
     """
-    # Compute averages for two groups
+
+    # Calculer les moyennes pour deux groupes
+
     avg_1 = average_op(a, b, c)
     avg_2 = average_op(d, e)
-    
-    # Use the results from _1 and _2 to compute an overall average
+
+    # Utiliser les résultats de \_1 et de \_2 pour calculer une moyenne globale
+
     average_result_overall = average_op(avg_1.output, avg_2.output)
 ```
 
-And finally, we save a YAML definition of our pipeline for later passing to Kubeflow Pipelines.  This YAML describes to Kubeflow Pipelines exactly how to run our pipeline - unzip it and take a look yourself!
+Enfin, nous enregistrons une définition YAML de notre pipeline pour la
+transmettre plus tard à Kubeflow Pipelines. Ce fichier YAML décrit à Kubeflow
+Pipelines exactement comment exécuter notre pipeline. Décompressez-le et voyez
+par vous-même!
 
 ```
 from kfp import compiler
 pipeline_yaml = 'pipeline.yaml.zip'
 compiler.Compiler().compile(
     my_pipeline,
-    pipeline_yaml
-)
-print(f"Exported pipeline definition to {pipeline_yaml}")
+     pipeline_yaml
+) print(f"Définition de pipeline exportée vers {pipeline_yaml}")
 ```
 
-??? warning "Kubeflow Pipelines is a lazy beast"
-    It is useful to keep in mind what computation is happening when you run this python code versus what happens when you submit the pipeline to Kubeflow Pipelines.  Although it seems like everything is happening in the moment, try adding `print(avg_1.output)` to the above pipeline and see what happens when you compile your pipeline.  The python SDK we're using is for **authoring** pipelines, not for running them, so results from components will never be available when you run this python code.  The is discussed more below in **# Understanding what computation occurs when**.
+??? avertissement "Kubeflow Pipelines est une bête paresseuse". Il est utile de
+garder à l’esprit le calcul qui se produit lorsque vous exécutez ce code Python
+par rapport à ce qui se passe lorsque vous soumettez le pipeline à Kubeflow
+Pipelines. Bien que tout semble se produire instantanément, essayez d’ajouter
+print(avg_1.output) au pipeline ci-dessus et voyez ce qui se passe lorsque vous
+compilez votre pipeline. La trousse SDK en Python que nous utilisons sert à
+créer des pipelines, et non à les exécuter, de sorte que les résultats des
+composants ne seront jamais disponibles lorsque vous exécuterez ce code Python.
+Ce point est abordé plus en détail plus loin, dans la section **# Comprendre
+l’ordre des calculs**.
 
-To actually run our pipeline, we define an experiment:
+Pour exécuter notre pipeline, nous définissons une expérience :
 
 ```
-experiment_name = "averaging-pipeline"
+experiment_name = "calcul de moyenne de pipeline"
 
 import kfp
 client = kfp.Client()
 exp = client.create_experiment(name=experiment_name)
 
-pl_params = {
-    'a': 5,
-    'b': 5,
-    'c': 8,
-    'd': 10,
-    'e': 18,
-}
-
+pl_params = { 'a': 5, 'b': 5, 'c': 8, 'd': 10, 'e': 18, }
 ```
 
-Which is observable in the Kubeflow Pipelines [UI](../1-Experiments/Kubeflow.md):
+Voici ce qui peut être observé dans
+[l’interface utilisateur](../1-Experiments/Kubeflow.md) de Kubeflow Pipelines :
 
-![Kubeflow Pipeline Experiment](../images/kfp_experiment.png)
+![Expérience Kubeflow Pipelines](../images/kfp_experiment.png)
 
-And then run an instance of our pipeline with the arguments we want:
+Ensuite, nous exécutons une instance de notre pipeline en utilisant les
+arguments souhaités :
 
 ```
 import time
 
 run = client.run_pipeline(
-    exp.id,  # Run inside the above experiment
-    experiment_name + '-' + time.strftime("%Y%m%d-%H%M%S"),  # Give our job a name with a timestamp so its unique
-    pipeline_yaml,  # Pass the .yaml.zip we created above.  This defines the pipeline
-    params=pl_params  # Pass our parameters we want to run the pipeline with
+     exp.id, # Exécuter dans l’expérience ci-dessus
+    experiment_name + '-' + time.strftime("%Y%m%d-%H%M%S"), # Donner un nom et une
+    heure système à notre tâche unique pipeline_yaml, # Transmettre le .yaml.zip que
+    nous avons créé ci-dessus. Il définit le pipeline params=pl_params # Transmettre
+    les paramètres en fonction desquels nous souhaitons exécuter le pipeline
 )
 ```
 
-which can also be seen in the UI:
+Voici ce que l’on peut également voir dans l’interface utilisateur :
 
-![Kubeflow Pipeline Experiment](../images/kfp_experiment.png)
+![Expérience Kubeflow Pipelines](../images/kfp_experiment.png)
 
-Later when we want to reuse the pipeline, we can pass different arguments and do it all again (or even reuse it from within the Kubeflow UI).
+Plus tard, lorsque nous souhaiterons réutiliser le pipeline, nous pourrons
+transmettre différents arguments et tout recommencer (et même le réutiliser à
+partir de l’interface utilisateur de Kubeflow). Pour mieux comprendre cet
+exemple, ouvrez-le dans Kubeflow et essayez-le vous-même.
 
-To understand this example further, open it up in Kubeflow and try it for yourself.
+# Composants légers
 
-# Lightweight components
+En construction, malheureusement!
 
-Under construction, sorry!
+# Comprendre l’ordre des calculs
 
-# Understanding what computation occurs when
-
-Under construction, sorry!
+En construction, malheureusement!
