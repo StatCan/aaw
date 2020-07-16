@@ -1,10 +1,11 @@
-# Ask your local engineers!
+# Have questions? or feedback?
 
-# TODO: Ask Brendan
+Come join us on the
+[Advanced Analytics Workspace Slack channel](https://statcan-aaw.slack.com)! You
+will find a bunch of other users of the platform there who may be able to answer
+your questions, and some of the engineers will usually be present on the
+channel. You can ask questions and provide feedback there.
 
-Feel free to contact...
+- [Slack (en)](https://statcan-aaw.slack.com)
 
-# To report a bug
-
-
-
+We will also post notices there if there are updates or downtime.

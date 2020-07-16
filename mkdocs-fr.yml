@@ -56,5 +56,6 @@ nav:
   - Pipelines:
     - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
     - Pachyderm: 3-Pipelines/Pachyderm.md
+  - Collaboration: Collaboration.md
   - Stockage: Stockage.md
   - Aide/Contactez-nous: Aide.md
