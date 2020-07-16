@@ -65,25 +65,26 @@ exemple :
 3. ...
 
 <!-- prettier-ignore -->
-??? example "Exemple d'un pipeline"
+!!! example "Exemple d'un pipeline"
     Voici un exemple :
 
-    ```python
-    #!/bin/python3
-    dsl.pipeline(name="Estimer Pi",
-        description="Estimer Pi au moyen d'un modèle Map-Reduce")
-    def compute_pi():
-        # Créer un "exemple" d'opération pour chaque valeur de départ transmise au pipeline
-        seeds = (1,2,3,4,5,6,7,8,9,10) sample_ops = [sample_op(seed) for seed in seeds]
+        #!/bin/python3
+        dsl.pipeline(name="Estimer Pi",
+            description="Estimer Pi au moyen d'un modèle Map-Reduce")
+        def compute_pi():
+            # Créer un "exemple" d'opération pour chaque valeur de départ
+            # transmise au pipeline
+            seeds = (1,2,3,4,5,6,7,8,9,10)
+            sample_ops = [sample_op(seed) for seed in seeds]
 
-        # Obtenir les résultats avant de les transmettre à deux pipelines distincts
-        # Les résultats sont extraits des fichiers output_file.json et
-        # sont disponibles à partir des instances sample_op par l'entremise de l'attribut .outputs
-        outputs = [s.outputs['output'] for s in sample_ops]
+            # Obtenir les résultats avant de les transmettre à deux pipelines
+            # distincts. Les résultats sont extraits des fichiers
+            # `output_file.json` et sont disponibles à partir des instances
+            # `sample_op` par l'entremise de l'attribut `.outputs`.
+            outputs = [s.outputs['output'] for s in sample_ops]
 
-        _generate_plot_op = generate_plot_op(outputs)
-        _average_op = average_op(outputs)
-    ```
+            _generate_plot_op = generate_plot_op(outputs)
+            _average_op = average_op(outputs)
 
     Vous pouvez trouver le pipeline complet dans
     [l'exemple `map-reduce-pipeline`](https://github.com/StatCan/jupyter-notebooks).

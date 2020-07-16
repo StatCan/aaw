@@ -64,7 +64,8 @@ _components_ are connected, such as:
 3. ...
 
 <!-- prettier-ignore -->
-!!! example "Example of a pipeline" Here's an example
+!!! example "Example of a pipeline"
+    Here's an example
 
         #!/bin/python3
         dsl.pipeline(
