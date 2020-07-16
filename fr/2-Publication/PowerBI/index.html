@@ -15,11 +15,11 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
-        <title>Loading data into PowerBI - Espace d'analyse avancée du COVID-19</title>
+        <title>PowerBI - Espace d'analyse avancée du COVID-19</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loading-data-into-powerbi" class="md-skip">
+        <a href="#ce-dont-vous-aurez-besoin" class="md-skip">
           Aller au contenu
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Loading data into PowerBI
+              PowerBI
             
           </span>
         </div>
@@ -412,6 +412,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Collaboration/" title="Collaboration" class="md-nav__link">
+      Collaboration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../Stockage/" title="Stockage" class="md-nav__link">
       Stockage
     </a>
@@ -454,44 +466,31 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#loading-data-into-powerbi" class="md-nav__link">
-    Loading data into PowerBI
+  <a href="#ce-dont-vous-aurez-besoin" class="md-nav__link">
+    Ce dont vous aurez besoin
   </a>
   
-    <nav class="md-nav" aria-label="Loading data into PowerBI">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectez-vous" class="md-nav__link">
+    Connectez-vous
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectez-vous">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-youll-need" class="md-nav__link">
-    What you'll need
+  <a href="#configurez-powerbi" class="md-nav__link">
+    Configurez PowerBI
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-connected" class="md-nav__link">
-    Get connected
+  <a href="#modifiez-votre-script-python" class="md-nav__link">
+    Modifiez votre script Python
   </a>
-  
-    <nav class="md-nav" aria-label="Get connected">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-powerbi" class="md-nav__link">
-    Set up PowerBI
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-your-python-script" class="md-nav__link">
-    Edit your python script
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -520,29 +519,33 @@
                   
                 
                 
-                  <h1>Loading data into PowerBI</h1>
+                  <h1>PowerBI</h1>
                 
-                <h2 id="loading-data-into-powerbi">Loading data into PowerBI</h2>
-<p>We do not offer a PowerBI server, but you can pull your data into PowerBI from our Storage system, and use the data as a <code>pandas</code> dataframe.</p>
-<p><img alt="PowerBI Dashboard" src="../../images/powerbi_dashboard.png" /></p>
-<h3 id="what-youll-need">What you'll need</h3>
+                <p>Nous ne proposons pas de serveur PowerBI, mais vous pouvez extraire vos données
+dans PowerBI à partir de notre système de stockage et les utiliser comme une
+fiche de données <code>pandas</code>.</p>
+<p><img alt="Tableau de bord sur PowerBI" src="../../images/powerbi_dashboard.png" /></p>
+<h3 id="ce-dont-vous-aurez-besoin">Ce dont vous aurez besoin</h3>
 <ol>
-<li>
-<p>A computer with PowerBI, and Python3.6</p>
-</li>
-<li>
-<p>Your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See <a href="/daaas/en/Storage">Storage</a>)</p>
-</li>
+<li>Un ordinateur avec PowerBI et Python 3.6</li>
+<li>Vos <code>ACCESS_KEY</code> et <code>SECRET_KEY</code> MinIO (voir <a href="/daaas/fr/Stockage">Stockage</a>)</li>
 </ol>
-<h3 id="get-connected">Get connected</h3>
-<h4 id="set-up-powerbi">Set up PowerBI</h4>
-<p>Open up your PowerBI system, and open up this <a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">PowerBI quickstart</a> in your favorite text editor.</p>
-<p>You'll have to make sure that <code>pandas</code>, <code>boto3</code>, and <code>numpy</code> are installed, and that you're using the right Conda Virtual Env (if applicable)</p>
-<p><img alt="Install the dependencies" src="../../images/powerbi_cmd_prompt.png" /></p>
-<p>You'll then need to make sure that PowerBI is using the correct Python environment. This is modified from the options menu, and the exact path is specified in the quickstart guide.</p>
-<h4 id="edit-your-python-script">Edit your python script</h4>
-<p>Then, edit your Python script to use your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>, and then click "Get Data" and copy it in as a Python Script. </p>
-<p><img alt="Run your Python Script" src="../../images/powerbi_python.png" /></p>
+<h3 id="connectez-vous">Connectez-vous</h3>
+<h4 id="configurez-powerbi">Configurez PowerBI</h4>
+<p>Ouvrez votre système PowerBI et ouvrez
+<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">démarrage rapide de PowerBI</a>
+dans votre éditeur de texte préféré.</p>
+<p>Assurez-vous que <code>pandas</code>, <code>boto3</code> et <code>numpy</code> sont installés et que vous
+utilisez le bon environnement virtuel Conda (le cas échéant).</p>
+<p><img alt="Installez les dépendances" src="../../images/powerbi_cmd_prompt.png" /></p>
+<p>Ensuite, assurez-vous que PowerBI utilise le bon environnement Python. Vous
+pouvez modifier cet élément à partir du menu des options. Le chemin d'accès
+exact est indiqué dans le guide de démarrage rapide.</p>
+<h4 id="modifiez-votre-script-python">Modifiez votre script Python</h4>
+<p>Ensuite, modifiez votre script Python pour utiliser vos <code>ACCESS_KEY</code> et
+<code>SECRET_KEY</code> MinIO, puis cliquez sur "Get Data" et copiez-le en tant que script
+Python.</p>
+<p><img alt="Exécutez votre script Python." src="../../images/powerbi_python.png" /></p>
                 
               
               
@@ -601,14 +604,14 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

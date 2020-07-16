@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -519,6 +519,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Collaboration/" title="Collaboration" class="md-nav__link">
+      Collaboration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../Storage/" title="Storage" class="md-nav__link">
       Storage
     </a>
@@ -686,11 +698,13 @@ the cloud, you can share it with your colleagues too.</p>
 Great notebooks to start with are <code>R/01-R-Notebook-Demo.ipynb</code>, or the notebooks
 in <code>scikitlearn</code>. <code>pytorch</code> and <code>tensorflow</code> are great if you are familiar with
 machine learning. The <code>mapreduce-pipeline</code> and <code>ai-pipeline</code> are more advanced.</p>
+<!-- prettier-ignore -->
+
 <details class="danger"><summary>Some notebooks only work in certain server versions</summary><p>For instance, <code>gdal</code> is only in the geomatics image. So if you use another
 image then a notebook using gdal might not work.</p>
 </details>
 <h3 id="adding-software">Adding software</h3>
-<p>You do not have <code>sudo</code> in Jupyter, but you can use </p>
+<p>You do not have <code>sudo</code> in Jupyter, but you can use</p>
 <div class="codehilite"><pre><span></span><code>conda install --use-local your_package_name
 </code></pre></div>
 
@@ -702,20 +716,26 @@ image then a notebook using gdal might not work.</p>
 
 <p><strong>Don't forget to restart your jupyter kernel afterwards, to make new packages
 available.</strong></p>
+<!-- prettier-ignore -->
+
 <details class="tip"><summary>Make sure to restart the Jupyter kernel after installing new software</summary><p>If you install software in a terminal, but your jupyter kernel was already
 running, then it will not be updated.</p>
 </details>
-<details class="tip"><summary>Is there something that you can't install?</summary><p>If you need something installed, reach us or <a href="https://github.com/StatCan/kubeflow-containers">open a github issue</a>.
-We can add it to the default software.</p>
+<!-- prettier-ignore -->
+
+<details class="tip"><summary>Is there something that you can't install?</summary><p>If you need something installed, reach us or
+<a href="https://github.com/StatCan/kubeflow-containers">open a GitHub issue</a>. We
+can add it to the default software.</p>
 </details>
 <h2 id="getting-data-in-and-out-of-jupyter">Getting Data in and out of Jupyter</h2>
 <p>You can upload and download data to/from Jupyterhub directly in the menu. There
 is an upload button at the top, and you can right-click most files or folders to
 download them.</p>
 <h3 id="shareable-bucket-storage">Shareable "Bucket" storage</h3>
-<p><strong>The other option</strong> is high-volume storage with <a href="https://en.wikipedia.org/wiki/Object_storage">Object
-Storage</a>. Because storage is
-important for experiments, publishing, and exploring datasets, it has its own section.</p>
+<p><strong>The other option</strong> is high-volume storage with
+<a href="https://en.wikipedia.org/wiki/Object_storage">Object Storage</a>. Because storage
+is important for experiments, publishing, and exploring datasets, it has its own
+section.</p>
 <p><strong>Refer to the <a href="/Storage">Storage Section</a></strong></p>
                 
               
@@ -810,14 +830,14 @@ important for experiments, publishing, and exploring datasets, it has its own se
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

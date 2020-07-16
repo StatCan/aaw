@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exprimentations-avec-kubeflow" class="md-skip">
+        <a href="#vue-densemble" class="md-skip">
           Aller au contenu
         </a>
       
@@ -416,22 +416,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exprimentations-avec-kubeflow" class="md-nav__link">
-    Exp&eacute;rimentations avec Kubeflow
-  </a>
-  
-    <nav class="md-nav" aria-label="Exp&eacute;rimentations avec Kubeflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dmarrer-avec-les-bloc-notes" class="md-nav__link">
-    D&eacute;marrer avec les bloc-notes
+  <a href="#vue-densemble" class="md-nav__link">
+    Vue d'ensemble
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-quun-pipeline-et-comment-fonctionne-t-il" class="md-nav__link">
+    Qu'est-ce qu'un pipeline et comment fonctionne-t-il?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binpython3" class="md-nav__link">
+    !/bin/python3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definir-et-executer-votre-premier-pipeline" class="md-nav__link">
+    Définir et exécuter votre premier pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composants-legers" class="md-nav__link">
+    Composants légers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprendre-lordre-des-calculs" class="md-nav__link">
+    Comprendre l'ordre des calculs
+  </a>
   
 </li>
       
@@ -456,6 +478,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Collaboration/" title="Collaboration" class="md-nav__link">
+      Collaboration
+    </a>
   </li>
 
     
@@ -507,22 +541,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exprimentations-avec-kubeflow" class="md-nav__link">
-    Exp&eacute;rimentations avec Kubeflow
-  </a>
-  
-    <nav class="md-nav" aria-label="Exp&eacute;rimentations avec Kubeflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dmarrer-avec-les-bloc-notes" class="md-nav__link">
-    D&eacute;marrer avec les bloc-notes
+  <a href="#vue-densemble" class="md-nav__link">
+    Vue d'ensemble
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#quest-ce-quun-pipeline-et-comment-fonctionne-t-il" class="md-nav__link">
+    Qu'est-ce qu'un pipeline et comment fonctionne-t-il?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binpython3" class="md-nav__link">
+    !/bin/python3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definir-et-executer-votre-premier-pipeline" class="md-nav__link">
+    Définir et exécuter votre premier pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#composants-legers" class="md-nav__link">
+    Composants légers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprendre-lordre-des-calculs" class="md-nav__link">
+    Comprendre l'ordre des calculs
+  </a>
   
 </li>
       
@@ -548,11 +604,241 @@
                 
                   <h1>Kubeflow Pipelines</h1>
                 
-                <h2 id="exprimentations-avec-kubeflow">Exp&eacute;rimentations avec Kubeflow</h2>
-<p>Vous devez vous connecter au portail Azure <strong>au moyen de vos justificatifs d&#146;identit&eacute; StatCan</strong>.
-<code>prenom.nom@cloud.statcan.ca</code>. Vous pouvez le faire ici <a href="https://portal.azure.com">sur le portail Azure</a>.</p>
-<p><img alt="Portail Azure : choisissez l&#146;adresse @cloud.statcan.ca" src="../../images/azure-login.png" /></p>
-<h3 id="dmarrer-avec-les-bloc-notes">D&eacute;marrer avec les bloc-notes</h3>
+                <h2 id="vue-densemble">Vue d'ensemble</h2>
+<p>Kubeflow Pipelines est une plateforme de création de flux de production
+d'apprentissage automatique pouvant être déployés dans un environnement
+Kubernetes. Il permet de créer des pipelines qui encapsulent les flux de
+production analytiques (transformation de données, modèles de formation,
+construction d'éléments visuels, etc.). Ces pipelines peuvent être mis en
+commun, réutilisés et programmés. Ils sont créés de façon à être exécutés avec
+les calculs fournis par Kubernetes.</p>
+<p>Dans le contexte de l'espace de travail en analytique avancée, vous pouvez
+interagir avec les pipelines Kubeflow par l'entremise :</p>
+<ul>
+<li>
+<p>de <a href="../1-Experiments/Kubeflow.md">l'interface utilisateur</a> de Kubeflow, où, à
+  partir du menu Pipelines, vous pouvez télécharger des pipelines, visualiser
+  les pipelines que vous possédez et leurs résultats, etc.</p>
+</li>
+<li>
+<p>de la trousse <a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a>
+  en Python de Kubeflow Pipelines, accessible dans les serveurs de bloc-notes
+  Jupyter, où vous pouvez définir vos composants et pipelines, les soumettre
+  pour les exécuter immédiatement, ou même les enregistrer pour plus tard.</p>
+</li>
+</ul>
+<!-- prettier-ignore -->
+
+<details class="exemple"><summary>Des exemples supplémentaires dans les bloc-notes</summary><p>Des exemples plus exhaustifs de pipelines produits expressément pour cette
+plateforme sont accessibles dans
+<a href="https://github.com/StatCan/jupyter-notebooks">GitHub</a> (et dans chaque
+serveur de bloc-notes à /jupyter-notebooks). Vous pouvez également consulter
+des sources publiques.</p>
+</details>
+<p>Voyez
+<a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">le documentation officiel de Kubeflow</a>
+pour obtenir une explication générale détaillée de Kubeflow.</p>
+<p><img alt="Un pipeline Kubeflow" src="../../images/kf-pipeline_with_result.png" /></p>
+<h2 id="quest-ce-quun-pipeline-et-comment-fonctionne-t-il">Qu'est-ce qu'un pipeline et comment fonctionne-t-il?</h2>
+<p>Dans Kubeflow Pipelines, un pipeline comprend un ou plusieurs composants de
+pipeline enchaînés pour former un flux de production. Les composants sont comme
+des fonctions que le pipeline connecte ensemble.</p>
+<p>Le <em>pipeline</em> décrit l'ensemble du flux de production de ce que vous souhaitez
+accomplir, tandis que les <em>composants de pipeline</em> décrivent chacune des étapes
+distinctes de ce processus (comme le fait d'extraire des colonnes d'un stock de
+données, de transformer des données ou d'entraîner un modèle). Chaque
+<strong>composant</strong> doit être <strong>modulaire</strong> et idéalement <strong>réutilisable</strong>.</p>
+<p>Essentiellement, chaque <em>composant</em> a :</p>
+<ul>
+<li>une application autonome, présentée sous forme d'image de menu fixe
+  (https://docs.docker.com/get-started/), pour effectuer le travail proprement
+  dit .le code dans l'image de menu fixe peut être une séquence de commandes en
+  langage naturel, un script Python ou tout autre code pouvant être exécuté à
+  partir d'un terminal Linux</li>
+<li>une description de la manière dont Kubeflow Pipelines exécute le code
+  (l'emplacement de l'image, les arguments de la ligne de commande qu'il
+  accepte, les résultats qu'il produit), sous forme de fichier YAML.</li>
+</ul>
+<p>Un <em>pipeline</em> définit ensuite la logique de connexion des composants, par
+exemple :</p>
+<ol>
+<li>exécuter ComposantA</li>
+<li>transmettre le résultat du ComposantA au ComposantB et au ComposantC</li>
+<li>...</li>
+</ol>
+<!-- prettier-ignore -->
+
+<details class="example"><summary>Exemple d'un pipeline</summary><p>Voici un exemple :</p>
+<p>```python</p>
+<h2 id="binpython3">!/bin/python3</h2>
+<p>dsl.pipeline(name="Estimer Pi",
+    description="Estimer Pi au moyen d'un modèle Map-Reduce")
+def compute_pi():
+    # Créer un "exemple" d'opération pour chaque valeur de départ transmise au pipeline
+    seeds = (1,2,3,4,5,6,7,8,9,10) sample_ops = [sample_op(seed) for seed in seeds]</p>
+<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Obtenir</span> <span class="n">les</span> <span class="n">résultats</span> <span class="n">avant</span> <span class="n">de</span> <span class="n">les</span> <span class="n">transmettre</span> <span class="err">à</span> <span class="n">deux</span> <span class="n">pipelines</span> <span class="n">distincts</span>
+<span class="o">#</span> <span class="n">Les</span> <span class="n">résultats</span> <span class="n">sont</span> <span class="n">extraits</span> <span class="n">des</span> <span class="n">fichiers</span> <span class="n">output_file</span><span class="p">.</span><span class="n">json</span> <span class="n">et</span>
+<span class="o">#</span> <span class="n">sont</span> <span class="n">disponibles</span> <span class="err">à</span> <span class="n">partir</span> <span class="n">des</span> <span class="n">instances</span> <span class="n">sample_op</span> <span class="n">par</span> <span class="n">l</span><span class="s1">&#39;entremise de l&#39;</span><span class="n">attribut</span> <span class="p">.</span><span class="n">outputs</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="k">in</span> <span class="n">sample_ops</span><span class="p">]</span>
+
+<span class="n">_generate_plot_op</span> <span class="o">=</span> <span class="n">generate_plot_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+<span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>```</p>
+<p>Vous pouvez trouver le pipeline complet dans
+<a href="https://github.com/StatCan/jupyter-notebooks">l'exemple <code>map-reduce-pipeline</code></a>.</p>
+</details>
+<h2 id="definir-et-executer-votre-premier-pipeline">Définir et exécuter votre premier pipeline</h2>
+<p>Bien que les <em>pipelines</em> et les <em>composants</em> soient définis par des fichiers
+YAML, la trousse
+<a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a> en Python vous
+permet de les définir à partir du code Python. Voici un exemple de définition
+d'un
+<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb">pipeline simple</a>
+en utilisant la trousse SDK en Python.</p>
+<p>L'objectif de notre pipeline est de calculer, au moyen de cinq nombres, les
+valeurs suivantes :</p>
+<ol>
+<li>la moyenne des trois premiers nombres;</li>
+<li>la moyenne des deux derniers nombres;</li>
+<li>la moyenne des résultats de (1) et de (2).</li>
+</ol>
+<p>Pour ce faire, nous définissons un <em>pipeline</em> qui utilise notre <em>composant</em>
+moyen pour effectuer les calculs.</p>
+<p>Le composant moyen est défini par une image de menu fixe au moyen d'un script
+Python qui :</p>
+<ul>
+<li>accepte un ou plusieurs nombres comme arguments de ligne de commande</li>
+<li>renvoie la moyenne de ces nombres, enregistrée dans le fichier out.txt dans
+  son conteneur.</li>
+</ul>
+<p>Pour indiquer à Kubeflow Pipelines comment utiliser cette image, nous
+définissons notre <em>composant</em> moyen par l'entremise d'un ContainerOp, qui
+indique à Kubeflow l'interface API de notre image. L'instance ContainerOp
+définit l'emplacement de l'image du menu fixe, la façon de lui transmettre des
+arguments et les résultats à extraire du conteneur. Pour utiliser réellement ces
+ContainerOp dans notre pipeline, nous créons des fonctions de fabrique comme
+average<em>op (car nous voudrons probablement plus d'un _composant</em> moyen).</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+
+<span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span>\<span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Fabrique de ContainerOp moyen</span>
+
+<span class="sd">    Accepte un nombre arbitraire de nombres d&#39;entrée, en renvoyant un ContainerOp</span>
+<span class="sd">    qui transmet ces nombres à l&#39;image du menu fixe sous-jacent pour faire la</span>
+<span class="sd">    moyenne</span>
+
+<span class="sd">    Renvoie le résultat recueilli à partir du fichier ./out.txt à l&#39;intérieur du</span>
+<span class="sd">    conteneur</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Validation d&#39;entrée</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Doit préciser au moins un nombre à partir duquel calculer la moyenne&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;averge&quot;</span><span class="p">,</span> <span class="c1"># Élément affiché dans la visionneuse de pipeline</span>
+        <span class="n">image</span><span class="o">=</span><span class="s2">&quot;k8scc01covidacr.azurecr.io/kfp-components/average:v1&quot;</span><span class="p">,</span> <span class="c1"># L&#39;image</span>
+        <span class="n">exécutée</span> <span class="n">par</span> <span class="n">Kuberflow</span> <span class="n">Pipelines</span> <span class="n">pour</span> <span class="n">faire</span> <span class="n">le</span> <span class="n">travail</span> <span class="n">arguments</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span>
+        <span class="c1">#transmet chaque nombre comme un argument de ligne de commande (chaîne) distinct</span>
+        <span class="c1"># Le script à l&#39;intérieur du conteneur enregistre le résultat (sous forme de chaîne de caractères) dans le fichier out.txt, que</span>
+        <span class="c1"># Kuberflow Pipelines lit pour nous et récupère sous forme de chaîne.</span>
+        <span class="n">file_outputs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;./out.txt&#39;</span><span class="p">},</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p>Nous définissons notre pipeline comme une fonction Python qui utilise les
+fabriques de ComponentOp ci-dessus, décorées par l'élément décoratif
+@dsl.pipeline. Notre pipeline utilise notre composant <em>moyen</em> en lui
+transmettant des nombres. Puis, nous utilisons les résultats <em>moyens</em> en les
+transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;nom de mon pipeline&quot;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcul de moyenne de pipeline, qui accepte cinq nombres et effectue quelques calculs de moyenne sur ceux-ci</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Calculer les moyennes pour deux groupes</span>
+
+    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+    <span class="c1"># Utiliser les résultats de \_1 et de \_2 pour calculer une moyenne globale</span>
+
+    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>Enfin, nous enregistrons une définition YAML de notre pipeline pour la
+transmettre plus tard à Kubeflow Pipelines. Ce fichier YAML décrit à Kubeflow
+Pipelines exactement comment exécuter notre pipeline. Décompressez-le et voyez
+par vous-même!</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+<span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
+<span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">my_pipeline</span><span class="p">,</span>
+     <span class="n">pipeline_yaml</span>
+<span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Définition de pipeline exportée vers </span><span class="si">{</span><span class="n">pipeline_yaml</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<!-- prettier-ignore -->
+
+<p>??? avertissement "Kubeflow Pipelines est une bête paresseuse".
+    Il est utile de garder à l'esprit le calcul qui se produit lorsque vous
+    exécutez ce code Python par rapport à ce qui se passe lorsque vous soumettez
+    le pipeline à Kubeflow Pipelines. Bien que tout semble se produire
+    instantanément, essayez d'ajouter <code>print(avg_1.output)</code> au pipeline
+    ci-dessus et voyez ce qui se passe lorsque vous compilez votre pipeline. La
+    trousse SDK en Python que nous utilisons sert à créer des pipelines, et non
+    à les exécuter, de sorte que les résultats des composants ne seront jamais
+    disponibles lorsque vous exécuterez ce code Python. Ce point est abordé plus
+    en détail plus loin, dans la section <em>Comprendre l'ordre des calculs</em>.</p>
+<p>Pour exécuter notre pipeline, nous définissons une expérience :</p>
+<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;calcul de moyenne de pipeline&quot;</span>
+
+<span class="kn">import</span> <span class="nn">kfp</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_experiment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">experiment_name</span><span class="p">)</span>
+
+<span class="n">pl_params</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="p">}</span>
+</code></pre></div>
+
+
+<p>Voici ce qui peut être observé dans
+<a href="../1-Experiments/Kubeflow.md">l'interface utilisateur</a> de Kubeflow Pipelines :</p>
+<p><img alt="Expérience Kubeflow Pipelines" src="../images/kfp_experiment.png" /></p>
+<p>Ensuite, nous exécutons une instance de notre pipeline en utilisant les
+arguments souhaités :</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
+    <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="c1"># Exécuter dans l&#39;expérience ci-dessus</span>
+    <span class="n">experiment_name</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">),</span> <span class="c1"># Donner un nom et une</span>
+    <span class="n">heure</span> <span class="n">système</span> <span class="n">à</span> <span class="n">notre</span> <span class="n">tâche</span> <span class="n">unique</span> <span class="n">pipeline_yaml</span><span class="p">,</span> <span class="c1"># Transmettre le .yaml.zip que</span>
+    <span class="n">nous</span> <span class="n">avons</span> <span class="n">créé</span> <span class="n">ci</span><span class="o">-</span><span class="n">dessus</span><span class="o">.</span> <span class="n">Il</span> <span class="n">définit</span> <span class="n">le</span> <span class="n">pipeline</span> <span class="n">params</span><span class="o">=</span><span class="n">pl_params</span> <span class="c1"># Transmettre</span>
+    <span class="n">les</span> <span class="n">paramètres</span> <span class="n">en</span> <span class="n">fonction</span> <span class="n">desquels</span> <span class="n">nous</span> <span class="n">souhaitons</span> <span class="n">exécuter</span> <span class="n">le</span> <span class="n">pipeline</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Voici ce que l'on peut également voir dans l'interface utilisateur :</p>
+<p><img alt="Expérience Kubeflow Pipelines" src="../images/kfp_experiment.png" /></p>
+<p>Plus tard, lorsque nous souhaiterons réutiliser le pipeline, nous pourrons
+transmettre différents arguments et tout recommencer (et même le réutiliser à
+partir de l'interface utilisateur de Kubeflow). Pour mieux comprendre cet
+exemple, ouvrez-le dans Kubeflow et essayez-le vous-même.</p>
+<h2 id="composants-legers">Composants légers</h2>
+<p>En construction, malheureusement!</p>
+<h2 id="comprendre-lordre-des-calculs">Comprendre l'ordre des calculs</h2>
+<p>En construction, malheureusement!</p>
                 
               
               
@@ -646,14 +932,14 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

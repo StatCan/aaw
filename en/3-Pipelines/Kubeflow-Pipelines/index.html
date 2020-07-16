@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#experiments-with-kubeflow" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -416,22 +416,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#experiments-with-kubeflow" class="md-nav__link">
-    Experiments with Kubeflow
-  </a>
-  
-    <nav class="md-nav" aria-label="Experiments with Kubeflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getting-started-with-notebooks" class="md-nav__link">
-    Getting Started with notebooks
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-pipelines-and-how-do-they-work" class="md-nav__link">
+    What are Pipelines and How do they Work?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-and-run-your-first-pipeline" class="md-nav__link">
+    Define and run your first Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightweight-components" class="md-nav__link">
+    Lightweight components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-what-computation-occurs-when" class="md-nav__link">
+    Understanding what computation occurs when
+  </a>
   
 </li>
       
@@ -456,6 +471,18 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Collaboration/" title="Collaboration" class="md-nav__link">
+      Collaboration
+    </a>
   </li>
 
     
@@ -507,22 +534,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#experiments-with-kubeflow" class="md-nav__link">
-    Experiments with Kubeflow
-  </a>
-  
-    <nav class="md-nav" aria-label="Experiments with Kubeflow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getting-started-with-notebooks" class="md-nav__link">
-    Getting Started with notebooks
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-pipelines-and-how-do-they-work" class="md-nav__link">
+    What are Pipelines and How do they Work?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-and-run-your-first-pipeline" class="md-nav__link">
+    Define and run your first Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lightweight-components" class="md-nav__link">
+    Lightweight components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-what-computation-occurs-when" class="md-nav__link">
+    Understanding what computation occurs when
+  </a>
   
 </li>
       
@@ -548,11 +590,231 @@
                 
                   <h1>Kubeflow Pipelines</h1>
                 
-                <h2 id="experiments-with-kubeflow">Experiments with Kubeflow</h2>
-<p>You have to login to the azure portal <strong>using your statcan credentials</strong>.
-<code>first.lastname@cloud.statcan.ca</code>. You can do that here <a href="https://portal.azure.com">at the azure portal</a>.</p>
-<p><img alt="Azure Portal: Choose the @cloud.statcan.ca address" src="../../images/azure-login.png" /></p>
-<h3 id="getting-started-with-notebooks">Getting Started with notebooks</h3>
+                <h2 id="overview">Overview</h2>
+<p><a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">Kubeflow Pipelines</a>
+is a platform for building machine learning workflows for deployment in a
+Kubernetes environment. It enables authoring <em>pipelines</em> that encapsulate
+analytical workflows (transforming data, training models, building visuals,
+etc.). These <em>pipelines</em> can be shared, reused, and scheduled, and are built to
+run on compute provided via Kubernetes.</p>
+<p>In the context of the Advanced Analytics Workspace, Kubeflow Pipelines are
+interacted with through:</p>
+<ul>
+<li>The <a href="../../1-Experiments/Kubeflow/">Kubeflow UI</a>, where from the Pipelines menu
+  you can upload pipelines, view the pipelines you have and their results, etc.</li>
+<li>The Kubeflow Pipelines python
+  <a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a>, accessible
+  through the
+  <a href="../../1-Experiments/Kubeflow/#create-a-server">Jupyter Notebook Servers</a>,
+  where you can define your components and pipelines, submit them to run now, or
+  even save them for later.</li>
+</ul>
+<!-- prettier-ignore -->
+
+<details class="example"><summary>More examples in the notebooks</summary><p>More comprehensive pipeline examples specifically made for this platform are
+available on <a href="https://github.com/StatCan/jupyter-notebooks">GitHub</a> (and in
+every Notebook Server at <code>/jupyter-notebooks</code>). You can also check out
+<a href="https://github.com/kubeflow/pipelines/tree/master/samples">public sources</a>.</p>
+</details>
+<p>See
+<a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">the official Kubeflow docs</a>
+for a more detailed explanation of Kubeflow Pipelines.</p>
+<p><img alt="A Kubeflow Pipeline" src="../../images/kf-pipeline_with_result.png" /></p>
+<h2 id="what-are-pipelines-and-how-do-they-work">What are Pipelines and How do they Work?</h2>
+<p>A
+<a href="https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/"><em>pipeline</em></a>
+in Kubeflow Pipelines consists of one or more
+<a href="https://www.kubeflow.org/docs/pipelines/overview/concepts/component/"><em>pipeline components</em></a>
+chained together to form a workflow. The components are like functions, and then
+the pipeline just connects them together.</p>
+<p>The <em>pipeline</em> describes the entire workflow of what you want to accomplish,
+while the <em>pipeline components</em> each describe individual steps in that process
+(such as pulling columns from a data store, transforming data, or training a
+model). Each <em>component</em> should be <strong>modular</strong>, and ideally <strong>reusable</strong>.</p>
+<p>At their core, each <em>component</em> has:</p>
+<ul>
+<li>A standalone application, packaged as a
+  <a href="https://docs.docker.com/get-started/">docker images</a>, for doing the actual
+  work. The code in the docker image could be a shell script, python script, or
+  anything else you can run from a Linux terminal</li>
+<li>A description of how Kubeflow Pipelines runs the code (where is the image,
+  what command line arguments does it accept, what outputs does it generate), as
+  a YAML file</li>
+</ul>
+<p>A <em>pipeline</em> then, using the above <em>components</em>, defines the logic for how
+<em>components</em> are connected, such as:</p>
+<ol>
+<li>run ComponentA</li>
+<li>pass the output from ComponentA to ComponentB and ComponentC</li>
+<li>...</li>
+</ol>
+<!-- prettier-ignore -->
+
+<p>!!! example "Example of a pipeline" Here's an example</p>
+<div class="codehilite"><pre><span></span><code>    <span class="o">#!/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span>
+    <span class="n">dsl</span><span class="p">.</span><span class="n">pipeline</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="ss">&quot;Estimate Pi&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Estimate Pi using a Map-Reduce pattern&#39;</span>
+    <span class="p">)</span>
+    <span class="n">def</span> <span class="n">compute_pi</span><span class="p">():</span>
+
+        <span class="o">#</span> <span class="k">Create</span> <span class="n">a</span> <span class="ss">&quot;sample&quot;</span> <span class="k">operation</span> <span class="k">for</span> <span class="k">each</span> <span class="n">seed</span> <span class="n">passed</span> <span class="k">to</span> <span class="n">the</span> <span class="n">pipeline</span>
+        <span class="n">seeds</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">sample_ops</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_op</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span> <span class="k">for</span> <span class="n">seed</span> <span class="k">in</span> <span class="n">seeds</span><span class="p">]</span>
+
+        <span class="o">#</span> <span class="k">Get</span> <span class="n">the</span> <span class="n">results</span><span class="p">,</span> <span class="k">before</span> <span class="n">we</span> <span class="n">feed</span> <span class="k">into</span> <span class="n">two</span> <span class="n">different</span> <span class="n">pipelines</span><span class="p">.</span>
+        <span class="o">#</span> <span class="n">The</span> <span class="n">results</span> <span class="k">are</span> <span class="n">extracted</span> <span class="k">from</span> <span class="n">the</span> <span class="n">output_file</span><span class="p">.</span><span class="n">json</span> <span class="n">files</span><span class="p">,</span>
+        <span class="o">#</span> <span class="k">are</span> <span class="n">available</span> <span class="k">from</span> <span class="n">the</span> <span class="n">sample_op</span> <span class="n">instances</span> <span class="n">through</span> <span class="n">the</span> <span class="p">.</span><span class="n">outputs</span> <span class="n">attribute</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="k">in</span> <span class="n">sample_ops</span><span class="p">]</span>
+
+        <span class="n">_generate_plot_op</span> <span class="o">=</span> <span class="n">generate_plot_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+        <span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+
+<span class="n">You</span> <span class="n">can</span> <span class="n">find</span> <span class="n">the</span> <span class="k">full</span> <span class="n">pipeline</span> <span class="k">in</span> <span class="n">the</span> <span class="p">[</span><span class="o">`</span><span class="k">map</span><span class="o">-</span><span class="n">reduce</span><span class="o">-</span><span class="n">pipeline</span><span class="o">`</span> <span class="n">example</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">StatCan</span><span class="o">/</span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebooks</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="define-and-run-your-first-pipeline">Define and run your first Pipeline</h2>
+<p>While <em>pipelines</em> and <em>components</em> are defined by YAML files, the python
+<a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a> let's you
+define them from python code. The following is an example of how to define a
+<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb">simple pipeline</a>
+using the python SDK.</p>
+<p>The objective of our pipeline is, given five numbers, compute:</p>
+<ol>
+<li>The average of the first three numbers</li>
+<li>The average of the last two numbers</li>
+<li>The average of the results of (1) and (2)</li>
+</ol>
+<p>To do this, we define a <em>pipeline</em> that uses our average <em>component</em> to do the
+computations.</p>
+<p>The <em>average</em> component is defined by a docker image with a simple python script
+that:</p>
+<ul>
+<li>accepts one or more numbers as command line arguments</li>
+<li>returns the average of these numbers, written to the file <code>out.txt</code> within its
+  container</li>
+</ul>
+<p>To tell Kubeflow Pipelines how to use this image, we define our average
+<em>component</em> through a ContainerOp which tells Kubeflow our image's API. The
+ContainerOp instance sets the docker image location, how to pass arguments to
+it, and what outputs to pull from the container. To actually use these
+ContainerOp's in our pipeline, we build factory functions like <code>average_op</code> (as
+we'll probably want more than just one average <em>component</em>).</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+
+<span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Factory for average ContainerOps</span>
+
+<span class="sd">    Accepts an arbitrary number of input numbers, returning a ContainerOp that</span>
+<span class="sd">    passes those numbers to the underlying docker image for averaging</span>
+
+<span class="sd">    Returns output collected from ./out.txt from inside the container</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Input validation</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Must specify at least one number to take the average of&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;averge&quot;</span><span class="p">,</span>  <span class="c1"># What will show up on the pipeline viewer</span>
+        <span class="n">image</span><span class="o">=</span><span class="s2">&quot;k8scc01covidacr.azurecr.io/kfp-components/average:v1&quot;</span><span class="p">,</span>  <span class="c1"># The image that KFP runs to do the work</span>
+        <span class="n">arguments</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span>  <span class="c1"># Passes each number as a separate (string) command line argument</span>
+        <span class="c1"># Script inside container writes the result (as a string) to out.txt, which</span>
+        <span class="c1"># KFP reads for us and brings back here as a string</span>
+        <span class="n">file_outputs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;./out.txt&#39;</span><span class="p">},</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+
+<p>We define our pipeline as a python function that uses our above ComponentOp
+factories, decorated by the @dsl.pipeline decorator. Our pipeline uses our
+<em>average</em> component by passing it numbers, and we use the <em>average</em> results by
+passing them to later functions through accessing <code>avg_*.output</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Averaging pipeline which accepts five numbers and does some averaging</span>
+<span class="sd">    operations on them</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Compute averages for two groups</span>
+    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
+    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>And finally, we save a YAML definition of our pipeline for later passing to
+Kubeflow Pipelines. This YAML describes to Kubeflow Pipelines exactly how to run
+our pipeline - unzip it and take a look yourself!</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+<span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
+<span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">my_pipeline</span><span class="p">,</span>
+    <span class="n">pipeline_yaml</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exported pipeline definition to </span><span class="si">{</span><span class="n">pipeline_yaml</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<!-- prettier-ignore -->
+
+<details class="warning"><summary>Kubeflow Pipelines is a lazy beast</summary><p>It is useful to keep in mind what computation is happening when you run this
+python code versus what happens when you submit the pipeline to Kubeflow
+Pipelines. Although it seems like everything is happening in the moment, try
+adding <code>print(avg_1.output)</code> to the above pipeline and see what happens when
+you compile your pipeline. The python SDK we're using is for <em>authoring</em>
+pipelines, not for running them, so results from components will never be
+available when you run this python code. The is discussed more below in
+<em>Understanding what computation occurs when</em>.</p>
+</details>
+<p>To actually run our pipeline, we define an experiment:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
+
+<span class="kn">import</span> <span class="nn">kfp</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_experiment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">experiment_name</span><span class="p">)</span>
+
+<span class="n">pl_params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Which is observable in the
+<a href="../../1-Experiments/Kubeflow/">Kubeflow Pipelines UI</a>:</p>
+<p><img alt="Kubeflow Pipeline Experiment" src="../../images/kfp_experiment.png" /></p>
+<p>And then run an instance of our pipeline with the arguments we want:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
+    <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>  <span class="c1"># Run inside the above experiment</span>
+    <span class="n">experiment_name</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">),</span>  <span class="c1"># Give our job a name with a timestamp so its unique</span>
+    <span class="n">pipeline_yaml</span><span class="p">,</span>  <span class="c1"># Pass the .yaml.zip we created above.  This defines the pipeline</span>
+    <span class="n">params</span><span class="o">=</span><span class="n">pl_params</span>  <span class="c1"># Pass our parameters we want to run the pipeline with</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>which can also be seen in the UI:</p>
+<p><img alt="Kubeflow Pipeline Experiment" src="../../images/kfp_experiment.png" /></p>
+<p>Later when we want to reuse the pipeline, we can pass different arguments and do
+it all again (or even reuse it from within the Kubeflow UI).</p>
+<p>To understand this example further, open it up in Kubeflow and try it for
+yourself.</p>
+<h2 id="lightweight-components">Lightweight components</h2>
+<p>Under construction, sorry!</p>
+<h2 id="understanding-what-computation-occurs-when">Understanding what computation occurs when</h2>
+<p>Under construction, sorry!</p>
                 
               
               
@@ -646,14 +908,14 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

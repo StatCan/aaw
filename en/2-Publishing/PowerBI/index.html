@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -492,6 +492,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Collaboration/" title="Collaboration" class="md-nav__link">
+      Collaboration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../Storage/" title="Storage" class="md-nav__link">
       Storage
     </a>
@@ -603,25 +615,29 @@
                   <h1>PowerBI</h1>
                 
                 <h2 id="loading-data-into-powerbi">Loading data into PowerBI</h2>
-<p>We do not offer a PowerBI server, but you can pull your data into PowerBI from our Storage system, and use the data as a <code>pandas</code> dataframe.</p>
+<p>We do not offer a PowerBI server, but you can pull your data into PowerBI from
+our Storage system, and use the data as a <code>pandas</code> dataframe.</p>
 <p><img alt="PowerBI Dashboard" src="../../images/powerbi_dashboard.png" /></p>
 <h3 id="what-youll-need">What you'll need</h3>
 <ol>
-<li>
-<p>A computer with PowerBI, and Python3.6</p>
-</li>
-<li>
-<p>Your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See <a href="/daaas/en/Storage">Storage</a>)</p>
-</li>
+<li>A computer with PowerBI, and Python3.6</li>
+<li>Your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See
+   <a href="/daaas/en/Storage">Storage</a>)</li>
 </ol>
 <h3 id="get-connected">Get connected</h3>
 <h4 id="set-up-powerbi">Set up PowerBI</h4>
-<p>Open up your PowerBI system, and open up this <a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">PowerBI quickstart</a> in your favorite text editor.</p>
-<p>You'll have to make sure that <code>pandas</code>, <code>boto3</code>, and <code>numpy</code> are installed, and that you're using the right Conda Virtual Env (if applicable)</p>
+<p>Open up your PowerBI system, and open up this
+<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">PowerBI quickstart</a>
+in your favorite text editor.</p>
+<p>You'll have to make sure that <code>pandas</code>, <code>boto3</code>, and <code>numpy</code> are installed, and
+that you're using the right Conda Virtual Env (if applicable)</p>
 <p><img alt="Install the dependencies" src="../../images/powerbi_cmd_prompt.png" /></p>
-<p>You'll then need to make sure that PowerBI is using the correct Python environment. This is modified from the options menu, and the exact path is specified in the quickstart guide.</p>
+<p>You'll then need to make sure that PowerBI is using the correct Python
+environment. This is modified from the options menu, and the exact path is
+specified in the quickstart guide.</p>
 <h4 id="edit-your-python-script">Edit your python script</h4>
-<p>Then, edit your Python script to use your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>, and then click "Get Data" and copy it in as a Python Script. </p>
+<p>Then, edit your Python script to use your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>,
+and then click "Get Data" and copy it in as a Python Script.</p>
 <p><img alt="Run your Python Script" src="../../images/powerbi_python.png" /></p>
                 
               
@@ -716,14 +732,14 @@
     </div>
     
       <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

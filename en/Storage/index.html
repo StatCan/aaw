@@ -15,7 +15,7 @@
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
     
     
       
@@ -410,6 +410,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../Collaboration/" title="Collaboration" class="md-nav__link">
+      Collaboration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -695,11 +707,28 @@ a team, your whole team can use the same server's disk just like a shared drive.
 <h2 id="bucket-storage">Bucket Storage</h2>
 <p>We have four available types of bucket storage.</p>
 <p><strong>Self-Serve:</strong></p>
-<ul>
-<li><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">Minimal</a></li>
-<li><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca">Premium</a></li>
-<li><a href="https://pachyderm-tenant1-minio.covid.cloud.statcan.ca">Pachyderm</a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th align="left">storage type</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">Minimal</a></td>
+<td align="left">By default, use this one. It is HDD backed storage.</td>
+</tr>
+<tr>
+<td align="left"><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca">Premium</a></td>
+<td align="left">Use this if you need very high read/write speeds, like for training models on very large datasets.</td>
+</tr>
+<tr>
+<td align="left"><a href="https://pachyderm-tenant1-minio.covid.cloud.statcan.ca">Pachyderm</a></td>
+<td align="left">You will only need this if you're using Pachyderm Pipelines.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Publicly Available:</strong></p>
 <ul>
 <li><a href="https://datasets.covid.cloud.statcan.ca">Public (Read-Only)</a></li>
@@ -711,6 +740,16 @@ in, simply use the <strong>OpenID</strong> option seen below.</p>
 <p>Once you are logged in, you are allowed to create a personal bucket with the
 format <code>firstname-lastname</code>.</p>
 <p><img alt="Minio browser with personal bucket using first name, last name format (hyphenated)" src="../images/minio_self_serve_bucket.png" /></p>
+<!-- prettier-ignore -->
+
+<div class="admonition failure">
+<p class="admonition-title">Cannot yet share files from Minio with OpenID</p>
+<p>Due to
+<a href="https://github.com/minio/minio/issues/8935">an upstream bug in Minio</a> you
+cannot share files yet. This will hopefully be resolved soon. In the
+meantime, it <strong>does</strong> work if you use your access key and secret key, which
+you can get from Kubeflow.</p>
+</div>
 <h3 id="sharing">Sharing</h3>
 <p>You can easily share individual files. Just use the "share" option for a
 specific file and you will be provided a link that you can send to a
@@ -724,7 +763,10 @@ the command line tool <code>mc</code>, or via S3 API calls in R or Python.</p>
 
 <div class="admonition danger">
 <p class="admonition-title">Required Kubeflow configuration</p>
-<p>If you want to enable bucket storage for your notebook, select "Inject credentials to access MinIO object storage" from the <strong>Configurations</strong> menu when you create your server. Otherwise, your server won't know how to sign-in to your personal storage.
+<p>If you want to enable bucket storage for your notebook, select "Inject
+credentials to access MinIO object storage" from the <strong>Configurations</strong> menu
+when you create your server. Otherwise, your server won't know how to
+sign-in to your personal storage.
 <img alt="Kubeflow notebook server creation with &quot;Inject credentials to access MinIO object storage&quot; option selected" src="../images/kubeflow_minio_option.png" /></p>
 </div>
 <!-- prettier-ignore -->
@@ -793,7 +835,7 @@ replace <code>minimal</code> in the above program with the type you need.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../3-Pipelines/Pachyderm/" title="Pachyderm" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Collaboration/" title="Collaboration" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -802,7 +844,7 @@ replace <code>minimal</code> in the above program with the type you need.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Pachyderm
+                Collaboration
               </div>
             </div>
           </a>
@@ -868,14 +910,14 @@ replace <code>minimal</code> in the above program with the type you need.</p>
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
