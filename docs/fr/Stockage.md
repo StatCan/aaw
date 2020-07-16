@@ -82,7 +82,7 @@ selon le format `prenom-nom`.
 <!-- prettier-ignore -->
 !!! danger "Cannot yet share files from Minio with OpenID"
     Due to a [bug in Minio](https://github.com/minio/minio/issues/8935) you
-    cannot share files yet. This will hopefully be resolved soon. In the\
+    cannot share files yet. This will hopefully be resolved soon. In the
     meantime, it _does_ work if you use your access key and secret key, which
     you can get from Kubeflow.
 

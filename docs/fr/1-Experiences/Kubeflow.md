@@ -53,7 +53,6 @@ votre équipe.
   soulignement.**
 
 - **Vous devrez choisir une image** Vous voudrez probablement une image de :
-
   - **Apprentissage automatique**
   - **Géomatique**
   - **Minime**
