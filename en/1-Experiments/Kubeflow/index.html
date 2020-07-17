@@ -740,18 +740,18 @@ in with your cloud credentials.</p>
 </ul>
 <h3 id="configuring-your-server">Configuring your server</h3>
 <ul>
-<li>
-<p>You will get a template to create your notebook server. <strong>Note:</strong> the name
-  must be lowercase letters with hypens. <strong>No spaces, and no underscores.</strong></p>
-</li>
+<li>You will get a template to create your notebook server. <strong>Note:</strong> the name
+  must be lowercase letters with hypens. <strong>No spaces, and no underscores.</strong></li>
+</ul>
+<ul>
 <li>
 <p><strong>You'll need to choose an image</strong> You will probably want one of</p>
-</li>
-<li>
-<p><strong>Machine Learning</strong></p>
-</li>
+<ul>
+<li><strong>Machine Learning</strong></li>
 <li><strong>Geomatics</strong></li>
 <li><strong>Minimal</strong></li>
+</ul>
+</li>
 </ul>
 <p><img alt="Choose an Image" src="../../images/kubeflow_choose_an_image.png" /></p>
 <ul>
@@ -762,16 +762,16 @@ in with your cloud credentials.</p>
 <li>
 <p>At the time of writing (April 21, 2020) there are two types of computers in
   the cluster</p>
-</li>
-<li>
-<p><strong>CPU:</strong> D16s v3 <code>(16 vcpus, 64 GiB memory)</code></p>
-</li>
+<ul>
+<li><strong>CPU:</strong> D16s v3 <code>(16 vcpus, 64 GiB memory)</code></li>
 <li><strong>GPU:</strong> NC6s_v3 <code>(6 vcpus, 112 GiB memory, ? GPUs)</code></li>
 </ul>
 <p>Because of this, if you request too much RAM or too many CPUs, it may be hard
-  or impossible to satisfy your request.</p>
+or impossible to satisfy your request.</p>
 <p>In the future (possibly when you read this) there may be larger machines made
-  available, so you may have looser restrictions.</p>
+available, so you may have looser restrictions.</p>
+</li>
+</ul>
 <!-- prettier-ignore -->
 
 <div class="admonition note">

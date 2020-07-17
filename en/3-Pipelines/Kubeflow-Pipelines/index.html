@@ -650,30 +650,49 @@ model). Each <em>component</em> should be <strong>modular</strong>, and ideally 
 </ol>
 <!-- prettier-ignore -->
 
-<p>!!! example "Example of a pipeline" Here's an example</p>
-<div class="codehilite"><pre><span></span><code>    <span class="o">#!/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span>
-    <span class="n">dsl</span><span class="p">.</span><span class="n">pipeline</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="ss">&quot;Estimate Pi&quot;</span><span class="p">,</span>
-        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Estimate Pi using a Map-Reduce pattern&#39;</span>
-    <span class="p">)</span>
-    <span class="n">def</span> <span class="n">compute_pi</span><span class="p">():</span>
+<div class="admonition example">
+<p class="admonition-title">Example of a pipeline</p>
+<p>Here's an example</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/python3</span>
+<span class="n">dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Estimate Pi&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Estimate Pi using a Map-Reduce pattern&#39;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">compute_pi</span><span class="p">():</span>
 
-        <span class="o">#</span> <span class="k">Create</span> <span class="n">a</span> <span class="ss">&quot;sample&quot;</span> <span class="k">operation</span> <span class="k">for</span> <span class="k">each</span> <span class="n">seed</span> <span class="n">passed</span> <span class="k">to</span> <span class="n">the</span> <span class="n">pipeline</span>
-        <span class="n">seeds</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-        <span class="n">sample_ops</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_op</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span> <span class="k">for</span> <span class="n">seed</span> <span class="k">in</span> <span class="n">seeds</span><span class="p">]</span>
+    <span class="c1"># Create a &quot;sample&quot; operation for each seed passed to the pipeline</span>
+    <span class="n">seeds</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">sample_ops</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_op</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span> <span class="k">for</span> <span class="n">seed</span> <span class="ow">in</span> <span class="n">seeds</span><span class="p">]</span>
 
-        <span class="o">#</span> <span class="k">Get</span> <span class="n">the</span> <span class="n">results</span><span class="p">,</span> <span class="k">before</span> <span class="n">we</span> <span class="n">feed</span> <span class="k">into</span> <span class="n">two</span> <span class="n">different</span> <span class="n">pipelines</span><span class="p">.</span>
-        <span class="o">#</span> <span class="n">The</span> <span class="n">results</span> <span class="k">are</span> <span class="n">extracted</span> <span class="k">from</span> <span class="n">the</span> <span class="n">output_file</span><span class="p">.</span><span class="n">json</span> <span class="n">files</span><span class="p">,</span>
-        <span class="o">#</span> <span class="k">are</span> <span class="n">available</span> <span class="k">from</span> <span class="n">the</span> <span class="n">sample_op</span> <span class="n">instances</span> <span class="n">through</span> <span class="n">the</span> <span class="p">.</span><span class="n">outputs</span> <span class="n">attribute</span>
-        <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="k">in</span> <span class="n">sample_ops</span><span class="p">]</span>
+    <span class="c1"># Get the results, before we feed into two different pipelines.</span>
+    <span class="c1"># The results are extracted from the output_file.json files,</span>
+    <span class="c1"># are available from the sample_op instances through the .outputs attribute</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sample_ops</span><span class="p">]</span>
 
-        <span class="n">_generate_plot_op</span> <span class="o">=</span> <span class="n">generate_plot_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
-        <span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
-
-<span class="n">You</span> <span class="n">can</span> <span class="n">find</span> <span class="n">the</span> <span class="k">full</span> <span class="n">pipeline</span> <span class="k">in</span> <span class="n">the</span> <span class="p">[</span><span class="o">`</span><span class="k">map</span><span class="o">-</span><span class="n">reduce</span><span class="o">-</span><span class="n">pipeline</span><span class="o">`</span> <span class="n">example</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">StatCan</span><span class="o">/</span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebooks</span><span class="p">)</span>
+    <span class="n">_generate_plot_op</span> <span class="o">=</span> <span class="n">generate_plot_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+    <span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 
-
+<p>You can find the full pipeline in the <a href="https://github.com/StatCan/jupyter-notebooks"><code>map-reduce-pipeline</code> example</a></p>
+</div>
 <h2 id="define-and-run-your-first-pipeline">Define and run your first Pipeline</h2>
 <p>While <em>pipelines</em> and <em>components</em> are defined by YAML files, the python
 <a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a> let's you

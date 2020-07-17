@@ -430,13 +430,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#binpython3" class="md-nav__link">
-    !/bin/python3
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#definir-et-executer-votre-premier-pipeline" class="md-nav__link">
     Définir et exécuter votre premier pipeline
   </a>
@@ -555,13 +548,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#binpython3" class="md-nav__link">
-    !/bin/python3
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#definir-et-executer-votre-premier-pipeline" class="md-nav__link">
     Définir et exécuter votre premier pipeline
   </a>
@@ -615,17 +601,15 @@ les calculs fournis par Kubernetes.</p>
 <p>Dans le contexte de l'espace de travail en analytique avancée, vous pouvez
 interagir avec les pipelines Kubeflow par l'entremise :</p>
 <ul>
-<li>
-<p>de <a href="../1-Experiments/Kubeflow.md">l'interface utilisateur</a> de Kubeflow, où, à
+<li>de <a href="../1-Experiments/Kubeflow.md">l'interface utilisateur</a> de Kubeflow, où, à
   partir du menu Pipelines, vous pouvez télécharger des pipelines, visualiser
-  les pipelines que vous possédez et leurs résultats, etc.</p>
-</li>
-<li>
-<p>de la trousse <a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a>
+  les pipelines que vous possédez et leurs résultats, etc.</li>
+</ul>
+<ul>
+<li>de la trousse <a href="https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/">SDK</a>
   en Python de Kubeflow Pipelines, accessible dans les serveurs de bloc-notes
   Jupyter, où vous pouvez définir vos composants et pipelines, les soumettre
-  pour les exécuter immédiatement, ou même les enregistrer pour plus tard.</p>
-</li>
+  pour les exécuter immédiatement, ou même les enregistrer pour plus tard.</li>
 </ul>
 <!-- prettier-ignore -->
 
@@ -668,28 +652,48 @@ exemple :</p>
 </ol>
 <!-- prettier-ignore -->
 
-<details class="example"><summary>Exemple d'un pipeline</summary><p>Voici un exemple :</p>
-<p>```python</p>
-<h2 id="binpython3">!/bin/python3</h2>
-<p>dsl.pipeline(name="Estimer Pi",
-    description="Estimer Pi au moyen d'un modèle Map-Reduce")
-def compute_pi():
-    # Créer un "exemple" d'opération pour chaque valeur de départ transmise au pipeline
-    seeds = (1,2,3,4,5,6,7,8,9,10) sample_ops = [sample_op(seed) for seed in seeds]</p>
-<div class="codehilite"><pre><span></span><code><span class="o">#</span> <span class="n">Obtenir</span> <span class="n">les</span> <span class="n">résultats</span> <span class="n">avant</span> <span class="n">de</span> <span class="n">les</span> <span class="n">transmettre</span> <span class="err">à</span> <span class="n">deux</span> <span class="n">pipelines</span> <span class="n">distincts</span>
-<span class="o">#</span> <span class="n">Les</span> <span class="n">résultats</span> <span class="n">sont</span> <span class="n">extraits</span> <span class="n">des</span> <span class="n">fichiers</span> <span class="n">output_file</span><span class="p">.</span><span class="n">json</span> <span class="n">et</span>
-<span class="o">#</span> <span class="n">sont</span> <span class="n">disponibles</span> <span class="err">à</span> <span class="n">partir</span> <span class="n">des</span> <span class="n">instances</span> <span class="n">sample_op</span> <span class="n">par</span> <span class="n">l</span><span class="s1">&#39;entremise de l&#39;</span><span class="n">attribut</span> <span class="p">.</span><span class="n">outputs</span>
-<span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="k">in</span> <span class="n">sample_ops</span><span class="p">]</span>
+<div class="admonition example">
+<p class="admonition-title">Exemple d'un pipeline</p>
+<p>Voici un exemple :</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/python3</span>
+<span class="n">dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Estimer Pi&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Estimer Pi au moyen d&#39;un modèle Map-Reduce&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">compute_pi</span><span class="p">():</span>
+    <span class="c1"># Créer un &quot;exemple&quot; d&#39;opération pour chaque valeur de départ</span>
+    <span class="c1"># transmise au pipeline</span>
+    <span class="n">seeds</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">sample_ops</span> <span class="o">=</span> <span class="p">[</span><span class="n">sample_op</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span> <span class="k">for</span> <span class="n">seed</span> <span class="ow">in</span> <span class="n">seeds</span><span class="p">]</span>
 
-<span class="n">_generate_plot_op</span> <span class="o">=</span> <span class="n">generate_plot_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
-<span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+    <span class="c1"># Obtenir les résultats avant de les transmettre à deux pipelines</span>
+    <span class="c1"># distincts. Les résultats sont extraits des fichiers</span>
+    <span class="c1"># `output_file.json` et sont disponibles à partir des instances</span>
+    <span class="c1"># `sample_op` par l&#39;entremise de l&#39;attribut `.outputs`.</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="s1">&#39;output&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sample_ops</span><span class="p">]</span>
+
+    <span class="n">_generate_plot_op</span> <span class="o">=</span> <span class="n">generate_plot_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+    <span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
 </code></pre></div>
+</td></tr></table>
 
-
-<p>```</p>
 <p>Vous pouvez trouver le pipeline complet dans
 <a href="https://github.com/StatCan/jupyter-notebooks">l'exemple <code>map-reduce-pipeline</code></a>.</p>
-</details>
+</div>
 <h2 id="definir-et-executer-votre-premier-pipeline">Définir et exécuter votre premier pipeline</h2>
 <p>Bien que les <em>pipelines</em> et les <em>composants</em> soient définis par des fichiers
 YAML, la trousse
