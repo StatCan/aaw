@@ -1,0 +1,29 @@
+name: Check
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+      - name: Admonitions
+        run: |
+          if grep -IoPrz --exclude='*.png' \
+              '(?<!<!-- prettier-ignore -->)\n(?:\?\?\?|!!!).*?(?:\n|$)' \
+              docs/; then
+            echo
+            echo 'Above admonitions need <!-- prettier-ignore -->.'
+            exit 1
+          fi
+
+          if grep -IoPrz --exclude='*.png' \
+              '(?<=^|\n)(?:\?\?\?|!!!).*?\n(?!    ).*?(?:\n|$)' \
+              docs/; then
+            echo
+            echo 'Above admonitions are malformed.'
+            exit 1
+          fi
+      - name: Formatting
+        run: npx prettier -c .
