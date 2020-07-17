@@ -13,7 +13,8 @@ can share the scope of who you're sharing with **No one** v.s. **My Team** v.s.
 
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
-    Buckets are like Network Storage. See the [Storage section](/Storage) section for more discussion of the differences between these two ideas.
+    Buckets are like Network Storage. See the [Storage section](/Storage)
+    section for more discussion of the differences between these two ideas.
 
 The way that **Private** v.s. **Team** based access is configured is with
 **namespaces**. So we start by talking about Kubeflow and Kubeflow namespaces.
