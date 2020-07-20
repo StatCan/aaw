@@ -25,5 +25,13 @@ jobs:
             echo 'Above admonitions are malformed.'
             exit 1
           fi
-      - name: Formatting
+      - name: Prettier
         run: npx prettier -c .
+      - name: Spelling (en)
+        run: |
+          npx git://github.com/brendangadd/node-markdown-spellcheck.git#8eec3bc973e355a1ce84e54841171910f98a8419 \
+            -trax --en-gb docs/en/*.md docs/en/**/*.md
+      - name: Spelling (fr)
+        run: |
+          npx git://github.com/brendangadd/node-markdown-spellcheck.git#8eec3bc973e355a1ce84e54841171910f98a8419 \
+            -trax --fr-fr docs/fr/*.md docs/fr/**/*.md
