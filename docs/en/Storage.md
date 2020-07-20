@@ -60,17 +60,17 @@ We have four available types of bucket storage.
 In any of the three self-serve options, you can create a personal bucket. To log
 in, simply use the **OpenID** option seen below.
 
-![Minio sign-in view, indicating the OpenID option](images/minio_self_serve_login.png)
+![MinIO sign-in view, indicating the OpenID option](images/minio_self_serve_login.png)
 
 Once you are logged in, you are allowed to create a personal bucket with the
 format `firstname-lastname`.
 
-![Minio browser with personal bucket using first name, last name format (hyphenated)](images/minio_self_serve_bucket.png)
+![MinIO browser with personal bucket using first name, last name format (hyphenated)](images/minio_self_serve_bucket.png)
 
 <!-- prettier-ignore -->
-!!! failure "Cannot yet share files from Minio with OpenID"
+!!! failure "Cannot yet share files from MinIO with OpenID"
     Due to
-    [an upstream bug in Minio](https://github.com/minio/minio/issues/8935) you
+    [an upstream bug in MinIO](https://github.com/minio/minio/issues/8935) you
     cannot share files yet. This will hopefully be resolved soon. In the
     meantime, it **does** work if you use your access key and secret key, which
     you can get from Kubeflow.
@@ -81,7 +81,7 @@ You can easily share individual files. Just use the "share" option for a
 specific file and you will be provided a link that you can send to a
 collaborator!
 
-![Minio browser with a shareable link to a file](images/minio_self_serve_share.png)
+![MinIO browser with a shareable link to a file](images/minio_self_serve_share.png)
 
 ## Programmatic Access
 
@@ -134,9 +134,9 @@ mc mb minio-minimal/shared/${FULLNAME}
 mc cp test.txt minio-minimal/${FULLNAME}/test.txt
 ```
 
-Now open
-[minimal-tenant1-minio.covid.cloud.statcan.ca](https://minimal-tenant1-minio.covid.cloud.statcan.ca),
-you will see your test file there!
+Now open the
+[MinIO browser](https://minimal-tenant1-minio.covid.cloud.statcan.ca) and you
+will see your test file there!
 
 You can use `mc` to copy files to/from the bucket. It is very fast. You can also
 use `mc --help` to see what other options you have, like

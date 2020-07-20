@@ -59,8 +59,8 @@ At their core, each _component_ has:
 A _pipeline_ then, using the above _components_, defines the logic for how
 _components_ are connected, such as:
 
-1. run ComponentA
-2. pass the output from ComponentA to ComponentB and ComponentC
+1. Run `ComponentA`
+2. Pass the output from `ComponentA` to `ComponentB` and `ComponentC`
 3. ...
 
 <!-- prettier-ignore -->
@@ -113,11 +113,11 @@ that:
   container
 
 To tell Kubeflow Pipelines how to use this image, we define our average
-_component_ through a ContainerOp which tells Kubeflow our image's API. The
-ContainerOp instance sets the docker image location, how to pass arguments to
+_component_ through a `ContainerOp` which tells Kubeflow our image's API. The
+`ContainerOp` instance sets the docker image location, how to pass arguments to
 it, and what outputs to pull from the container. To actually use these
-ContainerOp's in our pipeline, we build factory functions like `average_op` (as
-we'll probably want more than just one average _component_).
+`ContainerOp`'s in our pipeline, we build factory functions like `average_op`
+(as we'll probably want more than just one average _component_).
 
 ```python
 from kfp import dsl
@@ -146,8 +146,8 @@ def average_op(*numbers):
     )
 ```
 
-We define our pipeline as a python function that uses our above ComponentOp
-factories, decorated by the @dsl.pipeline decorator. Our pipeline uses our
+We define our pipeline as a python function that uses our above `ComponentOp`
+factories, decorated by the `@dsl.pipeline` decorator. Our pipeline uses our
 _average_ component by passing it numbers, and we use the _average_ results by
 passing them to later functions through accessing `avg_*.output`.
 
