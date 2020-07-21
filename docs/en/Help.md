@@ -17,3 +17,10 @@ After you have joined our Slack community, go and check out the following tutori
 
 - [Platform official](https://www.youtube.com/playlist?list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD)
 - [Community driven content](https://www.youtube.com/playlist?list=PL1zlA2D7AHuhP0lKbcaD_0KEYUqs1Qrgj)
+
+
+# Github
+
+Want to know even more about our platform? Find everything about it on our github page.
+
+- https://github.com/statcan/daaas
