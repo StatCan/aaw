@@ -11,7 +11,7 @@ les calculs fournis par Kubernetes.
 Dans le contexte de l'espace de travail en analytique avancée, vous pouvez
 interagir avec les pipelines Kubeflow par l'entremise :
 
-- de [l'interface utilisateur](../1-Experiments/Kubeflow.md) de Kubeflow, où, à
+- de [l'interface utilisateur](../1-Experiences/Kubeflow.md) de Kubeflow, où, à
   partir du menu Pipelines, vous pouvez télécharger des pipelines, visualiser
   les pipelines que vous possédez et leurs résultats, etc.
 
@@ -25,8 +25,8 @@ interagir avec les pipelines Kubeflow par l'entremise :
     Des exemples plus exhaustifs de pipelines produits expressément pour cette
     plateforme sont accessibles dans
     [GitHub](https://github.com/StatCan/jupyter-notebooks) (et dans chaque
-    serveur de bloc-notes à /jupyter-notebooks). Vous pouvez également consulter
-    des sources publiques.
+    serveur de bloc-notes à `/jupyter-notebooks`). Vous pouvez également
+    consulter des sources publiques.
 
 Voyez
 [le documentation officiel de Kubeflow](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/)
@@ -60,8 +60,8 @@ Essentiellement, chaque _composant_ a :
 Un _pipeline_ définit ensuite la logique de connexion des composants, par
 exemple :
 
-1. exécuter ComposantA
-2. transmettre le résultat du ComposantA au ComposantB et au ComposantC
+1. Exécuter `ComposantA`
+2. transmettre le résultat du `ComposantA` au `ComposantB` et au `ComposantC`
 3. ...
 
 <!-- prettier-ignore -->
@@ -113,16 +113,16 @@ Le composant moyen est défini par une image de menu fixe au moyen d'un script
 Python qui :
 
 - accepte un ou plusieurs nombres comme arguments de ligne de commande
-- renvoie la moyenne de ces nombres, enregistrée dans le fichier out.txt dans
+- renvoie la moyenne de ces nombres, enregistrée dans le fichier `out.txt` dans
   son conteneur.
 
 Pour indiquer à Kubeflow Pipelines comment utiliser cette image, nous
-définissons notre _composant_ moyen par l'entremise d'un ContainerOp, qui
-indique à Kubeflow l'interface API de notre image. L'instance ContainerOp
+définissons notre _composant_ moyen par l'entremise d'un `ContainerOp`, qui
+indique à Kubeflow l'interface API de notre image. L'instance `ContainerOp`
 définit l'emplacement de l'image du menu fixe, la façon de lui transmettre des
 arguments et les résultats à extraire du conteneur. Pour utiliser réellement ces
-ContainerOp dans notre pipeline, nous créons des fonctions de fabrique comme
-average*op (car nous voudrons probablement plus d'un \_composant* moyen).
+`ContainerOp` dans notre pipeline, nous créons des fonctions de fabrique comme
+`average_op` (car nous voudrons probablement plus d'un _composant_ moyen).
 
 ```python
 from kfp import dsl
@@ -147,17 +147,17 @@ def average_op(\*numbers):
     return dsl.ContainerOp(
         name="averge", # Élément affiché dans la visionneuse de pipeline
         image="k8scc01covidacr.azurecr.io/kfp-components/average:v1", # L'image
-        exécutée par Kuberflow Pipelines pour faire le travail arguments=numbers,
+        exécutée par Kubeflow Pipelines pour faire le travail arguments=numbers,
         #transmet chaque nombre comme un argument de ligne de commande (chaîne) distinct
         # Le script à l'intérieur du conteneur enregistre le résultat (sous forme de chaîne de caractères) dans le fichier out.txt, que
-        # Kuberflow Pipelines lit pour nous et récupère sous forme de chaîne.
+        # Kubeflow Pipelines lit pour nous et récupère sous forme de chaîne.
         file_outputs={'data': './out.txt'},
     )
 ```
 
 Nous définissons notre pipeline comme une fonction Python qui utilise les
-fabriques de ComponentOp ci-dessus, décorées par l'élément décoratif
-@dsl.pipeline. Notre pipeline utilise notre composant _moyen_ en lui
+fabriques de `ComponentOp` ci-dessus, décorées par l'élément décoratif
+`@dsl.pipeline`. Notre pipeline utilise notre composant _moyen_ en lui
 transmettant des nombres. Puis, nous utilisons les résultats _moyens_ en les
 transmettant à des fonctions plus tard par l'accès à `avg\_\*.output`.
 
@@ -219,7 +219,7 @@ pl_params = { 'a': 5, 'b': 5, 'c': 8, 'd': 10, 'e': 18, }
 ```
 
 Voici ce qui peut être observé dans
-[l'interface utilisateur](../1-Experiments/Kubeflow.md) de Kubeflow Pipelines :
+[l'interface utilisateur](../1-Experiences/Kubeflow.md) de Kubeflow Pipelines :
 
 ![Expérience Kubeflow Pipelines](../images/kfp_experiment.png)
 

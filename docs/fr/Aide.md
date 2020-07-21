@@ -11,17 +11,17 @@ présents. Vous pouvez poser des questions et soumettre vos commentaires.
 Nous publierons également des avis de mise à jour et d'interruption sur le canal
 Slack.
 
-
 # Vidéos tutoriels
 
-Une fois que vous vous êtes join à notre communauté Slack, prennez le temps de furter nos vidéos tutoriels!
+Une fois que vous vous êtes joint à notre communauté Slack, prenez le temps de
+fureter nos vidéos tutoriels!
 
 - [Vidéos tutoriels officiels](https://www.youtube.com/playlist?list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD)
-- [Démo et contenue provenus de la communautée d'EAA](https://www.youtube.com/playlist?list=PL1zlA2D7AHuhP0lKbcaD_0KEYUqs1Qrgj)
+- [Démo et contenue provenus de la communauté de l'EAA](https://www.youtube.com/playlist?list=PL1zlA2D7AHuhP0lKbcaD_0KEYUqs1Qrgj)
 
+# GitHub
 
-# Github
+Vous voulez en savoir plus à propos de notre plateforme? Trouvez tous les
+détailles sur notre page GitHub!
 
-Vous voulez en savoir plus à propos de notre plateforme? Trouvez tous les détailles sr notre page Github!
-
-- https://github.com/statcan/daaas
+- [Page GitHub de l'Espace d'analyse avancée de la COVID-19](https://github.com/statcan/daaas)
