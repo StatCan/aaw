@@ -6,10 +6,10 @@
     or creating a new one. You probably want to reuse your old volume.
 
 <!-- prettier-ignore -->
-??? failure "Why am I getting "Missing url parameter: code"?"
-    If you try to log into kubeflow and you get the message
+??? failure "Why am I getting `Missing url parameter: code`?"
+    If you try to log into Kubeflow and you get the message
 
-    > Missing url parameter: code
+    > `Missing url parameter: code`
 
     It is because you are signed in with the wrong Azure account. You must sign
     in with your cloud credentials.

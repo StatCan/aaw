@@ -1,0 +1,37 @@
+name: Check
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+      - name: Admonitions
+        run: |
+          if grep -IoPrz --exclude='*.png' \
+              '(?<!<!-- prettier-ignore -->)\n(?:\?\?\?|!!!).*?(?:\n|$)' \
+              docs/; then
+            echo
+            echo 'Above admonitions need <!-- prettier-ignore -->.'
+            exit 1
+          fi
+
+          if grep -IoPrz --exclude='*.png' \
+              '(?<=^|\n)(?:\?\?\?|!!!).*?\n(?!    ).*?(?:\n|$)' \
+              docs/; then
+            echo
+            echo 'Above admonitions are malformed.'
+            exit 1
+          fi
+      - name: Prettier
+        run: npx prettier -c .
+      - name: Spelling (en)
+        run: |
+          npx git://github.com/brendangadd/node-markdown-spellcheck.git#8eec3bc973e355a1ce84e54841171910f98a8419 \
+            -trax --en-gb docs/en/*.md docs/en/**/*.md
+      - name: Spelling (fr)
+        run: |
+          npx git://github.com/brendangadd/node-markdown-spellcheck.git#8eec3bc973e355a1ce84e54841171910f98a8419 \
+            -trax --fr-fr docs/fr/*.md docs/fr/**/*.md
