@@ -9,3 +9,9 @@ channel. You can ask questions and provide feedback there.
 - [Slack (en)](https://statcan-aaw.slack.com)
 
 We will also post notices there if there are updates or downtime.
+
+
+After you have joined our Slack community, go and check out the following tutorials
+
+Platform official: https://www.youtube.com/playlist?list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD
+Community driven content: https://www.youtube.com/playlist?list=PL1zlA2D7AHuhP0lKbcaD_0KEYUqs1Qrgj
