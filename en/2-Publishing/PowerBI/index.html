@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loading-data-into-powerbi" class="md-skip">
+        <a href="#loading-data-into-power-bi" class="md-skip">
           Skip to content
         </a>
       
@@ -362,11 +362,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#loading-data-into-powerbi" class="md-nav__link">
-    Loading data into PowerBI
+  <a href="#loading-data-into-power-bi" class="md-nav__link">
+    Loading data into Power BI
   </a>
   
-    <nav class="md-nav" aria-label="Loading data into PowerBI">
+    <nav class="md-nav" aria-label="Loading data into Power BI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -385,8 +385,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-up-powerbi" class="md-nav__link">
-    Set up PowerBI
+  <a href="#set-up-power-bi" class="md-nav__link">
+    Set up Power BI
   </a>
   
 </li>
@@ -546,11 +546,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#loading-data-into-powerbi" class="md-nav__link">
-    Loading data into PowerBI
+  <a href="#loading-data-into-power-bi" class="md-nav__link">
+    Loading data into Power BI
   </a>
   
-    <nav class="md-nav" aria-label="Loading data into PowerBI">
+    <nav class="md-nav" aria-label="Loading data into Power BI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -569,8 +569,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-up-powerbi" class="md-nav__link">
-    Set up PowerBI
+  <a href="#set-up-power-bi" class="md-nav__link">
+    Set up Power BI
   </a>
   
 </li>
@@ -614,29 +614,29 @@
                 
                   <h1>PowerBI</h1>
                 
-                <h2 id="loading-data-into-powerbi">Loading data into PowerBI</h2>
-<p>We do not offer a PowerBI server, but you can pull your data into PowerBI from
-our Storage system, and use the data as a <code>pandas</code> dataframe.</p>
-<p><img alt="PowerBI Dashboard" src="../../images/powerbi_dashboard.png" /></p>
+                <h2 id="loading-data-into-power-bi">Loading data into Power BI</h2>
+<p>We do not offer a Power BI server, but you can pull your data into Power BI from
+our Storage system, and use the data as a <code>pandas</code> data frame.</p>
+<p><img alt="Power BI Dashboard" src="../../images/powerbi_dashboard.png" /></p>
 <h3 id="what-youll-need">What you'll need</h3>
 <ol>
-<li>A computer with PowerBI, and Python3.6</li>
-<li>Your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See
+<li>A computer with Power BI, and Python 3.6</li>
+<li>Your MinIO <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See
    <a href="/daaas/en/Storage">Storage</a>)</li>
 </ol>
 <h3 id="get-connected">Get connected</h3>
-<h4 id="set-up-powerbi">Set up PowerBI</h4>
-<p>Open up your PowerBI system, and open up this
-<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">PowerBI quickstart</a>
-in your favorite text editor.</p>
+<h4 id="set-up-power-bi">Set up Power BI</h4>
+<p>Open up your Power BI system, and open up this
+<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">Power BI quick start</a>
+in your favourite text editor.</p>
 <p>You'll have to make sure that <code>pandas</code>, <code>boto3</code>, and <code>numpy</code> are installed, and
-that you're using the right Conda Virtual Env (if applicable)</p>
+that you're using the right Conda virtual environment (if applicable).</p>
 <p><img alt="Install the dependencies" src="../../images/powerbi_cmd_prompt.png" /></p>
-<p>You'll then need to make sure that PowerBI is using the correct Python
+<p>You'll then need to make sure that Power BI is using the correct Python
 environment. This is modified from the options menu, and the exact path is
-specified in the quickstart guide.</p>
+specified in the quick start guide.</p>
 <h4 id="edit-your-python-script">Edit your python script</h4>
-<p>Then, edit your Python script to use your Minio <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>,
+<p>Then, edit your Python script to use your MinIO <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>,
 and then click "Get Data" and copy it in as a Python Script.</p>
 <p><img alt="Run your Python Script" src="../../images/powerbi_python.png" /></p>
                 

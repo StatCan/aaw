@@ -707,25 +707,25 @@ for your team.</p>
 <h2 id="create-a-server">Create a Server</h2>
 <h3 id="log-into-kubeflow">Log into Kubeflow</h3>
 <ul>
-<li>Log into <a href="https://portal.azure.com">the azure portal</a> <strong>using your
-  cloud.statcan credentials</strong>.</li>
+<li>Log into <a href="https://portal.azure.com">the Azure portal</a> <strong>using your
+  <code>cloud.statcan.ca</code> credentials</strong>.</li>
 </ul>
 <!-- prettier-ignore -->
 
-<details class="warning"><summary>Log into the Azure Portal using your Cloud Credentials</summary><p>You have to login to the azure portal <strong>using your statcan credentials</strong>.
+<details class="warning"><summary>Log into the Azure Portal using your Cloud Credentials</summary><p>You have to login to the azure portal <strong>using your StatCan credentials</strong>.
 <code>first.lastname@cloud.statcan.ca</code>. You can do that using
-<a href="https://portal.azure.com">the azure portal</a>.
+<a href="https://portal.azure.com">the Azure portal</a>.
 <img alt="Azure Portal: Choose the @cloud.statcan.ca address" src="../../images/azure-login.png" /></p>
 </details>
 <ul>
 <li>After logging into Azure, log into
-  <a href="https://kubeflow.covid.cloud.statcan.ca">kubeflow</a></li>
+  <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
 </ul>
 <!-- prettier-ignore -->
 
-<details class="failure"><summary>Why am I getting "Missing url parameter: code"?</summary><p>If you try to log into kubeflow and you get the message:</p>
+<details class="failure"><summary>Why am I getting <code>Missing url parameter: code</code>?</summary><p>If you try to log into Kubeflow and you get the message:</p>
 <blockquote>
-<p>Missing url parameter: code</p>
+<p><code>Missing url parameter: code</code></p>
 </blockquote>
 <p>It is because you are signed in with the wrong Azure account. You must sign
 in with your cloud credentials.</p>
@@ -741,7 +741,7 @@ in with your cloud credentials.</p>
 <h3 id="configuring-your-server">Configuring your server</h3>
 <ul>
 <li>You will get a template to create your notebook server. <strong>Note:</strong> the name
-  must be lowercase letters with hypens. <strong>No spaces, and no underscores.</strong></li>
+  must be lowercase letters with hyphens. <strong>No spaces, and no underscores.</strong></li>
 </ul>
 <ul>
 <li>
@@ -755,7 +755,7 @@ in with your cloud credentials.</p>
 </ul>
 <p><img alt="Choose an Image" src="../../images/kubeflow_choose_an_image.png" /></p>
 <ul>
-<li>If you want to use a gpu, check if the image says <strong>cpu</strong> or <strong>gpu</strong>.</li>
+<li>If you want to use a GPU, check if the image says <code>cpu</code> or <code>gpu</code>.</li>
 </ul>
 <h3 id="cpu-and-memory">CPU and Memory</h3>
 <ul>
@@ -763,8 +763,8 @@ in with your cloud credentials.</p>
 <p>At the time of writing (April 21, 2020) there are two types of computers in
   the cluster</p>
 <ul>
-<li><strong>CPU:</strong> D16s v3 <code>(16 vcpus, 64 GiB memory)</code></li>
-<li><strong>GPU:</strong> NC6s_v3 <code>(6 vcpus, 112 GiB memory, ? GPUs)</code></li>
+<li><strong>CPU:</strong> <code>D16s v3</code> (16 CPU cores, 64 GiB memory)</li>
+<li><strong>GPU:</strong> <code>NC6s_v3</code> (6 CPU cores, 112 GiB memory, 1 GPU)</li>
 </ul>
 <p>Because of this, if you request too much RAM or too many CPUs, it may be hard
 or impossible to satisfy your request.</p>
@@ -807,15 +807,15 @@ or creating a new one. You probably want to reuse your old volume.</p>
 option to connect, and <a href="/daaas/en/1-Experiments/Jupyter">try out Jupyter!</a></p>
 </div>
 <h2 id="share-your-workspace">Share your workspace</h2>
-<p>In kubeflow every user has a <strong>namespace</strong>. Your namespace belongs to you, and
+<p>In Kubeflow every user has a <strong>namespace</strong>. Your namespace belongs to you, and
 it's where all your resources live. If you want to collaborate with someone you
 need to share a namespace. So you can do that either by sharing your own
 namespace, or more preferably, <strong>by creating a team namespace</strong>.</p>
 <p>The link to create a new namespace is in the <strong>&#8942;</strong> menu on
-<a href="https://portal.covid.cloud.statcan.ca/#kubeflow">the kubeflow section of the portal</a>.</p>
+<a href="https://portal.covid.cloud.statcan.ca/#kubeflow">the Kubeflow section of the portal</a>.</p>
 <h3 id="manage-contributors">Manage contributors</h3>
 <p>You can add or remove people from a namespace you already own through the
-<strong>Manage Contributors</strong> menu in kubeflow.</p>
+<strong>Manage Contributors</strong> menu in Kubeflow.</p>
 <p><img alt="Contributors Menu" src="../../images/kubeflow_contributors.png" /></p>
 <!-- prettier-ignore -->
 

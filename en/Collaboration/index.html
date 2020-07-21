@@ -493,7 +493,7 @@
         
           <li class="md-nav__item">
   <a href="#share-with-git-using-gitlab-or-github" class="md-nav__link">
-    Share with git, using Gitlab or Github
+    Share with git, using GitLab or GitHub
   </a>
   
 </li>
@@ -527,7 +527,7 @@
         
           <li class="md-nav__item">
   <a href="#sharing-with-statcan" class="md-nav__link">
-    Sharing with Statcan
+    Sharing with StatCan
   </a>
   
 </li>
@@ -649,7 +649,7 @@
         
           <li class="md-nav__item">
   <a href="#share-with-git-using-gitlab-or-github" class="md-nav__link">
-    Share with git, using Gitlab or Github
+    Share with git, using GitLab or GitHub
   </a>
   
 </li>
@@ -683,7 +683,7 @@
         
           <li class="md-nav__item">
   <a href="#sharing-with-statcan" class="md-nav__link">
-    Sharing with Statcan
+    Sharing with StatCan
   </a>
   
 </li>
@@ -725,8 +725,8 @@
                 <h2 id="collaboration-on-the-advanced-analytics-workspace">Collaboration on the Advanced Analytics Workspace</h2>
 <p>There are lots of ways to collaborate on the platform, and what's best for you
 depends on <em>what you're sharing</em> and <em>how many people you want to share with</em>.
-We can roughly break the <em>sharable things</em> into <strong>Data</strong> and <strong>Code</strong>, and we
-can share the scope of who you're sharing with <strong>No one</strong> v.s. <strong>My Team</strong> v.s.
+We can roughly break the <em>shareable things</em> into <strong>Data</strong> and <strong>Code</strong>, and we
+can share the scope of who you're sharing with <strong>No one</strong> vs. <strong>My Team</strong> vs.
 <strong>Everyone</strong>. This leads to the following table of options</p>
 <table>
 <thead>
@@ -734,21 +734,21 @@ can share the scope of who you're sharing with <strong>No one</strong> v.s. <str
 <th align="center"></th>
 <th align="center"><strong>Private</strong></th>
 <th align="center"><strong>Team</strong></th>
-<th align="center"><strong>Statcan</strong></th>
+<th align="center"><strong>StatCan</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center"><strong>Code</strong></td>
-<td align="center">Gitlab/Github or personal folder</td>
-<td align="center">Gitlab/Github or team folder</td>
-<td align="center">Gitlab/Github</td>
+<td align="center">GitLab/GitHub or personal folder</td>
+<td align="center">GitLab/GitHub or team folder</td>
+<td align="center">GitLab/GitHub</td>
 </tr>
 <tr>
 <td align="center"><strong>Data</strong></td>
-<td align="center">personal folder or bucket</td>
-<td align="center">team folder or bucket</td>
-<td align="center">shared Bucket</td>
+<td align="center">Personal folder or bucket</td>
+<td align="center">Team folder or bucket</td>
+<td align="center">Shared Bucket</td>
 </tr>
 </tbody>
 </table>
@@ -757,11 +757,11 @@ can share the scope of who you're sharing with <strong>No one</strong> v.s. <str
 <details class="question"><summary>What is the difference between a bucket and a folder?</summary><p>Buckets are like Network Storage. See the <a href="/Storage">Storage section</a>
 section for more discussion of the differences between these two ideas.</p>
 </details>
-<p>The way that <strong>Private</strong> v.s. <strong>Team</strong> based access is configured is with
+<p>The way that <strong>Private</strong> vs. <strong>Team</strong> based access is configured is with
 <strong>namespaces</strong>. So we start by talking about Kubeflow and Kubeflow namespaces.</p>
 <p>Then, <strong>Data</strong> and <strong>Code</strong> are better handled with slightly different tools, so
-we discuss the two seperately. With Data we discuss <strong>buckets and Minio</strong>, and
-with Code we discuss <strong>git</strong>, <strong>Gitlab</strong>, and <strong>Github</strong>.</p>
+we discuss the two separately. With Data we discuss <strong>buckets and MinIO</strong>, and
+with Code we discuss <strong>git</strong>, <strong>GitLab</strong>, and <strong>GitHub</strong>.</p>
 <p>This motivates the structure of this page</p>
 <ul>
 <li>Team Based Collaboration (applicable to Code and Data)</li>
@@ -778,19 +778,19 @@ side you.</p>
 <p>By default, everyone gets their own <em>personal</em> namespace, <code>firstname-lastname</code>.
 But if you want to create a namespace for a team, then there is a button to
 submit a request for a namespace on the portal. <strong>Click the &#8942; menu on
-<a href="https://portal.covid.cloud.statcan.ca/#kubeflow">the kubeflow section of the portal</a></strong>.</p>
+<a href="https://portal.covid.cloud.statcan.ca/#kubeflow">the Kubeflow section of the portal</a></strong>.</p>
 <!-- prettier-ignore -->
 
 <div class="admonition warning">
-<p class="admonition-title">The namespace cannot have special characters other than hypens</p>
+<p class="admonition-title">The namespace cannot have special characters other than hyphens</p>
 <p>The namespace name must only be lowercase letters <code>a-z</code> with dashes. Otherwise,
 the namespace will not be created.</p>
 </div>
 <p><strong>You will receive an email notification when the namespace is created.</strong> Once
 the shared namespace is created, you can access it the same as any other
 namespace you have through the Kubeflow UI, like shown below. You will then be
-able to manage the collaborators list through the kubeflow <strong>Manage
-Contributors</strong> tab, where you can add your colleagues to the shared namespace.</p>
+able to manage the collaborators list through Kubeflow's <strong>Manage Contributors</strong>
+tab, where you can add your colleagues to the shared namespace.</p>
 <p><img alt="Contributors Menu" src="/images/kubeflow_contributors.png" /></p>
 <p>To switch namespaces, take a look at the top of your window, just to the right
 of the Kubeflow Logo.</p>
@@ -799,14 +799,14 @@ of the Kubeflow Logo.</p>
 <p>Teams have two options (but you can combine both!):</p>
 <h3 id="share-a-workspace-in-kubeflow">Share a workspace in Kubeflow</h3>
 <p>The advantage of sharing inside Kubeflow is that it's more free-form and it
-works better for <code>.ipynb</code> files (IPython Notebooks/Jupyter Notebooks). This
-method also lets you share a compute environment, so you can share resources
-very easily. When you share a workspace, you share</p>
+works better for <code>.ipynb</code> files (Jupyter notebooks). This method also lets you
+share a compute environment, so you can share resources very easily. When you
+share a workspace, you share</p>
 <ul>
 <li>A Private and Shared bucket (<code>/team-name</code> and <code>/shared/team-name</code>)</li>
 <li>All notebook servers in the Kubeflow Namespace</li>
 </ul>
-<h3 id="share-with-git-using-gitlab-or-github">Share with git, using Gitlab or Github</h3>
+<h3 id="share-with-git-using-gitlab-or-github">Share with git, using GitLab or GitHub</h3>
 <p>The advantage of sharing with git is that it works with users across namespaces,
 and keeping code in git is a great way to manage large software projects.</p>
 <!-- prettier-ignore -->
@@ -819,7 +819,7 @@ Canada.</p>
 </div>
 <h3 id="recommendation-combine-both">Recommendation: Combine both</h3>
 <p>It's a great idea to always use git, and using git along with shared workspaces
-is a great way to combine ad-hoc sharing (through files) while also keeping your
+is a great way to combine ad hoc sharing (through files) while also keeping your
 code organized and tracked.</p>
 <h2 id="shared-storage">Shared Storage</h2>
 <h3 id="sharing-with-your-team">Sharing with your team</h3>
@@ -844,7 +844,7 @@ code organized and tracked.</p>
 </table>
 <p>To learn more about the technology behind these, check out the
 <a href="/Storage">Storage section</a>.</p>
-<h3 id="sharing-with-statcan">Sharing with Statcan</h3>
+<h3 id="sharing-with-statcan">Sharing with StatCan</h3>
 <p>In addition to private buckets, or team-shared private buckets, you can also
 place your files in <em>shared storage</em>. Within all bucket storage options
 (<code>minimal</code>, <code>premium</code>, <code>pachyderm</code>), you have a private bucket, <strong>and</strong> a folder

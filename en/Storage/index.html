@@ -734,16 +734,16 @@ a team, your whole team can use the same server's disk just like a shared drive.
 <h3 id="self-serve">Self-Serve</h3>
 <p>In any of the three self-serve options, you can create a personal bucket. To log
 in, simply use the <strong>OpenID</strong> option seen below.</p>
-<p><img alt="Minio sign-in view, indicating the OpenID option" src="../images/minio_self_serve_login.png" /></p>
+<p><img alt="MinIO sign-in view, indicating the OpenID option" src="../images/minio_self_serve_login.png" /></p>
 <p>Once you are logged in, you are allowed to create a personal bucket with the
 format <code>firstname-lastname</code>.</p>
-<p><img alt="Minio browser with personal bucket using first name, last name format (hyphenated)" src="../images/minio_self_serve_bucket.png" /></p>
+<p><img alt="MinIO browser with personal bucket using first name, last name format (hyphenated)" src="../images/minio_self_serve_bucket.png" /></p>
 <!-- prettier-ignore -->
 
 <div class="admonition failure">
-<p class="admonition-title">Cannot yet share files from Minio with OpenID</p>
+<p class="admonition-title">Cannot yet share files from MinIO with OpenID</p>
 <p>Due to
-<a href="https://github.com/minio/minio/issues/8935">an upstream bug in Minio</a> you
+<a href="https://github.com/minio/minio/issues/8935">an upstream bug in MinIO</a> you
 cannot share files yet. This will hopefully be resolved soon. In the
 meantime, it <strong>does</strong> work if you use your access key and secret key, which
 you can get from Kubeflow.</p>
@@ -752,7 +752,7 @@ you can get from Kubeflow.</p>
 <p>You can easily share individual files. Just use the "share" option for a
 specific file and you will be provided a link that you can send to a
 collaborator!</p>
-<p><img alt="Minio browser with a shareable link to a file" src="../images/minio_self_serve_share.png" /></p>
+<p><img alt="MinIO browser with a shareable link to a file" src="../images/minio_self_serve_share.png" /></p>
 <h3 id="programmatic-access">Programmatic Access</h3>
 <p>We are currently working on letting you access your bucket storage via a folder
 in your notebook, but in the meantime you can access it programmatically with
@@ -804,9 +804,9 @@ mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">FULLNAME
 </code></pre></div>
 
 
-<p>Now open
-<a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">minimal-tenant1-minio.covid.cloud.statcan.ca</a>,
-you will see your test file there!</p>
+<p>Now open the
+<a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">MinIO browser</a> and you
+will see your test file there!</p>
 <p>You can use <code>mc</code> to copy files to/from the bucket. It is very fast. You can also
 use <code>mc --help</code> to see what other options you have, like
 <code>mc ls minio-minimal/FIRSTNAME-LASTNAME/</code> to list the contents of your bucket.</p>

@@ -644,8 +644,8 @@ model). Each <em>component</em> should be <strong>modular</strong>, and ideally 
 <p>A <em>pipeline</em> then, using the above <em>components</em>, defines the logic for how
 <em>components</em> are connected, such as:</p>
 <ol>
-<li>run ComponentA</li>
-<li>pass the output from ComponentA to ComponentB and ComponentC</li>
+<li>Run <code>ComponentA</code></li>
+<li>Pass the output from <code>ComponentA</code> to <code>ComponentB</code> and <code>ComponentC</code></li>
 <li>...</li>
 </ol>
 <!-- prettier-ignore -->
@@ -715,11 +715,11 @@ that:</p>
   container</li>
 </ul>
 <p>To tell Kubeflow Pipelines how to use this image, we define our average
-<em>component</em> through a ContainerOp which tells Kubeflow our image's API. The
-ContainerOp instance sets the docker image location, how to pass arguments to
+<em>component</em> through a <code>ContainerOp</code> which tells Kubeflow our image's API. The
+<code>ContainerOp</code> instance sets the docker image location, how to pass arguments to
 it, and what outputs to pull from the container. To actually use these
-ContainerOp's in our pipeline, we build factory functions like <code>average_op</code> (as
-we'll probably want more than just one average <em>component</em>).</p>
+<code>ContainerOp</code>'s in our pipeline, we build factory functions like <code>average_op</code>
+(as we'll probably want more than just one average <em>component</em>).</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
@@ -747,8 +747,8 @@ we'll probably want more than just one average <em>component</em>).</p>
 </code></pre></div>
 
 
-<p>We define our pipeline as a python function that uses our above ComponentOp
-factories, decorated by the @dsl.pipeline decorator. Our pipeline uses our
+<p>We define our pipeline as a python function that uses our above <code>ComponentOp</code>
+factories, decorated by the <code>@dsl.pipeline</code> decorator. Our pipeline uses our
 <em>average</em> component by passing it numbers, and we use the <em>average</em> results by
 passing them to later functions through accessing <code>avg_*.output</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
