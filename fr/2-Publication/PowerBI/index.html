@@ -19,7 +19,7 @@
     
     
       
-        <title>PowerBI - Espace d'analyse avancée du COVID-19</title>
+        <title>Power BI - Espace d'analyse avancée du COVID-19</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              PowerBI
+              Power BI
             
           </span>
         </div>
@@ -251,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1-Experiences/ML-Workspaces/" title="ML-Workspaces" class="md-nav__link">
+    <a href="../../1-Experiences/Bureau-virtuel/" title="ML-Workspaces" class="md-nav__link">
       ML-Workspaces
     </a>
   </li>
@@ -290,10 +290,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Publication
@@ -327,11 +329,76 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/PowerBI.md" title="PowerBI" class="md-nav__link">
-      PowerBI
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Power BI
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Power BI" class="md-nav__link md-nav__link--active">
+      Power BI
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ce-dont-vous-aurez-besoin" class="md-nav__link">
+    Ce dont vous aurez besoin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectez-vous" class="md-nav__link">
+    Connectez-vous
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectez-vous">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurez-power-bi" class="md-nav__link">
+    Configurez Power BI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiez-votre-script-python" class="md-nav__link">
+    Modifiez votre script Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -385,18 +452,6 @@
   <li class="md-nav__item">
     <a href="../../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../3-Pipelines/Pachyderm/" title="Pachyderm" class="md-nav__link">
-      Pachyderm
     </a>
   </li>
 
@@ -481,8 +536,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configurez-powerbi" class="md-nav__link">
-    Configurez PowerBI
+  <a href="#configurez-power-bi" class="md-nav__link">
+    Configurez Power BI
   </a>
   
 </li>
@@ -519,32 +574,32 @@
                   
                 
                 
-                  <h1>PowerBI</h1>
+                  <h1>Power BI</h1>
                 
-                <p>Nous ne proposons pas de serveur PowerBI, mais vous pouvez extraire vos données
-dans PowerBI à partir de notre système de stockage et les utiliser comme une
+                <p>Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos données
+dans Power BI à partir de notre système de stockage et les utiliser comme une
 fiche de données <code>pandas</code>.</p>
-<p><img alt="Tableau de bord sur PowerBI" src="../../images/powerbi_dashboard.png" /></p>
+<p><img alt="Tableau de bord sur Power BI" src="../../images/powerbi_dashboard.png" /></p>
 <h3 id="ce-dont-vous-aurez-besoin">Ce dont vous aurez besoin</h3>
 <ol>
-<li>Un ordinateur avec PowerBI et Python 3.6</li>
+<li>Un ordinateur avec Power BI et Python 3.6</li>
 <li>Vos <code>ACCESS_KEY</code> et <code>SECRET_KEY</code> MinIO (voir <a href="/daaas/fr/Stockage">Stockage</a>)</li>
 </ol>
 <h3 id="connectez-vous">Connectez-vous</h3>
-<h4 id="configurez-powerbi">Configurez PowerBI</h4>
-<p>Ouvrez votre système PowerBI et ouvrez
-<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">démarrage rapide de PowerBI</a>
+<h4 id="configurez-power-bi">Configurez Power BI</h4>
+<p>Ouvrez votre système Power BI et ouvrez
+<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">démarrage rapide de Power BI</a>
 dans votre éditeur de texte préféré.</p>
 <p>Assurez-vous que <code>pandas</code>, <code>boto3</code> et <code>numpy</code> sont installés et que vous
 utilisez le bon environnement virtuel Conda (le cas échéant).</p>
 <p><img alt="Installez les dépendances" src="../../images/powerbi_cmd_prompt.png" /></p>
-<p>Ensuite, assurez-vous que PowerBI utilise le bon environnement Python. Vous
+<p>Ensuite, assurez-vous que Power BI utilise le bon environnement Python. Vous
 pouvez modifier cet élément à partir du menu des options. Le chemin d'accès
 exact est indiqué dans le guide de démarrage rapide.</p>
 <h4 id="modifiez-votre-script-python">Modifiez votre script Python</h4>
 <p>Ensuite, modifiez votre script Python pour utiliser vos <code>ACCESS_KEY</code> et
-<code>SECRET_KEY</code> MinIO, puis cliquez sur "Get Data" et copiez-le en tant que script
-Python.</p>
+<code>SECRET_KEY</code> MinIO, puis cliquez sur « Obtenir des données » et copiez-le en
+tant que script Python.</p>
 <p><img alt="Exécutez votre script Python." src="../../images/powerbi_python.png" /></p>
                 
               
@@ -560,6 +615,41 @@ Python.</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../R-Shiny/" title="R Shiny" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                R Shiny
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Sur-mesure/" title="Sur mesure" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Sur mesure
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

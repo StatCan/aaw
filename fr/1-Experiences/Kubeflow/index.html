@@ -379,7 +379,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ML-Workspaces/" title="ML-Workspaces" class="md-nav__link">
+    <a href="../Bureau-virtuel/" title="ML-Workspaces" class="md-nav__link">
       ML-Workspaces
     </a>
   </li>
@@ -457,8 +457,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publishing/PowerBI.md" title="PowerBI" class="md-nav__link">
-      PowerBI
+    <a href="../../2-Publication/PowerBI/" title="Power BI" class="md-nav__link">
+      Power BI
     </a>
   </li>
 
@@ -513,18 +513,6 @@
   <li class="md-nav__item">
     <a href="../../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../3-Pipelines/Pachyderm/" title="Pachyderm" class="md-nav__link">
-      Pachyderm
     </a>
   </li>
 
@@ -723,7 +711,7 @@ votre équipe.</p>
 <h3 id="se-connecter-a-kubeflow">Se connecter à Kubeflow</h3>
 <ul>
 <li>Connectez-vous au <a href="https://portal.azure.com">portail Azure</a> <strong>à l'aide de vos
-  justificatifs d'identité cloud.statcan</strong>.</li>
+  justificatifs d'identité <code>@cloud.statcan.ca</code></strong>.</li>
 </ul>
 <!-- prettier-ignore -->
 
@@ -734,18 +722,21 @@ ici <a href="https://portal.azure.com">sur le portail Azure</a>.
 </details>
 <ul>
 <li>Après avoir ouvert une session dans Azure, connectez-vous à
-  <a href="https://kubeflow.covid.cloud.statcan.ca">kubeflow</a></li>
+  <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
 </ul>
 <!-- prettier-ignore -->
 
-<details class="failure"><summary>Pourquoi est-ce que je reçois le message "Paramètre URL manquant : code"?</summary><p>Si vous essayez de vous connecter à Kubeflow et que vous obtenez le message</p>
-<blockquote>
-<p>Paramètre URL manquant : code</p>
-</blockquote>
-<p>c'est parce que vous êtes connecté avec le mauvais compte Azure. Vous devez
-vous connecter avec vos justificatifs d'identité dans le nuage.</p>
-<p><img alt="Cela signifie que vous êtes dans le mauvais compte" src="../../images/missing_parameter_code.png" /></p>
-</details>
+<p>??? failure « Pourquoi est-ce que je reçois le message <code>Paramètre URL manquant : code</code>? »
+    Si vous essayez de vous connecter à Kubeflow et que vous obtenez le message</p>
+<div class="codehilite"><pre><span></span><code><span class="o">&gt;</span> <span class="n">Paramètre</span> <span class="n">URL</span> <span class="n">manquant</span> <span class="p">:</span> <span class="n">code</span>
+
+<span class="k">c</span><span class="s1">&#39;est parce que vous êtes connecté avec le mauvais compte Azure. Vous devez</span>
+<span class="s1">vous connecter avec vos justificatifs d&#39;</span><span class="n">identité</span> <span class="n">dans</span> <span class="n">le</span> <span class="n">nuage</span><span class="p">.</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">Cela</span> <span class="n">signifie</span> <span class="n">que</span> <span class="n">vous</span> <span class="err">ê</span><span class="n">tes</span> <span class="n">dans</span> <span class="n">le</span> <span class="n">mauvais</span> <span class="n">compte</span><span class="p">](..</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">missing_parameter_code</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+</code></pre></div>
+
+
 <ul>
 <li>Allez à l'onglet des serveurs Jupyter</li>
 </ul>
@@ -776,11 +767,11 @@ vous connecter avec vos justificatifs d'identité dans le nuage.</p>
 <ul>
 <li>
 <p>Au moment de la rédaction du présent document (21 avril 2020), il y a deux
-  types d'ordinateurs dans la grappe</p>
+  types d'ordinateurs dans la grappe :</p>
 <ul>
-<li><strong>CPU :</strong> D16s v3 <code>(16 unites centrales virtuelles, memoire vive de 64 Go)</code></li>
-<li><strong>GPU :</strong> NC6s_v3
-  <code>(6 unites centrales virtuelles, memoire vive de 112 Go, 1 cartes graphiques)</code></li>
+<li><strong>CPU :</strong> <code>D16s_v3</code> (16 unités centrales virtuelles, mémoire vive de 64 Go)</li>
+<li><strong>GPU :</strong> <code>NC6s_v3</code> (6 unités centrales virtuelles, mémoire vive de 112 Go,
+  1 carte graphiques)</li>
 </ul>
 <p>Pour cette raison, si vous demandez trop de mémoire vive ou trop de CPU, il
 pourrait être difficile ou impossible de satisfaire votre demande.</p>
@@ -807,7 +798,7 @@ utilisez-les de manière responsable.</p>
 <!-- prettier-ignore -->
 
 <div class="admonition tip">
-<p class="admonition-title">Trouvez des anciens volumes en jetant un coup l'oeil à l'option Existant</p>
+<p class="admonition-title">Trouvez des anciens volumes en jetant un coup d'œil à l'option Existant</p>
 <p>Lorsque vous créez votre serveur, vous avez la possibilité de réutiliser un
 ancien volume ou d'en créer un nouveau. Vous souhaiterez probablement
 réutiliser votre ancien volume.</p>
@@ -835,7 +826,7 @@ espace de noms d'équipe</strong>.</p>
 <h3 id="creer-un-nouvel-espace-de-noms-partage">Créer un nouvel espace de noms partagé</h3>
 <p>Le lien pour créer un nouvel espace de noms est ici :</p>
 <ul>
-<li>à FAIRE, IL N'Y A PAS ENCORE DE LIEN.</li>
+<li>à FAIRE, IL N'Y A PAS ENCORE DE LIEN. <!-- TODO --></li>
 </ul>
 <h3 id="gerer-les-contributeurs">Gérer les contributeurs</h3>
 <p>Vous pouvez ajouter ou supprimer des personnes d'un espace de noms que vous
@@ -847,7 +838,7 @@ possédez à partir du menu <strong>Gérer les contributeurs</strong> dans Kubef
 <p class="admonition-title">Vos collègues et vous pouvez maintenant partager l'accès à un serveur!</p>
 <p>Vous pouvez maintenant partager un serveur avec vos collègues! Essayez-le!</p>
 </div>
-<p><strong>For more details on collaboration on the platform, see
+<p><strong>Pour plus de détails sur la collaboration avec le plateforme, voyez
 <a href="/Collaboration">Collaboration</a>.</strong></p>
                 
               

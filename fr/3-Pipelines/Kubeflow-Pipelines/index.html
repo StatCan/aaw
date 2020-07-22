@@ -251,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../1-Experiences/ML-Workspaces/" title="ML-Workspaces" class="md-nav__link">
+    <a href="../../1-Experiences/Bureau-virtuel/" title="ML-Workspaces" class="md-nav__link">
       ML-Workspaces
     </a>
   </li>
@@ -329,8 +329,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publishing/PowerBI.md" title="PowerBI" class="md-nav__link">
-      PowerBI
+    <a href="../../2-Publication/PowerBI/" title="Power BI" class="md-nav__link">
+      Power BI
     </a>
   </li>
 
@@ -454,18 +454,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Pachyderm/" title="Pachyderm" class="md-nav__link">
-      Pachyderm
-    </a>
   </li>
 
         
@@ -601,7 +589,7 @@ les calculs fournis par Kubernetes.</p>
 <p>Dans le contexte de l'espace de travail en analytique avancée, vous pouvez
 interagir avec les pipelines Kubeflow par l'entremise :</p>
 <ul>
-<li>de <a href="../1-Experiments/Kubeflow.md">l'interface utilisateur</a> de Kubeflow, où, à
+<li>de <a href="../../1-Experiences/Kubeflow/">l'interface utilisateur</a> de Kubeflow, où, à
   partir du menu Pipelines, vous pouvez télécharger des pipelines, visualiser
   les pipelines que vous possédez et leurs résultats, etc.</li>
 </ul>
@@ -616,8 +604,8 @@ interagir avec les pipelines Kubeflow par l'entremise :</p>
 <details class="exemple"><summary>Des exemples supplémentaires dans les bloc-notes</summary><p>Des exemples plus exhaustifs de pipelines produits expressément pour cette
 plateforme sont accessibles dans
 <a href="https://github.com/StatCan/jupyter-notebooks">GitHub</a> (et dans chaque
-serveur de bloc-notes à /jupyter-notebooks). Vous pouvez également consulter
-des sources publiques.</p>
+serveur de bloc-notes à <code>/jupyter-notebooks</code>). Vous pouvez également
+consulter des sources publiques.</p>
 </details>
 <p>Voyez
 <a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">le documentation officiel de Kubeflow</a>
@@ -646,8 +634,8 @@ données, de transformer des données ou d'entraîner un modèle). Chaque
 <p>Un <em>pipeline</em> définit ensuite la logique de connexion des composants, par
 exemple :</p>
 <ol>
-<li>exécuter ComposantA</li>
-<li>transmettre le résultat du ComposantA au ComposantB et au ComposantC</li>
+<li>Exécuter <code>ComposantA</code></li>
+<li>transmettre le résultat du <code>ComposantA</code> au <code>ComposantB</code> et au <code>ComposantC</code></li>
 <li>...</li>
 </ol>
 <!-- prettier-ignore -->
@@ -715,16 +703,16 @@ moyen pour effectuer les calculs.</p>
 Python qui :</p>
 <ul>
 <li>accepte un ou plusieurs nombres comme arguments de ligne de commande</li>
-<li>renvoie la moyenne de ces nombres, enregistrée dans le fichier out.txt dans
+<li>renvoie la moyenne de ces nombres, enregistrée dans le fichier <code>out.txt</code> dans
   son conteneur.</li>
 </ul>
 <p>Pour indiquer à Kubeflow Pipelines comment utiliser cette image, nous
-définissons notre <em>composant</em> moyen par l'entremise d'un ContainerOp, qui
-indique à Kubeflow l'interface API de notre image. L'instance ContainerOp
+définissons notre <em>composant</em> moyen par l'entremise d'un <code>ContainerOp</code>, qui
+indique à Kubeflow l'interface API de notre image. L'instance <code>ContainerOp</code>
 définit l'emplacement de l'image du menu fixe, la façon de lui transmettre des
 arguments et les résultats à extraire du conteneur. Pour utiliser réellement ces
-ContainerOp dans notre pipeline, nous créons des fonctions de fabrique comme
-average<em>op (car nous voudrons probablement plus d'un _composant</em> moyen).</p>
+<code>ContainerOp</code> dans notre pipeline, nous créons des fonctions de fabrique comme
+<code>average_op</code> (car nous voudrons probablement plus d'un <em>composant</em> moyen).</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span>\<span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
@@ -747,18 +735,18 @@ average<em>op (car nous voudrons probablement plus d'un _composant</em> moyen).<
     <span class="k">return</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
         <span class="n">name</span><span class="o">=</span><span class="s2">&quot;averge&quot;</span><span class="p">,</span> <span class="c1"># Élément affiché dans la visionneuse de pipeline</span>
         <span class="n">image</span><span class="o">=</span><span class="s2">&quot;k8scc01covidacr.azurecr.io/kfp-components/average:v1&quot;</span><span class="p">,</span> <span class="c1"># L&#39;image</span>
-        <span class="n">exécutée</span> <span class="n">par</span> <span class="n">Kuberflow</span> <span class="n">Pipelines</span> <span class="n">pour</span> <span class="n">faire</span> <span class="n">le</span> <span class="n">travail</span> <span class="n">arguments</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span>
+        <span class="n">exécutée</span> <span class="n">par</span> <span class="n">Kubeflow</span> <span class="n">Pipelines</span> <span class="n">pour</span> <span class="n">faire</span> <span class="n">le</span> <span class="n">travail</span> <span class="n">arguments</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span>
         <span class="c1">#transmet chaque nombre comme un argument de ligne de commande (chaîne) distinct</span>
         <span class="c1"># Le script à l&#39;intérieur du conteneur enregistre le résultat (sous forme de chaîne de caractères) dans le fichier out.txt, que</span>
-        <span class="c1"># Kuberflow Pipelines lit pour nous et récupère sous forme de chaîne.</span>
+        <span class="c1"># Kubeflow Pipelines lit pour nous et récupère sous forme de chaîne.</span>
         <span class="n">file_outputs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;./out.txt&#39;</span><span class="p">},</span>
     <span class="p">)</span>
 </code></pre></div>
 
 
 <p>Nous définissons notre pipeline comme une fonction Python qui utilise les
-fabriques de ComponentOp ci-dessus, décorées par l'élément décoratif
-@dsl.pipeline. Notre pipeline utilise notre composant <em>moyen</em> en lui
+fabriques de <code>ComponentOp</code> ci-dessus, décorées par l'élément décoratif
+<code>@dsl.pipeline</code>. Notre pipeline utilise notre composant <em>moyen</em> en lui
 transmettant des nombres. Puis, nous utilisons les résultats <em>moyens</em> en les
 transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</code>.</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
@@ -817,8 +805,8 @@ par vous-même!</p>
 
 
 <p>Voici ce qui peut être observé dans
-<a href="../1-Experiments/Kubeflow.md">l'interface utilisateur</a> de Kubeflow Pipelines :</p>
-<p><img alt="Expérience Kubeflow Pipelines" src="../images/kfp_experiment.png" /></p>
+<a href="../../1-Experiences/Kubeflow/">l'interface utilisateur</a> de Kubeflow Pipelines :</p>
+<p><img alt="Expérience Kubeflow Pipelines" src="../../images/kfp_experiment.png" /></p>
 <p>Ensuite, nous exécutons une instance de notre pipeline en utilisant les
 arguments souhaités :</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
@@ -834,7 +822,7 @@ arguments souhaités :</p>
 
 
 <p>Voici ce que l'on peut également voir dans l'interface utilisateur :</p>
-<p><img alt="Expérience Kubeflow Pipelines" src="../images/kfp_experiment.png" /></p>
+<p><img alt="Expérience Kubeflow Pipelines" src="../../images/kfp_experiment.png" /></p>
 <p>Plus tard, lorsque nous souhaiterons réutiliser le pipeline, nous pourrons
 transmettre différents arguments et tout recommencer (et même le réutiliser à
 partir de l'interface utilisateur de Kubeflow). Pour mieux comprendre cet
@@ -876,13 +864,13 @@ exemple, ouvrez-le dans Kubeflow et essayez-le vous-même.</p>
           </a>
         
         
-          <a href="../Pachyderm/" title="Pachyderm" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Collaboration/" title="Collaboration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Suivant
                 </span>
-                Pachyderm
+                Collaboration
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

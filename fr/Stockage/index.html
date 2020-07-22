@@ -251,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-Experiences/ML-Workspaces/" title="ML-Workspaces" class="md-nav__link">
+    <a href="../1-Experiences/Bureau-virtuel/" title="ML-Workspaces" class="md-nav__link">
       ML-Workspaces
     </a>
   </li>
@@ -329,8 +329,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../2-Publishing/PowerBI.md" title="PowerBI" class="md-nav__link">
-      PowerBI
+    <a href="../2-Publication/PowerBI/" title="Power BI" class="md-nav__link">
+      Power BI
     </a>
   </li>
 
@@ -385,18 +385,6 @@
   <li class="md-nav__item">
     <a href="../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../3-Pipelines/Pachyderm/" title="Pachyderm" class="md-nav__link">
-      Pachyderm
     </a>
   </li>
 
@@ -673,7 +661,7 @@ soyez en train d'expérimenter, de créer des pipelines, ou d'éditer.</p>
 <p>En surface, il existe deux types de stockage :</p>
 <ul>
 <li>des disques (aussi appelés volumes)</li>
-<li>des compartiments (stockage S3 ou "blob")</li>
+<li>des compartiments (stockage S3 ou « blob »)</li>
 </ul>
 <h3 id="disques">Disques</h3>
 <p>Les disques sont les systèmes de fichiers courants de type disque dur ou SSD.
@@ -704,7 +692,7 @@ avantages :</p>
 <p>Le partage de données</p>
 <ul>
 <li>Vous pouvez partager des fichiers à partir d'un compartiment en partageant
-  une URL que vouspouvez obtenir par l'intermédiaire d'une interface Web
+  une URL que vous pouvez obtenir par l'intermédiaire d'une interface Web
   simple. C'est une excellente façon de partager des données avec des
   personnes à l'extérieur de votre espace de travail.</li>
 </ul>
@@ -722,55 +710,42 @@ avantages :</p>
 </li>
 </ul>
 <h2 id="stockage-en-compartiment">Stockage en compartiment</h2>
-<p>Nous avons quatre types de stockage en compartiment.</p>
+<p>Nous avons trois types de stockage en compartiment.</p>
 <p><strong>Libre-service :</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">storage type</th>
-<th align="left">description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">Minimal</a></td>
-<td align="left">By default, use this one. It is HDD backed storage.</td>
-</tr>
-<tr>
-<td align="left"><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca">Premium</a></td>
-<td align="left">Use this if you need very high read/write speeds, like for training models on very large datasets.</td>
-</tr>
-<tr>
-<td align="left"><a href="https://pachyderm-tenant1-minio.covid.cloud.statcan.ca">Pachyderm</a></td>
-<td align="left">You will only need this if you're using Pachyderm Pipelines.</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><strong><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">Minimal</a> :</strong><br />
+  Stockage soutenu par des HDD. Par défaut, utilisez cette option.</li>
+<li><strong><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca">Premium</a> :</strong><br />
+  Utilisez cette option si vous avez besoin de vitesses de lecture / écriture
+  très élevées, comme pour l'entraînement de modèles sur de très grands
+  ensembles de données.</li>
+</ul>
 <p><strong>Accessible au grand public :</strong></p>
 <p><a href="https://datasets.covid.cloud.statcan.ca">Public (en lecture seule)</a></p>
 <h3 id="libre-service">Libre-service</h3>
 <p>Dans chacune des trois options de libre-service, vous pouvez créer un
 compartiment personnel. Pour vous connecter, il vous suffit d'utiliser votre
 <strong>OpenID</strong>.</p>
-<p><img alt="Vue d'ouverture de session Minio, indiquant l'option OpenID" src="../images/minio_self_serve_login.png" /></p>
+<p><img alt="Vue d'ouverture de session MinIO, indiquant l'option OpenID" src="../images/minio_self_serve_login.png" /></p>
 <p>Une fois que vous êtes connecté, vous pouvez créer un compartiment personnel
 selon le format <code>prenom-nom</code>.</p>
-<p><img alt="Navigateur Minio avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d'union)" src="../images/minio_self_serve_bucket.png" /></p>
+<p><img alt="Navigateur MinIO avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d'union)" src="../images/minio_self_serve_bucket.png" /></p>
 <!-- prettier-ignore -->
 
 <div class="admonition danger">
-<p class="admonition-title">Cannot yet share files from Minio with OpenID</p>
-<p>Due to a <a href="https://github.com/minio/minio/issues/8935">bug in Minio</a> you
-cannot share files yet. This will hopefully be resolved soon. In the
-meantime, it <em>does</em> work if you use your access key and secret key, which
-you can get from Kubeflow.</p>
+<p class="admonition-title">Impossible de partager des fichiers avec votre OpenID</p>
+<p>À cause d'un <a href="https://github.com/minio/minio/issues/8935">bogue dans MinIO</a>,
+vous ne pouvez pas encore partager des fichiers. Nous espérons que cela sera
+bientôt résolu. En attendant, ça fonctionnera bien si vous utilisez votre
+clé d'accès et votre clé secrète, que vous pouvez obtenir auprès de
+Kubeflow.</p>
 </div>
 <h3 id="partage">Partage</h3>
 <p>Vous pouvez facilement partager des fichiers individuels. Utilisez simplement
-l'option "partager" pour un fichier particulier, et vous recevrez un lien que
+l'option « partager » pour un fichier particulier, et vous recevrez un lien que
 vous pourrez envoyer à un
-<img alt="Partage de fichiers Minio" src="../images/minio_self_serve_share.png" /> collaborateur.</p>
-<p><img alt="Navigateur Minio avec lien partageable vers un fichier" src="../images/minio_self_serve_share.png" /></p>
+<img alt="Partage de fichiers MinIO" src="../images/minio_self_serve_share.png" /> collaborateur.</p>
+<p><img alt="Navigateur MinIO avec lien partageable vers un fichier" src="../images/minio_self_serve_share.png" /></p>
 <h3 id="acces-a-la-programmation">Accès à la programmation</h3>
 <p>Nous travaillons actuellement à un moyen de vous permettre d'accéder à votre
 stockage de compartiment par l'intermédiaire d'un dossier dans votre bloc-notes,
@@ -780,13 +755,13 @@ Python.</p>
 <!-- prettier-ignore -->
 
 <div class="admonition danger">
-<p class="admonition-title">Configuration Kuberflow requise</p>
+<p class="admonition-title">Configuration Kubeflow requise</p>
 <p>Si vous souhaitez activer le stockage en compartiment pour votre bloc-notes,
-sélectionnez "Injecter les justificatifs d'identité pour accéder au stockage
-d'objets MinIO" à partir du menu <strong>Configurations</strong> lorsque vous créez votre
-serveur. Sinon, votre serveur ne saura pas comment se connecter à votre
-stockage personnel.
-<img alt="Création d'un serveur de bloc-notes Kubeflow avec l'option &quot;Injecter les justificatifs d'identité pour accéder au stockage d'objets MinIO&quot; sélectionnée" src="../images/kubeflow_minio_option.png" /></p>
+sélectionnez « Injecter les justificatifs d'identité pour accéder au
+stockage d'objets MinIO » à partir du menu <strong>Configurations</strong> lorsque vous
+créez votre serveur. Sinon, votre serveur ne saura pas comment se connecter
+à votre stockage personnel.
+<img alt="Création d'un serveur de bloc-notes Kubeflow avec l'option « Injecter les justificatifs d'identité pour accéder au stockage d'objets MinIO » sélectionnée" src="../images/kubeflow_minio_option.png" /></p>
 </div>
 <!-- prettier-ignore -->
 
@@ -804,7 +779,7 @@ de vos besoins.</p>
 <span class="nv">NOMCOMPLET</span><span class="o">=</span>blair-drummond
 <span class="c1"># Obtenir les justificatifs d&#39;identité</span>
 <span class="nb">source</span> /vault/secrets/minio-minimal-tenant1
-<span class="c1"># Ajouter le stockage sous le pseudonyme &quot;minio-minimal&quot;</span>
+<span class="c1"># Ajouter le stockage sous le pseudonyme « minio-minimal »</span>
 mc config host add minio-minimal <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
 <span class="c1"># Créer un compartiment à votre nom</span>
 <span class="c1"># NOTE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOM.</span>
@@ -819,9 +794,9 @@ mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">NOMCOMPL
 </code></pre></div>
 
 
-<p>Maintenant, ouvrez le document
-<a href="https://minimal-tenant1-minio.example.ca">minimal-tenant1-minio.example.ca</a>,
-Vous y verrez votre fichier de test.</p>
+<p>Maintenant, ouvrez le document dans
+<a href="https://minimal-tenant1-minio.example.ca">le navigateur MinIO</a>. Vous y verrez
+votre fichier de test.</p>
 <p>Vous pouvez utiliser <code>mc</code> pour copier des fichiers vers/depuis le compartiment.
 Cette opération est très rapide. Vous pouvez également utiliser <code>mc --help</code> pour
 voir les autres options qui s'offrent à vous, comme
