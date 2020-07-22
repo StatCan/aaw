@@ -29,9 +29,9 @@ jobs:
         run: npx prettier -c .
       - name: Spelling (en)
         run: |
-          npx git://github.com/brendangadd/node-markdown-spellcheck.git#8eec3bc973e355a1ce84e54841171910f98a8419 \
+          npx git://github.com/brendangadd/node-markdown-spellcheck.git#45cf81bfb56f298d0928461133aa9f264047dd49 \
             -trax --en-gb docs/en/*.md docs/en/**/*.md
       - name: Spelling (fr)
         run: |
-          npx git://github.com/brendangadd/node-markdown-spellcheck.git#8eec3bc973e355a1ce84e54841171910f98a8419 \
+          npx git://github.com/brendangadd/node-markdown-spellcheck.git#45cf81bfb56f298d0928461133aa9f264047dd49 \
             -trax --fr-fr docs/fr/*.md docs/fr/**/*.md
