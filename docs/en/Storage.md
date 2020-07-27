@@ -67,14 +67,6 @@ format `firstname-lastname`.
 
 ![MinIO browser with personal bucket using first name, last name format (hyphenated)](images/minio_self_serve_bucket.png)
 
-<!-- prettier-ignore -->
-!!! failure "Cannot yet share files from MinIO with OpenID"
-    Due to
-    [an upstream bug in MinIO](https://github.com/minio/minio/issues/8935) you
-    cannot share files yet. This will hopefully be resolved soon. In the
-    meantime, it **does** work if you use your access key and secret key, which
-    you can get from Kubeflow.
-
 ## Sharing
 
 You can easily share individual files. Just use the "share" option for a
