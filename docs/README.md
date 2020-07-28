@@ -20,6 +20,7 @@ want that much responsibility. :wink:
 - GNU Make (e.g. `apt install make`)
 - [Node.js][] (e.g. see [`nvm-sh/nvm`][nvm-installation])
 - npm (comes with Node.js)
+- Yarn (e.g. `npm install --global yarn`)
 - Python 3.x (e.g. `apt install python3`)
 - Python venv module (e.g. `apt install python3-venv`)
 
