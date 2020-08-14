@@ -71,8 +71,19 @@ recent commit on master that has been translated:
 
 - When doing a new translation, the translator will look the diff of
   `git diff origin/translated-to-french origin/(SOME_COMMIT_ON_MASTER)` (where
-  the commit on master is likely the latest commit)
-- When a new translation is committed, we will rebase the translated-to-french
+  the commit on master is likely the latest commit) to see what English 
+  changes have occur since last translation.  This documents which new English
+  content requires translation to French.
+- During translation, the translator should check out the **most recent** 
+  commit on master and modifying the French content from there.  They should
+  not start from the `translated-to-french` branch (as this might be missing 
+  some new French content).  
+- To commit completed French translation content, cherry pick the new French
+  content and merge it into the most recent `master`, but do not overwrite 
+  the current `master` English content as it may have been updated since 
+  translation started.  
+- When a new translation is committed, we will rebase the 
+  `translated-to-french`
   branch onto the last translated commit (eg: `SOME_COMMIT_ON_MASTER` from
   above). Do not rebase onto the commit that actually merged in the latest
   French update as that may be missing additional English changes.
