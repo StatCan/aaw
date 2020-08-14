@@ -14,15 +14,24 @@ _pip_, _conda_, and _npm_ are available to install various packages.
 
 To launch the Remote Desktop or any of its supporting tools, create a Notebook
 Server in [Kubeflow](./Kubeflow.md) and select one of the available versions in
-the image dropdown. Then, connect and click on the _Open Tool_ button in the top
-right corner.
+the image dropdown. Then, connect to access the landing page.
 
-![Open Tool](../images/rd_open_tools.png)
+![Landing Page](../images/rd_landing_page.png)
 
-_VNC_ will bring you to the Desktop GUI. Click on the < on the left side of the
+_Remote Desktop_ brings you to the Desktop GUI. Click on the < on the left side of the
 screen to expand a panel with options such as fullscreen and clipboard access.
 
 ![NoVNC Panel](../images/rd_novnc_panel.png)
+
+_Jupyter_ is a legacy interface that can be used to interact with Jupyter Notebooks
+until storage integration with [JupyterLab images](./Jupyter.md) becomes available.
+
+![Jupyter](../images/rd_jupyter.png)
+
+You can access other tools and interfaces with the _Open Tool_ button in the top
+right corner, or by returning to the landing page.
+
+![Open Tool](../images/rd_open_tools.png)
 
 _VS Code_ brings you to the Visual Studio Code IDE.
 
