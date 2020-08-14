@@ -18,13 +18,15 @@ the image dropdown. Then, connect to access the landing page.
 
 ![Landing Page](../images/rd_landing_page.png)
 
-_Remote Desktop_ brings you to the Desktop GUI. Click on the < on the left side of the
-screen to expand a panel with options such as fullscreen and clipboard access.
+_Remote Desktop_ brings you to the Desktop GUI. Click on the < on the left side
+of the screen to expand a panel with options such as fullscreen and clipboard
+access.
 
 ![NoVNC Panel](../images/rd_novnc_panel.png)
 
-_Jupyter_ is a legacy interface that can be used to interact with Jupyter Notebooks
-until storage integration with [JupyterLab images](./Jupyter.md) becomes available.
+_Jupyter_ is a legacy interface that can be used to interact with Jupyter
+Notebooks until storage integration with [JupyterLab images](./Jupyter.md)
+becomes available.
 
 ![Jupyter](../images/rd_jupyter.png)
 
