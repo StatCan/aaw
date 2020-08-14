@@ -711,16 +711,6 @@ in, simply use the <strong>OpenID</strong> option seen below.</p>
 <p>Once you are logged in, you are allowed to create a personal bucket with the
 format <code>firstname-lastname</code>.</p>
 <p><img alt="MinIO browser with personal bucket using first name, last name format (hyphenated)" src="../images/minio_self_serve_bucket.png" /></p>
-<!-- prettier-ignore -->
-
-<div class="admonition failure">
-<p class="admonition-title">Cannot yet share files from MinIO with OpenID</p>
-<p>Due to
-<a href="https://github.com/minio/minio/issues/8935">an upstream bug in MinIO</a> you
-cannot share files yet. This will hopefully be resolved soon. In the
-meantime, it <strong>does</strong> work if you use your access key and secret key, which
-you can get from Kubeflow.</p>
-</div>
 <h3 id="sharing">Sharing</h3>
 <p>You can easily share individual files. Just use the "share" option for a
 specific file and you will be provided a link that you can send to a
