@@ -566,7 +566,8 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas
 - https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private)
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private (private)
+- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private
+  (private)
 - https://github.com/StatCan/charts
 - https://github.com/StatCan/covid19
 - https://github.com/StatCan/daaas
@@ -625,8 +626,10 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/s3-fuse-flex-volume/actions
 - https://github.com/StatCan/shiny/actions
 - https://github.com/StatCan/StatCan.OrchardCore/actions
-- https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions (private)
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/action (private)
+- https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions
+  (private)
+- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/action
+  (private)
 
 #### Ingresses
 
