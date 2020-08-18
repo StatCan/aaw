@@ -2,6 +2,10 @@
 
 # Data Analytics as a Service
 
+A presentation was given at Statistics Canada:
+
+[Advanced Analytics Workspace](https://govcloud.blob.core.windows.net/docs/kubeflow-aaw.pdf)
+
 ## Background
 
 In order to help guide the general direction of DAaaS and what we think can help
