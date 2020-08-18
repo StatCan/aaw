@@ -16,7 +16,7 @@ Slack.
 Une fois que vous vous êtes joint à notre communauté Slack, prenez le temps de
 fureter nos vidéos tutoriels!
 
-- [Vidéos tutoriels officiels](https://www.youtube.com/playlist?list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD)
+- [Vidéos tutoriels officiels](https://www.youtube.com/playlist?list=PL1zlA2D7AHui7seM5xnPulxJjbJLlAcoh)
 - [Démo et contenue provenus de la communauté de l'EAA](https://www.youtube.com/playlist?list=PL1zlA2D7AHuhP0lKbcaD_0KEYUqs1Qrgj)
 
 # GitHub

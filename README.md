@@ -2,6 +2,10 @@
 
 # Data Analytics as a Service
 
+A presentation was given at Statistics Canada:
+
+[Advanced Analytics Workspace](https://govcloud.blob.core.windows.net/docs/kubeflow-aaw.pdf)
+
 ## Background
 
 In order to help guide the general direction of DAaaS and what we think can help
@@ -20,7 +24,7 @@ control plane, utilizing Desired State Configuration and showcases an example of
 how Kubernetes can control PAAS services. All these tools align with industry
 standards for data analytics.
 
-> Note: To learn more about why Kubernetes is a good fit to manage Azure
+> **Note**: To learn more about why Kubernetes is a good fit to manage Azure
 > Databricks, we recommend quickly reading over the first half of the
 > [Azure Data Bricks Operator](https://blog.openshift.com/wp-content/uploads/OpenShift-Commons-MSFT-Azure-Databricks-Operator.pdf)
 > presentation by Microsoft which essentially describes vision. Then to see how
@@ -574,7 +578,9 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/daaas-containers
 - https://github.com/StatCan/dremio
 - https://github.com/StatCan/gatekeeper-policies
+- https://github.com/StatCan/jupyter-apis
 - https://github.com/StatCan/jupyter-notebooks
+- https://github.com/StatCan/goofys-injector
 - https://github.com/StatCan/gpu-toleration-injector
 - https://github.com/StatCan/kubecost
 - https://github.com/StatCan/kubeflow
@@ -582,6 +588,7 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/kubeflow-controller
 - https://github.com/StatCan/kubeflow-containers-desktop
 - https://github.com/StatCan/kubeflow-manifest
+- https://github.com/StatCan/kubeflow-mlops
 - https://github.com/StatCan/matomo
 - https://github.com/StatCan/minio
 - https://github.com/StatCan/mlflow
@@ -589,6 +596,7 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/pachyderm
 - https://github.com/StatCan/R-dashboards
 - https://github.com/StatCan/R-notebooks
+- https://github.com/StatCan/s3-fuse-flex-volume
 - https://github.com/StatCan/shiny
 - https://github.com/StatCan/statcan.orchardcore
 - https://github.com/StatCan/terraform-vault-daaas (private)
@@ -603,32 +611,52 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/daaas-containers/actions
 - https://github.com/StatCan/dremio/actions
 - https://github.com/StatCan/kubecost/actions
+- https://github.com/StatCan/gatekeeper-policies/actions
+- https://github.com/StatCan/jupyter-apis/actions
+- https://github.com/StatCan/jupyter-notebooks/actions
+- https://github.com/StatCan/goofys-injector/actions
 - https://github.com/StatCan/gpu-toleration-injector/actions
 - https://github.com/StatCan/kubeflow-containers/actions
 - https://github.com/StatCan/kubeflow-controller/actions
+- https://github.com/StatCan/kubeflow-containers-desktop/actions
+- https://github.com/StatCan/kubeflow-manifest/actions
+- https://github.com/StatCan/kubeflow-mlops/actions
 - https://github.com/StatCan/matomo/actions
 - https://github.com/StatCan/minio/actions
 - https://github.com/StatCan/mlflow/actions
+- https://github.com/StatCan/mlflow-operator/actions
 - https://github.com/StatCan/pachyderm/actions
 - https://github.com/StatCan/R-dashboards/actions
+- https://github.com/StatCan/s3-fuse-flex-volume/actions
 - https://github.com/StatCan/shiny/actions
 - https://github.com/StatCan/StatCan.OrchardCore/actions
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions
   (private)
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/actions
+- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/action
   (private)
 
-#### Public
+#### Ingresses
 
-- https://kubeflow.covid.cloud.statcan.ca
-- https://portal.covid.cloud.statcan.ca
-- https://shiny.covid.cloud.statcan.ca
-- https://covid19.covid.cloud.statcan.ca
+- https://elastic.covid.cloud.statcan.ca
+- https://kibana.covid.cloud.statcan.ca
+- https://logging-elastic.covid.cloud.statcan.ca
+- https://logging-kibana.covid.cloud.statcan.ca
+- https://istio-grafana.covid.cloud.statcan.ca
 - https://istio-kiali.covid.cloud.statcan.ca
+- https://kubecost.covid.cloud.statcan.ca
+- https://minimal-tenant1-minio.covid.cloud.statcan.ca
+- https://pachyderm-tenant1-minio.covid.cloud.statcan.ca
+- https://premium-tenant1-minio.covid.cloud.statcan.ca
+- https://daaas-tenant1-mlflow.covid.cloud.statcan.ca
+- https://mlflow.covid.cloud.statcan.ca
 - https://grafana.covid.cloud.statcan.ca
-- https://istio-grafana.covid.cloud.statcan.ca (private)
-- https://prometheus.covid.cloud.statcan.ca (private)
-- https://alertmanager.covid.cloud.statcan.ca (private)
+- https://pachyderm.covid.cloud.statcan.ca
+- https://vault.covid.cloud.statcan.ca
+- https://covid19.covid.cloud.statcan.ca
+- https://matomo.covid.cloud.statcan.ca
+- https://oc-dev.covid.cloud.statcan.ca
+- https://portal-old.covid.cloud.statcan.ca
+- https://shiny.covid.cloud.statcan.ca
 
 #### Recommended Reading
 
