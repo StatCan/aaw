@@ -43,7 +43,7 @@ nav:
   - Analysis:
       - Kubeflow: 1-Experiments/Kubeflow.md
       - Jupyter: 1-Experiments/Jupyter.md
-      - ML-Workspaces: 1-Experiments/Virtual-Desktop.md
+      - Remote Desktop: 1-Experiments/Remote-Desktop.md
       - DataBricks: 1-Experiments/Databricks.md
       - MLflow: 1-Experiments/MLflow.md
   - Publishing:
