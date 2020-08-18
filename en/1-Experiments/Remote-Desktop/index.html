@@ -11,7 +11,7 @@
         <meta name="description" content="User guide for the DAaaS Covid-19 Platform">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/en/1-Experiments/Virtual-Desktop/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/1-Experiments/Remote-Desktop/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>ML-Workspaces - COVID-19 Advanced Analytics Workspace</title>
+        <title>Remote Desktop - COVID-19 Advanced Analytics Workspace</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#virtual-desktop" class="md-skip">
+        <a href="#remote-desktop" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              ML-Workspaces
+              Remote Desktop
             
           </span>
         </div>
@@ -260,14 +260,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        ML-Workspaces
+        Remote Desktop
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="ML-Workspaces" class="md-nav__link md-nav__link--active">
-      ML-Workspaces
+    <a href="./" title="Remote Desktop" class="md-nav__link md-nav__link--active">
+      Remote Desktop
     </a>
     
       
@@ -284,8 +284,103 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-desktop" class="md-nav__link">
-    Virtual Desktop
+  <a href="#remote-desktop" class="md-nav__link">
+    Remote Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-remote-desktop" class="md-nav__link">
+    What is Remote Desktop?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Remote Desktop?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versions" class="md-nav__link">
+    Versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    Customization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-remote-desktop" class="md-nav__link">
+    Accessing the Remote Desktop
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Remote Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legacy-interface-jupyter-notebook" class="md-nav__link">
+    Legacy Interface: Jupyter Notebook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-browser-tools" class="md-nav__link">
+    In-browser Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="In-browser Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    VS Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netdata" class="md-nav__link">
+    Netdata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filebrowser" class="md-nav__link">
+    Filebrowser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-port" class="md-nav__link">
+    Access Port
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    Footnotes
   </a>
   
 </li>
@@ -494,8 +589,103 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-desktop" class="md-nav__link">
-    Virtual Desktop
+  <a href="#remote-desktop" class="md-nav__link">
+    Remote Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-remote-desktop" class="md-nav__link">
+    What is Remote Desktop?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Remote Desktop?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versions" class="md-nav__link">
+    Versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    Customization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-remote-desktop" class="md-nav__link">
+    Accessing the Remote Desktop
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the Remote Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#legacy-interface-jupyter-notebook" class="md-nav__link">
+    Legacy Interface: Jupyter Notebook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-browser-tools" class="md-nav__link">
+    In-browser Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="In-browser Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    VS Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netdata" class="md-nav__link">
+    Netdata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filebrowser" class="md-nav__link">
+    Filebrowser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-port" class="md-nav__link">
+    Access Port
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    Footnotes
   </a>
   
 </li>
@@ -512,7 +702,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/1-Experiments/Virtual-Desktop.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/1-Experiments/Remote-Desktop.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -520,10 +710,66 @@
                   
                 
                 
-                  <h1>ML-Workspaces</h1>
+                  <h1>Remote Desktop</h1>
                 
-                <h2 id="virtual-desktop">Virtual Desktop</h2>
-<p>Coming soon…</p>
+                <h2 id="remote-desktop">Remote Desktop</h2>
+<p><img alt="Remote Desktop" src="../../images/rd_desktop.png" /></p>
+<h2 id="what-is-remote-desktop">What is Remote Desktop?</h2>
+<p>Remote Desktop provides an in-browser GUI Ubuntu desktop experience as well as
+quick access to supporting tools. The operating system is
+<a href="https://ubuntu.com/about"><strong>Ubuntu</strong></a> <strong>18.04</strong> with the
+<a href="https://www.xfce.org/about"><strong>XFCE</strong></a> desktop environment.</p>
+<h3 id="versions">Versions</h3>
+<p>Two versions of Remote Desktop are available. <em>R</em> includes R and RStudio.
+<em>Geomatics</em> extends <em>R</em> with QGIS and various supporting libraries. You may
+further customize your Remote Desktop workspace to suit your specific needs and
+preferences.</p>
+<h3 id="customization">Customization</h3>
+<p><em>pip</em>, <em>conda</em>, <em>npm</em> and <em>yarn</em> are available to install various packages.</p>
+<h2 id="accessing-the-remote-desktop">Accessing the Remote Desktop</h2>
+<p>To launch the Remote Desktop or any of its supporting tools, create a Notebook
+Server in <a href="../Kubeflow/">Kubeflow</a> and select one of the available versions in
+the image dropdown. Then, click <code>Connect</code> to access the landing page.</p>
+<p><img alt="Landing Page" src="../../images/rd_landing_page.png" /></p>
+<p><em>Remote Desktop</em> brings you to the Desktop GUI through a noVNC session. Click on
+the &lt; on the left side of the screen to expand a panel with options such as
+fullscreen and clipboard access.</p>
+<p><img alt="NoVNC Panel" src="../../images/rd_novnc_panel.png" /></p>
+<h3 id="legacy-interface-jupyter-notebook">Legacy Interface: Jupyter Notebook</h3>
+<p><em>Jupyter Notebook</em> is a legacy interface for managing Jupyter Notebooks until
+storage integration with the <a href="../Jupyter/">JupyterLab images</a> becomes
+available.</p>
+<p><img alt="Jupyter Notebook" src="../../images/rd_jupyter.png" /></p>
+<p>You can access other tools and interfaces with the <em>Open Tool</em> button in the top
+right corner, or by returning to the landing page.</p>
+<p><img alt="Open Tool" src="../../images/rd_open_tools.png" /></p>
+<h2 id="in-browser-tools">In-browser Tools</h2>
+<h3 id="vs-code">VS Code</h3>
+<p><em>VS Code</em> brings you to the Visual Studio Code IDE.</p>
+<p><img alt="VS Code" src="../../images/rd_vs_code.png" /></p>
+<h3 id="netdata">Netdata</h3>
+<p><em>Netdata</em> delivers in-depth interactive resource monitoring. Charts can be
+panned by dragging them. You can also zoom in and out with
+<code>SHIFT + mouse wheel</code>, or zoom to a selection by holding down <code>SHIFT</code> while
+dragging.</p>
+<p><img alt="Netdata" src="../../images/rd_netdata.png" /></p>
+<h3 id="filebrowser">Filebrowser</h3>
+<p><em>Filebrowser</em> can be used to quickly explore the file system of the Remote
+Desktop as well as to transfer files between the Remote Desktop and your
+computer.</p>
+<p><img alt="Filebrowser" src="../../images/rd_filebrowser.png" /></p>
+<h3 id="access-port">Access Port</h3>
+<p>Finally, <em>Access Port</em> provides in-browser access to anything served on a
+specified port inside the Remote Desktop (internally accessible at e.g.
+<code>localhost:8059</code>).</p>
+<p><img alt="Access Port" src="../../images/rd_access_port.png" /></p>
+<p>As with the other tools, this opens in a separate page in your browser. Your
+namespace collaborators can also access this page if you send them the URL.</p>
+<p><em>Example: Accessing the Supervisor API at port 8059</em></p>
+<p><img alt="Supervisor API" src="../../images/rd_supervisor.png" /></p>
+<h2 id="footnotes">Footnotes</h2>
+<p>Remote Desktop is based on
+<a href="https://github.com/ml-tooling/ml-workspace">ml-tooling/ml-workspace</a>.</p>
                 
               
               
