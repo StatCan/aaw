@@ -106,15 +106,6 @@ ligne de commande `mc`, ou par l'intermédiaire des appels d'API S3 dans R ou
 Python.
 
 <!-- prettier-ignore -->
-!!! danger "Configuration Kubeflow requise"
-    Si vous souhaitez activer le stockage en compartiment pour votre bloc-notes,
-    sélectionnez « Injecter les justificatifs d'identité pour accéder au
-    stockage d'objets MinIO » à partir du menu **Configurations** lorsque vous
-    créez votre serveur. Sinon, votre serveur ne saura pas comment se connecter
-    à votre stockage personnel.
-    ![Création d'un serveur de bloc-notes Kubeflow avec l'option « Injecter les justificatifs d'identité pour accéder au stockage d'objets MinIO » sélectionnée](images/kubeflow_minio_option.png)
-
-<!-- prettier-ignore -->
 !!! tip "Voir les exemples de blocs-notes!"
     Un modèle est fourni pour se connecter dans `R`, `python`, ou par la ligne
     de commande fournie dans `jupyter-notebooks/self-serve-storage`. Vous pouvez
