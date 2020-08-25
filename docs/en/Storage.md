@@ -82,14 +82,6 @@ in your notebook, but in the meantime you can access it programmatically with
 the command line tool `mc`, or via S3 API calls in R or Python.
 
 <!-- prettier-ignore -->
-!!! danger "Required Kubeflow configuration"
-    If you want to enable bucket storage for your notebook, select "Inject
-    credentials to access MinIO object storage" from the **Configurations** menu
-    when you create your server. Otherwise, your server won't know how to
-    sign-in to your personal storage.
-    ![Kubeflow notebook server creation with "Inject credentials to access MinIO object storage" option selected](images/kubeflow_minio_option.png)
-
-<!-- prettier-ignore -->
 !!! tip "See the example notebooks!"
     There is a template provided for connecting in `R`, `python`, or by the
     command line, provided in `jupyter-notebooks/self-serve-storage`. You can
