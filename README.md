@@ -563,15 +563,19 @@ What can you do it with / what have we done with it?
   - ComCast case study using Azure DataBricks and AKS
     ([Link](https://www.topbots.com/ml-model-deployment-with-mlflow-kubernetes/))
 
-#### Source Code
+#### Terraform
 
-- https://github.com/StatCan?q=daaas
-- https://github.com/StatCan/actions
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas
 - https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private)
 - https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private
   (private)
+
+#### Source Code
+
+- https://github.com/StatCan?q=daaas
+- https://github.com/StatCan/actions
+- https://github.com/StatCan/boathouse
 - https://github.com/StatCan/charts
 - https://github.com/StatCan/covid19
 - https://github.com/StatCan/daaas
@@ -596,7 +600,6 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/pachyderm
 - https://github.com/StatCan/R-dashboards
 - https://github.com/StatCan/R-notebooks
-- https://github.com/StatCan/s3-fuse-flex-volume
 - https://github.com/StatCan/shiny
 - https://github.com/StatCan/statcan.orchardcore
 - https://github.com/StatCan/terraform-vault-daaas (private)
@@ -605,6 +608,7 @@ What can you do it with / what have we done with it?
 #### GitHub Actions
 
 - https://github.com/StatCan/actions/actions
+- https://github.com/StatCan/boathouse/actions
 - https://github.com/StatCan/charts/actions
 - https://github.com/StatCan/covid19/actions
 - https://github.com/StatCan/daaas/actions
@@ -627,7 +631,6 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/mlflow-operator/actions
 - https://github.com/StatCan/pachyderm/actions
 - https://github.com/StatCan/R-dashboards/actions
-- https://github.com/StatCan/s3-fuse-flex-volume/actions
 - https://github.com/StatCan/shiny/actions
 - https://github.com/StatCan/StatCan.OrchardCore/actions
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions
@@ -637,6 +640,8 @@ What can you do it with / what have we done with it?
 
 #### Ingresses
 
+##### Platform
+
 - https://elastic.covid.cloud.statcan.ca
 - https://kibana.covid.cloud.statcan.ca
 - https://logging-elastic.covid.cloud.statcan.ca
@@ -644,14 +649,21 @@ What can you do it with / what have we done with it?
 - https://istio-grafana.covid.cloud.statcan.ca
 - https://istio-kiali.covid.cloud.statcan.ca
 - https://kubecost.covid.cloud.statcan.ca
+- https://vault.covid.cloud.statcan.ca
+
+##### MinIO
+
 - https://minimal-tenant1-minio.covid.cloud.statcan.ca
 - https://pachyderm-tenant1-minio.covid.cloud.statcan.ca
 - https://premium-tenant1-minio.covid.cloud.statcan.ca
 - https://daaas-tenant1-mlflow.covid.cloud.statcan.ca
+
+##### Applications
+
+- https://analytics-platform.statcan.gc.ca
 - https://mlflow.covid.cloud.statcan.ca
 - https://grafana.covid.cloud.statcan.ca
 - https://pachyderm.covid.cloud.statcan.ca
-- https://vault.covid.cloud.statcan.ca
 - https://covid19.covid.cloud.statcan.ca
 - https://matomo.covid.cloud.statcan.ca
 - https://oc-dev.covid.cloud.statcan.ca
