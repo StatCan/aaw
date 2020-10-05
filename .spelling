@@ -10,11 +10,15 @@ Filebrowser
 fullscreen
 GitHub
 GitLab
-Jupyter
+jupyter
+jupyter-notebook
+jupyter-notebooks
 JupyterHub
 JupyterLab
 Kubeflow
 Kubernetes
+minimal-tenant
+minimal-tenant1
 MinIO
 MLflow
 Netdata
@@ -23,6 +27,8 @@ noVNC
 npm
 OpenID
 Power
+premium-tenant
+premium-tenant1
 R-Shiny
 RStudio
 Slack
