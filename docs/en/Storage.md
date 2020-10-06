@@ -25,13 +25,15 @@ server, you request them by adding Data Volumes to your notebook server. They
 are automatically mounted at the directory you choose, and serve as a simple and
 reliable way to preserve data attached to a Notebook Server. Even if you delete
 your Notebook Server later, your disk will not be deleted. You can then mount
-that same disk (with all its contents) to a new Notebook Server later.
+that same disk (with all its contents) to a new Notebook Server later as shown:
 
 ![Adding an existing volume to a new notebook server](images/kubeflow_existing_volume.png)
 
+Or, if you're done with the disk, [delete it](#deleting-disk-storage).
+
 <!-- prettier-ignore -->
 ??? info "Disks are never destroyed by default, but you pay for them whether they're attached to a Notebook Server or not"
-    When you create a disk, you agree to [pay](#pricing) for the cost of that drive until it is destroyed, just like how you agree to pay for the CPU/RAM you request when making a Notebook Server.  Unlike with Notebook Server CPU/RAM, however, when you shut down a Notebook Server your disks are not deleted.  This is to let you reuse those drives, but means that when you shutdown a Notebook Server **you are still paying for the storage**.  Storage is [pretty cheap](#pricing) but can still add up - see [Deleting Disk Storage](#deleting-disk-storage) for more info.
+    When you create a disk, you agree to [pay](#pricing) for the cost of that drive until it is destroyed, just like how you agree to pay for the CPU/RAM you request when making a Notebook Server.  Unlike with Notebook Server CPU/RAM, however, when you shut down a Notebook Server your disks are not deleted.  This is to let you reuse those drives, but means that when you shutdown a Notebook Server **you are still paying for the storage**.  You pay for any disk listed in the Notebook Volumes section of the Notebook Server page (above).  Storage is [pretty cheap](#pricing) but can still add up - see [Deleting Disk Storage](#deleting-disk-storage) for more info.
     
 As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:
 
@@ -58,8 +60,11 @@ are currently using.
 
 ### Deleting Disk Storage
 
-This section is still under construction. If you need to delete disk storage
-(the type of storage created with notebook servers), reach out to us in Slack.
+To see your disks, check the Notebook Volumes section of the Notebook Server
+page (shown below). You can delete any unattached disk (orange icon on the left)
+by clicking the trash can icon.
+
+![Delete an unattached volume from the Notebook Server screen](images/kubeflow_delete_disk.png)
 
 ## Buckets (via MinIO)
 
