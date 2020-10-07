@@ -24,6 +24,7 @@ theme:
 markdown_extensions:
   - toc:
       baselevel: 2
+      permalink: true
   - attr_list
   - admonition
   - codehilite
