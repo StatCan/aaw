@@ -754,7 +754,7 @@
                 
                   <h1>Kubeflow Pipelines</h1>
                 
-                <h2 id="overview">Overview</h2>
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">Kubeflow Pipelines</a>
 is a platform for building machine learning workflows for deployment in a
 Kubernetes environment. It enables authoring <em>pipelines</em> that encapsulate
@@ -777,7 +777,6 @@ interacted with through:</p>
   even save them for later.</li>
 </ul>
 <!-- prettier-ignore -->
-
 <details class="example"><summary>More examples in the notebooks</summary><p>More comprehensive pipeline examples specifically made for this platform are
 available on <a href="https://github.com/StatCan/jupyter-notebooks">GitHub</a> (and in
 every Notebook Server at <code>/jupyter-notebooks</code>). You can also check out
@@ -786,7 +785,7 @@ every Notebook Server at <code>/jupyter-notebooks</code>). You can also check ou
 <p>See
 <a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">the official Kubeflow docs</a>
 for a more detailed explanation of Kubeflow Pipelines.</p>
-<h2 id="what-are-pipelines-and-how-do-they-work">What are pipelines and how do they work?</h2>
+<h2 id="what-are-pipelines-and-how-do-they-work">What are pipelines and how do they work?<a class="headerlink" href="#what-are-pipelines-and-how-do-they-work" title="Permanent link">&para;</a></h2>
 <p>A
 <a href="https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/"><em>pipeline</em></a>
 in Kubeflow Pipelines consists of one or more
@@ -814,7 +813,7 @@ single <code>average</code> step.</p>
   does it generate)</li>
 </ul>
 <p>Each <em>component</em> should be <strong>single purpose</strong>, <strong>modular</strong>, and <strong>reusable</strong>.</p>
-<h2 id="define-and-run-your-first-pipeline-using-the-python-sdk">Define and run your first pipeline using the Python SDK</h2>
+<h2 id="define-and-run-your-first-pipeline-using-the-python-sdk">Define and run your first pipeline using the Python SDK<a class="headerlink" href="#define-and-run-your-first-pipeline-using-the-python-sdk" title="Permanent link">&para;</a></h2>
 <p>While <em>pipelines</em> and <em>components</em> are defined in Kubeflow Pipelines by YAML
 files that use Docker images, that does not mean we have to work directly with
 either YAML files or Docker images. The
@@ -847,7 +846,6 @@ here: <code>k8scc01covidacr.azurecr.io/kfp-components/average:v1</code>. Don't w
 don't know Docker - since the image is built already, we only have to tell
 Kubeflow Pipelines where it is.</p>
 <!-- prettier-ignore -->
-
 <p>??? info "Full details of the <code>average</code> component's Docker image are in 
     <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/kfp-basics/containers/average">GitHub</a>"
     This image effectively runs the following code (slightly cleaned up for 
@@ -880,7 +878,6 @@ Kubeflow Pipelines where it is.</p>
         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Done&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>To make our <code>average</code> image into a Kubeflow Pipelines <em>component</em>, we make a
 <code>kfp.dsl.ContainerOp</code> in Python that defines how Kubeflow Pipelines interacts
 with our container, specifying:</p>
@@ -891,7 +888,7 @@ with our container, specifying:</p>
 </ul>
 <p>We could use <code>ContainerOp</code> directly, but since we'll use <code>average</code> a few times
 we instead create a factory function we can reuse:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -917,12 +914,11 @@ we instead create a factory function we can reuse:</p>
     <span class="p">)</span>
 </code></pre></div>
 
-
 <p>To define our pipeline, we create a Python function decorated by the
 <code>@dsl.pipeline</code> decorator. We invoke our <code>average_op</code> factory to use our average
 container. We pass each <code>average</code> some inputs, and even use their outputs by
 accessing <code>avg_*.output</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -938,13 +934,12 @@ accessing <code>avg_*.output</code>.</p>
     <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Finally, while we've defined our pipeline in Python, Kubeflow Pipelines itself
 needs everything defined as a YAML file. This final step uses the Kubeflow
 Pipelines Python SDK to translate our pipeline function into a YAML file that
 describes exactly how Kubeflow Pipelines can interact with our component. Unzip
 it and take a look for yourself!</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
 <span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
 <span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
     <span class="n">my_pipeline</span><span class="p">,</span>
@@ -953,9 +948,7 @@ it and take a look for yourself!</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exported pipeline definition to </span><span class="si">{</span><span class="n">pipeline_yaml</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-
 <!-- prettier-ignore -->
-
 <details class="warning"><summary>Kubeflow Pipelines is a lazy beast</summary><p>It is useful to keep in mind what computation is happening when you run this
 python code versus what happens when you submit the pipeline to Kubeflow
 Pipelines. Although it seems like everything is happening in the moment, try
@@ -966,7 +959,7 @@ available when you run this Python code. The is discussed more below in
 <em>Understanding what computation occurs when</em>.</p>
 </details>
 <p>To actually run our pipeline, we define an experiment:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
+<div class="python codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
 
 <span class="kn">import</span> <span class="nn">kfp</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
@@ -981,9 +974,8 @@ available when you run this Python code. The is discussed more below in
 <span class="p">}</span>
 </code></pre></div>
 
-
 <p>And then run an instance of our pipeline with the arguments we want:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
     <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>  <span class="c1"># Run inside the above experiment</span>
@@ -993,7 +985,6 @@ available when you run this Python code. The is discussed more below in
 <span class="p">)</span>
 </code></pre></div>
 
-
 <p>This can all be seen in the
 <a href="../../1-Experiments/Kubeflow/">Kubeflow Pipelines UI</a>:</p>
 <p><img alt="Example of an Experiment in Kubeflow Pipelines UI, highlighting how to choose runs within the experiment" src="../../images/kfp_experiment.png" /></p>
@@ -1001,11 +992,10 @@ available when you run this Python code. The is discussed more below in
 <p>Later when we want to reuse the pipeline, we can pass different arguments and do
 it all again.</p>
 <!-- prettier-ignore -->
-
 <p>!!! info "We create our experiment, upload our pipeline, and run from Python in 
     this example, but we could also do all this through the Kubeflow Pipelines 
     UI above.</p>
-<h2 id="understanding-what-computation-occurs-when">Understanding what computation occurs when</h2>
+<h2 id="understanding-what-computation-occurs-when">Understanding what computation occurs when<a class="headerlink" href="#understanding-what-computation-occurs-when" title="Permanent link">&para;</a></h2>
 <p>The above example uses Python code to define:</p>
 <ul>
 <li>The interface between Kubeflow Pipelines and our Docker containers doing the
@@ -1025,7 +1015,7 @@ tracing where they (and any other runtime data) go, such as any output a
 now - instead it takes note that a container will be there in future and
 remembers what data it will consume/generate. This can be seen by modifying and
 recompiling our pipeline:</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -1048,13 +1038,11 @@ recompiling our pipeline:</p>
     <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>And when we <code>compile</code>, we see print statements:</p>
 <div class="codehilite"><pre><span></span><code><span class="x">The value of x is 2</span>
 <span class="x">The value of a is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">a</span><span class="cp">}}</span><span class="x"></span>
 <span class="x">The value of avg_1.output is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="nv">averge</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">data</span><span class="cp">}}</span><span class="x"></span>
 </code></pre></div>
-
 
 <p>In the first print statement everything is normal. In the second and third print
 statements, however, we see string placeholders rather than actual output. So
@@ -1062,7 +1050,7 @@ while <code>compile</code> does "execute" <code>my_pipeline</code>, the KFP-spec
 don't actually generate results. This can also be seen in the YAML file that
 <code>compile</code> generates, for example looking at the portion defining our
 <code>average_result_overall</code> component:</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">average-3</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">average-3</span>
   <span class="nt">container</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
       <span class="p p-Indicator">[</span>
@@ -1081,14 +1069,12 @@ don't actually generate results. This can also be seen in the YAML file that
     <span class="nt">labels</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> pipelines.kubeflow.org/pipeline-sdk-type</span><span class="p">:</span> <span class="nv">kfp</span> <span class="p p-Indicator">}</span>
 </code></pre></div>
 
-
 <p>In this YAML we see the input parameters passed are placeholders for data from
 previous components rather than their actual value. This is because while KFP
 knows <strong>a</strong> result from <code>average-data</code> and <code>average-2-data</code> will be passed to
 average, but the <strong>value</strong> of that result is not available until the pipeline is
 actually run.</p>
 <!-- prettier-ignore -->
-
 <details class="info"><summary>Component naming within the YAML file</summary><p>Because we made an <code>average_op</code> factory function with <code>name='average'</code> above,
 our YAML file has component names that automatically increment to avoid 
 recreating the same name twice. We could have been fancier with our 
@@ -1101,12 +1087,11 @@ defined the name in our pipeline by using
 which prints "Woohoo!" a fixed number of times. whereas the other does the same
 but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</p>
 <!-- prettier-ignore -->
-
 <p>!!! info "Pipeline parameters are described more below, but they work like 
     parameters for functions. Pipelines can accept data (numbers, string URL's
     to large files in MinIO, etc.) as arguments, allowing a single generic 
     pipeline to work in many situations."</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">another_pipeline</span><span class="p">():</span>
@@ -1125,8 +1110,7 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
 <span class="p">)</span>
 </code></pre></div>
 
-
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">another_another_pipeline</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1145,7 +1129,6 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
 <span class="p">)</span>
 </code></pre></div>
 
-
 <p>The first works as you'd expect, but the second raises the exception:</p>
 <p><code>TypeError: 'PipelineParam' object cannot be interpreted as an integer</code></p>
 <p>Why? Because when authoring the pipeline <code>n</code> is a placeholder and has no value.
@@ -1157,8 +1140,8 @@ around this, but they're left to the reader to explore through the
 <em>components</em>) are meant to be reusable definitions of logic that are defined in
 static YAML files, with all dynamic decision making done inside components. This
 can make them a little awkward to define, but also helps them be more reusable.</p>
-<h2 id="data-exchange">Data Exchange</h2>
-<h3 id="passing-data-into-within-and-from-a-pipeline">Passing data into, within, and from a pipeline</h3>
+<h2 id="data-exchange">Data Exchange<a class="headerlink" href="#data-exchange" title="Permanent link">&para;</a></h2>
+<h3 id="passing-data-into-within-and-from-a-pipeline">Passing data into, within, and from a pipeline<a class="headerlink" href="#passing-data-into-within-and-from-a-pipeline" title="Permanent link">&para;</a></h3>
 <p>In the first example above, we pass:</p>
 <ul>
 <li>Numbers into our pipeline</li>
@@ -1181,19 +1164,18 @@ to our Docker image, it didn't really matter they were strings.</p>
 <p>You can still use non-string data types, but you need to pass them as serialized
 versions. So if we wanted our <code>avg_1</code> component to return both the numbers
 passed to it and the average returned as a dictionary, for example:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="python codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="s1">&#39;numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
     <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
-
 
 <p>We could modify our <code>average.py</code> in the Docker image write our dictionary of
 numbers and result to <code>out.txt</code> as JSON. But then when we pass the result to
 make <code>average_result_overall</code>, that component needs to deserialize the above
 JSON and pull the data from it that it needs. And because these results are not
 available when authoring the pipeline, something like this does not work:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="python codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1210,11 +1192,10 @@ available when authoring the pipeline, something like this does not work:</p>
     <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>At <code>compile</code> time, <code>avg_1.output</code> is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.</p>
-<h3 id="parameterizing-pipelines">Parameterizing pipelines</h3>
+<h3 id="parameterizing-pipelines">Parameterizing pipelines<a class="headerlink" href="#parameterizing-pipelines" title="Permanent link">&para;</a></h3>
 <p>Whenever possible, create pipelines in a generic way: define parameters that
 might change as pipeline inputs instead of writing values directly in your
 Python code. For example, if you want a pipeline to process data from
@@ -1224,7 +1205,7 @@ repeatedly by passing it the data location as an argument. You can
 <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">see this approach in our example notebooks</a>,
 where we accept MinIO credentials and the location to store our results as
 pipeline parameters.</p>
-<h3 id="passing-complexlarge-data-tofrom-a-pipeline">Passing complex/large data to/from a pipeline</h3>
+<h3 id="passing-complexlarge-data-tofrom-a-pipeline">Passing complex/large data to/from a pipeline<a class="headerlink" href="#passing-complexlarge-data-tofrom-a-pipeline" title="Permanent link">&para;</a></h3>
 <p>Although small data can often be stringified, passing by string is not suitable
 for complex data (large parquet files, images, etc.). It is common to use blob
 storage (for example: <a href="../../Storage/">MinIO</a>) or other outside storage methods
@@ -1242,7 +1223,7 @@ would be:</p>
   but it is a common pattern that lets you chain operations together</li>
 </ul>
 <p>Here is a schematic example of this pattern:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
+<div class="python codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts two groups of numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1266,14 +1247,13 @@ would be:</p>
                                        <span class="p">)</span>
 </code></pre></div>
 
-
 <p>Within this platform, the primary method for persisting large files is through
 MinIO as described in our <a href="Storage.md"><em>Storage</em> documentation</a>. Examples of
 this are also described in our
 <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage">example notebooks</a>
 (also found in <code>jupyter-notebooks/self-serve-storage/</code> on any notebook server).</p>
-<h2 id="typical-development-patterns">Typical development patterns</h2>
-<h3 id="end-to-end-pipeline-development">End-to-end pipeline development</h3>
+<h2 id="typical-development-patterns">Typical development patterns<a class="headerlink" href="#typical-development-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="end-to-end-pipeline-development">End-to-end pipeline development<a class="headerlink" href="#end-to-end-pipeline-development" title="Permanent link">&para;</a></h3>
 <p>A typical pattern for building pipelines in Kubeflow Pipelines is:</p>
 <ol>
 <li>Define components for each of your tasks</li>
@@ -1283,11 +1263,11 @@ this are also described in our
 <p>This pattern lets you define portable components that can be individually tested
 before combining them into a full pipeline. Depending on the type and complexity
 of task, there are different methods for building the components.</p>
-<h3 id="methods-for-authoring-components">Methods for authoring components</h3>
+<h3 id="methods-for-authoring-components">Methods for authoring components<a class="headerlink" href="#methods-for-authoring-components" title="Permanent link">&para;</a></h3>
 <p>Fundamentally, every component in Kubeflow Pipelines runs a container. Kubeflow
 Pipelines offers several methods to define these components with different
 levels of flexibility and complexity.</p>
-<h4 id="user-defined-container-components">User-defined container components</h4>
+<h4 id="user-defined-container-components">User-defined container components<a class="headerlink" href="#user-defined-container-components" title="Permanent link">&para;</a></h4>
 <p>You can define tasks through custom Docker images. The design pattern for this
 is:</p>
 <ul>
@@ -1307,12 +1287,11 @@ with – running the containers is effectively like running them locally using a
 terminal. Anything you can make into a container with that interface can be run
 in Kubeflow Pipelines.</p>
 <!-- prettier-ignore -->
-
 <p>!!! danger "...however, for security reasons the platform currently does not 
     allow users to build/run custom Docker images. This is planned for the 
     future, but in interim see <em>Lightweight components</em> for a way to develop 
     pipelines without custom images"</p>
-<h4 id="lightweight-python-components">Lightweight Python components</h4>
+<h4 id="lightweight-python-components">Lightweight Python components<a class="headerlink" href="#lightweight-python-components" title="Permanent link">&para;</a></h4>
 <p>While full custom containers offer great flexibility, sometimes they're heavier
 than needed. The Kubeflow Pipelines SDK also allows for
 <a href="https://www.kubeflow.org/docs/pipelines/sdk/lightweight-python-components/">Lightweight Python Components</a>,
@@ -1322,7 +1301,7 @@ during development, as well as for simple tasks that can be written and managed
 easily.</p>
 <p>This is an example of a lightweight pipeline with a single component that
 concatenates strings:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">kfp</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">kfp</span>
 <span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 <span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">func_to_container_op</span>
 
@@ -1345,7 +1324,6 @@ concatenates strings:</p>
     <span class="n">concat_result_2</span> <span class="o">=</span> <span class="n">concat_string_component</span><span class="p">(</span><span class="n">concat_result_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">str3</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>We see that our <code>concat_string</code> component is defined directly in Python rather
 than from a Docker image. In the end, our function still runs in a container,
 but we don't have to built it ourselves: <code>func_to_container_op()</code> runs our
@@ -1356,14 +1334,12 @@ Registry and any
 <a href="https://github.com/StatCan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml">whitelisted images</a>
 from Docker hub.</p>
 <!-- prettier-ignore -->
-
 <details class="danger"><summary>Lightweight components have a number of advantages but also some drawbacks</summary><p>See <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a> 
 of their basic characteristics, as well as 
 <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb">this example</a> 
 which uses them in a more complex pipeline</p>
 </details>
 <!-- prettier-ignore -->
-
 <details class="info"><summary>A convenient base image to use is the the image your notebook server is running</summary><p>By using the same image as your notebook server, you ensure Kubeflow 
 Pipelines has the same packages available to it as the notebook where you 
 do your analysis.  This can help avoid errors from importing packages 
@@ -1377,13 +1353,13 @@ necessary software.  That way you reduce the startup time for each step in
 your pipeline.
 <img alt="A Kubeflow Pipeline" src="../../images/kubeflow_pipelines_notebook_server_image.png" /></p>
 </details>
-<h4 id="defining-components-directly-in-yaml">Defining components directly in YAML</h4>
+<h4 id="defining-components-directly-in-yaml">Defining components directly in YAML<a class="headerlink" href="#defining-components-directly-in-yaml" title="Permanent link">&para;</a></h4>
 <p>Components can be defined directly with a YAML file, where the designer can run
 terminal commands from a given Docker image. This can be a great way to make
 non-Python pipeline components from existing containers. As with all components,
 we can pass both arguments and data files into/out of the component. For
 example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
+<div class="yaml codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
 <span class="nt">inputs</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span>
 <span class="nt">      name</span><span class="p">:</span> <span class="nv">Input text 1</span><span class="p p-Indicator">,</span>
@@ -1411,10 +1387,9 @@ example:</p>
       <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt"> outputPath</span><span class="p">:</span> <span class="nv">Output filename</span> <span class="p p-Indicator">}</span>
 </code></pre></div>
 
-
 <p>This example concatenates two strings like our lightweight example above. We
 then define a component in python from this YAML:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">load_component_from_file</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">load_component_from_file</span>
 <span class="n">echo_and_tee</span> <span class="o">=</span> <span class="n">load_component_from_file</span><span class="p">(</span><span class="s1">&#39;path/to/echo_and_tee.yaml&#39;</span><span class="p">)</span>
 
 <span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span>
@@ -1425,11 +1400,10 @@ then define a component in python from this YAML:</p>
     <span class="n">echo_and_tee_task_2</span> <span class="o">=</span> <span class="n">echo_and_tee</span><span class="p">(</span><span class="n">echo_and_tee_task_1</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>See
 <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">this example</a>
 for more details on using existing components.</p>
-<h4 id="reusing-existing-components">Reusing existing components</h4>
+<h4 id="reusing-existing-components">Reusing existing components<a class="headerlink" href="#reusing-existing-components" title="Permanent link">&para;</a></h4>
 <p>Similar to well abstracted functions, well abstracted components can reduce the
 amount of code you have to write for any given project. For example, rather than
 teaching your machine learning <code>train_model</code> component to also save the

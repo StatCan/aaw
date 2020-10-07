@@ -731,7 +731,6 @@ compartiment personnel. Pour vous connecter, il vous suffit d'utiliser votre
 selon le format <code>prenom-nom</code>.</p>
 <p><img alt="Navigateur MinIO avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d'union)" src="../images/minio_self_serve_bucket.png" /></p>
 <!-- prettier-ignore -->
-
 <div class="admonition danger">
 <p class="admonition-title">Impossible de partager des fichiers avec votre OpenID</p>
 <p>À cause d'un <a href="https://github.com/minio/minio/issues/8935">bogue dans MinIO</a>,
@@ -753,7 +752,6 @@ mais en attendant, vous pouvez y accéder par programme en utilisant l'outil de
 ligne de commande <code>mc</code>, ou par l'intermédiaire des appels d'API S3 dans R ou
 Python.</p>
 <!-- prettier-ignore -->
-
 <div class="admonition tip">
 <p class="admonition-title">Voir les exemples de blocs-notes!</p>
 <p>Un modèle est fourni pour se connecter dans <code>R</code>, <code>python</code>, ou par la ligne
@@ -764,7 +762,7 @@ de vos besoins.</p>
 <h4 id="connexion-a-laide-de-mc">Connexion à l'aide de <code>mc</code></h4>
 <p>Pour vous connecter, exécutez la commande suivante (remplacer
 <code>NOMCOMPLET=blair-drummond</code> par votre <code>nom-prénom</code> réel) :</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
+<div class="sh codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 <span class="nv">NOMCOMPLET</span><span class="o">=</span>blair-drummond
 <span class="c1"># Obtenir les justificatifs d&#39;identité</span>
 <span class="nb">source</span> /vault/secrets/minio-minimal-tenant1
@@ -782,7 +780,6 @@ mc mb minio-minimal/shared/<span class="si">${</span><span class="nv">NOMCOMPLET
 mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>/test.txt
 </code></pre></div>
 
-
 <p>Maintenant, ouvrez le document dans
 <a href="https://minimal-tenant1-minio.example.ca">le navigateur MinIO</a>. Vous y verrez
 votre fichier de test.</p>
@@ -792,7 +789,6 @@ voir les autres options qui s'offrent à vous, comme
 <code>mc ls minio-minimal/PRÉNOM-NOM/</code> pour afficher le contenu de votre
 compartiment.</p>
 <!-- prettier-ignore -->
-
 <details class="tip"><summary>Autres options de stockage</summary><p>Pour utiliser une de nos autres options de stockage, <code>pachyderm</code> ou
 <code>premium</code>, remplacez simplement  la valeur <code>minimal</code> dans le programme
 ci-dessus par le type dont vous avez besoin.</p>

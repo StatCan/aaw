@@ -600,7 +600,6 @@ interagir avec les pipelines Kubeflow par l'entremise :</p>
   pour les exécuter immédiatement, ou même les enregistrer pour plus tard.</li>
 </ul>
 <!-- prettier-ignore -->
-
 <details class="exemple"><summary>Des exemples supplémentaires dans les bloc-notes</summary><p>Des exemples plus exhaustifs de pipelines produits expressément pour cette
 plateforme sont accessibles dans
 <a href="https://github.com/StatCan/jupyter-notebooks">GitHub</a> (et dans chaque
@@ -639,7 +638,6 @@ exemple :</p>
 <li>...</li>
 </ol>
 <!-- prettier-ignore -->
-
 <div class="admonition example">
 <p class="admonition-title">Exemple d'un pipeline</p>
 <p>Voici un exemple :</p>
@@ -678,7 +676,6 @@ exemple :</p>
     <span class="n">_average_op</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-
 <p>Vous pouvez trouver le pipeline complet dans
 <a href="https://github.com/StatCan/jupyter-notebooks">l'exemple <code>map-reduce-pipeline</code></a>.</p>
 </div>
@@ -713,7 +710,7 @@ définit l'emplacement de l'image du menu fixe, la façon de lui transmettre des
 arguments et les résultats à extraire du conteneur. Pour utiliser réellement ces
 <code>ContainerOp</code> dans notre pipeline, nous créons des fonctions de fabrique comme
 <code>average_op</code> (car nous voudrons probablement plus d'un <em>composant</em> moyen).</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span>\<span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Fabrique de ContainerOp moyen</span>
@@ -743,13 +740,12 @@ arguments et les résultats à extraire du conteneur. Pour utiliser réellement 
     <span class="p">)</span>
 </code></pre></div>
 
-
 <p>Nous définissons notre pipeline comme une fonction Python qui utilise les
 fabriques de <code>ComponentOp</code> ci-dessus, décorées par l'élément décoratif
 <code>@dsl.pipeline</code>. Notre pipeline utilise notre composant <em>moyen</em> en lui
 transmettant des nombres. Puis, nous utilisons les résultats <em>moyens</em> en les
 transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;nom de mon pipeline&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -767,12 +763,11 @@ transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</co
     <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>Enfin, nous enregistrons une définition YAML de notre pipeline pour la
 transmettre plus tard à Kubeflow Pipelines. Ce fichier YAML décrit à Kubeflow
 Pipelines exactement comment exécuter notre pipeline. Décompressez-le et voyez
 par vous-même!</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
 <span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
 <span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
     <span class="n">my_pipeline</span><span class="p">,</span>
@@ -780,9 +775,7 @@ par vous-même!</p>
 <span class="p">)</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Définition de pipeline exportée vers </span><span class="si">{</span><span class="n">pipeline_yaml</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-
 <!-- prettier-ignore -->
-
 <p>??? avertissement "Kubeflow Pipelines est une bête paresseuse".
     Il est utile de garder à l'esprit le calcul qui se produit lorsque vous
     exécutez ce code Python par rapport à ce qui se passe lorsque vous soumettez
@@ -794,7 +787,7 @@ par vous-même!</p>
     disponibles lorsque vous exécuterez ce code Python. Ce point est abordé plus
     en détail plus loin, dans la section <em>Comprendre l'ordre des calculs</em>.</p>
 <p>Pour exécuter notre pipeline, nous définissons une expérience :</p>
-<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;calcul de moyenne de pipeline&quot;</span>
+<div class="python codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;calcul de moyenne de pipeline&quot;</span>
 
 <span class="kn">import</span> <span class="nn">kfp</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
@@ -803,13 +796,12 @@ par vous-même!</p>
 <span class="n">pl_params</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="p">}</span>
 </code></pre></div>
 
-
 <p>Voici ce qui peut être observé dans
 <a href="../../1-Experiences/Kubeflow/">l'interface utilisateur</a> de Kubeflow Pipelines :</p>
 <p><img alt="Expérience Kubeflow Pipelines" src="../../images/kfp_experiment.png" /></p>
 <p>Ensuite, nous exécutons une instance de notre pipeline en utilisant les
 arguments souhaités :</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
     <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="c1"># Exécuter dans l&#39;expérience ci-dessus</span>
@@ -819,7 +811,6 @@ arguments souhaités :</p>
     <span class="n">les</span> <span class="n">paramètres</span> <span class="n">en</span> <span class="n">fonction</span> <span class="n">desquels</span> <span class="n">nous</span> <span class="n">souhaitons</span> <span class="n">exécuter</span> <span class="n">le</span> <span class="n">pipeline</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Voici ce que l'on peut également voir dans l'interface utilisateur :</p>
 <p><img alt="Expérience Kubeflow Pipelines" src="../../images/kfp_experiment.png" /></p>

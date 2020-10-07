@@ -656,14 +656,14 @@
                 
                   <h1>Jupyter</h1>
                 
-                <h2 id="jupyter">Jupyter</h2>
-<h3 id="friendly-r-and-python-experience">Friendly R and Python experience</h3>
+                <h2 id="jupyter">Jupyter<a class="headerlink" href="#jupyter" title="Permanent link">&para;</a></h2>
+<h3 id="friendly-r-and-python-experience">Friendly R and Python experience<a class="headerlink" href="#friendly-r-and-python-experience" title="Permanent link">&para;</a></h3>
 <p>Jupyter gives you <strong>notebooks</strong> to write your code and make visualizations. You
 can quickly iterate, visualize, and share your analyses. Because it's running on
 a server (that you set up in the last section) you can do really big analyses on
 centralized hardware! Adding as much horsepower as you need! And because it's on
 the cloud, you can share it with your colleagues too.</p>
-<h4 id="explore-your-data">Explore your data</h4>
+<h4 id="explore-your-data">Explore your data<a class="headerlink" href="#explore-your-data" title="Permanent link">&para;</a></h4>
 <p>Jupyter comes with a number of features (and we can add more)</p>
 <ul>
 <li>Integrated visuals within your notebook</li>
@@ -671,7 +671,7 @@ the cloud, you can share it with your colleagues too.</p>
 <li>You can share your workspace with colleagues.</li>
 </ul>
 <p><img alt="Interactive Widgets" src="../../images/jupyter_visual.png" /></p>
-<h4 id="ide-in-the-browser">IDE in the browser</h4>
+<h4 id="ide-in-the-browser">IDE in the browser<a class="headerlink" href="#ide-in-the-browser" title="Permanent link">&para;</a></h4>
 <p>Create for exploring, and also great for writing code</p>
 <ul>
 <li>Linting and a debugger</li>
@@ -681,45 +681,40 @@ the cloud, you can share it with your colleagues too.</p>
 </ul>
 <p><img alt="IDE features" src="../../images/jupyter_ide.png" /></p>
 <p><strong>More information on Jupyter <a href="https://jupyter.org">here</a></strong></p>
-<h3 id="get-started-with-the-examples">Get started with the examples</h3>
+<h3 id="get-started-with-the-examples">Get started with the examples<a class="headerlink" href="#get-started-with-the-examples" title="Permanent link">&para;</a></h3>
 <p>When you started your server, it got loaded with a bunch of example notebooks.
 Great notebooks to start with are <code>R/01-R-Notebook-Demo.ipynb</code>, or the notebooks
 in <code>scikitlearn</code>. <code>pytorch</code> and <code>tensorflow</code> are great if you are familiar with
 machine learning. The <code>mapreduce-pipeline</code> and <code>ai-pipeline</code> are more advanced.</p>
 <!-- prettier-ignore -->
-
 <details class="danger"><summary>Some notebooks only work in certain server versions</summary><p>For instance, <code>gdal</code> is only in the geomatics image. So if you use another
 image then a notebook using <code>gdal</code> might not work.</p>
 </details>
-<h3 id="adding-software">Adding software</h3>
+<h3 id="adding-software">Adding software<a class="headerlink" href="#adding-software" title="Permanent link">&para;</a></h3>
 <p>You do not have <code>sudo</code> in Jupyter, but you can use</p>
-<div class="codehilite"><pre><span></span><code>conda install --use-local your_package_name
+<div class="sh codehilite"><pre><span></span><code>conda install --use-local your_package_name
 </code></pre></div>
-
 
 <p>or</p>
-<div class="codehilite"><pre><span></span><code>pip install --user your_package_name
+<div class="sh codehilite"><pre><span></span><code>pip install --user your_package_name
 </code></pre></div>
-
 
 <p><strong>Don't forget to restart your Jupyter kernel afterwards, to make new packages
 available.</strong></p>
 <!-- prettier-ignore -->
-
 <details class="tip"><summary>Make sure to restart the Jupyter kernel after installing new software</summary><p>If you install software in a terminal, but your Jupyter kernel was already
 running, then it will not be updated.</p>
 </details>
 <!-- prettier-ignore -->
-
 <details class="tip"><summary>Is there something that you can't install?</summary><p>If you need something installed, reach us or
 <a href="https://github.com/StatCan/kubeflow-containers">open a GitHub issue</a>. We
 can add it to the default software.</p>
 </details>
-<h2 id="getting-data-in-and-out-of-jupyter">Getting Data in and out of Jupyter</h2>
+<h2 id="getting-data-in-and-out-of-jupyter">Getting Data in and out of Jupyter<a class="headerlink" href="#getting-data-in-and-out-of-jupyter" title="Permanent link">&para;</a></h2>
 <p>You can upload and download data to/from JupyterHub directly in the menu. There
 is an upload button at the top, and you can right-click most files or folders to
 download them.</p>
-<h3 id="shareable-bucket-storage">Shareable "Bucket" storage</h3>
+<h3 id="shareable-bucket-storage">Shareable "Bucket" storage<a class="headerlink" href="#shareable-bucket-storage" title="Permanent link">&para;</a></h3>
 <p><strong>The other option</strong> is high-volume storage with
 <a href="https://en.wikipedia.org/wiki/Object_storage">Object Storage</a>. Because storage
 is important for experiments, publishing, and exploring datasets, it has its own

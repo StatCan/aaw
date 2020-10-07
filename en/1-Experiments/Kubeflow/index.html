@@ -684,22 +684,21 @@
                 
                   <h1>Kubeflow</h1>
                 
-                <h2 id="getting-started-with-kubeflow">Getting started with Kubeflow</h2>
-<h3 id="what-does-kubeflow-do">What does Kubeflow do?</h3>
+                <h2 id="getting-started-with-kubeflow">Getting started with Kubeflow<a class="headerlink" href="#getting-started-with-kubeflow" title="Permanent link">&para;</a></h2>
+<h3 id="what-does-kubeflow-do">What does Kubeflow do?<a class="headerlink" href="#what-does-kubeflow-do" title="Permanent link">&para;</a></h3>
 <p>Kubeflow runs your <strong>workspaces</strong>. You can have notebook servers (called Jupyter
 Servers), and in them you can create analyses in R and Python with interactive
 visuals. You can save and upload data, download it, and create shared workspaces
 for your team.</p>
 <p><img alt="Kubeflow Manages the Jupyter Servers" src="../../images/jupyter_visual.png" /></p>
 <p><strong>Let's get started!</strong></p>
-<h2 id="create-a-server">Create a Server</h2>
-<h3 id="log-into-kubeflow">Log into Kubeflow</h3>
+<h2 id="create-a-server">Create a Server<a class="headerlink" href="#create-a-server" title="Permanent link">&para;</a></h2>
+<h3 id="log-into-kubeflow">Log into Kubeflow<a class="headerlink" href="#log-into-kubeflow" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Log into <a href="https://portal.azure.com">the Azure portal</a> <strong>using your
   <code>cloud.statcan.ca</code> credentials</strong>.</li>
 </ul>
 <!-- prettier-ignore -->
-
 <details class="warning"><summary>Log into the Azure Portal using your Cloud Credentials</summary><p>You have to login to the azure portal <strong>using your StatCan credentials</strong>.
 <code>first.lastname@cloud.statcan.ca</code>. You can do that using
 <a href="https://portal.azure.com">the Azure portal</a>.
@@ -710,7 +709,6 @@ for your team.</p>
   <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
 </ul>
 <!-- prettier-ignore -->
-
 <details class="failure"><summary>Why am I getting <code>Missing url parameter: code</code>?</summary><p>If you try to log into Kubeflow and you get the message:</p>
 <blockquote>
 <p><code>Missing url parameter: code</code></p>
@@ -726,7 +724,7 @@ in with your cloud credentials.</p>
 <ul>
 <li>Then click <strong>+ New Server</strong></li>
 </ul>
-<h3 id="configuring-your-server">Configuring your server</h3>
+<h3 id="configuring-your-server">Configuring your server<a class="headerlink" href="#configuring-your-server" title="Permanent link">&para;</a></h3>
 <ul>
 <li>You will get a template to create your notebook server. <strong>Note:</strong> the name
   must be lowercase letters with hyphens. <strong>No spaces, and no underscores.</strong></li>
@@ -745,7 +743,7 @@ in with your cloud credentials.</p>
 <ul>
 <li>If you want to use a GPU, check if the image says <code>cpu</code> or <code>gpu</code>.</li>
 </ul>
-<h3 id="cpu-and-memory">CPU and Memory</h3>
+<h3 id="cpu-and-memory">CPU and Memory<a class="headerlink" href="#cpu-and-memory" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>At the time of writing (April 21, 2020) there are two types of computers in
@@ -761,12 +759,11 @@ available, so you may have looser restrictions.</p>
 </li>
 </ul>
 <!-- prettier-ignore -->
-
 <div class="admonition note">
 <p class="admonition-title">Use GPU machines responsibly</p>
 <p>There are fewer GPU machines than CPU machines, so use them responsibly.</p>
 </div>
-<h3 id="storing-your-data">Storing your data</h3>
+<h3 id="storing-your-data">Storing your data<a class="headerlink" href="#storing-your-data" title="Permanent link">&para;</a></h3>
 <ul>
 <li>You'll want to create a data volume! You'll be able to save your work here,
   and if you shut down your server, you'll be able to just remount your old data
@@ -775,38 +772,35 @@ available, so you may have looser restrictions.</p>
 </ul>
 <p><img alt="Create a Data Volume" src="../../images/kubeflow_volumes.png" /></p>
 <!-- prettier-ignore -->
-
 <div class="admonition tip">
 <p class="admonition-title">Check for old volumes by looking at the Existing option</p>
 <p>When you create your server you have the option of reusing an old volume
 or creating a new one. You probably want to reuse your old volume.</p>
 </div>
-<h3 id="and-create">And... Create!!!</h3>
+<h3 id="and-create">And... Create!!!<a class="headerlink" href="#and-create" title="Permanent link">&para;</a></h3>
 <ul>
 <li>If you're satisfied with the settings, you can now create the server! It may
   take a few minutes to spin up depending on the resources you asked for. (GPUs
   take longer.)</li>
 </ul>
 <!-- prettier-ignore -->
-
 <div class="admonition success">
 <p class="admonition-title">Your server is running</p>
 <p>If all goes well, your server should be running!!! You will now have the
 option to connect, and <a href="/daaas/en/1-Experiments/Jupyter">try out Jupyter!</a></p>
 </div>
-<h2 id="share-your-workspace">Share your workspace</h2>
+<h2 id="share-your-workspace">Share your workspace<a class="headerlink" href="#share-your-workspace" title="Permanent link">&para;</a></h2>
 <p>In Kubeflow every user has a <strong>namespace</strong>. Your namespace belongs to you, and
 it's where all your resources live. If you want to collaborate with someone you
 need to share a namespace. So you can do that either by sharing your own
 namespace, or more preferably, <strong>by creating a team namespace</strong>.</p>
 <p>The link to create a new namespace is in the <strong>&#8942;</strong> menu on
 <a href="https://portal.covid.cloud.statcan.ca/#kubeflow">the Kubeflow section of the portal</a>.</p>
-<h3 id="manage-contributors">Manage contributors</h3>
+<h3 id="manage-contributors">Manage contributors<a class="headerlink" href="#manage-contributors" title="Permanent link">&para;</a></h3>
 <p>You can add or remove people from a namespace you already own through the
 <strong>Manage Contributors</strong> menu in Kubeflow.</p>
 <p><img alt="Contributors Menu" src="../../images/kubeflow_contributors.png" /></p>
 <!-- prettier-ignore -->
-
 <div class="admonition success">
 <p class="admonition-title">Now you and your colleagues can share access to a server!</p>
 <p>Now you can share a server with colleagues! Try it out!</p>
