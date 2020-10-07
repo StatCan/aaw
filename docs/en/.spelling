@@ -11,6 +11,7 @@ GPUs
 hoc
 KFP-specific
 mc
+minimize
 namespace
 namespaces
 organized
@@ -20,6 +21,7 @@ programmatically
 S3-Compliant
 serialized
 stringified
+SSDs
 visualization
 visualizations
 visualize

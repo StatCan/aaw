@@ -1,64 +1,73 @@
-# Storage Types
+# Overview
 
-The platform provides two main types of storage:
+The platform provides several main types of storage:
 
 - Disk (also called Volumes on the Notebook Server creation screen)
 - Bucket ("Blob" or S3 storage, provided through MinIO)
+- Data Lakes (coming soon)
 
 Depending on your use case, either may be most suitable:
 
-|   Type |                                                                                                         Simultaneous Users |                                                   Speed | Total size               |
-| -----: | -------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------: | ------------------------ |
-|   Disk |                                       One compute instance at a time (one notebook server, step in kubeflow pipeline, ...) |                        Fastest (throughput and latency) | <=512GB total per drive  |
-| Bucket | Many compute instances at once (ex: multiple training processes on different notebook servers all accessing the same data) | Fast-ish (Fast download, modest upload, modest latency) | Infinite (within reason) |
+|   Type |                                                       Simultaneous Users |                                                   Speed | Total size               | Sharable with Other Users            |
+| -----: | -----------------------------------------------------------------------: | ------------------------------------------------------: | ------------------------ | ------------------------------------ |
+|   Disk |                                    One machine/notebook server at a time |                        Fastest (throughput and latency) | <=512GB total per drive  | No                                   |
+| Bucket | Simultaneous access from many machines/notebook servers at the same time | Fast-ish (Fast download, modest upload, modest latency) | Infinite (within reason) | [Yes](#sharing-from-private-buckets) |
 
 <!-- prettier-ignore -->
 ??? info "If you're unsure which to choose, don't sweat it"
     These are guidelines, not an exact science - pick what sounds best now and run with it.  The best choice for a complicated usage is non-obvious and often takes hands-on experience, so just trying something will help.  For most situations both options work well even if they're not perfect, and remember that data can always be copied later if you change your mind.
 
-## Disks
+# Disks
 
-### Overview
+## Overview
 
-Disks are the familiar SSD style file systems! When creating your notebook
-server, you request them by adding Data Volumes to your notebook server. They
-are automatically mounted at the directory you choose, and serve as a simple and
-reliable way to preserve data attached to a Notebook Server. Even if you delete
-your Notebook Server later, your disk will not be deleted. You can then mount
-that same disk (with all its contents) to a new Notebook Server later as shown:
+Disks are the familiar hard drive style file systems you're used to, provided to
+you from fast solid state drives (SSDs)! When creating your notebook server, you
+request them by adding Data Volumes to your notebook server (pictured below,
+with `Type = New`). They are automatically mounted at the directory
+(`Mount Point`) you choose, and serve as a simple and reliable way to preserve
+data attached to a Notebook Server.
 
 ![Adding an existing volume to a new notebook server](images/kubeflow_existing_volume.png)
 
-Or, if you're done with the disk, [delete it](#deleting-disk-storage).
+When you delete your Notebook Server, your disks **are not deleted**. This let's
+you reuse that same disk (with all its contents) on a new Notebook Server later
+(as shown above with `Type = Existing` and the `Name` set to the volume you want
+to reuse). If you're done with the disk and it's contents,
+[delete it](#deleting-disk-storage).
 
 <!-- prettier-ignore -->
-??? info "Disks are never destroyed by default, but you pay for them whether they're attached to a Notebook Server or not"
-    When you create a disk, you agree to [pay](#pricing) for the cost of that drive until it is destroyed, just like how you agree to pay for the CPU/RAM you request when making a Notebook Server.  Unlike with Notebook Server CPU/RAM, however, when you shut down a Notebook Server your disks are not deleted.  This is to let you reuse those drives, but means that when you shutdown a Notebook Server **you are still paying for the storage**.  You pay for any disk listed in the Notebook Volumes section of the Notebook Server page (above).  Storage is [pretty cheap](#pricing) but can still add up - see [Deleting Disk Storage](#deleting-disk-storage) for more info.
-    
-As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:
+??? warning "You pay for all disks you own, whether they're attached to a Notebook Server or not"
+    As soon as you create a disk, you're [paying](#pricing) for it until it is [deleted](#deleting-disk-storage), even if it's original Notebook Server is deleted.  See [Deleting Disk Storage](#deleting-disk-storage) for more info
 
-- At 9AM, create a Notebook Server (request 2CPU/8GB RAM and a 32GB attached
-  disk)
-- Do work throughout the day, saving results to the attached disk
-- At 5PM, shut down your Notebook Server to avoid paying for it overnight
-  - NOTE: The attached disk **is not destroyed** by this action
-- At 9AM the next day, create a new Notebook Server and **attach your existing
-  disk**
-- Continue your work...
-
-### Pricing
+## Pricing
 
 <!-- prettier-ignore -->
 ??? info "Pricing models are tentative and may change"
     As of writing, pricing is covered by the platform for initial users.  This guidance explains how things are expected to be priced priced in future, but this may change.
 
 When mounting a disk, you get an
-[Azure Manage Disk](https://azure.microsoft.com/en-us/pricing/details/managed-disks/).
+[Azure Managed Disk](https://azure.microsoft.com/en-us/pricing/details/managed-disks/).
 The **Premium SSD Managed Disks** pricing shows the cost per disk based on size.
 Note that you pay for the size of disk requested, not the amount of space you
 are currently using.
 
-### Deleting Disk Storage
+<!-- prettier-ignore -->
+??? info "Tips to minimize costs"
+    As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:
+    
+    * At 9AM, create a Notebook Server (request 2CPU/8GB RAM and a 32GB attached
+      disk)
+    * Do work throughout the day, saving results to the attached disk
+    * At 5PM, shut down your Notebook Server to avoid paying for it overnight
+      * NOTE: The attached disk **is not destroyed** by this action
+    * At 9AM the next day, create a new Notebook Server and **attach your existing
+      disk**
+    * Continue your work...
+    
+    This keeps all your work safe without paying for the computer when you're not using it
+
+## Deleting Disk Storage
 
 To see your disks, check the Notebook Volumes section of the Notebook Server
 page (shown below). You can delete any unattached disk (orange icon on the left)
@@ -66,7 +75,7 @@ by clicking the trash can icon.
 
 ![Delete an unattached volume from the Notebook Server screen](images/kubeflow_delete_disk.png)
 
-## Buckets (via MinIO)
+# Buckets (via MinIO)
 
 Buckets are slightly more complicated, but they are good at three things:
 
@@ -80,7 +89,7 @@ Buckets are slightly more complicated, but they are good at three things:
   simple web interface. This is great for sharing data with people outside of
   your workspace.
 
-### Accessing your Bucket
+## Accessing your Bucket
 
 There are multiple ways to upload and download data from your MinIO buckets:
 
@@ -90,22 +99,22 @@ There are multiple ways to upload and download data from your MinIO buckets:
 - [MinIO command line tool](#minio-command-line-tool) `mc`
 - [Other S3-Compliant Methods](#other-s3-compliant-methods)
 
-These methods, described more below, have strengths and weaknesses for different
-use cases, but **they are equivalent** with respect to the actual data stored.
-You can:
+<!-- prettier-ignore -->
+??? info "Different access methods have strengths and weaknesses, but the data all goes to the same place"
+    You can:
+    
+    - Upload a file using the mounted folder on a notebook server
+    - Rename that file using the web portal
+    - Download that file using the `mc` tool
 
-- Upload a file using the mounted folder on a notebook server
-- Rename that file using the web portal
-- Download that file using the `mc` tool
-
-and all steps will be working on **the same file**. This lets you mix and match
-based on what is easiest for your task.
+    and all steps will be working on **the same file**. This lets you mix and match
+    based on what is easiest for your tasks.
 
 <!-- prettier-ignore -->
 ??? info "There are two different MinIO services"
     The examples below use the `minimal-tenant1` instance of MinIO, but there is also a second instance: `premium-tenant1`.  See [Bucket Types and Access Scopes](#bucket-types-and-access-scopes) for more details.  To use `premium-tenant1` in these examples, just substitute that name in for `minimal-tenant1`.
 
-#### MinIO Mounted Folders on a Notebook Server
+### MinIO Mounted Folders on a Notebook Server
 
 Automatically, all Notebook Servers have your MinIO storage mounted as
 directories. This is located in `~/minio`:
@@ -119,10 +128,10 @@ accessible wherever you can access your MinIO bucket, rather than just from the
 Notebook Server it is attached to like a [Disk](#disks)).
 
 <!-- prettier-ignore -->
-??? warn "Copying into a MinIO folder then immediately accessing the file might cause trouble"
-    There is currently a bug where files copied into a MinIO directory are sometimes not immediately available in the file browser.  They copy successfully and eventually appear in the folder system, but this may be delayed a few seconds or minutes.  If your use case needs you to copy files into a MinIO mounted folder and then access them immediately, you can still copy with the folder and then see the files using the [Web Portal](#minio-web-portal), [the mc tool](#minio-command-line-tool), or [Other S3 Compliant Methods](#other-s3-compliant-methods) to get immediate access to the file.
+??? warning "Files copied into a mounted MinIO folder might take a few moments to be readable"
+    When you copy files into a MinIO folder, they are immediately stored and accessible in MinIO (e.g.: you can immediately see them in the [Web Portal](#minio-web-portal)).  But, new files may take a few moments for the mounting service to notice and serve them in the mounted folder.  If your use case needs access to these files immediately after copying them, try the other read methods ([the mc tool](#minio-command-line-tool) or [Other S3 Compliant Methods](#other-s3-compliant-methods)).
 
-#### MinIO Web Portal
+### MinIO Web Portal
 
 The MinIO service can be accessible through a
 [web portal](https://minimal-tenant1-minio.covid.cloud.statcan.ca/). To sign in
@@ -137,14 +146,14 @@ as your Kubeflow namespace (likely `firstname-lastname`):
 
 This lets you browse, upload/download, delete, or share files.
 
-#### MinIO Command Line Tool
+### MinIO Command Line Tool
 
 MinIO provides the command line tool `mc` to access your data from a terminal.
 `mc` can communicate with one or more MinIO instances to let you upload/download
 files. For example:
 
 <!-- prettier-ignore -->
-??? info "To run the below example yourself, replace `BUCKETNAME`'s value with your first/last name"
+??? info "To run the below example yourself, replace `BUCKETNAME`'s value with your first/last name".  For example: `BUCKETNAME=andrew-scribner`.
     Ignore this text.  Required for CI...
 
 ```sh
@@ -166,10 +175,10 @@ mc config host add minimal $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
 # other name will be rejected.
 
 # Private bucket ("mb" = "make bucket")
-mc mb minimal/${BUCKETNAME}
+mc mb -p minimal/${BUCKETNAME}
 
 # Shared bucket
-mc mb minimal/shared/${BUCKETNAME}
+mc mb -p minimal/shared/${BUCKETNAME}
 
 # There you go! Now you can copy over files or folders!
 # Create test.txt (if it does not exist) and copy it to your bucket:
@@ -190,7 +199,7 @@ Now open the [MinIO Web Portal](#minio-web-portal) or browse to
     command line, provided in [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage) (also auto-mounted to all jupyter notebook servers in `~/jupyter-notebook`). You can
     copy-paste and edit these examples! They should suit most of your needs.
 
-#### Other S3-Compliant Methods
+### Other S3-Compliant Methods
 
 MinIO is S3 compliant - it uses the same standard as Amazon S3 and other bucket
 services. Tools designed to use S3 will generally also work with MinIO, for
@@ -198,7 +207,7 @@ example Python packages and instructions on how to access files from S3. Some
 examples of this are shown in
 [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage).
 
-### Bucket Types and Access Scopes
+## Bucket Types and Access Scopes
 
 Two types of buckets are available:
 
@@ -215,27 +224,17 @@ always change your mind if you see your work limited by file transfer speeds.
 Within each bucket type, everyone has two storage locations they can use, each
 providing different access scopes:
 
-- Private:
-  - Accessible only by someone within your namespace (typically only by you from
-    your own notebook servers/remote desktop, unless you're working in a
-    [shared namespace](./Collaboration.md#requesting-a-namespace))
-  - Examples:
-    - mounted as a drive in notebook server:
-      `~/minio/minimal-tenant1/private/myfolder/myfile`
-    - via `mc` tool/MinIO portal: `firstname-lastname/myfolder/myfile`
-- Shared
-  - Writable only by you, but readable by anyone with access to the platform.
-    Great for sharing public data across teams
-  - Examples:
-    - mounted as a drive in notebook server:
-      `~/minio/minimal-tenant1/shared/myfolder/myfile`
-    - via `mc` tool/MinIO portal: `shared/firstname-lastname/myfolder/myfile`
+|                                        |                                                                                                     Private                                                                                                      |                                                        Shared                                                        |
+| -------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
+|                                Summary | Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a [shared namespace](./Collaboration.md#requesting-a-namespace)) | Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams |
+| Mount location in the Notebook Server: |                                                                                `~/minio/minimal-tenant1/private/myfolder/myfile`                                                                                 |                                   `~/minio/minimal-tenant1/shared/myfolder/myfile`                                   |
+|    Location in `mc` tool/MinIO portal: |                                                                                       `firstname-lastname/myfolder/myfile`                                                                                       |                                     `shared/firstname-lastname/myfolder/myfile`                                      |
 
 <!-- prettier-ignore -->
 ??? info "You can see many directories in the shared MinIO bucket, but you can only write to your own"
     Everyone has read access to all folders in the `shared` MinIO bucket, but write permissions are always restricted to the owner.
 
-### Sharing from Private Buckets
+## Sharing from Private Buckets
 
 You can easily share individual files from a private bucket. Just use the
 "share" option for a specific file and you will be provided a link that you can
@@ -243,7 +242,7 @@ send to a collaborator!
 
 ![MinIO browser with a shareable link to a file](images/minio_self_serve_share.png)
 
-### Pricing
+## Pricing
 
 <!-- prettier-ignore -->
 ??? info "Pricing models are tentative and may change"
