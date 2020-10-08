@@ -4,8 +4,8 @@
 
 A presentation was given at Stratosphere:
 
-[YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
-[SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
+* [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
+* [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
 
 ## Background
 
