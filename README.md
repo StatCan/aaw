@@ -2,9 +2,10 @@
 
 # Data Analytics as a Service
 
-A presentation was given at Statistics Canada:
+A presentation was given at Stratosphere:
 
-[Advanced Analytics Workspace](https://govcloud.blob.core.windows.net/docs/kubeflow-aaw.pdf)
+[YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
+[SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
 
 ## Background
 
