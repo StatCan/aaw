@@ -52,111 +52,105 @@ avantages :
 
 # Stockage en compartiment
 
-Nous avons trois types de stockage en compartiment.
+Nous disposons de trois types de stockage en compartiment.
 
 **Libre-service :**
 
 - **[Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca) :**  
-  Stockage soutenu par des HDD. Par défaut, utilisez cette option.
+  Par défaut, utilisez celui-ci. Il s’agit d’un stockage sur disque dur.
 - **[Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca) :**  
-  Utilisez cette option si vous avez besoin de vitesses de lecture / écriture
-  très élevées, comme pour l'entraînement de modèles sur de très grands
+  Utilisez celui-ci si vous avez besoin de vitesses de lecture et d’écriture
+  très élevées, comme pour les modèles d’entraînement sur de très grands
   ensembles de données.
 
-**Accessible au grand public :**
+**Disponible au grand public :**
 
-[Public (en lecture seule)](https://datasets.covid.cloud.statcan.ca)
+- [Public (en lecture seule)](https://datasets.covid.cloud.statcan.ca)
 
 ## Libre-service
 
-Dans chacune des trois options de libre-service, vous pouvez créer un
-compartiment personnel. Pour vous connecter, il vous suffit d'utiliser votre
-**OpenID**.
+Dans chacune des trois options de libre-service, vous pouvez créer un
+compartiment personnel. Pour ouvrir une session, il vous suffit d’utiliser
+l’option **OpenID** comme ci-dessous.
 
-![Vue d'ouverture de session MinIO, indiquant l'option OpenID](images/minio_self_serve_login.png)
+![Vue d’ouverture de session MinIO, qui indique l’option OpenID](images/minio_self_serve_login.png)
 
 Une fois que vous êtes connecté, vous pouvez créer un compartiment personnel
-selon le format `prenom-nom`.
+selon le format `firstname-lastname`.
 
-![Navigateur MinIO avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d'union)](images/minio_self_serve_bucket.png)
-
-<!-- prettier-ignore -->
-!!! danger "Impossible de partager des fichiers avec votre OpenID"
-    À cause d'un [bogue dans MinIO](https://github.com/minio/minio/issues/8935),
-    vous ne pouvez pas encore partager des fichiers. Nous espérons que cela sera
-    bientôt résolu. En attendant, ça fonctionnera bien si vous utilisez votre
-    clé d'accès et votre clé secrète, que vous pouvez obtenir auprès de
-    Kubeflow.
+![Navigateur MinIO avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d’union)](images/minio_self_serve_bucket.png)
 
 ## Partage
 
-Vous pouvez facilement partager des fichiers individuels. Utilisez simplement
-l'option « partager » pour un fichier particulier, et vous recevrez un lien que
-vous pourrez envoyer à un
-![Partage de fichiers MinIO](images/minio_self_serve_share.png) collaborateur.
+Vous pouvez facilement partager des fichiers individuels. Il suffit d’utiliser
+l’option "share" pour un fichier particulier, et vous obtiendrez un lien que
+vous pourrez envoyer à un collaborateur.
 
-![Navigateur MinIO avec lien partageable vers un fichier](images/minio_self_serve_share.png)
+![Navigateur MinIO avec un lien partageable vers un fichier](images/minio_self_serve_share.png)
 
 ## Accès à la programmation
 
-Nous travaillons actuellement à un moyen de vous permettre d'accéder à votre
-stockage de compartiment par l'intermédiaire d'un dossier dans votre bloc-notes,
-mais en attendant, vous pouvez y accéder par programme en utilisant l'outil de
-ligne de commande `mc`, ou par l'intermédiaire des appels d'API S3 dans R ou
-Python.
+Nous travaillons actuellement à vous donner l’accès à votre stockage en
+compartiment par l’entremise d’un dossier dans votre bloc-notes. En attendant
+que cela soit possible, vous pouvez y accéder par programme en utilisant l’outil
+de ligne de commande `mc` ou au moyen des appels d’API S3 dans R ou Python.
 
 <!-- prettier-ignore -->
-!!! danger "Configuration Kubeflow requise"
-    Si vous souhaitez activer le stockage en compartiment pour votre bloc-notes,
-    sélectionnez « Injecter les justificatifs d'identité pour accéder au
-    stockage d'objets MinIO » à partir du menu **Configurations** lorsque vous
-    créez votre serveur. Sinon, votre serveur ne saura pas comment se connecter
-    à votre stockage personnel.
-    ![Création d'un serveur de bloc-notes Kubeflow avec l'option « Injecter les justificatifs d'identité pour accéder au stockage d'objets MinIO » sélectionnée](images/kubeflow_minio_option.png)
+!!! danger "Configuration Kuberflow requise"
+    Si vous souhaitez activer le stockage en compartiment de votre bloc-notes, sélectionnez "Inject
+    credentials to access MinIO object storage" dans le menu **Configurations**
+    lorsque vous créez votre serveur. Sinon, votre serveur ne saura pas comment
+    se connecter à votre stockage personnel.
+    ![Création d’un serveur de bloc-notes Kubeflow avec l’option "Inject credentials to access MinIO object storage" sélectionnée](images/kubeflow_minio_option.png)
 
 <!-- prettier-ignore -->
-!!! tip "Voir les exemples de blocs-notes!"
-    Un modèle est fourni pour se connecter dans `R`, `python`, ou par la ligne
-    de commande fournie dans `jupyter-notebooks/self-serve-storage`. Vous pouvez
-    copier-coller et modifier ces exemples. Ils devraient répondre à la plupart
-    de vos besoins.
+!!! conseil "Voir les exemples de blocs-notes."
+    Dans `jupyter-notebooks/self-serve-storage`, vous trouverez un modèle pour vous connecter dans `R` ou `Python`, ou par
+    la ligne de commande fournie. Vous pouvez
+    copier-coller et modifier ces exemples. Ils devraient répondre à la plupart de vos besoins.
 
-### Connexion à l'aide de `mc`
+### Connexion à l’aide de `mc`
 
-Pour vous connecter, exécutez la commande suivante (remplacer
-`NOMCOMPLET=blair-drummond` par votre `nom-prénom` réel) :
+Pour vous connecter, il suffit d’exécuter ce qui suit (remplacer
+`FULLNAME=blair-drummond` par votre `firstname-lastname` réel) :
 
 ```sh
 #!/bin/sh
-NOMCOMPLET=blair-drummond
-# Obtenir les justificatifs d'identité
+
+FULLNAME=blair-drummond
+
+# Obtenir les justificatifs d’identité
 source /vault/secrets/minio-minimal-tenant1
-# Ajouter le stockage sous le pseudonyme « minio-minimal »
+
+# Ajouter le stockage sous le pseudonyme "minio-minimal"
 mc config host add minio-minimal $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+
 # Créer un compartiment à votre nom
-# NOTE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOM.
-# Tout autre nom sera rejeté.
-# Compartiment privé ("mb" = "créer compartiment")
-mc mb minio-minimal/${NOMCOMPLET}
+# REMARQUE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOMDEFAMILLE. Tout
+# autre nom sera rejeté.
+
+# Compartiment privé ("mb" = "make bucket")
+mc mb minio-minimal/${FULLNAME}
+
 # Compartiment partagé
-mc mb minio-minimal/shared/${NOMCOMPLET}
-# Voilà! Vous pouvez maintenant copier des fichiers ou des dossiers!
+mc mb minio-minimal/shared/${FULLNAME}
+
+# Voilà! Vous pouvez maintenant copier des fichiers ou des dossiers.
 [ -f test.txt ] || echo "Ceci est un test" > test.txt
-mc cp test.txt minio-minimal/${NOMCOMPLET}/test.txt
+mc cp test.txt minio-minimal/${FULLNAME}/test.txt
 ```
 
-Maintenant, ouvrez le document dans
-[le navigateur MinIO](https://minimal-tenant1-minio.example.ca). Vous y verrez
-votre fichier de test.
+Ouvrez maintenant le
+[navigateur MinIO](https://minimal-tenant1-minio.covid.cloud.statcan.ca) et vous
+y verrez votre fichier de test.
 
-Vous pouvez utiliser `mc` pour copier des fichiers vers/depuis le compartiment.
-Cette opération est très rapide. Vous pouvez également utiliser `mc --help` pour
-voir les autres options qui s'offrent à vous, comme
-`mc ls minio-minimal/PRÉNOM-NOM/` pour afficher le contenu de votre
+Vous pouvez utiliser `mc` pour copier des fichiers vers le compartiment ou à
+partir du compartiment. Cette opération est très rapide. Vous pouvez également
+utiliser `mc --help` pour voir les autres options qui s’offrent à vous, comme
+`mc ls minio-minimal/FIRSTNAME-LASTNAME/` pour afficher le contenu de votre
 compartiment.
 
 <!-- prettier-ignore -->
-??? tip "Autres options de stockage"
-    Pour utiliser une de nos autres options de stockage, `pachyderm` ou
-    `premium`, remplacez simplement  la valeur `minimal` dans le programme
-    ci-dessus par le type dont vous avez besoin.
+??? conseil "Autres options de stockage"
+    Pour utiliser l’une de nos autres options de stockage, `pachyderm` ou `premium`, il vous suffit de
+    remplacer `minimal` dans le programme ci-dessus par le type dont vous avez besoin.
