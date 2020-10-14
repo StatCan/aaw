@@ -84,4 +84,4 @@ download them.
 is important for experiments, publishing, and exploring datasets, it has its own
 section.
 
-**Refer to the [Storage Section](/Storage)**
+**Refer to the [Storage Section](../Storage)**
