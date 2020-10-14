@@ -15,9 +15,6 @@ for your team.
 
 ## Log into Kubeflow
 
-- Log into [the Azure portal](https://portal.azure.com) **using your
-  `cloud.statcan.ca` credentials**.
-
 <!-- prettier-ignore -->
 ??? warning "Log into the Azure Portal using your Cloud Credentials"
     You have to login to the azure portal **using your StatCan credentials**.
@@ -25,19 +22,7 @@ for your team.
     [the Azure portal](https://portal.azure.com).
     ![Azure Portal: Choose the `@cloud.statcan.ca` address](../images/azure-login.png)
 
-- After logging into Azure, log into
-  [Kubeflow](https://kubeflow.covid.cloud.statcan.ca)
-
-<!-- prettier-ignore -->
-??? failure "Why am I getting `Missing url parameter: code`?"
-    If you try to log into Kubeflow and you get the message:
-
-    > `Missing url parameter: code`
-
-    It is because you are signed in with the wrong Azure account. You must sign
-    in with your cloud credentials.
-
-    ![This means you're in the wrong account](../images/missing_parameter_code.png)
+- Log into [Kubeflow](https://kubeflow.covid.cloud.statcan.ca)
 
 - Navigate to the Jupyter Servers tab
 
