@@ -89,4 +89,4 @@ dossiers pour les télécharger.
 que le stockage est important pour les expérimentations, la diffusion et
 l'exploration des ensembles de données, une section lui est consacré
 
-**Consultez la [section sur le stockage](/Stockage)**
+**Consultez la [section sur le stockage](../Stockage)**
