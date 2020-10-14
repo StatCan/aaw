@@ -888,7 +888,7 @@ with our container, specifying:</p>
 </ul>
 <p>We could use <code>ContainerOp</code> directly, but since we'll use <code>average</code> a few times
 we instead create a factory function we can reuse:</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -918,7 +918,7 @@ we instead create a factory function we can reuse:</p>
 <code>@dsl.pipeline</code> decorator. We invoke our <code>average_op</code> factory to use our average
 container. We pass each <code>average</code> some inputs, and even use their outputs by
 accessing <code>avg_*.output</code>.</p>
-<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -939,7 +939,7 @@ needs everything defined as a YAML file. This final step uses the Kubeflow
 Pipelines Python SDK to translate our pipeline function into a YAML file that
 describes exactly how Kubeflow Pipelines can interact with our component. Unzip
 it and take a look for yourself!</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
 <span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
 <span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
     <span class="n">my_pipeline</span><span class="p">,</span>
@@ -959,7 +959,7 @@ available when you run this Python code. The is discussed more below in
 <em>Understanding what computation occurs when</em>.</p>
 </details>
 <p>To actually run our pipeline, we define an experiment:</p>
-<div class="python codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
 
 <span class="kn">import</span> <span class="nn">kfp</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
@@ -975,7 +975,7 @@ available when you run this Python code. The is discussed more below in
 </code></pre></div>
 
 <p>And then run an instance of our pipeline with the arguments we want:</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
     <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>  <span class="c1"># Run inside the above experiment</span>
@@ -1015,7 +1015,7 @@ tracing where they (and any other runtime data) go, such as any output a
 now - instead it takes note that a container will be there in future and
 remembers what data it will consume/generate. This can be seen by modifying and
 recompiling our pipeline:</p>
-<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -1050,7 +1050,7 @@ while <code>compile</code> does "execute" <code>my_pipeline</code>, the KFP-spec
 don't actually generate results. This can also be seen in the YAML file that
 <code>compile</code> generates, for example looking at the portion defining our
 <code>average_result_overall</code> component:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">average-3</span>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">average-3</span>
   <span class="nt">container</span><span class="p">:</span>
     <span class="nt">args</span><span class="p">:</span>
       <span class="p p-Indicator">[</span>
@@ -1091,7 +1091,7 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
     parameters for functions. Pipelines can accept data (numbers, string URL's
     to large files in MinIO, etc.) as arguments, allowing a single generic 
     pipeline to work in many situations."</p>
-<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">another_pipeline</span><span class="p">():</span>
@@ -1110,7 +1110,7 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
 <span class="p">)</span>
 </code></pre></div>
 
-<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">another_another_pipeline</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1164,7 +1164,7 @@ to our Docker image, it didn't really matter they were strings.</p>
 <p>You can still use non-string data types, but you need to pass them as serialized
 versions. So if we wanted our <code>avg_1</code> component to return both the numbers
 passed to it and the average returned as a dictionary, for example:</p>
-<div class="python codehilite"><pre><span></span><code><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="s1">&#39;numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
     <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">,</span>
 <span class="p">}</span>
@@ -1175,7 +1175,7 @@ numbers and result to <code>out.txt</code> as JSON. But then when we pass the re
 make <code>average_result_overall</code>, that component needs to deserialize the above
 JSON and pull the data from it that it needs. And because these results are not
 available when authoring the pipeline, something like this does not work:</p>
-<div class="python codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1223,7 +1223,7 @@ would be:</p>
   but it is a common pattern that lets you chain operations together</li>
 </ul>
 <p>Here is a schematic example of this pattern:</p>
-<div class="python codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts two groups of numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1301,7 +1301,7 @@ during development, as well as for simple tasks that can be written and managed
 easily.</p>
 <p>This is an example of a lightweight pipeline with a single component that
 concatenates strings:</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">kfp</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">kfp</span>
 <span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 <span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">func_to_container_op</span>
 
@@ -1359,7 +1359,7 @@ terminal commands from a given Docker image. This can be a great way to make
 non-Python pipeline components from existing containers. As with all components,
 we can pass both arguments and data files into/out of the component. For
 example:</p>
-<div class="yaml codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
 <span class="nt">inputs</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span>
 <span class="nt">      name</span><span class="p">:</span> <span class="nv">Input text 1</span><span class="p p-Indicator">,</span>
@@ -1389,7 +1389,7 @@ example:</p>
 
 <p>This example concatenates two strings like our lightweight example above. We
 then define a component in python from this YAML:</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">load_component_from_file</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">load_component_from_file</span>
 <span class="n">echo_and_tee</span> <span class="o">=</span> <span class="n">load_component_from_file</span><span class="p">(</span><span class="s1">&#39;path/to/echo_and_tee.yaml&#39;</span><span class="p">)</span>
 
 <span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span>

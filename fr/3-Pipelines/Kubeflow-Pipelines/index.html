@@ -710,7 +710,7 @@ définit l'emplacement de l'image du menu fixe, la façon de lui transmettre des
 arguments et les résultats à extraire du conteneur. Pour utiliser réellement ces
 <code>ContainerOp</code> dans notre pipeline, nous créons des fonctions de fabrique comme
 <code>average_op</code> (car nous voudrons probablement plus d'un <em>composant</em> moyen).</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span>\<span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Fabrique de ContainerOp moyen</span>
@@ -745,7 +745,7 @@ fabriques de <code>ComponentOp</code> ci-dessus, décorées par l'élément déc
 <code>@dsl.pipeline</code>. Notre pipeline utilise notre composant <em>moyen</em> en lui
 transmettant des nombres. Puis, nous utilisons les résultats <em>moyens</em> en les
 transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</code>.</p>
-<div class="python codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;nom de mon pipeline&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
@@ -767,7 +767,7 @@ transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</co
 transmettre plus tard à Kubeflow Pipelines. Ce fichier YAML décrit à Kubeflow
 Pipelines exactement comment exécuter notre pipeline. Décompressez-le et voyez
 par vous-même!</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
 <span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
 <span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
     <span class="n">my_pipeline</span><span class="p">,</span>
@@ -787,7 +787,7 @@ par vous-même!</p>
     disponibles lorsque vous exécuterez ce code Python. Ce point est abordé plus
     en détail plus loin, dans la section <em>Comprendre l'ordre des calculs</em>.</p>
 <p>Pour exécuter notre pipeline, nous définissons une expérience :</p>
-<div class="python codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;calcul de moyenne de pipeline&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;calcul de moyenne de pipeline&quot;</span>
 
 <span class="kn">import</span> <span class="nn">kfp</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
@@ -801,7 +801,7 @@ par vous-même!</p>
 <p><img alt="Expérience Kubeflow Pipelines" src="../../images/kfp_experiment.png" /></p>
 <p>Ensuite, nous exécutons une instance de notre pipeline en utilisant les
 arguments souhaités :</p>
-<div class="python codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
     <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="c1"># Exécuter dans l&#39;expérience ci-dessus</span>
