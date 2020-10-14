@@ -552,7 +552,7 @@ def my_blobby_pipeline(path_to_numbers_1, path_to_numbers_2, path_for_output):
 ```
 
 Within this platform, the primary method for persisting large files is through
-MinIO as described in our [_Storage_ documentation](Storage.md). Examples of
+MinIO as described in our [_Storage_ documentation](../Storage.md). Examples of
 this are also described in our
 [example notebooks](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage)
 (also found in `jupyter-notebooks/self-serve-storage/` on any notebook server).
