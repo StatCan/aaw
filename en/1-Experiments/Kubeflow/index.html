@@ -372,32 +372,20 @@
 
 
   <li class="md-nav__item">
+    <a href="../RStudio/" title="RStudio" class="md-nav__link">
+      RStudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Remote-Desktop/" title="Remote Desktop" class="md-nav__link">
       Remote Desktop
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Databricks/" title="DataBricks" class="md-nav__link">
-      DataBricks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../MLflow/" title="MLflow" class="md-nav__link">
-      MLflow
     </a>
   </li>
 
@@ -694,10 +682,6 @@ for your team.</p>
 <p><strong>Let's get started!</strong></p>
 <h2 id="create-a-server">Create a Server<a class="headerlink" href="#create-a-server" title="Permanent link">&para;</a></h2>
 <h3 id="log-into-kubeflow">Log into Kubeflow<a class="headerlink" href="#log-into-kubeflow" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Log into <a href="https://portal.azure.com">the Azure portal</a> <strong>using your
-  <code>cloud.statcan.ca</code> credentials</strong>.</li>
-</ul>
 <!-- prettier-ignore -->
 <details class="warning"><summary>Log into the Azure Portal using your Cloud Credentials</summary><p>You have to login to the azure portal <strong>using your StatCan credentials</strong>.
 <code>first.lastname@cloud.statcan.ca</code>. You can do that using
@@ -705,18 +689,8 @@ for your team.</p>
 <img alt="Azure Portal: Choose the @cloud.statcan.ca address" src="../../images/azure-login.png" /></p>
 </details>
 <ul>
-<li>After logging into Azure, log into
-  <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
+<li>Log into <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
 </ul>
-<!-- prettier-ignore -->
-<details class="failure"><summary>Why am I getting <code>Missing url parameter: code</code>?</summary><p>If you try to log into Kubeflow and you get the message:</p>
-<blockquote>
-<p><code>Missing url parameter: code</code></p>
-</blockquote>
-<p>It is because you are signed in with the wrong Azure account. You must sign
-in with your cloud credentials.</p>
-<p><img alt="This means you're in the wrong account" src="../../images/missing_parameter_code.png" /></p>
-</details>
 <ul>
 <li>Navigate to the Jupyter Servers tab</li>
 </ul>
