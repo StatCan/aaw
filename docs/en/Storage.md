@@ -55,7 +55,7 @@ are currently using.
 <!-- prettier-ignore -->
 ??? info "Tips to minimize costs"
     As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:
-    
+
     * At 9AM, create a Notebook Server (request 2CPU/8GB RAM and a 32GB attached
       disk)
     * Do work throughout the day, saving results to the attached disk
@@ -64,7 +64,7 @@ are currently using.
     * At 9AM the next day, create a new Notebook Server and **attach your existing
       disk**
     * Continue your work...
-    
+
     This keeps all your work safe without paying for the computer when you're not using it
 
 ## Deleting Disk Storage
@@ -102,7 +102,7 @@ There are multiple ways to upload and download data from your MinIO buckets:
 <!-- prettier-ignore -->
 ??? info "Different access methods have strengths and weaknesses, but the data all goes to the same place"
     You can:
-    
+
     - Upload a file using the mounted folder on a notebook server
     - Rename that file using the web portal
     - Download that file using the `mc` tool

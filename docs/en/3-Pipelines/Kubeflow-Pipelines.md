@@ -108,9 +108,9 @@ Kubeflow Pipelines where it is.
     brevity).  By making `average.py` accept an arbitrary set of numbers as 
     inputs, we can use the same `average` _component_ for all steps in our 
     _pipeline_:
-    
+
         import argparse
-    
+
         def parse_args():
             parser = argparse.ArgumentParser(description="Returns the average of one or "
                                              "more numbers as a JSON file")
@@ -118,20 +118,20 @@ Kubeflow Pipelines where it is.
             parser.add_argument("--output_file", type=str, default="out.txt", help="Filename "
                                 "to write output number to")
             return parser.parse_args()
-        
+
         if __name__ == '__main__':
             args = parse_args()
             numbers = args.numbers
             output_file = args.output_file
-    
+
             print(f"Averaging numbers: {numbers}")
             avg = sum(numbers) / len(numbers)
             print(f"Result = {avg}")
-        
+
             print(f"Writing output to {output_file}")
             with open(output_file, 'w') as fout:
                 fout.write(str(avg))
-    
+
             print("Done")
 
 To make our `average` image into a Kubeflow Pipelines _component_, we make a
@@ -552,7 +552,7 @@ def my_blobby_pipeline(path_to_numbers_1, path_to_numbers_2, path_for_output):
 ```
 
 Within this platform, the primary method for persisting large files is through
-MinIO as described in our [_Storage_ documentation](Storage.md). Examples of
+MinIO as described in our [_Storage_ documentation](../Storage.md). Examples of
 this are also described in our
 [example notebooks](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage)
 (also found in `jupyter-notebooks/self-serve-storage/` on any notebook server).

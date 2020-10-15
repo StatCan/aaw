@@ -79,9 +79,7 @@ download them.
 
 ## Shareable "Bucket" storage
 
-**The other option** is high-volume storage with
-[Object Storage](https://en.wikipedia.org/wiki/Object_storage). Because storage
-is important for experiments, publishing, and exploring datasets, it has its own
-section.
+There is also a mounted `minio` folder in your home directory, which holds files
+in [MinIO](/Storage/#buckets-via-minio).
 
-**Refer to the [Storage Section](../Storage)**
+**Refer to the [Storage Section](/Storage) for details.**
