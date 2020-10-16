@@ -535,6 +535,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#get-minio-credentials" class="md-nav__link">
+    Get MinIO Credentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Get MinIO Credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-get-credentials-from-vault" class="md-nav__link">
+    Method 1: Get Credentials from Vault
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-get-credentials-from-running-notebook-server" class="md-nav__link">
+    Method 2: Get Credentials from Running Notebook Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pricing_1" class="md-nav__link">
     Pricing
   </a>
@@ -689,6 +716,33 @@
   <a href="#sharing-from-private-buckets" class="md-nav__link">
     Sharing from Private Buckets
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-minio-credentials" class="md-nav__link">
+    Get MinIO Credentials
+  </a>
+  
+    <nav class="md-nav" aria-label="Get MinIO Credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-get-credentials-from-vault" class="md-nav__link">
+    Method 1: Get Credentials from Vault
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-get-credentials-from-running-notebook-server" class="md-nav__link">
+    Method 2: Get Credentials from Running Notebook Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -872,8 +926,8 @@ as your Kubeflow namespace (likely <code>firstname-lastname</code>):</p>
 <code>mc</code> can communicate with one or more MinIO instances to let you upload/download
 files. For example:</p>
 <!-- prettier-ignore -->
-<p>??? info "To run the below example yourself, replace <code>BUCKETNAME</code>'s value with your first/last name".  For example: <code>BUCKETNAME=andrew-scribner</code>.
-    Ignore this text.  Required for CI...</p>
+<details class="info"><summary>To run the below example yourself, replace <code>BUCKETNAME</code>'s value with your first/last name.</summary><p>For example: <code>BUCKETNAME=john-smith</code>.</p>
+</details>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 
 <span class="c1"># The name of your bucket.  This MUST be the same as your namespace&#39;s name.</span>
@@ -967,6 +1021,32 @@ providing different access scopes:</p>
 "share" option for a specific file and you will be provided a link that you can
 send to a collaborator!</p>
 <p><img alt="MinIO browser with a shareable link to a file" src="../images/minio_self_serve_share.png" /></p>
+<h3 id="get-minio-credentials">Get MinIO Credentials<a class="headerlink" href="#get-minio-credentials" title="Permanent link">&para;</a></h3>
+<p>To access your MinIO buckets programmatically (for example through the
+<a href="#MinIO-Command-Line-Tool"><code>mc</code> command line tool</a>, or via Python or R) you
+require personal MinIO credentials. Methods for obtaining these credentials are
+outlined here.</p>
+<h4 id="method-1-get-credentials-from-vault">Method 1: Get Credentials from Vault<a class="headerlink" href="#method-1-get-credentials-from-vault" title="Permanent link">&para;</a></h4>
+<p>To get your MinIO credentials, you can use the
+<a href="https://vault.covid.cloud.statcan.ca/ui/vault/auth?with=oidc">Vault</a>. Select
+method OIDC, leave <strong>Role</strong> blank and Sign in with OIDC Provider.</p>
+<p><img alt="vault_Signin" src="../images/vault_signin.png" /></p>
+<p>Run the following command in the terminal located at the top right corner:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Replace minimal with premium depending on your Bucket type</span>
+<span class="nb">read</span> minio_minimal_tenant1/keys/profile-yourfirstname-yourlastname
+</code></pre></div>
+
+<p><img alt="Vault AccessKey" src="../images/accessKey.png" /></p>
+<h4 id="method-2-get-credentials-from-running-notebook-server">Method 2: Get Credentials from Running Notebook Server<a class="headerlink" href="#method-2-get-credentials-from-running-notebook-server" title="Permanent link">&para;</a></h4>
+<p>Open a terminal in your Notebook and run:</p>
+<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-minimal-tenant1
+
+<span class="c1"># Output:</span>
+<span class="c1"># export MINIO_URL=&quot;http://minimal-tenant1-minio.minio...&quot;</span>
+<span class="c1"># export MINIO_ACCESS_KEY=&quot;...&quot;</span>
+<span class="c1"># export MINIO_SECRET_KEY=&quot;...&quot;</span>
+</code></pre></div>
+
 <h3 id="pricing_1">Pricing<a class="headerlink" href="#pricing_1" title="Permanent link">&para;</a></h3>
 <!-- prettier-ignore -->
 <details class="info"><summary>Pricing models are tentative and may change</summary><p>As of writing, pricing is covered by the platform for initial users.  This guidance explains how things are expected to be priced priced in future, but this may change.</p>
