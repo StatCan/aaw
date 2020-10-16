@@ -153,8 +153,8 @@ MinIO provides the command line tool `mc` to access your data from a terminal.
 files. For example:
 
 <!-- prettier-ignore -->
-??? info "To run the below example yourself, replace `BUCKETNAME`'s value with your first/last name".  For example: `BUCKETNAME=andrew-scribner`.
-    Ignore this text.  Required for CI...
+??? info "To run the below example yourself, replace `BUCKETNAME`'s value with your first/last name."
+    For example: `BUCKETNAME=john-smith`.
 
 ```sh
 #!/bin/sh
@@ -241,6 +241,43 @@ You can easily share individual files from a private bucket. Just use the
 send to a collaborator!
 
 ![MinIO browser with a shareable link to a file](images/minio_self_serve_share.png)
+
+## Get MinIO Credentials
+
+To access your MinIO buckets programmatically (for example through the
+[`mc` command line tool](#MinIO-Command-Line-Tool), or via Python or R) you
+require personal MinIO credentials. Methods for obtaining these credentials are
+outlined here.
+
+### Method 1: Get Credentials from Vault
+
+To get your MinIO credentials, you can use the
+[Vault](https://vault.covid.cloud.statcan.ca/ui/vault/auth?with=oidc). Select
+method OIDC, leave **Role** blank and Sign in with OIDC Provider.
+
+![vault_Signin](images/vault_signin.png)
+
+Run the following command in the terminal located at the top right corner:
+
+```sh
+# Replace minimal with premium depending on your Bucket type
+read minio_minimal_tenant1/keys/profile-yourfirstname-yourlastname
+```
+
+![Vault AccessKey](images/accessKey.png)
+
+### Method 2: Get Credentials from Running Notebook Server
+
+Open a terminal in your Notebook and run:
+
+```sh
+cat /vault/secrets/minio-minimal-tenant1
+
+# Output:
+# export MINIO_URL="http://minimal-tenant1-minio.minio..."
+# export MINIO_ACCESS_KEY="..."
+# export MINIO_SECRET_KEY="..."
+```
 
 ## Pricing
 
