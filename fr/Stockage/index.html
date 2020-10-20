@@ -511,6 +511,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#obtenir-linformation-didentification-de-minio" class="md-nav__link">
+    Obtenir l'information d'identification de MinIO
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtenir l'information d'identification de MinIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-1-utiliser-le-vault" class="md-nav__link">
+    Méthode 1: Utiliser le Vault
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-2-utiliser-le-serveur" class="md-nav__link">
+    Méthode 2: Utiliser le Serveur
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -618,6 +645,33 @@
           <li class="md-nav__item">
   <a href="#connexion-a-laide-de-mc" class="md-nav__link">
     Connexion à l'aide de mc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtenir-linformation-didentification-de-minio" class="md-nav__link">
+    Obtenir l'information d'identification de MinIO
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtenir l'information d'identification de MinIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-1-utiliser-le-vault" class="md-nav__link">
+    Méthode 1: Utiliser le Vault
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-2-utiliser-le-serveur" class="md-nav__link">
+    Méthode 2: Utiliser le Serveur
   </a>
   
 </li>
@@ -793,6 +847,32 @@ compartiment.</p>
 <code>premium</code>, remplacez simplement  la valeur <code>minimal</code> dans le programme
 ci-dessus par le type dont vous avez besoin.</p>
 </details>
+<h3 id="obtenir-linformation-didentification-de-minio">Obtenir l'information d'identification de MinIO</h3>
+<p>Pour accéder à vos stockage en compartiment en MinIO par programme (par exemple
+via <a href="#Connexion-à-l'aide-de-mc">l'outil de l'invite de commande <code>mc</code></a>, ou via
+Python ou R), vous avez besoin d'informations d'identification personnelles de
+MinIO. Les méthodes pour obtenir celles-ci sont expliquées ci-dessous.</p>
+<h4 id="methode-1-utiliser-le-vault">Méthode 1: Utiliser le Vault</h4>
+<p>Pour obtenir vos informations d'identification MinIO, vous pouvez utiliser le
+<a href="https://vault.covid.cloud.statcan.ca/ui/vault/auth?with=oidc">Vault</a>.
+Sélectionnez la méthode OIDC, laissez le <strong>Rôle</strong> vide et cliquez « Sign In with
+OIDC Provider ».</p>
+<p><img alt="vault_Signin" src="../images/vault_signin.png" /></p>
+<p>Exécutez la commande suivante dans le terminal situé dans le coin à droit:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Replacez minimal avec premium pour changer le type de compartiment</span>
+<span class="nb">read</span> minio_minimal_tenant1/keys/profile-votreprénom-votrenom
+</code></pre></div>
+
+<p><img alt="Vault AccessKey" src="../images/accessKey.png" /></p>
+<h4 id="methode-2-utiliser-le-serveur">Méthode 2: Utiliser le Serveur</h4>
+<p>Démarrez votre serveur et exécutez la commande suivante:</p>
+<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-minimal-tenant1
+
+<span class="c1"># Output:</span>
+<span class="c1"># export MINIO_URL=&quot;http://minimal-tenant1-minio.minio...&quot;</span>
+<span class="c1"># export MINIO_ACCESS_KEY=&quot;...&quot;</span>
+<span class="c1"># export MINIO_SECRET_KEY=&quot;...&quot;</span>
+</code></pre></div>
                 
               
               
