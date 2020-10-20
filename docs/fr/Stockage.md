@@ -151,3 +151,41 @@ compartiment.
     Pour utiliser une de nos autres options de stockage, `pachyderm` ou
     `premium`, remplacez simplement  la valeur `minimal` dans le programme
     ci-dessus par le type dont vous avez besoin.
+
+## Obtenir l'information d'identification de MinIO
+
+Pour accéder à vos stockage en compartiment en MinIO par programme (par exemple
+via [l'outil de l'invite de commande `mc`](#Connexion-à-l'aide-de-mc), ou via
+Python ou R), vous avez besoin d'informations d'identification personnelles de
+MinIO. Les méthodes pour obtenir celles-ci sont expliquées ci-dessous.
+
+### Méthode 1: Utiliser le Vault
+
+Pour obtenir vos informations d'identification MinIO, vous pouvez utiliser le
+[Vault](https://vault.covid.cloud.statcan.ca/ui/vault/auth?with=oidc).
+Sélectionnez la méthode OIDC, laissez le **Rôle** vide et cliquez « Sign In with
+OIDC Provider ».
+
+![vault_Signin](images/vault_signin.png)
+
+Exécutez la commande suivante dans le terminal situé dans le coin à droit:
+
+```sh
+# Replacez minimal avec premium pour changer le type de compartiment
+read minio_minimal_tenant1/keys/profile-votreprénom-votrenom
+```
+
+![Vault AccessKey](images/accessKey.png)
+
+### Méthode 2: Utiliser le Serveur
+
+Démarrez votre serveur et exécutez la commande suivante:
+
+```sh
+cat /vault/secrets/minio-minimal-tenant1
+
+# Output:
+# export MINIO_URL="http://minimal-tenant1-minio.minio..."
+# export MINIO_ACCESS_KEY="..."
+# export MINIO_SECRET_KEY="..."
+```
