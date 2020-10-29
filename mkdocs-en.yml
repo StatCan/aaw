@@ -49,6 +49,7 @@ nav:
   - Publishing:
       - R Shiny: 2-Publishing/R-Shiny.md
       - Power BI: 2-Publishing/PowerBI.md
+      - Flask: 2-Publishing/Flask.md
       - Custom: 2-Publishing/Custom.md
   - Pipelines:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
