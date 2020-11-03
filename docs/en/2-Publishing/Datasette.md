@@ -3,30 +3,27 @@
 Datasette is an instant JSON API for your SQLite databases allowing you to
 explore the DB and run SQL queries in a more interactive way.
 
-
-You can find a list of example datasettes 
+You can find a list of example datasettes
 [here](https://github.com/simonw/datasette/wiki/Datasettes).
 
-
+<!-- prettier-ignore -->
 !!! faq "The Datasette Ecosystem"
-    There are all sorts of tools for coverting data to and from sqlite 
+    There are all sorts of tools for converting data to and from sqlite 
     [here](https://docs.datasette.io/en/stable/ecosystem.html). For example,
     you can load shapefiles into sqlite, or create [Vega](https://vega.github.io/vega/)
     plots from a sqlite database. SQLite works well with `R`, `Python`, and many other tools.
 
-
 ## Example Datasette
 
-Screenshots from 
-[global-power-plants.datasettes.com](https://global-power-plants.datasettes.com),
-you can preview and explore the data in the browser, either with clicks or SQL queries.
+Screenshots from
+[global-power-plants](https://global-power-plants.datasettes.com), you can
+preview and explore the data in the browser, either with clicks or SQL queries.
 
 ![Preview Data](../images/datasette-preview.png)
 
 You can even explore maps within the tool!
 
 ![Run SQL Queries](../images/datasette-sql.png)
-
 
 # Starting Datasette
 
@@ -66,19 +63,20 @@ trap "kill ${PIDS[*]}" SIGINT
 wait
 ```
 
+<!-- prettier-ignore -->
 !!! example "Check out this video tutorial"
     One user of the platform used Datasette along with a javascript
     dashboard. See it [video](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) for a
 
-
+<!-- prettier-ignore -->
 !!! danger "Running your Notebook Server and accessing the port"
     When running any tool from your Jupyter Notebook that posts a website to a port,
     you will not be able to simply access it from `http://localhost:5000/` as
     normally suggested in the output upon running the web-app.
-    
+
     To access the web server you will need to use the base URL. In your notebook
     terminal run:
-    
+
     ```python
     echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/
     ```

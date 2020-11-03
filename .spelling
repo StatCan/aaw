@@ -4,12 +4,16 @@ COVID-19
 Customization
 customize
 Databricks
+Datasette
+datasette
+datasettes
 Dockerfile
 dropdown
 Filebrowser
 fullscreen
 GitHub
 GitLab
+javascript
 jupyter
 jupyter-notebook
 jupyter-notebooks
@@ -29,7 +33,9 @@ OpenID
 Power
 premium-tenant
 premium-tenant1
+shapefiles
 Shiny
+sqlite
 R-Shiny
 RStudio
 Slack

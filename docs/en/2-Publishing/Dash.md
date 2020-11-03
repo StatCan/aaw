@@ -1,24 +1,24 @@
 # Getting Started with Dash!
 
 For data visualization tools, we will be using Dash. Dash is a great tool used
-by many for data analysis, data exploration, visualization, modelling, 
+by many for data analysis, data exploration, visualization, modelling,
 instrument control, and reporting.
 
 The following example demonstrates a highly reactive and customised Dash app
 with little code.
 
+<!-- prettier-ignore -->
 !!! danger "Running your Notebook Server and accessing the port"
     When running any tool from your Jupyter Notebook that posts a website to a port,
     you will not be able to simply access it from `http://localhost:5000/` as
     normally suggested in the output upon running the web-app.
-    
+
     To access the web server you will need to use the base URL. In your notebook
     terminal run:
-    
+
     ```python
     echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/
     ```
-
 
 ## Data Visualization with Dash
 
