@@ -48,8 +48,9 @@ nav:
       - Remote Desktop: 1-Experiments/Remote-Desktop.md
   - Publishing:
       - R Shiny: 2-Publishing/R-Shiny.md
+      - Dash: 2-Publishing/Dash.md
+      - Datasette: 2-Publishing/Datasette.md
       - Power BI: 2-Publishing/PowerBI.md
-      - Flask: 2-Publishing/Flask.md
       - Custom: 2-Publishing/Custom.md
   - Pipelines:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
