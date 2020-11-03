@@ -46,21 +46,9 @@ wget https://github.com/StatCan/R-notebooks/raw/master/database-connections/lati
 # If you have your own database, you can change this line!
 DATABASE=latin_phrases.db
 
-if [ -z ${JUPYTER_SERVER_URL} ];
-then
-     datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_limit_ms:5500 &
-else
-     export BASE_URL="https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/8001/"
-     echo "Base url: ${BASE_URL}"
-     datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_limit_ms:5500 --config base_url:${BASE_URL} &
-fi
-
-PIDS[0]=$!
-./app.py &
-PIDS[1]=$!
-
-trap "kill ${PIDS[*]}" SIGINT
-wait
+export BASE_URL="https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/8001/"
+echo "Base url: ${BASE_URL}"
+datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_limit_ms:5500 --config base_url:${BASE_URL}
 ```
 
 <!-- prettier-ignore -->
