@@ -267,9 +267,9 @@ read minio_minimal_tenant1/keys/profile-yourfirstname-yourlastname
 <!-- prettier-ignore -->
 !!! danger "Credentials from the Vault WebUI expire quickly"
     In order to get *long lived* credentials, you will want to use the 
-    [Vault CLI](https://www.vaultproject.io/downloads). Then use the `-wrap-ttl`
-    flag. For example, these credentials will be valid for two weeks:
-    `vault read -address=https://vault.covid.cloud.statcan.ca -wrap-ttl="20160m" minio_minimal_tenant1/keys/profile-firstname-lastname`
+    [Vault CLI](https://www.vaultproject.io/downloads). For example, 
+    these credentials will be valid for two weeks:
+    `vault read -address=https://vault.covid.cloud.statcan.ca minio_minimal_tenant1/keys/profile-firstname-lastname`
 
 ![Vault AccessKey](images/accessKey.png)
 
