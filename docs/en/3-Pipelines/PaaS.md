@@ -1,0 +1,11 @@
+# Integrate with Platforms like Databricks and AzureML
+
+The AAW platform is built around the idea of integrations, and so we can
+integrate with many _Platform as a Serveice_ (PaaS) offerings, such as
+[Azure ML](https://azure.microsoft.com/en-us/services/machine-learning/) and
+[Databricks](https://azure.microsoft.com/en-ca/services/databricks/).
+
+See some examples on our
+["MLOps" Github Repo](https://github.com/statcan/kubeflow-mlops).
+
+![PaaS](../images/PaaS.png)
