@@ -11,7 +11,7 @@
         <meta name="description" content="User guide for the DAaaS Covid-19 Platform">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/en/2-Publishing/PowerBI/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/3-Pipelines/PaaS/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Power BI - COVID-19 Advanced Analytics Workspace</title>
+        <title>PaaS Integration - COVID-19 Advanced Analytics Workspace</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loading-data-into-power-bi" class="md-skip">
+        <a href="#integrate-with-platforms-like-databricks-and-azureml" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Power BI
+              PaaS Integration
             
           </span>
         </div>
@@ -290,12 +290,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Publishing
@@ -319,7 +317,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../R-Shiny/" title="R Shiny" class="md-nav__link">
+    <a href="../../2-Publishing/R-Shiny/" title="R Shiny" class="md-nav__link">
       R Shiny
     </a>
   </li>
@@ -329,89 +327,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Power BI
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Power BI" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../2-Publishing/PowerBI/" title="Power BI" class="md-nav__link">
       Power BI
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#loading-data-into-power-bi" class="md-nav__link">
-    Loading data into Power BI
-  </a>
-  
-    <nav class="md-nav" aria-label="Loading data into Power BI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-youll-need" class="md-nav__link">
-    What you'll need
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-connected" class="md-nav__link">
-    Get connected
-  </a>
-  
-    <nav class="md-nav" aria-label="Get connected">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-power-bi" class="md-nav__link">
-    Set up Power BI
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-your-python-script" class="md-nav__link">
-    Edit your python script
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -421,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Custom/" title="Custom" class="md-nav__link">
+    <a href="../../2-Publishing/Custom/" title="Custom" class="md-nav__link">
       Custom
     </a>
   </li>
@@ -436,10 +356,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Pipelines
@@ -463,7 +385,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
+    <a href="../Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
     </a>
   </li>
@@ -473,11 +395,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../3-Pipelines/PaaS/" title="PaaS Integration" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        PaaS Integration
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="PaaS Integration" class="md-nav__link md-nav__link--active">
       PaaS Integration
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integrate-with-platforms-like-databricks-and-azureml" class="md-nav__link">
+    Integrate with Platforms like Databricks and AzureML
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -487,7 +447,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../3-Pipelines/Serving/" title="Model Serving" class="md-nav__link">
+    <a href="../Serving/" title="Model Serving" class="md-nav__link">
       Model Serving
     </a>
   </li>
@@ -558,49 +518,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#loading-data-into-power-bi" class="md-nav__link">
-    Loading data into Power BI
+  <a href="#integrate-with-platforms-like-databricks-and-azureml" class="md-nav__link">
+    Integrate with Platforms like Databricks and AzureML
   </a>
-  
-    <nav class="md-nav" aria-label="Loading data into Power BI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-youll-need" class="md-nav__link">
-    What you'll need
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-connected" class="md-nav__link">
-    Get connected
-  </a>
-  
-    <nav class="md-nav" aria-label="Get connected">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-up-power-bi" class="md-nav__link">
-    Set up Power BI
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-your-python-script" class="md-nav__link">
-    Edit your python script
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -616,7 +536,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/2-Publishing/PowerBI.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/3-Pipelines/PaaS.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -624,33 +544,16 @@
                   
                 
                 
-                  <h1>Power BI</h1>
+                  <h1>PaaS Integration</h1>
                 
-                <h2 id="loading-data-into-power-bi">Loading data into Power BI<a class="headerlink" href="#loading-data-into-power-bi" title="Permanent link">&para;</a></h2>
-<p>We do not offer a Power BI server, but you can pull your data into Power BI from
-our Storage system, and use the data as a <code>pandas</code> data frame.</p>
-<p><img alt="Power BI Dashboard" src="../../images/powerbi_dashboard.png" /></p>
-<h3 id="what-youll-need">What you'll need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h3>
-<ol>
-<li>A computer with Power BI, and Python 3.6</li>
-<li>Your MinIO <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See
-   <a href="/daaas/en/Storage">Storage</a>)</li>
-</ol>
-<h3 id="get-connected">Get connected<a class="headerlink" href="#get-connected" title="Permanent link">&para;</a></h3>
-<h4 id="set-up-power-bi">Set up Power BI<a class="headerlink" href="#set-up-power-bi" title="Permanent link">&para;</a></h4>
-<p>Open up your Power BI system, and open up this
-<a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">Power BI quick start</a>
-in your favourite text editor.</p>
-<p>You'll have to make sure that <code>pandas</code>, <code>boto3</code>, and <code>numpy</code> are installed, and
-that you're using the right Conda virtual environment (if applicable).</p>
-<p><img alt="Install the dependencies" src="../../images/powerbi_cmd_prompt.png" /></p>
-<p>You'll then need to make sure that Power BI is using the correct Python
-environment. This is modified from the options menu, and the exact path is
-specified in the quick start guide.</p>
-<h4 id="edit-your-python-script">Edit your python script<a class="headerlink" href="#edit-your-python-script" title="Permanent link">&para;</a></h4>
-<p>Then, edit your Python script to use your MinIO <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>,
-and then click "Get Data" and copy it in as a Python Script.</p>
-<p><img alt="Run your Python Script" src="../../images/powerbi_python.png" /></p>
+                <h2 id="integrate-with-platforms-like-databricks-and-azureml">Integrate with Platforms like Databricks and AzureML<a class="headerlink" href="#integrate-with-platforms-like-databricks-and-azureml" title="Permanent link">&para;</a></h2>
+<p>The AAW platform is built around the idea of integrations, and so we can
+integrate with many <em>Platform as a Serveice</em> (PaaS) offerings, such as
+<a href="https://azure.microsoft.com/en-us/services/machine-learning/">Azure ML</a> and
+<a href="https://azure.microsoft.com/en-ca/services/databricks/">Databricks</a>.</p>
+<p>See some examples on our
+<a href="https://github.com/statcan/kubeflow-mlops">"MLOps" Github Repo</a>.</p>
+<p><img alt="PaaS" src="../../images/PaaS.png" /></p>
                 
               
               
@@ -669,7 +572,7 @@ and then click "Get Data" and copy it in as a Python Script.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../R-Shiny/" title="R Shiny" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -678,19 +581,19 @@ and then click "Get Data" and copy it in as a Python Script.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                R Shiny
+                Kubeflow Pipelines
               </div>
             </div>
           </a>
         
         
-          <a href="../Custom/" title="Custom" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Serving/" title="Model Serving" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Custom
+                Model Serving
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
