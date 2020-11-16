@@ -5,7 +5,6 @@
     The person writing this entry does not know enough about 
     this feature to write about it, but you can ask on our Slack channel.
 
-
 ## Serverless with KNative
 
 Kubernetes and [KNative](https://knative.dev/) let your services scale up and

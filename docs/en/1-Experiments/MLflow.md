@@ -1,7 +1,7 @@
 # MLflow for model tracking
 
 MLflow is an open source platform for managing the Machine Learning lifecycle.
-It is a "Model Regsitry" for storing your machine learning models and associated
+It is a "Model Registry" for storing your machine learning models and associated
 metrics. You can use the
 [web interface](https://daaas-tenant1-mlflow.covid.cloud.statcan.ca/#/) to
 examine your models, and you can use its REST API to register your models from
