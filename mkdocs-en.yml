@@ -46,12 +46,15 @@ nav:
       - Jupyter: 1-Experiments/Jupyter.md
       - RStudio: 1-Experiments/RStudio.md
       - Remote Desktop: 1-Experiments/Remote-Desktop.md
+      - MLflow: 1-Experiments/MLflow.md
   - Publishing:
       - R Shiny: 2-Publishing/R-Shiny.md
       - Power BI: 2-Publishing/PowerBI.md
       - Custom: 2-Publishing/Custom.md
   - Pipelines:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
+      - PaaS Integration: 3-Pipelines/PaaS.md
+      - Model Serving: 3-Pipelines/Serving.md
   - Collaboration: Collaboration.md
   - Storage: Storage.md
   - Help/Contact: Help.md
