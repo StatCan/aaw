@@ -545,6 +545,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#minio-python-client" class="md-nav__link">
+    MinIO Python client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#other-s3-compliant-methods" class="md-nav__link">
     Other S3-Compliant Methods
   </a>
@@ -725,6 +732,13 @@
           <li class="md-nav__item">
   <a href="#minio-command-line-tool" class="md-nav__link">
     MinIO Command Line Tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minio-python-client" class="md-nav__link">
+    MinIO Python client
   </a>
   
 </li>
@@ -1003,6 +1017,41 @@ mc cp test.txt minimal/<span class="si">${</span><span class="nv">BUCKETNAME</sp
 command line, provided in <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage">jupyter-notebooks/self-serve-storage</a> (also auto-mounted to all jupyter notebook servers in <code>~/jupyter-notebook</code>). You can
 copy-paste and edit these examples! They should suit most of your needs.</p>
 </details>
+<h4 id="minio-python-client">MinIO Python client<a class="headerlink" href="#minio-python-client" title="Permanent link">&para;</a></h4>
+<p>You can also connect to MinIO using a python client such as <code>minio</code> or <code>boto3</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">minio</span><span class="o">,</span> <span class="nn">re</span>
+
+<span class="c1"># Get rid of http:// in minio URL</span>
+<span class="n">http</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;^https?://&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Get the MinIO creds</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/vault/secrets/minio-minimal-tenant1.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">secrets</span><span class="p">:</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="c1"># Create the minio client.</span>
+<span class="n">s3Client</span> <span class="o">=</span> <span class="n">Minio</span><span class="p">(</span>
+    <span class="n">http</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;MINIO_URL&#39;</span><span class="p">]),</span>
+    <span class="n">access_key</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;MINIO_ACCESS_KEY&#39;</span><span class="p">],</span>
+    <span class="n">secret_key</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;MINIO_SECRET_KEY&#39;</span><span class="p">],</span>
+    <span class="n">secure</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west-1&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<!-- prettier-ignore -->
+<div class="admonition tip">
+<p class="admonition-title">But I want to be secure</p>
+<p>The <code>secure=False</code> thing is a bit misleading. It disables <code>https</code> 
+because this traffic is <strong>inside</strong> the cluster, and the cluster
+auto-magically applies mutual TLS. So your applications don't need
+to worry about https. <strong>Your connection is secure by default.</strong></p>
+</div>
+<!-- prettier-ignore -->
+<div class="admonition question">
+<p class="admonition-title">But I'm not in us-west?</p>
+<p>The "us-west-1" is an artifact of weird S3 API standards. It is
+<strong>required</strong>, even if it doesn't make sense.</p>
+</div>
 <h4 id="other-s3-compliant-methods">Other S3-Compliant Methods<a class="headerlink" href="#other-s3-compliant-methods" title="Permanent link">&para;</a></h4>
 <p>MinIO is S3 compliant - it uses the same standard as Amazon S3 and other bucket
 services. Tools designed to use S3 will generally also work with MinIO, for
