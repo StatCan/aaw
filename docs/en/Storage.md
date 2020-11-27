@@ -199,6 +199,42 @@ Now open the [MinIO Web Portal](#minio-web-portal) or browse to
     command line, provided in [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage) (also auto-mounted to all jupyter notebook servers in `~/jupyter-notebook`). You can
     copy-paste and edit these examples! They should suit most of your needs.
 
+### MinIO Python client
+
+You can also connect to MinIO using a python client such as `minio` or `boto3`.
+
+```python
+import json, minio, re
+
+# Get rid of http:// in minio URL
+http = lambda url: re.sub('^https?://', '', url)
+
+# Get the MinIO creds
+with open("/vault/secrets/minio-minimal-tenant1.json") as secrets:
+    d = json.load(f)
+
+# Create the minio client.
+s3Client = Minio(
+    http(d['MINIO_URL']),
+    access_key=d['MINIO_ACCESS_KEY'],
+    secret_key=d['MINIO_SECRET_KEY'],
+    secure=False,
+    region="us-west-1"
+)
+```
+
+<!-- prettier-ignore -->
+!!! tip "But I want to be secure"
+    The `secure=False` thing is a bit misleading. It disables `https` 
+    because this traffic is **inside** the cluster, and the cluster
+    auto-magically applies mutual TLS. So your applications don't need
+    to worry about https. **Your connection is secure by default.**
+
+<!-- prettier-ignore -->
+!!! question "But I'm not in us-west?"
+    The "us-west-1" is an artifact of weird S3 API standards. It is
+    **required**, even if it doesn't make sense.
+
 ### Other S3-Compliant Methods
 
 MinIO is S3 compliant - it uses the same standard as Amazon S3 and other bucket
