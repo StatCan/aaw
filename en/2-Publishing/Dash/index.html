@@ -11,7 +11,7 @@
         <meta name="description" content="User guide for the DAaaS Covid-19 Platform">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/en/1-Experiments/Remote-Desktop/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/2-Publishing/Dash/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Remote Desktop - COVID-19 Advanced Analytics Workspace</title>
+        <title>Dash - COVID-19 Advanced Analytics Workspace</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remote-desktop" class="md-skip">
+        <a href="#getting-started-with-dash" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Remote Desktop
+              Dash
             
           </span>
         </div>
@@ -200,12 +200,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Analysis
@@ -229,7 +227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Kubeflow/" title="Kubeflow" class="md-nav__link">
+    <a href="../../1-Experiments/Kubeflow/" title="Kubeflow" class="md-nav__link">
       Kubeflow
     </a>
   </li>
@@ -241,7 +239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Jupyter/" title="Jupyter" class="md-nav__link">
+    <a href="../../1-Experiments/Jupyter/" title="Jupyter" class="md-nav__link">
       Jupyter
     </a>
   </li>
@@ -253,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../RStudio/" title="RStudio" class="md-nav__link">
+    <a href="../../1-Experiments/RStudio/" title="RStudio" class="md-nav__link">
       RStudio
     </a>
   </li>
@@ -263,144 +261,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Remote Desktop
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Remote Desktop" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../1-Experiments/Remote-Desktop/" title="Remote Desktop" class="md-nav__link">
       Remote Desktop
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#remote-desktop" class="md-nav__link">
-    Remote Desktop
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-remote-desktop" class="md-nav__link">
-    What is Remote Desktop?
-  </a>
-  
-    <nav class="md-nav" aria-label="What is Remote Desktop?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
-    Versions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#customization" class="md-nav__link">
-    Customization
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-remote-desktop" class="md-nav__link">
-    Accessing the Remote Desktop
-  </a>
-  
-    <nav class="md-nav" aria-label="Accessing the Remote Desktop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#legacy-interface-jupyter-notebook" class="md-nav__link">
-    Legacy Interface: Jupyter Notebook
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#in-browser-tools" class="md-nav__link">
-    In-browser Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="In-browser Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
-    VS Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#netdata" class="md-nav__link">
-    Netdata
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filebrowser" class="md-nav__link">
-    Filebrowser
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-port" class="md-nav__link">
-    Access Port
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    Footnotes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -410,7 +275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../MLflow/" title="MLflow" class="md-nav__link">
+    <a href="../../1-Experiments/MLflow/" title="MLflow" class="md-nav__link">
       MLflow
     </a>
   </li>
@@ -425,10 +290,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Publishing
@@ -452,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publishing/R-Shiny/" title="R Shiny" class="md-nav__link">
+    <a href="../R-Shiny/" title="R Shiny" class="md-nav__link">
       R Shiny
     </a>
   </li>
@@ -462,11 +329,75 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/Dash/" title="Dash" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Dash
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Dash" class="md-nav__link md-nav__link--active">
       Dash
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-with-dash" class="md-nav__link">
+    Getting Started with Dash!
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Dash!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-visualization-with-dash" class="md-nav__link">
+    Data Visualization with Dash
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Visualization with Dash">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-your-app" class="md-nav__link">
+    Run your app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -476,7 +407,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publishing/Datasette/" title="Datasette" class="md-nav__link">
+    <a href="../Datasette/" title="Datasette" class="md-nav__link">
       Datasette
     </a>
   </li>
@@ -488,7 +419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publishing/PowerBI/" title="Power BI" class="md-nav__link">
+    <a href="../PowerBI/" title="Power BI" class="md-nav__link">
       Power BI
     </a>
   </li>
@@ -500,7 +431,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publishing/Custom/" title="Custom" class="md-nav__link">
+    <a href="../Custom/" title="Custom" class="md-nav__link">
       Custom
     </a>
   </li>
@@ -637,30 +568,24 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#remote-desktop" class="md-nav__link">
-    Remote Desktop
+  <a href="#getting-started-with-dash" class="md-nav__link">
+    Getting Started with Dash!
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-remote-desktop" class="md-nav__link">
-    What is Remote Desktop?
-  </a>
-  
-    <nav class="md-nav" aria-label="What is Remote Desktop?">
+    <nav class="md-nav" aria-label="Getting Started with Dash!">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#versions" class="md-nav__link">
-    Versions
+  <a href="#data-visualization-with-dash" class="md-nav__link">
+    Data Visualization with Dash
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Data Visualization with Dash">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#customization" class="md-nav__link">
-    Customization
+  <a href="#run-your-app" class="md-nav__link">
+    Run your app
   </a>
   
 </li>
@@ -669,72 +594,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-remote-desktop" class="md-nav__link">
-    Accessing the Remote Desktop
-  </a>
-  
-    <nav class="md-nav" aria-label="Accessing the Remote Desktop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#legacy-interface-jupyter-notebook" class="md-nav__link">
-    Legacy Interface: Jupyter Notebook
-  </a>
-  
-</li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#in-browser-tools" class="md-nav__link">
-    In-browser Tools
-  </a>
-  
-    <nav class="md-nav" aria-label="In-browser Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vs-code" class="md-nav__link">
-    VS Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#netdata" class="md-nav__link">
-    Netdata
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#filebrowser" class="md-nav__link">
-    Filebrowser
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-port" class="md-nav__link">
-    Access Port
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    Footnotes
-  </a>
   
 </li>
       
@@ -750,7 +612,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/1-Experiments/Remote-Desktop.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/2-Publishing/Dash.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -758,66 +620,91 @@
                   
                 
                 
-                  <h1>Remote Desktop</h1>
+                  <h1>Dash</h1>
                 
-                <h2 id="remote-desktop">Remote Desktop<a class="headerlink" href="#remote-desktop" title="Permanent link">&para;</a></h2>
-<p><img alt="Remote Desktop" src="../../images/rd_desktop.png" /></p>
-<h2 id="what-is-remote-desktop">What is Remote Desktop?<a class="headerlink" href="#what-is-remote-desktop" title="Permanent link">&para;</a></h2>
-<p>Remote Desktop provides an in-browser GUI Ubuntu desktop experience as well as
-quick access to supporting tools. The operating system is
-<a href="https://ubuntu.com/about"><strong>Ubuntu</strong></a> <strong>18.04</strong> with the
-<a href="https://www.xfce.org/about"><strong>XFCE</strong></a> desktop environment.</p>
-<h3 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h3>
-<p>Two versions of Remote Desktop are available. <em>R</em> includes R and RStudio.
-<em>Geomatics</em> extends <em>R</em> with QGIS and various supporting libraries. You may
-further customize your Remote Desktop workspace to suit your specific needs and
-preferences.</p>
-<h3 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h3>
-<p><em>pip</em>, <em>conda</em>, <em>npm</em> and <em>yarn</em> are available to install various packages.</p>
-<h2 id="accessing-the-remote-desktop">Accessing the Remote Desktop<a class="headerlink" href="#accessing-the-remote-desktop" title="Permanent link">&para;</a></h2>
-<p>To launch the Remote Desktop or any of its supporting tools, create a Notebook
-Server in <a href="../Kubeflow/">Kubeflow</a> and select one of the available versions in
-the image dropdown. Then, click <code>Connect</code> to access the landing page.</p>
-<p><img alt="Landing Page" src="../../images/rd_landing_page.png" /></p>
-<p><em>Remote Desktop</em> brings you to the Desktop GUI through a noVNC session. Click on
-the &lt; on the left side of the screen to expand a panel with options such as
-fullscreen and clipboard access.</p>
-<p><img alt="NoVNC Panel" src="../../images/rd_novnc_panel.png" /></p>
-<h3 id="legacy-interface-jupyter-notebook">Legacy Interface: Jupyter Notebook<a class="headerlink" href="#legacy-interface-jupyter-notebook" title="Permanent link">&para;</a></h3>
-<p><em>Jupyter Notebook</em> is a legacy interface for managing Jupyter Notebooks until
-storage integration with the <a href="../Jupyter/">JupyterLab images</a> becomes
-available.</p>
-<p><img alt="Jupyter Notebook" src="../../images/rd_jupyter.png" /></p>
-<p>You can access other tools and interfaces with the <em>Open Tool</em> button in the top
-right corner, or by returning to the landing page.</p>
-<p><img alt="Open Tool" src="../../images/rd_open_tools.png" /></p>
-<h2 id="in-browser-tools">In-browser Tools<a class="headerlink" href="#in-browser-tools" title="Permanent link">&para;</a></h2>
-<h3 id="vs-code">VS Code<a class="headerlink" href="#vs-code" title="Permanent link">&para;</a></h3>
-<p><em>VS Code</em> brings you to the Visual Studio Code IDE.</p>
-<p><img alt="VS Code" src="../../images/rd_vs_code.png" /></p>
-<h3 id="netdata">Netdata<a class="headerlink" href="#netdata" title="Permanent link">&para;</a></h3>
-<p><em>Netdata</em> delivers in-depth interactive resource monitoring. Charts can be
-panned by dragging them. You can also zoom in and out with
-<code>SHIFT + mouse wheel</code>, or zoom to a selection by holding down <code>SHIFT</code> while
-dragging.</p>
-<p><img alt="Netdata" src="../../images/rd_netdata.png" /></p>
-<h3 id="filebrowser">Filebrowser<a class="headerlink" href="#filebrowser" title="Permanent link">&para;</a></h3>
-<p><em>Filebrowser</em> can be used to quickly explore the file system of the Remote
-Desktop as well as to transfer files between the Remote Desktop and your
-computer.</p>
-<p><img alt="Filebrowser" src="../../images/rd_filebrowser.png" /></p>
-<h3 id="access-port">Access Port<a class="headerlink" href="#access-port" title="Permanent link">&para;</a></h3>
-<p>Finally, <em>Access Port</em> provides in-browser access to anything served on a
-specified port inside the Remote Desktop (internally accessible at e.g.
-<code>localhost:8059</code>).</p>
-<p><img alt="Access Port" src="../../images/rd_access_port.png" /></p>
-<p>As with the other tools, this opens in a separate page in your browser. Your
-namespace collaborators can also access this page if you send them the URL.</p>
-<p><em>Example: Accessing the Supervisor API at port 8059</em></p>
-<p><img alt="Supervisor API" src="../../images/rd_supervisor.png" /></p>
-<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
-<p>Remote Desktop is based on
-<a href="https://github.com/ml-tooling/ml-workspace">ml-tooling/ml-workspace</a>.</p>
+                <h2 id="getting-started-with-dash">Getting Started with Dash!<a class="headerlink" href="#getting-started-with-dash" title="Permanent link">&para;</a></h2>
+<p>For data visualization tools, we will be using Dash. Dash is a great tool used
+by many for data analysis, data exploration, visualization, modelling,
+instrument control, and reporting.</p>
+<p>The following example demonstrates a highly reactive and customised Dash app
+with little code.</p>
+<!-- prettier-ignore -->
+<div class="admonition danger">
+<p class="admonition-title">Running your Notebook Server and accessing the port</p>
+<p>When running any tool from your Jupyter Notebook that posts a website to a port,
+you will not be able to simply access it from <code>http://localhost:5000/</code> as
+normally suggested in the output upon running the web-app.</p>
+<p>To access the web server you will need to use the base URL. In your notebook
+terminal run:</p>
+<p><code>python
+echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/</code></p>
+</div>
+<h3 id="data-visualization-with-dash">Data Visualization with Dash<a class="headerlink" href="#data-visualization-with-dash" title="Permanent link">&para;</a></h3>
+<p>Dash makes it simple to build an interactive GUI around your data analysis code.
+This is an example of a Layout With Figure and Slider from
+<a href="https://dash.plotly.com/basic-callbacks">Dash</a>.</p>
+<p><img alt="dash_plot" src="../../images/plot.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># required installations if not already installed</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">dash</span><span class="o">==</span><span class="mf">1.16</span><span class="o">.</span><span class="mi">3</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">pandas</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># app.py</span>
+
+<span class="c1">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">dash</span>
+<span class="kn">import</span> <span class="nn">dash_core_components</span> <span class="k">as</span> <span class="nn">dcc</span>
+<span class="kn">import</span> <span class="nn">dash_html_components</span> <span class="k">as</span> <span class="nn">html</span>
+<span class="kn">from</span> <span class="nn">dash.dependencies</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv&#39;</span><span class="p">)</span>
+
+<span class="n">external_stylesheets</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://codepen.io/chriddyp/pen/bWLwgP.css&#39;</span><span class="p">]</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">dash</span><span class="o">.</span><span class="n">Dash</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">external_stylesheets</span><span class="o">=</span><span class="n">external_stylesheets</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+    <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;graph-with-slider&#39;</span><span class="p">),</span>
+    <span class="n">dcc</span><span class="o">.</span><span class="n">Slider</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;year-slider&#39;</span><span class="p">,</span>
+        <span class="nb">min</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="nb">max</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="n">marks</span><span class="o">=</span><span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">):</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()},</span>
+        <span class="n">step</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">)</span>
+<span class="p">])</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;graph-with-slider&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">),</span>
+    <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;year-slider&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)])</span>
+<span class="k">def</span> <span class="nf">update_figure</span><span class="p">(</span><span class="n">selected_year</span><span class="p">):</span>
+    <span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">selected_year</span><span class="p">]</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;gdpPercap&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;lifeExp&quot;</span><span class="p">,</span>
+                     <span class="n">size</span><span class="o">=</span><span class="s2">&quot;pop&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;continent&quot;</span><span class="p">,</span> <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;country&quot;</span><span class="p">,</span>
+                     <span class="n">log_x</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size_max</span><span class="o">=</span><span class="mi">55</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">transition_duration</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">fig</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="run-your-app">Run your app<a class="headerlink" href="#run-your-app" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">python</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+
+<span class="c1"># or you can use:</span>
+
+<span class="n">export</span> <span class="n">FLASK_APP</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">py</span>
+<span class="n">flask</span> <span class="n">run</span>
+</code></pre></div>
                 
               
               
@@ -836,7 +723,7 @@ namespace collaborators can also access this page if you send them the URL.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../RStudio/" title="RStudio" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../R-Shiny/" title="R Shiny" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -845,19 +732,19 @@ namespace collaborators can also access this page if you send them the URL.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                RStudio
+                R Shiny
               </div>
             </div>
           </a>
         
         
-          <a href="../MLflow/" title="MLflow" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Datasette/" title="Datasette" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MLflow
+                Datasette
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
