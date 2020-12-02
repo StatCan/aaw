@@ -2,10 +2,38 @@
 
 # Data Analytics as a Service
 
-A presentation was given at Stratosphere:
+We encourage you to watch our YouTube presentation given at Stratosphere:
 
 - [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
 - [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
+
+# Table of Contents
+
+1. [Background](#background)
+1. [Key Highlights](#key-highlights)
+   * [Pipelines](#pipelines)
+   * [Kubernetes](#kubernetes)
+   * [Security](#security)
+   * [Gatekeeper](#gatekeeper)
+   * [Starboard](#starboard)
+   * [Azure Kubernetes Service](#azure-kubernetes-service)
+   * [Kubeflow](#kubeflow)
+   * [Kubeflow Containers](#kubeflow-containers)
+   * [Jupyter Notebooks](#jupyter-notebooks)
+   * [MinIO](#minio)
+   * [Shiny](#shiny)
+   * [Node.JS](#nodejs)
+   * [.NET](#net)
+   * [Mlflow](#mlflow)
+   * [Dremio](#dremio)
+   * [Pachyderm](#pachyderm)
+   * [Vault](#vault)
+1. [Important Links](#important-links)
+   * [Resources](#resources)
+   * [Terraform](#terraform)
+   * [Repositories](#repositories)
+   * [Ingresses](#ingresses)
+   * [Recommended Reading](#recommended-reading)
 
 ## Background
 
@@ -40,9 +68,6 @@ we can run supporting services, applications, and more following a common
 deployment and management methodology. Additionally with the integration with
 Kubernetes Role-Based Access Control (RBAC) and the Open Policy Agent, we can
 have fine-grained control over the configuration of data analytics pipelines.
-
-> Note: We had to remove all references to the hostname at the moment but hope
-> in the future can make available.
 
 ## Key Highlights
 
@@ -280,7 +305,7 @@ container images to the Azure Container Registry.
 - https://github.com/StatCan/kubeflow-containers
 - https://github.com/StatCan/kubeflow-containers/actions
 
-## Jupyter Notebooks (Examples)
+## Jupyter Notebooks
 
 ![Jupyter notebooks](docs/en/images/readme/jupyter_notebooks.png "Jupyter Notebooks")
 
@@ -385,7 +410,7 @@ served by Shiny.
 - https://github.com/StatCan/shiny/actions
 - https://github.com/StatCan/charts/tree/master/stable/shiny
 
-## Node.js (https://covid19.covid.cloud.statcan.ca)
+## Node.js
 
 ![covid map](docs/en/images/readme/covid_ui.png "Covid-19 Map")
 
@@ -416,7 +441,7 @@ application.
 - https://github.com/StatCan/covid19/actions
 - https://github.com/StatCan/charts/tree/master/stable/covid
 
-## .NET (https://portal.covid.cloud.statcan.ca)
+## .NET
 
 ![portal ui](docs/en/images/readme/portal_ui.png "Portal UI")
 
@@ -444,7 +469,7 @@ web application.
 - https://github.com/StatCan/StatCan.OrchardCore/actions
 - https://github.com/StatCan/charts/tree/master/stable/orchard-cms
 
-## MLflow (https://mlflow.covid.cloud.statcan.ca)
+## MLflow
 
 ![mlflow ui](docs/en/images/readme/mlflow_ui.png "MLflow UI")
 
@@ -478,7 +503,7 @@ application.
 - https://github.com/StatCan/mlflow/actions
 - https://github.com/StatCan/charts/tree/master/stable/mlflow
 
-## Dremio (https://dremio.covid.cloud.statcan.ca)
+## Dremio
 
 ![dremio ui](docs/en/images/readme/dremio_ui.png "Dremio UI")
 
@@ -527,7 +552,7 @@ What can you do it with / what have we done with it?
 - https://github.com/StatCan/pachyderm
 - https://github.com/StatCan/pachyderm/actions
 
-## Vault (https://vault.covid.cloud.statcan.ca)
+## Vault
 
 ![vault ui](docs/en/images/readme/vault_ui.png "Vault UI")
 
@@ -564,116 +589,132 @@ What can you do it with / what have we done with it?
   - ComCast case study using Azure DataBricks and AKS
     ([Link](https://www.topbots.com/ml-model-deployment-with-mlflow-kubernetes/))
 
-#### Terraform
+### Terraform
 
 - https://github.com/StatCan/terraform-kubernetes-aks-daaas
 - https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
-- https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private)
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private
-  (private)
+- https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private) // [GitHub Action][github_action_tf_daaas]
+- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private (private) // [GitHub Action][github_action_tf_daaas_platform]
+- https://github.com/StatCan/terraform-vault-daaas (private) // [GitHub Action][github_action_tf_daaas_vault]
 
-#### Source Code
+### Repositories
 
 - https://github.com/StatCan?q=daaas
-- https://github.com/StatCan/actions
-- https://github.com/StatCan/boathouse
-- https://github.com/StatCan/charts
-- https://github.com/StatCan/covid19
-- https://github.com/StatCan/daaas
-- https://github.com/StatCan/daaas-containers
-- https://github.com/StatCan/dremio
-- https://github.com/StatCan/gatekeeper-policies
-- https://github.com/StatCan/jupyter-apis
-- https://github.com/StatCan/jupyter-notebooks
-- https://github.com/StatCan/goofys-injector
-- https://github.com/StatCan/gpu-toleration-injector
-- https://github.com/StatCan/kubecost
-- https://github.com/StatCan/kubeflow
-- https://github.com/StatCan/kubeflow-containers
-- https://github.com/StatCan/kubeflow-controller
-- https://github.com/StatCan/kubeflow-containers-desktop
-- https://github.com/StatCan/kubeflow-manifest
-- https://github.com/StatCan/kubeflow-mlops
-- https://github.com/StatCan/matomo
-- https://github.com/StatCan/minio
-- https://github.com/StatCan/mlflow
-- https://github.com/StatCan/mlflow-operator
-- https://github.com/StatCan/pachyderm
-- https://github.com/StatCan/R-dashboards
-- https://github.com/StatCan/R-notebooks
-- https://github.com/StatCan/shiny
-- https://github.com/StatCan/statcan.orchardcore
-- https://github.com/StatCan/terraform-vault-daaas (private)
-- https://github.com/StatCan/vault-plugin-secrets-minio
+- https://github.com/StatCan/actions // [GitHub Action][github_action_actions]
+- https://github.com/StatCan/boathouse // [GitHub Action][github_action_boathouse]
+- https://github.com/StatCan/charts // [GitHub Action][github_action_charts]
+- https://github.com/StatCan/covid19 // [GitHub Action][github_action_covid19]
+- https://github.com/StatCan/daaas // [GitHub Action][github_action_daaas]
+- https://github.com/StatCan/daaas-containers // [GitHub Action][github_action_daaas_containers]
+- https://github.com/StatCan/dremio // [GitHub Action][github_action_dremio]
+- https://github.com/StatCan/gatekeeper-policies // [GitHub Action][github_action_gatekeeper_policies]
+- https://github.com/StatCan/goofys-injector // [GitHub Action][github_action_goofys_injector]
+- https://github.com/StatCan/gpu-toleration-injector // [GitHub Action][github_action_gpu_toleration_injector]
+- https://github.com/StatCan/jupyter-apis // [GitHub Action][github_action_jupyter_apis]
+- https://github.com/StatCan/jupyter-notebooks // [GitHub Action][github_action_jupyter_notebooks]
+- https://github.com/StatCan/kubecost // [GitHub Action][github_action_kubecost]
+- https://github.com/StatCan/kubeflow // [GitHub Action][github_action_kubeflow]
+- https://github.com/StatCan/kubeflow-containers // [GitHub Action][github_action_kubeflow_containers]
+- https://github.com/StatCan/kubeflow-containers-desktop // [GitHub Action][github_action_kubeflow_containers_desktop]
+- https://github.com/StatCan/kubeflow-controller // [GitHub Action][github_action_kubeflow_controller]
+- https://github.com/StatCan/kubeflow-manifest // [GitHub Action][github_action_kubeflow_manifest]
+- https://github.com/StatCan/kubeflow-mlops // [GitHub Action][github_action_kubeflow_mlops]
+- https://github.com/StatCan/kubeflow-opa-sync // [GitHub Action][github_action_kubeflow_opa_sync]
+- https://github.com/StatCan/matomo // [GitHub Action][github_action_matomo]
+- https://github.com/StatCan/minio // [GitHub Action][github_action_minio]
+- https://github.com/StatCan/minio-credential-injector // [GitHub Action][github_action_minio_credential_injector]
+- https://github.com/StatCan/minio-operator // [GitHub Action][github_action_minio_operator]
+- https://github.com/StatCan/mlflow // [GitHub Action][github_action_mlflow]
+- https://github.com/StatCan/mlflow-operator // [GitHub Action][github_action_mlflow_operator]
+- https://github.com/StatCan/pachyderm // [GitHub Action][github_action_pachyderm]
+- https://github.com/StatCan/r-dashboards // [GitHub Action][github_action_r_dashboards]
+- https://github.com/StatCan/r-notebooks // [GitHub Action][github_action_r_notebooks]
+- https://github.com/StatCan/shiny // [GitHub Action][github_action_shiny]
+- https://github.com/StatCan/statcan.orchardcore // [GitHub Action][github_action_orchardcore]
+- https://github.com/StatCan/vault-plugin-secrets-minio // [GitHub Action][github_action_vault_plugin_secrets_minio]
 
-#### GitHub Actions
+### Ingresses
 
-- https://github.com/StatCan/actions/actions
-- https://github.com/StatCan/boathouse/actions
-- https://github.com/StatCan/charts/actions
-- https://github.com/StatCan/covid19/actions
-- https://github.com/StatCan/daaas/actions
-- https://github.com/StatCan/daaas-containers/actions
-- https://github.com/StatCan/dremio/actions
-- https://github.com/StatCan/kubecost/actions
-- https://github.com/StatCan/gatekeeper-policies/actions
-- https://github.com/StatCan/jupyter-apis/actions
-- https://github.com/StatCan/jupyter-notebooks/actions
-- https://github.com/StatCan/goofys-injector/actions
-- https://github.com/StatCan/gpu-toleration-injector/actions
-- https://github.com/StatCan/kubeflow-containers/actions
-- https://github.com/StatCan/kubeflow-controller/actions
-- https://github.com/StatCan/kubeflow-containers-desktop/actions
-- https://github.com/StatCan/kubeflow-manifest/actions
-- https://github.com/StatCan/kubeflow-mlops/actions
-- https://github.com/StatCan/matomo/actions
-- https://github.com/StatCan/minio/actions
-- https://github.com/StatCan/mlflow/actions
-- https://github.com/StatCan/mlflow-operator/actions
-- https://github.com/StatCan/pachyderm/actions
-- https://github.com/StatCan/R-dashboards/actions
-- https://github.com/StatCan/shiny/actions
-- https://github.com/StatCan/StatCan.OrchardCore/actions
-- https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions
-  (private)
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/action
-  (private)
-
-#### Ingresses
-
-##### Platform
+#### Elastic Stack
 
 - https://elastic.covid.cloud.statcan.ca
 - https://kibana.covid.cloud.statcan.ca
 - https://logging-elastic.covid.cloud.statcan.ca
 - https://logging-kibana.covid.cloud.statcan.ca
+
+#### Service Mesh
+
 - https://istio-grafana.covid.cloud.statcan.ca
 - https://istio-kiali.covid.cloud.statcan.ca
-- https://kubecost.covid.cloud.statcan.ca
-- https://vault.covid.cloud.statcan.ca
 
-##### MinIO
+#### Main Portal
 
-- https://minimal-tenant1-minio.covid.cloud.statcan.ca
-- https://pachyderm-tenant1-minio.covid.cloud.statcan.ca
-- https://premium-tenant1-minio.covid.cloud.statcan.ca
-- https://daaas-tenant1-mlflow.covid.cloud.statcan.ca
-
-##### Applications
-
+- https://daaas-dev.covid.cloud.statcan.ca
+- https://daaas-test.covid.cloud.statcan.ca
+- https://daaas-prod.covid.cloud.statcan.ca
 - https://analytics-platform.statcan.gc.ca
+
+#### Services
+
+- https://covid19.covid.cloud.statcan.ca
+- https://kubecost.covid.cloud.statcan.ca
 - https://mlflow.covid.cloud.statcan.ca
 - https://grafana.covid.cloud.statcan.ca
-- https://pachyderm.covid.cloud.statcan.ca
-- https://covid19.covid.cloud.statcan.ca
 - https://matomo.covid.cloud.statcan.ca
 - https://oc-dev.covid.cloud.statcan.ca
-- https://portal-old.covid.cloud.statcan.ca
 - https://shiny.covid.cloud.statcan.ca
+- https://vault.covid.cloud.statcan.ca
 
-#### Recommended Reading
+#### MinIO
+
+- https://minio-hackathon-tenant-1.covid.cloud.statcan.ca
+- https://minio-console-hackathon-tenant-1.covid.cloud.statcan.ca
+- https://minio-premium-tenant-1.covid.cloud.statcan.ca
+- https://minio-console-premium-tenant-1.covid.cloud.statcan.ca
+- https://minio-standard-tenant-1.covid.cloud.statcan.ca
+- https://minio-console-standard-tenant-1.covid.cloud.statcan.ca
+
+### Recommended Reading
 
 - https://kubeflow.org/docs/started/getting-started/
+- https://blog.kubeflow.org/
 - https://towardsdatascience.com/tagged/kubernetes
 - https://medium.com/kredaro-engineering/ai-tales-building-machine-learning-pipeline-using-kubeflow-and-minio-4b88da30437b
-- https://pachyderm.com/blog/pachyderm-1-10-s3-gateway-expansion-brings-support-for-kubeflow/
+
+<!-- Links Referenced -->
+
+[github_action_tf_daaas]:                    https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions
+[github_action_tf_daaas_platform]:           https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/actions
+[github_action_tf_daaas_vault]:              https://github.com/StatCan/terraform-vault-daaas/actions
+[github_action_actions]:                     https://github.com/StatCan/actions/actions
+[github_action_boathouse]:                   https://github.com/StatCan/boathouse/actions
+[github_action_charts]:                      https://github.com/StatCan/charts/actions
+[github_action_covid19]:                     https://github.com/StatCan/covid19/actions
+[github_action_daaas]:                       https://github.com/StatCan/daaas/actions
+[github_action_daaas_containers]:            https://github.com/StatCan/daaas-containers/actions
+[github_action_dremio]:                      https://github.com/StatCan/dremio/actions
+[github_action_gatekeeper_policies]:         https://github.com/StatCan/gatekeeper-policies/actions
+[github_action_goofys_injector]:             https://github.com/StatCan/goofys-injector/actions
+[github_action_gpu_toleration_injector]:     https://github.com/StatCan/gpu-toleration-injector/actions
+[github_action_jupyter_apis]:                https://github.com/StatCan/jupyter-apis/actions
+[github_action_jupyter_notebooks]:           https://github.com/StatCan/jupyter-notebooks/actions
+[github_action_kubecost]:                    https://github.com/StatCan/kubecost/actions
+[github_action_kubeflow]:                    https://github.com/StatCan/kubeflow/actions
+[github_action_kubeflow_containers]:         https://github.com/StatCan/kubeflow-containers/actions
+[github_action_kubeflow_containers_desktop]: https://github.com/StatCan/kubeflow-containers-desktop/actions
+[github_action_kubeflow_controller]:         https://github.com/StatCan/kubeflow-controller/actions
+[github_action_kubeflow_manifest]:           https://github.com/StatCan/kubeflow-manifest/actions
+[github_action_kubeflow_mlops]:              https://github.com/StatCan/kubeflow-mlops/actions
+[github_action_kubeflow_opa_sync]:           https://github.com/StatCan/kubeflow-opa-sync/actions
+[github_action_matomo]:                      https://github.com/StatCan/matomo/actions
+[github_action_minio]:                       https://github.com/StatCan/minio/actions
+[github_action_minio_credential_injector]:   https://github.com/StatCan/minio-credential-injector/actions
+[github_action_minio_operator]:              https://github.com/StatCan/minio-operator/actions
+[github_action_mlflow]:                      https://github.com/StatCan/mlflow/actions
+[github_action_mlflow_operator]:             https://github.com/StatCan/mlflow-operator/actions
+[github_action_pachyderm]:                   https://github.com/StatCan/pachyderm/actions
+[github_action_r_dashboards]:                https://github.com/StatCan/r-dashboards/actions
+[github_action_r_notebooks]:                 https://github.com/StatCan/r-notebooks/actions
+[github_action_shiny]:                       https://github.com/StatCan/shiny/actions
+[github_action_orchardcore]:                 https://github.com/StatCan/statcan.orchardcore/actions
+[github_action_vault_plugin_secrets_minio]:  https://github.com/StatCan/vault-plugin-secrets-minio/actions

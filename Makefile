@@ -19,7 +19,7 @@ check-format-admonitions:
 	fi
 
 check-format-prettier:
-	yarn run prettier --ignore-path .gitignore -c .
+	yarn run prettier -c .
 
 check-prerequisites:
 	@if ! which node npm yarn python3 > /dev/null 2>&1 \
