@@ -56,9 +56,9 @@ Nous avons trois types de stockage en compartiment.
 
 **Libre-service :**
 
-- **[Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca) :**  
+- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):**
   Stockage soutenu par des HDD. Par défaut, utilisez cette option.
-- **[Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca) :**  
+- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):**
   Utilisez cette option si vous avez besoin de vitesses de lecture / écriture
   très élevées, comme pour l'entraînement de modèles sur de très grands
   ensembles de données.
@@ -121,35 +121,35 @@ Pour vous connecter, exécutez la commande suivante (remplacer
 #!/bin/sh
 NOMCOMPLET=blair-drummond
 # Obtenir les justificatifs d'identité
-source /vault/secrets/minio-minimal-tenant1
-# Ajouter le stockage sous le pseudonyme « minio-minimal »
-mc config host add minio-minimal $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+source /vault/secrets/minio-standard-tenant-1
+# Ajouter le stockage sous le pseudonyme « standard »
+mc config host add standard $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
 # Créer un compartiment à votre nom
 # NOTE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOM.
 # Tout autre nom sera rejeté.
 # Compartiment privé ("mb" = "créer compartiment")
-mc mb minio-minimal/${NOMCOMPLET}
+mc mb standard/${NOMCOMPLET}
 # Compartiment partagé
-mc mb minio-minimal/shared/${NOMCOMPLET}
+mc mb standard/shared/${NOMCOMPLET}
 # Voilà! Vous pouvez maintenant copier des fichiers ou des dossiers!
 [ -f test.txt ] || echo "Ceci est un test" > test.txt
-mc cp test.txt minio-minimal/${NOMCOMPLET}/test.txt
+mc cp test.txt standard/${NOMCOMPLET}/test.txt
 ```
 
 Maintenant, ouvrez le document dans
-[le navigateur MinIO](https://minimal-tenant1-minio.example.ca). Vous y verrez
+[le navigateur MinIO](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). Vous y verrez
 votre fichier de test.
 
 Vous pouvez utiliser `mc` pour copier des fichiers vers/depuis le compartiment.
 Cette opération est très rapide. Vous pouvez également utiliser `mc --help` pour
 voir les autres options qui s'offrent à vous, comme
-`mc ls minio-minimal/PRÉNOM-NOM/` pour afficher le contenu de votre
+`mc ls standard/PRÉNOM-NOM/` pour afficher le contenu de votre
 compartiment.
 
 <!-- prettier-ignore -->
 ??? tip "Autres options de stockage"
-    Pour utiliser une de nos autres options de stockage, `pachyderm` ou
-    `premium`, remplacez simplement  la valeur `minimal` dans le programme
+    Pour utiliser une de nos autres options de stockage,
+    `premium`, remplacez simplement  la valeur `standard` dans le programme
     ci-dessus par le type dont vous avez besoin.
 
 ## Obtenir l'information d'identification de MinIO
@@ -171,8 +171,8 @@ OIDC Provider ».
 Exécutez la commande suivante dans le terminal situé dans le coin à droit:
 
 ```sh
-# Replacez minimal avec premium pour changer le type de compartiment
-read minio_minimal_tenant1/keys/profile-votreprénom-votrenom
+# Replacez standard avec premium pour changer le type de compartiment
+read minio_standard_tenant_1/keys/profile-votreprénom-votrenom
 ```
 
 ![Vault AccessKey](images/accessKey.png)
@@ -182,10 +182,10 @@ read minio_minimal_tenant1/keys/profile-votreprénom-votrenom
 Démarrez votre serveur et exécutez la commande suivante:
 
 ```sh
-cat /vault/secrets/minio-minimal-tenant1
+cat /vault/secrets/minio-standard-tenant-1
 
 # Output:
-# export MINIO_URL="http://minimal-tenant1-minio.minio..."
+# export MINIO_URL="http://minio.minio-standard-tenant-1 ..."
 # export MINIO_ACCESS_KEY="..."
 # export MINIO_SECRET_KEY="..."
 ```

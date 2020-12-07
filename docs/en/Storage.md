@@ -79,12 +79,12 @@ by clicking the trash can icon.
 
 Buckets are slightly more complicated, but they are good at three things:
 
-- **Large amounts of data**  
+- **Large amounts of data**
   Buckets can be huge: way bigger than hard drives. And they are still fast.
 - **Accessible by multiple consumers at once** You can access the same data
   source from multiple Notebook Servers and pipelines at the same time without
   needing to duplicate the data
-- **Sharing**  
+- **Sharing**
   You can share files from a bucket by sharing a URL that you can get through a
   simple web interface. This is great for sharing data with people outside of
   your workspace.
@@ -112,7 +112,7 @@ There are multiple ways to upload and download data from your MinIO buckets:
 
 <!-- prettier-ignore -->
 ??? info "There are two different MinIO services"
-    The examples below use the `minimal-tenant1` instance of MinIO, but there is also a second instance: `premium-tenant1`.  See [Bucket Types and Access Scopes](#bucket-types-and-access-scopes) for more details.  To use `premium-tenant1` in these examples, just substitute that name in for `minimal-tenant1`.
+    The examples below use the `standard-tenant-1` instance of MinIO, but there is also a second instance: `premium-tenant-1`.  See [Bucket Types and Access Scopes](#bucket-types-and-access-scopes) for more details.  To use `premium-tenant-1` in these examples, just substitute that name in for `standard-tenant-1`.
 
 ### MinIO Mounted Folders on a Notebook Server
 
@@ -134,7 +134,7 @@ Notebook Server it is attached to like a [Disk](#disks)).
 ### MinIO Web Portal
 
 The MinIO service can be accessible through a
-[web portal](https://minimal-tenant1-minio.covid.cloud.statcan.ca/). To sign in
+[web portal](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). To sign in
 using your existing credentials, use the "Log in with OpenID" button.
 
 ![MinIO sign-in view, indicating the OpenID option](images/minio_self_serve_login.png)
@@ -163,35 +163,35 @@ files. For example:
 # Typically this is "firstname-lastname", but it might be different if working in a shared namespace
 BUCKETNAME=firstname-lastname
 
-# Get your personal credentials for the "minimal-tenant1" MinIO instance
+# Get your personal credentials for the "minio-standard-tenant-1" MinIO instance
 # (this initializes $MINIO_URL, $MINIO_ACCESS_KEY, and $MINIO_SECRET_KEY environment variables)
-source /vault/secrets/minio-minimal-tenant1
+source /vault/secrets/minio-standard-tenant-1
 
-# Create a MinIO alias (called "minimal") for "minimal-tenant1" using your credentials
-mc config host add minimal $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+# Create a MinIO alias (called "standard") for "standard" using your credentials
+mc config host add standard $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
 
 # Create a bucket under your name
 # NOTE: You can *only* create buckets named the same as your namespace. Any
 # other name will be rejected.
 
 # Private bucket ("mb" = "make bucket")
-mc mb -p minimal/${BUCKETNAME}
+mc mb -p standard/${BUCKETNAME}
 
 # Shared bucket
-mc mb -p minimal/shared/${BUCKETNAME}
+mc mb -p standard/shared/${BUCKETNAME}
 
 # There you go! Now you can copy over files or folders!
 # Create test.txt (if it does not exist) and copy it to your bucket:
 [ -f test.txt ] || echo "This is a test" > test.txt
-mc cp test.txt minimal/${BUCKETNAME}/test.txt
+mc cp test.txt standard/${BUCKETNAME}/test.txt
 ```
 
 Now open the [MinIO Web Portal](#minio-web-portal) or browse to
-`~/minio/minimal-tenant1/private` to see your test file!
+`~/minio/standard-tenant-1/private` to see your test file!
 
 <!-- prettier-ignore -->
-??? tip "`mc` can do a lot" 
-    In addition to copying files, `mc` can do a lot more (like `mc ls minio-minimal/FIRSTNAME-LASTNAME` to list the contents of a bucket).  Check out the [mc docs](https://docs.min.io/docs/minio-client-complete-guide.html) or run `mc --help` for more information.
+??? tip "`mc` can do a lot"
+    In addition to copying files, `mc` can do a lot more (like `mc ls standard/FIRSTNAME-LASTNAME` to list the contents of a bucket).  Check out the [mc docs](https://docs.min.io/docs/minio-client-complete-guide.html) or run `mc --help` for more information.
 
 <!-- prettier-ignore -->
 ??? tip "See the example notebooks!"
@@ -210,7 +210,7 @@ import json, minio, re
 http = lambda url: re.sub('^https?://', '', url)
 
 # Get the MinIO creds
-with open("/vault/secrets/minio-minimal-tenant1.json") as secrets:
+with open("/vault/secrets/minio-standard-tenant-1.json") as secrets:
     d = json.load(f)
 
 # Create the minio client.
@@ -225,7 +225,7 @@ s3Client = Minio(
 
 <!-- prettier-ignore -->
 !!! tip "But I want to be secure"
-    The `secure=False` thing is a bit misleading. It disables `https` 
+    The `secure=False` thing is a bit misleading. It disables `https`
     because this traffic is **inside** the cluster, and the cluster
     auto-magically applies mutual TLS. So your applications don't need
     to worry about https. **Your connection is secure by default.**
@@ -247,14 +247,14 @@ examples of this are shown in
 
 Two types of buckets are available:
 
-- **[Minimal](https://minimal-tenant1-minio.covid.cloud.statcan.ca):**  
+- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):**
   By default, use this one. It is backed by an SSD and provides a good balance
   of cost and performance.
-- **[Premium](https://premium-tenant1-minio.covid.cloud.statcan.ca):**  
+- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):**
   Use this if you need high read/write speeds and don't mind paying ~2x the
-  storage cost. These are somewhat faster than the minimal storage.
+  storage cost. These are somewhat faster than the standard storage.
 
-Generally if you aren't sure which you need, start with **Minimal**. You can
+Generally if you aren't sure which you need, start with **Standard**. You can
 always change your mind if you see your work limited by file transfer speeds.
 
 Within each bucket type, everyone has two storage locations they can use, each
@@ -263,7 +263,7 @@ providing different access scopes:
 |                                        |                                                                                                     Private                                                                                                      |                                                        Shared                                                        |
 | -------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 |                                Summary | Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a [shared namespace](./Collaboration.md#requesting-a-namespace)) | Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams |
-| Mount location in the Notebook Server: |                                                                                `~/minio/minimal-tenant1/private/myfolder/myfile`                                                                                 |                                   `~/minio/minimal-tenant1/shared/myfolder/myfile`                                   |
+| Mount location in the Notebook Server: |                                                                                `~/minio/standard-tenant-1/private/myfolder/myfile`                                                                               |                                   `~/minio/standard-tenant-1/shared/myfolder/myfile`                                 |
 |    Location in `mc` tool/MinIO portal: |                                                                                       `firstname-lastname/myfolder/myfile`                                                                                       |                                     `shared/firstname-lastname/myfolder/myfile`                                      |
 
 <!-- prettier-ignore -->
@@ -296,8 +296,8 @@ method OIDC, leave **Role** blank and Sign in with OIDC Provider.
 Run the following command in the terminal located at the top right corner:
 
 ```sh
-# Replace minimal with premium depending on your Bucket type
-read minio_minimal_tenant1/keys/profile-yourfirstname-yourlastname
+# Replace standard with premium depending on your Bucket type
+read minio_standard_tenant_1/keys/profile-yourfirstname-yourlastname
 ```
 
 ![Vault AccessKey](images/accessKey.png)
@@ -307,10 +307,10 @@ read minio_minimal_tenant1/keys/profile-yourfirstname-yourlastname
 Open a terminal in your Notebook and run:
 
 ```sh
-cat /vault/secrets/minio-minimal-tenant1
+cat /vault/secrets/minio-standard-tenant-1
 
 # Output:
-# export MINIO_URL="http://minimal-tenant1-minio.minio..."
+# export MINIO_URL="http://minio.minio-standard-tenant-1 ..."
 # export MINIO_ACCESS_KEY="..."
 # export MINIO_SECRET_KEY="..."
 ```
@@ -326,8 +326,8 @@ across multiple users. In general though, the underlying storage is provided by
 [Azure Manage Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/)
 and they give a rough guide for MinIO storage cost based on the MinIO instance:
 
-- premium-tenant1:
+- premium-tenant-1:
   - See **Premium SSD Managed Disks**
-- minimal-tenant1:
+- standard-tenant-1:
   - See **Standard SSD Managed Disks**
-  - Typically 50% the cost of `premium-tenant1`
+  - Typically 50% the cost of `premium-tenant-1`
