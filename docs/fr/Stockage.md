@@ -137,14 +137,13 @@ mc cp test.txt standard/${NOMCOMPLET}/test.txt
 ```
 
 Maintenant, ouvrez le document dans
-[le navigateur MinIO](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). Vous y verrez
-votre fichier de test.
+[le navigateur MinIO](https://minio-standard-tenant-1.covid.cloud.statcan.ca/).
+Vous y verrez votre fichier de test.
 
 Vous pouvez utiliser `mc` pour copier des fichiers vers/depuis le compartiment.
 Cette opération est très rapide. Vous pouvez également utiliser `mc --help` pour
-voir les autres options qui s'offrent à vous, comme
-`mc ls standard/PRÉNOM-NOM/` pour afficher le contenu de votre
-compartiment.
+voir les autres options qui s'offrent à vous, comme `mc ls standard/PRÉNOM-NOM/`
+pour afficher le contenu de votre compartiment.
 
 <!-- prettier-ignore -->
 ??? tip "Autres options de stockage"

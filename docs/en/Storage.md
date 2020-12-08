@@ -79,15 +79,14 @@ by clicking the trash can icon.
 
 Buckets are slightly more complicated, but they are good at three things:
 
-- **Large amounts of data**
-  Buckets can be huge: way bigger than hard drives. And they are still fast.
+- **Large amounts of data** Buckets can be huge: way bigger than hard drives.
+  And they are still fast.
 - **Accessible by multiple consumers at once** You can access the same data
   source from multiple Notebook Servers and pipelines at the same time without
   needing to duplicate the data
-- **Sharing**
-  You can share files from a bucket by sharing a URL that you can get through a
-  simple web interface. This is great for sharing data with people outside of
-  your workspace.
+- **Sharing** You can share files from a bucket by sharing a URL that you can
+  get through a simple web interface. This is great for sharing data with people
+  outside of your workspace.
 
 ## Accessing your Bucket
 
@@ -134,8 +133,8 @@ Notebook Server it is attached to like a [Disk](#disks)).
 ### MinIO Web Portal
 
 The MinIO service can be accessible through a
-[web portal](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). To sign in
-using your existing credentials, use the "Log in with OpenID" button.
+[web portal](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). To sign
+in using your existing credentials, use the "Log in with OpenID" button.
 
 ![MinIO sign-in view, indicating the OpenID option](images/minio_self_serve_login.png)
 
@@ -247,12 +246,12 @@ examples of this are shown in
 
 Two types of buckets are available:
 
-- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):**
-  By default, use this one. It is backed by an SSD and provides a good balance
-  of cost and performance.
-- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):**
-  Use this if you need high read/write speeds and don't mind paying ~2x the
-  storage cost. These are somewhat faster than the standard storage.
+- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):** By
+  default, use this one. It is backed by an SSD and provides a good balance of
+  cost and performance.
+- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):** Use
+  this if you need high read/write speeds and don't mind paying ~2x the storage
+  cost. These are somewhat faster than the standard storage.
 
 Generally if you aren't sure which you need, start with **Standard**. You can
 always change your mind if you see your work limited by file transfer speeds.
@@ -263,7 +262,7 @@ providing different access scopes:
 |                                        |                                                                                                     Private                                                                                                      |                                                        Shared                                                        |
 | -------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 |                                Summary | Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a [shared namespace](./Collaboration.md#requesting-a-namespace)) | Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams |
-| Mount location in the Notebook Server: |                                                                                `~/minio/standard-tenant-1/private/myfolder/myfile`                                                                               |                                   `~/minio/standard-tenant-1/shared/myfolder/myfile`                                 |
+| Mount location in the Notebook Server: |                                                                               `~/minio/standard-tenant-1/private/myfolder/myfile`                                                                                |                                  `~/minio/standard-tenant-1/shared/myfolder/myfile`                                  |
 |    Location in `mc` tool/MinIO portal: |                                                                                       `firstname-lastname/myfolder/myfile`                                                                                       |                                     `shared/firstname-lastname/myfolder/myfile`                                      |
 
 <!-- prettier-ignore -->
