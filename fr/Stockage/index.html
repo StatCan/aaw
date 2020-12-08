@@ -767,9 +767,9 @@ avantages :</p>
 <p>Nous avons trois types de stockage en compartiment.</p>
 <p><strong>Libre-service :</strong></p>
 <ul>
-<li><strong><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca">Minimal</a> :</strong><br />
+<li><strong><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca">Standard</a>:</strong>
   Stockage soutenu par des HDD. Par défaut, utilisez cette option.</li>
-<li><strong><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca">Premium</a> :</strong><br />
+<li><strong><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">Premium</a>:</strong>
   Utilisez cette option si vous avez besoin de vitesses de lecture / écriture
   très élevées, comme pour l'entraînement de modèles sur de très grands
   ensembles de données.</li>
@@ -819,32 +819,31 @@ de vos besoins.</p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 <span class="nv">NOMCOMPLET</span><span class="o">=</span>blair-drummond
 <span class="c1"># Obtenir les justificatifs d&#39;identité</span>
-<span class="nb">source</span> /vault/secrets/minio-minimal-tenant1
-<span class="c1"># Ajouter le stockage sous le pseudonyme « minio-minimal »</span>
-mc config host add minio-minimal <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
+<span class="nb">source</span> /vault/secrets/minio-standard-tenant-1
+<span class="c1"># Ajouter le stockage sous le pseudonyme « standard »</span>
+mc config host add standard <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
 <span class="c1"># Créer un compartiment à votre nom</span>
 <span class="c1"># NOTE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOM.</span>
 <span class="c1"># Tout autre nom sera rejeté.</span>
 <span class="c1"># Compartiment privé (&quot;mb&quot; = &quot;créer compartiment&quot;)</span>
-mc mb minio-minimal/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
+mc mb standard/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
 <span class="c1"># Compartiment partagé</span>
-mc mb minio-minimal/shared/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
+mc mb standard/shared/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
 <span class="c1"># Voilà! Vous pouvez maintenant copier des fichiers ou des dossiers!</span>
 <span class="o">[</span> -f test.txt <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Ceci est un test&quot;</span> &gt; test.txt
-mc cp test.txt minio-minimal/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>/test.txt
+mc cp test.txt standard/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>/test.txt
 </code></pre></div>
 
 <p>Maintenant, ouvrez le document dans
-<a href="https://minimal-tenant1-minio.example.ca">le navigateur MinIO</a>. Vous y verrez
-votre fichier de test.</p>
+<a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca/">le navigateur MinIO</a>.
+Vous y verrez votre fichier de test.</p>
 <p>Vous pouvez utiliser <code>mc</code> pour copier des fichiers vers/depuis le compartiment.
 Cette opération est très rapide. Vous pouvez également utiliser <code>mc --help</code> pour
-voir les autres options qui s'offrent à vous, comme
-<code>mc ls minio-minimal/PRÉNOM-NOM/</code> pour afficher le contenu de votre
-compartiment.</p>
+voir les autres options qui s'offrent à vous, comme <code>mc ls standard/PRÉNOM-NOM/</code>
+pour afficher le contenu de votre compartiment.</p>
 <!-- prettier-ignore -->
-<details class="tip"><summary>Autres options de stockage</summary><p>Pour utiliser une de nos autres options de stockage, <code>pachyderm</code> ou
-<code>premium</code>, remplacez simplement  la valeur <code>minimal</code> dans le programme
+<details class="tip"><summary>Autres options de stockage</summary><p>Pour utiliser une de nos autres options de stockage,
+<code>premium</code>, remplacez simplement  la valeur <code>standard</code> dans le programme
 ci-dessus par le type dont vous avez besoin.</p>
 </details>
 <h3 id="obtenir-linformation-didentification-de-minio">Obtenir l'information d'identification de MinIO</h3>
@@ -859,17 +858,17 @@ Sélectionnez la méthode OIDC, laissez le <strong>Rôle</strong> vide et clique
 OIDC Provider ».</p>
 <p><img alt="vault_Signin" src="../images/vault_signin.png" /></p>
 <p>Exécutez la commande suivante dans le terminal situé dans le coin à droit:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Replacez minimal avec premium pour changer le type de compartiment</span>
-<span class="nb">read</span> minio_minimal_tenant1/keys/profile-votreprénom-votrenom
+<div class="codehilite"><pre><span></span><code><span class="c1"># Replacez standard avec premium pour changer le type de compartiment</span>
+<span class="nb">read</span> minio_standard_tenant_1/keys/profile-votreprénom-votrenom
 </code></pre></div>
 
 <p><img alt="Vault AccessKey" src="../images/accessKey.png" /></p>
 <h4 id="methode-2-utiliser-le-serveur">Méthode 2: Utiliser le Serveur</h4>
 <p>Démarrez votre serveur et exécutez la commande suivante:</p>
-<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-minimal-tenant1
+<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-standard-tenant-1
 
 <span class="c1"># Output:</span>
-<span class="c1"># export MINIO_URL=&quot;http://minimal-tenant1-minio.minio...&quot;</span>
+<span class="c1"># export MINIO_URL=&quot;http://minio.minio-standard-tenant-1 ...&quot;</span>
 <span class="c1"># export MINIO_ACCESS_KEY=&quot;...&quot;</span>
 <span class="c1"># export MINIO_SECRET_KEY=&quot;...&quot;</span>
 </code></pre></div>
