@@ -24,6 +24,17 @@ Features / Updates:
 
 > **Note**: As of this release we now have Multi-User Pipelines support. Please see the following issue for more information at [kubeflow-5440](https://github.com/kubeflow/kubeflow/issues/5440)
 
+## v1.0.0 @ [statcan/mlflow-operator](https://github.com/statcan/mlflow-operator/releases/tag/v1.0.0)
+
+Features / Updates:
+
+- Update MLFlow to [v1.12.1](https://github.com/mlflow/mlflow/releases/tag/v1.12.1)
+  - Updated to latest stable of MLFlow v1.12.1
+  - Updated all of the azure dependencies (data lake, blob account, file share, and queue)
+  - Updated the PostgreSQL dependency
+
+> **Note**: Added logic to upgrade the indexed db between version bumps. Please see the following commit for more information at [b901376](https://github.com/StatCan/mlflow-operator/commit/b90137648d7d8c0751eed17b0a4ce5e637400f8a)
+
 ## v1.0.0 @ [statcan/minio-operator](https://github.com/statcan/minio-operator/releases/tag/v1.0.0)
 
 Features / Updates:
