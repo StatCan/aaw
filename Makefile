@@ -58,6 +58,10 @@ serve-en:
 serve-fr:
 	. .venv/bin/activate && mkdocs serve -f mkdocs-fr.yml
 
+serve-dev:
+	bash build-dev-docs.sh
+	. .venv/bin/activate && mkdocs serve -f mkdocs-dev.yml
+
 test: check-format check-spelling
 
 .PHONY: \
