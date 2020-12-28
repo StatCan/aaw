@@ -2,7 +2,7 @@ name: Slack
 on:
   push:
     branches:
-      - slack-notifications
+      - slack-notification
     paths:
       - 'CHANGELOG.md'
 jobs:
