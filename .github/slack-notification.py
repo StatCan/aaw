@@ -75,7 +75,7 @@ print(slack_builder)
 
 # Push!
 payload = {
-    "channel": "#test-github-notification",
+    "channel": "#general",
     "username": "AAW Updates",
     "blocks": slack_builder,
     "icon_emoji": ":rocket:"
