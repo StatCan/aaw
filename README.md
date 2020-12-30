@@ -48,7 +48,7 @@ The [Elastic Cloud](https://github.com/elastic/cloud-on-k8s) operator automates 
 - https://elastic.covid.cloud.statcan.ca
 - https://kibana.covid.cloud.statcan.ca
 
-> **Note**: You can request your own instance of Elastic + Kibana using our [Web Forms][https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance]
+> **Note**: You can request your own instance of Elastic + Kibana using our [Web Forms](https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance)
 
 ### MinIO Instances
 
@@ -59,7 +59,7 @@ The [MinIO Operator](https://github.com/statcan/minio-operator) automates the de
 - https://minio-standard-tenant-1.covid.cloud.statcan.ca
 - https://minio-console-standard-tenant-1.covid.cloud.statcan.ca
 
-> **Note**: You can request your own instance of MinIO using our [Web Forms][https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance]
+> **Note**: You can request your own instance of MinIO using our [Web Forms](https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance)
 
 ### MLFlow Instances
 
@@ -67,7 +67,7 @@ The [MLFlow Operator](https://github.com/statcan/mlflow-operator) automates the 
 
 - https://mlflow-standard-tenant-1.covid.cloud.statcan.ca
 
-> **Note**: You can request your own instance of MLFlow using our [Web Forms][https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance]
+> **Note**: You can request your own instance of MLFlow using our [Web Forms](https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance)
 
 ## GitHub Links
 
