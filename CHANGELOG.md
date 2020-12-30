@@ -1,3 +1,23 @@
+## v1.0.1 @ [statcan/mlflow-operator](https://github.com/statcan/mlflow-operator/releases/tag/v1.0.1)
+
+Features / Updates:
+
+- Update MLFlow to [v1.13.0](https://github.com/mlflow/mlflow/releases/tag/v1.13.0)
+  - Updated to latest stable of MLFlow v1.13.0
+- Re-architected folder structure and aligned with minio-operator for naming scheme
+
+> **Note**: N/A
+
+## v1.0.0 @ [statcan/kubeflow-mlops](https://github.com/statcan/kubeflow-mlops/releases/tag/v1.0.0)
+
+Features / Updates:
+
+- Updated CI / CD to support experiments now running in user level namespaces
+- Updated the MLFlow python packages to 1.13.0
+- Updated Tensorflow container image and python packages to 2.2.1
+
+> **Note**: Right now the pipeline is executing as a specialized user, looking into how to paramterize to Users namespace on CI run
+
 ## v1.0.0 @ [statcan/kubeflow-containers](https://github.com/statcan/kubeflow-containers/releases/tag/v1.0.0)
 
 Features / Updates:
