@@ -1,3 +1,14 @@
+## v1.0.0 @ [statcan/goofys-injector](https://github.com/statcan/goofys-injector/releases/tag/v1.0.0)
+
+Features / Updates:
+
+- Add container Index logic to only add volume mounts to specific container
+- Add MinIO mounts to Argo Workflows
+- Add the new tenants (standard, and premium)
+- Inject MinIO volume mounts using goofys
+
+> **Note**: N/A
+
 ## v1.0.1 @ [statcan/kubeflow-containers](https://github.com/statcan/kubeflow-containers/releases/tag/v1.0.1)
 
 Features / Updates:
