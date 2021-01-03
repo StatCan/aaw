@@ -17,6 +17,8 @@ Features / Updates:
 - Added back Kale extension [v0.6.0](https://github.com/kubeflow-kale/kale/releases/tag/v0.6.0)
 - Use short hashes for containers
 
+> **Note**: N/A
+
 ## v1.0.1 @ [statcan/mlflow-operator](https://github.com/statcan/mlflow-operator/releases/tag/v1.0.1)
 
 Features / Updates:
