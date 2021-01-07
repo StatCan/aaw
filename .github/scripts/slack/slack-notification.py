@@ -1,25 +1,57 @@
 #!/bin/python3
 
+# Send a nicely formatted Slack message from the CHANGELOG.md file.
+#
+# Test
+# ----
+#
+# ./slack-notification.py \
+#     --webhook $SLACK_WEBHOOK_URL \
+#     --infile ../../../CHANGELOG.md \
+#     --channel '#test-github-notification'
+
+
 import marko
 import requests
+import argparse
 from htmlslacker import HTMLSlacker
 from os import getenv
 
-WEBHOOK_URL = getenv("SLACK_WEBHOOK_URL")
+
+parser = argparse.ArgumentParser(description='Send Slack notification from CHANGELOG.md')
+
+parser.add_argument('--infile', type=str, default="CHANGELOG.md",
+                    help='The markdown file to read from.')
+
+parser.add_argument('--channel', type=str, default="#general",
+                    help='The Slack Channel to post to')
+
+parser.add_argument('--name', type=str, default="AAW Updates",
+                    help='The "User" of the message')
+
+parser.add_argument('--webhook', type=str, default=getenv("SLACK_WEBHOOK_URL"),
+                    help='The Slack Webhook URL to POST to.')
+
+parser.add_argument('--url', type=str, default="<https://github.com/StatCan/daaas/blob/master/CHANGELOG.md|Changelog>",
+                    help='A Slack-Readable link to the changelog.')
+
+args = parser.parse_args()
+
+
 
 # Stuff for the slack build kit format
 section = lambda s: { "type" : "section", "text" : { "type" : "mrkdwn", "text" : s } }
 divider = { "type" : "divider" }
 
+CHANGELOG_URL = args.url
 slack_builder = [
-    section("*There are updates to the AAW!!! Check out the <https://github.com/StatCan/daaas/blob/master/CHANGELOG.md|Changelog> to see what's new!*"),
-    divider
+    section(f"*There are updates to the AAW!!! Check out the {CHANGELOG_URL} to see what's new!*")
 ]
 
 
 
 # Get the *first* H1 Heading from the Changelog
-with open("CHANGELOG.md") as f:
+with open(args.infile) as f:
     # Only use the first h1 header
     lines = f.readlines()
     last = len(lines)
@@ -33,8 +65,6 @@ with open("CHANGELOG.md") as f:
     # If there's only one h1, then this is idempotent
     lines = lines[:last]
     doc = marko.parse(''.join(lines)).children
-
-
 
 
 # Parsing the markdown
@@ -58,6 +88,7 @@ def list_render(l):
 
 for e in doc:
     if isinstance(e, marko.block.Heading):
+        slack_builder.append(divider)
         item = "*" + render(e) + "*"
     elif isinstance(e, marko.block.Quote):
         item = "> " + render(e)
@@ -72,14 +103,13 @@ for e in doc:
 print(slack_builder)
 
 
-
 # Push!
 payload = {
-    "channel": "#general",
-    "username": "AAW Updates",
+    "channel": args.channel,
+    "username": args.name,
     "blocks": slack_builder,
     "icon_emoji": ":rocket:"
 }
 
-x = requests.post(WEBHOOK_URL, json=payload)
+x = requests.post(args.webhook, json=payload)
 print(x)
