@@ -1,3 +1,19 @@
+## v1.0.2 @ [statcan/minio-operator](https://github.com/statcan/minio-operator/releases/tag/v1.0.2)
+
+Features / Updates:
+
+- Update for MinIO Server [RELEASE.2021-01-05T05-22-38Z](https://github.com/minio/minio/tree/RELEASE.2021-01-05T05-22-38Z)
+  - Updated to RELEASE.2021-01-05T05-22-38Z of the MinIO Server image
+  - Important list caching improvements
+  - Major reduction in crawler memory usage
+  - Important performance improvements with list caching and memory consumption
+  - Do not use large buffers if not necessary
+  - Update MinIO operator to v3.0.29
+- Patched MinIO Operator with binary lookup fix
+- Pulling MinIO from k8scc01covidacr.azurecr.io with ImagePullSecret now
+
+> **Note**: N/A
+
 ## v1.0.0 @ [statcan/goofys-injector](https://github.com/statcan/goofys-injector/releases/tag/v1.0.0)
 
 Features / Updates:
