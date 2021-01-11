@@ -27,7 +27,7 @@ A routinely updated list of some of the baseline services offered by the DAaaS p
 The fundamental services that can be used to assist you on your data science journey.
 
 - https://analytics-platform.statcan.gc.ca
-- https://daaas.statcan.gc.ca
+- https://daaas.covid.cloud.statcan.ca
 - https://kubeflow.covid.cloud.statcan.ca
 - https://kubecost.covid.cloud.statcan.ca
 - https://mlflow.covid.cloud.statcan.ca
