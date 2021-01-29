@@ -503,8 +503,9 @@ python code, as they will be exposed as plain text for others to read.
 
 To address this issue, we use
 [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
- as a way to securely store and pass sensitive information. Each __secret__ is a key-value store containing some number of key-value pairs. The secrets can be passed
- *by reference* to the pipeline.
+as a way to securely store and pass sensitive information. Each **secret** is a
+key-value store containing some number of key-value pairs. The secrets can be
+passed _by reference_ to the pipeline.
 
 <!-- prettier-ignore -->
 ??? note "Secrets are only accessible within their own namespace"
@@ -514,7 +515,8 @@ To address this issue, we use
 
 ### Create a key-value store
 
-The example below creates a key-value store called __elastic-credentials__ which contains two key-value pairs:
+The example below creates a key-value store called **elastic-credentials** which
+contains two key-value pairs:
 
 ```
 "username": "USERNAME",
@@ -526,6 +528,7 @@ kubectl create secret generic elastic-credentials \
     --from-literal=username="YOUR_USERNAME" \
     --from-literal=password="YOUR_PASSWORD"
 ```
+
 ### Get an existing key-value store
 
 ```bash
@@ -535,13 +538,17 @@ kubectl get secret elastic-credentials
 
 ### Mounting Kubernetes Secrets to Environment Variables in Container Operations
 
-Once the secrets are defined in the project namespace, you can mount specific secrets as environment variables in your container using the Kubeflow SDK.
+Once the secrets are defined in the project namespace, you can mount specific
+secrets as environment variables in your container using the Kubeflow SDK.
 
-__Example__
+**Example**
 
-This example is based off of a [snippet from the Python kfp source code](https://github.com/kubeflow/pipelines/blob/0795597562e076437a21745e524b5c960b1edb68/sdk/python/kfp/aws.py#L33-L57).
+This example is based off of a
+[snippet from the Python KFP source code](https://github.com/kubeflow/pipelines/blob/0795597562e076437a21745e524b5c960b1edb68/sdk/python/kfp/aws.py#L33-L57).
 
-This example shows how (1) an elasticsearch username (2) an elasticsearch password, and (3) a gitlab deploy token are passed to the container operation as environment variables.
+This example shows how (1) an Elasticsearch username(2) an Elasticsearch
+password, and (3) a GitLab deploy token are passed to the container operation as
+environment variables.
 
 ```python
 # Names of k8s secret key-value stores
