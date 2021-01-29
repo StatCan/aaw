@@ -494,6 +494,92 @@ At `compile` time, `avg_1.output` is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.
 
+## Passing Secrets
+
+Sensitive information (e.g. passwords, API keys, etc.) that does not rotate or change frequently can be handled using [Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+
+Each __secret__ is a key-value store containing some number of key-value pairs.
+
+### Create a key-value store
+
+The example below creates a key-value store called __elastic-credentials__ which contains two key-value pairs:
+
+```
+"username": "USERNAME",
+"password": "PASSWORD"
+```
+
+```bash
+kubectl create secret generic my-credentials --from-literal=username=USERNAME--from-literal=password=PASSWORD
+```
+### Get an existing key-value store
+
+```bash
+kubectl get secret elastic-credentials
+```
+
+### Mounting Kubernetes Secrets to Environment Variables in Container Operations
+
+Once the secrets are defined in the project namespace, you can mount specific secrets as environment variables in your container using the Kubeflow SDK.
+
+__Example__
+
+This example is based off of a [snippet from the Python kfp source code](https://github.com/kubeflow/pipelines/blob/0795597562e076437a21745e524b5c960b1edb68/sdk/python/kfp/aws.py#L33-L57).
+
+This example shows how (1) an elasticsearch username (2) an elasticsearch password, and (3) a gitlab deploy token are passed to the container operation as environment variables. 
+
+```python
+# Names of k8s secret key-value stores
+ES_CREDENTIALS_STORE = "elastic-credentials"
+GITLAB_CREDENTIALS_STORE = "gitlab-credentials"
+# k8s secrets key names
+ES_USER_KEY = "username"
+ES_PASSWORD_KEY = "password"
+GITLAB_DEPLOY_TOKEN_KEY = 'token'
+# Names of environment variables that secrets should be mounted to in the
+# container
+ES_USER_ENV = "ES_USER"
+ES_PASS_ENV = "ES_PASS"
+GITLAB_DEPLOY_TOKEN_ENV = "GITLAB_DEPLOY_TOKEN"
+# ...
+container_operation \
+.add_env_variable(
+    k8s_client.V1EnvVar(
+        name=ES_USER_ENV,
+        value_from=k8s_client.V1EnvVarSource(
+            secret_key_ref=k8s_client.V1SecretKeySelector(
+                name=ES_CREDENTIALS_STORE,
+                key=ES_USER_KEY
+            )
+        )
+    )
+) \
+.add_env_variable(
+    k8s_client.V1EnvVar(
+        name=ES_PASS_ENV,
+        value_from=k8s_client.V1EnvVarSource(
+            secret_key_ref=k8s_client.V1SecretKeySelector(
+                name=ES_CREDENTIALS_STORE,
+                key=ES_PASSWORD_KEY
+            )
+        )
+    )
+) \
+.add_env_variable(
+    k8s_client.V1EnvVar(
+        name=GITLAB_DEPLOY_TOKEN_ENV,
+        value_from=k8s_client.V1EnvVarSource(
+            secret_key_ref=k8s_client.V1SecretKeySelector(
+                name=GITLAB_CREDENTIALS_STORE,
+                key=GITLAB_DEPLOY_TOKEN_KEY
+            )
+        )
+    )
+)
+```
+
+Note that ```container_operation``` is an instance of ```kfp.dsl.ContainerOp```.
+
 ## Parameterizing pipelines
 
 Whenever possible, create pipelines in a generic way: define parameters that
