@@ -483,6 +483,40 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#passing-secrets" class="md-nav__link">
+    Passing Secrets
+  </a>
+  
+    <nav class="md-nav" aria-label="Passing Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-key-value-store" class="md-nav__link">
+    Create a key-value store
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-existing-key-value-store" class="md-nav__link">
+    Get an existing key-value store
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" class="md-nav__link">
+    Mounting Kubernetes Secrets to Environment Variables in Container Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parameterizing-pipelines" class="md-nav__link">
     Parameterizing pipelines
   </a>
@@ -701,6 +735,40 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#passing-secrets" class="md-nav__link">
+    Passing Secrets
+  </a>
+  
+    <nav class="md-nav" aria-label="Passing Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-key-value-store" class="md-nav__link">
+    Create a key-value store
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-existing-key-value-store" class="md-nav__link">
+    Get an existing key-value store
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" class="md-nav__link">
+    Mounting Kubernetes Secrets to Environment Variables in Container Operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parameterizing-pipelines" class="md-nav__link">
     Parameterizing pipelines
   </a>
@@ -894,11 +962,11 @@ here: <code>k8scc01covidacr.azurecr.io/kfp-components/average:v1</code>. Don't w
 don't know Docker - since the image is built already, we only have to tell
 Kubeflow Pipelines where it is.</p>
 <!-- prettier-ignore -->
-<p>??? info "Full details of the <code>average</code> component's Docker image are in 
+<p>??? info "Full details of the <code>average</code> component's Docker image are in
     <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/kfp-basics/containers/average">GitHub</a>"
-    This image effectively runs the following code (slightly cleaned up for 
-    brevity).  By making <code>average.py</code> accept an arbitrary set of numbers as 
-    inputs, we can use the same <code>average</code> <em>component</em> for all steps in our 
+    This image effectively runs the following code (slightly cleaned up for
+    brevity).  By making <code>average.py</code> accept an arbitrary set of numbers as
+    inputs, we can use the same <code>average</code> <em>component</em> for all steps in our
     <em>pipeline</em>:</p>
 <div class="codehilite"><pre><span></span><code>    <span class="kn">import</span> <span class="nn">argparse</span>
 
@@ -1040,8 +1108,8 @@ available when you run this Python code. The is discussed more below in
 <p>Later when we want to reuse the pipeline, we can pass different arguments and do
 it all again.</p>
 <!-- prettier-ignore -->
-<p>!!! info "We create our experiment, upload our pipeline, and run from Python in 
-    this example, but we could also do all this through the Kubeflow Pipelines 
+<p>!!! info "We create our experiment, upload our pipeline, and run from Python in
+    this example, but we could also do all this through the Kubeflow Pipelines
     UI above.</p>
 <h2 id="understanding-what-computation-occurs-when">Understanding what computation occurs when<a class="headerlink" href="#understanding-what-computation-occurs-when" title="Permanent link">&para;</a></h2>
 <p>The above example uses Python code to define:</p>
@@ -1124,20 +1192,20 @@ average, but the <strong>value</strong> of that result is not available until th
 actually run.</p>
 <!-- prettier-ignore -->
 <details class="info"><summary>Component naming within the YAML file</summary><p>Because we made an <code>average_op</code> factory function with <code>name='average'</code> above,
-our YAML file has component names that automatically increment to avoid 
-recreating the same name twice. We could have been fancier with our 
-factory functions to more directly control our names, giving an argument 
-like <code>name='average_first_input_args'</code>, or could even have explicitly 
-defined the name in our pipeline by using 
+our YAML file has component names that automatically increment to avoid
+recreating the same name twice. We could have been fancier with our
+factory functions to more directly control our names, giving an argument
+like <code>name='average_first_input_args'</code>, or could even have explicitly
+defined the name in our pipeline by using
 <code>avg_1 = average_op(a, b, c).set_display_name("Average 1")</code>.</p>
 </details>
 <p>As one more example, let's try two more pipelines. One has a for loop inside
 which prints "Woohoo!" a fixed number of times. whereas the other does the same
 but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</p>
 <!-- prettier-ignore -->
-<p>!!! info "Pipeline parameters are described more below, but they work like 
+<p>!!! info "Pipeline parameters are described more below, but they work like
     parameters for functions. Pipelines can accept data (numbers, string URL's
-    to large files in MinIO, etc.) as arguments, allowing a single generic 
+    to large files in MinIO, etc.) as arguments, allowing a single generic
     pipeline to work in many situations."</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
@@ -1243,6 +1311,98 @@ available when authoring the pipeline, something like this does not work:</p>
 <p>At <code>compile</code> time, <code>avg_1.output</code> is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.</p>
+<h3 id="passing-secrets">Passing Secrets<a class="headerlink" href="#passing-secrets" title="Permanent link">&para;</a></h3>
+<p>Pipelines often need sensitive information (passwords, API keys, etc.) to
+operate. To keep these secure, these cannot be passed to a Kubeflow Pipeline
+using a pipeline argument, environment variable, or as a hard coded value in
+python code, as they will be exposed as plain text for others to read.</p>
+<p>To address this issue, we use
+<a href="https://kubernetes.io/docs/concepts/configuration/secret/">Kubernetes secrets</a>
+as a way to securely store and pass sensitive information. Each <strong>secret</strong> is a
+key-value store containing some number of key-value pairs. The secrets can be
+passed <em>by reference</em> to the pipeline.</p>
+<!-- prettier-ignore -->
+<details class="note"><summary>Secrets are only accessible within their own namespace</summary><p>Secrets can only be accessed within the namespace they are created in.
+If you need to use a secret in another namespace, you need to add it there
+manually.</p>
+</details>
+<h4 id="create-a-key-value-store">Create a key-value store<a class="headerlink" href="#create-a-key-value-store" title="Permanent link">&para;</a></h4>
+<p>The example below creates a key-value store called <strong>elastic-credentials</strong> which
+contains two key-value pairs:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">&quot;username&quot;: &quot;USERNAME&quot;,</span>
+<span class="err">&quot;password&quot;: &quot;PASSWORD&quot;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>kubectl create secret generic elastic-credentials <span class="se">\</span>
+    --from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span> <span class="se">\</span>
+    --from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span>
+</code></pre></div>
+
+<h4 id="get-an-existing-key-value-store">Get an existing key-value store<a class="headerlink" href="#get-an-existing-key-value-store" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># The secrets will be base64 encoded.</span>
+kubectl get secret elastic-credentials
+</code></pre></div>
+
+<h4 id="mounting-kubernetes-secrets-to-environment-variables-in-container-operations">Mounting Kubernetes Secrets to Environment Variables in Container Operations<a class="headerlink" href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" title="Permanent link">&para;</a></h4>
+<p>Once the secrets are defined in the project namespace, you can mount specific
+secrets as environment variables in your container using the Kubeflow SDK.</p>
+<p><strong>Example</strong></p>
+<p>This example is based off of a
+<a href="https://github.com/kubeflow/pipelines/blob/0795597562e076437a21745e524b5c960b1edb68/sdk/python/kfp/aws.py#L33-L57">snippet from the Python KFP source code</a>.</p>
+<p>This example shows how (1) an Elasticsearch username(2) an Elasticsearch
+password, and (3) a GitLab deploy token are passed to the container operation as
+environment variables.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Names of k8s secret key-value stores</span>
+<span class="n">ES_CREDENTIALS_STORE</span> <span class="o">=</span> <span class="s2">&quot;elastic-credentials&quot;</span>
+<span class="n">GITLAB_CREDENTIALS_STORE</span> <span class="o">=</span> <span class="s2">&quot;gitlab-credentials&quot;</span>
+<span class="c1"># k8s secrets key names</span>
+<span class="n">ES_USER_KEY</span> <span class="o">=</span> <span class="s2">&quot;username&quot;</span>
+<span class="n">ES_PASSWORD_KEY</span> <span class="o">=</span> <span class="s2">&quot;password&quot;</span>
+<span class="n">GITLAB_DEPLOY_TOKEN_KEY</span> <span class="o">=</span> <span class="s1">&#39;token&#39;</span>
+<span class="c1"># Names of environment variables that secrets should be mounted to in the</span>
+<span class="c1"># container</span>
+<span class="n">ES_USER_ENV</span> <span class="o">=</span> <span class="s2">&quot;ES_USER&quot;</span>
+<span class="n">ES_PASS_ENV</span> <span class="o">=</span> <span class="s2">&quot;ES_PASS&quot;</span>
+<span class="n">GITLAB_DEPLOY_TOKEN_ENV</span> <span class="o">=</span> <span class="s2">&quot;GITLAB_DEPLOY_TOKEN&quot;</span>
+<span class="c1"># ...</span>
+<span class="n">container_operation</span> <span class="o">=</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;some-op&#39;</span><span class="p">,</span>
+    <span class="n">image</span><span class="o">=</span><span class="s1">&#39;some-image&#39;</span><span class="p">,</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
+    <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">ES_USER_ENV</span><span class="p">,</span>
+        <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
+            <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="n">ES_CREDENTIALS_STORE</span><span class="p">,</span>
+                <span class="n">key</span><span class="o">=</span><span class="n">ES_USER_KEY</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span> \
+    <span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
+        <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">ES_PASS_ENV</span><span class="p">,</span>
+            <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
+                <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">ES_CREDENTIALS_STORE</span><span class="p">,</span>
+                    <span class="n">key</span><span class="o">=</span><span class="n">ES_PASSWORD_KEY</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span> \
+    <span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
+        <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">GITLAB_DEPLOY_TOKEN_ENV</span><span class="p">,</span>
+            <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
+                <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
+                    <span class="n">name</span><span class="o">=</span><span class="n">GITLAB_CREDENTIALS_STORE</span><span class="p">,</span>
+                    <span class="n">key</span><span class="o">=</span><span class="n">GITLAB_DEPLOY_TOKEN_KEY</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+</code></pre></div>
+
 <h3 id="parameterizing-pipelines">Parameterizing pipelines<a class="headerlink" href="#parameterizing-pipelines" title="Permanent link">&para;</a></h3>
 <p>Whenever possible, create pipelines in a generic way: define parameters that
 might change as pipeline inputs instead of writing values directly in your
@@ -1335,9 +1495,9 @@ with – running the containers is effectively like running them locally using a
 terminal. Anything you can make into a container with that interface can be run
 in Kubeflow Pipelines.</p>
 <!-- prettier-ignore -->
-<p>!!! danger "...however, for security reasons the platform currently does not 
-    allow users to build/run custom Docker images. This is planned for the 
-    future, but in interim see <em>Lightweight components</em> for a way to develop 
+<p>!!! danger "...however, for security reasons the platform currently does not
+    allow users to build/run custom Docker images. This is planned for the
+    future, but in interim see <em>Lightweight components</em> for a way to develop
     pipelines without custom images"</p>
 <h4 id="lightweight-python-components">Lightweight Python components<a class="headerlink" href="#lightweight-python-components" title="Permanent link">&para;</a></h4>
 <p>While full custom containers offer great flexibility, sometimes they're heavier
@@ -1382,22 +1542,22 @@ Registry and any
 <a href="https://github.com/StatCan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml">whitelisted images</a>
 from Docker hub.</p>
 <!-- prettier-ignore -->
-<details class="danger"><summary>Lightweight components have a number of advantages but also some drawbacks</summary><p>See <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a> 
-of their basic characteristics, as well as 
-<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb">this example</a> 
+<details class="danger"><summary>Lightweight components have a number of advantages but also some drawbacks</summary><p>See <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a>
+of their basic characteristics, as well as
+<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb">this example</a>
 which uses them in a more complex pipeline</p>
 </details>
 <!-- prettier-ignore -->
-<details class="info"><summary>A convenient base image to use is the the image your notebook server is running</summary><p>By using the same image as your notebook server, you ensure Kubeflow 
-Pipelines has the same packages available to it as the notebook where you 
-do your analysis.  This can help avoid errors from importing packages 
-specific to your environment. You can find that link from the notebook 
-server page as shown below, but make sure you prepend the registry URL (so 
-the below image would have 
+<details class="info"><summary>A convenient base image to use is the the image your notebook server is running</summary><p>By using the same image as your notebook server, you ensure Kubeflow
+Pipelines has the same packages available to it as the notebook where you
+do your analysis.  This can help avoid errors from importing packages
+specific to your environment. You can find that link from the notebook
+server page as shown below, but make sure you prepend the registry URL (so
+the below image would have
 <code>base_image=k8scc01covidacr.azurecr.io/machine-learning-notebook-cpu:562fa4a2899eeb9ae345c51c2491447ec31a87d7</code>
 ).  Note that while using a fully featured base image for iteration is fine,
-it's good practice to keep production pipelines lean and only supply the 
-necessary software.  That way you reduce the startup time for each step in 
+it's good practice to keep production pipelines lean and only supply the
+necessary software.  That way you reduce the startup time for each step in
 your pipeline.
 <img alt="A Kubeflow Pipeline" src="../../images/kubeflow_pipelines_notebook_server_image.png" /></p>
 </details>
