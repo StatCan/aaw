@@ -1,3 +1,5 @@
 README.md
 CHANGELOG.md
+docs/dev/
+build-dev-docs.sh
 .venv/

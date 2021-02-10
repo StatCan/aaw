@@ -1,0 +1,39 @@
+site_name: AAW Dev Docs
+site_url: https://statcan.github.io/daaas/en/
+site_description: Developer Docs
+copyright: Copyright &copy; 2020 Statistics Canada
+
+docs_dir: docs/dev
+site_dir: site/dev
+
+repo_name: statcan/daaas
+repo_url: https://github.com/statcan/daaas
+edit_uri: edit/master/docs/dev
+
+theme:
+  name: material
+  language: en
+  #features:
+  #  - tabs
+  palette:
+    primary: indigo
+    accent: teal
+  show_sidebar: false
+  #logo: images/statcan.png
+
+markdown_extensions:
+  - toc:
+      baselevel: 2
+      permalink: true
+  - attr_list
+  - admonition
+  - codehilite
+  - mdx_truly_sane_lists
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/statcan/daaas
+    - icon: fontawesome/brands/slack
+      link: https://statcan-aaw.slack.com
