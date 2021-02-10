@@ -102,11 +102,11 @@ don't know Docker - since the image is built already, we only have to tell
 Kubeflow Pipelines where it is.
 
 <!-- prettier-ignore -->
-??? info "Full details of the `average` component's Docker image are in 
+??? info "Full details of the `average` component's Docker image are in
     [GitHub](https://github.com/StatCan/jupyter-notebooks/tree/master/kfp-basics/containers/average)"
-    This image effectively runs the following code (slightly cleaned up for 
-    brevity).  By making `average.py` accept an arbitrary set of numbers as 
-    inputs, we can use the same `average` _component_ for all steps in our 
+    This image effectively runs the following code (slightly cleaned up for
+    brevity).  By making `average.py` accept an arbitrary set of numbers as
+    inputs, we can use the same `average` _component_ for all steps in our
     _pipeline_:
 
         import argparse
@@ -263,8 +263,8 @@ Later when we want to reuse the pipeline, we can pass different arguments and do
 it all again.
 
 <!-- prettier-ignore -->
-!!! info "We create our experiment, upload our pipeline, and run from Python in 
-    this example, but we could also do all this through the Kubeflow Pipelines 
+!!! info "We create our experiment, upload our pipeline, and run from Python in
+    this example, but we could also do all this through the Kubeflow Pipelines
     UI above.
 
 # Understanding what computation occurs when
@@ -358,11 +358,11 @@ actually run.
 <!-- prettier-ignore -->
 ??? info "Component naming within the YAML file"
     Because we made an `average_op` factory function with `name='average'` above,
-    our YAML file has component names that automatically increment to avoid 
-    recreating the same name twice. We could have been fancier with our 
-    factory functions to more directly control our names, giving an argument 
-    like `name='average_first_input_args'`, or could even have explicitly 
-    defined the name in our pipeline by using 
+    our YAML file has component names that automatically increment to avoid
+    recreating the same name twice. We could have been fancier with our
+    factory functions to more directly control our names, giving an argument
+    like `name='average_first_input_args'`, or could even have explicitly
+    defined the name in our pipeline by using
     `avg_1 = average_op(a, b, c).set_display_name("Average 1")`.
 
 As one more example, let's try two more pipelines. One has a for loop inside
@@ -370,9 +370,9 @@ which prints "Woohoo!" a fixed number of times. whereas the other does the same
 but loops `n` times (where `n` is a pipeline parameter):
 
 <!-- prettier-ignore -->
-!!! info "Pipeline parameters are described more below, but they work like 
+!!! info "Pipeline parameters are described more below, but they work like
     parameters for functions. Pipelines can accept data (numbers, string URL's
-    to large files in MinIO, etc.) as arguments, allowing a single generic 
+    to large files in MinIO, etc.) as arguments, allowing a single generic
     pipeline to work in many situations."
 
 ```python
@@ -494,6 +494,114 @@ At `compile` time, `avg_1.output` is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.
 
+## Passing Secrets
+
+Pipelines often need sensitive information (passwords, API keys, etc.) to
+operate. To keep these secure, these cannot be passed to a Kubeflow Pipeline
+using a pipeline argument, environment variable, or as a hard coded value in
+python code, as they will be exposed as plain text for others to read.
+
+To address this issue, we use
+[Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+as a way to securely store and pass sensitive information. Each **secret** is a
+key-value store containing some number of key-value pairs. The secrets can be
+passed _by reference_ to the pipeline.
+
+<!-- prettier-ignore -->
+??? note "Secrets are only accessible within their own namespace"
+    Secrets can only be accessed within the namespace they are created in.
+    If you need to use a secret in another namespace, you need to add it there
+    manually.
+
+### Create a key-value store
+
+The example below creates a key-value store called **elastic-credentials** which
+contains two key-value pairs:
+
+```
+"username": "USERNAME",
+"password": "PASSWORD"
+```
+
+```bash
+kubectl create secret generic elastic-credentials \
+    --from-literal=username="YOUR_USERNAME" \
+    --from-literal=password="YOUR_PASSWORD"
+```
+
+### Get an existing key-value store
+
+```bash
+# The secrets will be base64 encoded.
+kubectl get secret elastic-credentials
+```
+
+### Mounting Kubernetes Secrets to Environment Variables in Container Operations
+
+Once the secrets are defined in the project namespace, you can mount specific
+secrets as environment variables in your container using the Kubeflow SDK.
+
+**Example**
+
+This example is based off of a
+[snippet from the Python KFP source code](https://github.com/kubeflow/pipelines/blob/0795597562e076437a21745e524b5c960b1edb68/sdk/python/kfp/aws.py#L33-L57).
+
+This example shows how (1) an Elasticsearch username(2) an Elasticsearch
+password, and (3) a GitLab deploy token are passed to the container operation as
+environment variables.
+
+```python
+# Names of k8s secret key-value stores
+ES_CREDENTIALS_STORE = "elastic-credentials"
+GITLAB_CREDENTIALS_STORE = "gitlab-credentials"
+# k8s secrets key names
+ES_USER_KEY = "username"
+ES_PASSWORD_KEY = "password"
+GITLAB_DEPLOY_TOKEN_KEY = 'token'
+# Names of environment variables that secrets should be mounted to in the
+# container
+ES_USER_ENV = "ES_USER"
+ES_PASS_ENV = "ES_PASS"
+GITLAB_DEPLOY_TOKEN_ENV = "GITLAB_DEPLOY_TOKEN"
+# ...
+container_operation = dsl.ContainerOp(
+    name='some-op',
+    image='some-image',
+).add_env_variable(
+    k8s_client.V1EnvVar(
+        name=ES_USER_ENV,
+        value_from=k8s_client.V1EnvVarSource(
+            secret_key_ref=k8s_client.V1SecretKeySelector(
+                name=ES_CREDENTIALS_STORE,
+                key=ES_USER_KEY
+            )
+        )
+    )
+) \
+    .add_env_variable(
+        k8s_client.V1EnvVar(
+            name=ES_PASS_ENV,
+            value_from=k8s_client.V1EnvVarSource(
+                secret_key_ref=k8s_client.V1SecretKeySelector(
+                    name=ES_CREDENTIALS_STORE,
+                    key=ES_PASSWORD_KEY
+                )
+            )
+        )
+    ) \
+    .add_env_variable(
+        k8s_client.V1EnvVar(
+            name=GITLAB_DEPLOY_TOKEN_ENV,
+            value_from=k8s_client.V1EnvVarSource(
+                secret_key_ref=k8s_client.V1SecretKeySelector(
+                    name=GITLAB_CREDENTIALS_STORE,
+                    key=GITLAB_DEPLOY_TOKEN_KEY
+                )
+            )
+        )
+    )
+```
+
 ## Parameterizing pipelines
 
 Whenever possible, create pipelines in a generic way: define parameters that
@@ -599,9 +707,9 @@ terminal. Anything you can make into a container with that interface can be run
 in Kubeflow Pipelines.
 
 <!-- prettier-ignore -->
-!!! danger "...however, for security reasons the platform currently does not 
-    allow users to build/run custom Docker images. This is planned for the 
-    future, but in interim see _Lightweight components_ for a way to develop 
+!!! danger "...however, for security reasons the platform currently does not
+    allow users to build/run custom Docker images. This is planned for the
+    future, but in interim see _Lightweight components_ for a way to develop
     pipelines without custom images"
 
 ### Lightweight Python components
@@ -653,23 +761,23 @@ from Docker hub.
 
 <!-- prettier-ignore -->
 ??? danger "Lightweight components have a number of advantages but also some drawbacks"
-    See [this description](https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb) 
-    of their basic characteristics, as well as 
-    [this example](https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb) 
+    See [this description](https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb)
+    of their basic characteristics, as well as
+    [this example](https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb)
     which uses them in a more complex pipeline
 
 <!-- prettier-ignore -->
 ??? info "A convenient base image to use is the the image your notebook server is running"
-    By using the same image as your notebook server, you ensure Kubeflow 
-    Pipelines has the same packages available to it as the notebook where you 
-    do your analysis.  This can help avoid errors from importing packages 
-    specific to your environment. You can find that link from the notebook 
-    server page as shown below, but make sure you prepend the registry URL (so 
-    the below image would have 
+    By using the same image as your notebook server, you ensure Kubeflow
+    Pipelines has the same packages available to it as the notebook where you
+    do your analysis.  This can help avoid errors from importing packages
+    specific to your environment. You can find that link from the notebook
+    server page as shown below, but make sure you prepend the registry URL (so
+    the below image would have
     `base_image=k8scc01covidacr.azurecr.io/machine-learning-notebook-cpu:562fa4a2899eeb9ae345c51c2491447ec31a87d7`
     ).  Note that while using a fully featured base image for iteration is fine,
-    it's good practice to keep production pipelines lean and only supply the 
-    necessary software.  That way you reduce the startup time for each step in 
+    it's good practice to keep production pipelines lean and only supply the
+    necessary software.  That way you reduce the startup time for each step in
     your pipeline.
     ![A Kubeflow Pipeline](../images/kubeflow_pipelines_notebook_server_image.png)
 
