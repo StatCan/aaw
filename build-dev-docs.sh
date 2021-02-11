@@ -11,42 +11,6 @@ camelcase () {
     echo $@ | tr '-' ' ' | sed 's/[^ ]\+/\L\u&/g'
 }
 
-
-# Repo blacklist
-ignore () {
-    cat <<EOF | grep -q "$1"
-block-sequence
-cae-eac
-ccei
-census_age65_vs_population_growth
-census_birthplace
-census_income
-census_occupations
-dataviz-components
-dns
-EpiSim
-ESM-Mobile-App
-experimental-react-native-app
-experimental_data_api
-express-api-server
-jsonapi-pagination
-jstree
-katacoda-courses
-MetaTagGenerator
-orbital-viz
-pg-evolve
-site-ccei
-time-series-library
-transportation
-website
-wellBeingCheck
-WellbeingCheckChangeRequest
-WellbeingCheckUAT
-wellbeing_react_native
-EOF
-}
-
-
 let NUM_REPOS=$(curl --silent 'https://api.github.com/users/statcan' | jq -r .public_repos)
 
 echo "Total number of repos: $NUM_REPOS"
@@ -56,14 +20,14 @@ echo "Fetching all READMEs. This might take a minute."
     while [ $NUM_REPOS -gt 0 ]; do
         let "NUM_REPOS-=50"
         echo curl --silent "https://api.github.com/users/statcan/repos?per_page=50&page=$i" >&2
-        curl --silent "https://api.github.com/users/statcan/repos?per_page=50&page=$i"
+        curl --silent \
+            -H 'Accept: application/vnd.github.mercy-preview+json' \
+            "https://api.github.com/users/statcan/repos?per_page=50&page=$i" |
+            jq -cr '.[] | select(.topics | .[] | contains("daaas")) | @text "\(.name) \(.url) \(.html_url)"'
         ((i++))
     done
-} | jq -cr '.[] | @text "\(.name) \(.url)"' |
-    while IFS=" " read name url; do
-        # Keep a blacklist of repos
-        ignore $name && continue
-
+} |
+    while IFS=" " read name url html_url; do
         NAME=$(camelcase $name)
         mkdir -p "$DOCS_DIR/$NAME/"
         for f in CHANGELOG.md README.md DEVELOPMENT.md; do
@@ -72,9 +36,12 @@ echo "Fetching all READMEs. This might take a minute."
             wget --quiet https://raw.githubusercontent.com/$ORG/$name/master/$f -O "$DOCS_DIR/$NAME/$f.tmp"
             if [ -s "$DOCS_DIR/$NAME/$f.tmp" ]; then
                 cat <<EOF > "$DOCS_DIR/$NAME/$f"
-Link: [$name]($url)
 
 $(cat "$DOCS_DIR/$NAME/$f.tmp")
+
+# Link
+
+[$name]($html_url)
 EOF
             fi
             rm "$DOCS_DIR/$NAME/$f.tmp"
