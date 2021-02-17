@@ -1,12 +1,12 @@
 # Overview
 
-The platform provides several main types of storage:
+The platform provides several types of storage:
 
 - Disk (also called Volumes on the Notebook Server creation screen)
 - Bucket ("Blob" or S3 storage, provided through MinIO)
 - Data Lakes (coming soon)
 
-Depending on your use case, either may be most suitable:
+Depending on your use case, either disk or bucket may be most suitable:
 
 |   Type |                                                       Simultaneous Users |                                                   Speed | Total size               | Sharable with Other Users            |
 | -----: | -----------------------------------------------------------------------: | ------------------------------------------------------: | ------------------------ | ------------------------------------ |
@@ -77,6 +77,10 @@ by clicking the trash can icon.
 
 # Buckets (via MinIO)
 
+<!-- prettier-ignore -->
+??? warning "(2021-02-12: To improve stability and security, we have implemented new MinIO instances to replace the originals. We strongly suggest you use the new instances as soon as possible" 
+    See [Bucket Types and Access Scopes](#bucket-types-and-access-scopes)) for more details
+
 Buckets are slightly more complicated, but they are good at three things:
 
 - **Large amounts of data** Buckets can be huge: way bigger than hard drives.
@@ -87,6 +91,8 @@ Buckets are slightly more complicated, but they are good at three things:
 - **Sharing** You can share files from a bucket by sharing a URL that you can
   get through a simple web interface. This is great for sharing data with people
   outside of your workspace.
+
+There are several implementations of
 
 ## Accessing your Bucket
 
@@ -244,7 +250,25 @@ examples of this are shown in
 
 ## Bucket Types and Access Scopes
 
-Two types of buckets are available:
+The following MinIO tenants (e.g.: separate services) are available:
+
+|                             Tenant | Speed   | Cost    | Access via File Browser      | Access via `mc`                        | Access via Web Portal                                           |
+| ---------------------------------: | ------- | ------- | ---------------------------- | -------------------------------------- | --------------------------------------------------------------- |
+|                  standard-tenant-1 | Average | Low     | `~/minio/standard-tenant-1`  | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio-standard-tenant-1.covid.cloud.statcan.ca/) |
+|                   premium-tenant-1 | Fast    | Average | `~/minio/premium-tenant-1`   | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium-tenant-1.covid.cloud.statcan.ca/)  |
+| minimal-tenant1 **See note below** | Average | Low     | Unavailable (see note below) | `mc ls minimal-tenant1/$NB_NOTEBOOK`   | [link](https://minimal-tenant1-minio.covid.cloud.statcan.ca/)   |
+| premium-tenant1 **See note below** | Fast    | Average | Unavailable (see note below) | `mc ls premium-tenant1/$NB_NOTEBOOK`   | [link](https://premium-tenant1-minio.covid.cloud.statcan.ca/)   |
+
+<!-- prettier-ignore -->
+!!! danger "`minimal-tenant1` and `premium-tenant1` are being decommissioned" 
+    To improve security and stability, `minimal-tenant1` and `premium-tenant1` have been replaced by `standard-tenant-1` and `premium-tenant-1`. `minimal-tenant1` and `premium-tenant1` will for a limited time still be accessible via `mc` and Web Portal, but will not be accessible via File Browser (due to this causing stability issues for Notebook Servers). It is recommended that you migrate your workloads to the new tenants as soon as possible. A forced migration will occur in future.
+
+<!-- prettier-ignore -->
+??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
+    You could also just type `mc ls standard-tenant-1/john-smith`, etc.
+
+Accessing all MinIO tenants is the same. The difference between tenants is the
+storage type behind them:
 
 - **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):** By
   default, use this one. It is backed by an SSD and provides a good balance of
@@ -278,6 +302,10 @@ send to a collaborator!
 ![MinIO browser with a shareable link to a file](images/minio_self_serve_share.png)
 
 ## Get MinIO Credentials
+
+<!-- prettier-ignore -->
+!!! note "The following methods still work, but you often don't need this anymore because of automation!" 
+    If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the `mc` command line tool for you. You can use the `mc` tool without accessing credentials like shown below (e.g.: just type `mc ls standard-tenant-1/MY_NAMESPACE/`). If you do need credentials, you can still get them from `/vault/secrets/minio-*`
 
 To access your MinIO buckets programmatically (for example through the
 [`mc` command line tool](#MinIO-Command-Line-Tool), or via Python or R) you
