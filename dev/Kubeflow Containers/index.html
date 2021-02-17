@@ -1743,47 +1743,47 @@
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
 <p>Our Container images are based on the community driven <a href="https://github.com/jupyter/docker-stacks">jupyter/docker-stacks</a>. This enables us to focus only on the additional toolsets that we require to enable our data scientists.</p>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="err">.</span>
-<span class="err">├── Makefile                                # Cats the docker-bits together</span>
-<span class="err">│</span>
-<span class="err">├── docker-bits                             # The docker snippets. Numbering indicates the DAG.</span>
-<span class="err">│   ├── 0_CPU.Dockerfile</span>
-<span class="err">│   ├── 1_CUDA-11.0.Dockerfile</span>
-<span class="err">│   ├── 1_CUDA-11.1.Dockerfile</span>
-<span class="err">│   ├── 2_PyTorch.Dockerfile</span>
-<span class="err">│   ├── 2_Tensorflow.Dockerfile</span>
-<span class="err">│   ├── 3_Kubeflow.Dockerfile</span>
-<span class="err">│   ├── 4_CLI.Dockerfile</span>
-<span class="err">│   ├── 5_DB-Drivers.Dockerfile</span>
-<span class="err">│   ├── 6_JupyterLab.Dockerfile</span>
-<span class="err">│   ├── 6_RStudio.Dockerfile</span>
-<span class="err">│   ├── 6_JupyterLab-OL-compliant.Dockerfile</span>
-<span class="err">│   └── ∞_CMD.Dockerfile</span>
-<span class="err">│</span>
-<span class="err">├── resources                               # the Docker context (files for COPY)</span>
-<span class="err">│   ├── clean-layer.sh</span>
-<span class="err">│   ├── helpers.zsh</span>
-<span class="err">│   ├── jupyterlab-overrides.json</span>
-<span class="err">│   ├── landing_page</span>
-<span class="err">│   ├── nginx</span>
-<span class="err">│   ├── README.md</span>
-<span class="err">│   └── start-custom.sh</span>
-<span class="err">│</span>
-<span class="err">├── scripts                                 # Helper Scripts (NOT automated.)</span>
-<span class="err">│   ├── CHECKSUMS</span>
-<span class="err">│   ├── checksums.sh</span>
-<span class="err">│   ├── get-nvidia-stuff.sh</span>
-<span class="err">│   ├── start-custom-OL-compliant.sh</span>
-<span class="err">│   └── README.md</span>
-<span class="err">│</span>
-<span class="err">└── output                                  # Staging area for a `docker build .`</span>
-<span class="err">    ├── JupyterLab-CPU/</span>
-<span class="err">    ├── JupyterLab-PyTorch/</span>
-<span class="err">    ├── JupyterLab-Tensorflow/</span>
-<span class="err">    |── RStudio/</span>
-<span class="err">    ├── JupyterLab-CPU-OL-compliant/        # These images use JupyterLab 3.0 and contain only OL-compliant extensions</span>
-<span class="err">    ├── JupyterLab-PyTorch-OL-compliant/</span>
-<span class="err">    └── JupyterLab-Tensorflow-OL-compliant/</span>
+<div class="codehilite"><pre><span></span><code>.
+├── <span class="nv">Makefile</span>                                # <span class="nv">Cats</span> <span class="nv">the</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span> <span class="nv">together</span>
+│
+├── <span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span>                             # <span class="nv">The</span> <span class="nv">docker</span> <span class="nv">snippets</span>. <span class="nv">Numbering</span> <span class="nv">indicates</span> <span class="nv">the</span> <span class="nv">DAG</span>.
+│   ├── <span class="mi">0</span><span class="nv">_CPU</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">0</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">1</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">2</span><span class="nv">_PyTorch</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">2</span><span class="nv">_Tensorflow</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">3</span><span class="nv">_Kubeflow</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">4</span><span class="nv">_CLI</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">5</span><span class="nv">_DB</span><span class="o">-</span><span class="nv">Drivers</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">6</span><span class="nv">_JupyterLab</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">6</span><span class="nv">_RStudio</span>.<span class="nv">Dockerfile</span>
+│   ├── <span class="mi">6</span><span class="nv">_JupyterLab</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">Dockerfile</span>
+│   └── ∞<span class="nv">_CMD</span>.<span class="nv">Dockerfile</span>
+│
+├── <span class="nv">resources</span>                               # <span class="nv">the</span> <span class="nv">Docker</span> <span class="nv">context</span> <span class="ss">(</span><span class="nv">files</span> <span class="k">for</span> <span class="nv">COPY</span><span class="ss">)</span>
+│   ├── <span class="nv">clean</span><span class="o">-</span><span class="nv">layer</span>.<span class="nv">sh</span>
+│   ├── <span class="nv">helpers</span>.<span class="nv">zsh</span>
+│   ├── <span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">overrides</span>.<span class="nv">json</span>
+│   ├── <span class="nv">landing_page</span>
+│   ├── <span class="nv">nginx</span>
+│   ├── <span class="nv">README</span>.<span class="nv">md</span>
+│   └── <span class="nv">start</span><span class="o">-</span><span class="nv">custom</span>.<span class="nv">sh</span>
+│
+├── <span class="nv">scripts</span>                                 # <span class="nv">Helper</span> <span class="nv">Scripts</span> <span class="ss">(</span><span class="nv">NOT</span> <span class="nv">automated</span>.<span class="ss">)</span>
+│   ├── <span class="nv">CHECKSUMS</span>
+│   ├── <span class="nv">checksums</span>.<span class="nv">sh</span>
+│   ├── <span class="nv">get</span><span class="o">-</span><span class="nv">nvidia</span><span class="o">-</span><span class="nv">stuff</span>.<span class="nv">sh</span>
+│   ├── <span class="nv">start</span><span class="o">-</span><span class="nv">custom</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">sh</span>
+│   └── <span class="nv">README</span>.<span class="nv">md</span>
+│
+└── <span class="nv">output</span>                                  # <span class="nv">Staging</span> <span class="nv">area</span> <span class="k">for</span> <span class="nv">a</span> `<span class="nv">docker</span> <span class="nv">build</span> .`
+    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">/</span>
+    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">/</span>
+    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">/</span>
+    <span class="o">|</span>── <span class="nv">RStudio</span><span class="o">/</span>
+    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>        # <span class="nv">These</span> <span class="nv">images</span> <span class="nv">use</span> <span class="nv">JupyterLab</span> <span class="mi">3</span>.<span class="mi">0</span> <span class="nv">and</span> <span class="nv">contain</span> <span class="nv">only</span> <span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span> <span class="nv">extensions</span>
+    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>
+    └── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>
 </code></pre></div>
 
 <h3 id="deployment-testing-instructions">Deployment Testing Instructions<a class="headerlink" href="#deployment-testing-instructions" title="Permanent link">&para;</a></h3>

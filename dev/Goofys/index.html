@@ -1826,7 +1826,7 @@ $ go install github.com/kahing/goofys
 or the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> environment variables.</p>
 <p>To mount an S3 bucket on startup, make sure the credential is
 configured for <code>root</code>, and can add this to <code>/etc/fstab</code>:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">goofys#bucket   /mnt/mountpoint        fuse     _netdev,allow_other,--file-mode=0666,--dir-mode=0777    0       0</span>
+<div class="codehilite"><pre><span></span><code>goofys#bucket   /mnt/mountpoint        fuse     _netdev,allow_other,--file-mode=0666,--dir-mode=0777    0       0
 </code></pre></div>
 
 <p>See also: <a href="https://github.com/kahing/goofys/blob/master/README-azure.md">Instruction for Azure Blob Storage, Azure Data Lake Gen1, and Azure Data Lake Gen2</a>.</p>

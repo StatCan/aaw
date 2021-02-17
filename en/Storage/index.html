@@ -855,13 +855,13 @@
                   <h1>Storage</h1>
                 
                 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The platform provides several main types of storage:</p>
+<p>The platform provides several types of storage:</p>
 <ul>
 <li>Disk (also called Volumes on the Notebook Server creation screen)</li>
 <li>Bucket ("Blob" or S3 storage, provided through MinIO)</li>
 <li>Data Lakes (coming soon)</li>
 </ul>
-<p>Depending on your use case, either may be most suitable:</p>
+<p>Depending on your use case, either disk or bucket may be most suitable:</p>
 <table>
 <thead>
 <tr>
@@ -940,6 +940,9 @@ page (shown below). You can delete any unattached disk (orange icon on the left)
 by clicking the trash can icon.</p>
 <p><img alt="Delete an unattached volume from the Notebook Server screen" src="../images/kubeflow_delete_disk.png" /></p>
 <h2 id="buckets-via-minio">Buckets (via MinIO)<a class="headerlink" href="#buckets-via-minio" title="Permanent link">&para;</a></h2>
+<!-- prettier-ignore -->
+<details class="warning"><summary>(2021-02-12: To improve stability and security, we have implemented new MinIO instances to replace the originals. We strongly suggest you use the new instances as soon as possible</summary><p>See <a href="#bucket-types-and-access-scopes">Bucket Types and Access Scopes</a>) for more details</p>
+</details>
 <p>Buckets are slightly more complicated, but they are good at three things:</p>
 <ul>
 <li><strong>Large amounts of data</strong> Buckets can be huge: way bigger than hard drives.
@@ -951,6 +954,7 @@ by clicking the trash can icon.</p>
   get through a simple web interface. This is great for sharing data with people
   outside of your workspace.</li>
 </ul>
+<p>There are several implementations of</p>
 <h3 id="accessing-your-bucket">Accessing your Bucket<a class="headerlink" href="#accessing-your-bucket" title="Permanent link">&para;</a></h3>
 <p>There are multiple ways to upload and download data from your MinIO buckets:</p>
 <ul>
@@ -1082,7 +1086,63 @@ example Python packages and instructions on how to access files from S3. Some
 examples of this are shown in
 <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage">jupyter-notebooks/self-serve-storage</a>.</p>
 <h3 id="bucket-types-and-access-scopes">Bucket Types and Access Scopes<a class="headerlink" href="#bucket-types-and-access-scopes" title="Permanent link">&para;</a></h3>
-<p>Two types of buckets are available:</p>
+<p>The following MinIO tenants (e.g.: separate services) are available:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Tenant</th>
+<th>Speed</th>
+<th>Cost</th>
+<th>Access via File Browser</th>
+<th>Access via <code>mc</code></th>
+<th>Access via Web Portal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">standard-tenant-1</td>
+<td>Average</td>
+<td>Low</td>
+<td><code>~/minio/standard-tenant-1</code></td>
+<td><code>mc ls standard-tenant-1/$NB_NOTEBOOK</code></td>
+<td><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca/">link</a></td>
+</tr>
+<tr>
+<td align="right">premium-tenant-1</td>
+<td>Fast</td>
+<td>Average</td>
+<td><code>~/minio/premium-tenant-1</code></td>
+<td><code>mc ls premium-tenant-1/$NB_NOTEBOOK</code></td>
+<td><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">link</a></td>
+</tr>
+<tr>
+<td align="right">minimal-tenant1 <strong>See note below</strong></td>
+<td>Average</td>
+<td>Low</td>
+<td>Unavailable (see note below)</td>
+<td><code>mc ls minimal-tenant1/$NB_NOTEBOOK</code></td>
+<td><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca/">link</a></td>
+</tr>
+<tr>
+<td align="right">premium-tenant1 <strong>See note below</strong></td>
+<td>Fast</td>
+<td>Average</td>
+<td>Unavailable (see note below)</td>
+<td><code>mc ls premium-tenant1/$NB_NOTEBOOK</code></td>
+<td><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca/">link</a></td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore -->
+<div class="admonition danger">
+<p class="admonition-title"><code>minimal-tenant1</code> and <code>premium-tenant1</code> are being decommissioned</p>
+<p>To improve security and stability, <code>minimal-tenant1</code> and <code>premium-tenant1</code> have been replaced by <code>standard-tenant-1</code> and <code>premium-tenant-1</code>. <code>minimal-tenant1</code> and <code>premium-tenant1</code> will for a limited time still be accessible via <code>mc</code> and Web Portal, but will not be accessible via File Browser (due to this causing stability issues for Notebook Servers). It is recommended that you migrate your workloads to the new tenants as soon as possible. A forced migration will occur in future.</p>
+</div>
+<!-- prettier-ignore -->
+<details class="note"><summary>Note: $NB_NOTEBOOK is an environment variable that contains your namespace</summary><p>You could also just type <code>mc ls standard-tenant-1/john-smith</code>, etc.</p>
+</details>
+<p>Accessing all MinIO tenants is the same. The difference between tenants is the
+storage type behind them:</p>
 <ul>
 <li><strong><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca">Standard</a>:</strong> By
   default, use this one. It is backed by an SSD and provides a good balance of
@@ -1130,6 +1190,11 @@ providing different access scopes:</p>
 send to a collaborator!</p>
 <p><img alt="MinIO browser with a shareable link to a file" src="../images/minio_self_serve_share.png" /></p>
 <h3 id="get-minio-credentials">Get MinIO Credentials<a class="headerlink" href="#get-minio-credentials" title="Permanent link">&para;</a></h3>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">The following methods still work, but you often don't need this anymore because of automation!</p>
+<p>If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the <code>mc</code> command line tool for you. You can use the <code>mc</code> tool without accessing credentials like shown below (e.g.: just type <code>mc ls standard-tenant-1/MY_NAMESPACE/</code>). If you do need credentials, you can still get them from <code>/vault/secrets/minio-*</code></p>
+</div>
 <p>To access your MinIO buckets programmatically (for example through the
 <a href="#MinIO-Command-Line-Tool"><code>mc</code> command line tool</a>, or via Python or R) you
 require personal MinIO credentials. Methods for obtaining these credentials are

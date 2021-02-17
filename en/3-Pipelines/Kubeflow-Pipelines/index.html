@@ -983,15 +983,15 @@ Kubeflow Pipelines where it is.</p>
         <span class="n">numbers</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">numbers</span>
         <span class="n">output_file</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span>
 
-        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Averaging numbers: {numbers}&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Averaging numbers: </span><span class="si">{</span><span class="n">numbers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">avg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Result = {avg}&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Result = </span><span class="si">{</span><span class="n">avg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Writing output to {output_file}&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Writing output to </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
             <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">avg</span><span class="p">))</span>
 
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Done&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>To make our <code>average</code> image into a Kubeflow Pipelines <em>component</em>, we make a
@@ -1329,8 +1329,8 @@ manually.</p>
 <h4 id="create-a-key-value-store">Create a key-value store<a class="headerlink" href="#create-a-key-value-store" title="Permanent link">&para;</a></h4>
 <p>The example below creates a key-value store called <strong>elastic-credentials</strong> which
 contains two key-value pairs:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">&quot;username&quot;: &quot;USERNAME&quot;,</span>
-<span class="err">&quot;password&quot;: &quot;PASSWORD&quot;</span>
+<div class="codehilite"><pre><span></span><code>&quot;username&quot;: &quot;USERNAME&quot;,
+&quot;password&quot;: &quot;PASSWORD&quot;
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code>kubectl create secret generic elastic-credentials <span class="se">\</span>
