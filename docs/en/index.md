@@ -22,9 +22,9 @@ Once you've done that, choose what you want to do.
 Once you have Kubeflow set up, use 
 **[Jupyter Notebooks](1-Experiments/Jupyter/)**
 to create and share docuements that contain live code, equations, or visualizations.
+![Jupyter Notebooks](images/jupyter_in_action.png)
 
 ## Process data using 'R' or 'Python'
-
 **[R Studio](1-Experiments/RStudio/)**
 gives you an integrated development environment for R and Python. Use the r-studio-cpu image to get an R Studio environment.
 
@@ -44,6 +44,7 @@ Use
 **[R-Shiny](/2-Publishing/R-Shiny/)** 
 to build interactive web apps straight from R. You can deploy your R-Shiny dashboard by submitting a pull request to our
 [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
+![R Shiny Server](images/readme/shiny_ui.png)
 
 **[Dash](/2-Publishing/Dash/)** is a data visualization tool that lets you build an interactive GUI around your data analysis code.
 
