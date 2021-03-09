@@ -1,66 +1,74 @@
 # Starting on the Advanced Analytics Workspace
 
-![Advanced Analytics Workspace homepage](images/readme/portal_ui.png)
-
 The
 **[Advanced Analytics Workspace portal](https://portal.covid.cloud.statcan.ca)**
 is a great place to discover and connect to the available resources we'll be
 talking about here.
 
-We'll break down the standard tasks into three categories:
+# Get Started with AAW
 
-1. **Experimentation / Analysis**
-2. **Publishing**
-3. **Large scale production**
+Start by setting up 
+**[Kubeflow](1-Experiments/Kubeflow/)**
 
-All are important, and we will address all of them, but we'll focus on the first
-two as these are most widely applicable.
+Also, join our 
+**[Slack channel](https://statcan-aaw.slack.com/)**
 
-# For Experiments
+Once you've done that, choose what you want to do.
 
-<!-- ![Kubeflow](images/logo-kubeflow.png){: style="max-height:200px"} -->
+# Experiments
 
-## Jupyter notebooks
+## Process data using `R`, `Python`, or `Julia` 
 
-- `R`, `Python`, and `Julia`
-- Choose the CPU/RAM you need, big or small, to fit your analysis
-- Share your workspace with your team, along with the data and notebooks within
+Once you have Kubeflow set up, use 
+**[Jupyter Notebooks](1-Experiments/Jupyter/)**
+to create and share docuements that contain live code, equations, or visualizations.
 
-![Jupyter Notebooks](images/jupyter_in_action.png)
+## Process data using 'R' or 'Python'
 
-[**Learn More**](1-Experiments/Jupyter)
+**[R Studio](1-Experiments/RStudio/)**
+gives you an integrated development environment for R and Python. Use the r-studio-cpu image to get an R Studio environment.
 
-## Desktops with ML-Workspace
+## Run a virtual desktop 
 
-Notebooks are more easily shared than desktops, but we also have the ability to
-run a full desktop, with typical applications, right inside your browser.
+You can run a full Ubuntu desktop, with typical applications, right inside your browser, using [**ML Workspaces**](1-Experiments/ML-Workspaces)
 
-[**Learn More**](1-Experiments/ML-Workspaces)
+## Manage machine learning models and metadata
+**[ML Flow](1-Experiments/MLflow/)**
+lets you manage the machine learning lifecycle. It's a model registry for storing machine learning models and metrics.
 
-# For Publishing
+# Publishing
 
-## R Shiny
+## Build and publish an interactive dashboard
 
-<!-- prettier-ignore -->
-![R Shiny](images/logo-RStudio.png){:style="max-height: 100px; display: block; margin-left: auto; margin-right: auto;"}
-
-The platform is designed to host any kind of open source application you want.
-We have an R-Shiny server for hosting R-Shiny apps
-
-![R Shiny Server](images/readme/shiny_ui.png)
-
-To create any an R-Shiny Dashboard, you just have to submit a GitHub pull
-request to our
+Use 
+**[R-Shiny](/2-Publishing/R-Shiny/)** 
+to build interactive web apps straight from R. You can deploy your R-Shiny dashboard by submitting a pull request to our
 [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
 
-# For Production
+**[Dash](/2-Publishing/Dash/)** is a data visualization tool that lets you build an interactive GUI around your data analysis code.
 
-If an experiment turns into a product, then one of the following may be needed:
+## Explore your data
 
-- Kubeflow pipelines for high-volume/intensity work
-- Automation pipelines
+Use 
+**[Datasette](/2-Publishing/Datasette/)**
+, an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
 
+# Pipelines
+
+## Build and schedule data/analysis pipelines
+
+**[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up pipelines. Each pipeline encapsulates analytical workflows, and can be shared, reused, and scheduled.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
+
+## Integrate with Platform as a Service (PaaS) offerings
+We can integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML.
+
+# Collaboration
+## Share code among team members
+
+Use GitHub or GitLab to share code, or request a 
+**[shared workspace](/Collaboration/)**
+.
 
 <!-- prettier-ignore -->
 !!! tip "Ask for help in production"
@@ -69,8 +77,6 @@ If an experiment turns into a product, then one of the following may be needed:
     Don't be shy to [ask us for help](Help)!
 
 # How do I get data? How do I submit data?
-
-![Browse Datasets](images/readme/minio_ui.png)
 
 - Every workspace can be equipped with its own storage.
 
