@@ -5,6 +5,17 @@ The
 is a great place to discover and connect to the available resources we'll be
 talking about here.
 
+[![Foo](images/GettingStarted.png)](#get-started-with-aaw)
+
+![Foo](images/Arrow.png)
+
+[![Foo](images/Analysis.png)](#experiments)
+
+![Foo](images/Arrow.png)
+
+[![Foo](images/Publishing.png)](#publishing)
+
+
 # Get Started with AAW
 
 Start by setting up 
