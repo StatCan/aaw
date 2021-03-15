@@ -14,10 +14,9 @@ talking about here.
 
 [![Analysis](images/Analysis.PNG)](#experiments)
 
-[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](##process-data-using-r-python-or-julia)      
+[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](##process-data-using-r-python-or-julia)
 [![R or Python in R Studio](images/RStudio.PNG)](##process-data-using-r-or-python)
-
-[![Virtual Desktop](images/VirtualDesktop.PNG)](##run-a-virtual-desktop)      
+[![Virtual Desktop](images/VirtualDesktop.PNG)](##run-a-virtual-desktop)
 [![Machine Learning](images/MachineLearning.PNG)](##manage-machine-learning-models-and-metadata)
 
 ![Down arrow](images/Arrow.png)
@@ -32,7 +31,6 @@ talking about here.
 [![Pipelines](images/Pipelines.PNG)](#pipelines)
 
 [![Build Piplines](images/BuildPipelines.PNG)](##build-and-schedule-data-analysis-pipelines)
-
 [![Integrate with PaaS](images/PaaS.PNG)](##integrate-with-platform-as-a-service-paas-offerings)
 
 ![Down arrow](images/Arrow.png)
