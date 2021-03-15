@@ -23,7 +23,7 @@ talking about here.
 
 [![Publishing](images/Publishing.PNG)](#publishing)
 
-[![InteractiveDashboard](images/InteractiveDashboard.PNG)](##build-and-publish-an-interactive-dashboard)      
+[![InteractiveDashboard](images/InteractiveDashboard.PNG)](##build-and-publish-an-interactive-dashboard)
 [![Explore your data](images/ExploreData.PNG)](##explore-your-data)
 
 ![Down arrow](images/Arrow.png)
