@@ -14,20 +14,17 @@ talking about here.
 
 [![Analysis](images/Analysis.PNG)](#experiments)
 
-[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](##process-data-using-r-python-or-julia)
-
+[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](##process-data-using-r-python-or-julia)      
 [![R or Python in R Studio](images/RStudio.PNG)](##process-data-using-r-or-python)
 
-[![Virtual Desktop](images/VirtualDesktop.PNG)](##run-a-virtual-desktop)
-
+[![Virtual Desktop](images/VirtualDesktop.PNG)](##run-a-virtual-desktop)      
 [![Machine Learning](images/MachineLearning.PNG)](##manage-machine-learning-models-and-metadata)
 
 ![Down arrow](images/Arrow.png)
 
 [![Publishing](images/Publishing.PNG)](#publishing)
 
-[![InteractiveDashboard](images/InteractiveDashboard.PNG)](##build-and-publish-an-interactive-dashboard)
-
+[![InteractiveDashboard](images/InteractiveDashboard.PNG)](##build-and-publish-an-interactive-dashboard)      
 [![Explore your data](images/ExploreData.PNG)](##explore-your-data)
 
 ![Down arrow](images/Arrow.png)
