@@ -6,16 +6,43 @@ is a great place to discover and connect to the available resources we'll be
 talking about here.
 
 [![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
-[![Set up Kubeflow](images/Kubeflow.PNG)](#kubeflow)
-[![Ask questions on Slack](images/Slack.PNG)](#slack-channel)
+
+[![Set up Kubeflow](images/Kubeflow.PNG)](##kubeflow)
+[![Ask questions on Slack](images/Slack.PNG)](##slack-channel)
 
 ![Down arrow](images/Arrow.png)
 
 [![Analysis](images/Analysis.PNG)](#experiments)
 
+[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](##process-data-using-r-python-or-julia)
+
+[![R or Python in R Studio](images/RStudio.PNG)](##process-data-using-r-or-python)
+
+[![Virtual Desktop](images/VirtualDesktop.PNG)](##run-a-virtual-desktop)
+
+[![Machine Learning](images/MachineLearning.PNG)](##manage-machine-learning-models-and-metadata)
+
 ![Down arrow](images/Arrow.png)
 
 [![Publishing](images/Publishing.PNG)](#publishing)
+
+[![InteractiveDashboard](images/InteractiveDashboard.PNG)](##build-and-publish-an-interactive-dashboard)
+
+[![Explore your data](images/ExploreData.PNG)](##explore-your-data)
+
+![Down arrow](images/Arrow.png)
+
+[![Pipelines](images/Pipelines.PNG)](#pipelines)
+
+[![Build Piplines](images/BuildPipelines.PNG)](##build-and-schedule-data-analysis-pipelines)
+
+[![Integrate with PaaS](images/PaaS.PNG)](##integrate-with-platform-as-a-service-paas-offerings)
+
+![Down arrow](images/Arrow.png)
+
+[![Collaboration](images/Collaboration.PNG)](#collaboration)
+
+[![Share Code](images/ShareCode.PNG)](##share-code-among-team-members)
 
 # Get Started with AAW
 
