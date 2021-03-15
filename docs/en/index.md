@@ -5,16 +5,17 @@ The
 is a great place to discover and connect to the available resources we'll be
 talking about here.
 
-[![Foo](images/GettingStarted.png)](#get-started-with-aaw)
+[![Getting Started](images/GettingStarted.png)](#get-started-with-aaw)
+[![Set up Kubeflow](images/Kubeflow.png)](#set-up-kubeflow)
+[![Ask questions on Slack](images/Slack.png)](#set-up-slack)
 
-![Foo](images/Arrow.png)
+![Down arrow](images/Arrow.png)
 
-[![Foo](images/Analysis.png)](#experiments)
+[![Analysis](images/Analysis.png)](#experiments)
 
-![Foo](images/Arrow.png)
+![Down arrow](images/Arrow.png)
 
-[![Foo](images/Publishing.png)](#publishing)
-
+[![Publishing](images/Publishing.png)](#publishing)
 
 # Get Started with AAW
 
