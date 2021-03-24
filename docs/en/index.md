@@ -9,14 +9,8 @@ talking about here.
 
 
 [![Analysis](images/Analysis.PNG)](#experiments)
-
-
 [![Publishing](images/Publishing.PNG)](#publishing)
-
-
 [![Pipelines](images/Pipelines.PNG)](#pipelines)
-
-
 [![Collaboration](images/Collaboration.PNG)](#collaboration)
 
 # Get Started with AAW
