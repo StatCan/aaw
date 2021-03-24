@@ -6,13 +6,17 @@ is a great place to discover and connect to the available resources we'll be
 talking about here.
 
 [![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
-[![Right arrow](images/RightArrow.PNG)]()
+
+
 [![Analysis](images/Analysis.PNG)](#experiments)
-[![Right arrow](images/RightArrow.PNG)]()
+
+
 [![Publishing](images/Publishing.PNG)](#publishing)
-[![Right arrow](images/RightArrow.PNG)]()
+
+
 [![Pipelines](images/Pipelines.PNG)](#pipelines)
-[![Right arrow](images/RightArrow.PNG)]()
+
+
 [![Collaboration](images/Collaboration.PNG)](#collaboration)
 
 # Get Started with AAW
