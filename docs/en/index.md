@@ -7,58 +7,56 @@ talking about here.
 
 [![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
 
-[![Set up Kubeflow](images/Kubeflow.PNG)](#kubeflow)
-[![Ask questions on Slack](images/Slack.PNG)](#slack-channel)
+[![Down arrow](images/Arrow.PNG)]
 
 [![Analysis](images/Analysis.PNG)](#experiments)
 
-[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](#process-data-using-r-python-or-julia)
-[![R or Python in R Studio](images/RStudio.PNG)](#process-data-using-r-or-python)
-[![Virtual Desktop](images/VirtualDesktop.PNG)](#run-a-virtual-desktop)
-[![Machine Learning](images/MachineLearning.PNG)](#manage-machine-learning-models-and-metadata)
+[![Down arrow](images/Arrow.PNG)]
 
 [![Publishing](images/Publishing.PNG)](#publishing)
 
-[![InteractiveDashboard](images/InteractiveDashboard.PNG)](#build-and-publish-an-interactive-dashboard)
-[![Explore your data](images/ExploreData.PNG)](#explore-your-data)
+[![Down arrow](images/Arrow.PNG)]
 
 [![Pipelines](images/Pipelines.PNG)](#pipelines)
 
-[![Build Piplines](images/BuildPipelines.PNG)](#build-and-schedule-data-analysis-pipelines)
-[![Integrate with PaaS](images/PaaS.PNG)](#integrate-with-platform-as-a-service-paas-offerings)
+[![Down arrow](images/Arrow.PNG)]
 
 [![Collaboration](images/Collaboration.PNG)](#collaboration)
 
-[![Share Code](images/ShareCode.PNG)](#share-code-among-team-members)
 
 # Get Started with AAW
 
-Start by setting up 
-**[Kubeflow](1-Experiments/Kubeflow/)**
+[![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/)
+Everything starts with
+**[Kubeflow](1-Experiments/Kubeflow/)**!
+Start by setting it up. 
 
-Also, join our 
+[![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
+You're going to have questions. Join our 
 **[Slack channel](https://statcan-aaw.slack.com/)**
+so we can get you answers! 
 
-Once you've done that, choose what you want to do.
 
 # Experiments
-
 ## Process data using `R`, `Python`, or `Julia` 
 
+[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](1-Experiments/Jupyter/)
 Once you have Kubeflow set up, use 
 **[Jupyter Notebooks](1-Experiments/Jupyter/)**
 to create and share docuements that contain live code, equations, or visualizations.
 ![Jupyter Notebooks](images/jupyter_in_action.png)
 
 ## Process data using 'R' or 'Python'
+[![R or Python in R Studio](images/RStudio.PNG)](1-Experiments/RStudio/)
 **[R Studio](1-Experiments/RStudio/)**
 gives you an integrated development environment for R and Python. Use the r-studio-cpu image to get an R Studio environment.
 
 ## Run a virtual desktop 
-
+[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/ML-Workspaces)
 You can run a full Ubuntu desktop, with typical applications, right inside your browser, using [**ML Workspaces**](1-Experiments/ML-Workspaces)
 
 ## Manage machine learning models and metadata
+[![Machine Learning](images/MachineLearning.PNG)](1-Experiments/MLflow/)
 **[ML Flow](1-Experiments/MLflow/)**
 lets you manage the machine learning lifecycle. It's a model registry for storing machine learning models and metrics.
 
@@ -66,6 +64,7 @@ lets you manage the machine learning lifecycle. It's a model registry for storin
 
 ## Build and publish an interactive dashboard
 
+[![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
 Use 
 **[R-Shiny](/2-Publishing/R-Shiny/)** 
 to build interactive web apps straight from R. You can deploy your R-Shiny dashboard by submitting a pull request to our
@@ -76,6 +75,8 @@ to build interactive web apps straight from R. You can deploy your R-Shiny dashb
 
 ## Explore your data
 
+
+[![Explore your data](images/ExploreData.PNG)](/2-Publishing/Datasette/)
 Use 
 **[Datasette](/2-Publishing/Datasette/)**
 , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
@@ -83,16 +84,18 @@ Use
 # Pipelines
 
 ## Build and schedule data/analysis pipelines
-
+[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/)
 **[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up pipelines. Each pipeline encapsulates analytical workflows, and can be shared, reused, and scheduled.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
+[![Integrate with PaaS](images/IntegratePaaS.PNG)]
 ## Integrate with Platform as a Service (PaaS) offerings
 We can integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML.
 
 # Collaboration
 ## Share code among team members
 
+[![Share Code](images/ShareCode.PNG)](/Collaboration/)
 Use GitHub or GitLab to share code, or request a 
 **[shared workspace](/Collaboration/)**
 .
