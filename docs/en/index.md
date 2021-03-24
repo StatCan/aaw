@@ -7,19 +7,19 @@ talking about here.
 
 [![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
 
-[![Down arrow](images/Arrow.PNG)]
+[![Down arrow](images/Arrow.PNG)]()
 
 [![Analysis](images/Analysis.PNG)](#experiments)
 
-[![Down arrow](images/Arrow.PNG)]
+[![Down arrow](images/Arrow.PNG)]()
 
 [![Publishing](images/Publishing.PNG)](#publishing)
 
-[![Down arrow](images/Arrow.PNG)]
+[![Down arrow](images/Arrow.PNG)]()
 
 [![Pipelines](images/Pipelines.PNG)](#pipelines)
 
-[![Down arrow](images/Arrow.PNG)]
+[![Down arrow](images/Arrow.PNG)]()
 
 [![Collaboration](images/Collaboration.PNG)](#collaboration)
 
@@ -88,7 +88,7 @@ Use
 **[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up pipelines. Each pipeline encapsulates analytical workflows, and can be shared, reused, and scheduled.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
-[![Integrate with PaaS](images/IntegratePaaS.PNG)]
+[![Integrate with PaaS](images/IntegratePaaS.PNG)]()
 ## Integrate with Platform as a Service (PaaS) offerings
 We can integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML.
 
