@@ -22,11 +22,13 @@ Start by setting it up.
 
 [![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
 You're going to have questions. Join our 
-**[Slack channel](https://statcan-aaw.slack.com/)**
+**[Slack channel](https://statcan-aaw.slack.com/)** 
 so we can get you answers! 
 ![A screenshot of the slack page. In the top right-hand corner is a link to create a new account](images/SlackAAW.PNG)
+
 Click on the link, then choose "Create an account" in the upper right-hand corner. 
 ![A screenshot of the next page, with a box to use your @canada.ca email](images/SlackAAW2.PNG)
+
 Use your @canada.ca email address so that you will be automatically approved. 
 
 
