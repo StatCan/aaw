@@ -27,7 +27,7 @@ so we can get you answers!
 <img src="images/SlackAAW.PNG" alt="A screenshot of the slack page. In the top right-hand corner is a link to create a new account" width="50%">
 
 Click on the link, then choose "Create an account" in the upper right-hand corner. 
-<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%"/
+<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
 
 Use your @canada.ca email address so that you will be automatically approved. 
 
