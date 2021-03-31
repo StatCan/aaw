@@ -1,4 +1,4 @@
-# Getting started with Kubeflow
+# Overview
 
 ## What does Kubeflow do?
 
@@ -11,7 +11,7 @@ for your team.
 
 **Let's get started!**
 
-# Create a Server
+# Setup 
 
 ## Log into Kubeflow
 
@@ -88,7 +88,8 @@ for your team.
     If all goes well, your server should be running!!! You will now have the
     option to connect, and [try out Jupyter!](/daaas/en/1-Experiments/Jupyter)
 
-# Share your workspace
+# Once you've got the basics ...
+## Share your workspace
 
 In Kubeflow every user has a **namespace**. Your namespace belongs to you, and
 it's where all your resources live. If you want to collaborate with someone you
