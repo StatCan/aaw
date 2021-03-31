@@ -5,6 +5,7 @@ The
 is a great place to discover and connect to the available resources we'll be
 talking about here.
 
+## What are you looking for?
 [![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
 
 
