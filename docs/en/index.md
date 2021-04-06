@@ -44,7 +44,7 @@ Within [Kubeflow](1-Experiments/Kubeflow/), **[Notebook Servers](1-Experiments/J
 
 ### Jupyter Notebooks for `Python`, `Julia`, or `R`
 
-Use (Jupyter Notebooks)[https://jupyter.org/] to create and share interactive documents that contain a mix of live code, visualizations, and text.  These can be written in `Python`, `Julia`, or `R`.  
+Use [Jupyter Notebooks](https://jupyter.org/) to create and share interactive documents that contain a mix of live code, visualizations, and text.  These can be written in `Python`, `Julia`, or `R`.  
 
 ![Jupyter Notebooks](images/jupyter_in_action.png)
 
