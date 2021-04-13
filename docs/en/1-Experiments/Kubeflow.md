@@ -11,6 +11,10 @@ for your team.
 
 **Let's get started!**
 
+# Video Tutorial
+
+[![Click here for the video](../images/KubeflowVideo.png)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "title")
+
 # Setup 
 
 ## Log into Kubeflow
