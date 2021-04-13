@@ -28,7 +28,7 @@ for your team.
 
 - Log into [Kubeflow](https://kubeflow.covid.cloud.statcan.ca)
 
-- Navigate to the Jupyter Servers tab
+- Navigate to the Notebook Servers tab
 
 ![Kubeflow Manages the Jupyter Servers](../images/readme/kubeflow_ui.png)
 
@@ -37,9 +37,9 @@ for your team.
 ## Configuring your server
 
 - You will get a template to create your notebook server. **Note:** the name
-  must be lowercase letters with hyphens. **No spaces, and no underscores.**
+  of your server must be lowercase letters with hyphens. **No spaces, and no underscores.**
 
-- **You'll need to choose an image** 
+- You'll need to choose an image. Check the name of the images and choose one that matches what you want to do.
 
 ![Choose an Image](../images/kubeflow_choose_an_image.png)
 
