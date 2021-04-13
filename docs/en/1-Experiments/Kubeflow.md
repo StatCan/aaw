@@ -35,11 +35,7 @@ for your team.
 - You will get a template to create your notebook server. **Note:** the name
   must be lowercase letters with hyphens. **No spaces, and no underscores.**
 
-- **You'll need to choose an image** You will probably want one of
-
-  - **Machine Learning**
-  - **Geomatics**
-  - **Minimal**
+- **You'll need to choose an image** 
 
 ![Choose an Image](../images/kubeflow_choose_an_image.png)
 
