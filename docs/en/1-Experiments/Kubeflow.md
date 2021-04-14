@@ -12,7 +12,9 @@ for your team.
 **Let's get started!**
 
 # Video Tutorial
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xaI6ExYdxc4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=xaI6ExYdxc4"><img src="https://img.youtube.com/vi/xaI6ExYdxc4/0.jpg" alt="Click here for the video"></a>
+</div>
 
 # Setup 
 
