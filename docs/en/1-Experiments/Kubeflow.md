@@ -12,8 +12,7 @@ for your team.
 **Let's get started!**
 
 # Video Tutorial
-
-[![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Advanced Analytics Workspace - Kubeflow Getting Started")
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xaI6ExYdxc4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Setup 
 
