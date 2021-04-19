@@ -21,15 +21,15 @@ be written in `Python`, `Julia`, or `R`.
 Each one comes pre-loaded with VS Code in the browser if you prefer a full IDE
 experience.
 
-Common uses include: data transformation, numerical simulation, statistical
-modelling, machine learning and more.
+<!-- prettier-ignore -->
+??? info "Common uses include:" 
+    data transformation, numerical simulation, statistical
+    modelling, machine learning and more.
 
 TensorFlow and PyTorch are open source libraries that are great for numerical
 computation and large-scale machine learning. If you're looking to develop and
 train models, consider the `jupyterlab-pytorch` or the `jupyterlab-tensroflow`
 flavour of this image. Otherwise, use the `jupyterlab-cpu` one.
-
-#### PyTorch vs TensorFlow
 
 ### RStudio for `R` and `Shiny`
 
