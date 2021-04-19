@@ -11,7 +11,7 @@ for your team.
 
 **Let's get started!**
 
-# Setup 
+# Setup
 
 ## Log into Kubeflow
 
@@ -89,6 +89,7 @@ for your team.
     option to connect, and [try out Jupyter!](/daaas/en/1-Experiments/Jupyter)
 
 # Once you've got the basics ...
+
 ## Share your workspace
 
 In Kubeflow every user has a **namespace**. Your namespace belongs to you, and
