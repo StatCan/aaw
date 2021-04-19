@@ -1,4 +1,4 @@
-# Selecting an Image for you Notebook Server
+# Selecting an Image for your Notebook Server
 
 Depending on your project or use case of the Notebook Server, some images may be
 more suitable then others. The following will go through the main features of
