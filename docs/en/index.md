@@ -1,66 +1,124 @@
-# Starting on the Advanced Analytics Workspace
-
-![Advanced Analytics Workspace homepage](images/readme/portal_ui.png)
+# Starting on the Advanced Analytics Workspace (AAW)
 
 The
 **[Advanced Analytics Workspace portal](https://portal.covid.cloud.statcan.ca)**
 is a great place to discover and connect to the available resources we'll be
 talking about here.
 
-We'll break down the standard tasks into three categories:
+## What are you looking for?
 
-1. **Experimentation / Analysis**
-2. **Publishing**
-3. **Large scale production**
+[![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
 
-All are important, and we will address all of them, but we'll focus on the first
-two as these are most widely applicable.
+[![Analysis](images/Analysis.PNG)](#experiments)
+[![Publishing](images/Publishing.PNG)](#publishing)
+[![Pipelines](images/Pipelines.PNG)](#pipelines)
+[![Collaboration](images/Collaboration.PNG)](#collaboration)
 
-# For Experiments
+# Get Started with AAW
 
-<!-- ![Kubeflow](images/logo-kubeflow.png){: style="max-height:200px"} -->
+[![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/) Everything
+starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
 
-## Jupyter notebooks
+[![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
+You're going to have questions. Join our
+**[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers!
 
-- `R`, `Python`, and `Julia`
-- Choose the CPU/RAM you need, big or small, to fit your analysis
-- Share your workspace with your team, along with the data and notebooks within
+![Screenshot of the Slack signup page.  In the top right-hand corner is a link to create a new account](images/SlackAAW.PNG)
+
+Click on the link, then choose "Create an account" in the upper right-hand
+corner.
+
+![Screenshot of the Slack new account page, with a box to use your @canada.ca email](images/SlackAAW2.PNG)
+
+Use your @canada.ca email address so that you will be automatically approved.
+
+# Experiments
+
+## Process data using Notebook Servers
+
+Within [Kubeflow](1-Experiments/Kubeflow/),
+**[Notebook Servers](1-Experiments/Jupyter/)** are how you get an interactive
+compute environment to process data. All Notebook Servers have access to up to
+15CPU/48GB RAM and GB/TB scale storage, but have a different user interface
+depending on the flavour you choose.
+
+- Python, Julia, and R through **Jupyter Notebooks**
+- R through **RStudio**
+
+### Jupyter Notebooks for `Python`, `Julia`, or `R`
+
+Use [Jupyter Notebooks](https://jupyter.org/) to create and share interactive
+documents that contain a mix of live code, visualizations, and text. These can
+be written in `Python`, `Julia`, or `R`.
 
 ![Jupyter Notebooks](images/jupyter_in_action.png)
 
-[**Learn More**](1-Experiments/Jupyter)
+To start a Notebook Server with the Jupyter Notebook interface, choose any
+`jupyterlab` image when creating your Notebook Server. The `jupyterlab` image
+also comes pre-loaded with VS Code in the browser if you prefer a full IDE
+experience.
 
-## Desktops with ML-Workspace
+### RStudio for `R` and `Shiny`
 
-Notebooks are more easily shared than desktops, but we also have the ability to
-run a full desktop, with typical applications, right inside your browser.
+**[RStudio](1-Experiments/RStudio/)** gives you an integrated development
+environment specifically for R. If you're coding in R, this is typically the
+Notebook Server to use. Use the `rstudio` image to get an RStudio environment.
 
-[**Learn More**](1-Experiments/ML-Workspaces)
+![RStudio](images/rstudio_visual.png)
 
-# For Publishing
+### Virtual Desktop for General Computing Needs
 
-## R Shiny
+For a full Ubuntu desktop experience, use any
+[remote-desktop](1-Experiments/ML-Workspaces) Notebook Server. These come
+pre-loaded with Python and R, but are delivered in a typical desktop experience
+that also comes with Firefox, VS Code, and open office tools. If you need
+Geomatics tooling for R, choose the `remote-desktop-geomatics` flavour of this
+image.
 
-<!-- prettier-ignore -->
-![R Shiny](images/logo-RStudio.png){:style="max-height: 100px; display: block; margin-left: auto; margin-right: auto;"}
+![Screenshot of the Virtual Desktop](images/rd_desktop.png)
 
-The platform is designed to host any kind of open source application you want.
-We have an R-Shiny server for hosting R-Shiny apps
+# Publishing
 
+## Build and publish an interactive dashboard
+
+[![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
+Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight
+from R. You can deploy your R-Shiny dashboard by submitting a pull request to
+our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
 ![R Shiny Server](images/readme/shiny_ui.png)
 
-To create any an R-Shiny Dashboard, you just have to submit a GitHub pull
-request to our
-[R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
+**[Dash](/2-Publishing/Dash/)** is a data visualization tool that lets you build
+an interactive GUI around your data analysis code.
 
-# For Production
+## Explore your data
 
-If an experiment turns into a product, then one of the following may be needed:
+[![Explore your data](images/ExploreData.PNG)](/2-Publishing/Datasette/) Use
+**[Datasette](/2-Publishing/Datasette/)** , an instant JSON API for your SQLite
+databases. Run SQL queries in a more interactive way!
 
-- Kubeflow pipelines for high-volume/intensity work
-- Automation pipelines
+# Pipelines
 
+## Build and schedule data/analysis pipelines
+
+[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/)
+**[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up
+pipelines. Each pipeline encapsulates analytical workflows, and can be shared,
+reused, and scheduled.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
+
+[![Integrate with PaaS](images/IntegratePaaS.PNG)]()
+
+## Integrate with Platform as a Service (PaaS) offerings
+
+We can integrate with many Platform as a Service (PaaS) offerings, like
+Databricks or AzureML.
+
+# Collaboration
+
+## Share code among team members
+
+[![Share Code](images/ShareCode.PNG)](/Collaboration/) Use GitHub or GitLab to
+share code, or request a **[shared workspace](/Collaboration/)** .
 
 <!-- prettier-ignore -->
 !!! tip "Ask for help in production"
@@ -69,8 +127,6 @@ If an experiment turns into a product, then one of the following may be needed:
     Don't be shy to [ask us for help](Help)!
 
 # How do I get data? How do I submit data?
-
-![Browse Datasets](images/readme/minio_ui.png)
 
 - Every workspace can be equipped with its own storage.
 
