@@ -26,7 +26,7 @@ These can be written in `Python`, `Julia`, or `R`.
 The jupyter notebooks are great launchpads for analytics including machine
 learning. The `jupyterlab-cpu` image gives a good core experience for python,
 including common packages such as `numpy`, `pandas` and `scikit-learn`. If
-you're interested specifically in using **_Tensorflow_** or **_PyTorch_**, we
+you're interested specifically in using **_TensorFlow_** or **_PyTorch_**, we
 also have `jupyterlab-tensorflow` and `jupyterlab-pytorch` which come with those
 tools pre-installed.
 
