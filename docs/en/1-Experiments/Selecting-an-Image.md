@@ -33,7 +33,7 @@ tools pre-installed.
 Each image comes pre-loaded with VS Code in the browser if you prefer a full IDE
 experience.
 
-### RStudio
+## RStudio
 
 **[RStudio](RStudio/)** gives you an integrated development environment
 specifically for `R`. If you're coding in `R`, this is typically the Notebook
@@ -41,7 +41,7 @@ Server to use. Use the `rstudio` image to get an RStudio environment.
 
 ![RStudio](../images/rstudio_visual.png)
 
-### Remote-Desktop
+## Remote-Desktop
 
 For a full Ubuntu desktop experience, two versions of Remote Desktop are
 available. These come pre-loaded with Python and R, but are delivered in a
