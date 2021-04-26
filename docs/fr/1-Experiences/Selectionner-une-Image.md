@@ -19,11 +19,11 @@ partager des documents interactifs qui contiennent un mélange de code en direct
 de visualisations et de texte. Ceux-ci peuvent être écrits en `Python`,` Julia`
 ou `R`.
 
-![Jupyter Notebooks](../../en/images/jupyter_in_action.png)
+![Jupyter Notebooks](../images/jupyter_in_action.png)
 
 <!-- prettier-ignore -->
 ??? info "La plupart des utilisations comprennent:"
-    la transformation de données, la simulation numérique, la modélisation statistique, l'apprentissage machine et autres.
+    la transformation de données, la simulation numérique, la modélisation statistique, l'apprentissage automatique et autres.
 
 Ceux-ci s'agit d'un excellent outil pour l'analyse, y compris l'apprentissage
 machine. L'image `jupyterlab-cpu` fournit une bonne expérience de base pour
@@ -42,7 +42,7 @@ spécifiquement pour `R`. Si vous codez en `R`, il s'agit généralement du serv
 bloc-notes utiliser. Utilisez l'image `rstudio` pour obtenir un environnement
 RStudio.
 
-![RStudio](../../en/images/rstudio_visual.png)
+![RStudio](../images/rstudio_visual.png)
 
 ### Bureau Virtuel
 
@@ -57,4 +57,4 @@ outils _Open Office_. Le système d'exploitation est
 géomatique pour R, choisissez la version `remote-desktop-geomatics` de cette
 image.
 
-![Screenshot of the Virtual Desktop](../../en/images/rd_desktop.png)
+![Screenshot of the Virtual Desktop](../images/rd_desktop.png)

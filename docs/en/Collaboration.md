@@ -121,7 +121,7 @@ Any **logged in** user can see these files and read them freely.
 
 ## Sharing with the world
 
-Ask about that one in our [Slack channel](https://statcan-aaw.slaock.com). There
+Ask about that one in our [Slack channel](https://statcan-aaw.slack.com). There
 are many ways to do this from the IT side, but it's important for it to go
 through proper processes, so this is not done in a "self-serve" way that the
 others are. That said, it is totally possible.

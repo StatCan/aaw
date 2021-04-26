@@ -69,7 +69,7 @@ Notebook Server to use. Use the `rstudio` image to get an RStudio environment.
 ### Virtual Desktop for General Computing Needs
 
 For a full Ubuntu desktop experience, use any
-[remote-desktop](1-Experiments/ML-Workspaces) Notebook Server. These come
+[remote-desktop](1-Experiments/Remote-Desktop) Notebook Server. These come
 pre-loaded with Python and R, but are delivered in a typical desktop experience
 that also comes with Firefox, VS Code, and open office tools. If you need
 Geomatics tooling for R, choose the `remote-desktop-geomatics` flavour of this

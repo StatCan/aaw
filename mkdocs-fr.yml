@@ -47,15 +47,19 @@ nav:
   - Analyse:
       - Kubeflow: 1-Experiences/Kubeflow.md
       - Jupyter: 1-Experiences/Jupyter.md
-      - ML-Workspaces: 1-Experiences/Bureau-virtuel.md
-      - DataBricks: 1-Experiences/Databricks.md
+      - RStudio: 1-Experiences/RStudio.md
+      - Bureau-Virtuel: 1-Experiences/Bureau-virtuel.md
       - MLflow: 1-Experiences/MLflow.md
   - Publication:
       - R Shiny: 2-Publication/R-Shiny.md
+      - Dash: 2-Publication/Dash.md
+      - Datasette: 2-Publication/Datasette.md
       - Power BI: 2-Publication/PowerBI.md
       - Sur mesure: 2-Publication/Sur-mesure.md
   - Pipelines:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
+      - PaaS Integration: 3-Pipelines/PaaS.md
+      - Model Serving: 3-Pipelines/Serving.md
   - Collaboration: Collaboration.md
   - Stockage: Stockage.md
   - Aide/Contactez-nous: Aide.md

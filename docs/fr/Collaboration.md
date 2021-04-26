@@ -137,7 +137,7 @@ librement.
 ## Partage avec le monde
 
 Renseignez-vous à ce sujet sur notre
-[canal Slack](https://statcan-aaw.slaock.com). Il existe de nombreuses méthodes
+[canal Slack](https://statcan-aaw.slack.com). Il existe de nombreuses méthodes
 de partage avec le monde du point de vue informatique. Cependant, comme il est
 important de respecter les processus appropriés, on n'utilise pas le
 libre-service, comme dans les autres cas. Cela dit, c'est possible.
