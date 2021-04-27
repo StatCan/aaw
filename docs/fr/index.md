@@ -37,28 +37,28 @@ automatiquement approuvée.
 
 # Expériences
 
-## Traiter les données en utilisant les serveurs notebook
+## Traiter les données en utilisant les serveurs bloc-notes
 
 Dans [Kubeflow](1-Experiences/Kubeflow/), les
-**[Servers Bloc-Notes](1-Experiences/Jupyter/)** vous permet d'obtenir un
-environnement de calcul interactif pour traiter les données. Tous les Servers
+**[Serveurs Bloc-Notes](1-Experiences/Jupyter/)** vous permet d'obtenir un
+environnement de calcul interactif pour traiter les données. Tous les Serveurs
 Bloc-notes ont accès à un maximum de 15CPU/48GB RAM et à un stockage à l'échelle
 de GB/TB, mais ont une interface utilisateur différente selon la version que
 vous choisissez.
 
-- Python, Julia et R via **Bloc-note Jupyter**.
+- Python, Julia et R via un **Bloc-notes Jupyter**.
 - R via **RStudio**
 
-### Jupyter Notebooks for `Python`, `Julia`, or `R`
+### Bloc-notes Jupyter pour `Python`, `Julia`, ou `R`
 
-Utilisez un [Bloc-note Jupyter](https://jupyter.org/) pour créer et partager des
-documents interactifs qui contiennent un mélange de code en direct, de
+Utilisez un [Bloc-notes Jupyter](https://jupyter.org/) pour créer et partager
+des documents interactifs qui contiennent un mélange de code en direct, de
 visualisations et de texte. Ceux-ci peuvent être écrits en `Python`,` Julia` ou
 `R`.
 
-![Jupyter Notebooks](images/jupyter_in_action.png)
+![Bloc-notes Jupyter](images/jupyter_in_action.png)
 
-Pour lancer un Serveur Bloc-note avec une interface Jupyter, choisissez l'une
+Pour lancer un Serveur Bloc-notes avec une interface Jupyter, choisissez l'une
 des image `jupyterlab` lors de la création de votre Serveur Bloc-note. L'image
 `jupyterlab` est également préchargée avec VS Code dans le navigateur si vous
 préférez une expérience IDE complète.
@@ -67,7 +67,7 @@ préférez une expérience IDE complète.
 
 **[RStudio](1-Experiences/RStudio/)** vous offre un environnement de
 développement intégré spécifiquement pour R. Si vous codez en R, c'est
-typiquement le serveur de notebook à utiliser. Utilisez l'image `rstudio` pour
+typiquement le serveur bloc-notes à utiliser. Utilisez l'image `rstudio` pour
 obtenir un environnement RStudio.
 
 ![RStudio](images/rstudio_visual.png)

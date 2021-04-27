@@ -1,4 +1,4 @@
-# Explore your data with Datasette
+# Explorer vos données avec Datasette
 
 Datasette est une API JSON instantanée pour vos bases de données SQLite qui
 permet d'explorer la BD et d'exécuter des requêtes SQL de manière plus
@@ -11,9 +11,9 @@ Vous pouvez trouver une liste d'exemples de datasettes
 !!! faq "Écosystème de Datasette"
     Il existe toutes sortes d'outils pour convertir des données depuis et vers sqlite. [ici](https://docs.datasette.io/en/stable/ecosystem.html). Par exemple, vous pouvez charger des fichiers de forme dans sqlite, ou créer des graphes [Vega](https://vega.github.io/vega/) à partir d'une base de données sqlite. SQLite fonctionne bien avec `R`, `Python`, et plusieurs autres outils.
 
-## Example Datasette
+## Exemple Datasette
 
-Voici quelques aptures d'écran du Datasette
+Voici quelques captures d'écran du Datasette
 [global-power-plants](https://global-power-plants.datasettes.com), vous pouvez
 prévisualiser et explorer les données dans le navigateur, que ce soit par des
 clics ou des requêtes SQL.
@@ -24,9 +24,9 @@ Vous pouvez même explorer des cartes au sein de l'outil!
 
 [Exécuter des requêtes SQL](../images/datasette-sql.png)
 
-# Starting Datasette
+# Démarrer avec Datasette
 
-Pour visualiser votre base de données dans votre bloc-note Jupyter, créez le
+Pour visualiser votre base de données dans votre bloc-notes Jupyter, créez le
 fichier _bash_ suivant dans votre répertoire de projet et exécutez-le avec
 `./start.sh`. Accédez au serveur web en utilisant le
 [URL de base](#running-your-Notebook-server-and-accessing-the-port) avec le
@@ -56,8 +56,8 @@ datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_l
     Un utilisateur de la plateforme a utilisé Datasette avec un tableau de bord. Voir la [vidéo](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) pour une démonstration.
 
 <!-- prettier-ignore -->
-!!! danger "Exécuter le serveur de votre Notebook et accéder au port"
-    Lorsque vous exécutez un outil depuis votre bloc-note Jupyter qui affiche un site web sur un port, vous ne serez pas en mesure d'y accéder simplement à partir de `http://localhost:5000/` comme normalement suggéré dans la sortie lors de l'exécution de l'application web.
+!!! danger "Exécuter le serveur de votre bloc-notes et accéder au port"
+    Lorsque vous exécutez un outil depuis votre bloc-notes Jupyter qui affiche un site web sur un port, vous ne serez pas en mesure d'y accéder simplement à partir de `http://localhost:5000/` comme normalement suggéré dans la sortie lors de l'exécution de l'application web.
 
     Pour accéder au serveur web, vous devrez utiliser l'URL de base. Dans le terminal du bloc-note, exécutez:
 

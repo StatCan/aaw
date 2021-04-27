@@ -1,6 +1,6 @@
 # Bureau Virtuel
 
-![Remote Desktop](../images/rd_desktop.png)
+![Bureau Virtuel](../images/rd_desktop.png)
 
 # Qu'est-ce qu'un Bureau Virtuel?
 
@@ -11,7 +11,7 @@ l'environnement de bureau [**XFCE**](https://www.xfce.org/about).
 
 ## Versions
 
-Deux versions de Remote Desktop sont disponibles. _R_ comprend R et RStudio.
+Deux versions du Bureau Virtuel sont disponibles. _R_ comprend R et RStudio.
 Geomatics étend _R_ avec QGIS et diverses bibliothèques de support. Vous pouvez
 personnaliser votre espace de travail en fonction de vos besoins et de vos
 préférences.
@@ -23,13 +23,14 @@ _pip_, _conda_, _npm_ et _yarn_ sont disponibles pour installer divers paquets.
 # Accéder au Bureau Virtuel
 
 Pour lancer le Bureau Virtuel ou l'un de ses outils de support, créez un serveur
-bloc-note dans [Kubeflow](./Kubeflow.md) et sélectionnez l'une des versions
+bloc-notes dans [Kubeflow](./Kubeflow.md) et sélectionnez l'une des versions
 disponibles dans la liste des images. Ensuite, cliquez sur `Connecter` pour
 accéder au Bureau Virtuel.
 
-_Remote Desktop_ vous permet d'accéder à l'interface graphique du bureau via une
-session noVNC. Cliquez sur le '<' sur le côté gauche de l'écran pour ouvrir un
-panneau avec des options telles qu'un plein écran et l'accès au presse-papiers.
+Un _Bureau Virtuel_ vous permet d'accéder à l'interface graphique du bureau via
+une session noVNC. Cliquez sur le '<' sur le côté gauche de l'écran pour ouvrir
+un panneau avec des options telles qu'un plein écran et l'accès au
+presse-papiers.
 
 ![Panneau NoVNC](../images/rd_novnc_panel.png)
 

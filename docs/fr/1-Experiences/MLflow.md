@@ -1,6 +1,4 @@
-# MLflow for model tracking
-
-logiciel libre
+# MLflow pour le suivi de modèle
 
 MLflow s'agit d'un plateforme libre pour la gestion du cycle de vie de
 l'apprentissage automatique. C'est un "registre de modèles" pour stocker vos

@@ -10,7 +10,7 @@ personnalisée avec peu de code.
 
 <!-- prettier-ignore -->
 !!! danger "Exécution de votre serveur de bloc-notes et accès au port"
-    Lors de l'exécution de tout outil à partir de votre bloc-notes Jupyter qui affiche un site web sur un port, vous ne serez pas en mesure d'y accéder simplement à partir de `http://localhost:5000/` comme normalement suggéré dans la sortie lors de l'exécution de la web-app.
+    Lors de l'exécution de tout outil à partir de votre bloc-notes Jupyter qui affiche un site web sur un port, vous ne serez pas en mesure d'y accéder simplement à partir de `http://localhost:5000/` comme normalement suggéré dans la sortie lors de l'exécution de l'application web.
 
     Pour accéder au serveur web, vous devrez utiliser l'URL de base. Dans le terminal du bloc-notes exécutez le suivant:
 

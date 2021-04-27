@@ -15,7 +15,7 @@ plus approprié:
 
 |         Type |                                                               Usagers Simultanés |                                                              Vitesse | Capacité Totale                                | Peut être partagé avec d'autres usagers |
 | -----------: | -------------------------------------------------------------------------------: | -------------------------------------------------------------------: | ---------------------------------------------- | --------------------------------------- |
-|       Disque |                                          Une machine/serveur bloc-note à la fois |                                       Plus rapide (débit et latence) | <=512GB total par disque                       | Non                                     |
+|       Disque |                                         Une machine/serveur bloc-notes à la fois |                                       Plus rapide (débit et latence) | <=512GB total par disque                       | Non                                     |
 | Compartiment | Accès simultané à partir de plusieurs machines/serveurs bloc-notes en même temps | Assez rapide (téléchargement rapide, envoi modeste, latence modeste) | Quantité infinie (dans une limite raisonnable) | [Oui](#partager)                        |
 
 <!-- prettier-ignore -->

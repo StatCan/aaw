@@ -1,4 +1,4 @@
-# Service de model avec Seldon Core et KFServing
+# Service de modèle avec Seldon Core et KFServing
 
 <!-- prettier-ignore -->
 !!! warning "⚒ Cette page est en construction ⚒" 
