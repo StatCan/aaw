@@ -251,8 +251,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-Experiences/Bureau-virtuel/" title="ML-Workspaces" class="md-nav__link">
-      ML-Workspaces
+    <a href="../1-Experiences/RStudio/" title="RStudio" class="md-nav__link">
+      RStudio
     </a>
   </li>
 
@@ -263,8 +263,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../1-Experiences/Databricks/" title="DataBricks" class="md-nav__link">
-      DataBricks
+    <a href="../1-Experiences/Bureau-virtuel/" title="Bureau-Virtuel" class="md-nav__link">
+      Bureau-Virtuel
     </a>
   </li>
 
@@ -319,6 +319,30 @@
   <li class="md-nav__item">
     <a href="../2-Publication/R-Shiny/" title="R Shiny" class="md-nav__link">
       R Shiny
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2-Publication/Dash/" title="Dash" class="md-nav__link">
+      Dash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2-Publication/Datasette/" title="Datasette" class="md-nav__link">
+      Datasette
     </a>
   </li>
 
@@ -385,6 +409,30 @@
   <li class="md-nav__item">
     <a href="../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3-Pipelines/PaaS/" title="PaaS Integration" class="md-nav__link">
+      PaaS Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3-Pipelines/Serving/" title="Model Serving" class="md-nav__link">
+      Model Serving
     </a>
   </li>
 
@@ -485,8 +533,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#partage" class="md-nav__link">
-    Partage
+  <a href="#partager" class="md-nav__link">
+    Partager à partir d'un compartiment privé
   </a>
   
 </li>
@@ -628,8 +676,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#partage" class="md-nav__link">
-    Partage
+  <a href="#partager" class="md-nav__link">
+    Partager à partir d'un compartiment privé
   </a>
   
 </li>
@@ -712,11 +760,44 @@
 <p>La plateforme propose différents types de stockage, conçus pour différents types
 de cas d'utilisation. Par conséquent, cette section vous concerne, que vous
 soyez en train d'expérimenter, de créer des pipelines, ou d'éditer.</p>
-<p>En surface, il existe deux types de stockage :</p>
+<p>En surface, il existe quelques types de stockage :</p>
 <ul>
 <li>des disques (aussi appelés volumes)</li>
-<li>des compartiments (stockage S3 ou « blob »)</li>
+<li>des compartiments (stockage S3 ou « blob » via MinIO)</li>
+<li>Data Lakes (à venir)</li>
 </ul>
+<p>En fonction de votre cas d'utilisation, un disque ou compartiments peut être le
+plus approprié:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Type</th>
+<th align="right">Usagers Simultanés</th>
+<th align="right">Vitesse</th>
+<th>Capacité Totale</th>
+<th>Peut être partagé avec d'autres usagers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Disque</td>
+<td align="right">Une machine/serveur bloc-notes à la fois</td>
+<td align="right">Plus rapide (débit et latence)</td>
+<td>&lt;=512GB total par disque</td>
+<td>Non</td>
+</tr>
+<tr>
+<td align="right">Compartiment</td>
+<td align="right">Accès simultané à partir de plusieurs machines/serveurs bloc-notes en même temps</td>
+<td align="right">Assez rapide (téléchargement rapide, envoi modeste, latence modeste)</td>
+<td>Quantité infinie (dans une limite raisonnable)</td>
+<td><a href="#partager">Oui</a></td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore -->
+<p>??? info "Si vous n'êtes pas sûr de votre choix, ne vous inquiétez pas".
+    Il s'agit de lignes directrices, pas d'une science exacte - choisissez ce qui vous semble le mieux maintenant et faites-le.  Le meilleur choix pour une utilisation compliquée n'est pas évident et nécessite souvent une expérience pratique, donc le simple fait d'essayer quelque chose vous aidera.  Dans la plupart des situations, les deux options fonctionnent bien, même si elles ne sont pas parfaites, et n'oubliez pas que les données peuvent toujours être copiées ultérieurement si vous changez d'avis.</p>
 <h3 id="disques">Disques</h3>
 <p>Les disques sont les systèmes de fichiers courants de type disque dur ou SSD.
 Vous pouvez monter les disques dans votre serveur Kubeflow, et même si vous
@@ -793,7 +874,7 @@ bientôt résolu. En attendant, ça fonctionnera bien si vous utilisez votre
 clé d'accès et votre clé secrète, que vous pouvez obtenir auprès de
 Kubeflow.</p>
 </div>
-<h3 id="partage">Partage</h3>
+<h3 id="partager">Partager à partir d'un compartiment privé</h3>
 <p>Vous pouvez facilement partager des fichiers individuels. Utilisez simplement
 l'option « partager » pour un fichier particulier, et vous recevrez un lien que
 vous pourrez envoyer à un

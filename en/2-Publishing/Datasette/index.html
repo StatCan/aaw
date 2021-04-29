@@ -624,17 +624,17 @@ you can load shapefiles into sqlite, or create <a href="https://vega.github.io/v
 plots from a sqlite database. SQLite works well with <code>R</code>, <code>Python</code>, and many other tools.</p>
 </div>
 <h3 id="example-datasette">Example Datasette<a class="headerlink" href="#example-datasette" title="Permanent link">&para;</a></h3>
-<p>Screenshots from
-<a href="https://global-power-plants.datasettes.com">global-power-plants</a>, you can
-preview and explore the data in the browser, either with clicks or SQL queries.</p>
+<p>Below are some screenshots from the
+<a href="https://global-power-plants.datasettes.com">global-power-plants</a> Datasette, you
+can preview and explore the data in the browser, either with clicks or SQL
+queries.</p>
 <p><img alt="Preview Data" src="../../images/datasette-preview.png" /></p>
 <p>You can even explore maps within the tool!</p>
 <p><img alt="Run SQL Queries" src="../../images/datasette-sql.png" /></p>
 <h2 id="starting-datasette">Starting Datasette<a class="headerlink" href="#starting-datasette" title="Permanent link">&para;</a></h2>
 <p>To view your own database in your Jupyter Notebook, create the following bash
 file in your project directory and run with <code>./start.sh</code>. Access the web server
-using the <a href="#running-your-Notebook-server-and-accessing-the-port">base URL</a> with
-the port number you are using in the below file.</p>
+using the <strong>base URL</strong> with the port number you are using in the below file.</p>
 <p><strong>start.sh</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
@@ -655,8 +655,7 @@ datasette <span class="nv">$DATABASE</span> --cors --config max_returned_rows:10
 <!-- prettier-ignore -->
 <div class="admonition example">
 <p class="admonition-title">Check out this video tutorial</p>
-<p>One user of the platform used Datasette along with a javascript
-dashboard. See it <a href="https://www.youtube.com/watch?v=OPVfBKouBT8&amp;feature=emb_logo">video</a> for a</p>
+<p>One user of the platform used Datasette along with a javascript dashboard. See this <a href="https://www.youtube.com/watch?v=OPVfBKouBT8&amp;feature=emb_logo">video</a> for a demo.</p>
 </div>
 <!-- prettier-ignore -->
 <div class="admonition danger">
@@ -665,7 +664,7 @@ dashboard. See it <a href="https://www.youtube.com/watch?v=OPVfBKouBT8&amp;featu
 you will not be able to simply access it from <code>http://localhost:5000/</code> as
 normally suggested in the output upon running the web-app.</p>
 <p>To access the web server you will need to use the base URL. In your notebook
-terminal run:</p>
+terminal, run:</p>
 <p><code>python
 echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/</code></p>
 </div>

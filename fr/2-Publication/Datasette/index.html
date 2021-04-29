@@ -11,7 +11,7 @@
         <meta name="description" content="User guide for the DAaaS Covid-19 Platform">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/fr/1-Experiences/Databricks/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/fr/2-Publication/Datasette/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>DataBricks - Espace d'analyse avancée du COVID-19</title>
+        <title>Datasette - Espace d'analyse avancée du COVID-19</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#databricks" class="md-skip">
+        <a href="#explorer-vos-donnees-avec-datasette" class="md-skip">
           Aller au contenu
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              DataBricks
+              Datasette
             
           </span>
         </div>
@@ -200,12 +200,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Analyse
@@ -229,7 +227,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Kubeflow/" title="Kubeflow" class="md-nav__link">
+    <a href="../../1-Experiences/Kubeflow/" title="Kubeflow" class="md-nav__link">
       Kubeflow
     </a>
   </li>
@@ -241,7 +239,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Jupyter/" title="Jupyter" class="md-nav__link">
+    <a href="../../1-Experiences/Jupyter/" title="Jupyter" class="md-nav__link">
       Jupyter
     </a>
   </li>
@@ -253,59 +251,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../Bureau-virtuel/" title="ML-Workspaces" class="md-nav__link">
-      ML-Workspaces
+    <a href="../../1-Experiences/RStudio/" title="RStudio" class="md-nav__link">
+      RStudio
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        DataBricks
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="DataBricks" class="md-nav__link md-nav__link--active">
-      DataBricks
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#databricks" class="md-nav__link">
-    Databricks
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -315,7 +263,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../MLflow/" title="MLflow" class="md-nav__link">
+    <a href="../../1-Experiences/Bureau-virtuel/" title="Bureau-Virtuel" class="md-nav__link">
+      Bureau-Virtuel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../1-Experiences/MLflow/" title="MLflow" class="md-nav__link">
       MLflow
     </a>
   </li>
@@ -330,10 +290,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Publication
@@ -357,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publication/R-Shiny/" title="R Shiny" class="md-nav__link">
+    <a href="../R-Shiny/" title="R Shiny" class="md-nav__link">
       R Shiny
     </a>
   </li>
@@ -369,7 +331,89 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publication/PowerBI/" title="Power BI" class="md-nav__link">
+    <a href="../Dash/" title="Dash" class="md-nav__link">
+      Dash
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Datasette
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Datasette" class="md-nav__link md-nav__link--active">
+      Datasette
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explorer-vos-donnees-avec-datasette" class="md-nav__link">
+    Explorer vos données avec Datasette
+  </a>
+  
+    <nav class="md-nav" aria-label="Explorer vos données avec Datasette">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-datasette" class="md-nav__link">
+    Exemple Datasette
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demarrer-avec-datasette" class="md-nav__link">
+    Démarrer avec Datasette
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PowerBI/" title="Power BI" class="md-nav__link">
       Power BI
     </a>
   </li>
@@ -381,7 +425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../2-Publication/Sur-mesure/" title="Sur mesure" class="md-nav__link">
+    <a href="../Sur-mesure/" title="Sur mesure" class="md-nav__link">
       Sur mesure
     </a>
   </li>
@@ -425,6 +469,30 @@
   <li class="md-nav__item">
     <a href="../../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3-Pipelines/PaaS/" title="PaaS Integration" class="md-nav__link">
+      PaaS Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../3-Pipelines/Serving/" title="Model Serving" class="md-nav__link">
+      Model Serving
     </a>
   </li>
 
@@ -494,8 +562,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#databricks" class="md-nav__link">
-    Databricks
+  <a href="#explorer-vos-donnees-avec-datasette" class="md-nav__link">
+    Explorer vos données avec Datasette
+  </a>
+  
+    <nav class="md-nav" aria-label="Explorer vos données avec Datasette">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-datasette" class="md-nav__link">
+    Exemple Datasette
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demarrer-avec-datasette" class="md-nav__link">
+    Démarrer avec Datasette
   </a>
   
 </li>
@@ -512,7 +600,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/statcan/daaas/edit/master/docs/fr/1-Experiences/Databricks.md" title="Editer cette page" class="md-content__button md-icon">
+                  <a href="https://github.com/statcan/daaas/edit/master/docs/fr/2-Publication/Datasette.md" title="Editer cette page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -520,9 +608,62 @@
                   
                 
                 
-                  <h1>DataBricks</h1>
+                  <h1>Datasette</h1>
                 
-                <h2 id="databricks">Databricks</h2>
+                <h2 id="explorer-vos-donnees-avec-datasette">Explorer vos données avec Datasette</h2>
+<p>Datasette est une API JSON instantanée pour vos bases de données SQLite qui
+permet d'explorer la BD et d'exécuter des requêtes SQL de manière plus
+interactive.</p>
+<p>Vous pouvez trouver une liste d'exemples de datasettes
+<a href="https://github.com/simonw/datasette/wiki/Datasettes">ici</a>.</p>
+<!-- prettier-ignore -->
+<div class="admonition faq">
+<p class="admonition-title">Écosystème de Datasette</p>
+<p>Il existe toutes sortes d'outils pour convertir des données depuis et vers sqlite. <a href="https://docs.datasette.io/en/stable/ecosystem.html">ici</a>. Par exemple, vous pouvez charger des fichiers de forme dans sqlite, ou créer des graphes <a href="https://vega.github.io/vega/">Vega</a> à partir d'une base de données sqlite. SQLite fonctionne bien avec <code>R</code>, <code>Python</code>, et plusieurs autres outils.</p>
+</div>
+<h3 id="exemple-datasette">Exemple Datasette</h3>
+<p>Voici quelques captures d'écran du Datasette
+<a href="https://global-power-plants.datasettes.com">global-power-plants</a>, vous pouvez
+prévisualiser et explorer les données dans le navigateur, que ce soit par des
+clics ou des requêtes SQL.</p>
+<p><img alt="Prévisualisation des données" src="../../images/datasette-preview.png" /></p>
+<p>Vous pouvez même explorer des cartes au sein de l'outil!</p>
+<p><a href="../../images/datasette-sql.png">Exécuter des requêtes SQL</a></p>
+<h2 id="demarrer-avec-datasette">Démarrer avec Datasette</h2>
+<p>Pour visualiser votre base de données dans votre bloc-notes Jupyter, créez le
+fichier <em>bash</em> suivant dans votre répertoire de projet et exécutez-le avec
+<code>./start.sh</code>. Accédez au serveur web en utilisant le <strong>URL de base</strong> avec le
+numéro de port que vous utilisez dans le fichier ci-dessous.</p>
+<p><strong>start.sh</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># This script just starts Datasette with the correct URL, so</span>
+<span class="c1"># that you can use it within kubeflow.</span>
+
+<span class="c1"># Get an example database</span>
+wget https://github.com/StatCan/R-notebooks/raw/master/database-connections/latin_phrases.db
+
+<span class="c1"># If you have your own database, you can change this line!</span>
+<span class="nv">DATABASE</span><span class="o">=</span>latin_phrases.db
+
+<span class="nb">export</span> <span class="nv">BASE_URL</span><span class="o">=</span><span class="s2">&quot;https://kubeflow.covid.cloud.statcan.ca</span><span class="si">${</span><span class="nv">JUPYTER_SERVER_URL</span><span class="p">:</span><span class="nv">19</span><span class="si">}</span><span class="s2">proxy/8001/&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;Base url: </span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">&quot;</span>
+datasette <span class="nv">$DATABASE</span> --cors --config max_returned_rows:100000 --config sql_time_limit_ms:5500 --config base_url:<span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span>
+</code></pre></div>
+
+<!-- prettier-ignore -->
+<div class="admonition example">
+<p class="admonition-title">Regardez ce tutoriel</p>
+<p>Un utilisateur de la plateforme a utilisé Datasette avec un tableau de bord. Voir la <a href="https://www.youtube.com/watch?v=OPVfBKouBT8&amp;feature=emb_logo">vidéo</a> pour une démonstration.</p>
+</div>
+<!-- prettier-ignore -->
+<div class="admonition danger">
+<p class="admonition-title">Exécuter le serveur de votre bloc-notes et accéder au port</p>
+<p>Lorsque vous exécutez un outil depuis votre bloc-notes Jupyter qui affiche un site web sur un port, vous ne serez pas en mesure d'y accéder simplement à partir de <code>http://localhost:5000/</code> comme normalement suggéré dans la sortie lors de l'exécution de l'application web.</p>
+<p>Pour accéder au serveur web, vous devrez utiliser l'URL de base. Dans le terminal du bloc-note, exécutez:</p>
+<p><code>python
+echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/</code></p>
+</div>
                 
               
               
@@ -541,7 +682,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Bureau-virtuel/" title="ML-Workspaces" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Dash/" title="Dash" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -550,19 +691,19 @@
                 <span class="md-footer-nav__direction">
                   Précédent
                 </span>
-                ML-Workspaces
+                Dash
               </div>
             </div>
           </a>
         
         
-          <a href="../MLflow/" title="MLflow" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../PowerBI/" title="Power BI" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Suivant
                 </span>
-                MLflow
+                Power BI
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
