@@ -1,6 +1,6 @@
-# R-Studio
+# RStudio
 
-You can use the `r-studio-cpu` image to get an RStudio environment!
+You can use the `rstudio` image to get an RStudio environment!
 
 ![RStudio](../images/rstudio_visual.png)
 

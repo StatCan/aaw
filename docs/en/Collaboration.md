@@ -13,7 +13,7 @@ can share the scope of who you're sharing with **No one** vs. **My Team** vs.
 
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
-    Buckets are like Network Storage. See the [Storage section](/Storage)
+    Buckets are like Network Storage. See the [Storage section](./Storage.md)
     section for more discussion of the differences between these two ideas.
 
 The way that **Private** vs. **Team** based access is configured is with
@@ -56,12 +56,12 @@ namespace you have through the Kubeflow UI, like shown below. You will then be
 able to manage the collaborators list through Kubeflow's **Manage Contributors**
 tab, where you can add your colleagues to the shared namespace.
 
-![Contributors Menu](/images/kubeflow_contributors.png)
+![Contributors Menu](images/kubeflow_contributors.png)
 
 To switch namespaces, take a look at the top of your window, just to the right
 of the Kubeflow Logo.
 
-![Select your Namespace](/images/kubeflow_manage_contributors.png)
+![Select your Namespace](images/kubeflow_manage_contributors.png)
 
 # Shared Code
 
@@ -100,13 +100,13 @@ code organized and tracked.
 
 Once you have a shared namespace, you have two shared storage approaches
 
-| Storage Option                           | Benefits                                                         |
-| :--------------------------------------- | :--------------------------------------------------------------- |
-| Shared Jupyter Servers/Workspaces        | More amenable to small files, notebooks, and little experiments. |
-| Shared Buckets (see [Storage](/Storage)) | Better suited for use in pipelines, APIs, and for large files.   |
+| Storage Option                               | Benefits                                                         |
+| :------------------------------------------- | :--------------------------------------------------------------- |
+| Shared Jupyter Servers/Workspaces            | More amenable to small files, notebooks, and little experiments. |
+| Shared Buckets (see [Storage](./Storage.md)) | Better suited for use in pipelines, APIs, and for large files.   |
 
 To learn more about the technology behind these, check out the
-[Storage section](/Storage).
+[Storage section](./Storage.md).
 
 ## Sharing with StatCan
 
@@ -121,7 +121,7 @@ Any **logged in** user can see these files and read them freely.
 
 ## Sharing with the world
 
-Ask about that one in our [Slack channel](https://statcan-aaw.slaock.com). There
+Ask about that one in our [Slack channel](https://statcan-aaw.slack.com). There
 are many ways to do this from the IT side, but it's important for it to go
 through proper processes, so this is not done in a "self-serve" way that the
 others are. That said, it is totally possible.

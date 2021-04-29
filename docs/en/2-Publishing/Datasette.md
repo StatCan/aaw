@@ -15,9 +15,10 @@ You can find a list of example datasettes
 
 ## Example Datasette
 
-Screenshots from
-[global-power-plants](https://global-power-plants.datasettes.com), you can
-preview and explore the data in the browser, either with clicks or SQL queries.
+Below are some screenshots from the
+[global-power-plants](https://global-power-plants.datasettes.com) Datasette, you
+can preview and explore the data in the browser, either with clicks or SQL
+queries.
 
 ![Preview Data](../images/datasette-preview.png)
 
@@ -29,8 +30,7 @@ You can even explore maps within the tool!
 
 To view your own database in your Jupyter Notebook, create the following bash
 file in your project directory and run with `./start.sh`. Access the web server
-using the [base URL](#running-your-Notebook-server-and-accessing-the-port) with
-the port number you are using in the below file.
+using the **base URL** with the port number you are using in the below file.
 
 **start.sh**
 
@@ -53,8 +53,7 @@ datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_l
 
 <!-- prettier-ignore -->
 !!! example "Check out this video tutorial"
-    One user of the platform used Datasette along with a javascript
-    dashboard. See it [video](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) for a
+    One user of the platform used Datasette along with a javascript dashboard. See this [video](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) for a demo.
 
 <!-- prettier-ignore -->
 !!! danger "Running your Notebook Server and accessing the port"
@@ -63,7 +62,7 @@ datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_l
     normally suggested in the output upon running the web-app.
 
     To access the web server you will need to use the base URL. In your notebook
-    terminal run:
+    terminal, run:
 
     ```python
     echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/

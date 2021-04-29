@@ -7,7 +7,7 @@ fiche de données `pandas`.
 ## Ce dont vous aurez besoin
 
 1. Un ordinateur avec Power BI et Python 3.6
-2. Vos `ACCESS_KEY` et `SECRET_KEY` MinIO (voir [Stockage](/daaas/fr/Stockage))
+2. Vos `ACCESS_KEY` et `SECRET_KEY` MinIO (voir [Stockage](../Stockage.md))
 
 ## Connectez-vous
 

@@ -80,6 +80,6 @@ download them.
 ## Shareable "Bucket" storage
 
 There is also a mounted `minio` folder in your home directory, which holds files
-in [MinIO](/Storage/#buckets-via-minio).
+in [MinIO](../Storage.md/#buckets-via-minio).
 
-**Refer to the [Storage Section](/Storage) for details.**
+**Refer to the [Storage Section](../Storage.md) for details.**

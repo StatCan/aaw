@@ -4,10 +4,23 @@ La plateforme propose différents types de stockage, conçus pour différents ty
 de cas d'utilisation. Par conséquent, cette section vous concerne, que vous
 soyez en train d'expérimenter, de créer des pipelines, ou d'éditer.
 
-En surface, il existe deux types de stockage :
+En surface, il existe quelques types de stockage :
 
 - des disques (aussi appelés volumes)
-- des compartiments (stockage S3 ou « blob »)
+- des compartiments (stockage S3 ou « blob » via MinIO)
+- Data Lakes (à venir)
+
+En fonction de votre cas d'utilisation, un disque ou compartiments peut être le
+plus approprié:
+
+|         Type |                                                               Usagers Simultanés |                                                              Vitesse | Capacité Totale                                | Peut être partagé avec d'autres usagers |
+| -----------: | -------------------------------------------------------------------------------: | -------------------------------------------------------------------: | ---------------------------------------------- | --------------------------------------- |
+|       Disque |                                         Une machine/serveur bloc-notes à la fois |                                       Plus rapide (débit et latence) | <=512GB total par disque                       | Non                                     |
+| Compartiment | Accès simultané à partir de plusieurs machines/serveurs bloc-notes en même temps | Assez rapide (téléchargement rapide, envoi modeste, latence modeste) | Quantité infinie (dans une limite raisonnable) | [Oui](#partager)                        |
+
+<!-- prettier-ignore -->
+??? info "Si vous n'êtes pas sûr de votre choix, ne vous inquiétez pas".
+    Il s'agit de lignes directrices, pas d'une science exacte - choisissez ce qui vous semble le mieux maintenant et faites-le.  Le meilleur choix pour une utilisation compliquée n'est pas évident et nécessite souvent une expérience pratique, donc le simple fait d'essayer quelque chose vous aidera.  Dans la plupart des situations, les deux options fonctionnent bien, même si elles ne sont pas parfaites, et n'oubliez pas que les données peuvent toujours être copiées ultérieurement si vous changez d'avis.
 
 ## Disques
 
@@ -88,7 +101,7 @@ selon le format `prenom-nom`.
     clé d'accès et votre clé secrète, que vous pouvez obtenir auprès de
     Kubeflow.
 
-## Partage
+## Partager à partir d'un compartiment privé {#partager}
 
 Vous pouvez facilement partager des fichiers individuels. Utilisez simplement
 l'option « partager » pour un fichier particulier, et vous recevrez un lien que
