@@ -30,8 +30,7 @@ You can even explore maps within the tool!
 
 To view your own database in your Jupyter Notebook, create the following bash
 file in your project directory and run with `./start.sh`. Access the web server
-using the [base URL](#running-your-Notebook-server-and-accessing-the-port) with
-the port number you are using in the below file.
+using the **base URL** with the port number you are using in the below file.
 
 **start.sh**
 
@@ -54,8 +53,7 @@ datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_l
 
 <!-- prettier-ignore -->
 !!! example "Check out this video tutorial"
-    One user of the platform used Datasette along with a javascript
-    dashboard. See it [video](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) for a demo.
+    One user of the platform used Datasette along with a javascript dashboard. See this [video](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) for a demo.
 
 <!-- prettier-ignore -->
 !!! danger "Running your Notebook Server and accessing the port"

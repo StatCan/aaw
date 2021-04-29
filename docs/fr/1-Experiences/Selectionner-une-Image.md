@@ -1,4 +1,4 @@
-# Sélectionner une Image pour votre Serveur Bloc-Notes
+# Sélectionner une Image pour votre Serveur bloc-notes
 
 Selon votre projet ou votre utilisation souhaitée du serveur bloc-notes,
 certaines images seront plus appropriées que d'autres.
@@ -8,18 +8,18 @@ aider à choisir.
 
 Lors de la sélection, vous avez 3 options principales:
 
-- Bloc-Notes Jupyter (CPU, TensorFlow, PyTorch)
+- Bloc-notes Jupyter (CPU, TensorFlow, PyTorch)
 - RStudio
-- Bureau Virtuel (r, Geomatics)
+- Bureau virtuel (r, Geomatics)
 
 ## Jupyter
 
-Les [Bloc-Notes Jupyter](https://jupyter.org/) sont utilisés pour créer et
+Les [Bloc-notes Jupyter](https://jupyter.org/) sont utilisés pour créer et
 partager des documents interactifs qui contiennent un mélange de code en direct,
 de visualisations et de texte. Ceux-ci peuvent être écrits en `Python`,` Julia`
 ou `R`.
 
-![Jupyter Notebooks](../images/jupyter_in_action.png)
+![Bloc-notes Jupyter](../images/jupyter_in_action.png)
 
 <!-- prettier-ignore -->
 ??? info "La plupart des utilisations comprennent:"
@@ -44,9 +44,9 @@ RStudio.
 
 ![RStudio](../images/rstudio_visual.png)
 
-### Bureau Virtuel
+### Bureau virtuel
 
-Pour une expérience Ubuntu complète, deux versions du Bureau Virtuel sont
+Pour une expérience Ubuntu complète, deux versions du Bureau virtuel sont
 disponible. Ceux-ci sont préchargés avec Python et R, mais sont livrés dans un
 expérience typique qui est également fournie avec _Firefox_, _VS Code_ et les
 outils _Open Office_. Le système d'exploitation est
@@ -57,4 +57,4 @@ outils _Open Office_. Le système d'exploitation est
 géomatique pour R, choisissez la version `remote-desktop-geomatics` de cette
 image.
 
-![Screenshot of the Virtual Desktop](../images/rd_desktop.png)
+![Capture d'écran d'un bureau virtuel](../images/rd_desktop.png)

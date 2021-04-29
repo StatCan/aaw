@@ -106,7 +106,7 @@ pipelines. Each pipeline encapsulates analytical workflows, and can be shared,
 reused, and scheduled.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
-[![Integrate with PaaS](images/IntegratePaaS.PNG)]()
+![Integrate with PaaS](images/IntegratePaaS.PNG)
 
 ## Integrate with Platform as a Service (PaaS) offerings
 

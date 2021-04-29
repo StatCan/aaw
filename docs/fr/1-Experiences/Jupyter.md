@@ -37,7 +37,7 @@ Créez pour explorer, et aussi pour écrire du code
 
 Lorsque vous avez démarré votre serveur, il a été chargé de modèles de
 bloc-notes. Parmi les bons blocs-notes pour commencer, il y a
-`R/01-R-Notebook-Demo.ipynb` et ceux dans dans `scikitlearn`. Les bloc-notes
+`R/01-R-Notebook-Demo.ipynb` et ceux dans `scikitlearn`. Les bloc-notes
 `pytorch` et `tensorflow` sont excellents si vous connaissez l'apprentissage
 automatique. `mapreduce-pipeline` et `ai-pipeline` sont plus avancés.
 
@@ -89,4 +89,4 @@ dossiers pour les télécharger.
 que le stockage est important pour les expérimentations, la diffusion et
 l'exploration des ensembles de données, une section lui est consacré
 
-**Consultez la [section sur le stockage](../Stockage)**
+**Consultez la [section sur le stockage](../Stockage.md)**

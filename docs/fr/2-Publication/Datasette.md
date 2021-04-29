@@ -28,8 +28,7 @@ Vous pouvez même explorer des cartes au sein de l'outil!
 
 Pour visualiser votre base de données dans votre bloc-notes Jupyter, créez le
 fichier _bash_ suivant dans votre répertoire de projet et exécutez-le avec
-`./start.sh`. Accédez au serveur web en utilisant le
-[URL de base](#running-your-Notebook-server-and-accessing-the-port) avec le
+`./start.sh`. Accédez au serveur web en utilisant le **URL de base** avec le
 numéro de port que vous utilisez dans le fichier ci-dessous.
 
 **start.sh**

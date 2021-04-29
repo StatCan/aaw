@@ -16,7 +16,7 @@ répartir l'ensemble des groupes avec lesquels vous partagez des éléments en
 <!-- prettier-ignore -->
 ??? question "Quelle est la différence entre un compartiment et un dossier?"
     Les compartiments s'apparentent au stockage réseau. Voir la
-    [section sur le stockage](/Storage) pour obtenir des précisions
+    [section sur le stockage](./Stockage.md) pour obtenir des précisions
     supplémentaires sur les différences entre ces deux concepts.
 
 Les accès **privé** et **équipe** sont configurés au moyen des **espaces de
@@ -64,12 +64,12 @@ ensuite gérer la liste des collaborateurs sous l'onglet de **gestion des
 contributeurs** de Kubeflow, où vous pourrez ajouter vos collègues à l'espace de
 nommage partagé.
 
-![Menu des contributeurs](/images/kubeflow_contributors.png)
+![Menu des contributeurs](images/kubeflow_contributors.png)
 
 Pour changer d'espace de nommage, allez en haut de votre fenêtre, juste à droite
 du logo de Kubeflow.
 
-![Sélectionnez votre espace de nommage](/images/kubeflow_manage_contributors.png)
+![Sélectionnez votre espace de nommage](images/kubeflow_manage_contributors.png)
 
 # Code partagé
 
@@ -113,13 +113,13 @@ votre code.
 Une fois que vous avez un espace de nommage partagé, deux méthodes de stockage
 partagé s'offrent à vous :
 
-| Option de stockage                                 | Avantages                                                                                            |
-| :------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
-| Serveurs/espaces de travail Jupyter partagés       | Mieux adaptés aux petits fichiers, aux blocs-notes et aux petites expériences.                       |
-| Compartiments partagés (voir [Stockage](/Storage)) | Mieux adaptés à une utilisation dans les pipelines et les interfaces API et aux fichiers volumineux. |
+| Option de stockage                                      | Avantages                                                                                            |
+| :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------- |
+| Serveurs/espaces de travail Jupyter partagés            | Mieux adaptés aux petits fichiers, aux blocs-notes et aux petites expériences.                       |
+| Compartiments partagés (voir [Stockage](./Stockage.md)) | Mieux adaptés à une utilisation dans les pipelines et les interfaces API et aux fichiers volumineux. |
 
 Pour en savoir plus sur la technologie sous-jacente, consultez la
-[section sur le stockage](/Storage).
+[section sur le stockage](./Stockage.md).
 
 ## Partage avec StatCan
 

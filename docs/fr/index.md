@@ -20,7 +20,7 @@ et y accéder.
 Tout commence avec **[Kubeflow](1-Experiences/Kubeflow/)**! Commencez par le
 configurer.
 
-[!Poser des questions sur Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
+[![Poser des questions sur Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
 Vous allez avoir des questions. Rejoignez notre
 **[Canal Slack](https://statcan-aaw.slack.com/)** pour que nous puissions vous
 donner des réponses!
@@ -41,8 +41,8 @@ automatiquement approuvée.
 
 Dans [Kubeflow](1-Experiences/Kubeflow/), les
 **[Serveurs Bloc-Notes](1-Experiences/Jupyter/)** vous permet d'obtenir un
-environnement de calcul interactif pour traiter les données. Tous les Serveurs
-Bloc-notes ont accès à un maximum de 15CPU/48GB RAM et à un stockage à l'échelle
+environnement de calcul interactif pour traiter les données. Tous les serveurs
+bloc-notes ont accès à un maximum de 15CPU/48GB RAM et à un stockage à l'échelle
 de GB/TB, mais ont une interface utilisateur différente selon la version que
 vous choisissez.
 
@@ -58,8 +58,8 @@ visualisations et de texte. Ceux-ci peuvent être écrits en `Python`,` Julia` o
 
 ![Bloc-notes Jupyter](images/jupyter_in_action.png)
 
-Pour lancer un Serveur Bloc-notes avec une interface Jupyter, choisissez l'une
-des image `jupyterlab` lors de la création de votre Serveur Bloc-note. L'image
+Pour lancer un serveur bloc-notes avec une interface Jupyter, choisissez l'une
+des images `jupyterlab` lors de la création de votre serveur bloc-notes. L'image
 `jupyterlab` est également préchargée avec VS Code dans le navigateur si vous
 préférez une expérience IDE complète.
 
@@ -115,7 +115,7 @@ en place des pipelines. Chaque pipelines encapsulent des flux de production
 analytiques et peuvent être mis en commun, réutilisés et programmés.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
-[![Intégrer avec PaaS](images/IntegrerPaaS.png)]()
+![Intégrer avec PaaS](images/IntegrerPaaS.png)
 
 ## Intégration avec les offres de plateforme en tant que service (PaaS)
 

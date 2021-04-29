@@ -9,7 +9,7 @@ our Storage system, and use the data as a `pandas` data frame.
 
 1. A computer with Power BI, and Python 3.6
 2. Your MinIO `ACCESS_KEY` and `SECRET_KEY` on hand. (See
-   [Storage](/daaas/en/Storage))
+   [Storage](../Storage.md))
 
 ## Get connected
 
