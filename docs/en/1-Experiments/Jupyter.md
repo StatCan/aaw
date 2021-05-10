@@ -4,8 +4,8 @@
 
 Jupyter gives you **notebooks** to write your code and make visualizations. You
 can quickly iterate, visualize, and share your analyses. Because it's running on
-a server (that you set up in the last section) you can do really big analyses on
-centralized hardware! Adding as much horsepower as you need! And because it's on
+a server (that you set up in the Kubeflow section) you can do really big analyses on
+centralized hardware, adding as much horsepower as you need! And because it's on
 the cloud, you can share it with your colleagues too.
 
 ### Explore your data
