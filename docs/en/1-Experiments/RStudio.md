@@ -1,6 +1,9 @@
 # Overview
 RStudio is an integrated development environment (IDE) for R. It includes a console, editor, and tools for plotting, history, debugging and workspace management.
 
+# Video Tutorial
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=Xrk1kN9Lr_4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=3 "Advanced Analytics Workspace - R-Studio Basics")
+
 # Setup 
 You can use the `r-studio-cpu` image to get an RStudio environment!
 
