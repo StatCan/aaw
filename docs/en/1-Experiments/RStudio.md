@@ -1,13 +1,16 @@
-# R-Studio
+# Overview
+RStudio is an integrated development environment (IDE) for R. It includes a console, editor, and tools for plotting, history, debugging and workspace management.
 
+# Setup 
 You can use the `r-studio-cpu` image to get an RStudio environment!
 
 ![RStudio](../images/rstudio_visual.png)
 
 You can install `R` or `python` packages with `conda` or `install.packages()`.
 
-# R-Shiny
+# Once you've got the basics ...
+## R-Shiny
 
-You can use `Shiny`, too! And the dashboard appears as a pop-up window.
+You can use `Shiny`, too! Shiny is an open source R package that provides a web framework for building web applications using R. Shiny helps you turn your analyses into interactive web applications. 
 
 ![RStudio with R-Shiny](../images/rstudio_rshiny_visual.png)
