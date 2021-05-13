@@ -6,7 +6,7 @@ RStudio is an integrated development environment (IDE) for R. It includes a cons
 
 # Setup 
 You can use the `rstudio` image to get an RStudio environment! When you create your notebook, choose RStudio from the list of available images.
-![RStudio menu](../images/RStudioOption.png)
+![RStudio menu](../images/RStudioOption.PNG)
 
 ![RStudio](../images/rstudio_visual.png)
 
