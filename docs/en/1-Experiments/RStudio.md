@@ -5,7 +5,8 @@ RStudio is an integrated development environment (IDE) for R. It includes a cons
 [![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=Xrk1kN9Lr_4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=3 "Advanced Analytics Workspace - R-Studio Basics")
 
 # Setup 
-You can use the `r-studio-cpu` image to get an RStudio environment!
+You can use the `rstudio` image to get an RStudio environment! When you create your notebook, choose RStudio from the list of available images.
+![RStudio menu](../images/RStudioOption.png)
 
 ![RStudio](../images/rstudio_visual.png)
 
