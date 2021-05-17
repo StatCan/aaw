@@ -12,10 +12,10 @@ for your team.
 **Let's get started!**
 
 # Video Tutorial
+
 [![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Advanced Analytics Workspace - Kubeflow Getting Started")
 
-
-# Setup 
+# Setup
 
 ## Log into Kubeflow
 
@@ -36,10 +36,12 @@ for your team.
 
 ## Configuring your server
 
-- You will get a template to create your notebook server. **Note:** the name
-  of your server must be lowercase letters with hyphens. **No spaces, and no underscores.**
+- You will get a template to create your notebook server. **Note:** the name of
+  your server must be lowercase letters with hyphens. **No spaces, and no
+  underscores.**
 
-- You'll need to choose an image. Check the name of the images and choose one that matches what you want to do.
+- You'll need to choose an image. Check the name of the images and choose one
+  that matches what you want to do.
 
 ![Choose an Image](../images/kubeflow_choose_an_image.png)
 
@@ -89,6 +91,7 @@ for your team.
     option to connect, and [try out Jupyter!](/daaas/en/1-Experiments/Jupyter)
 
 # Once you've got the basics ...
+
 ## Share your workspace
 
 In Kubeflow every user has a **namespace**. Your namespace belongs to you, and
