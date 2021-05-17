@@ -1,4 +1,4 @@
-# Starting on the Advanced Analytics Workspace (AAW)
+# Starting on the Advanced Analytics Workspace
 
 The
 **[Advanced Analytics Workspace portal](https://portal.covid.cloud.statcan.ca)**
@@ -22,60 +22,43 @@ starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
 [![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
 You're going to have questions. Join our
 **[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers!
-
-![Screenshot of the Slack signup page.  In the top right-hand corner is a link to create a new account](images/SlackAAW.PNG)
+<img src="images/SlackAAW.PNG" alt="A screenshot of the slack page. In the top right-hand corner is a link to create a new account" width="50%">
 
 Click on the link, then choose "Create an account" in the upper right-hand
 corner.
-
-![Screenshot of the Slack new account page, with a box to use your @canada.ca email](images/SlackAAW2.PNG)
+<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
 
 Use your @canada.ca email address so that you will be automatically approved.
 
 # Experiments
 
-## Process data using Notebook Servers
+## Process data using `R`, `Python`, or `Julia`
 
-Within [Kubeflow](1-Experiments/Kubeflow/),
-**[Notebook Servers](1-Experiments/Jupyter/)** are how you get an interactive
-compute environment to process data. All Notebook Servers have access to up to
-15CPU/48GB RAM and GB/TB scale storage, but have a different user interface
-depending on the flavour you choose.
-
-- Python, Julia, and R through **Jupyter Notebooks**
-- R through **RStudio**
-
-### Jupyter Notebooks for `Python`, `Julia`, or `R`
-
-Use [Jupyter Notebooks](https://jupyter.org/) to create and share interactive
-documents that contain a mix of live code, visualizations, and text. These can
-be written in `Python`, `Julia`, or `R`.
-
+[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](1-Experiments/Jupyter/)
+Once you have Kubeflow set up, use
+**[Jupyter Notebooks](1-Experiments/Jupyter/)** to create and share documents
+that contain live code, equations, or visualizations.
 ![Jupyter Notebooks](images/jupyter_in_action.png)
 
-To start a Notebook Server with the Jupyter Notebook interface, choose any
-`jupyterlab` image when creating your Notebook Server. The `jupyterlab` image
-also comes pre-loaded with VS Code in the browser if you prefer a full IDE
-experience.
+## Process data using 'R' or 'Python'
 
-### RStudio for `R` and `Shiny`
+[![R or Python in R Studio](images/RStudio.PNG)](1-Experiments/RStudio/)
+**[R Studio](1-Experiments/RStudio/)** gives you an integrated development
+environment for R and Python. Use the r-studio-cpu image to get an R Studio
+environment.
 
-**[RStudio](1-Experiments/RStudio/)** gives you an integrated development
-environment specifically for R. If you're coding in R, this is typically the
-Notebook Server to use. Use the `rstudio` image to get an RStudio environment.
+## Run a virtual desktop
 
-![RStudio](images/rstudio_visual.png)
+[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/ML-Workspaces) You
+can run a full Ubuntu desktop, with typical applications, right inside your
+browser, using [**ML Workspaces**](1-Experiments/ML-Workspaces)
 
-### Virtual Desktop for General Computing Needs
+## Manage machine learning models and metadata
 
-For a full Ubuntu desktop experience, use any
-[remote-desktop](1-Experiments/Remote-Desktop) Notebook Server. These come
-pre-loaded with Python and R, but are delivered in a typical desktop experience
-that also comes with Firefox, VS Code, and open office tools. If you need
-Geomatics tooling for R, choose the `remote-desktop-geomatics` flavour of this
-image.
-
-![Screenshot of the Virtual Desktop](images/rd_desktop.png)
+[![Machine Learning](images/MachineLearning.PNG)](1-Experiments/MLflow/)
+**[ML Flow](1-Experiments/MLflow/)** lets you manage the machine learning
+lifecycle. It's a model registry for storing machine learning models and
+metrics.
 
 # Publishing
 
@@ -106,7 +89,7 @@ pipelines. Each pipeline encapsulates analytical workflows, and can be shared,
 reused, and scheduled.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
-![Integrate with PaaS](images/IntegratePaaS.PNG)
+[![Integrate with PaaS](images/IntegratePaaS.PNG)]()
 
 ## Integrate with Platform as a Service (PaaS) offerings
 
@@ -127,6 +110,8 @@ share code, or request a **[shared workspace](/Collaboration/)** .
     Don't be shy to [ask us for help](Help)!
 
 # How do I get data? How do I submit data?
+
+![Browse Datasets](images/readme/minio_ui.png)
 
 - Every workspace can be equipped with its own storage.
 

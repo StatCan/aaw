@@ -1,12 +1,12 @@
-# Jupyter
+# Overview
 
-## Friendly R and Python experience
+## Jupyter: friendly R and Python experience
 
 Jupyter gives you **notebooks** to write your code and make visualizations. You
 can quickly iterate, visualize, and share your analyses. Because it's running on
-a server (that you set up in the last section) you can do really big analyses on
-centralized hardware! Adding as much horsepower as you need! And because it's on
-the cloud, you can share it with your colleagues too.
+a server (that you set up in the Kubeflow section) you can do really big
+analyses on centralized hardware, adding as much horsepower as you need! And
+because it's on the cloud, you can share it with your colleagues too.
 
 ### Explore your data
 
@@ -31,12 +31,15 @@ Create for exploring, and also great for writing code
 
 **More information on Jupyter [here](https://jupyter.org)**
 
+# Setup
+
 ## Get started with the examples
 
 When you started your server, it got loaded with a bunch of example notebooks.
-Great notebooks to start with are `R/01-R-Notebook-Demo.ipynb`, or the notebooks
-in `scikitlearn`. `pytorch` and `tensorflow` are great if you are familiar with
-machine learning. The `mapreduce-pipeline` and `ai-pipeline` are more advanced.
+Double click to open the jupyter-notebooks folder. Great notebooks to start with
+are `R/01-R-Notebook-Demo.ipynb`, or the notebooks in `scikitlearn`. `pytorch`
+and `tensorflow` are great if you are familiar with machine learning. The
+`mapreduce-pipeline` and `ai-pipeline` are more advanced.
 
 <!-- prettier-ignore -->
 ??? danger "Some notebooks only work in certain server versions"
@@ -71,13 +74,15 @@ available.**
     [open a GitHub issue](https://github.com/StatCan/kubeflow-containers). We
     can add it to the default software.
 
-# Getting Data in and out of Jupyter
+# Once you've got the basics ...
+
+## Getting Data in and out of Jupyter
 
 You can upload and download data to/from JupyterHub directly in the menu. There
 is an upload button at the top, and you can right-click most files or folders to
 download them.
 
-## Shareable "Bucket" storage
+### Shareable "Bucket" storage
 
 There is also a mounted `minio` folder in your home directory, which holds files
 in [MinIO](../Storage.md/#buckets-via-minio).
