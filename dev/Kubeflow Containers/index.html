@@ -962,6 +962,26 @@
     Testing images
   </a>
   
+    <nav class="md-nav" aria-label="Testing images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-and-connecting-to-images-locallyinteractively" class="md-nav__link">
+    Running and Connecting to Images Locally/Interactively
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing" class="md-nav__link">
+    Automated Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1079,8 +1099,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Kubeflow%20Containers%20Desktop/" title="kubeflow-desktop" class="md-nav__link">
-      kubeflow-desktop
+    <a href="../Kubeflow%20Containers%20Desktop/" title="Important" class="md-nav__link">
+      Important
     </a>
   </li>
 
@@ -1834,6 +1854,26 @@
     Testing images
   </a>
   
+    <nav class="md-nav" aria-label="Testing images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-and-connecting-to-images-locallyinteractively" class="md-nav__link">
+    Running and Connecting to Images Locally/Interactively
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing" class="md-nav__link">
+    Automated Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1954,6 +1994,9 @@ For example: <code>k8scc01covidacr.azurecr.io/IMAGENAME:BRANCH_NAME</code>.  </p
 <p><strong>Note:</strong> To use <code>make pull</code> or <code>make push</code>, you must first log in to ACR (<code>az acr login -n k8scc01covidacr</code>)
 <strong>Note:</strong> <code>make push</code> by default does <code>docker push --all-tags</code> in order to push the SHA, SHORT_SHA, etc., tags.  </p>
 <h4 id="testing-images">Testing images<a class="headerlink" href="#testing-images" title="Permanent link">&para;</a></h4>
+<h5 id="running-and-connecting-to-images-locallyinteractively">Running and Connecting to Images Locally/Interactively<a class="headerlink" href="#running-and-connecting-to-images-locallyinteractively" title="Permanent link">&para;</a></h5>
+<p>To test an image interactively, use <code>make dev/IMAGENAME</code>.  This <code>docker run</code>'s a built image, automatically forwarding ports to your local machine and providing a link to connect to.  </p>
+<h5 id="automated-testing">Automated Testing<a class="headerlink" href="#automated-testing" title="Permanent link">&para;</a></h5>
 <p>Automated tests are included for the generated Docker images using <code>pytest</code>.  This testing suite is modified from the <a href="https://github.com/jupyter/docker-stacks">docker-stacks</a> test suite.  Image testing is invoked through <code>make test/IMAGENAME</code>  (with optional <code>REPO</code> and <code>TAG</code> arguments like <code>make build</code>).</p>
 <p>Testing of a given image consists of general and image-specific tests:</p>
 <div class="codehilite"><pre><span></span><code>└── tests
@@ -2124,13 +2167,13 @@ This was tested on Linux Ubuntu 20.04 virtual machine.</p>
           </a>
         
         
-          <a href="../Kubeflow%20Containers%20Desktop/" title="kubeflow-desktop" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Kubeflow%20Containers%20Desktop/" title="Important" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                kubeflow-desktop
+                Important
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
