@@ -1,21 +1,23 @@
 # Overview
 
 Disks are the familiar hard drive style file systems you're used to, provided to
-you from fast solid state drives (SSDs)! 
+you from fast solid state drives (SSDs)!
 
-# Setup 
-When creating your notebook server, you request disks by adding Data Volumes to your notebook server (pictured below,
-with `Type = New`). They are automatically mounted at the directory
-(`Mount Point`) you choose, and serve as a simple and reliable way to preserve
-data attached to a Notebook Server.
+# Setup
 
-![Adding an existing volume to a new notebook server](images/kubeflow_existing_volume.png)
+When creating your notebook server, you request disks by adding Data Volumes to
+your notebook server (pictured below, with `Type = New`). They are automatically
+mounted at the directory (`Mount Point`) you choose, and serve as a simple and
+reliable way to preserve data attached to a Notebook Server.
+
+![Adding an existing volume to a new notebook server](../images/kubeflow_existing_volume.png)
 
 <!-- prettier-ignore -->
 ??? warning "You pay for all disks you own, whether they're attached to a Notebook Server or not"
     As soon as you create a disk, you're [paying](#pricing) for it until it is [deleted](#deleting-disk-storage), even if it's original Notebook Server is deleted.  See [Deleting Disk Storage](#deleting-disk-storage) for more info
 
 # Once you've got the basics ...
+
 When you delete your Notebook Server, your disks **are not deleted**. This let's
 you reuse that same disk (with all its contents) on a new Notebook Server later
 (as shown above with `Type = Existing` and the `Name` set to the volume you want
@@ -23,12 +25,12 @@ to reuse). If you're done with the disk and it's contents,
 [delete it](#deleting-disk-storage).
 
 ## Deleting Disk Storage
+
 To see your disks, check the Notebook Volumes section of the Notebook Server
 page (shown below). You can delete any unattached disk (orange icon on the left)
 by clicking the trash can icon.
 
-![Delete an unattached volume from the Notebook Server screen](images/kubeflow_delete_disk.png)
-
+![Delete an unattached volume from the Notebook Server screen](../images/kubeflow_delete_disk.png)
 
 ## Pricing
 
@@ -56,4 +58,3 @@ are currently using.
     * Continue your work...
 
     This keeps all your work safe without paying for the computer when you're not using it
-

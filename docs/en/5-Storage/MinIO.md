@@ -1,18 +1,30 @@
 # Overview
-MinIO is a cloud-native scalable object store. We use MinIO for buckets (blob or S3 storage). Buckets are good at three things:
 
-- Large amounts of data - Buckets can be huge: way bigger than hard drives. And they are still fast.
-- Accessible by multiple consumers at once - You can access the same data source from multiple Notebook Servers and pipelines at the same time without needing to duplicate the data.
-- Sharing - You can share files from a bucket by sharing a URL that you can get through a simple web interface. This is great for sharing data with people outside of your workspace.
+MinIO is a cloud-native scalable object store. We use MinIO for buckets (blob or
+S3 storage). Buckets are good at three things:
+
+- Large amounts of data - Buckets can be huge: way bigger than hard drives. And
+  they are still fast.
+- Accessible by multiple consumers at once - You can access the same data source
+  from multiple Notebook Servers and pipelines at the same time without needing
+  to duplicate the data.
+- Sharing - You can share files from a bucket by sharing a URL that you can get
+  through a simple web interface. This is great for sharing data with people
+  outside of your workspace.
 
 # Setup
+
 ## MinIO Mounted Folders on a Notebook Server
-All Notebook Servers have your MinIO storage mounted as directories by default. The MinIO storage is located in `~/minio`:
 
-![MinIO folders mounted as Jupyter Notebook directories](images/minio_automount_folder.png)
+All Notebook Servers have your MinIO storage mounted as directories by default.
+The MinIO storage is located in `~/minio`:
 
-These folders can be used like any other - you can copy files to/from using the file browser, write from Python/R, etc. The only difference is that the data is
-being stored in the MinIO service rather than on a local disk (and is thus accessible wherever you can access your MinIO bucket, rather than just from the
+![MinIO folders mounted as Jupyter Notebook directories](../images/minio_automount_folder.png)
+
+These folders can be used like any other - you can copy files to/from using the
+file browser, write from Python/R, etc. The only difference is that the data is
+being stored in the MinIO service rather than on a local disk (and is thus
+accessible wherever you can access your MinIO bucket, rather than just from the
 Notebook Server it is attached).
 
 <!-- prettier-ignore -->
@@ -20,18 +32,19 @@ Notebook Server it is attached).
     When you copy files into a MinIO folder, they are immediately stored and accessible in MinIO (e.g.: you can immediately see them in the [Web Portal](#minio-web-portal)).  But, new files may take a few moments for the mounting service to notice and serve them in the mounted folder.  If your use case needs access to these files immediately after copying them, try the other read methods ([the mc tool](#minio-command-line-tool) or [Other S3 Compliant Methods](#other-s3-compliant-methods)).
 
 # Once you've got the basics ...
+
 ## MinIO Web Portal
 
 The MinIO service can be accessible through a
 [web portal](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). To sign
 in using your existing credentials, use the "Log in with OpenID" button.
 
-![MinIO sign-in view, indicating the OpenID option](images/minio_self_serve_login.png)
+![MinIO sign-in view, indicating the OpenID option](../images/minio_self_serve_login.png)
 
 From this portal you can browse to your personal bucket, which has the same name
 as your Kubeflow namespace (likely `firstname-lastname`):
 
-![MinIO browser with personal bucket using first name, last name format (hyphenated)](images/minio_self_serve_bucket.png)
+![MinIO browser with personal bucket using first name, last name format (hyphenated)](../images/minio_self_serve_bucket.png)
 
 This lets you browse, upload/download, delete, or share files.
 
@@ -183,7 +196,7 @@ You can easily share individual files from a private bucket. Just use the
 "share" option for a specific file and you will be provided a link that you can
 send to a collaborator!
 
-![MinIO browser with a shareable link to a file](images/minio_self_serve_share.png)
+![MinIO browser with a shareable link to a file](../images/minio_self_serve_share.png)
 
 ## Get MinIO Credentials
 
@@ -202,7 +215,7 @@ To get your MinIO credentials, you can use the
 [Vault](https://vault.covid.cloud.statcan.ca/ui/vault/auth?with=oidc). Select
 method OIDC, leave **Role** blank and Sign in with OIDC Provider.
 
-![vault_Signin](images/vault_signin.png)
+![vault_Signin](../images/vault_signin.png)
 
 Run the following command in the terminal located at the top right corner:
 
@@ -211,7 +224,7 @@ Run the following command in the terminal located at the top right corner:
 read minio_standard_tenant_1/keys/profile-yourfirstname-yourlastname
 ```
 
-![Vault AccessKey](images/accessKey.png)
+![Vault AccessKey](../images/accessKey.png)
 
 ### Method 2: Get Credentials from Running Notebook Server
 
