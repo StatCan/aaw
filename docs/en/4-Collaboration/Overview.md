@@ -13,7 +13,7 @@ This leads to the following table of options
 
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
-    Buckets are like Network Storage. See the [Storage section](../index.md#storage) section for more discussion of the differences between these two ideas.
+    Buckets are like Network Storage. See the [Storage overview](../5-Storage/Overview.md) for more discussion of the differences between these two ideas.
 
 Choosing the best way to share code, data, and compute all involve different
 factors, but you can generally mix and match (share code with your team through
@@ -64,10 +64,10 @@ Once you have a shared namespace, you have two shared storage approaches
 | Storage Option                                      | Benefits                                                         |
 | :-------------------------------------------------- | :--------------------------------------------------------------- |
 | Shared Jupyter Servers/Workspaces                   | More amenable to small files, notebooks, and little experiments. |
-| Shared Buckets (see [Storage](../index.md#storage)) | Better suited for use in pipelines, APIs, and for large files.   |
+| Shared Buckets (see [Storage](../5-Storage/Overview.md)) | Better suited for use in pipelines, APIs, and for large files.   |
 
 To learn more about the technology behind these, check out the
-[Storage section](../index.md#storage).
+[Storage overview](../5-Storage/Overview.md).
 
 ### Sharing with StatCan
 
