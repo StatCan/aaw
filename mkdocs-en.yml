@@ -62,6 +62,7 @@ nav:
       - Overview: 4-Collaboration/Overview.md
       - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
   - Storage:
+      - Overview: 5-Storage/Overview.md
       - Disks: 5-Storage/Disks.md
       - MinIO: 5-Storage/MinIO.md
   - Help/Contact: Help.md
