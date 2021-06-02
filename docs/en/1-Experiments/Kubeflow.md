@@ -94,24 +94,8 @@ for your team.
 
 ## Share your workspace
 
-In Kubeflow every user has a **namespace**. Your namespace belongs to you, and
-it's where all your resources live. If you want to collaborate with someone you
-need to share a namespace. So you can do that either by sharing your own
-namespace, or more preferably, **by creating a team namespace**.
-
-The link to create a new namespace is in the **&#8942;** menu on
-[the Kubeflow section of the portal](https://portal.covid.cloud.statcan.ca/#kubeflow).
-
-## Manage contributors
-
-You can add or remove people from a namespace you already own through the
-**Manage Contributors** menu in Kubeflow.
-
-![Contributors Menu](../images/kubeflow_contributors.png)
-
-<!-- prettier-ignore -->
-!!! success "Now you and your colleagues can share access to a server!"
-    Now you can share a server with colleagues! Try it out!
-
-**For more details on collaboration on the platform, see
-[Collaboration](/Collaboration).**
+In Kubeflow every user has a **namespace** that contains their work (their
+notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but
+can be shared if you want to collaborate with others. **For more details on
+collaboration on the platform, see
+[Collaboration](../4-Collaboration/Overview.md).**

@@ -2,6 +2,7 @@ site_name: COVID-19 Advanced Analytics Workspace
 site_url: https://statcan.github.io/daaas/en/
 site_description: User guide for the DAaaS Covid-19 Platform
 copyright: Copyright &copy; 2020 Statistics Canada
+strict: true
 
 docs_dir: docs/en
 site_dir: site/en
@@ -57,6 +58,10 @@ nav:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
       - PaaS Integration: 3-Pipelines/PaaS.md
       - Model Serving: 3-Pipelines/Serving.md
-  - Collaboration: Collaboration.md
-  - Storage: Storage.md
+  - Collaboration:
+      - Overview: 4-Collaboration/Overview.md
+      - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
+  - Storage:
+      - Disks: 5-Storage/Disks.md
+      - MinIO: 5-Storage/MinIO.md
   - Help/Contact: Help.md
