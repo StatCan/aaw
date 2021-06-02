@@ -13,7 +13,7 @@ This leads to the following table of options
 
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
-    Buckets are like Network Storage. See the [Storage section](./Storage.md) section for more discussion of the differences between these two ideas.
+    Buckets are like Network Storage. See the [Storage section](../index.md#storage) section for more discussion of the differences between these two ideas.
 
 Choosing the best way to share code, data, and compute all involve different
 factors, but you can generally mix and match (share code with your team through

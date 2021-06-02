@@ -87,4 +87,4 @@ download them.
 There is also a mounted `minio` folder in your home directory, which holds files
 in [MinIO](../Storage.md/#buckets-via-minio).
 
-**Refer to the [Storage Section](../Storage.md) for details.**
+**Refer to the [Storage](../index.md#storage) section for details.**

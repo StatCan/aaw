@@ -618,9 +618,9 @@ pipeline parameters.
 
 Although small data can often be stringified, passing by string is not suitable
 for complex data (large parquet files, images, etc.). It is common to use blob
-storage (for example: [MinIO](../Storage.md)) or other outside storage methods
-to persist data between components or even for later use. A typical pattern
-would be:
+storage (for example: [MinIO](../5-Storage/MinIO.md)) or other outside storage
+methods to persist data between components or even for later use. A typical
+pattern would be:
 
 - Upload large/complex input data to blob storage (e.g. training data, a saved
   model, etc.)
@@ -660,8 +660,8 @@ def my_blobby_pipeline(path_to_numbers_1, path_to_numbers_2, path_for_output):
 ```
 
 Within this platform, the primary method for persisting large files is through
-MinIO as described in our [_Storage_ documentation](../Storage.md). Examples of
-this are also described in our
+MinIO as described in our [_Storage_ documentation](../index.md#storage).
+Examples of this are also described in our
 [example notebooks](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage)
 (also found in `jupyter-notebooks/self-serve-storage/` on any notebook server).
 
