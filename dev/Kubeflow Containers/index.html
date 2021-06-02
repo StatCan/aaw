@@ -1031,6 +1031,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#other-development-notes" class="md-nav__link">
+    Other Development Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Development Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files" class="md-nav__link">
+    Set User File Permissions after Every pip/conda Install or Edit of User's Home Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#structure" class="md-nav__link">
     Structure
   </a>
@@ -1923,6 +1943,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#other-development-notes" class="md-nav__link">
+    Other Development Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Development Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files" class="md-nav__link">
+    Set User File Permissions after Every pip/conda Install or Edit of User's Home Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#structure" class="md-nav__link">
     Structure
   </a>
@@ -2065,6 +2105,26 @@ This allows developers to opt-in to on-platform testing.  For example, when you 
         password: ${{ secrets.REGISTRY_PASSWORD }}</code>
   * In your forked repo, define secrets for REGISTRY_USERNAME and REGISTRY_PASSWORD with your dockerhub credentials (you should use an API token, not your actual dockerhub password)</p>
 <p><strong>Note:</strong> Since pushing comes right at the end of the CI, in many cases you don't need to have a valid registry to test the CI on a fork.  It will fail on the push step, but all other steps will clearly work and you can know it should safely merge back into the main repo.</p>
+<h3 id="other-development-notes">Other Development Notes<a class="headerlink" href="#other-development-notes" title="Permanent link">&para;</a></h3>
+<h4 id="set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files">Set User File Permissions after Every <code>pip</code>/<code>conda</code> Install or Edit of User's Home Files<a class="headerlink" href="#set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files" title="Permanent link">&para;</a></h4>
+<p>The Dockerfiles in this repo are intended to construct compute environments for a non-root user <strong>jovyan</strong> to ensure the end user has the least privileges required for their task, but installation of some of the software needed by the user must be done as the <strong>root</strong> user.  This means that installation of anything that should be user editable (eg: <code>pip</code> and <code>conda</code> installs, additional files in <code>/home/$NB_USER</code>, etc.) will by default be owned by <strong>root</strong> and not modifiable by <strong>jovyan</strong>. <strong>Therefore we must change the permissions of these files to allow the user specific access for modification.</strong>  For example, most pip install/conda install commands occur as the root user and result in new files in the $CONDA_DIR directory that will be owned by <strong>root</strong> and cause issues if user <strong>jovyan</strong> tried to update or uninstall these packages (as they by default will not have permission to change/remove these files).</p>
+<p>To fix this issue, end any <code>RUN</code> command that edits any user-editable files with:</p>
+<div class="codehilite"><pre><span></span><code>fix-permissions $CONDA_DIR &amp;&amp; \
+fix-permissions /home/$NB_USER
+</code></pre></div>
+
+<p>This fix edits the permissions of files in these locations to allow user access.  Note that if these are not applied <strong>in the same layer as when the new files were added</strong> it will result in a duplication of data in the layer because the act of changing permissions on a file from a previous layer requires a copy of that file into the current layer.  So something like:</p>
+<div class="codehilite"><pre><span></span><code>RUN add_1GB_file_with_wrong_permissions_to_NB_USER.sh &amp;&amp; \
+    fix-permissions /home/$NB_USER
+</code></pre></div>
+
+<p>would add a single layer of about 1GB, whereas</p>
+<div class="codehilite"><pre><span></span><code>RUN add_1GB_file_with_wrong_permissions_to_NB_USER.sh
+
+RUN fix-permissions /home/$NB_USER
+</code></pre></div>
+
+<p>would add two layers, each about 1GB (2GB total).</p>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>.
 ├── <span class="nv">Makefile</span>                                # <span class="nv">Cats</span> <span class="nv">the</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span> <span class="nv">together</span>
