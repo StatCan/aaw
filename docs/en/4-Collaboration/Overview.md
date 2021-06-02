@@ -43,8 +43,9 @@ If you need to share code without publishing it on a repository,
 In Kubeflow every user has a **namespace** that contains their work (their
 notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but
 can be shared if you want to collaborate with others. You can also
-[request a new namespace](Shared-Namespaces.md) (either for yourself or to share
-with a team). One option for collaboration is to share namespaces with others.
+[request a new namespace](Request-a-Namespace.md) (either for yourself or to
+share with a team). One option for collaboration is to share namespaces with
+others.
 
 The advantage of sharing a Kubeflow namespace is that it lets you and your
 colleagues share the compute environment and MinIO buckets associated with the
@@ -60,13 +61,13 @@ To share your namespace, see [managing contributors](#managing-contributors)
 
 Once you have a shared namespace, you have two shared storage approaches
 
-| Storage Option                               | Benefits                                                         |
-| :------------------------------------------- | :--------------------------------------------------------------- |
-| Shared Jupyter Servers/Workspaces            | More amenable to small files, notebooks, and little experiments. |
-| Shared Buckets (see [Storage](./Storage.md)) | Better suited for use in pipelines, APIs, and for large files.   |
+| Storage Option                                      | Benefits                                                         |
+| :-------------------------------------------------- | :--------------------------------------------------------------- |
+| Shared Jupyter Servers/Workspaces                   | More amenable to small files, notebooks, and little experiments. |
+| Shared Buckets (see [Storage](../index.md#storage)) | Better suited for use in pipelines, APIs, and for large files.   |
 
 To learn more about the technology behind these, check out the
-[Storage section](./Storage.md).
+[Storage section](../index.md#storage).
 
 ### Sharing with StatCan
 
