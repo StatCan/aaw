@@ -121,7 +121,8 @@ following table of options
 Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
 machine) is described in more detail in the
 [Collaboration](4-Collaboration/Overview.md) section. Sharing data through
-buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md/)** section.
+buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md/)**
+section.
 
 # Storage
 
@@ -153,10 +154,11 @@ Depending on your use case, either disk or bucket may be most suitable:
 
 ## Disks
 
-[![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md/)** are added to
-your notebook server by adding Data Volumes.
+[![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md/)** are
+added to your notebook server by adding Data Volumes.
 
 ## Buckets
 
-[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md/)** is a
-cloud-native scalable object store. We use it for buckets (blob or S3 storage).
+[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md/)** is
+a cloud-native scalable object store. We use it for buckets (blob or S3
+storage).
