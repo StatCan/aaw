@@ -2,6 +2,7 @@ site_name: COVID-19 Advanced Analytics Workspace
 site_url: https://statcan.github.io/daaas/en/
 site_description: User guide for the DAaaS Covid-19 Platform
 copyright: Copyright &copy; 2020 Statistics Canada
+strict: true
 
 docs_dir: docs/en
 site_dir: site/en
