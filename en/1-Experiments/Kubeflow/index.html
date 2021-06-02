@@ -349,13 +349,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#manage-contributors" class="md-nav__link">
-    Manage contributors
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -582,10 +575,52 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../Collaboration/" title="Collaboration" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
       Collaboration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Collaboration" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Collaboration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-Collaboration/Overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../4-Collaboration/Request-a-Namespace/" title="Request a Namespace" class="md-nav__link">
+      Request a Namespace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -594,10 +629,52 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../Storage/" title="Storage" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
       Storage
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Storage" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Storage
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../5-Storage/Disks/" title="Disks" class="md-nav__link">
+      Disks
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../5-Storage/MinIO/" title="MinIO" class="md-nav__link">
+      MinIO
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -726,13 +803,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#manage-contributors" class="md-nav__link">
-    Manage contributors
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -850,23 +920,11 @@ option to connect, and <a href="/daaas/en/1-Experiments/Jupyter">try out Jupyter
 </div>
 <h2 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h2>
 <h3 id="share-your-workspace">Share your workspace<a class="headerlink" href="#share-your-workspace" title="Permanent link">&para;</a></h3>
-<p>In Kubeflow every user has a <strong>namespace</strong>. Your namespace belongs to you, and
-it's where all your resources live. If you want to collaborate with someone you
-need to share a namespace. So you can do that either by sharing your own
-namespace, or more preferably, <strong>by creating a team namespace</strong>.</p>
-<p>The link to create a new namespace is in the <strong>&#8942;</strong> menu on
-<a href="https://portal.covid.cloud.statcan.ca/#kubeflow">the Kubeflow section of the portal</a>.</p>
-<h3 id="manage-contributors">Manage contributors<a class="headerlink" href="#manage-contributors" title="Permanent link">&para;</a></h3>
-<p>You can add or remove people from a namespace you already own through the
-<strong>Manage Contributors</strong> menu in Kubeflow.</p>
-<p><img alt="Contributors Menu" src="../../images/kubeflow_contributors.png" /></p>
-<!-- prettier-ignore -->
-<div class="admonition success">
-<p class="admonition-title">Now you and your colleagues can share access to a server!</p>
-<p>Now you can share a server with colleagues! Try it out!</p>
-</div>
-<p><strong>For more details on collaboration on the platform, see
-<a href="/Collaboration">Collaboration</a>.</strong></p>
+<p>In Kubeflow every user has a <strong>namespace</strong> that contains their work (their
+notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but
+can be shared if you want to collaborate with others. <strong>For more details on
+collaboration on the platform, see
+<a href="../../4-Collaboration/Overview/">Collaboration</a>.</strong></p>
                 
               
               
