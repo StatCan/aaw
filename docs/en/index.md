@@ -134,15 +134,6 @@ The platform provides several types of storage:
 
 Depending on your use case, either disk or bucket may be most suitable. Our [storage overview](../5-Storage/Overview.md) will help you compare them.
 
-![Browse Datasets](images/readme/minio_ui.png)
-
-<!-- prettier-ignore -->
-!!! example "Browse some datasets"
-    Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These
-    data sets are meant to store widely shared data. Either data that has been
-    brought it, or data to be released out as a product. **As always, ensure
-    that the data is not sensitive.**
-
 ## Disks
 
 [![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md/)** are
