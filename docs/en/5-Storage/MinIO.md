@@ -31,6 +31,50 @@ Notebook Server it is attached).
 ??? warning "Files copied into a mounted MinIO folder might take a few moments to be readable"
     When you copy files into a MinIO folder, they are immediately stored and accessible in MinIO (e.g.: you can immediately see them in the [Web Portal](#minio-web-portal)).  But, new files may take a few moments for the mounting service to notice and serve them in the mounted folder.  If your use case needs access to these files immediately after copying them, try the other read methods ([the mc tool](#minio-command-line-tool) or [Other S3 Compliant Methods](#other-s3-compliant-methods)).
 
+## Bucket Types and Access Scopes
+
+The following MinIO tenants (e.g.: separate services) are available:
+
+|                             Tenant | Speed   | Cost    | Access via File Browser      | Access via `mc`                        | Access via Web Portal                                           |
+| ---------------------------------: | ------- | ------- | ---------------------------- | -------------------------------------- | --------------------------------------------------------------- |
+|                  standard-tenant-1 | Average | Low     | `~/minio/standard-tenant-1`  | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio-standard-tenant-1.covid.cloud.statcan.ca/) |
+|                   premium-tenant-1 | Fast    | Average | `~/minio/premium-tenant-1`   | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium-tenant-1.covid.cloud.statcan.ca/)  |
+| minimal-tenant1 **See note below** | Average | Low     | Unavailable (see note below) | `mc ls minimal-tenant1/$NB_NOTEBOOK`   | [link](https://minimal-tenant1-minio.covid.cloud.statcan.ca/)   |
+| premium-tenant1 **See note below** | Fast    | Average | Unavailable (see note below) | `mc ls premium-tenant1/$NB_NOTEBOOK`   | [link](https://premium-tenant1-minio.covid.cloud.statcan.ca/)   |
+
+<!-- prettier-ignore -->
+!!! danger "`minimal-tenant1` and `premium-tenant1` are being decommissioned" 
+    To improve security and stability, `minimal-tenant1` and `premium-tenant1` have been replaced by `standard-tenant-1` and `premium-tenant-1`. `minimal-tenant1` and `premium-tenant1` will for a limited time still be accessible via `mc` and Web Portal, but will not be accessible via File Browser (due to this causing stability issues for Notebook Servers). It is recommended that you migrate your workloads to the new tenants as soon as possible. A forced migration will occur in future.
+
+<!-- prettier-ignore -->
+??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
+    You could also just type `mc ls standard-tenant-1/john-smith`, etc.
+
+Accessing all MinIO tenants is the same. The difference between tenants is the
+storage type behind them:
+
+- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):** By
+  default, use this one. It is backed by an SSD and provides a good balance of
+  cost and performance.
+- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):** Use
+  this if you need high read/write speeds and don't mind paying ~2x the storage
+  cost. These are somewhat faster than the standard storage.
+
+Generally if you aren't sure which you need, start with **Standard**. You can
+always change your mind if you see your work limited by file transfer speeds.
+
+Within each bucket type, everyone has two storage locations they can use, each
+providing different access scopes:
+
+|                                        |                                                                                                                  Private                                                                                                                  |                                                        Shared                                                        |
+| -------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
+|                                Summary | Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a [shared namespace](../4-Collaboration/Overview.md#share-compute-namespace-in-kubeflow)) | Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams |
+| Mount location in the Notebook Server: |                                                                                            `~/minio/standard-tenant-1/private/myfolder/myfile`                                                                                            |                                  `~/minio/standard-tenant-1/shared/myfolder/myfile`                                  |
+|    Location in `mc` tool/MinIO portal: |                                                                                                   `firstname-lastname/myfolder/myfile`                                                                                                    |                                     `shared/firstname-lastname/myfolder/myfile`                                      |
+
+<!-- prettier-ignore -->
+??? info "You can see many directories in the shared MinIO bucket, but you can only write to your own"
+    Everyone has read access to all folders in the `shared` MinIO bucket, but write permissions are always restricted to the owner.
 # Once you've got the basics ...
 
 ## MinIO Web Portal
@@ -47,6 +91,13 @@ as your Kubeflow namespace (likely `firstname-lastname`):
 ![MinIO browser with personal bucket using first name, last name format (hyphenated)](../images/minio_self_serve_bucket.png)
 
 This lets you browse, upload/download, delete, or share files.
+
+## Browse Datasets 
+Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These
+data sets are meant to store widely shared data. Either data that has been
+brought it, or data to be released out as a product. **As always, ensure
+that the data is not sensitive.**
+
 
 ## MinIO Command Line Tool
 
@@ -144,51 +195,6 @@ services. Tools designed to use S3 will generally also work with MinIO, for
 example Python packages and instructions on how to access files from S3. Some
 examples of this are shown in
 [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage).
-
-## Bucket Types and Access Scopes
-
-The following MinIO tenants (e.g.: separate services) are available:
-
-|                             Tenant | Speed   | Cost    | Access via File Browser      | Access via `mc`                        | Access via Web Portal                                           |
-| ---------------------------------: | ------- | ------- | ---------------------------- | -------------------------------------- | --------------------------------------------------------------- |
-|                  standard-tenant-1 | Average | Low     | `~/minio/standard-tenant-1`  | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio-standard-tenant-1.covid.cloud.statcan.ca/) |
-|                   premium-tenant-1 | Fast    | Average | `~/minio/premium-tenant-1`   | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium-tenant-1.covid.cloud.statcan.ca/)  |
-| minimal-tenant1 **See note below** | Average | Low     | Unavailable (see note below) | `mc ls minimal-tenant1/$NB_NOTEBOOK`   | [link](https://minimal-tenant1-minio.covid.cloud.statcan.ca/)   |
-| premium-tenant1 **See note below** | Fast    | Average | Unavailable (see note below) | `mc ls premium-tenant1/$NB_NOTEBOOK`   | [link](https://premium-tenant1-minio.covid.cloud.statcan.ca/)   |
-
-<!-- prettier-ignore -->
-!!! danger "`minimal-tenant1` and `premium-tenant1` are being decommissioned" 
-    To improve security and stability, `minimal-tenant1` and `premium-tenant1` have been replaced by `standard-tenant-1` and `premium-tenant-1`. `minimal-tenant1` and `premium-tenant1` will for a limited time still be accessible via `mc` and Web Portal, but will not be accessible via File Browser (due to this causing stability issues for Notebook Servers). It is recommended that you migrate your workloads to the new tenants as soon as possible. A forced migration will occur in future.
-
-<!-- prettier-ignore -->
-??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
-    You could also just type `mc ls standard-tenant-1/john-smith`, etc.
-
-Accessing all MinIO tenants is the same. The difference between tenants is the
-storage type behind them:
-
-- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):** By
-  default, use this one. It is backed by an SSD and provides a good balance of
-  cost and performance.
-- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):** Use
-  this if you need high read/write speeds and don't mind paying ~2x the storage
-  cost. These are somewhat faster than the standard storage.
-
-Generally if you aren't sure which you need, start with **Standard**. You can
-always change your mind if you see your work limited by file transfer speeds.
-
-Within each bucket type, everyone has two storage locations they can use, each
-providing different access scopes:
-
-|                                        |                                                                                                                  Private                                                                                                                  |                                                        Shared                                                        |
-| -------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
-|                                Summary | Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a [shared namespace](../4-Collaboration/Overview.md#share-compute-namespace-in-kubeflow)) | Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams |
-| Mount location in the Notebook Server: |                                                                                            `~/minio/standard-tenant-1/private/myfolder/myfile`                                                                                            |                                  `~/minio/standard-tenant-1/shared/myfolder/myfile`                                  |
-|    Location in `mc` tool/MinIO portal: |                                                                                                   `firstname-lastname/myfolder/myfile`                                                                                                    |                                     `shared/firstname-lastname/myfolder/myfile`                                      |
-
-<!-- prettier-ignore -->
-??? info "You can see many directories in the shared MinIO bucket, but you can only write to your own"
-    Everyone has read access to all folders in the `shared` MinIO bucket, but write permissions are always restricted to the owner.
 
 ## Sharing from Private Buckets
 
