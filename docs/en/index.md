@@ -132,7 +132,8 @@ The platform provides several types of storage:
 - Bucket ("Blob" or S3 storage, provided through MinIO)
 - Data Lakes (coming soon)
 
-Depending on your use case, either disk or bucket may be most suitable. Our [storage overview](./5-Storage/Overview.md) will help you compare them.
+Depending on your use case, either disk or bucket may be most suitable. Our
+[storage overview](./5-Storage/Overview.md) will help you compare them.
 
 ## Disks
 
@@ -141,6 +142,5 @@ added to your notebook server by adding Data Volumes.
 
 ## Buckets
 
-[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md)** is
-a cloud-native scalable object store. We use it for buckets (blob or S3
-storage).
+[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md)** is a
+cloud-native scalable object store. We use it for buckets (blob or S3 storage).

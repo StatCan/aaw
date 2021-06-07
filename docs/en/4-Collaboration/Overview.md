@@ -61,9 +61,9 @@ To share your namespace, see [managing contributors](#managing-contributors)
 
 Once you have a shared namespace, you have two shared storage approaches
 
-| Storage Option                                      | Benefits                                                         |
-| :-------------------------------------------------- | :--------------------------------------------------------------- |
-| Shared Jupyter Servers/Workspaces                   | More amenable to small files, notebooks, and little experiments. |
+| Storage Option                                           | Benefits                                                         |
+| :------------------------------------------------------- | :--------------------------------------------------------------- |
+| Shared Jupyter Servers/Workspaces                        | More amenable to small files, notebooks, and little experiments. |
 | Shared Buckets (see [Storage](../5-Storage/Overview.md)) | Better suited for use in pipelines, APIs, and for large files.   |
 
 To learn more about the technology behind these, check out the

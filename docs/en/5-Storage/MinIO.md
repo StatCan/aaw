@@ -35,16 +35,10 @@ Notebook Server it is attached).
 
 The following MinIO tenants (e.g.: separate services) are available:
 
-|                             Tenant | Speed   | Cost    | Access via File Browser      | Access via `mc`                        | Access via Web Portal                                           |
-| ---------------------------------: | ------- | ------- | ---------------------------- | -------------------------------------- | --------------------------------------------------------------- |
-|                  standard-tenant-1 | Average | Low     | `~/minio/standard-tenant-1`  | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio-standard-tenant-1.covid.cloud.statcan.ca/) |
-|                   premium-tenant-1 | Fast    | Average | `~/minio/premium-tenant-1`   | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium-tenant-1.covid.cloud.statcan.ca/)  |
-| minimal-tenant1 **See note below** | Average | Low     | Unavailable (see note below) | `mc ls minimal-tenant1/$NB_NOTEBOOK`   | [link](https://minimal-tenant1-minio.covid.cloud.statcan.ca/)   |
-| premium-tenant1 **See note below** | Fast    | Average | Unavailable (see note below) | `mc ls premium-tenant1/$NB_NOTEBOOK`   | [link](https://premium-tenant1-minio.covid.cloud.statcan.ca/)   |
-
-<!-- prettier-ignore -->
-!!! danger "`minimal-tenant1` and `premium-tenant1` are being decommissioned" 
-    To improve security and stability, `minimal-tenant1` and `premium-tenant1` have been replaced by `standard-tenant-1` and `premium-tenant-1`. `minimal-tenant1` and `premium-tenant1` will for a limited time still be accessible via `mc` and Web Portal, but will not be accessible via File Browser (due to this causing stability issues for Notebook Servers). It is recommended that you migrate your workloads to the new tenants as soon as possible. A forced migration will occur in future.
+|            Tenant | Speed   | Cost    | Access via File Browser     | Access via `mc`                        | Access via Web Portal                                           |
+| ----------------: | ------- | ------- | --------------------------- | -------------------------------------- | --------------------------------------------------------------- |
+| standard-tenant-1 | Average | Low     | `~/minio/standard-tenant-1` | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio-standard-tenant-1.covid.cloud.statcan.ca/) |
+|  premium-tenant-1 | Fast    | Average | `~/minio/premium-tenant-1`  | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium-tenant-1.covid.cloud.statcan.ca/)  |
 
 <!-- prettier-ignore -->
 ??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
@@ -75,6 +69,7 @@ providing different access scopes:
 <!-- prettier-ignore -->
 ??? info "You can see many directories in the shared MinIO bucket, but you can only write to your own"
     Everyone has read access to all folders in the `shared` MinIO bucket, but write permissions are always restricted to the owner.
+
 # Once you've got the basics ...
 
 ## MinIO Web Portal
@@ -92,12 +87,12 @@ as your Kubeflow namespace (likely `firstname-lastname`):
 
 This lets you browse, upload/download, delete, or share files.
 
-## Browse Datasets 
-Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These
-data sets are meant to store widely shared data. Either data that has been
-brought it, or data to be released out as a product. **As always, ensure
-that the data is not sensitive.**
+## Browse Datasets
 
+Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These data
+sets are meant to store widely shared data. Either data that has been brought
+it, or data to be released out as a product. **As always, ensure that the data
+is not sensitive.**
 
 ## MinIO Command Line Tool
 
