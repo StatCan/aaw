@@ -35,29 +35,29 @@ Use your @canada.ca email address so that you will be automatically approved.
 
 ## Process data using `R`, `Python`, or `Julia`
 
-[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](1-Experiments/Jupyter/)
+[![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](1-Experiments/Jupyter.md)
 Once you have Kubeflow set up, use
-**[Jupyter Notebooks](1-Experiments/Jupyter/)** to create and share documents
+**[Jupyter Notebooks](1-Experiments/Jupyter.md)** to create and share documents
 that contain live code, equations, or visualizations.
 ![Jupyter Notebooks](images/jupyter_in_action.png)
 
 ## Process data using 'R' or 'Python'
 
-[![R or Python in R Studio](images/RStudio.PNG)](1-Experiments/RStudio/)
-**[R Studio](1-Experiments/RStudio/)** gives you an integrated development
+[![R or Python in R Studio](images/RStudio.PNG)](1-Experiments/RStudio.md)
+**[R Studio](1-Experiments/RStudio.md)** gives you an integrated development
 environment for R and Python. Use the r-studio-cpu image to get an R Studio
 environment.
 
 ## Run a virtual desktop
 
-[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/ML-Workspaces) You
+[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/ML-Workspaces.md) You
 can run a full Ubuntu desktop, with typical applications, right inside your
-browser, using [**ML Workspaces**](1-Experiments/ML-Workspaces)
+browser, using [**ML Workspaces**](1-Experiments/ML-Workspaces.md)
 
 ## Manage machine learning models and metadata
 
-[![Machine Learning](images/MachineLearning.PNG)](1-Experiments/MLflow/)
-**[ML Flow](1-Experiments/MLflow/)** lets you manage the machine learning
+[![Machine Learning](images/MachineLearning.PNG)](1-Experiments/MLflow.md)
+**[ML Flow](1-Experiments/MLflow.md)** lets you manage the machine learning
 lifecycle. It's a model registry for storing machine learning models and
 metrics.
 
