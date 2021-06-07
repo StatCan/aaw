@@ -529,6 +529,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Disks/" title="Disks" class="md-nav__link">
       Disks
     </a>
@@ -593,6 +605,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bucket-types-and-access-scopes" class="md-nav__link">
+    Bucket Types and Access Scopes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -614,6 +633,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#browse-datasets" class="md-nav__link">
+    Browse Datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#minio-command-line-tool" class="md-nav__link">
     MinIO Command Line Tool
   </a>
@@ -630,13 +656,6 @@
           <li class="md-nav__item">
   <a href="#other-s3-compliant-methods" class="md-nav__link">
     Other S3-Compliant Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bucket-types-and-access-scopes" class="md-nav__link">
-    Bucket Types and Access Scopes
   </a>
   
 </li>
@@ -756,6 +775,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bucket-types-and-access-scopes" class="md-nav__link">
+    Bucket Types and Access Scopes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -777,6 +803,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#browse-datasets" class="md-nav__link">
+    Browse Datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#minio-command-line-tool" class="md-nav__link">
     MinIO Command Line Tool
   </a>
@@ -793,13 +826,6 @@
           <li class="md-nav__item">
   <a href="#other-s3-compliant-methods" class="md-nav__link">
     Other S3-Compliant Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bucket-types-and-access-scopes" class="md-nav__link">
-    Bucket Types and Access Scopes
   </a>
   
 </li>
@@ -898,6 +924,84 @@ Notebook Server it is attached).</p>
 <!-- prettier-ignore -->
 <details class="warning"><summary>Files copied into a mounted MinIO folder might take a few moments to be readable</summary><p>When you copy files into a MinIO folder, they are immediately stored and accessible in MinIO (e.g.: you can immediately see them in the <a href="#minio-web-portal">Web Portal</a>).  But, new files may take a few moments for the mounting service to notice and serve them in the mounted folder.  If your use case needs access to these files immediately after copying them, try the other read methods (<a href="#minio-command-line-tool">the mc tool</a> or <a href="#other-s3-compliant-methods">Other S3 Compliant Methods</a>).</p>
 </details>
+<h3 id="bucket-types-and-access-scopes">Bucket Types and Access Scopes<a class="headerlink" href="#bucket-types-and-access-scopes" title="Permanent link">&para;</a></h3>
+<p>The following MinIO tenants (e.g.: separate services) are available:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Tenant</th>
+<th>Speed</th>
+<th>Cost</th>
+<th>Access via File Browser</th>
+<th>Access via <code>mc</code></th>
+<th>Access via Web Portal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">standard-tenant-1</td>
+<td>Average</td>
+<td>Low</td>
+<td><code>~/minio/standard-tenant-1</code></td>
+<td><code>mc ls standard-tenant-1/$NB_NOTEBOOK</code></td>
+<td><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca/">link</a></td>
+</tr>
+<tr>
+<td align="right">premium-tenant-1</td>
+<td>Fast</td>
+<td>Average</td>
+<td><code>~/minio/premium-tenant-1</code></td>
+<td><code>mc ls premium-tenant-1/$NB_NOTEBOOK</code></td>
+<td><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">link</a></td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore -->
+<details class="note"><summary>Note: $NB_NOTEBOOK is an environment variable that contains your namespace</summary><p>You could also just type <code>mc ls standard-tenant-1/john-smith</code>, etc.</p>
+</details>
+<p>Accessing all MinIO tenants is the same. The difference between tenants is the
+storage type behind them:</p>
+<ul>
+<li><strong><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca">Standard</a>:</strong> By
+  default, use this one. It is backed by an SSD and provides a good balance of
+  cost and performance.</li>
+<li><strong><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">Premium</a>:</strong> Use
+  this if you need high read/write speeds and don't mind paying ~2x the storage
+  cost. These are somewhat faster than the standard storage.</li>
+</ul>
+<p>Generally if you aren't sure which you need, start with <strong>Standard</strong>. You can
+always change your mind if you see your work limited by file transfer speeds.</p>
+<p>Within each bucket type, everyone has two storage locations they can use, each
+providing different access scopes:</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center">Private</th>
+<th align="center">Shared</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Summary</td>
+<td align="center">Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a <a href="../../4-Collaboration/Overview/#share-compute-namespace-in-kubeflow">shared namespace</a>)</td>
+<td align="center">Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams</td>
+</tr>
+<tr>
+<td align="right">Mount location in the Notebook Server:</td>
+<td align="center"><code>~/minio/standard-tenant-1/private/myfolder/myfile</code></td>
+<td align="center"><code>~/minio/standard-tenant-1/shared/myfolder/myfile</code></td>
+</tr>
+<tr>
+<td align="right">Location in <code>mc</code> tool/MinIO portal:</td>
+<td align="center"><code>firstname-lastname/myfolder/myfile</code></td>
+<td align="center"><code>shared/firstname-lastname/myfolder/myfile</code></td>
+</tr>
+</tbody>
+</table>
+<!-- prettier-ignore -->
+<details class="info"><summary>You can see many directories in the shared MinIO bucket, but you can only write to your own</summary><p>Everyone has read access to all folders in the <code>shared</code> MinIO bucket, but write permissions are always restricted to the owner.</p>
+</details>
 <h2 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h2>
 <h3 id="minio-web-portal">MinIO Web Portal<a class="headerlink" href="#minio-web-portal" title="Permanent link">&para;</a></h3>
 <p>The MinIO service can be accessible through a
@@ -908,6 +1012,11 @@ in using your existing credentials, use the "Log in with OpenID" button.</p>
 as your Kubeflow namespace (likely <code>firstname-lastname</code>):</p>
 <p><img alt="MinIO browser with personal bucket using first name, last name format (hyphenated)" src="../../images/minio_self_serve_bucket.png" /></p>
 <p>This lets you browse, upload/download, delete, or share files.</p>
+<h3 id="browse-datasets">Browse Datasets<a class="headerlink" href="#browse-datasets" title="Permanent link">&para;</a></h3>
+<p>Browse some <a href="https://datasets.covid.cloud.statcan.ca">datasets</a> here. These data
+sets are meant to store widely shared data. Either data that has been brought
+it, or data to be released out as a product. <strong>As always, ensure that the data
+is not sensitive.</strong></p>
 <h3 id="minio-command-line-tool">MinIO Command Line Tool<a class="headerlink" href="#minio-command-line-tool" title="Permanent link">&para;</a></h3>
 <p>MinIO provides the command line tool <code>mc</code> to access your data from a terminal.
 <code>mc</code> can communicate with one or more MinIO instances to let you upload/download
@@ -995,105 +1104,6 @@ services. Tools designed to use S3 will generally also work with MinIO, for
 example Python packages and instructions on how to access files from S3. Some
 examples of this are shown in
 <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage">jupyter-notebooks/self-serve-storage</a>.</p>
-<h3 id="bucket-types-and-access-scopes">Bucket Types and Access Scopes<a class="headerlink" href="#bucket-types-and-access-scopes" title="Permanent link">&para;</a></h3>
-<p>The following MinIO tenants (e.g.: separate services) are available:</p>
-<table>
-<thead>
-<tr>
-<th align="right">Tenant</th>
-<th>Speed</th>
-<th>Cost</th>
-<th>Access via File Browser</th>
-<th>Access via <code>mc</code></th>
-<th>Access via Web Portal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">standard-tenant-1</td>
-<td>Average</td>
-<td>Low</td>
-<td><code>~/minio/standard-tenant-1</code></td>
-<td><code>mc ls standard-tenant-1/$NB_NOTEBOOK</code></td>
-<td><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca/">link</a></td>
-</tr>
-<tr>
-<td align="right">premium-tenant-1</td>
-<td>Fast</td>
-<td>Average</td>
-<td><code>~/minio/premium-tenant-1</code></td>
-<td><code>mc ls premium-tenant-1/$NB_NOTEBOOK</code></td>
-<td><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">link</a></td>
-</tr>
-<tr>
-<td align="right">minimal-tenant1 <strong>See note below</strong></td>
-<td>Average</td>
-<td>Low</td>
-<td>Unavailable (see note below)</td>
-<td><code>mc ls minimal-tenant1/$NB_NOTEBOOK</code></td>
-<td><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca/">link</a></td>
-</tr>
-<tr>
-<td align="right">premium-tenant1 <strong>See note below</strong></td>
-<td>Fast</td>
-<td>Average</td>
-<td>Unavailable (see note below)</td>
-<td><code>mc ls premium-tenant1/$NB_NOTEBOOK</code></td>
-<td><a href="https://premium-tenant1-minio.covid.cloud.statcan.ca/">link</a></td>
-</tr>
-</tbody>
-</table>
-<!-- prettier-ignore -->
-<div class="admonition danger">
-<p class="admonition-title"><code>minimal-tenant1</code> and <code>premium-tenant1</code> are being decommissioned</p>
-<p>To improve security and stability, <code>minimal-tenant1</code> and <code>premium-tenant1</code> have been replaced by <code>standard-tenant-1</code> and <code>premium-tenant-1</code>. <code>minimal-tenant1</code> and <code>premium-tenant1</code> will for a limited time still be accessible via <code>mc</code> and Web Portal, but will not be accessible via File Browser (due to this causing stability issues for Notebook Servers). It is recommended that you migrate your workloads to the new tenants as soon as possible. A forced migration will occur in future.</p>
-</div>
-<!-- prettier-ignore -->
-<details class="note"><summary>Note: $NB_NOTEBOOK is an environment variable that contains your namespace</summary><p>You could also just type <code>mc ls standard-tenant-1/john-smith</code>, etc.</p>
-</details>
-<p>Accessing all MinIO tenants is the same. The difference between tenants is the
-storage type behind them:</p>
-<ul>
-<li><strong><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca">Standard</a>:</strong> By
-  default, use this one. It is backed by an SSD and provides a good balance of
-  cost and performance.</li>
-<li><strong><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">Premium</a>:</strong> Use
-  this if you need high read/write speeds and don't mind paying ~2x the storage
-  cost. These are somewhat faster than the standard storage.</li>
-</ul>
-<p>Generally if you aren't sure which you need, start with <strong>Standard</strong>. You can
-always change your mind if you see your work limited by file transfer speeds.</p>
-<p>Within each bucket type, everyone has two storage locations they can use, each
-providing different access scopes:</p>
-<table>
-<thead>
-<tr>
-<th align="right"></th>
-<th align="center">Private</th>
-<th align="center">Shared</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">Summary</td>
-<td align="center">Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a <a href="../../4-Collaboration/Overview/#share-compute-namespace-in-kubeflow">shared namespace</a>)</td>
-<td align="center">Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams</td>
-</tr>
-<tr>
-<td align="right">Mount location in the Notebook Server:</td>
-<td align="center"><code>~/minio/standard-tenant-1/private/myfolder/myfile</code></td>
-<td align="center"><code>~/minio/standard-tenant-1/shared/myfolder/myfile</code></td>
-</tr>
-<tr>
-<td align="right">Location in <code>mc</code> tool/MinIO portal:</td>
-<td align="center"><code>firstname-lastname/myfolder/myfile</code></td>
-<td align="center"><code>shared/firstname-lastname/myfolder/myfile</code></td>
-</tr>
-</tbody>
-</table>
-<!-- prettier-ignore -->
-<details class="info"><summary>You can see many directories in the shared MinIO bucket, but you can only write to your own</summary><p>Everyone has read access to all folders in the <code>shared</code> MinIO bucket, but write permissions are always restricted to the owner.</p>
-</details>
 <h3 id="sharing-from-private-buckets">Sharing from Private Buckets<a class="headerlink" href="#sharing-from-private-buckets" title="Permanent link">&para;</a></h3>
 <p>You can easily share individual files from a private bucket. Just use the
 "share" option for a specific file and you will be provided a link that you can

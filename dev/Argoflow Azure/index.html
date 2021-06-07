@@ -11,7 +11,7 @@
         <meta name="description" content="Developer Docs">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/en/Kubeflow/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/Argoflow%20Azure/">
       
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Index - AAW Dev Docs</title>
+        <title>Deploying Kubeflow with ArgoCD - AAW Dev Docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation" class="md-skip">
+        <a href="#deploying-kubeflow-with-argocd" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Index
+              Deploying Kubeflow with ArgoCD
             
           </span>
         </div>
@@ -242,10 +242,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Argoflow Azure
@@ -267,11 +269,172 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Argoflow%20Azure/" title="Deploying Kubeflow with ArgoCD" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploying Kubeflow with ArgoCD
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Deploying Kubeflow with ArgoCD" class="md-nav__link md-nav__link--active">
       Deploying Kubeflow with ArgoCD
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-kubeflow-with-argocd" class="md-nav__link">
+    Deploying Kubeflow with ArgoCD
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploying Kubeflow with ArgoCD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder-setup" class="md-nav__link">
+    Folder setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Folder setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-files" class="md-nav__link">
+    Root files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kind" class="md-nav__link">
+    Kind
+  </a>
+  
+    <nav class="md-nav" aria-label="Kind">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-kind-cluster" class="md-nav__link">
+    Deploying kind cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-sealed-secrets" class="md-nav__link">
+    Deploy Sealed Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-metallb" class="md-nav__link">
+    Deploy MetalLB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-argo-cd" class="md-nav__link">
+    Deploy Argo CD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-kubeflow" class="md-nav__link">
+    Deploy Kubeflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosts" class="md-nav__link">
+    Hosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-kind-cluster" class="md-nav__link">
+    Remove kind cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -842,12 +1005,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
     
     <label class="md-nav__link" for="nav-17">
       Kubeflow
@@ -869,77 +1030,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Index
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Index" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Kubeflow/" title="Index" class="md-nav__link">
       Index
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-groups" class="md-nav__link">
-    Working Groups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    Quick Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-involved" class="md-nav__link">
-    Get Involved
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#link" class="md-nav__link">
-    Link
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -949,7 +1044,7 @@
 
 
   <li class="md-nav__item">
-    <a href="CHANGELOG/" title="Change Log" class="md-nav__link">
+    <a href="../Kubeflow/CHANGELOG/" title="Change Log" class="md-nav__link">
       Change Log
     </a>
   </li>
@@ -1740,30 +1835,125 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#deploying-kubeflow-with-argocd" class="md-nav__link">
+    Deploying Kubeflow with ArgoCD
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploying Kubeflow with ArgoCD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#working-groups" class="md-nav__link">
-    Working Groups
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    Quick Links
+        
+          <li class="md-nav__item">
+  <a href="#folder-setup" class="md-nav__link">
+    Folder setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Folder setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-files" class="md-nav__link">
+    Root files
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#get-involved" class="md-nav__link">
-    Get Involved
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kind" class="md-nav__link">
+    Kind
   </a>
+  
+    <nav class="md-nav" aria-label="Kind">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-kind-cluster" class="md-nav__link">
+    Deploying kind cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-sealed-secrets" class="md-nav__link">
+    Deploy Sealed Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-metallb" class="md-nav__link">
+    Deploy MetalLB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-argo-cd" class="md-nav__link">
+    Deploy Argo CD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-kubeflow" class="md-nav__link">
+    Deploy Kubeflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hosts" class="md-nav__link">
+    Hosts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-kind-cluster" class="md-nav__link">
+    Remove kind cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1786,7 +1976,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/statcan/daaas/edit/master/docs/dev/Kubeflow/README.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/statcan/daaas/edit/master/docs/dev/Argoflow Azure/README.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1794,35 +1984,159 @@
                   
                 
                 
-                  <h1>Index</h1>
+                  <h1>Deploying Kubeflow with ArgoCD</h1>
                 
-                <p><img src="https://www.kubeflow.org/images/logo.svg" width="100">
-Kubeflow the cloud-native platform for machine learning operations - pipelines, training and deployment.</p>
-<hr />
-<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
-<p>Please refer to the official docs at <a href="http://kubeflow.org">kubeflow.org</a>.</p>
-<h3 id="working-groups">Working Groups<a class="headerlink" href="#working-groups" title="Permanent link">&para;</a></h3>
-<p>The Kubeflow community is organized into working groups (WGs) with associated repositories, that focus on specific pieces of the ML platform. </p>
+                <h2 id="deploying-kubeflow-with-argocd">Deploying Kubeflow with ArgoCD<a class="headerlink" href="#deploying-kubeflow-with-argocd" title="Permanent link">&para;</a></h2>
+<p>This repository contains Kustomize manifests that point to the upstream
+manifest of each Kubeflow component and provides an easy way for people
+to change their deployment according to their need. ArgoCD application
+manifests for each component will be used to deploy Kubeflow.</p>
+<p>The intended usage is for people to fork this repository, make their desired
+kustomizations, run a script to change the ArgoCD application specs to point
+to their fork of this repository, and finally apply a master ArgoCD application
+that will deploy all other applications.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-automl">AutoML</a></li>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-deployment">Deployment</a></li>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-manifests">Manifests</a></li>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-notebooks">Notebooks</a></li>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-pipelines">Pipelines</a></li>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-serving">Serving</a></li>
-<li><a href="https://github.com/kubeflow/community/tree/master/wg-training">Training</a></li>
+<li>docker (if using kind)</li>
+<li>docker-tuntap-osx (if using macosx)</li>
+<li>findutils (if using macosx)</li>
+<li>kubectl <code>1.21.1</code></li>
+<li>kustomize <code>4.0.5</code></li>
+<li>yq <code>4.9.3</code></li>
 </ul>
-<h3 id="quick-links">Quick Links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h3>
+<h3 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
+<p>The rough workflow is as follows:</p>
 <ul>
-<li><a href="https://k8s-testgrid.appspot.com/sig-big-data">Prow test dashboard</a></li>
-<li><a href="https://prow.k8s.io/?repo=kubeflow%2Fkubeflow">Prow jobs dashboard</a></li>
-<li><a href="https://k8s-gubernator.appspot.com/pr">PR Dashboard</a></li>
-<li><a href="http://testing-argo.kubeflow.org">Argo UI for E2E tests</a></li>
+<li>Fork this repository</li>
+<li>Modify the kustomizations</li>
+<li>Run <code>./setup_repo.sh examples/setup.conf</code></li>
+<li>Commit and push your changes</li>
+<li>Install ArgoCD</li>
+<li>Install Kubeflow</li>
 </ul>
-<h3 id="get-involved">Get Involved<a class="headerlink" href="#get-involved" title="Permanent link">&para;</a></h3>
-<p>Please refer to the <a href="https://www.kubeflow.org/docs/about/community/">Community</a> page.</p>
+<h3 id="folder-setup">Folder setup<a class="headerlink" href="#folder-setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="./distribution/argocd">argocd</a>: Kustomize files for ArgoCD</li>
+<li><a href="./distribution/argocd-applications">argocd-applications</a>: ArgoCD application for each Kubeflow component</li>
+<li><a href="./distribution/cert-manager">cert-manager</a>: Kustomize files for installing cert-manager v1.2</li>
+<li><a href="./distribution/kubeflow">kubeflow</a>: Kustomize files for installing Kubeflow components<ul>
+<li><a href="./distribution/kubeflow/notebooks/central-dashboard">central-dashboard</a>: Kustomize files for installing the Central Dashboard</li>
+<li><a href="./distribution/kubeflow/notebooks/jupyter-web-app">jupyter-web-app</a>: Kustomize files for installing the Jupyter Web App<ul>
+<li><a href="./distribution/kubeflow/notebooks/notebook-controller">notebook-controller</a>: Kustomize files for installing the Notebook Controller</li>
+</ul>
+</li>
+<li><a href="./distribution/kubeflow/katib">katib</a>: Kustomize files for installing Katib</li>
+<li><a href="./distribution/kubeflow/kfserving">kfserving</a>: Kustomize files for installing KFServing</li>
+<li><a href="./distribution/kubeflow/namespace">namespaces</a>: Kustomize manifest to create the profile and namespace for the default Kubeflow user</li>
+<li><a href="./distribution/kubeflow/operators">operators</a>: Kustomize files for installing the various operators</li>
+<li><a href="./distribution/kubeflow/pipelines">pipelines</a>: Kustomize files for installing Kubeflow Pipelines</li>
+<li><a href="./distribution/kubeflow/notebooks/pod-defaults">pod-defaults</a>: Kustomize files for installing Pod Defaults (a.k.a. admission webhook)</li>
+<li><a href="./distribution/kubeflow/notebooks/profile-controller_access-management">profile-controller_access-management</a>: Kustomize files for installing the Profile Controller and Access Management</li>
+<li><a href="./distribution/kubeflow/roles">roles</a>: Kustomize files for Kubeflow namespace and ClusterRoles</li>
+<li><a href="./distribution/kubeflow/notebooks/tensorboards-web-app">tensorboards-web-app</a>: Kustomize files for installing the Tensorboards Web App<ul>
+<li><a href="./distribution/kubeflow/notebooks/tensorboard-controller">tensorboard-controller</a>: Kustomize files for installing the Tensorboard Controller</li>
+</ul>
+</li>
+<li><a href="./distribution/kubeflow/notebooks/volumes-web-app">volumes-web-app</a>: Kustomize files for installing the Volumes Web App</li>
+</ul>
+</li>
+<li><a href="./distribution/knative">knative</a>: Kustomize files for installing KNative</li>
+<li><a href="./distribution/metallb">metallb</a>: Kustomize files for installing MetalLB</li>
+<li><a href="./distribution/oidc-auth">oidc-auth</a>: Kustomize files for OIDC authservice</li>
+</ul>
+<h4 id="root-files">Root files<a class="headerlink" href="#root-files" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="./distribution/kustomization.yaml">kustomization.yaml</a>: Kustomization file that references the ArgoCD application files in <a href="./distribution/argocd-applications">argocd-applications</a></li>
+<li><a href="./distribution/kubeflow.yaml">kubeflow.yaml</a>: ArgoCD application that deploys the ArgoCD applications referenced in <a href="./distribution/kustomization.yaml">kustomization.yaml</a></li>
+</ul>
+<h3 id="kind">Kind<a class="headerlink" href="#kind" title="Permanent link">&para;</a></h3>
+<h4 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h4>
+<p>On linux:</p>
+<div class="codehilite"><pre><span></span><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
+chmod +x ./kind
+mv ./kind /&lt;some-dir-in-your-PATH&gt;/kind
+</code></pre></div>
+
+<p>On Mac:</p>
+<div class="codehilite"><pre><span></span><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-darwin-amd64
+chmod +x ./kind
+mv ./kind /&lt;some-dir-in-your-PATH&gt;/kind
+</code></pre></div>
+
+<p>On Windows:</p>
+<div class="codehilite"><pre><span></span><code>curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.10.0/kind-windows-amd64
+Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
+</code></pre></div>
+
+<h4 id="deploying-kind-cluster">Deploying kind cluster<a class="headerlink" href="#deploying-kind-cluster" title="Permanent link">&para;</a></h4>
+<p><code>kind create cluster --config kind/kind-cluster.yaml</code></p>
+<div class="codehilite"><pre><span></span><code>kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.3.6/components.yaml
+kubectl patch deployment metrics-server -n kube-system -p <span class="s1">&#39;{&quot;spec&quot;:{&quot;template&quot;:{&quot;spec&quot;:{&quot;containers&quot;:[{&quot;name&quot;:&quot;metrics-server&quot;,&quot;args&quot;:[&quot;--cert-dir=/tmp&quot;, &quot;--secure-port=4443&quot;, &quot;--kubelet-insecure-tls&quot;,&quot;--kubelet-preferred-address-types=InternalIP&quot;]}]}}}}&#39;</span>
+</code></pre></div>
+
+<h4 id="deploy-sealed-secrets">Deploy Sealed Secrets<a class="headerlink" href="#deploy-sealed-secrets" title="Permanent link">&para;</a></h4>
+<p>Install the sealed secrets controller:</p>
+<div class="codehilite"><pre><span></span><code>kubectl apply -f https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.16.0/controller.yaml
+</code></pre></div>
+
+<h4 id="deploy-metallb">Deploy MetalLB<a class="headerlink" href="#deploy-metallb" title="Permanent link">&para;</a></h4>
+<p>Edit the IP range in <a href="./metallb/configmap.yaml">configmap.yaml</a> so that it is within
+the range of your docker network.</p>
+<p>To get your docker network range, run the following command:</p>
+<div class="codehilite"><pre><span></span><code>docker network inspect -f <span class="s1">&#39;{{.IPAM.Config}}&#39;</span> kind
+</code></pre></div>
+
+<p>After updating the metallb configmap, deploy it by running:</p>
+<div class="codehilite"><pre><span></span><code>kustomize build distribution/metallb/ <span class="p">|</span> kubectl apply -f -
+</code></pre></div>
+
+<h4 id="deploy-argo-cd">Deploy Argo CD<a class="headerlink" href="#deploy-argo-cd" title="Permanent link">&para;</a></h4>
+<p>Deploy Argo CD with the following command and expose with a Load Balancer:</p>
+<div class="codehilite"><pre><span></span><code>kustomize build distribution/argocd/base/ <span class="p">|</span> kubectl apply -f -
+kubectl patch svc argocd-server -n argocd -p <span class="s1">&#39;{&quot;spec&quot;: {&quot;type&quot;: &quot;LoadBalancer&quot;}}&#39;</span>
+</code></pre></div>
+
+<p>Get the Load Balancer IP of the Argo CD endpoint:</p>
+<div class="codehilite"><pre><span></span><code>kubectl get svc argocd-server -n argocd
+</code></pre></div>
+
+<p>Login with the username <code>admin</code> and the password:</p>
+<div class="codehilite"><pre><span></span><code>kubectl -n argocd get secret argocd-initial-admin-secret -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.password}&quot;</span> <span class="p">|</span> base64 -d
+argocd login &lt;lb-ip&gt;
+argocd account update-password
+</code></pre></div>
+
+<h4 id="deploy-kubeflow">Deploy Kubeflow<a class="headerlink" href="#deploy-kubeflow" title="Permanent link">&para;</a></h4>
+<p>To deploy Kubeflow, execute the following command:</p>
+<div class="codehilite"><pre><span></span><code>kubectl apply -f distribution/kubeflow.yaml
+</code></pre></div>
+
+<blockquote>
+<p>Note: This deploys all components of Kubeflow 1.3 and this might take a while.</p>
+</blockquote>
+<p>Get the IP of the Kubeflow gateway with the following command:</p>
+<div class="codehilite"><pre><span></span><code>kubectl get svc istio-ingressgateway -n istio-system
+</code></pre></div>
+
+<h4 id="hosts">Hosts<a class="headerlink" href="#hosts" title="Permanent link">&para;</a></h4>
+<p>Add the following entries to you <code>/etc/hosts</code> file:</p>
+<div class="codehilite"><pre><span></span><code>&lt;lb-ip&gt; kubeflow.kind-cluster.covid.cloud.statcan.ca
+&lt;lb-ip&gt; serving.kind-cluster.covid.cloud.statcan.ca
+&lt;lb-ip&gt; auth.kind-cluster.covid.cloud.statcan.ca
+</code></pre></div>
+
+<h4 id="remove-kind-cluster">Remove kind cluster<a class="headerlink" href="#remove-kind-cluster" title="Permanent link">&para;</a></h4>
+<p>Delete the Kind Cluster:</p>
+<div class="codehilite"><pre><span></span><code>kind delete cluster
+</code></pre></div>
+
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p>The following are some useful references which might provide some additional assistance.</p>
+<ul>
+<li><a href="https://www.thehumblelab.com/kind-and-metallb-on-mac/">Kind and MetalLB on MacOSX</a></li>
+</ul>
 <h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/StatCan/kubeflow">kubeflow</a></p>
+<p><a href="https://github.com/StatCan/argoflow-azure">argoflow-azure</a></p>
                 
               
               
@@ -1841,7 +2155,7 @@ Kubeflow the cloud-native platform for machine learning operations - pipelines, 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Kubecost/" title="Kubecost" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Actions/" title="GitHub Actions" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1850,19 +2164,19 @@ Kubeflow the cloud-native platform for machine learning operations - pipelines, 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Kubecost
+                GitHub Actions
               </div>
             </div>
           </a>
         
         
-          <a href="CHANGELOG/" title="Change Log" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Boathouse/" title="Index" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Change Log
+                Index
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

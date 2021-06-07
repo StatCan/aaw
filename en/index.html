@@ -714,6 +714,18 @@
 
 
   <li class="md-nav__item">
+    <a href="5-Storage/Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="5-Storage/Disks/" title="Disks" class="md-nav__link">
       Disks
     </a>
@@ -1062,7 +1074,7 @@ following table of options</p>
 <p>Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
 machine) is described in more detail in the
 <a href="4-Collaboration/Overview/">Collaboration</a> section. Sharing data through
-buckets is described in more detail in the <strong><a href="./5-Storage/MinIO.md/">MinIO</a></strong>
+buckets is described in more detail in the <strong><a href="5-Storage/MinIO/">MinIO</a></strong>
 section.</p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
 <p>The platform provides several types of storage:</p>
@@ -1071,53 +1083,14 @@ section.</p>
 <li>Bucket ("Blob" or S3 storage, provided through MinIO)</li>
 <li>Data Lakes (coming soon)</li>
 </ul>
-<p>Depending on your use case, either disk or bucket may be most suitable:</p>
-<table>
-<thead>
-<tr>
-<th align="right">Type</th>
-<th align="right">Simultaneous Users</th>
-<th align="right">Speed</th>
-<th>Total size</th>
-<th>Sharable with Other Users</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">Disk</td>
-<td align="right">One machine/notebook server at a time</td>
-<td align="right">Fastest (throughput and latency)</td>
-<td>&lt;=512GB total per drive</td>
-<td>No</td>
-</tr>
-<tr>
-<td align="right">Bucket</td>
-<td align="right">Simultaneous access from many machines/notebook servers at the same time</td>
-<td align="right">Fast-ish (Fast download, modest upload, modest latency)</td>
-<td>Infinite (within reason)</td>
-<td>[Yes]</td>
-</tr>
-</tbody>
-</table>
-<!-- prettier-ignore -->
-<details class="info"><summary>If you're unsure which to choose, don't sweat it</summary><p>These are guidelines, not an exact science - pick what sounds best now and run with it.  The best choice for a complicated usage is non-obvious and often takes hands-on experience, so just trying something will help.  For most situations both options work well even if they're not perfect, and remember that data can always be copied later if you change your mind.</p>
-</details>
-<p><img alt="Browse Datasets" src="images/readme/minio_ui.png" /></p>
-<!-- prettier-ignore -->
-<div class="admonition example">
-<p class="admonition-title">Browse some datasets</p>
-<p>Browse some <a href="https://datasets.covid.cloud.statcan.ca">datasets</a> here. These
-data sets are meant to store widely shared data. Either data that has been
-brought it, or data to be released out as a product. <strong>As always, ensure
-that the data is not sensitive.</strong></p>
-</div>
+<p>Depending on your use case, either disk or bucket may be most suitable. Our
+<a href="5-Storage/Overview/">storage overview</a> will help you compare them.</p>
 <h3 id="disks">Disks<a class="headerlink" href="#disks" title="Permanent link">&para;</a></h3>
-<p><a href="Storage.md/"><img alt="Disks" src="images/Disks.PNG" /></a> <strong><a href="./5-Storage/Disks.md/">Disks</a></strong> are
+<p><a href="Storage.md/"><img alt="Disks" src="images/Disks.PNG" /></a> <strong><a href="5-Storage/Disks/">Disks</a></strong> are
 added to your notebook server by adding Data Volumes.</p>
 <h3 id="buckets">Buckets<a class="headerlink" href="#buckets" title="Permanent link">&para;</a></h3>
-<p><a href="MinIO.md/"><img alt="MinIO" src="images/Buckets.PNG" /></a> <strong><a href="./5-Storage/MinIO.md/">MinIO</a></strong> is
-a cloud-native scalable object store. We use it for buckets (blob or S3
-storage).</p>
+<p><a href="MinIO.md/"><img alt="MinIO" src="images/Buckets.PNG" /></a> <strong><a href="5-Storage/MinIO/">MinIO</a></strong> is a
+cloud-native scalable object store. We use it for buckets (blob or S3 storage).</p>
                 
               
               
