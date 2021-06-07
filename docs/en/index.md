@@ -121,7 +121,7 @@ following table of options
 Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
 machine) is described in more detail in the
 [Collaboration](4-Collaboration/Overview.md) section. Sharing data through
-buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md/)**
+buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md)**
 section.
 
 # Storage
