@@ -121,7 +121,7 @@ following table of options
 Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
 machine) is described in more detail in the
 [Collaboration](4-Collaboration/Overview.md) section. Sharing data through
-buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md/)**
+buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md)**
 section.
 
 # Storage
@@ -132,33 +132,15 @@ The platform provides several types of storage:
 - Bucket ("Blob" or S3 storage, provided through MinIO)
 - Data Lakes (coming soon)
 
-Depending on your use case, either disk or bucket may be most suitable:
-
-|   Type |                                                       Simultaneous Users |                                                   Speed | Total size               | Sharable with Other Users |
-| -----: | -----------------------------------------------------------------------: | ------------------------------------------------------: | ------------------------ | ------------------------- |
-|   Disk |                                    One machine/notebook server at a time |                        Fastest (throughput and latency) | <=512GB total per drive  | No                        |
-| Bucket | Simultaneous access from many machines/notebook servers at the same time | Fast-ish (Fast download, modest upload, modest latency) | Infinite (within reason) | [Yes]                     |
-
-<!-- prettier-ignore -->
-??? info "If you're unsure which to choose, don't sweat it"
-    These are guidelines, not an exact science - pick what sounds best now and run with it.  The best choice for a complicated usage is non-obvious and often takes hands-on experience, so just trying something will help.  For most situations both options work well even if they're not perfect, and remember that data can always be copied later if you change your mind.
-
-![Browse Datasets](images/readme/minio_ui.png)
-
-<!-- prettier-ignore -->
-!!! example "Browse some datasets"
-    Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These
-    data sets are meant to store widely shared data. Either data that has been
-    brought it, or data to be released out as a product. **As always, ensure
-    that the data is not sensitive.**
+Depending on your use case, either disk or bucket may be most suitable. Our
+[storage overview](./5-Storage/Overview.md) will help you compare them.
 
 ## Disks
 
-[![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md/)** are
+[![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md)** are
 added to your notebook server by adding Data Volumes.
 
 ## Buckets
 
-[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md/)** is
-a cloud-native scalable object store. We use it for buckets (blob or S3
-storage).
+[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md)** is a
+cloud-native scalable object store. We use it for buckets (blob or S3 storage).
