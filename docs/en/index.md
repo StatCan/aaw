@@ -54,13 +54,6 @@ environment.
 can run a full Ubuntu desktop, with typical applications, right inside your
 browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
 
-<!--- ## Manage machine learning models and metadata
-
-[![Machine Learning](images/MachineLearning.PNG)](1-Experiments/MLflow.md)
-**[ML Flow](1-Experiments/MLflow.md)** lets you manage the machine learning
-lifecycle. It's a model registry for storing machine learning models and
-metrics. --->
-
 # Publishing
 
 ## Build and publish an interactive dashboard
