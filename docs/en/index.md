@@ -50,8 +50,8 @@ environment.
 
 ## Run a virtual desktop
 
-[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/Remote-Desktop.md) You
-can run a full Ubuntu desktop, with typical applications, right inside your
+[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/Remote-Desktop.md)
+You can run a full Ubuntu desktop, with typical applications, right inside your
 browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
 
 # Publishing

@@ -1,7 +1,7 @@
 # Overview
 
 <!-- prettier-ignore -->
-!!! danger "MLFlow has been removed from the AAW.  
+!!! danger "MLflow has been removed from the AAW.
     If you need it, contact the development team"
 
 MLflow is an open source platform for managing the Machine Learning lifecycle.
