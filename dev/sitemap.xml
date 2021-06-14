@@ -1,151 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://statcan.github.io/daaas/en/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Actions/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Argoflow%20Azure/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Boathouse/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Charts/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Covid19/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Daaas/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Daaas/CHANGELOG/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Daaas%20Containers/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Gatekeeper%20Policies/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Geoserver/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Goofys/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Goofys%20Injector/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Gpu%20Toleration%20Injector/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Jupyter%20Apis/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Jupyter%20Notebooks/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubecost/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow/CHANGELOG/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Containers/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Containers%20Desktop/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Controller/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Manifest/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Mlops/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Opa%20Sync/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Minio%20Credential%20Injector/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Minio%20Deploy/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Minio%20Operator/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Mlflow%20Operator/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Namespace%20Injector/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Pachyderm/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/R%20Dashboards/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/R%20Notebooks/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Shiny/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Terraform%20Kubernetes%20Aks%20Daaas/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Terraform%20Kubernetes%20Aks%20Platform%20Daaas/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/Vault%20Plugin%20Secrets%20Minio/</loc>
-     <lastmod>2021-06-11</lastmod>
+     <lastmod>2021-06-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
