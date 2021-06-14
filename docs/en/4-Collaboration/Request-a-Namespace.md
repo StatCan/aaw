@@ -5,7 +5,9 @@ you want to collaborate with your team, you can
 [request a new namespace](requesting-a-namespace) to
 [share](Overview.md#share-a-namespace-in-kubeflow).
 
-# Requesting a namespace
+# Setup
+
+## Requesting a namespace
 
 To create a namespace for a team, go to the AAW portal. **Click the &#8942; menu
 on
