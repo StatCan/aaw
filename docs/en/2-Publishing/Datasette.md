@@ -1,4 +1,4 @@
-# Explore your data with Datasette
+# Overview
 
 Datasette is an instant JSON API for your SQLite databases allowing you to
 explore the DB and run SQL queries in a more interactive way.
@@ -26,7 +26,9 @@ You can even explore maps within the tool!
 
 ![Run SQL Queries](../images/datasette-sql.png)
 
-# Starting Datasette
+# Getting Started
+
+## Starting Datasette
 
 To view your own database in your Jupyter Notebook, create the following bash
 file in your project directory and run with `./start.sh`. Access the web server
