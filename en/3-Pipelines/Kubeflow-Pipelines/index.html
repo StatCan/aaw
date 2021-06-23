@@ -432,30 +432,57 @@
     Overview
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#what-are-pipelines-and-how-do-they-work" class="md-nav__link">
     What are pipelines and how do they work?
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#define-and-run-your-first-pipeline-using-the-python-sdk" class="md-nav__link">
     Define and run your first pipeline using the Python SDK
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding-what-computation-occurs-when" class="md-nav__link">
     Understanding what computation occurs when
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#once-youve-got-the-basics" class="md-nav__link">
+    Once you've got the basics ...
+  </a>
+  
+    <nav class="md-nav" aria-label="Once you've got the basics ...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#data-exchange" class="md-nav__link">
     Data Exchange
   </a>
@@ -511,6 +538,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#passing-complexlarge-data-tofrom-a-pipeline" class="md-nav__link">
     Passing complex/large data to/from a pipeline
@@ -518,12 +550,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#typical-development-patterns" class="md-nav__link">
     Typical development patterns
   </a>
@@ -535,6 +562,11 @@
   <a href="#end-to-end-pipeline-development" class="md-nav__link">
     End-to-end pipeline development
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -780,30 +812,57 @@
     Overview
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#what-are-pipelines-and-how-do-they-work" class="md-nav__link">
     What are pipelines and how do they work?
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#define-and-run-your-first-pipeline-using-the-python-sdk" class="md-nav__link">
     Define and run your first pipeline using the Python SDK
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding-what-computation-occurs-when" class="md-nav__link">
     Understanding what computation occurs when
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#once-youve-got-the-basics" class="md-nav__link">
+    Once you've got the basics ...
+  </a>
+  
+    <nav class="md-nav" aria-label="Once you've got the basics ...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#data-exchange" class="md-nav__link">
     Data Exchange
   </a>
@@ -859,6 +918,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#passing-complexlarge-data-tofrom-a-pipeline" class="md-nav__link">
     Passing complex/large data to/from a pipeline
@@ -866,12 +930,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#typical-development-patterns" class="md-nav__link">
     Typical development patterns
   </a>
@@ -883,6 +942,11 @@
   <a href="#end-to-end-pipeline-development" class="md-nav__link">
     End-to-end pipeline development
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -962,7 +1026,7 @@ analytical workflows (transforming data, training models, building visuals,
 etc.). These <em>pipelines</em> can be shared, reused, and scheduled, and are built to
 run on compute provided via Kubernetes. Here is an example of a pipeline with
 many <code>sample</code> steps feeding into a single <code>average</code> step. This image comes from
-the <a href="../../1-Experiments/Kubeflow/">Kubeflow Pipelines UI</a></p>
+the Kubeflow Pipelines UI.</p>
 <p><img alt="A Kubeflow Pipeline" src="../../images/kf-pipeline_with_result.png" /></p>
 <p>In the context of the Advanced Analytics Workspace, Kubeflow Pipelines are
 interacted with through:</p>
@@ -985,7 +1049,7 @@ every Notebook Server at <code>/jupyter-notebooks</code>). You can also check ou
 <p>See
 <a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">the official Kubeflow docs</a>
 for a more detailed explanation of Kubeflow Pipelines.</p>
-<h2 id="what-are-pipelines-and-how-do-they-work">What are pipelines and how do they work?<a class="headerlink" href="#what-are-pipelines-and-how-do-they-work" title="Permanent link">&para;</a></h2>
+<h3 id="what-are-pipelines-and-how-do-they-work">What are pipelines and how do they work?<a class="headerlink" href="#what-are-pipelines-and-how-do-they-work" title="Permanent link">&para;</a></h3>
 <p>A
 <a href="https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/"><em>pipeline</em></a>
 in Kubeflow Pipelines consists of one or more
@@ -1013,7 +1077,8 @@ single <code>average</code> step.</p>
   does it generate)</li>
 </ul>
 <p>Each <em>component</em> should be <strong>single purpose</strong>, <strong>modular</strong>, and <strong>reusable</strong>.</p>
-<h2 id="define-and-run-your-first-pipeline-using-the-python-sdk">Define and run your first pipeline using the Python SDK<a class="headerlink" href="#define-and-run-your-first-pipeline-using-the-python-sdk" title="Permanent link">&para;</a></h2>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="define-and-run-your-first-pipeline-using-the-python-sdk">Define and run your first pipeline using the Python SDK<a class="headerlink" href="#define-and-run-your-first-pipeline-using-the-python-sdk" title="Permanent link">&para;</a></h3>
 <p>While <em>pipelines</em> and <em>components</em> are defined in Kubeflow Pipelines by YAML
 files that use Docker images, that does not mean we have to work directly with
 either YAML files or Docker images. The
@@ -1195,7 +1260,7 @@ it all again.</p>
 <p>!!! info "We create our experiment, upload our pipeline, and run from Python in
     this example, but we could also do all this through the Kubeflow Pipelines
     UI above.</p>
-<h2 id="understanding-what-computation-occurs-when">Understanding what computation occurs when<a class="headerlink" href="#understanding-what-computation-occurs-when" title="Permanent link">&para;</a></h2>
+<h3 id="understanding-what-computation-occurs-when">Understanding what computation occurs when<a class="headerlink" href="#understanding-what-computation-occurs-when" title="Permanent link">&para;</a></h3>
 <p>The above example uses Python code to define:</p>
 <ul>
 <li>The interface between Kubeflow Pipelines and our Docker containers doing the
@@ -1340,8 +1405,9 @@ around this, but they're left to the reader to explore through the
 <em>components</em>) are meant to be reusable definitions of logic that are defined in
 static YAML files, with all dynamic decision making done inside components. This
 can make them a little awkward to define, but also helps them be more reusable.</p>
-<h2 id="data-exchange">Data Exchange<a class="headerlink" href="#data-exchange" title="Permanent link">&para;</a></h2>
-<h3 id="passing-data-into-within-and-from-a-pipeline">Passing data into, within, and from a pipeline<a class="headerlink" href="#passing-data-into-within-and-from-a-pipeline" title="Permanent link">&para;</a></h3>
+<h2 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h2>
+<h3 id="data-exchange">Data Exchange<a class="headerlink" href="#data-exchange" title="Permanent link">&para;</a></h3>
+<h4 id="passing-data-into-within-and-from-a-pipeline">Passing data into, within, and from a pipeline<a class="headerlink" href="#passing-data-into-within-and-from-a-pipeline" title="Permanent link">&para;</a></h4>
 <p>In the first example above, we pass:</p>
 <ul>
 <li>Numbers into our pipeline</li>
@@ -1395,7 +1461,7 @@ available when authoring the pipeline, something like this does not work:</p>
 <p>At <code>compile</code> time, <code>avg_1.output</code> is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.</p>
-<h3 id="passing-secrets">Passing Secrets<a class="headerlink" href="#passing-secrets" title="Permanent link">&para;</a></h3>
+<h4 id="passing-secrets">Passing Secrets<a class="headerlink" href="#passing-secrets" title="Permanent link">&para;</a></h4>
 <p>Pipelines often need sensitive information (passwords, API keys, etc.) to
 operate. To keep these secure, these cannot be passed to a Kubeflow Pipeline
 using a pipeline argument, environment variable, or as a hard coded value in
@@ -1410,7 +1476,7 @@ passed <em>by reference</em> to the pipeline.</p>
 If you need to use a secret in another namespace, you need to add it there
 manually.</p>
 </details>
-<h4 id="create-a-key-value-store">Create a key-value store<a class="headerlink" href="#create-a-key-value-store" title="Permanent link">&para;</a></h4>
+<h5 id="create-a-key-value-store">Create a key-value store<a class="headerlink" href="#create-a-key-value-store" title="Permanent link">&para;</a></h5>
 <p>The example below creates a key-value store called <strong>elastic-credentials</strong> which
 contains two key-value pairs:</p>
 <div class="codehilite"><pre><span></span><code>&quot;username&quot;: &quot;USERNAME&quot;,
@@ -1422,12 +1488,12 @@ contains two key-value pairs:</p>
     --from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span>
 </code></pre></div>
 
-<h4 id="get-an-existing-key-value-store">Get an existing key-value store<a class="headerlink" href="#get-an-existing-key-value-store" title="Permanent link">&para;</a></h4>
+<h5 id="get-an-existing-key-value-store">Get an existing key-value store<a class="headerlink" href="#get-an-existing-key-value-store" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="c1"># The secrets will be base64 encoded.</span>
 kubectl get secret elastic-credentials
 </code></pre></div>
 
-<h4 id="mounting-kubernetes-secrets-to-environment-variables-in-container-operations">Mounting Kubernetes Secrets to Environment Variables in Container Operations<a class="headerlink" href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" title="Permanent link">&para;</a></h4>
+<h5 id="mounting-kubernetes-secrets-to-environment-variables-in-container-operations">Mounting Kubernetes Secrets to Environment Variables in Container Operations<a class="headerlink" href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" title="Permanent link">&para;</a></h5>
 <p>Once the secrets are defined in the project namespace, you can mount specific
 secrets as environment variables in your container using the Kubeflow SDK.</p>
 <p><strong>Example</strong></p>
@@ -1487,7 +1553,7 @@ environment variables.</p>
     <span class="p">)</span>
 </code></pre></div>
 
-<h3 id="parameterizing-pipelines">Parameterizing pipelines<a class="headerlink" href="#parameterizing-pipelines" title="Permanent link">&para;</a></h3>
+<h4 id="parameterizing-pipelines">Parameterizing pipelines<a class="headerlink" href="#parameterizing-pipelines" title="Permanent link">&para;</a></h4>
 <p>Whenever possible, create pipelines in a generic way: define parameters that
 might change as pipeline inputs instead of writing values directly in your
 Python code. For example, if you want a pipeline to process data from
@@ -1544,8 +1610,8 @@ MinIO as described in our <a href="../..#storage"><em>Storage</em> documentation
 Examples of this are also described in our
 <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage">example notebooks</a>
 (also found in <code>jupyter-notebooks/self-serve-storage/</code> on any notebook server).</p>
-<h2 id="typical-development-patterns">Typical development patterns<a class="headerlink" href="#typical-development-patterns" title="Permanent link">&para;</a></h2>
-<h3 id="end-to-end-pipeline-development">End-to-end pipeline development<a class="headerlink" href="#end-to-end-pipeline-development" title="Permanent link">&para;</a></h3>
+<h3 id="typical-development-patterns">Typical development patterns<a class="headerlink" href="#typical-development-patterns" title="Permanent link">&para;</a></h3>
+<h4 id="end-to-end-pipeline-development">End-to-end pipeline development<a class="headerlink" href="#end-to-end-pipeline-development" title="Permanent link">&para;</a></h4>
 <p>A typical pattern for building pipelines in Kubeflow Pipelines is:</p>
 <ol>
 <li>Define components for each of your tasks</li>
@@ -1559,7 +1625,7 @@ of task, there are different methods for building the components.</p>
 <p>Fundamentally, every component in Kubeflow Pipelines runs a container. Kubeflow
 Pipelines offers several methods to define these components with different
 levels of flexibility and complexity.</p>
-<h4 id="user-defined-container-components">User-defined container components<a class="headerlink" href="#user-defined-container-components" title="Permanent link">&para;</a></h4>
+<h5 id="user-defined-container-components">User-defined container components<a class="headerlink" href="#user-defined-container-components" title="Permanent link">&para;</a></h5>
 <p>You can define tasks through custom Docker images. The design pattern for this
 is:</p>
 <ul>
@@ -1583,7 +1649,7 @@ in Kubeflow Pipelines.</p>
     allow users to build/run custom Docker images. This is planned for the
     future, but in interim see <em>Lightweight components</em> for a way to develop
     pipelines without custom images"</p>
-<h4 id="lightweight-python-components">Lightweight Python components<a class="headerlink" href="#lightweight-python-components" title="Permanent link">&para;</a></h4>
+<h5 id="lightweight-python-components">Lightweight Python components<a class="headerlink" href="#lightweight-python-components" title="Permanent link">&para;</a></h5>
 <p>While full custom containers offer great flexibility, sometimes they're heavier
 than needed. The Kubeflow Pipelines SDK also allows for
 <a href="https://www.kubeflow.org/docs/pipelines/sdk/lightweight-python-components/">Lightweight Python Components</a>,
@@ -1645,7 +1711,7 @@ necessary software.  That way you reduce the startup time for each step in
 your pipeline.
 <img alt="A Kubeflow Pipeline" src="../../images/kubeflow_pipelines_notebook_server_image.png" /></p>
 </details>
-<h4 id="defining-components-directly-in-yaml">Defining components directly in YAML<a class="headerlink" href="#defining-components-directly-in-yaml" title="Permanent link">&para;</a></h4>
+<h5 id="defining-components-directly-in-yaml">Defining components directly in YAML<a class="headerlink" href="#defining-components-directly-in-yaml" title="Permanent link">&para;</a></h5>
 <p>Components can be defined directly with a YAML file, where the designer can run
 terminal commands from a given Docker image. This can be a great way to make
 non-Python pipeline components from existing containers. As with all components,
@@ -1695,7 +1761,7 @@ then define a component in python from this YAML:</p>
 <p>See
 <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">this example</a>
 for more details on using existing components.</p>
-<h4 id="reusing-existing-components">Reusing existing components<a class="headerlink" href="#reusing-existing-components" title="Permanent link">&para;</a></h4>
+<h5 id="reusing-existing-components">Reusing existing components<a class="headerlink" href="#reusing-existing-components" title="Permanent link">&para;</a></h5>
 <p>Similar to well abstracted functions, well abstracted components can reduce the
 amount of code you have to write for any given project. For example, rather than
 teaching your machine learning <code>train_model</code> component to also save the
