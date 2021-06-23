@@ -7,7 +7,7 @@ analytical workflows (transforming data, training models, building visuals,
 etc.). These _pipelines_ can be shared, reused, and scheduled, and are built to
 run on compute provided via Kubernetes. Here is an example of a pipeline with
 many `sample` steps feeding into a single `average` step. This image comes from
-the [Kubeflow Pipelines UI](../1-Experiments/Kubeflow.md)
+the Kubeflow Pipelines UI.
 
 ![A Kubeflow Pipeline](../images/kf-pipeline_with_result.png)
 
@@ -34,7 +34,7 @@ See
 [the official Kubeflow docs](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/)
 for a more detailed explanation of Kubeflow Pipelines.
 
-# What are pipelines and how do they work?
+## What are pipelines and how do they work?
 
 A
 [_pipeline_](https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/)
@@ -65,7 +65,9 @@ At their core, each _component_ has:
 
 Each _component_ should be **single purpose**, **modular**, and **reusable**.
 
-# Define and run your first pipeline using the Python SDK
+# Setup
+
+## Define and run your first pipeline using the Python SDK
 
 While _pipelines_ and _components_ are defined in Kubeflow Pipelines by YAML
 files that use Docker images, that does not mean we have to work directly with
@@ -267,7 +269,7 @@ it all again.
     this example, but we could also do all this through the Kubeflow Pipelines
     UI above.
 
-# Understanding what computation occurs when
+## Understanding what computation occurs when
 
 The above example uses Python code to define:
 
@@ -430,9 +432,11 @@ _components_) are meant to be reusable definitions of logic that are defined in
 static YAML files, with all dynamic decision making done inside components. This
 can make them a little awkward to define, but also helps them be more reusable.
 
-# Data Exchange
+# Once you've got the basics ...
 
-## Passing data into, within, and from a pipeline
+## Data Exchange
+
+### Passing data into, within, and from a pipeline
 
 In the first example above, we pass:
 
@@ -494,7 +498,7 @@ At `compile` time, `avg_1.output` is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.
 
-## Passing Secrets
+### Passing Secrets
 
 Pipelines often need sensitive information (passwords, API keys, etc.) to
 operate. To keep these secure, these cannot be passed to a Kubeflow Pipeline
@@ -513,7 +517,7 @@ passed _by reference_ to the pipeline.
     If you need to use a secret in another namespace, you need to add it there
     manually.
 
-### Create a key-value store
+#### Create a key-value store
 
 The example below creates a key-value store called **elastic-credentials** which
 contains two key-value pairs:
@@ -529,14 +533,14 @@ kubectl create secret generic elastic-credentials \
     --from-literal=password="YOUR_PASSWORD"
 ```
 
-### Get an existing key-value store
+#### Get an existing key-value store
 
 ```bash
 # The secrets will be base64 encoded.
 kubectl get secret elastic-credentials
 ```
 
-### Mounting Kubernetes Secrets to Environment Variables in Container Operations
+#### Mounting Kubernetes Secrets to Environment Variables in Container Operations
 
 Once the secrets are defined in the project namespace, you can mount specific
 secrets as environment variables in your container using the Kubeflow SDK.
@@ -602,7 +606,7 @@ container_operation = dsl.ContainerOp(
     )
 ```
 
-## Parameterizing pipelines
+### Parameterizing pipelines
 
 Whenever possible, create pipelines in a generic way: define parameters that
 might change as pipeline inputs instead of writing values directly in your
@@ -665,9 +669,9 @@ Examples of this are also described in our
 [example notebooks](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage)
 (also found in `jupyter-notebooks/self-serve-storage/` on any notebook server).
 
-# Typical development patterns
+## Typical development patterns
 
-## End-to-end pipeline development
+### End-to-end pipeline development
 
 A typical pattern for building pipelines in Kubeflow Pipelines is:
 
@@ -685,7 +689,7 @@ Fundamentally, every component in Kubeflow Pipelines runs a container. Kubeflow
 Pipelines offers several methods to define these components with different
 levels of flexibility and complexity.
 
-### User-defined container components
+#### User-defined container components
 
 You can define tasks through custom Docker images. The design pattern for this
 is:
@@ -712,7 +716,7 @@ in Kubeflow Pipelines.
     future, but in interim see _Lightweight components_ for a way to develop
     pipelines without custom images"
 
-### Lightweight Python components
+#### Lightweight Python components
 
 While full custom containers offer great flexibility, sometimes they're heavier
 than needed. The Kubeflow Pipelines SDK also allows for
@@ -781,7 +785,7 @@ from Docker hub.
     your pipeline.
     ![A Kubeflow Pipeline](../images/kubeflow_pipelines_notebook_server_image.png)
 
-### Defining components directly in YAML
+#### Defining components directly in YAML
 
 Components can be defined directly with a YAML file, where the designer can run
 terminal commands from a given Docker image. This can be a great way to make
@@ -837,7 +841,7 @@ See
 [this example](https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb)
 for more details on using existing components.
 
-### Reusing existing components
+#### Reusing existing components
 
 Similar to well abstracted functions, well abstracted components can reduce the
 amount of code you have to write for any given project. For example, rather than
