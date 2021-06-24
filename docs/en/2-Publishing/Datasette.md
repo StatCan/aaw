@@ -34,14 +34,14 @@ You can even explore maps within the tool!
 
 ## Installing Datasette
 
-In your Jupyter Notebook, open a terminal window and run the command 'pip3 install datasette'.
+In your Jupyter Notebook, open a terminal window and run the command `pip3 install datasette`.
 ![Install Datasette](../images/InstallDatasette.PNG)
 
 ## Starting Datasette
 
 To view your own database in your Jupyter Notebook, create a file called start.sh
 in your project directory and copy the below code into it. Make the file executable
-'chmod +x start.sh'. Run the file with `./start.sh`. Access the web server
+using `chmod +x start.sh`. Run the file with `./start.sh`. Access the web server
 using the **base URL** with the port number you are using in the below file.
 
 **start.sh**
