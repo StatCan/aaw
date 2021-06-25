@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#explore-your-data-with-datasette" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -362,11 +362,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#explore-your-data-with-datasette" class="md-nav__link">
-    Explore your data with Datasette
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Explore your data with Datasette">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -382,9 +382,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    Video Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-datasette" class="md-nav__link">
+    Installing Datasette
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#starting-datasette" class="md-nav__link">
     Starting Datasette
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -646,11 +673,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#explore-your-data-with-datasette" class="md-nav__link">
-    Explore your data with Datasette
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Explore your data with Datasette">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -666,9 +693,36 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    Video Tutorial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-datasette" class="md-nav__link">
+    Installing Datasette
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#starting-datasette" class="md-nav__link">
     Starting Datasette
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -694,7 +748,7 @@
                 
                   <h1>Datasette</h1>
                 
-                <h2 id="explore-your-data-with-datasette">Explore your data with Datasette<a class="headerlink" href="#explore-your-data-with-datasette" title="Permanent link">&para;</a></h2>
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Datasette is an instant JSON API for your SQLite databases allowing you to
 explore the DB and run SQL queries in a more interactive way.</p>
 <p>You can find a list of example datasettes
@@ -715,10 +769,18 @@ queries.</p>
 <p><img alt="Preview Data" src="../../images/datasette-preview.png" /></p>
 <p>You can even explore maps within the tool!</p>
 <p><img alt="Run SQL Queries" src="../../images/datasette-sql.png" /></p>
-<h2 id="starting-datasette">Starting Datasette<a class="headerlink" href="#starting-datasette" title="Permanent link">&para;</a></h2>
-<p>To view your own database in your Jupyter Notebook, create the following bash
-file in your project directory and run with <code>./start.sh</code>. Access the web server
-using the <strong>base URL</strong> with the port number you are using in the below file.</p>
+<h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/OPVfBKouBT8?t=214" title="Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks"><img alt="Click here for the video" src="../../images/KubeflowVideo.PNG" /></a></p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="installing-datasette">Installing Datasette<a class="headerlink" href="#installing-datasette" title="Permanent link">&para;</a></h3>
+<p>In your Jupyter Notebook, open a terminal window and run the command
+<code>pip3 install datasette</code>. <img alt="Install Datasette" src="../../images/InstallDatasette.PNG" /></p>
+<h3 id="starting-datasette">Starting Datasette<a class="headerlink" href="#starting-datasette" title="Permanent link">&para;</a></h3>
+<p>To view your own database in your Jupyter Notebook, create a file called
+start.sh in your project directory and copy the below code into it. Make the
+file executable using <code>chmod +x start.sh</code>. Run the file with <code>./start.sh</code>.
+Access the web server using the <strong>base URL</strong> with the port number you are using
+in the below file.</p>
 <p><strong>start.sh</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
