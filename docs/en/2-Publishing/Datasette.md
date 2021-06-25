@@ -1,4 +1,4 @@
-# Explore your data with Datasette
+# Overview
 
 Datasette is an instant JSON API for your SQLite databases allowing you to
 explore the DB and run SQL queries in a more interactive way.
@@ -26,11 +26,24 @@ You can even explore maps within the tool!
 
 ![Run SQL Queries](../images/datasette-sql.png)
 
-# Starting Datasette
+# Video Tutorial
 
-To view your own database in your Jupyter Notebook, create the following bash
-file in your project directory and run with `./start.sh`. Access the web server
-using the **base URL** with the port number you are using in the below file.
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://youtu.be/OPVfBKouBT8?t=214 "Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks")
+
+# Getting Started
+
+## Installing Datasette
+
+In your Jupyter Notebook, open a terminal window and run the command
+`pip3 install datasette`. ![Install Datasette](../images/InstallDatasette.PNG)
+
+## Starting Datasette
+
+To view your own database in your Jupyter Notebook, create a file called
+start.sh in your project directory and copy the below code into it. Make the
+file executable using `chmod +x start.sh`. Run the file with `./start.sh`.
+Access the web server using the **base URL** with the port number you are using
+in the below file.
 
 **start.sh**
 
