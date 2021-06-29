@@ -103,6 +103,7 @@ The [MLFlow Operator](https://github.com/statcan/mlflow-operator) automates the 
 - https://github.com/StatCan/minio-operator // [[GitHub Action][github_action_minio_operator]]
 - https://github.com/StatCan/mlflow-operator // [[GitHub Action][github_action_mlflow_operator]]
 - https://github.com/StatCan/namespace-injector // [[GitHub Action][github_action_namespace_injector]]
+- https://github.com/StatCan/prob-notebook-controller // [[GitHub Action][github_action_prob_notebook_controller]]
 - https://github.com/StatCan/r-dashboards // [[GitHub Action][github_action_r_dashboards]]
 - https://github.com/StatCan/r-notebooks // [[GitHub Action][github_action_r_notebooks]]
 - https://github.com/StatCan/shiny // [[GitHub Action][github_action_shiny]]
@@ -136,6 +137,7 @@ The [MLFlow Operator](https://github.com/statcan/mlflow-operator) automates the 
 [github_action_minio_operator]:              https://github.com/StatCan/minio-operator/actions
 [github_action_mlflow_operator]:             https://github.com/StatCan/mlflow-operator/actions
 [github_action_namespace_injector]:          https://github.com/StatCan/namespace-injector/actions
+[github_action_prob_notebook_controller]:    https://github.com/StatCan/prob-notebook-controller/actions
 [github_action_r_dashboards]:                https://github.com/StatCan/r-dashboards/actions
 [github_action_r_notebooks]:                 https://github.com/StatCan/r-notebooks/actions
 [github_action_shiny]:                       https://github.com/StatCan/shiny/actions
