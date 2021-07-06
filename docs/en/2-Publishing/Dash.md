@@ -29,7 +29,9 @@ This is an example of a Layout With Figure and Slider from
 ![dash_plot](../images/plot.png)
 
 # Getting Started
+
 Open a terminal window in your Jupyter notebook and run the following commands:
+
 ```python
 # required installations if not already installed
 pip3 install dash==1.16.3
@@ -37,6 +39,7 @@ pip3 install pandas
 ```
 
 Create a file called app.py with the following content:
+
 ```python
 # app.py
 
