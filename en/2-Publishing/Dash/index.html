@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started-with-dash" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -350,11 +350,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started-with-dash" class="md-nav__link">
-    Getting Started with Dash!
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started with Dash!">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -362,18 +362,25 @@
     Data Visualization with Dash
   </a>
   
-    <nav class="md-nav" aria-label="Data Visualization with Dash">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#run-your-app" class="md-nav__link">
     Run your app
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -652,11 +659,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started-with-dash" class="md-nav__link">
-    Getting Started with Dash!
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Getting Started with Dash!">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -664,18 +671,25 @@
     Data Visualization with Dash
   </a>
   
-    <nav class="md-nav" aria-label="Data Visualization with Dash">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#run-your-app" class="md-nav__link">
     Run your app
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -706,10 +720,9 @@
                 
                   <h1>Dash</h1>
                 
-                <h2 id="getting-started-with-dash">Getting Started with Dash!<a class="headerlink" href="#getting-started-with-dash" title="Permanent link">&para;</a></h2>
-<p>For data visualization tools, we will be using Dash. Dash is a great tool used
-by many for data analysis, data exploration, visualization, modelling,
-instrument control, and reporting.</p>
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Dash is a great tool used by many for data analysis, data exploration,
+visualization, modelling, instrument control, and reporting.</p>
 <p>The following example demonstrates a highly reactive and customised Dash app
 with little code.</p>
 <!-- prettier-ignore -->
@@ -728,11 +741,14 @@ echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/<
 This is an example of a Layout With Figure and Slider from
 <a href="https://dash.plotly.com/basic-callbacks">Dash</a>.</p>
 <p><img alt="dash_plot" src="../../images/plot.png" /></p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>Open a terminal window in your Jupyter notebook and run the following commands:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># required installations if not already installed</span>
 <span class="n">pip3</span> <span class="n">install</span> <span class="n">dash</span><span class="o">==</span><span class="mf">1.16.3</span>
 <span class="n">pip3</span> <span class="n">install</span> <span class="n">pandas</span>
 </code></pre></div>
 
+<p>Create a file called app.py with the following content:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># app.py</span>
 
 <span class="c1">#!/usr/bin/env python3</span>
