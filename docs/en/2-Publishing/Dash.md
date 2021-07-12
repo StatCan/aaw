@@ -1,8 +1,7 @@
 # Overview
 
-Dash is a great tool used
-by many for data analysis, data exploration, visualization, modelling,
-instrument control, and reporting.
+Dash is a great tool used by many for data analysis, data exploration,
+visualization, modelling, instrument control, and reporting.
 
 The following example demonstrates a highly reactive and customised Dash app
 with little code.
