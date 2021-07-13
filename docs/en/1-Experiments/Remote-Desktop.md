@@ -25,8 +25,11 @@ _pip_, _conda_, _npm_ and _yarn_ are available to install various packages.
 ## Accessing the Remote Desktop
 
 To launch the Remote Desktop or any of its supporting tools, create a Notebook
-Server in [Kubeflow](./Kubeflow.md) and select one of the available versions in
-the image dropdown. Then, click `Connect` to be redirected to the Remote
+Server in [Kubeflow](./Kubeflow.md) and select the remote desktop option.
+
+![Remote Desktop](../images/RemoteDesktop.PNG)
+
+Once it has been created, click `Connect` to be redirected to the Remote
 Desktop.
 
 _Remote Desktop_ brings you to the Desktop GUI through a noVNC session. Click on
