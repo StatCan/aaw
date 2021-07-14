@@ -30,6 +30,9 @@ markdown_extensions:
   - codehilite
   - mdx_truly_sane_lists
   - pymdownx.details
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+      custom_checkbox: true
 
 extra:
   social:
