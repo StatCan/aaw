@@ -9,12 +9,9 @@ quick access to supporting tools. The operating system is
 
 ![Remote Desktop](../images/rd_desktop.png)
 
-## Versions
+## Geomatics
 
-Two versions of Remote Desktop are available. _R_ includes R and RStudio.
-_Geomatics_ extends _R_ with QGIS and various supporting libraries. You may
-further customize your Remote Desktop workspace to suit your specific needs and
-preferences.
+Our version of Remote Desktop is built on an R Geospatial image.
 
 ## Customization
 
