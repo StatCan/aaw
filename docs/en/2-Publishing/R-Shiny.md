@@ -1,9 +1,11 @@
-# Deploying your R-Shiny dashboard!
+# Overview
 
-We handle the R-Shiny server, and it's super easy to get your dashboard onto the
+R-Shiny is an R package that makes it easy to build interactive web apps in R. We handle the R-Shiny server, and it's super easy to get your dashboard onto the
 platform.
 
 ![Shiny Homepage](../images/readme/shiny_ui.png)
+
+# Setup
 
 ## Just send a pull request!
 
@@ -24,7 +26,9 @@ Issue and we will add the dependencies.
     [the source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard),
     and [see the dashboard live](https://shiny.covid.cloud.statcan.ca/bus-dashboard).
 
-# Embedding dashboards into your websites
+# Once you've got the basics ...
+
+## Embedding dashboards into your websites
 
 <!-- prettier-ignore -->
 !!! failure "Embedding dashboards in other sites"
