@@ -6,3 +6,4 @@ site
 yarn-error.log
 docs/dev/*
 !docs/dev/index.md
+yarn.lock
