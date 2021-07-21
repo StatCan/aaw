@@ -14,4 +14,5 @@ See some examples on our
 
 # Setup
 
-If you need help integrating with a platform as a service offering, we're happy to help!
+If you need help integrating with a platform as a service offering, we're happy
+to help!
