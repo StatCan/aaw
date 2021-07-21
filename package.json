@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "husky": "^4.2.5",
-    "markdown-spellcheck": "git://github.com/brendangadd/node-markdown-spellcheck.git#45cf81bfb56f298d0928461133aa9f264047dd49",
+    "markdown-spellcheck": "https://github.com/brendangadd/node-markdown-spellcheck.git#45cf81bfb56f298d0928461133aa9f264047dd49",
     "prettier": "2.3.2"
   }
 }
