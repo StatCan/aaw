@@ -41,8 +41,9 @@ for your team.
   underscores.**
 
 - You'll need to choose an image. Check the name of the images and choose one
-  that matches what you want to do.
-
+  that matches what you want to do. (Don't know which one to choose? Check out your options 
+  [here](./Selecting-an-Image.md).)
+  
 ![Choose an Image](../images/kubeflow_choose_an_image.png)
 
 - If you want to use a GPU, check if the image says `cpu` or `gpu`.
