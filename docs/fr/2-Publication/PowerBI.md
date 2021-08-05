@@ -1,3 +1,5 @@
+# Chargement des données dans Power BI
+
 Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos données
 dans Power BI à partir de notre système de stockage et les utiliser comme une
 fiche de données `pandas`.
