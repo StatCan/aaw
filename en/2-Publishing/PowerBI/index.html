@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loading-data-into-power-bi" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -374,11 +374,31 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#loading-data-into-power-bi" class="md-nav__link">
     Loading data into Power BI
   </a>
   
-    <nav class="md-nav" aria-label="Loading data into Power BI">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -387,14 +407,6 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#get-connected" class="md-nav__link">
-    Get connected
-  </a>
-  
-    <nav class="md-nav" aria-label="Get connected">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#set-up-power-bi" class="md-nav__link">
@@ -407,11 +419,6 @@
   <a href="#edit-your-python-script" class="md-nav__link">
     Edit your python script
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -666,11 +673,31 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#loading-data-into-power-bi" class="md-nav__link">
     Loading data into Power BI
   </a>
   
-    <nav class="md-nav" aria-label="Loading data into Power BI">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -679,14 +706,6 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#get-connected" class="md-nav__link">
-    Get connected
-  </a>
-  
-    <nav class="md-nav" aria-label="Get connected">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#set-up-power-bi" class="md-nav__link">
@@ -699,11 +718,6 @@
   <a href="#edit-your-python-script" class="md-nav__link">
     Edit your python script
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -734,18 +748,19 @@
                 
                   <h1>Power BI</h1>
                 
-                <h2 id="loading-data-into-power-bi">Loading data into Power BI<a class="headerlink" href="#loading-data-into-power-bi" title="Permanent link">&para;</a></h2>
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<h3 id="loading-data-into-power-bi">Loading data into Power BI<a class="headerlink" href="#loading-data-into-power-bi" title="Permanent link">&para;</a></h3>
 <p>We do not offer a Power BI server, but you can pull your data into Power BI from
 our Storage system, and use the data as a <code>pandas</code> data frame.</p>
 <p><img alt="Power BI Dashboard" src="../../images/powerbi_dashboard.png" /></p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="what-youll-need">What you'll need<a class="headerlink" href="#what-youll-need" title="Permanent link">&para;</a></h3>
 <ol>
 <li>A computer with Power BI, and Python 3.6</li>
 <li>Your MinIO <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> on hand. (See
    <a href="../..#storage">Storage</a>)</li>
 </ol>
-<h3 id="get-connected">Get connected<a class="headerlink" href="#get-connected" title="Permanent link">&para;</a></h3>
-<h4 id="set-up-power-bi">Set up Power BI<a class="headerlink" href="#set-up-power-bi" title="Permanent link">&para;</a></h4>
+<h3 id="set-up-power-bi">Set up Power BI<a class="headerlink" href="#set-up-power-bi" title="Permanent link">&para;</a></h3>
 <p>Open up your Power BI system, and open up this
 <a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">Power BI quick start</a>
 in your favourite text editor.</p>
@@ -755,7 +770,7 @@ that you're using the right Conda virtual environment (if applicable).</p>
 <p>You'll then need to make sure that Power BI is using the correct Python
 environment. This is modified from the options menu, and the exact path is
 specified in the quick start guide.</p>
-<h4 id="edit-your-python-script">Edit your python script<a class="headerlink" href="#edit-your-python-script" title="Permanent link">&para;</a></h4>
+<h3 id="edit-your-python-script">Edit your python script<a class="headerlink" href="#edit-your-python-script" title="Permanent link">&para;</a></h3>
 <p>Then, edit your Python script to use your MinIO <code>ACCESS_KEY</code> and <code>SECRET_KEY</code>,
 and then click "Get Data" and copy it in as a Python Script.</p>
 <p><img alt="Run your Python Script" src="../../images/powerbi_python.png" /></p>
