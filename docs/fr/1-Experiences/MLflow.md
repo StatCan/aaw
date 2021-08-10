@@ -1,4 +1,8 @@
-# MLflow pour le suivi de modèle
+# Aperçu
+
+<!-- prettier-ignore -->
+!!! danger "MLflow a été retiré du projet AAW.
+    Si vous en avez besoin, contactez l'équipe de développement"
 
 MLflow s'agit d'un plateforme libre pour la gestion du cycle de vie de
 l'apprentissage automatique. C'est un "registre de modèles" pour stocker vos

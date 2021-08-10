@@ -49,7 +49,6 @@ nav:
       - Jupyter: 1-Experiences/Jupyter.md
       - RStudio: 1-Experiences/RStudio.md
       - Bureau-Virtuel: 1-Experiences/Bureau-virtuel.md
-      - MLflow: 1-Experiences/MLflow.md
   - Publication:
       - R Shiny: 2-Publication/R-Shiny.md
       - Dash: 2-Publication/Dash.md
