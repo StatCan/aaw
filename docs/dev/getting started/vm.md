@@ -68,6 +68,8 @@ selectedmonitors:s:7,6
 
 ## Setting up Your Dev Environment
 
+- Install some common kubernetes tools with [this makefile](https://gist.github.com/blairdrummond/c147d67f78028f84f8b56a57dea337b5) (first do `sudo apt install jq make wget curl`)
+
 - Setup Docker on Windows using
   [this guide](https://docs.docker.com/docker-for-windows/wsl/)
 - Install VSCode
