@@ -7,7 +7,7 @@ need your work laptop for the following steps.**
 ## Getting your VM Created
 
 You will need to create a Jira issue to get your VM created. Use
-[this issue](https://jirab.statcan.ca/browse/CLOUD-9807)(open link on work laptop) as a template. Note that the W Number in the JIRA issue stands for the Workload ID which you need to provide for billing of your project.
+[this issue](https://jirab.statcan.ca/browse/CLOUD-9807)(open link on work laptop) as a template. Note that the WID Number in the JIRA issue stands for the Workload ID which you need to provide for billing of your project.
 
 <!-- prettier-ignore -->
 !!! Caution 
