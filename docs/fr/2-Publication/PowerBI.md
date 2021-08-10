@@ -1,4 +1,6 @@
+ Translation-of-the-changes-in-DAAAS-615
 # Aperçu 
+
 ## Chargement des données dans Power BI
 
 Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos données
