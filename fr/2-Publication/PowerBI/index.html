@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apercu" class="md-skip">
+        <a href="#chargement-des-donnees-dans-power-bi" class="md-skip">
           Aller au contenu
         </a>
       
@@ -386,22 +386,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apercu" class="md-nav__link">
-    Aperçu
-  </a>
-  
-    <nav class="md-nav" aria-label="Aperçu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#chargement-des-donnees-dans-power-bi" class="md-nav__link">
     Chargement des données dans Power BI
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -421,6 +408,14 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#connectez-vous" class="md-nav__link">
+    Connectez-vous
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectez-vous">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#configurez-power-bi" class="md-nav__link">
     Configurez Power BI
   </a>
@@ -431,6 +426,11 @@
   <a href="#modifiez-votre-script-python" class="md-nav__link">
     Modifiez votre script Python
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -589,22 +589,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apercu" class="md-nav__link">
-    Aperçu
-  </a>
-  
-    <nav class="md-nav" aria-label="Aperçu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#chargement-des-donnees-dans-power-bi" class="md-nav__link">
     Chargement des données dans Power BI
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -624,6 +611,14 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#connectez-vous" class="md-nav__link">
+    Connectez-vous
+  </a>
+  
+    <nav class="md-nav" aria-label="Connectez-vous">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#configurez-power-bi" class="md-nav__link">
     Configurez Power BI
   </a>
@@ -634,6 +629,11 @@
   <a href="#modifiez-votre-script-python" class="md-nav__link">
     Modifiez votre script Python
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -664,12 +664,10 @@
                 
                   <h1>Power BI</h1>
                 
-                <p>Translation-of-the-changes-in-DAAAS-615</p>
-<h2 id="apercu">Aperçu</h2>
-<h3 id="chargement-des-donnees-dans-power-bi">Chargement des données dans Power BI</h3>
+                <h2 id="chargement-des-donnees-dans-power-bi">Chargement des données dans Power BI</h2>
 <p>Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos données
 dans Power BI à partir de notre système de stockage et les utiliser comme une
-fiche de données <code>pandas</code>.</p>
+trame de données <code>pandas</code>.</p>
 <p><img alt="Tableau de bord sur Power BI" src="../../images/powerbi_dashboard.png" /></p>
 <h2 id="installation">Installation</h2>
 <h3 id="ce-dont-vous-aurez-besoin">Ce dont vous aurez besoin</h3>
@@ -677,7 +675,8 @@ fiche de données <code>pandas</code>.</p>
 <li>Un ordinateur avec Power BI et Python 3.6</li>
 <li>Vos <code>ACCESS_KEY</code> et <code>SECRET_KEY</code> MinIO (voir <a href="../../Stockage/">Stockage</a>)</li>
 </ol>
-<h3 id="configurez-power-bi">Configurez Power BI</h3>
+<h3 id="connectez-vous">Connectez-vous</h3>
+<h4 id="configurez-power-bi">Configurez Power BI</h4>
 <p>Ouvrez votre système Power BI et ouvrez
 <a href="https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py">démarrage rapide de Power BI</a>
 dans votre éditeur de texte préféré.</p>
@@ -687,7 +686,7 @@ utilisez le bon environnement virtuel Conda (le cas échéant).</p>
 <p>Ensuite, assurez-vous que Power BI utilise le bon environnement Python. Vous
 pouvez modifier cet élément à partir du menu des options. Le chemin d'accès
 exact est indiqué dans le guide de démarrage rapide.</p>
-<h3 id="modifiez-votre-script-python">Modifiez votre script Python</h3>
+<h4 id="modifiez-votre-script-python">Modifiez votre script Python</h4>
 <p>Ensuite, modifiez votre script Python pour utiliser vos <code>ACCESS_KEY</code> et
 <code>SECRET_KEY</code> MinIO, puis cliquez sur « Obtenir des données » et copiez-le en
 tant que script Python.</p>
