@@ -2,9 +2,11 @@
 
 Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos données
 dans Power BI à partir de notre système de stockage et les utiliser comme une
-fiche de données `pandas`.
+trame de données `pandas`.
 
 ![Tableau de bord sur Power BI](../images/powerbi_dashboard.png)
+
+# Installation
 
 ## Ce dont vous aurez besoin
 
