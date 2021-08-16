@@ -40,7 +40,7 @@ automatiquement approuvée.
 ## Traiter les données en utilisant les serveurs bloc-notes
 
 Dans [Kubeflow](1-Experiences/Kubeflow/), les
-**[Serveurs Bloc-Notes](1-Experiences/Jupyter/)** vous permet d'obtenir un
+**[Serveurs Bloc-Notes](1-Experiences/Jupyter.md)** vous permet d'obtenir un
 environnement de calcul interactif pour traiter les données. Tous les serveurs
 bloc-notes ont accès à un maximum de 15CPU/48GB RAM et à un stockage à l'échelle
 de GB/TB, mais ont une interface utilisateur différente selon la version que
@@ -65,54 +65,51 @@ préférez une expérience IDE complète.
 
 ### RStudio pour `R` et `Shiny`
 
-**[RStudio](1-Experiences/RStudio/)** vous offre un environnement de
+**[RStudio](1-Experiences/RStudio.md)** vous offre un environnement de
 développement intégré spécifiquement pour R. Si vous codez en R, c'est
 typiquement le serveur bloc-notes à utiliser. Utilisez l'image `rstudio` pour
 obtenir un environnement RStudio.
 
 ![RStudio](images/rstudio_visual.png)
 
-### Bureau virtuel pour les besoins informatiques généraux
+## Exécuter un bureau virtuel
 
 Pour une expérience de bureau Ubuntu complète, utilisez l'un de nos serveurs
-bloc-notes [`remote-desktop`](1-Experiences/Bureau-virtuel). Ceux-ci sont
-pré-chargés avec Python et R, mais sont livrés dans une expérience de bureau
-typique qui comprend également Firefox, VS Code et des outils Open Office.Si
-vous avez besoin d'outils de géomatique pour R, choisissez la version
-`remote-desktop-geomatics` de cette image.
-
-![capture d'écran du bureau virtuel](images/rd_desktop.png)
+bloc-notes [`remote-desktop`](1-Experiences/Bureau-virtuel).Vous pouvez exécuter
+un bureau Ubuntu complet, avec des applications typiques, directement dans votre
+navigateur, en utilisant
+[**Espace de travail ML**](1-Experiences/Bureau-virtuel.md)
 
 # Publication
 
 ## Construire et publier un tableau de bord interactif
 
-[![InteractiveDashboard](images/Publier.png)](/2-Publication/R-Shiny/) Utilisez
-**[R-Shiny](/2-Publication/R-Shiny/)** pour créer des applications web
-interactives directement à partir de R. Vous pouvez déployer votre tableau de
-bord R-Shiny en soumettant une requête de tirage à notre
+[![InteractiveDashboard](images/Publier.png)](./2-Publication/R-Shiny.md)
+Utilisez **[R-Shiny](./2-Publication/R-Shiny.md)** pour créer des applications
+web interactives directement à partir de R. Vous pouvez déployer votre tableau
+de bord R-Shiny en soumettant une requête de tirage à notre
 [dépôt GitHub R-Dashboards](https://github.com/StatCan/R-dashboards).
 ![R Shiny Server](images/readme/shiny_ui.png)
 
-**[Dash](/2-Publication/Dash/)** est un outil de visualisation de données qui
+**[Dash](./2-Publication/Dash.md)** est un outil de visualisation de données qui
 vous permet de construire une interface graphique interactive autour de votre
 code d'analyse de données.
 
 ## Explorer vos données
 
-[![Explorer vos Données](images/ExplorerDonnees.PNG)](/2-Publication/Datasette/)
-Utilisez **[Datasette](/2-Publication/Datasette/)** , une API JSON instantanée
-pour vos bases de données SQLite. Exécutez des requêtes SQL d'une manière plus
-interactive !
+[![Explorer vos Données](images/ExplorerDonnees.PNG)](./2-Publication/Datasette.md)
+Utilisez **[Datasette](./2-Publication/Datasette.md)** , une API JSON
+instantanée pour vos bases de données SQLite. Exécutez des requêtes SQL d'une
+manière plus interactive !
 
 # Pipelines
 
 ## Créer et planifier des pipelines de données/analyse
 
 [![Construire des Piplines](images/ConstruirePipelines.png)](/3-Pipelines/Kubeflow-Pipelines/)
-**[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** vous permet de mettre
-en place des pipelines. Chaque pipelines encapsulent des flux de production
-analytiques et peuvent être mis en commun, réutilisés et programmés.
+**[Kubeflow Pipelines](./3-Pipelines/Kubeflow-Pipelines.md)** vous permet de
+mettre en place des pipelines. Chaque pipelines encapsulent des flux de
+production analytiques et peuvent être mis en commun, réutilisés et programmés.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
 ![Intégrer avec PaaS](images/IntegrerPaaS.png)
@@ -126,9 +123,9 @@ Service (PaaS), telles que Databricks ou AzureML.
 
 ## Partage du code
 
-[![Share Code](images/PartagezVotreCode.png)](/Collaboration/) Utilise GitHub ou
-GitLab pour partager votre code avec les membres de votre équipe, ou demander
-pour un **[espace de travail partagé](/Collaboration/)** .
+[![Share Code](images/PartagezVotreCode.png)](./Collaboration.md) Utilise GitHub
+ou GitLab pour partager votre code avec les membres de votre équipe, ou demander
+pour un **[espace de travail partagé](./Collaboration.md)** .
 
 <!-- prettier-ignore -->
 !!! info "Demander de l'aide pour la production"
