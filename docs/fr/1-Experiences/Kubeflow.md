@@ -1,4 +1,4 @@
-# Démarrer avec Kubeflow
+# Aperçu
 
 ## Que fait Kubeflow?
 
@@ -16,124 +16,92 @@ votre équipe.
 
 ## Se connecter à Kubeflow
 
-- Connectez-vous au [portail Azure](https://portal.azure.com) **à l'aide de vos
-  justificatifs d'identité `@cloud.statcan.ca`**.
+# Didacticiel vidéo
+
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Espace de travail d'analyse avancée - Kubeflow")
+
+# Installation
+
+## Connectez-vous à Kubeflow
 
 <!-- prettier-ignore -->
-??? warning "Connectez-vous au portail Azure au moyen de vos justificatifs d'identité dans le nuage"
-    Vous devez vous connecter au portail Azure **au moyen de vos justificatifs
-    d'identité StatCan** : `prenom.nom@cloud.statcan.ca`. Vous pouvez le faire
-    ici [sur le portail Azure](https://portal.azure.com).
-    ![Portail Azure : choisissez l'adresse `@cloud.statcan.ca`](../images/azure-login.png)
+!!! avertissement "Connectez-vous au portail Azure à l'aide de vos identifiants cloud"
+    Vous devez vous connecter au portail azur ** en utilisant vos informations d'identification StatCan **.`first.lastname@cloud.statcan.ca`. Vous pouvez le faire en utilisant
+    [Portail Azure](https://portal.azure.com).
+    ![Azure Portal: Choisir l'adresse `@cloud.statcan.ca` ](../images/azure-login.png)
 
-- Après avoir ouvert une session dans Azure, connectez-vous à
-  [Kubeflow](https://kubeflow.covid.cloud.statcan.ca)
+- Se connecter à [Kubeflow](https://kubeflow.covid.cloud.statcan.ca)
 
-<!-- prettier-ignore -->
-??? failure « Pourquoi est-ce que je reçois le message `Paramètre URL manquant : code`? »
-    Si vous essayez de vous connecter à Kubeflow et que vous obtenez le message
+- Accédez à l'onglet Serveurs bloc-notes
 
-    > Paramètre URL manquant : code
+![Kubeflow gère les serveurs Jupyter](../images/readme/kubeflow_ui.png)
 
-    c'est parce que vous êtes connecté avec le mauvais compte Azure. Vous devez
-    vous connecter avec vos justificatifs d'identité dans le nuage.
-
-    ![Cela signifie que vous êtes dans le mauvais compte](../images/missing_parameter_code.png)
-
-- Allez à l'onglet des serveurs Jupyter
-
-![Kubeflow prend en charge les serveurs Jupyter](../images/readme/kubeflow_ui.png)
-
-- Cliquez ensuite sur **+ Nouveau serveur**.
+- Puis clique **+ Nouveau serveur**
 
 ## Configuration de votre serveur
 
-- Vous recevrez un modèle pour créer votre serveur de bloc-notes. **Nota :** Le
-  nom doit être en minuscules avec des tirets. **Pas d'espace ou de trait de
-  soulignement.**
+- Vous obtiendrez un modèle pour créer votre serveur de bloc-notes. **Remarque
+  :** le nom de votre serveur doit être en lettres minuscules avec des tirets.
+  **Pas d'espaces, et non souligne.**
 
-- **Vous devrez choisir une image** Vous voudrez probablement une image de :
-  - **Apprentissage automatique**
-  - **Géomatique**
-  - **Minime**
+- Vous devrez choisir une image. Vérifiez le nom des images et choisissez-en une
+  qui correspond à ce que tu veux faire. (Vous ne savez pas lequel choisir ?
+  Vérifiez vos options [ici](./Selecting-an-Image.md).)
 
 ![Choisissez une image](../images/kubeflow_choose_an_image.png)
 
-- Si vous voulez utiliser un processeur graphique (GPU), vérifiez si l'image
-  indique **CPU** ou **GPU**.
+- Si vous souhaitez utiliser un GPU, vérifiez si l'image indique `cpu` ou `gpu`.
 
-## Unité centrale (CPU) et mémoire vive
+## CPU et mémoire
 
-- Au moment de la rédaction du présent document (21 avril 2020), il y a deux
-  types d'ordinateurs dans la grappe :
+- Au moment de la rédaction (21 avril 2020), il existe deux types d'ordinateurs
+  dans la grappe
 
-  - **CPU :** `D16s_v3` (16 unités centrales virtuelles, mémoire vive de 64 Go)
-  - **GPU :** `NC6s_v3` (6 unités centrales virtuelles, mémoire vive de 112 Go,
-    1 carte graphiques)
+  - **CPU:** `D16s v3` (16 CPU , 64 G mémoire)
+  - **GPU:** `NC6s_v3` (6 CPU , 112 G mémoire, 1 GPU)
 
-  Pour cette raison, si vous demandez trop de mémoire vive ou trop de CPU, il
-  pourrait être difficile ou impossible de satisfaire votre demande.
+Pour cette raison, si vous demandez trop de RAM ou trop de processeurs, il peut
+être difficile ou impossible de satisfaire votre demande.
 
-  Il est possible que plus tard (peut-être lorsque vous lirez ceci), des
-  appareils plus puissants soient disponibles, et que les restrictions soient
-  moins strictes.
+À l'avenir (peut-être lorsque vous lisez ceci), il se peut que des machines plus
+grandes soient fabriquées disponibles, vous pouvez donc avoir des restrictions
+plus souples.
 
 <!-- prettier-ignore -->
-!!! note "Utilisez les GPU de manière responsable"
-    Il y a moins d'appareils avec GPU que d'appareils avec CPU, alors
-    utilisez-les de manière responsable.
+!!! note "Utilisez les machines GPU de manière responsable"
+    Il y a moins de machines GPU que de machines CPU, alors utilisez-les de manière responsable.
 
 ## Stockage de vos données
 
-- Vous voudrez créer un volume de données. Vous pouvez enregistrer votre travail
-  dans ce volume de données, et si vous éteignez votre serveur, vous pourrez
-  simplement remonter vos anciennes données en saisissant le nom de votre ancien
-  disque. **Il est important que vous vous souveniez du nom du volume.**
+-Vous aurez envie de créer un volume de données ! Vous pourrez enregistrer votre
+travail ici, et si vous éteignez votre serveur, vous pourrez simplement remonter
+vos anciennes données en entrant le nom de votre ancien disque. **Il est
+important que vous vous souveniez du nom du volume.**
 
 ![Créer un volume de données](../images/kubeflow_volumes.png)
 
 <!-- prettier-ignore -->
-!!! tip "Trouvez des anciens volumes en jetant un coup d'œil à l'option Existant"
-    Lorsque vous créez votre serveur, vous avez la possibilité de réutiliser un
-    ancien volume ou d'en créer un nouveau. Vous souhaiterez probablement
-    réutiliser votre ancien volume.
+!!! conseil "Vérifiez les anciens volumes en regardant l'option Existant"
+    Lorsque vous créez votre serveur vous avez la possibilité de réutiliser un ancien volume
+    ou en créer un nouveau. Vous souhaitez probablement réutiliser votre ancien volume.
 
-## Et... Créez!!!
+## Et... Créer!!!
 
-- Si vous êtes satisfait des paramètres, vous pouvez maintenant créer le
-  serveur! Il se peut que cela prenne quelques minutes pour se mettre en route,
-  selon les ressources que vous avez demandées. (Les GPU prennent plus de
-  temps.)
+- Si vous êtes satisfait des paramètres, vous pouvez maintenant créer le serveur
+  ! Cela pourrait prenez quelques minutes pour démarrer en fonction des
+  ressources que vous avez demandées. (GPU prendre plus de temps.)
 
 <!-- prettier-ignore -->
-!!! success "Votre serveur est en fonctionnement"
-    Si tout va bien, votre serveur devrait fonctionner! Vous aurez désormais
-    la possibilité de connecter et [d'essayer Jupyter.](/1-Experiences/Jupyter)
+!!! Succès "Votre serveur est en cours d'exécution"
+    Si tout se passe bien, votre serveur devrait fonctionner !!! Vous aurez maintenant le
+    possibilité de se connecter, et [essayer Jupyter!](/daaas/en/1-Experiments/Jupyter)
 
-# Partager votre espace de travail
+# Une fois que vous avez les bases...
 
-Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms**. Cet espace
-vous appartient, et toutes vous ressources s'y trouvent. Si vous souhaitez
-collaborer avec quelqu'un, vous devez partager un espace de noms. Pour ce faire,
-pouvez partager votre propre espace de noms ou, préférablement, **créer un
-espace de noms d'équipe**.
+## Partagez votre espace de travail
 
-## Créer un nouvel espace de noms partagé
-
-Le lien pour créer un nouvel espace de noms est ici :
-
-- à FAIRE, IL N'Y A PAS ENCORE DE LIEN. <!-- TODO -->
-
-## Gérer les contributeurs
-
-Vous pouvez ajouter ou supprimer des personnes d'un espace de noms que vous
-possédez à partir du menu **Gérer les contributeurs** dans Kubeflow.
-
-![Menu des contributeurs](../images/kubeflow_contributors.png)
-
-<!-- prettier-ignore -->
-!!! success "Vos collègues et vous pouvez maintenant partager l'accès à un serveur!"
-    Vous pouvez maintenant partager un serveur avec vos collègues! Essayez-le!
-
-**Pour plus de détails sur la collaboration avec le plateforme, voyez
-[Collaboration](/Collaboration).**
+Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient
+son travail (son serveurs de blocs-note, pipelines, disques, etc.). Votre espace
+de nom vous appartient, mais peut être partagé si vous souhaitez collaborer avec
+d'autres. **Pour plus de détails sur collaboration sur la plateforme, voir
+[Collaboration](../4-Collaboration/Overview.md).**
