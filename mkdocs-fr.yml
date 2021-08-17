@@ -60,6 +60,8 @@ nav:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
       - PaaS Integration: 3-Pipelines/PaaS.md
       - Model Serving: 3-Pipelines/Serving.md
-  - Collaboration: Collaboration.md
-  - Stockage: Stockage.md
+  - Stockage:
+      - Aperçu: 5-Stockage/Aperçu.md
+      - MinIo: 5-Stockage/MinIo.md
+      - Disque: 5-Stockage/Disque.md
   - Aide/Contactez-nous: Aide.md
