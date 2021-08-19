@@ -88,7 +88,7 @@ navigateur, en utilisant
 Utilisez **[R-Shiny](./2-Publication/R-Shiny.md)** pour créer des applications
 web interactives directement à partir de R. Vous pouvez déployer votre tableau
 de bord R-Shiny en soumettant une requête de tirage à notre
-[dépôt GitHub R-Dashboards](https://github.com/statcan/R-dashboards).
+[dépôt GitHub R-Dashboards](https://github.com/StatCan/R-dashboards).
 ![R Shiny Server](images/readme/shiny_ui.png)
 
 **[Dash](./2-Publication/Dash.md)** est un outil de visualisation de données qui

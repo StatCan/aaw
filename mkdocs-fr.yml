@@ -6,8 +6,8 @@ copyright: Copyright &copy; 2020 Statistics Canada
 docs_dir: docs/fr
 site_dir: site/fr
 
-repo_name: statcan/daaas
-repo_url: https://github.com/statcan/daaas
+repo_name: StatCan/daaas
+repo_url: https://github.com/StatCan/daaas
 edit_uri: edit/master/docs/fr
 
 plugins:
@@ -37,7 +37,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/statcan/daaas
+      link: https://github.com/StatCan/daaas
     - icon: fontawesome/brands/slack
       link: https://statcan-eaa.slack.com
 

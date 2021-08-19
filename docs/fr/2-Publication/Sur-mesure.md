@@ -10,7 +10,7 @@ Flask, Dash).
 !!! info "Voir le code de source de cette application"
     Nous intégrons ces types d'applications au serveur au moyen de GitHub. La
     source de l'application ci-dessus est ici :
-    [`statcan/covid19`](https://github.com/statcan/covid19).
+    [`StatCan/covid19`](https://github.com/StatCan/covid19).
 
 # Comment faire héberger votre application
 
