@@ -144,7 +144,7 @@ Now open the [MinIO Web Portal](#minio-web-portal) or browse to
 <!-- prettier-ignore -->
 ??? tip "See the example notebooks!"
     There is a template provided for connecting in `R`, `python`, or by the
-    command line, provided in [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage) (also auto-mounted to all jupyter notebook servers in `~/jupyter-notebook`). You can
+    command line, provided in [jupyter-notebooks/self-serve-storage](https://github.com/statcan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage) (also auto-mounted to all jupyter notebook servers in `~/jupyter-notebook`). You can
     copy-paste and edit these examples! They should suit most of your needs.
 
 ## MinIO Python client
@@ -189,7 +189,7 @@ MinIO is S3 compliant - it uses the same standard as Amazon S3 and other bucket
 services. Tools designed to use S3 will generally also work with MinIO, for
 example Python packages and instructions on how to access files from S3. Some
 examples of this are shown in
-[jupyter-notebooks/self-serve-storage](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage).
+[jupyter-notebooks/self-serve-storage](https://github.com/statcan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage).
 
 ## Sharing from Private Buckets
 

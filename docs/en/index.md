@@ -61,7 +61,7 @@ browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
 [![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
 Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight
 from R. You can deploy your R-Shiny dashboard by submitting a pull request to
-our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
+our [R-Dashboards GitHub repository](https://github.com/statcan/R-dashboards).
 ![R Shiny Server](images/readme/shiny_ui.png)
 
 **[Dash](/2-Publishing/Dash/)** is a data visualization tool that lets you build

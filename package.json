@@ -1,10 +1,10 @@
 {
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/StatCan/daaas.git"
+    "url": "git+https://github.com/statcan/daaas.git"
   },
   "bugs": {
-    "url": "https://github.com/StatCan/daaas/issues"
+    "url": "https://github.com/statcan/daaas/issues"
   },
   "homepage": "https://statcan.github.io/daaas/",
   "husky": {

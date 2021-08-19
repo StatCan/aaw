@@ -24,7 +24,7 @@ interagir avec les pipelines Kubeflow par l'entremise :
 ??? exemple "Des exemples supplémentaires dans les bloc-notes"
     Des exemples plus exhaustifs de pipelines produits expressément pour cette
     plateforme sont accessibles dans
-    [GitHub](https://github.com/StatCan/aaw-contrib-jupyter-notebooks) (et dans chaque
+    [GitHub](https://github.com/statcan/aaw-contrib-jupyter-notebooks) (et dans chaque
     serveur de bloc-notes à `/jupyter-notebooks`). Vous pouvez également
     consulter des sources publiques.
 
@@ -87,7 +87,7 @@ exemple :
             _average_op = average_op(outputs)
 
     Vous pouvez trouver le pipeline complet dans
-    [l'exemple `map-reduce-pipeline`](https://github.com/StatCan/aaw-contrib-jupyter-notebooks).
+    [l'exemple `map-reduce-pipeline`](https://github.com/statcan/aaw-contrib-jupyter-notebooks).
 
 # Définir et exécuter votre premier pipeline
 
@@ -96,7 +96,7 @@ YAML, la trousse
 [SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/) en Python vous
 permet de les définir à partir du code Python. Voici un exemple de définition
 d'un
-[pipeline simple](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb)
+[pipeline simple](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb)
 en utilisant la trousse SDK en Python.
 
 L'objectif de notre pipeline est de calculer, au moyen de cinq nombres, les

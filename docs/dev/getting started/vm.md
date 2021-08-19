@@ -10,7 +10,7 @@ You will need to create a Jira issue to get your VM created. Use
 [this issue](https://jirab.statcan.ca/browse/CLOUD-9807)(open link on work laptop) as a template. Note that the WID Number in the JIRA issue stands for the Workload ID which you need to provide for billing of your project.
 
 <!-- prettier-ignore -->
-!!! Caution 
+!!! Caution
     Double-check with your supervisor on the size of the VM
 
 ## Connecting to your VM
@@ -64,7 +64,7 @@ selectedmonitors:s:7,6
 - Use
   [this guide](https://autoize.com/xfce4-desktop-environment-and-x-server-for-ubuntu-on-wsl-2/)
 - Take a look at Step 3 of
-  [this guide](https://github.com/StatCan/daaas/issues/540)
+  [this guide](https://github.com/statcan/daaas/issues/540)
 - Go to "Window Manager Tweaks" in XFCE and disable the compositor. The UI will be much faster.
 
 ## Setting up Your Dev Environment

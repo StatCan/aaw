@@ -11,7 +11,7 @@ container. For instance, Node.js apps, Flask or Dash apps. Etc.
 !!! info "See the source code for this app"
     We just push these kinds of applications through GitHub into the server. The
     source for the above app is
-    [`StatCan/covid19`](https://github.com/StatCan/covid19)
+    [`statcan/covid19`](https://github.com/statcan/covid19)
 
 # Setup
 
