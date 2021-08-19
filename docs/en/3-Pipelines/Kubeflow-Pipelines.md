@@ -26,7 +26,7 @@ interacted with through:
 <!-- prettier-ignore -->
 ??? example "More examples in the notebooks"
     More comprehensive pipeline examples specifically made for this platform are
-    available on [GitHub](https://github.com/statcan/aaw-contrib-jupyter-notebooks) (and in
+    available on [GitHub](https://github.com/StatCan/aaw-contrib-jupyter-notebooks) (and in
     every Notebook Server at `/jupyter-notebooks`). You can also check out
     [public sources](https://github.com/kubeflow/pipelines/tree/master/samples).
 
@@ -77,7 +77,7 @@ provides a way for us to define our _pipeline_ and _components_ directly in
 Python code, where the SDK then translates our Python code to YAML files for us.
 
 For our first example, let's define a
-[simple pipeline](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb)
+[simple pipeline](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb)
 using only the Python SDK. The purpose of this section is to give a high level
 view of _component_ and _pipeline_ authoring, not a deep dive. More detailed
 looks into defining your own _components_, passing data between _components_,
@@ -105,7 +105,7 @@ Kubeflow Pipelines where it is.
 
 <!-- prettier-ignore -->
 ??? info "Full details of the `average` component's Docker image are in
-    [GitHub](https://github.com/statcan/aaw-contrib-jupyter-notebooks/tree/master/kfp-basics/containers/average)"
+    [GitHub](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/kfp-basics/containers/average)"
     This image effectively runs the following code (slightly cleaned up for
     brevity).  By making `average.py` accept an arbitrary set of numbers as
     inputs, we can use the same `average` _component_ for all steps in our
@@ -614,7 +614,7 @@ Python code. For example, if you want a pipeline to process data from
 `minimal-tenant/john-smith/data1.csv`, don't hard code that path - instead,
 accept it as a pipeline parameter. This way you can call the same pipeline
 repeatedly by passing it the data location as an argument. You can
-[see this approach in our example notebooks](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb),
+[see this approach in our example notebooks](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb),
 where we accept MinIO credentials and the location to store our results as
 pipeline parameters.
 
@@ -666,7 +666,7 @@ def my_blobby_pipeline(path_to_numbers_1, path_to_numbers_2, path_for_output):
 Within this platform, the primary method for persisting large files is through
 MinIO as described in our [_Storage_ documentation](../index.md#storage).
 Examples of this are also described in our
-[example notebooks](https://github.com/statcan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage)
+[example notebooks](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage)
 (also found in `jupyter-notebooks/self-serve-storage/` on any notebook server).
 
 ## Typical development patterns
@@ -760,14 +760,14 @@ Python code inside the provided base image (`python:3.8.3-buster`). This lets
 use avoid building every time we change our code. The base image can be anything
 accessible by Kubeflow, which includes all images in the Azure Container
 Registry and any
-[whitelisted images](https://github.com/statcan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml)
+[whitelisted images](https://github.com/StatCan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml)
 from Docker hub.
 
 <!-- prettier-ignore -->
 ??? danger "Lightweight components have a number of advantages but also some drawbacks"
-    See [this description](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb)
+    See [this description](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb)
     of their basic characteristics, as well as
-    [this example](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb)
+    [this example](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb)
     which uses them in a more complex pipeline
 
 <!-- prettier-ignore -->
@@ -838,7 +838,7 @@ def my_pipeline():
 ```
 
 See
-[this example](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb)
+[this example](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb)
 for more details on using existing components.
 
 #### Reusing existing components
@@ -850,5 +850,5 @@ resulting model to MinIO, you can instead have `train_model` return the model
 and then Kubeflow Pipelines can pass the model to a reusable `copy_to_minio`
 component. This reuse pattern applies to components defined through any means
 (containers, lightweight, or YAML).
-[Take a look at our example notebook](https://github.com/statcan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb),
+[Take a look at our example notebook](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb),
 which reuses provided components for simple file IO tasks.

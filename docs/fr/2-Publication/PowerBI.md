@@ -18,7 +18,7 @@ trame de données `pandas`.
 ### Configurez Power BI
 
 Ouvrez votre système Power BI et ouvrez
-[démarrage rapide de Power BI](https://raw.githubusercontent.com/statcan/aaw-contrib-jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
+[démarrage rapide de Power BI](https://raw.githubusercontent.com/StatCan/aaw-contrib-jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
 dans votre éditeur de texte préféré.
 
 Assurez-vous que `pandas`, `boto3` et `numpy` sont installés et que vous

@@ -54,7 +54,7 @@ in the below file.
 # that you can use it within kubeflow.
 
 # Get an example database
-wget https://github.com/statcan/aaw-contrib-r-notebooks/raw/master/database-connections/latin_phrases.db
+wget https://github.com/StatCan/aaw-contrib-r-notebooks/raw/master/database-connections/latin_phrases.db
 
 # If you have your own database, you can change this line!
 DATABASE=latin_phrases.db

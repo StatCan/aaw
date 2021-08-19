@@ -64,7 +64,7 @@ selectedmonitors:s:7,6
 - Use
   [this guide](https://autoize.com/xfce4-desktop-environment-and-x-server-for-ubuntu-on-wsl-2/)
 - Take a look at Step 3 of
-  [this guide](https://github.com/statcan/daaas/issues/540)
+  [this guide](https://github.com/StatCan/daaas/issues/540)
 - Go to "Window Manager Tweaks" in XFCE and disable the compositor. The UI will be much faster.
 
 ## Setting up Your Dev Environment

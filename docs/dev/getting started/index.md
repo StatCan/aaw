@@ -22,8 +22,8 @@ understanding everything is alright as long as you have some idea.
 
 ## Good Starter GitHub Repos to Explore
 
-- [Kubeflow Manifest](https://github.com/statcan/aaw-kubeflow-manifest)
-- [Kubeflow Containers](https://github.com/statcan/aaw-kubeflow-containers)
+- [Kubeflow Manifest](https://github.com/StatCan/aaw-kubeflow-manifest)
+- [Kubeflow Containers](https://github.com/StatCan/aaw-kubeflow-containers)
 
 <!-- prettier-ignore -->
 !!! Attention
