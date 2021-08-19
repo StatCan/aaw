@@ -8,7 +8,7 @@ integrate with many _Platform as a Service_ (PaaS) offerings, such as
 [Databricks](https://azure.microsoft.com/en-ca/services/databricks/).
 
 See some examples on our
-["MLOps" github Repo](https://github.com/statcan/kubeflow-mlops).
+["MLOps" github Repo](https://github.com/statcan/aaw-kubeflow-mlops).
 
 ![PaaS](../images/PaaS.png)
 

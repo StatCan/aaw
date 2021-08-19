@@ -8,7 +8,7 @@ You can find a list of example datasettes
 
 <!-- prettier-ignore -->
 !!! faq "The Datasette Ecosystem"
-    There are all sorts of tools for converting data to and from sqlite 
+    There are all sorts of tools for converting data to and from sqlite
     [here](https://docs.datasette.io/en/stable/ecosystem.html). For example,
     you can load shapefiles into sqlite, or create [Vega](https://vega.github.io/vega/)
     plots from a sqlite database. SQLite works well with `R`, `Python`, and many other tools.
@@ -54,7 +54,7 @@ in the below file.
 # that you can use it within kubeflow.
 
 # Get an example database
-wget https://github.com/StatCan/R-notebooks/raw/master/database-connections/latin_phrases.db
+wget https://github.com/StatCan/aaw-contrib-r-notebooks/raw/master/database-connections/latin_phrases.db
 
 # If you have your own database, you can change this line!
 DATABASE=latin_phrases.db
