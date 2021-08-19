@@ -74,7 +74,7 @@ de nouvelles trousses.**
 <!-- prettier-ignore -->
 ??? warning "Y a-t-il quelque chose que vous ne pouvez pas installer?"
     Si vous avez besoin d'installer quelque chose, communiquez avec nous
-    ou [ouvrir une question GitHub](https://github.com/StatCan/aaw-kubeflow-containers).
+    ou [ouvrir une question GitHub](https://github.com/statcan/aaw-kubeflow-containers).
     Nous pouvons l'ajouter au logiciel par défaut.
 
 # Une fois que vous avez les bases ...

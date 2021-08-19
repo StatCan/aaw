@@ -71,7 +71,7 @@ available.**
 <!-- prettier-ignore -->
 ??? tip "Is there something that you can't install?"
     If you need something installed, reach us or
-    [open a GitHub issue](https://github.com/StatCan/aaw-kubeflow-containers). We
+    [open a GitHub issue](https://github.com/statcan/aaw-kubeflow-containers). We
     can add it to the default software.
 
 # Once you've got the basics ...
