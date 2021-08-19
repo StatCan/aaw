@@ -25,10 +25,9 @@ les sections ci-dessous
 ## Partager le code entre les membres de l'équipe
 
 Dans la plupart des cas, il est plus facile de partager du code en utilisant
-GitHub ou GitLab pour partager du code. L'avantage du partage avec GitHub ou
-GitLab est que cela fonctionne avec les utilisateurs à travers les espaces de
-noms, et conserver le code dans github est un excellent moyen de gérer de
-grandes projets logiciels.
+GitHub ou GitLab. L'avantage du partage avec GitHub ou GitLab est que cela
+fonctionne avec les utilisateurs à travers les espaces de noms, et conserver le
+code dans github est un excellent moyen de gérer de grands projets logiciels.
 
 <!-- prettier-ignore -->
 ??? note "N'oubliez pas d'inclure une licence !"
@@ -38,14 +37,14 @@ Si vous devez partager du code sans le publier sur un
 référentiel,[ partager un espace de nom](#share-compute-namespace-in-kubeflow))
 pourrait aussi fonctionner.
 
-## Partager le calcul (espace de noms) dans Kubeflow
+## Partager le calcul (espace de nom) dans Kubeflow
 
 <!-- prettier-ignore -->
-!!! danger "Partager un espace de noms signifie que vous partagez **toutes les choses**  
+!!! danger "Partager un espace de nom signifie que vous partagez **toutes les choses**  
     dans l'espace de nom".
-    Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un compartiment MinIO, etc.), mais plutôt le partage de **tous** ressources. Si vous souhaitez partager un serveur Jupyter Carnet note avec quelqu'un, vous devez partager l'intégralité de votre espace de noms et **ils auront accès à toutes les autres ressources (compartiment MinIO, etc.)**.
+    Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un compartiment MinIO, etc.), mais plutôt le partage de **tous** ressources. Si vous souhaitez partager un serveur Jupyter Carnet note avec quelqu'un, vous devez partager l'intégralité de votre espace de nom et **ils auront accès à toutes les autres ressources (compartiment MinIO, etc.)**.
 
-Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient
+Dans Kubeflow, chaque utilisateur dispose d'un **espace de nom** qui contient
 son travail (son serveur de Carnets notes, pipelines, disques, etc.). Votre
 espace de nom vous appartient, mais peut être partagé si vous voulez collaborer
 avec d'autres. Vous pouvez aussi
@@ -53,9 +52,9 @@ avec d'autres. Vous pouvez aussi
 pour partager avec une équipe). Une option de collaboration consiste à partager
 des espaces de noms avec les autres.
 
-L'avantage de partager un espace de noms Kubeflow est qu'il vous permet, ainsi
-qu'à votre collègues partagent l'environnement de calcul et les compartiments
-MinIO associés au espace de noms. Cela en fait un moyen très simple et libre de
+L'avantage de partager un espace de nom Kubeflow est qu'il vous permet, ainsi
+qu'à vos collègues partagent l'environnement de calcul et les compartiments
+MinIO associés au espace de nom. Cela en fait un moyen très simple et libre de
 partager.
 
 <!-- prettier-ignore -->
@@ -64,7 +63,7 @@ partager.
 
 ## Partager des données
 
-Une fois que vous avez un espace de noms partagé, vous avez deux approches de
+Une fois que vous avez un espace de nom partagé, vous avez deux approches de
 stockage partagé
 
 | Possibilité de stockage                                       | Avantages                                                                                      |
@@ -91,7 +90,7 @@ Tout utilisateur **connecté** peut voir ces fichiers et les lire librement.
 ### Partage avec le monde
 
 Renseignez-vous sur celui-ci dans notre
-[chaîne Slack](https://statcan-aaw.slack.com). Là Il existe de nombreuses façons
+[chaîne Slack](https://statcan-aaw.slack.com). Là il existe de nombreuses façons
 de le faire du côté informatique, mais il est important que cela aille par des
 processus appropriés, de sorte que cela ne se fait pas de manière «
 libre-service » que d'autres sont. Cela dit, c'est tout à fait possible.
@@ -104,7 +103,7 @@ fichiers) tout en gardant votre code organisé et suivi
 
 ## Gestion des contributeurs
 
-Vous pouvez ajouter ou supprimer des personnes d'un espace de noms que vous
+Vous pouvez ajouter ou supprimer des personnes d'un espace de nom que vous
 possédez déjà via le Menu **Gérer les contributeurs** dans Kubeflow.
 
 ![Contributors Menu](../images/kubeflow_contributors.png)
