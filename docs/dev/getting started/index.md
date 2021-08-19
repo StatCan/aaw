@@ -22,11 +22,11 @@ understanding everything is alright as long as you have some idea.
 
 ## Good Starter GitHub Repos to Explore
 
-- [Kubeflow Manifest](https://github.com/StatCan/kubeflow-manifest)
-- [Kubeflow Containers](https://github.com/StatCan/kubeflow-containers)
+- [Kubeflow Manifest](https://github.com/StatCan/aaw-kubeflow-manifest)
+- [Kubeflow Containers](https://github.com/StatCan/aaw-kubeflow-containers)
 
 <!-- prettier-ignore -->
-!!! Attention 
+!!! Attention
     Everything below will require your work laptop; if you don't have your work laptop yet, keep training
 
 ## Setup
@@ -44,7 +44,7 @@ understanding everything is alright as long as you have some idea.
 - [ ] You should be part of the Discord Servers
 
 <!-- prettier-ignore -->
-!!! Missing 
+!!! Missing
     If you are missing any of the above, let your supervisor know
 
 ## TMS
@@ -65,7 +65,7 @@ do it every day or even just every Friday. **Make sure to log your hours.**
 ## Running into Issues
 
 If you happen to run into any problems, ask your supervisor or co-workers for
-help.  
+help.
 <strong>Consider consulting the diagram below.</strong>
 ![Placeholder](images/diagram.png)
 
@@ -78,5 +78,5 @@ help.
 [Glossary](https://confluence.statcan.ca/display/DAaaS/Glossary)
 
 <!-- prettier-ignore -->
-!!! Hint 
+!!! Hint
     You will need your work laptop to open the links.

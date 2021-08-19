@@ -25,7 +25,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.1 @ [statcan/kubeflow-containers](https://github.com/statcan/kubeflow-containers/releases/tag/v1.0.1)
+## v1.0.1 @ [statcan/aaw-kubeflow-containers](https://github.com/statcan/aaw-kubeflow-containers/releases/tag/v1.0.1)
 
 Features / Updates:
 
@@ -37,7 +37,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.1 @ [statcan/kubeflow-manifest](https://github.com/statcan/kubeflow-manifest/releases/tag/v1.0.1)
+## v1.0.1 @ [statcan/aaw-kubeflow-manifest](https://github.com/statcan/aaw-kubeflow-manifest/releases/tag/v1.0.1)
 
 Features / Updates:
 
@@ -56,7 +56,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.0 @ [statcan/kubeflow-mlops](https://github.com/statcan/kubeflow-mlops/releases/tag/v1.0.0)
+## v1.0.0 @ [statcan/aaw-kubeflow-mlops](https://github.com/statcan/aaw-kubeflow-mlops/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -66,7 +66,7 @@ Features / Updates:
 
 > **Note**: Right now the pipeline is executing as a specialized user, looking into how to paramterize to Users namespace on CI run
 
-## v1.0.0 @ [statcan/kubeflow-containers](https://github.com/statcan/kubeflow-containers/releases/tag/v1.0.0)
+## v1.0.0 @ [statcan/aaw-kubeflow-containers](https://github.com/statcan/aaw-kubeflow-containers/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -80,7 +80,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.0 @ [statcan/kubeflow-manifest](https://github.com/statcan/kubeflow-manifest/releases/tag/v1.0.0)
+## v1.0.0 @ [statcan/aaw-kubeflow-manifest](https://github.com/statcan/aaw-kubeflow-manifest/releases/tag/v1.0.0)
 
 Features / Updates:
 

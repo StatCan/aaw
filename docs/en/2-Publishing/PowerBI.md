@@ -13,11 +13,11 @@ our Storage system, and use the data as a `pandas` data frame.
 1. A computer with Power BI, and Python 3.6
 2. Your MinIO `ACCESS_KEY` and `SECRET_KEY` on hand. (See
    [Storage](../index.md#storage))
-   
+
 ## Set up Power BI
 
 Open up your Power BI system, and open up this
-[Power BI quick start](https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
+[Power BI quick start](https://raw.githubusercontent.com/StatCan/aaw-contrib-jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
 in your favourite text editor.
 
 You'll have to make sure that `pandas`, `boto3`, and `numpy` are installed, and
