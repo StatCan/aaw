@@ -130,13 +130,13 @@
     
       <div class="md-header-nav__source">
         
-<a href="https://github.com/statcan/daaas/" title="Go to repository" class="md-source">
+<a href="https://github.com/StatCan/daaas/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    statcan/daaas
+    StatCan/daaas
   </div>
 </a>
       </div>
@@ -171,13 +171,13 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/statcan/daaas/" title="Go to repository" class="md-source">
+<a href="https://github.com/StatCan/daaas/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    statcan/daaas
+    StatCan/daaas
   </div>
 </a>
     </div>
@@ -1008,7 +1008,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/statcan/daaas/edit/master/docs/en/3-Pipelines/Kubeflow-Pipelines.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/StatCan/daaas/edit/master/docs/en/3-Pipelines/Kubeflow-Pipelines.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1042,7 +1042,7 @@ interacted with through:</p>
 </ul>
 <!-- prettier-ignore -->
 <details class="example"><summary>More examples in the notebooks</summary><p>More comprehensive pipeline examples specifically made for this platform are
-available on <a href="https://github.com/StatCan/jupyter-notebooks">GitHub</a> (and in
+available on <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks">GitHub</a> (and in
 every Notebook Server at <code>/jupyter-notebooks</code>). You can also check out
 <a href="https://github.com/kubeflow/pipelines/tree/master/samples">public sources</a>.</p>
 </details>
@@ -1086,7 +1086,7 @@ either YAML files or Docker images. The
 provides a way for us to define our <em>pipeline</em> and <em>components</em> directly in
 Python code, where the SDK then translates our Python code to YAML files for us.</p>
 <p>For our first example, let's define a
-<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb">simple pipeline</a>
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/average_with_docker_components.ipynb">simple pipeline</a>
 using only the Python SDK. The purpose of this section is to give a high level
 view of <em>component</em> and <em>pipeline</em> authoring, not a deep dive. More detailed
 looks into defining your own <em>components</em>, passing data between <em>components</em>,
@@ -1112,7 +1112,7 @@ don't know Docker - since the image is built already, we only have to tell
 Kubeflow Pipelines where it is.</p>
 <!-- prettier-ignore -->
 <p>??? info "Full details of the <code>average</code> component's Docker image are in
-    <a href="https://github.com/StatCan/jupyter-notebooks/tree/master/kfp-basics/containers/average">GitHub</a>"
+    <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/kfp-basics/containers/average">GitHub</a>"
     This image effectively runs the following code (slightly cleaned up for
     brevity).  By making <code>average.py</code> accept an arbitrary set of numbers as
     inputs, we can use the same <code>average</code> <em>component</em> for all steps in our
@@ -1560,7 +1560,7 @@ Python code. For example, if you want a pipeline to process data from
 <code>minimal-tenant/john-smith/data1.csv</code>, don't hard code that path - instead,
 accept it as a pipeline parameter. This way you can call the same pipeline
 repeatedly by passing it the data location as an argument. You can
-<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">see this approach in our example notebooks</a>,
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">see this approach in our example notebooks</a>,
 where we accept MinIO credentials and the location to store our results as
 pipeline parameters.</p>
 <h3 id="passing-complexlarge-data-tofrom-a-pipeline">Passing complex/large data to/from a pipeline<a class="headerlink" href="#passing-complexlarge-data-tofrom-a-pipeline" title="Permanent link">&para;</a></h3>
@@ -1608,7 +1608,7 @@ pattern would be:</p>
 <p>Within this platform, the primary method for persisting large files is through
 MinIO as described in our <a href="../..#storage"><em>Storage</em> documentation</a>.
 Examples of this are also described in our
-<a href="https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage">example notebooks</a>
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage">example notebooks</a>
 (also found in <code>jupyter-notebooks/self-serve-storage/</code> on any notebook server).</p>
 <h3 id="typical-development-patterns">Typical development patterns<a class="headerlink" href="#typical-development-patterns" title="Permanent link">&para;</a></h3>
 <h4 id="end-to-end-pipeline-development">End-to-end pipeline development<a class="headerlink" href="#end-to-end-pipeline-development" title="Permanent link">&para;</a></h4>
@@ -1692,9 +1692,9 @@ Registry and any
 <a href="https://github.com/StatCan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml">whitelisted images</a>
 from Docker hub.</p>
 <!-- prettier-ignore -->
-<details class="danger"><summary>Lightweight components have a number of advantages but also some drawbacks</summary><p>See <a href="https://github.com/StatCan/jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a>
+<details class="danger"><summary>Lightweight components have a number of advantages but also some drawbacks</summary><p>See <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a>
 of their basic characteristics, as well as
-<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb">this example</a>
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb">this example</a>
 which uses them in a more complex pipeline</p>
 </details>
 <!-- prettier-ignore -->
@@ -1759,7 +1759,7 @@ then define a component in python from this YAML:</p>
 </code></pre></div>
 
 <p>See
-<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">this example</a>
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">this example</a>
 for more details on using existing components.</p>
 <h5 id="reusing-existing-components">Reusing existing components<a class="headerlink" href="#reusing-existing-components" title="Permanent link">&para;</a></h5>
 <p>Similar to well abstracted functions, well abstracted components can reduce the
@@ -1769,7 +1769,7 @@ resulting model to MinIO, you can instead have <code>train_model</code> return t
 and then Kubeflow Pipelines can pass the model to a reusable <code>copy_to_minio</code>
 component. This reuse pattern applies to components defined through any means
 (containers, lightweight, or YAML).
-<a href="https://github.com/StatCan/jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">Take a look at our example notebook</a>,
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">Take a look at our example notebook</a>,
 which reuses provided components for simple file IO tasks.</p>
                 
               
@@ -1842,7 +1842,7 @@ which reuses provided components for simple file IO tasks.</p>
         
         
       
-      <a href="https://github.com/statcan/daaas" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+      <a href="https://github.com/StatCan/daaas" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
       </a>
     
