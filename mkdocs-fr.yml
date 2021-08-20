@@ -59,6 +59,9 @@ nav:
       - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
       - PaaS Integration: 3-Pipelines/PaaS.md
       - Model Serving: 3-Pipelines/Serving.md
+  - Collaboration:
+      - Aperçu: 4-Collaboration/Aperçu.md
+      - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
   - Stockage:
       - Aperçu: 5-Stockage/Aperçu.md
       - MinIo: 5-Stockage/MinIo.md
