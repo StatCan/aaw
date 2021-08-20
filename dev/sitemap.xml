@@ -16,6 +16,14 @@
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://statcan.github.io/daaas/en/Aaw%20Contrib%20Jupyter%20Notebooks/</loc>
+     <lastmod>2021-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://statcan.github.io/daaas/en/Aaw%20Contrib%20R%20Notebooks/</loc>
+     <lastmod>2021-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://statcan.github.io/daaas/en/Aaw%20Goofys%20Injector/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
@@ -24,7 +32,15 @@
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://statcan.github.io/daaas/en/Aaw%20Kubeflow%20Containers/</loc>
+     <lastmod>2021-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://statcan.github.io/daaas/en/Aaw%20Kubeflow%20Controller/</loc>
+     <lastmod>2021-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://statcan.github.io/daaas/en/Aaw%20Kubeflow%20Manifest/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -92,10 +108,6 @@
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://statcan.github.io/daaas/en/Jupyter%20Notebooks/</loc>
-     <lastmod>2021-08-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://statcan.github.io/daaas/en/Jupyterlab%20Language%20Pack%20Fr_fr/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
@@ -112,15 +124,7 @@
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://statcan.github.io/daaas/en/Kubeflow%20Containers/</loc>
-     <lastmod>2021-08-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://statcan.github.io/daaas/en/Kubeflow%20Containers%20Desktop/</loc>
-     <lastmod>2021-08-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://statcan.github.io/daaas/en/Kubeflow%20Manifest/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -149,10 +153,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/en/R%20Dashboards/</loc>
-     <lastmod>2021-08-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://statcan.github.io/daaas/en/R%20Notebooks/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

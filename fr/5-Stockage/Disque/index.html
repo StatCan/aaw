@@ -11,7 +11,7 @@
         <meta name="description" content="User guide for the DAaaS Covid-19 Platform">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/fr/3-Pipelines/PaaS/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/fr/5-Stockage/Disque/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>PaaS Integration - Espace d'analyse avancée du COVID-19</title>
+        <title>Disque - Espace d'analyse avancée du COVID-19</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integrer-avec-des-plateformes-comme-databricks-et-azureml" class="md-skip">
+        <a href="#apercu" class="md-skip">
           Aller au contenu
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              PaaS Integration
+              Disque
             
           </span>
         </div>
@@ -368,12 +368,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Pipelines
@@ -397,7 +395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
+    <a href="../../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
     </a>
   </li>
@@ -407,49 +405,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        PaaS Integration
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="PaaS Integration" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../3-Pipelines/PaaS/" title="PaaS Integration" class="md-nav__link">
       PaaS Integration
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#integrer-avec-des-plateformes-comme-databricks-et-azureml" class="md-nav__link">
-    Intégrer avec des plateformes comme Databricks et AzureML
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -459,7 +419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Serving/" title="Model Serving" class="md-nav__link">
+    <a href="../../3-Pipelines/Serving/" title="Model Serving" class="md-nav__link">
       Model Serving
     </a>
   </li>
@@ -474,10 +434,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Stockage
@@ -501,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../5-Stockage/Aper%C3%A7u/" title="Aperçu" class="md-nav__link">
+    <a href="../Aper%C3%A7u/" title="Aperçu" class="md-nav__link">
       Aperçu
     </a>
   </li>
@@ -513,7 +475,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../5-Stockage/MinIo/" title="MinIo" class="md-nav__link">
+    <a href="../MinIo/" title="MinIo" class="md-nav__link">
       MinIo
     </a>
   </li>
@@ -523,11 +485,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../5-Stockage/Disque/" title="Disque" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Disque
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Disque" class="md-nav__link md-nav__link--active">
       Disque
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apercu" class="md-nav__link">
+    Aperçu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#une-fois-que-vous-avez-les-bases" class="md-nav__link">
+    Une fois que vous avez les bases...
+  </a>
+  
+    <nav class="md-nav" aria-label="Une fois que vous avez les bases...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suppression-du-stockage-sur-disque" class="md-nav__link">
+    Suppression du stockage sur disque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prix" class="md-nav__link">
+    Prix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -572,9 +606,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#integrer-avec-des-plateformes-comme-databricks-et-azureml" class="md-nav__link">
-    Intégrer avec des plateformes comme Databricks et AzureML
+  <a href="#apercu" class="md-nav__link">
+    Aperçu
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#une-fois-que-vous-avez-les-bases" class="md-nav__link">
+    Une fois que vous avez les bases...
+  </a>
+  
+    <nav class="md-nav" aria-label="Une fois que vous avez les bases...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suppression-du-stockage-sur-disque" class="md-nav__link">
+    Suppression du stockage sur disque
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prix" class="md-nav__link">
+    Prix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -590,7 +658,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/StatCan/daaas/edit/master/docs/fr/3-Pipelines/PaaS.md" title="Editer cette page" class="md-content__button md-icon">
+                  <a href="https://github.com/StatCan/daaas/edit/master/docs/fr/5-Stockage/Disque.md" title="Editer cette page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -598,17 +666,55 @@
                   
                 
                 
-                  <h1>PaaS Integration</h1>
+                  <h1>Disque</h1>
                 
-                <h2 id="integrer-avec-des-plateformes-comme-databricks-et-azureml">Intégrer avec des plateformes comme Databricks et AzureML</h2>
-<p>La plateforme AAW est construite autour de l'idée d'intégrations, et nous
-pouvons donc s'intégrer avec de nombreuses offres de "plateforme en tant que
-service" (PaaS), telles que
-<a href="https://azure.microsoft.com/en-us/services/machine-learning/">Azure ML</a> et
-<a href="https://azure.microsoft.com/en-ca/services/databricks/">Databricks</a>.</p>
-<p>Voir quelques exemples dans notre
-<a href="https://github.com/StatCan/aaw-kubeflow-mlops">Dépôt Github "MLOps"</a>.</p>
-<p><img alt="PaaS" src="../../images/PaaS.png" /></p>
+                <h2 id="apercu">Aperçu</h2>
+<p>Les disques sont les systèmes de fichiers familiers de type disque dur auxquels
+vous êtes habitué, fournis à vous des disques SSD rapides !</p>
+<h2 id="installation">Installation</h2>
+<p>Lors de la création de votre serveur bloc-notes, vous demandez des disques en
+ajoutant des volumes de données à votre serveur de bloc-notes (illustré
+ci-dessous, avec <code>Type = New</code>). Ils sont automatiquement monté dans le
+répertoire (<code>Mount Point</code>) que vous choisissez, et sert de simple et moyen
+fiable de conserver les données attachées à un serveur de bloc-notes .</p>
+<p><img alt="Ajout d'un volume existant à un nouveau serveur de bloc-notes" src="../../images/kubeflow_existing_volume.png" /></p>
+<!-- prettier-ignore -->
+<details class="avertissement"><summary>Vous payez pour tous les disques que vous possédez, qu'ils soient connectés à un serveur bloc-note ou non</summary><p>Dès que vous créez un disque, vous le <a href="#prix">payez</a> jusqu'à ce qu'il soit <a href="#suppression-du-stockage-sur-disque">supprimé</a>, même si le Serveur de blocs-note  d'origine est supprimé. Voir <a href="#suppression-du-stockage-sur-disque">Suppression du stockage sur disque</a> pour plus d'informations</p>
+</details>
+<h2 id="une-fois-que-vous-avez-les-bases">Une fois que vous avez les bases...</h2>
+<p>Lorsque vous supprimez votre Serveur blocs-note , vos disques <strong>ne sont pas
+supprimés</strong>. Cela laisse vous réutilisez ce même disque (avec tout son contenu)
+sur un nouveau Serveur blocs-note plus tard (comme indiqué ci-dessus avec « Type
+= existant » et le « Nom » défini sur le volume que vous voulez réutiliser). Si
+vous avez terminé avec le disque et son contenu,
+<a href="#suppression-du-stockage-sur-disque"> supprimez-le</a>.</p>
+<h3 id="suppression-du-stockage-sur-disque">Suppression du stockage sur disque</h3>
+<p>Pour voir vos disques, consultez la section Volumes blocs-note de Serveur
+blocs-note page (ci-dessous). Vous pouvez supprimer n'importe quel disque non
+connecté (icône orange à gauche) en cliquant sur l'icône de la corbeille.</p>
+<p><img alt="Supprimer un volume non connecté de l'écran Serveur blocs-note " src="../../images/kubeflow_delete_disk.png" /></p>
+<h3 id="prix">Prix</h3>
+<!-- prettier-ignore -->
+<details class="info"><summary>Les modèles de tarification sont provisoires et peuvent changer</summary><p>Au moment de la rédaction, la tarification est couverte par la plate-forme pour les utilisateurs initiaux. Ce guide explique comment les choses devraient être tarifées à l'avenir, mais cela peut changer.</p>
+</details>
+<p>Lors du montage d'un disque, vous obtenez un
+<a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Disque managé Azure</a>.
+La tarification <strong>Disques gérés SSD Premium</strong> indique le coût par disque en
+fonction de la taille. Notez que vous payez pour la taille de disque demandée,
+et non pour la quantité d'espace que vous utilisent actuellement.</p>
+<!-- prettier-ignore -->
+<details class="info"><summary>Conseils pour minimiser les coûts</summary><p>Comme les disques peuvent être attachés à un Serveur blocs-note  et réutilisés, un modèle d'utilisation typique pourrait être :</p>
+<ul>
+<li>À 9h, créez un Serveur blocs-note  (demandez 2CPU/8GB RAM et un 32GB attaché
+  disque)</li>
+<li>Travaillez tout au long de la journée, en enregistrant les résultats sur le disque attaché</li>
+<li>À 17h, éteignez votre Serveur blocs-note  pour éviter de le payer du jour au lendemain</li>
+<li>REMARQUE : Le disque attaché <strong> n'est pas détruit </strong> par cette action</li>
+<li>À 9 heures du matin le lendemain, créez un nouveau serveur blocs-note et <strong> joignez     votre disque</strong></li>
+<li>Continuez votre travail...</li>
+</ul>
+<p>Cela protège tout votre travail sans payer pour l'ordinateur lorsque vous ne l'utilisez pas</p>
+</details>
                 
               
               
@@ -627,7 +733,7 @@ service" (PaaS), telles que
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../MinIo/" title="MinIo" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -636,19 +742,19 @@ service" (PaaS), telles que
                 <span class="md-footer-nav__direction">
                   Précédent
                 </span>
-                Kubeflow Pipelines
+                MinIo
               </div>
             </div>
           </a>
         
         
-          <a href="../Serving/" title="Model Serving" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Aide/" title="Aide/Contactez-nous" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Suivant
                 </span>
-                Model Serving
+                Aide/Contactez-nous
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

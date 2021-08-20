@@ -52,11 +52,15 @@
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://statcan.github.io/daaas/fr/Collaboration/</loc>
+     <loc>https://statcan.github.io/daaas/fr/5-Stockage/Aper%C3%A7u/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://statcan.github.io/daaas/fr/Stockage/</loc>
+     <loc>https://statcan.github.io/daaas/fr/5-Stockage/MinIo/</loc>
+     <lastmod>2021-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://statcan.github.io/daaas/fr/5-Stockage/Disque/</loc>
      <lastmod>2021-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
