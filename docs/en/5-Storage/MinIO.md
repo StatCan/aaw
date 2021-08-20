@@ -144,7 +144,7 @@ Now open the [MinIO Web Portal](#minio-web-portal) or browse to
 <!-- prettier-ignore -->
 ??? tip "See the example notebooks!"
     There is a template provided for connecting in `R`, `python`, or by the
-    command line, provided in [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage) (also auto-mounted to all jupyter notebook servers in `~/jupyter-notebook`). You can
+    command line, provided in [jupyter-notebooks/self-serve-storage](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage) (also auto-mounted to all jupyter notebook servers in `~/jupyter-notebook`). You can
     copy-paste and edit these examples! They should suit most of your needs.
 
 ## MinIO Python client
@@ -189,7 +189,7 @@ MinIO is S3 compliant - it uses the same standard as Amazon S3 and other bucket
 services. Tools designed to use S3 will generally also work with MinIO, for
 example Python packages and instructions on how to access files from S3. Some
 examples of this are shown in
-[jupyter-notebooks/self-serve-storage](https://github.com/StatCan/jupyter-notebooks/tree/master/self-serve-storage).
+[jupyter-notebooks/self-serve-storage](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage).
 
 ## Sharing from Private Buckets
 
@@ -202,7 +202,7 @@ send to a collaborator!
 ## Get MinIO Credentials
 
 <!-- prettier-ignore -->
-!!! note "The following methods still work, but you often don't need this anymore because of automation!" 
+!!! note "The following methods still work, but you often don't need this anymore because of automation!"
     If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the `mc` command line tool for you. You can use the `mc` tool without accessing credentials like shown below (e.g.: just type `mc ls standard-tenant-1/MY_NAMESPACE/`). If you do need credentials, you can still get them from `/vault/secrets/minio-*`
 
 To access your MinIO buckets programmatically (for example through the

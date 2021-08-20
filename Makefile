@@ -19,8 +19,13 @@ check-format-admonitions:
 	fi
 
 check-format-prettier:
-	yarn run prettier -c .
-
+	@yarn run prettier -c . || \
+	(echo && read -r -p "Would you like to run prettier to resolve the fromatting errors detected in the files above [y/N] ? " REPLY; \
+	if [ $$REPLY = "Y" ] || [ $$REPLY = "y" ]; then \
+		echo "\e[2mrunning prettier...\033[0m"; \
+		yarn prettier --write . ; \
+	fi)
+		
 check-prerequisites:
 	@if ! which node npm yarn python3 > /dev/null 2>&1 \
 			|| ! python3 -m venv --help > /dev/null 2>&1; then \
@@ -49,6 +54,11 @@ install-venv: check-prerequisites
 
 install-yarn: check-prerequisites
 	yarn install
+	make install-prettier
+	
+
+install-prettier: check-prerequisites
+	yarn add --dev --exact prettier
 
 serve: serve-en
 

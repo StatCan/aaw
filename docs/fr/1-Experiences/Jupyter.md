@@ -1,8 +1,8 @@
-# Jupyter
+# Aperçu
 
-## Expérience conviviale de R et Python
+## Jupyter: Expérience conviviale de R et Python
 
-Jupyter vous donne des **bloc-notes** pour écrire votre code et faire des
+Jupyter vous permet d'obtenir des **bloc-notes** pour écrire votre code et faire des
 visualisations. Vous pouvez rapidement itérer, visualiser et partager vos
 analyses. Puisque Jupyter est exécuté sur un serveur (que vous avez mis en place
 dans la dernière section), il vous permet d'effectuer de très grandes analyses
@@ -32,6 +32,8 @@ Créez pour explorer, et aussi pour écrire du code
 ![Fonctionnalités de l'environnement de développement](../images/jupyter_ide.png)
 
 **Plus de renseignements sur Jupyter [ici](https://jupyter.org)**
+
+# Installation
 
 ## Commencez par les exemples
 
@@ -71,22 +73,21 @@ de nouvelles trousses.**
 
 <!-- prettier-ignore -->
 ??? warning "Y a-t-il quelque chose que vous ne pouvez pas installer?"
-    Si vous avez besoin d'installer quelque chose, communiquez avec nous 
-    ou [ouvrir une question GitHub](https://github.com/StatCan/kubeflow-containers).
+    Si vous avez besoin d'installer quelque chose, communiquez avec nous
+    ou [ouvrir une question GitHub](https://github.com/StatCan/aaw-kubeflow-containers).
     Nous pouvons l'ajouter au logiciel par défaut.
 
-# Entrer et sortir des données de Jupyter
+# Une fois que vous avez les bases ...
+
+## Entrer et sortir des données de Jupyter
 
 Vous pouvez télécharger et charger des données vers ou depuis JupyterHub
 directement dans le menu. Il y a un bouton de chargement en haut, et vous pouvez
 cliquer avec le bouton droit de la souris sur la plupart des fichiers ou
 dossiers pour les télécharger.
 
-## Stockage partagé en compartiment
+### Stockage partagé en compartiment
 
-**L'autre option** est le stockage de gros volumes avec
-[Stockage d'objets](https://en.wikipedia.org/wiki/Object_storage). étant donné
-que le stockage est important pour les expérimentations, la diffusion et
-l'exploration des ensembles de données, une section lui est consacré
+Il y a aussi un dossier `minio` monté dans votre répertoire personnel qui contient les fichiers dans [MinIO](../Stockage.md).
 
-**Consultez la [section sur le stockage](../Stockage.md)**
+**Consultez la [section sur le stockage](../index.md#storage) rubrique pour plus de détails**

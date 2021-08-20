@@ -1,8 +1,12 @@
+# Chargement des données dans Power BI
+
 Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos données
 dans Power BI à partir de notre système de stockage et les utiliser comme une
-fiche de données `pandas`.
+trame de données `pandas`.
 
 ![Tableau de bord sur Power BI](../images/powerbi_dashboard.png)
+
+# Installation
 
 ## Ce dont vous aurez besoin
 
@@ -14,7 +18,7 @@ fiche de données `pandas`.
 ### Configurez Power BI
 
 Ouvrez votre système Power BI et ouvrez
-[démarrage rapide de Power BI](https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
+[démarrage rapide de Power BI](https://raw.githubusercontent.com/StatCan/aaw-contrib-jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
 dans votre éditeur de texte préféré.
 
 Assurez-vous que `pandas`, `boto3` et `numpy` sont installés et que vous

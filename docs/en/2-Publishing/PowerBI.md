@@ -1,9 +1,12 @@
-# Loading data into Power BI
+# Overview
+## Loading data into Power BI
 
 We do not offer a Power BI server, but you can pull your data into Power BI from
 our Storage system, and use the data as a `pandas` data frame.
 
 ![Power BI Dashboard](../images/powerbi_dashboard.png)
+
+# Setup
 
 ## What you'll need
 
@@ -11,12 +14,10 @@ our Storage system, and use the data as a `pandas` data frame.
 2. Your MinIO `ACCESS_KEY` and `SECRET_KEY` on hand. (See
    [Storage](../index.md#storage))
 
-## Get connected
-
-### Set up Power BI
+## Set up Power BI
 
 Open up your Power BI system, and open up this
-[Power BI quick start](https://raw.githubusercontent.com/StatCan/jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
+[Power BI quick start](https://raw.githubusercontent.com/StatCan/aaw-contrib-jupyter-notebooks/master/querySQL/power_bi_quickstart.py)
 in your favourite text editor.
 
 You'll have to make sure that `pandas`, `boto3`, and `numpy` are installed, and
@@ -28,7 +29,7 @@ You'll then need to make sure that Power BI is using the correct Python
 environment. This is modified from the options menu, and the exact path is
 specified in the quick start guide.
 
-### Edit your python script
+## Edit your python script
 
 Then, edit your Python script to use your MinIO `ACCESS_KEY` and `SECRET_KEY`,
 and then click "Get Data" and copy it in as a Python Script.

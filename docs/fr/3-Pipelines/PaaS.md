@@ -7,6 +7,6 @@ service" (PaaS), telles que
 [Databricks](https://azure.microsoft.com/en-ca/services/databricks/).
 
 Voir quelques exemples dans notre
-[Dépôt Github "MLOps"](https://github.com/statcan/kubeflow-mlops).
+[Dépôt Github "MLOps"](https://github.com/StatCan/aaw-kubeflow-mlops).
 
 ![PaaS](../images/PaaS.png)

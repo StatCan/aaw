@@ -6,8 +6,8 @@ copyright: Copyright &copy; 2020 Statistics Canada
 docs_dir: docs/dev
 site_dir: site/dev
 
-repo_name: statcan/daaas
-repo_url: https://github.com/statcan/daaas
+repo_name: StatCan/daaas
+repo_url: https://github.com/StatCan/daaas
 edit_uri: edit/master/docs/dev
 
 theme:
@@ -30,10 +30,13 @@ markdown_extensions:
   - codehilite
   - mdx_truly_sane_lists
   - pymdownx.details
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+      custom_checkbox: true
 
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/statcan/daaas
+      link: https://github.com/StatCan/daaas
     - icon: fontawesome/brands/slack
       link: https://statcan-aaw.slack.com

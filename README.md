@@ -2,143 +2,77 @@
 
 # Data Analytics as a Service
 
-We encourage you to watch our YouTube presentation given at Stratosphere:
+Data Analytics as a Service for the Government of Canada and external
+collaborators.
+
+## Presentations
+
+We highly encourage you to watch our YouTube presentation given at Stratosphere:
 
 - [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
 - [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
 
-# Table of Contents
+## Advanced Analytics Workspace
 
-1. [Ingresses](#ingresses)
-   * [Services](#services)
-   * [Elastic Instances](#elastic-stack-instances)
-   * [MinIO Instances](#minio-instances)
-   * [MLFlow Instances](#mlflow-instances)
-1. [GitHub Links](#important-links)
-   * [Terraform](#terraform)
-   * [Repositories](#repositories)
+The following is a list of all the `general` related repositories for the
+Advanced Analytics Workspace project.
 
-## Ingresses
+| Repository                                                                                                | Description                                                                                   | Visibility |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------- |
+| [aaw-argocd-applicationset](https://github.com/StatCan/aaw-argocd-applicationset)                         | ArgoCD ApplicationSet CRDs                                                                    | Private    |
+| [aaw-argocd-manifests](https://github.com/StatCan/aaw-argocd-manifests)                                   | Manifests used for ArgoCD deployments                                                         | Public     |
+| [aaw-argoflow-azure](https://github.com/StatCan/aaw-argoflow-azure)                                       | Kubeflow deployment powered by ArgoCD                                                         | Public     |
+| [aaw-contrib-containers](https://github.com/StatCan/aaw-contrib-containers)                               | Containers to be used for general purpose Data Science                                        | Public     |
+| [aaw-contrib-jupyter-notebooks](https://github.com/StatCan/aaw-contrib-jupyter-notebooks)                 | Containers built to be used with Kubeflow for Data Science                                    | Public     |
+| [aaw-contrib-r-notebooks](https://github.com/StatCan/aaw-contrib-r-notebooks)                             | R Notebooks to be used with Advanced Analytics Workspace platform                             | Public     |
+| [aaw-gatekeeper-constraints](https://github.com/StatCan/aaw-gatekeeper-constraints)                       | Gatekeeper constraints built specifically for AAW                                             | Private    |
+| [aaw-goofys-injector](https://github.com/StatCan/aaw-goofys-injector)                                     | Mount an S3 bucket, Data Lake, Blob Storage as a file system in a Notebook                    | Public     |
+| [aaw-goofys-injector](https://github.com/StatCan/aaw-goofys-injector)                                     | Mount an S3 bucket, Data Lake, Blob Storage as a file system in a Notebook                    | Public     |
+| [aaw-kubeflow-manifest](https://github.com/StatCan/aaw-kubeflow-manifest)                                 | Kustomize installation manifests for Kubeflow                                                 | Public     |
+| [aaw-kubeflow-controller](https://github.com/StatCan/aaw-kubeflow-controller)                             | Kubeflow controller which sets PodDefaults + Vault policies for each Profile detected         | Public     |
+| [aaw-kubeflow-mlops](https://github.com/StatCan/aaw-kubeflow-mlops)                                       | Kubeflow MLOps pipeline using GitHub Actions                                                  | Public     |
+| [aaw-kubeflow-opa-sync](https://github.com/StatCan/aaw-kubeflow-opa-sync)                                 | Synchronize profile editors into the Open Policy Agent for use in MinIO Access Control        | Public     |
+| [aaw-kubeflow-pipelines-secret-scanner](https://github.com/StatCan/aaw-kubeflow-pipelines-secret-scanner) | Scan all Kubeflow pipelines for exposed secrets                                               | Public     |
+| [aaw-kubeflow-profiles](https://github.com/StatCan/aaw-kubeflow-profiles)                                 | Kubeflow profile manifests stored in YAML                                                     | Private    |
+| [aaw-kubeflow-profiles-controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller)           | Kubeflow profiles controller which allows for custom configuration for an individual profile  | Public     |
+| [aaw-minio-credential-injector](https://github.com/StatCan/aaw-minio-credential-injector)                 | Mutating webhook which adds minio credential annotations to notebook pods                     | Public     |
+| [aaw-network-policies](https://github.com/StatCan/aaw-network-policies)                                   | Kubernetes network policies for AAW                                                           | Private    |
+| [aaw-prob-notebook-controller](https://github.com/StatCan/aaw-prob-notebook-controller)                   | Kubernetes controller for managing Authorization Policies associated to Protected-B Notebooks | Public     |
+| [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)                                 | Proposal for the implementation of Protected B workloads in AAW                               | Private    |
+| [aaw-toleration-injector](https://github.com/StatCan/aaw-toleration-injector)                             | Kubernetes toleration injector with support for GPUs and Node Pools                           | Public     |
 
-A routinely updated list of some of the baseline services offered by the DAaaS platform as a service.
+## Terraform
 
-### Services
+The following is a list of all the `terraform` related repositories for the
+Advanced Analytics Workspace project.
 
-The fundamental services that can be used to assist you on your data science journey.
+| Repository                                                                                                                                  | Description                                                                  | Visibility |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
+| [terraform-advanced-analytics-workspaces-infrastructure](https://github.com/StatCan/terraform-advanced-analytics-workspaces-infrastructure) | Terraform to deploy the infrastructure for the Advanced Analytics Workspaces | Private    |
+| [terraform-aaw-infrastructure-aaw-dev-cc-00](https://github.com/StatCan/terraform-aaw-infrastructure-aaw-dev-cc-00)                         | Terraform to deploy the AAW infrastructure for the development environment   | Private    |
+| [terraform-aaw-infrastructure-aaw-prod-cc-00](https://github.com/StatCan/terraform-aaw-infrastructure-aaw-prod-cc-00)                       | Terraform to deploy the AAW infrastructure for the production environment    | Private    |
+| [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases)                                               | Terraform to deploy Azure Managed Databases                                  | Private    |
+| [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                                                                       | Terraform for configuring Hashicorp Vault                                    | Private    |
 
-- https://analytics-platform.statcan.gc.ca
-- https://daaas.covid.cloud.statcan.ca
-- https://kubeflow.covid.cloud.statcan.ca
-- https://kubecost.covid.cloud.statcan.ca
-- https://mlflow.covid.cloud.statcan.ca
-- https://grafana.covid.cloud.statcan.ca
-- https://shiny.covid.cloud.statcan.ca
-- https://vault.covid.cloud.statcan.ca
-- https://istio-grafana.covid.cloud.statcan.ca
-- https://istio-kiali.covid.cloud.statcan.ca
-- https://logging-elastic.covid.cloud.statcan.ca
-- https://logging-kibana.covid.cloud.statcan.ca
+## Community Engagement
 
-> **Note**: The list above is non-exhaustive and only reflects a small subset of services.
+The following is a list of some of the `collaborative` work we made available to
+improve upstream projects.
 
-### Elastic Instances
+| Repository                                                                                  | Description                                                 | Visibility |
+| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------- |
+| [boathouse](https://github.com/StatCan/boathouse)                                           | Manage Kubernetes storage mounts with Goofys                | Public     |
+| [jupyter-apis](https://github.com/StatCan/jupyter-apis)                                     | Golang replacement for the Kubeflow Jupyter Web APIs        | Public     |
+| [jupyterlab-language-pack-fr_FR](https://github.com/StatCan/jupyterlab-language-pack-fr_FR) | JupyterLab fr-FR Language Pack                              | Public     |
+| [vault-plugin-secrets-minio](https://github.com/StatCan/vault-plugin-secrets-minio)         | Vault plugin which will provision multi-user keys for Minio | Public     |
 
-The [Elastic Cloud](https://github.com/elastic/cloud-on-k8s) operator automates the deployment, provisioning, management, and orchestration of Elasticsearch, Kibana, and Beats on Kubernetes.
+The following is a list of some of the `forked` projects where we have provided
+multilingual support and other UX related enhancements.
 
-- https://elastic.covid.cloud.statcan.ca
-- https://kibana.covid.cloud.statcan.ca
-
-> **Note**: You can request your own instance of Elastic + Kibana using our [Web Form](https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance)
-
-### MinIO Instances
-
-The [MinIO Operator](https://github.com/statcan/minio-operator) automates the deployment, provisioning, management, and orchestration of MinIO and MinIO Console on Kubernetes.
-
-- https://minio-premium-tenant-1.covid.cloud.statcan.ca
-- https://minio-console-premium-tenant-1.covid.cloud.statcan.ca
-- https://minio-standard-tenant-1.covid.cloud.statcan.ca
-- https://minio-console-standard-tenant-1.covid.cloud.statcan.ca
-
-> **Note**: You can request your own instance of MinIO using our [Web Form](https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance)
-
-### MLFlow Instances
-
-The [MLFlow Operator](https://github.com/statcan/mlflow-operator) automates the deployment, provisioning, management, and orchestration of MLFlow on Kubernetes.
-
-- https://mlflow-standard-tenant-1.covid.cloud.statcan.ca
-
-> **Note**: You can request your own instance of MLFlow using our [Web Form](https://daaas.covid.cloud.statcan.ca/forms/request-elastic-instance)
-
-## GitHub Links
-
-### Terraform
-
-- https://github.com/StatCan/terraform-kubernetes-aks-daaas
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas
-- https://github.com/StatCan/terraform-kubernetes-aks-daaas-private (private) // [[GitHub Action][github_action_tf_daaas]]
-- https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private (private) // [[GitHub Action][github_action_tf_daaas_platform]]
-
-### Repositories
-
-- https://github.com/StatCan?q=daaas
-- https://github.com/StatCan/actions // [[GitHub Action][github_action_actions]]
-- https://github.com/StatCan/boathouse // [[GitHub Action][github_action_boathouse]]
-- https://github.com/StatCan/charts // [[GitHub Action][github_action_charts]]
-- https://github.com/StatCan/daaas // [[GitHub Action][github_action_daaas]]
-- https://github.com/StatCan/daaas-containers // [[GitHub Action][github_action_daaas_containers]]
-- https://github.com/StatCan/gatekeeper-policies // [[GitHub Action][github_action_gatekeeper_policies]]
-- https://github.com/StatCan/goofys-injector // [[GitHub Action][github_action_goofys_injector]]
-- https://github.com/StatCan/gpu-toleration-injector // [[GitHub Action][github_action_gpu_toleration_injector]]
-- https://github.com/StatCan/jupyter-apis // [[GitHub Action][github_action_jupyter_apis]]
-- https://github.com/StatCan/jupyter-notebooks // [[GitHub Action][github_action_jupyter_notebooks]]
-- https://github.com/StatCan/kubecost // [[GitHub Action][github_action_kubecost]]
-- https://github.com/StatCan/kubeflow // [[GitHub Action][github_action_kubeflow]]
-- https://github.com/StatCan/kubeflow-containers // [[GitHub Action][github_action_kubeflow_containers]]
-- https://github.com/StatCan/kubeflow-containers-desktop // [[GitHub Action][github_action_kubeflow_containers_desktop]]
-- https://github.com/StatCan/kubeflow-controller // [[GitHub Action][github_action_kubeflow_controller]]
-- https://github.com/StatCan/kubeflow-manifest // [[GitHub Action][github_action_kubeflow_manifest]]
-- https://github.com/StatCan/kubeflow-mlops // [[GitHub Action][github_action_kubeflow_mlops]]
-- https://github.com/StatCan/kubeflow-opa-sync // [[GitHub Action][github_action_kubeflow_opa_sync]]
-- https://github.com/StatCan/minio-credential-injector // [[GitHub Action][github_action_minio_credential_injector]]
-- https://github.com/StatCan/minio-operator // [[GitHub Action][github_action_minio_operator]]
-- https://github.com/StatCan/mlflow-operator // [[GitHub Action][github_action_mlflow_operator]]
-- https://github.com/StatCan/namespace-injector // [[GitHub Action][github_action_namespace_injector]]
-- https://github.com/StatCan/r-dashboards // [[GitHub Action][github_action_r_dashboards]]
-- https://github.com/StatCan/r-notebooks // [[GitHub Action][github_action_r_notebooks]]
-- https://github.com/StatCan/shiny // [[GitHub Action][github_action_shiny]]
-- https://github.com/StatCan/statcan.orchardcore // [[GitHub Action][github_action_orchardcore]]
-- https://github.com/StatCan/vault-plugin-secrets-minio // [[GitHub Action][github_action_vault_plugin_secrets_minio]]
-
-<!-- Links Referenced -->
-
-[github_action_tf_daaas]:                    https://github.com/StatCan/terraform-kubernetes-aks-daaas-private/actions
-[github_action_tf_daaas_platform]:           https://github.com/StatCan/terraform-kubernetes-aks-platform-daaas-private/actions
-[github_action_tf_daaas_vault]:              https://github.com/StatCan/terraform-vault-daaas/actions
-[github_action_actions]:                     https://github.com/StatCan/actions/actions
-[github_action_boathouse]:                   https://github.com/StatCan/boathouse/actions
-[github_action_charts]:                      https://github.com/StatCan/charts/actions
-[github_action_daaas]:                       https://github.com/StatCan/daaas/actions
-[github_action_daaas_containers]:            https://github.com/StatCan/daaas-containers/actions
-[github_action_gatekeeper_policies]:         https://github.com/StatCan/gatekeeper-policies/actions
-[github_action_goofys_injector]:             https://github.com/StatCan/goofys-injector/actions
-[github_action_gpu_toleration_injector]:     https://github.com/StatCan/gpu-toleration-injector/actions
-[github_action_jupyter_apis]:                https://github.com/StatCan/jupyter-apis/actions
-[github_action_jupyter_notebooks]:           https://github.com/StatCan/jupyter-notebooks/actions
-[github_action_kubecost]:                    https://github.com/StatCan/kubecost/actions
-[github_action_kubeflow]:                    https://github.com/StatCan/kubeflow/actions
-[github_action_kubeflow_containers]:         https://github.com/StatCan/kubeflow-containers/actions
-[github_action_kubeflow_containers_desktop]: https://github.com/StatCan/kubeflow-containers-desktop/actions
-[github_action_kubeflow_controller]:         https://github.com/StatCan/kubeflow-controller/actions
-[github_action_kubeflow_manifest]:           https://github.com/StatCan/kubeflow-manifest/actions
-[github_action_kubeflow_mlops]:              https://github.com/StatCan/kubeflow-mlops/actions
-[github_action_kubeflow_opa_sync]:           https://github.com/StatCan/kubeflow-opa-sync/actions
-[github_action_minio_credential_injector]:   https://github.com/StatCan/minio-credential-injector/actions
-[github_action_minio_operator]:              https://github.com/StatCan/minio-operator/actions
-[github_action_mlflow_operator]:             https://github.com/StatCan/mlflow-operator/actions
-[github_action_namespace_injector]:          https://github.com/StatCan/namespace-injector/actions
-[github_action_r_dashboards]:                https://github.com/StatCan/r-dashboards/actions
-[github_action_r_notebooks]:                 https://github.com/StatCan/r-notebooks/actions
-[github_action_shiny]:                       https://github.com/StatCan/shiny/actions
-[github_action_orchardcore]:                 https://github.com/StatCan/statcan.orchardcore/actions
-[github_action_vault_plugin_secrets_minio]:  https://github.com/StatCan/vault-plugin-secrets-minio/actions
-
+| Repository                                                          | Description                                 | Visibility |
+| ------------------------------------------------------------------- | ------------------------------------------- | ---------- |
+| [kubeflow](https://github.com/StatCan/kubeflow)                     | Multilingual support for Kubeflow           | Public     |
+| [kubeflow-pipelines](https://github.com/StatCan/kubeflow-pipelines) | Multilingual support for Kubeflow Pipelines | Public     |
+| [minio](https://github.com/StatCan/minio)                           | Multilingual support for MinIO              | Public     |
+| [minio-console](https://github.com/StatCan/minio-console)           | Multilingual support for MinIO Console      | Public     |
+| [rstudio](https://github.com/StatCan/rstudio)                       | Multilingual support for RStudio            | Public     |

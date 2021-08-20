@@ -1,4 +1,4 @@
-## v1.0.2 @ [statcan/minio-operator](https://github.com/statcan/minio-operator/releases/tag/v1.0.2)
+## v1.0.2 @ [StatCan/minio-operator](https://github.com/StatCan/minio-operator/releases/tag/v1.0.2)
 
 Features / Updates:
 
@@ -14,7 +14,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.0 @ [statcan/goofys-injector](https://github.com/statcan/goofys-injector/releases/tag/v1.0.0)
+## v1.0.0 @ [StatCan/goofys-injector](https://github.com/StatCan/goofys-injector/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -25,7 +25,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.1 @ [statcan/kubeflow-containers](https://github.com/statcan/kubeflow-containers/releases/tag/v1.0.1)
+## v1.0.1 @ [StatCan/aaw-kubeflow-containers](https://github.com/StatCan/aaw-kubeflow-containers/releases/tag/v1.0.1)
 
 Features / Updates:
 
@@ -37,7 +37,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.1 @ [statcan/kubeflow-manifest](https://github.com/statcan/kubeflow-manifest/releases/tag/v1.0.1)
+## v1.0.1 @ [StatCan/aaw-kubeflow-manifest](https://github.com/StatCan/aaw-kubeflow-manifest/releases/tag/v1.0.1)
 
 Features / Updates:
 
@@ -46,7 +46,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.1 @ [statcan/mlflow-operator](https://github.com/statcan/mlflow-operator/releases/tag/v1.0.1)
+## v1.0.1 @ [StatCan/mlflow-operator](https://github.com/StatCan/mlflow-operator/releases/tag/v1.0.1)
 
 Features / Updates:
 
@@ -56,7 +56,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.0 @ [statcan/kubeflow-mlops](https://github.com/statcan/kubeflow-mlops/releases/tag/v1.0.0)
+## v1.0.0 @ [StatCan/aaw-kubeflow-mlops](https://github.com/StatCan/aaw-kubeflow-mlops/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -66,7 +66,7 @@ Features / Updates:
 
 > **Note**: Right now the pipeline is executing as a specialized user, looking into how to paramterize to Users namespace on CI run
 
-## v1.0.0 @ [statcan/kubeflow-containers](https://github.com/statcan/kubeflow-containers/releases/tag/v1.0.0)
+## v1.0.0 @ [StatCan/aaw-kubeflow-containers](https://github.com/StatCan/aaw-kubeflow-containers/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -80,7 +80,7 @@ Features / Updates:
 
 > **Note**: N/A
 
-## v1.0.0 @ [statcan/kubeflow-manifest](https://github.com/statcan/kubeflow-manifest/releases/tag/v1.0.0)
+## v1.0.0 @ [StatCan/aaw-kubeflow-manifest](https://github.com/StatCan/aaw-kubeflow-manifest/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -92,7 +92,7 @@ Features / Updates:
 
 > **Note**: As of this release we now have Multi-User Pipelines support. Please see the following issue for more information at [kubeflow-5440](https://github.com/kubeflow/kubeflow/issues/5440)
 
-## v1.0.0 @ [statcan/mlflow-operator](https://github.com/statcan/mlflow-operator/releases/tag/v1.0.0)
+## v1.0.0 @ [StatCan/mlflow-operator](https://github.com/StatCan/mlflow-operator/releases/tag/v1.0.0)
 
 Features / Updates:
 
@@ -103,7 +103,7 @@ Features / Updates:
 
 > **Note**: Added logic to upgrade the indexed db between version bumps. Please see the following commit for more information at [b901376](https://github.com/StatCan/mlflow-operator/commit/b90137648d7d8c0751eed17b0a4ce5e637400f8a)
 
-## v1.0.0 @ [statcan/minio-operator](https://github.com/statcan/minio-operator/releases/tag/v1.0.0)
+## v1.0.0 @ [StatCan/minio-operator](https://github.com/StatCan/minio-operator/releases/tag/v1.0.0)
 
 Features / Updates:
 

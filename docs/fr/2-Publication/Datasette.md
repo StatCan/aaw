@@ -1,4 +1,4 @@
-# Explorer vos données avec Datasette
+# Aperçu
 
 Datasette est une API JSON instantanée pour vos bases de données SQLite qui
 permet d'explorer la BD et d'exécuter des requêtes SQL de manière plus
@@ -24,12 +24,16 @@ Vous pouvez même explorer des cartes au sein de l'outil!
 
 [Exécuter des requêtes SQL](../images/datasette-sql.png)
 
-# Démarrer avec Datasette
+# Didacticiel vidéo
+
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://youtu.be/OPVfBKouBT8?t=214 "Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks")
+
+# Commencer
+
+## Installation des Datasettes
 
 Pour visualiser votre base de données dans votre bloc-notes Jupyter, créez le
-fichier _bash_ suivant dans votre répertoire de projet et exécutez-le avec
-`./start.sh`. Accédez au serveur web en utilisant le **URL de base** avec le
-numéro de port que vous utilisez dans le fichier ci-dessous.
+fichier _bash_ suivant dans votre répertoire de projet, rendre le fichier exécutable en utilisant `chmod +x start.sh` puis exécutez-le avec la commande `./start.sh`. Accédez au serveur web en utilisant le **URL de base** avec le numéro de port que vous utilisez dans le fichier ci-dessous.
 
 **start.sh**
 
@@ -40,7 +44,7 @@ numéro de port que vous utilisez dans le fichier ci-dessous.
 # that you can use it within kubeflow.
 
 # Get an example database
-wget https://github.com/StatCan/R-notebooks/raw/master/database-connections/latin_phrases.db
+wget https://github.com/StatCan/aaw-contrib-r-notebooks/raw/master/database-connections/latin_phrases.db
 
 # If you have your own database, you can change this line!
 DATABASE=latin_phrases.db

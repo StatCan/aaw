@@ -1,4 +1,6 @@
-# Custom Web Apps
+# Overview
+
+## Custom Web Apps
 
 We can deploy anything as long as it's open source and we can put it in a Docker
 container. For instance, Node.js apps, Flask or Dash apps. Etc.
@@ -11,7 +13,9 @@ container. For instance, Node.js apps, Flask or Dash apps. Etc.
     source for the above app is
     [`StatCan/covid19`](https://github.com/StatCan/covid19)
 
-# How to get your app hosted
+# Setup
+
+## How to get your app hosted
 
 If you already have a web app in a git repository then, as soon as it's
 containerized, we can fork the Git repository into the StatCan GitHub repository

@@ -19,10 +19,10 @@ echo "Fetching all READMEs. This might take a minute."
     let i=1
     while [ $NUM_REPOS -gt 0 ]; do
         let "NUM_REPOS-=50"
-        echo curl --silent "https://api.github.com/users/statcan/repos?per_page=50&page=$i" >&2
+        echo curl --silent "https://api.github.com/users/StatCan/repos?per_page=50&page=$i" >&2
         curl --silent \
             -H 'Accept: application/vnd.github.mercy-preview+json' \
-            "https://api.github.com/users/statcan/repos?per_page=50&page=$i" |
+            "https://api.github.com/users/StatCan/repos?per_page=50&page=$i" |
             jq -cr '.[] | select(.topics | .[] | contains("daaas")) | @text "\(.name) \(.url) \(.html_url)"'
         ((i++))
     done

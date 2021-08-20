@@ -6,8 +6,8 @@ copyright: Copyright &copy; 2020 Statistics Canada
 docs_dir: docs/fr
 site_dir: site/fr
 
-repo_name: statcan/daaas
-repo_url: https://github.com/statcan/daaas
+repo_name: StatCan/daaas
+repo_url: https://github.com/StatCan/daaas
 edit_uri: edit/master/docs/fr
 
 plugins:
@@ -37,7 +37,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/statcan/daaas
+      link: https://github.com/StatCan/daaas
     - icon: fontawesome/brands/slack
       link: https://statcan-eaa.slack.com
 
@@ -49,7 +49,6 @@ nav:
       - Jupyter: 1-Experiences/Jupyter.md
       - RStudio: 1-Experiences/RStudio.md
       - Bureau-Virtuel: 1-Experiences/Bureau-virtuel.md
-      - MLflow: 1-Experiences/MLflow.md
   - Publication:
       - R Shiny: 2-Publication/R-Shiny.md
       - Dash: 2-Publication/Dash.md
@@ -63,5 +62,8 @@ nav:
   - Collaboration:
       - Aperçu: 4-Collaboration/Aperçu.md
       - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
-  - Stockage: Stockage.md
+  - Stockage:
+      - Aperçu: 5-Stockage/Aperçu.md
+      - MinIo: 5-Stockage/MinIo.md
+      - Disque: 5-Stockage/Disque.md
   - Aide/Contactez-nous: Aide.md
