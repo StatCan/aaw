@@ -2,8 +2,8 @@
 
 ## Jupyter: Expérience conviviale de R et Python
 
-Jupyter vous permet d'obtenir des **bloc-notes** pour écrire votre code et faire des
-visualisations. Vous pouvez rapidement itérer, visualiser et partager vos
+Jupyter vous permet d'obtenir des **bloc-notes** pour écrire votre code et faire
+des visualisations. Vous pouvez rapidement itérer, visualiser et partager vos
 analyses. Puisque Jupyter est exécuté sur un serveur (que vous avez mis en place
 dans la dernière section), il vous permet d'effectuer de très grandes analyses
 sur un matériel centralisé! Ajoutez autant de puissance qu'il vous faut! Et
@@ -88,6 +88,8 @@ dossiers pour les télécharger.
 
 ### Stockage partagé en compartiment
 
-Il y a aussi un dossier `minio` monté dans votre répertoire personnel qui contient les fichiers dans [MinIO](../Stockage.md).
+Il y a aussi un dossier `minio` monté dans votre répertoire personnel qui
+contient les fichiers dans [MinIO](../Stockage.md).
 
-**Consultez la [section sur le stockage](../index.md#storage) rubrique pour plus de détails**
+**Consultez la [section sur le stockage](../index.md#storage) rubrique pour plus
+de détails**

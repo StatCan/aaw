@@ -43,9 +43,10 @@ Server to use. Use the `rstudio` image to get an RStudio environment.
 
 ## Remote-Desktop
 
-For a full Ubuntu desktop experience, use the remote desktop image. It comes pre-loaded with Python, R and Geomatics tooling, but are delivered in a
-typical desktop experience that also comes with Firefox, VS Code, and open
-office tools. The operating system is **[Ubuntu](https://ubuntu.com/about)**
-18.04 with the **[XFCE](https://www.xfce.org/about)** desktop environment.
+For a full Ubuntu desktop experience, use the remote desktop image. It comes
+pre-loaded with Python, R and Geomatics tooling, but are delivered in a typical
+desktop experience that also comes with Firefox, VS Code, and open office tools.
+The operating system is **[Ubuntu](https://ubuntu.com/about)** 18.04 with the
+**[XFCE](https://www.xfce.org/about)** desktop environment.
 
 ![Screenshot of the Virtual Desktop](../images/rd_desktop.png)

@@ -7,15 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
+
       - name: Install dependencies
         run: |
           sudo apt-get install --yes jq curl wget
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
       - name: Build
         run: |
           mkdocs build -c -f mkdocs-en.yml
@@ -23,6 +26,7 @@ jobs:
           bash build-dev-docs.sh
           mkdocs build -c -f mkdocs-dev.yml
           cp docs/index.html site/
+
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:

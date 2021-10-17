@@ -1,8 +1,8 @@
 # Aperçu
 
-R-Shiny est un paquet R qui facilite la création d'applications Web interactives dans R.
-Nous gérons le serveur R-Shiny, et il est très facile de mettre votre tableau de bord sur le
-Plate-forme.
+R-Shiny est un paquet R qui facilite la création d'applications Web interactives
+dans R. Nous gérons le serveur R-Shiny, et il est très facile de mettre votre
+tableau de bord sur le Plate-forme.
 
 ![Page d'accueil Shiny](../images/readme/shiny_ui.png)
 
@@ -13,7 +13,8 @@ Plate-forme.
 Il vous suffit d'envoyer une demande d'extraction à
 [notre répertoire de tableaux de bord R-Shiny](https://github.com/StatCan/R-dashboards).
 Placez votre répertoire dans un dossier portant le nom que vous voulez utiliser
-(p. ex. tableau-bord-qualité-air). Ensuite, nous l'approuverons et il sera mis en ligne.
+(p. ex. tableau-bord-qualité-air). Ensuite, nous l'approuverons et il sera mis
+en ligne.
 
 Si vous avez d'autres bibliothèques R à installer, envoyez votre liste à
 [répertoire R-Shiny](https://github.com/StatCan/shiny) en créant un dossier

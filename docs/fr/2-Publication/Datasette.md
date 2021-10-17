@@ -33,7 +33,10 @@ Vous pouvez même explorer des cartes au sein de l'outil!
 ## Installation des Datasettes
 
 Pour visualiser votre base de données dans votre bloc-notes Jupyter, créez le
-fichier _bash_ suivant dans votre répertoire de projet, rendre le fichier exécutable en utilisant `chmod +x start.sh` puis exécutez-le avec la commande `./start.sh`. Accédez au serveur web en utilisant le **URL de base** avec le numéro de port que vous utilisez dans le fichier ci-dessous.
+fichier _bash_ suivant dans votre répertoire de projet, rendre le fichier
+exécutable en utilisant `chmod +x start.sh` puis exécutez-le avec la commande
+`./start.sh`. Accédez au serveur web en utilisant le **URL de base** avec le
+numéro de port que vous utilisez dans le fichier ci-dessous.
 
 **start.sh**
 
