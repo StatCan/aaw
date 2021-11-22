@@ -33,6 +33,7 @@ Advanced Analytics Workspace project.
 | [aaw-contrib-r-notebooks](https://github.com/StatCan/aaw-contrib-r-notebooks)                             | R Notebooks to be used with Advanced Analytics Workspace platform                             | Public     |
 | [aaw-gatekeeper-constraints](https://github.com/StatCan/aaw-gatekeeper-constraints)                       | Gatekeeper constraints built specifically for AAW                                             | Private    |
 | [aaw-goofys-injector](https://github.com/StatCan/aaw-goofys-injector)                                     | Mount an S3 bucket, Data Lake, Blob Storage as a file system in a Notebook                    | Public     |
+| [aaw-inferenceservices-controller](https://github.com/StatCan/aaw-inferenceservices-controller)           | Kubernetes controller for managing inference services                                         | Public     |
 | [aaw-kubeflow-manifest](https://github.com/StatCan/aaw-kubeflow-manifest)                                 | Kustomize installation manifests for Kubeflow                                                 | Public     |
 | [aaw-kubeflow-controller](https://github.com/StatCan/aaw-kubeflow-controller)                             | Kubeflow controller which sets PodDefaults + Vault policies for each Profile detected         | Public     |
 | [aaw-kubeflow-mlops](https://github.com/StatCan/aaw-kubeflow-mlops)                                       | Kubeflow MLOps pipeline using GitHub Actions                                                  | Public     |
@@ -53,11 +54,11 @@ Advanced Analytics Workspace project.
 
 | Repository                                                                                                                                  | Description                                                                  | Visibility |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
+| [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases)                                               | Terraform to deploy Azure Managed Databases                                  | Private    |
+| [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                                                                       | Terraform for configuring Hashicorp Vault                                    | Private    |
 | [terraform-advanced-analytics-workspaces-infrastructure](https://github.com/StatCan/terraform-advanced-analytics-workspaces-infrastructure) | Terraform to deploy the infrastructure for the Advanced Analytics Workspaces | Private    |
 | [terraform-aaw-infrastructure-aaw-dev-cc-00](https://github.com/StatCan/terraform-aaw-infrastructure-aaw-dev-cc-00)                         | Terraform to deploy the AAW infrastructure for the development environment   | Private    |
 | [terraform-aaw-infrastructure-aaw-prod-cc-00](https://github.com/StatCan/terraform-aaw-infrastructure-aaw-prod-cc-00)                       | Terraform to deploy the AAW infrastructure for the production environment    | Private    |
-| [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases)                                               | Terraform to deploy Azure Managed Databases                                  | Private    |
-| [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                                                                       | Terraform for configuring Hashicorp Vault                                    | Private    |
 
 ## Community Engagement
 
