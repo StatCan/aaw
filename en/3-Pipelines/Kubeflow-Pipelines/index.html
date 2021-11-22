@@ -1041,7 +1041,9 @@ interacted with through:</p>
   even save them for later.</li>
 </ul>
 <!-- prettier-ignore -->
-<details class="example"><summary>More examples in the notebooks</summary><p>More comprehensive pipeline examples specifically made for this platform are
+<details class="example">
+<summary>More examples in the notebooks</summary>
+<p>More comprehensive pipeline examples specifically made for this platform are
 available on <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks">GitHub</a> (and in
 every Notebook Server at <code>/jupyter-notebooks</code>). You can also check out
 <a href="https://github.com/kubeflow/pipelines/tree/master/samples">public sources</a>.</p>
@@ -1214,7 +1216,9 @@ it and take a look for yourself!</p>
 </code></pre></div>
 
 <!-- prettier-ignore -->
-<details class="warning"><summary>Kubeflow Pipelines is a lazy beast</summary><p>It is useful to keep in mind what computation is happening when you run this
+<details class="warning">
+<summary>Kubeflow Pipelines is a lazy beast</summary>
+<p>It is useful to keep in mind what computation is happening when you run this
 python code versus what happens when you submit the pipeline to Kubeflow
 Pipelines. Although it seems like everything is happening in the moment, try
 adding <code>print(avg_1.output)</code> to the above pipeline and see what happens when
@@ -1340,7 +1344,9 @@ knows <strong>a</strong> result from <code>average-data</code> and <code>average
 average, but the <strong>value</strong> of that result is not available until the pipeline is
 actually run.</p>
 <!-- prettier-ignore -->
-<details class="info"><summary>Component naming within the YAML file</summary><p>Because we made an <code>average_op</code> factory function with <code>name='average'</code> above,
+<details class="info">
+<summary>Component naming within the YAML file</summary>
+<p>Because we made an <code>average_op</code> factory function with <code>name='average'</code> above,
 our YAML file has component names that automatically increment to avoid
 recreating the same name twice. We could have been fancier with our
 factory functions to more directly control our names, giving an argument
@@ -1472,7 +1478,9 @@ as a way to securely store and pass sensitive information. Each <strong>secret</
 key-value store containing some number of key-value pairs. The secrets can be
 passed <em>by reference</em> to the pipeline.</p>
 <!-- prettier-ignore -->
-<details class="note"><summary>Secrets are only accessible within their own namespace</summary><p>Secrets can only be accessed within the namespace they are created in.
+<details class="note">
+<summary>Secrets are only accessible within their own namespace</summary>
+<p>Secrets can only be accessed within the namespace they are created in.
 If you need to use a secret in another namespace, you need to add it there
 manually.</p>
 </details>
@@ -1692,13 +1700,17 @@ Registry and any
 <a href="https://github.com/StatCan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml">whitelisted images</a>
 from Docker hub.</p>
 <!-- prettier-ignore -->
-<details class="danger"><summary>Lightweight components have a number of advantages but also some drawbacks</summary><p>See <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a>
+<details class="danger">
+<summary>Lightweight components have a number of advantages but also some drawbacks</summary>
+<p>See <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb">this description</a>
 of their basic characteristics, as well as
 <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb">this example</a>
 which uses them in a more complex pipeline</p>
 </details>
 <!-- prettier-ignore -->
-<details class="info"><summary>A convenient base image to use is the the image your notebook server is running</summary><p>By using the same image as your notebook server, you ensure Kubeflow
+<details class="info">
+<summary>A convenient base image to use is the the image your notebook server is running</summary>
+<p>By using the same image as your notebook server, you ensure Kubeflow
 Pipelines has the same packages available to it as the notebook where you
 do your analysis.  This can help avoid errors from importing packages
 specific to your environment. You can find that link from the notebook

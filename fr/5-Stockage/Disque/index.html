@@ -733,7 +733,9 @@ répertoire (<code>Mount Point</code>) que vous choisissez, et sert de simple et
 fiable de conserver les données attachées à un serveur de bloc-notes .</p>
 <p><img alt="Ajout d'un volume existant à un nouveau serveur de bloc-notes" src="../../images/kubeflow_existing_volume.png" /></p>
 <!-- prettier-ignore -->
-<details class="avertissement"><summary>Vous payez pour tous les disques que vous possédez, qu'ils soient connectés à un serveur bloc-note ou non</summary><p>Dès que vous créez un disque, vous le <a href="#prix">payez</a> jusqu'à ce qu'il soit <a href="#suppression-du-stockage-sur-disque">supprimé</a>, même si le Serveur de blocs-note  d'origine est supprimé. Voir <a href="#suppression-du-stockage-sur-disque">Suppression du stockage sur disque</a> pour plus d'informations</p>
+<details class="avertissement">
+<summary>Vous payez pour tous les disques que vous possédez, qu'ils soient connectés à un serveur bloc-note ou non</summary>
+<p>Dès que vous créez un disque, vous le <a href="#prix">payez</a> jusqu'à ce qu'il soit <a href="#suppression-du-stockage-sur-disque">supprimé</a>, même si le Serveur de blocs-note  d'origine est supprimé. Voir <a href="#suppression-du-stockage-sur-disque">Suppression du stockage sur disque</a> pour plus d'informations</p>
 </details>
 <h2 id="une-fois-que-vous-avez-les-bases">Une fois que vous avez les bases...</h2>
 <p>Lorsque vous supprimez votre Serveur blocs-note , vos disques <strong>ne sont pas
@@ -749,7 +751,9 @@ connecté (icône orange à gauche) en cliquant sur l'icône de la corbeille.</p
 <p><img alt="Supprimer un volume non connecté de l'écran Serveur blocs-note " src="../../images/kubeflow_delete_disk.png" /></p>
 <h3 id="prix">Prix</h3>
 <!-- prettier-ignore -->
-<details class="info"><summary>Les modèles de tarification sont provisoires et peuvent changer</summary><p>Au moment de la rédaction, la tarification est couverte par la plate-forme pour les utilisateurs initiaux. Ce guide explique comment les choses devraient être tarifées à l'avenir, mais cela peut changer.</p>
+<details class="info">
+<summary>Les modèles de tarification sont provisoires et peuvent changer</summary>
+<p>Au moment de la rédaction, la tarification est couverte par la plate-forme pour les utilisateurs initiaux. Ce guide explique comment les choses devraient être tarifées à l'avenir, mais cela peut changer.</p>
 </details>
 <p>Lors du montage d'un disque, vous obtenez un
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Disque managé Azure</a>.
@@ -757,7 +761,9 @@ La tarification <strong>Disques gérés SSD Premium</strong> indique le coût pa
 fonction de la taille. Notez que vous payez pour la taille de disque demandée,
 et non pour la quantité d'espace que vous utilisent actuellement.</p>
 <!-- prettier-ignore -->
-<details class="info"><summary>Conseils pour minimiser les coûts</summary><p>Comme les disques peuvent être attachés à un Serveur blocs-note  et réutilisés, un modèle d'utilisation typique pourrait être :</p>
+<details class="info">
+<summary>Conseils pour minimiser les coûts</summary>
+<p>Comme les disques peuvent être attachés à un Serveur blocs-note  et réutilisés, un modèle d'utilisation typique pourrait être :</p>
 <ul>
 <li>À 9h, créez un Serveur blocs-note  (demandez 2CPU/8GB RAM et un 32GB attaché
   disque)</li>

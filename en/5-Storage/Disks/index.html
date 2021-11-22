@@ -732,7 +732,9 @@ mounted at the directory (<code>Mount Point</code>) you choose, and serve as a s
 reliable way to preserve data attached to a Notebook Server.</p>
 <p><img alt="Adding an existing volume to a new notebook server" src="../../images/kubeflow_existing_volume.png" /></p>
 <!-- prettier-ignore -->
-<details class="warning"><summary>You pay for all disks you own, whether they're attached to a Notebook Server or not</summary><p>As soon as you create a disk, you're <a href="#pricing">paying</a> for it until it is <a href="#deleting-disk-storage">deleted</a>, even if it's original Notebook Server is deleted.  See <a href="#deleting-disk-storage">Deleting Disk Storage</a> for more info</p>
+<details class="warning">
+<summary>You pay for all disks you own, whether they're attached to a Notebook Server or not</summary>
+<p>As soon as you create a disk, you're <a href="#pricing">paying</a> for it until it is <a href="#deleting-disk-storage">deleted</a>, even if it's original Notebook Server is deleted.  See <a href="#deleting-disk-storage">Deleting Disk Storage</a> for more info</p>
 </details>
 <h2 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h2>
 <p>When you delete your Notebook Server, your disks <strong>are not deleted</strong>. This let's
@@ -747,7 +749,9 @@ by clicking the trash can icon.</p>
 <p><img alt="Delete an unattached volume from the Notebook Server screen" src="../../images/kubeflow_delete_disk.png" /></p>
 <h3 id="pricing">Pricing<a class="headerlink" href="#pricing" title="Permanent link">&para;</a></h3>
 <!-- prettier-ignore -->
-<details class="info"><summary>Pricing models are tentative and may change</summary><p>As of writing, pricing is covered by the platform for initial users.  This guidance explains how things are expected to be priced priced in future, but this may change.</p>
+<details class="info">
+<summary>Pricing models are tentative and may change</summary>
+<p>As of writing, pricing is covered by the platform for initial users.  This guidance explains how things are expected to be priced priced in future, but this may change.</p>
 </details>
 <p>When mounting a disk, you get an
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure Managed Disk</a>.
@@ -755,7 +759,9 @@ The <strong>Premium SSD Managed Disks</strong> pricing shows the cost per disk b
 Note that you pay for the size of disk requested, not the amount of space you
 are currently using.</p>
 <!-- prettier-ignore -->
-<details class="info"><summary>Tips to minimize costs</summary><p>As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:</p>
+<details class="info">
+<summary>Tips to minimize costs</summary>
+<p>As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:</p>
 <ul>
 <li>At 9AM, create a Notebook Server (request 2CPU/8GB RAM and a 32GB attached
   disk)</li>
