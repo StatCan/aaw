@@ -1,6 +1,6 @@
 # Overview
 
-[Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/)
+[Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/overview/)
 is a platform for building machine learning workflows for deployment in a
 Kubernetes environment. It enables authoring _pipelines_ that encapsulate
 analytical workflows (transforming data, training models, building visuals,
@@ -425,7 +425,7 @@ Why? Because when authoring the pipeline `n` is a placeholder and has no value.
 KFP cannot define a pipeline from this because it does not know how many times
 to loop. We'd hit similar problems if using `if` statements. There are some ways
 around this, but they're left to the reader to explore through the
-[Kubeflow Pipelines docs](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/).
+[Kubeflow Pipelines docs](https://www.kubeflow.org/docs/components/pipelines/overview/).
 
 Why does pipeline authoring behave this way? Because _pipelines_ (and
 _components_) are meant to be reusable definitions of logic that are defined in

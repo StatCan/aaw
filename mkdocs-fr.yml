@@ -1,6 +1,6 @@
-site_name: Espace d'analyse avancée du COVID-19
+site_name: Espace d'analyse avancée
 site_url: https://statcan.github.io/daaas/fr/
-site_description: User guide for the DAaaS Covid-19 Platform
+site_description: User guide for the DAaaS AAW Platform
 copyright: Copyright &copy; 2020 Statistics Canada
 
 docs_dir: docs/fr

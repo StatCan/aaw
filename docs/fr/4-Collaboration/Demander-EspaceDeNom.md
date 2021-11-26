@@ -11,7 +11,7 @@ Par défaut, tout le monde obtient son propre espace de nom personnel,
 
 Pour créer un espace de noms pour une équipe, accédez au portail AAW. **Cliquez
 sur le &#8942; menu sur
-[la section Kubeflow du portail](https://portal.covid.cloud.statcan.ca/#kubeflow)**.
+[la section Kubeflow du portail](https://kubeflow.aaw.cloud.statcan.ca/#kubeflow)**.
 
 ![Le menu hamburger à droite de Kubeflow sur le portail](../images/KubeflowNamespace.PNG)
 
