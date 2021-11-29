@@ -11,7 +11,7 @@ you want to collaborate with your team, you can
 
 To create a namespace for a team, go to the AAW portal. **Click the &#8942; menu
 on
-[the Kubeflow section of the portal](https://kubeflow.aaw.cloud.statcan.ca/#kubeflow)**.
+[the Kubeflow section of the portal](https://analytics-platform.statcan.gc.ca/)**.
 
 ![The hamburger menu to the right of Kubeflow on the portal](../images/KubeflowNamespace.PNG)
 
