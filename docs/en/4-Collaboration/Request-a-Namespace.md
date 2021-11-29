@@ -2,7 +2,7 @@
 
 By default, everyone gets their own personal namespace, `firstname-lastname`. If
 you want to collaborate with your team, you can
-[request a new namespace](requesting-a-namespace) to
+[request a new namespace](Request-a-Namespace.md#requesting-a-namespace) to
 [share](Overview.md#share-a-namespace-in-kubeflow).
 
 # Setup
@@ -11,7 +11,7 @@ you want to collaborate with your team, you can
 
 To create a namespace for a team, go to the AAW portal. **Click the &#8942; menu
 on
-[the Kubeflow section of the portal](https://portal.covid.cloud.statcan.ca/#kubeflow)**.
+[the Kubeflow section of the portal](https://analytics-platform.statcan.gc.ca/)**.
 
 ![The hamburger menu to the right of Kubeflow on the portal](../images/KubeflowNamespace.PNG)
 

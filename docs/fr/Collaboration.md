@@ -48,7 +48,7 @@ enregistrer, téléverser et télécharger des données. Votre équipe peut trav
 Par défaut, chaque personne obtient son _propre_ espace de nommage,
 `prénom-nom`. Si vous souhaitez créer un espace de nommage pour une équipe,
 présentez la demande dans le portail : **Cliquez sur le &#8942; de
-[la section Kubeflow du portail](https://portal.covid.cloud.statcan.ca/#kubeflow)**.
+[la section Kubeflow du portail](https://kubeflow.aaw.cloud.statcan.ca/#kubeflow)**.
 
 <!-- prettier-ignore -->
 !!! avertissement "L'espace de nommage ne doit comprendre aucun caractère spécial autre que le trait d'union."

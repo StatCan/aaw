@@ -24,4 +24,4 @@ fureter nos vidéos tutoriels!
 Vous voulez en savoir plus à propos de notre plateforme? Trouvez tous les
 détailles sur notre page GitHub!
 
-- [Page GitHub de l'Espace d'analyse avancée de la COVID-19](https://github.com/StatCan/daaas)
+- [Page GitHub de l'Espace d'analyse avancée](https://github.com/StatCan/daaas)

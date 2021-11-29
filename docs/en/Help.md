@@ -23,4 +23,4 @@ tutorials:
 Want to know even more about our platform? Find everything about it on our
 GitHub page.
 
-- [COVID-19 Advanced Analytics Workspace on GitHub](https://github.com/StatCan/daaas)
+- [Advanced Analytics Workspace on GitHub](https://github.com/StatCan/daaas)

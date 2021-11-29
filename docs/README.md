@@ -1,6 +1,6 @@
 # End-User Documentation
 
-This folder provides the source for the [COVID-19 Advanced Analytics Workspace
+This folder provides the source for the [Advanced Analytics Workspace
 Documentation][aaw-docs], which guides users through the major services of the
 platform.
 
