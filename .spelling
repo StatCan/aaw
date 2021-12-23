@@ -19,6 +19,7 @@ github
 Github
 GitHub
 GitLab
+initialized
 integrations
 javascript
 jupyter
@@ -65,5 +66,7 @@ Sign
 Slack
 sqlite
 StatCan
+torchaudio
+torchvision
 Vault
 with

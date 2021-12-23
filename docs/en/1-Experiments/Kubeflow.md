@@ -14,7 +14,8 @@ for your team.
 # Video Tutorial
 
 <!-- prettier-ignore -->
-!!! note "This video is not up to date, some things have changed since."
+!!! note ""
+    This video is not up to date, some things have changed since.
 
 [![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Advanced Analytics Workspace - Kubeflow Getting Started")
 
@@ -66,7 +67,7 @@ for your team.
   When creating a notebook server, the system will limit you to the maximum
   specifications above. For CPU notebook servers, you can specify the exact
   amount of CPU and memory that you require. This allows you to meet your
-  compute needs while minimizing cost. For a GPU notebook server, you will
+  compute needs while minimising cost. For a GPU notebook server, you will
   always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).
 
   In the future there may be larger machines available, so you may have looser
@@ -98,8 +99,8 @@ for your team.
 
 <!-- prettier-ignore -->
 !!! note "Slow node creation bug."
-  Due to a bug with the firewall, creating a new node may be very
-  slow in some cases (up to a few hours). A fix for this issue is in the works.
+    Due to a bug with the firewall, creating a new node may be very
+    slow in some cases (up to a few hours). A fix for this issue is in the works.
 
 <!-- prettier-ignore -->
 !!! success "Your server is running"
