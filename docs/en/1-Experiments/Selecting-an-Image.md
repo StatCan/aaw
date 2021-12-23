@@ -36,10 +36,10 @@ activate this environment to use PyTorch.
 
 For the `jupyterlab-cpu`, `jupyterlab-tensorflow`, and `jupyterlab-pytorch`
 images, in the default shell the `conda activate` command may not work. This is
-due to the environment not being initalized properly. In this case run `bash`,
+due to the environment not being initialized properly. In this case run `bash`,
 you should see the AAW logo and a few instructions appear. After this
 `conda activate` should work properly. If you see the AAW logo on startup it
-means the environment is correctly initalized and `conda activate` should work
+means the environment is correctly initialized and `conda activate` should work
 properly. A fix for this bug is in the works, once this is fixed this paragraph
 will be removed.
 
