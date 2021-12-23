@@ -93,8 +93,13 @@ for your team.
 ## And... Create!!!
 
 - If you're satisfied with the settings, you can now create the server! It may
-  take a few minutes to spin up depending on the resources you asked for. (GPUs
-  take longer.)
+  take a few minutes to spin up depending on the resources you asked for. GPUs
+  take longer.
+
+<!-- prettier-ignore -->
+!!! note "Slow node creation bug."
+  Due to a bug with the firewall, creating a new node may be very
+  slow in some cases (up to a few hours). A fix for this issue is in the works.
 
 <!-- prettier-ignore -->
 !!! success "Your server is running"
