@@ -19,7 +19,7 @@ These can be written in `Python`, `Julia`, or `R`.
 ![Jupyter Notebooks](../images/jupyter_in_action.png)
 
 <!-- prettier-ignore -->
-??? info "Common uses include:" 
+??? info "Common uses include:"
     data transformation, numerical simulation, statistical
     modelling, machine learning and more.
 
@@ -29,6 +29,19 @@ including common packages such as `numpy`, `pandas` and `scikit-learn`. If
 you're interested specifically in using **_TensorFlow_** or **_PyTorch_**, we
 also have `jupyterlab-tensorflow` and `jupyterlab-pytorch` which come with those
 tools pre-installed.
+
+For the `jupyterlab-pytorch` image, the PyTorch packages (torch, torchvision,
+and torchaudio) are installed in the `torch` conda environment. You must
+activate this environment to use PyTorch.
+
+For the `jupyterlab-cpu`, `jupyterlab-tensorflow`, and `jupyterlab-pytorch`
+images, in the default shell the `conda activate` command may not work. This is
+due to the environment not being initalized properly. In this case run `bash`,
+you should see the AAW logo and a few instructions appear. After this
+`conda activate` should work properly. If you see the AAW logo on startup it
+means the environment is correctly initalized and `conda activate` should work
+properly. A fix for this bug is in the works, once this is fixed this paragraph
+will be removed.
 
 Each image comes pre-loaded with VS Code in the browser if you prefer a full IDE
 experience.
