@@ -668,6 +668,17 @@ including common packages such as <code>numpy</code>, <code>pandas</code> and <c
 you're interested specifically in using <strong><em>TensorFlow</em></strong> or <strong><em>PyTorch</em></strong>, we
 also have <code>jupyterlab-tensorflow</code> and <code>jupyterlab-pytorch</code> which come with those
 tools pre-installed.</p>
+<p>For the <code>jupyterlab-pytorch</code> image, the PyTorch packages (torch, torchvision,
+and torchaudio) are installed in the <code>torch</code> conda environment. You must
+activate this environment to use PyTorch.</p>
+<p>For the <code>jupyterlab-cpu</code>, <code>jupyterlab-tensorflow</code>, and <code>jupyterlab-pytorch</code>
+images, in the default shell the <code>conda activate</code> command may not work. This is
+due to the environment not being initalized properly. In this case run <code>bash</code>,
+you should see the AAW logo and a few instructions appear. After this
+<code>conda activate</code> should work properly. If you see the AAW logo on startup it
+means the environment is correctly initalized and <code>conda activate</code> should work
+properly. A fix for this bug is in the works, once this is fixed this paragraph
+will be removed.</p>
 <p>Each image comes pre-loaded with VS Code in the browser if you prefer a full IDE
 experience.</p>
 <h3 id="rstudio">RStudio<a class="headerlink" href="#rstudio" title="Permanent link">&para;</a></h3>

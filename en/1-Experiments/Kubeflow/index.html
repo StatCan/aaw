@@ -839,19 +839,24 @@ for your team.</p>
 <p><img alt="Kubeflow Manages the Jupyter Servers" src="../../images/jupyter_visual.png" /></p>
 <p><strong>Let's get started!</strong></p>
 <h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">&para;</a></h2>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">This video is not up to date, some things have changed since.</p>
+</div>
 <p><a href="https://www.youtube.com/watch?v=xaI6ExYdxc4&amp;list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&amp;index=1" title="Advanced Analytics Workspace - Kubeflow Getting Started"><img alt="Click here for the video" src="../../images/KubeflowVideo.PNG" /></a></p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="log-into-kubeflow">Log into Kubeflow<a class="headerlink" href="#log-into-kubeflow" title="Permanent link">&para;</a></h3>
 <!-- prettier-ignore -->
 <details class="warning">
 <summary>Log into the Azure Portal using your Cloud Credentials</summary>
-<p>You have to login to the azure portal <strong>using your StatCan credentials</strong>.
-<code>first.lastname@cloud.statcan.ca</code>. You can do that using
-<a href="https://portal.azure.com">the Azure portal</a>.
+<p>You have to login to the Azure Portal <strong>using your StatCan credentials</strong>.
+<code>first.lastname@cloud.statcan.ca</code> or <strong>StatCan credentials</strong>
+<code>first.lastname@statcan.gc.ca</code>. You can do that using
+<a href="https://portal.azure.com">the Azure Portal</a>.
 <img alt="Azure Portal: Choose the @cloud.statcan.ca address" src="../../images/azure-login.png" /></p>
 </details>
 <ul>
-<li>Log into <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
+<li>Log into <a href="https://kubeflow.aaw.cloud.statcan.ca">Kubeflow</a></li>
 </ul>
 <ul>
 <li>Navigate to the Notebook Servers tab</li>
@@ -878,16 +883,22 @@ for your team.</p>
 <h3 id="cpu-and-memory">CPU and Memory<a class="headerlink" href="#cpu-and-memory" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>At the time of writing (April 21, 2020) there are two types of computers in
+<p>At the time of writing (December 23, 2021) there are two types of computers in
   the cluster</p>
 <ul>
-<li><strong>CPU:</strong> <code>D16s v3</code> (16 CPU cores, 64 GiB memory)</li>
-<li><strong>GPU:</strong> <code>NC6s_v3</code> (6 CPU cores, 112 GiB memory, 1 GPU)</li>
+<li><strong>CPU:</strong> <code>D16s v3</code> (16 CPU cores, 64 GiB memory; for user use 15 CPU cores
+  and 48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for
+  system use).</li>
+<li><strong>GPU:</strong> <code>NC6s_v3</code> (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
+  memory are available; 16 GiB memory reserved for system use).</li>
 </ul>
-<p>Because of this, if you request too much RAM or too many CPUs, it may be hard
-or impossible to satisfy your request.</p>
-<p>In the future (possibly when you read this) there may be larger machines made
-available, so you may have looser restrictions.</p>
+<p>When creating a notebook server, the system will limit you to the maximum
+specifications above. For CPU notebook servers, you can specify the exact
+amount of CPU and memory that you require. This allows you to meet your
+compute needs while minimizing cost. For a GPU notebook server, you will
+always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).</p>
+<p>In the future there may be larger machines available, so you may have looser
+restrictions.</p>
 </li>
 </ul>
 <!-- prettier-ignore -->
@@ -912,9 +923,15 @@ or creating a new one. You probably want to reuse your old volume.</p>
 <h3 id="and-create">And... Create!!!<a class="headerlink" href="#and-create" title="Permanent link">&para;</a></h3>
 <ul>
 <li>If you're satisfied with the settings, you can now create the server! It may
-  take a few minutes to spin up depending on the resources you asked for. (GPUs
-  take longer.)</li>
+  take a few minutes to spin up depending on the resources you asked for. GPUs
+  take longer.</li>
 </ul>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">Slow node creation bug.</p>
+</div>
+<p>Due to a bug with the firewall, creating a new node may be very
+  slow in some cases (up to a few hours). A fix for this issue is in the works.</p>
 <!-- prettier-ignore -->
 <div class="admonition success">
 <p class="admonition-title">Your server is running</p>
