@@ -13,6 +13,9 @@ for your team.
 
 # Video Tutorial
 
+<!-- prettier-ignore -->
+!!! note "This video is not up to date, some things have changed since."
+
 [![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Advanced Analytics Workspace - Kubeflow Getting Started")
 
 # Setup
@@ -21,12 +24,13 @@ for your team.
 
 <!-- prettier-ignore -->
 ??? warning "Log into the Azure Portal using your Cloud Credentials"
-    You have to login to the azure portal **using your StatCan credentials**.
-    `first.lastname@cloud.statcan.ca`. You can do that using
-    [the Azure portal](https://portal.azure.com).
+    You have to login to the Azure Portal **using your StatCan credentials**.
+    `first.lastname@cloud.statcan.ca` or **StatCan credentials**
+    `first.lastname@statcan.gc.ca`. You can do that using
+    [the Azure Portal](https://portal.azure.com).
     ![Azure Portal: Choose the `@cloud.statcan.ca` address](../images/azure-login.png)
 
-- Log into [Kubeflow](https://kubeflow.covid.cloud.statcan.ca)
+- Log into [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca)
 
 - Navigate to the Notebook Servers tab
 
@@ -50,17 +54,23 @@ for your team.
 
 ## CPU and Memory
 
-- At the time of writing (April 21, 2020) there are two types of computers in
+- At the time of writing (December 23, 2021) there are two types of computers in
   the cluster
 
-  - **CPU:** `D16s v3` (16 CPU cores, 64 GiB memory)
-  - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU)
+  - **CPU:** `D16s v3` (16 CPU cores, 64 GiB memory; for user use 15 CPU cores
+    and 48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for
+    system use).
+  - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
+    memory are available; 16 GiB memory reserved for system use).
 
-  Because of this, if you request too much RAM or too many CPUs, it may be hard
-  or impossible to satisfy your request.
+  When creating a notebook server, the system will limit you to the maximum
+  specifications above. For CPU notebook servers, you can specify the exact
+  amount of CPU and memory that you require. This allows you to meet your
+  compute needs while minimizing cost. For a GPU notebook server, you will
+  always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).
 
-  In the future (possibly when you read this) there may be larger machines made
-  available, so you may have looser restrictions.
+  In the future there may be larger machines available, so you may have looser
+  restrictions.
 
 <!-- prettier-ignore -->
 !!! note "Use GPU machines responsibly"
@@ -83,8 +93,13 @@ for your team.
 ## And... Create!!!
 
 - If you're satisfied with the settings, you can now create the server! It may
-  take a few minutes to spin up depending on the resources you asked for. (GPUs
-  take longer.)
+  take a few minutes to spin up depending on the resources you asked for. GPUs
+  take longer.
+
+<!-- prettier-ignore -->
+!!! note "Slow node creation bug."
+  Due to a bug with the firewall, creating a new node may be very
+  slow in some cases (up to a few hours). A fix for this issue is in the works.
 
 <!-- prettier-ignore -->
 !!! success "Your server is running"
