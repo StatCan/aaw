@@ -323,6 +323,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpus" class="md-nav__link">
+    GPUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    Advanced Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#and-create" class="md-nav__link">
     And... Create!!!
   </a>
@@ -777,6 +798,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configurations" class="md-nav__link">
+    Configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpus" class="md-nav__link">
+    GPUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    Advanced Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#and-create" class="md-nav__link">
     And... Create!!!
   </a>
@@ -876,9 +918,12 @@ for your team.</p>
   that matches what you want to do. (Don't know which one to choose? Check out
   your options <a href="../Selecting-an-Image/">here</a>.)</li>
 </ul>
-<p><img alt="Choose an Image" src="../../images/kubeflow_choose_an_image.png" /></p>
+<p><img alt="Choose an Image" src="../../images/kubeflow_image_selection.jpg" /></p>
 <ul>
-<li>If you want to use a GPU, check if the image says <code>cpu</code> or <code>gpu</code>.</li>
+<li>You will also need to specify a namespace. By default you will have a default
+namespace for your account, but for projects you may need to select the
+namespace created specifically for that project. Otherwise the notebook server
+you create may not have access rights to resources required for the project.</li>
 </ul>
 <h3 id="cpu-and-memory">CPU and Memory<a class="headerlink" href="#cpu-and-memory" title="Permanent link">&para;</a></h3>
 <ul>
@@ -896,7 +941,8 @@ for your team.</p>
 specifications above. For CPU notebook servers, you can specify the exact
 amount of CPU and memory that you require. This allows you to meet your
 compute needs while minimising cost. For a GPU notebook server, you will
-always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).</p>
+always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).
+See below section on GPUs for information on how to select a GPU server.</p>
 <p>In the future there may be larger machines available, so you may have looser
 restrictions.</p>
 </li>
@@ -904,7 +950,8 @@ restrictions.</p>
 <!-- prettier-ignore -->
 <div class="admonition note">
 <p class="admonition-title">Use GPU machines responsibly</p>
-<p>There are fewer GPU machines than CPU machines, so use them responsibly.</p>
+<p>GPU machines are significantly more expensive than CPU machines,
+so use them responsibly.</p>
 </div>
 <h3 id="storing-your-data">Storing your data<a class="headerlink" href="#storing-your-data" title="Permanent link">&para;</a></h3>
 <ul>
@@ -920,6 +967,36 @@ restrictions.</p>
 <p>When you create your server you have the option of reusing an old volume
 or creating a new one. You probably want to reuse your old volume.</p>
 </div>
+<h3 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
+<p>There are currently two checkbox options available here:</p>
+<ul>
+<li><strong>Run a Protected B notebook</strong>: Enable this if the server you create needs
+access to any Protected B resources. Protected B notebook servers run with many
+security restrictions and have access to separate MinIO instances specifically
+designed for Protected B data.</li>
+<li><strong>Mount MinIO storage into the minio/ folder</strong>: This should make MinIO
+repositories accessible as subfolders / files of the <code>minio/</code> folder.
+Unfortunately this is not working currently, when this is fixed the
+documentation will be updated.</li>
+</ul>
+<h3 id="gpus">GPUs<a class="headerlink" href="#gpus" title="Permanent link">&para;</a></h3>
+<p>If you want a GPU server, select <code>1</code> as the number of GPUs and <code>NVIDIA</code> as the GPU
+vendor (the create button will be greyed out until the GPU vendor is selected if
+you have a GPU specified). Multi-GPU servers are not currently supported on the
+AAW system.</p>
+<p><img alt="GPU Configuration" src="../../images/kubeflow_gpu_selection.jpg" /></p>
+<p>As mentioned before, if you select a GPU server you will automatically get 6 CPU
+cores and 112 GiB of memory.</p>
+<h3 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h3>
+<p>There are two things that can be customized here:</p>
+<ul>
+<li><strong>Enable Shared Memory</strong>: This is required if you use PyTorch with multiple data
+loaders, which otherwise will generate an error. If using PyTorch make sure this
+is enabled, otherwise it does not matter unless you have another application
+that requires shared memory.</li>
+<li><strong>System language</strong>: You can select either English or French as the system
+language.</li>
+</ul>
 <h3 id="and-create">And... Create!!!<a class="headerlink" href="#and-create" title="Permanent link">&para;</a></h3>
 <ul>
 <li>If you're satisfied with the settings, you can now create the server! It may

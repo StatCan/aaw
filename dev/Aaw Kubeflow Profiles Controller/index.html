@@ -668,17 +668,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
     
     <label class="md-nav__link" for="nav-13">
-      Aaw Kubeflow Manifest
+      Aaw Kubeflow Manifests
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Aaw Kubeflow Manifest" data-md-level="1">
+    <nav class="md-nav" aria-label="Aaw Kubeflow Manifests" data-md-level="1">
       <label class="md-nav__title" for="nav-13">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Aaw Kubeflow Manifest
+        Aaw Kubeflow Manifests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -689,7 +689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Aaw%20Kubeflow%20Manifest/" title="Kubeflow Manifests" class="md-nav__link">
+    <a href="../Aaw%20Kubeflow%20Manifests/" title="Kubeflow Manifests" class="md-nav__link">
       Kubeflow Manifests
     </a>
   </li>
@@ -2523,16 +2523,16 @@ These act like most other Resources in Kubernetes, and may be <code>kubectl appl
 <p>Each instance of your custom resource has an attached Spec, which should be defined via a <code>struct{}</code> to provide data format validation.
 In practice, this Spec is arbitrary key-value data that specifies the configuration/behavior of your Resource.</p>
 <p>For example, if you were implementing a custom resource for a Database, you might provide a DatabaseSpec like the following:</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">type</span> <span class="nx">DatabaseSpec</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Databases</span> <span class="p">[]</span><span class="kt">string</span> <span class="s">`json:&quot;databases&quot;`</span>
-    <span class="nx">Users</span>     <span class="p">[]</span><span class="nx">User</span>   <span class="s">`json:&quot;users&quot;`</span>
-    <span class="nx">Version</span>   <span class="kt">string</span>   <span class="s">`json:&quot;version&quot;`</span>
-<span class="p">}</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">DatabaseSpec</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Databases</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;databases&quot;`</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Users</span><span class="w">     </span><span class="p">[]</span><span class="nx">User</span><span class="w">   </span><span class="s">`json:&quot;users&quot;`</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Version</span><span class="w">   </span><span class="kt">string</span><span class="w">   </span><span class="s">`json:&quot;version&quot;`</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="kd">type</span> <span class="nx">User</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">Name</span>     <span class="kt">string</span> <span class="s">`json:&quot;name&quot;`</span>
-    <span class="nx">Password</span> <span class="kt">string</span> <span class="s">`json:&quot;password&quot;`</span>
-<span class="p">}</span>
+<span class="kd">type</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Name</span><span class="w">     </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;name&quot;`</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Password</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;password&quot;`</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h3>
