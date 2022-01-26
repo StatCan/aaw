@@ -6,6 +6,7 @@ Conda
 COVID-19
 Customization
 customize
+customized
 Databricks
 datasette
 Datasette
@@ -35,6 +36,8 @@ lifecycle
 minimal-tenant
 minimal-tenant1
 MinIO
+minio/
+minio
 mlflow
 MLflow
 MLOps
@@ -66,6 +69,7 @@ Sign
 Slack
 sqlite
 StatCan
+subfolders
 torchaudio
 torchvision
 Vault
