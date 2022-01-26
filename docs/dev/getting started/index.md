@@ -11,7 +11,7 @@ Welcome to the team! :)
 | Docker     | <https://www.youtube.com/watch?v=pTFZFxd4hOI&ab_channel=ProgrammingwithMosh> |
 |            | <https://www.youtube.com/watch?v=eGz9DS-aIeY&ab_channel=NetworkChuck>        |
 |            | <https://www.youtube.com/watch?v=Gjnup-PuquQ&ab_channel=Fireship>            |
-| Kubernates | <https://www.youtube.com/watch?v=QJ4fODH6DXI&ab_channel=KodeKloud>           |
+| Kubernetes | <https://www.youtube.com/watch?v=QJ4fODH6DXI&ab_channel=KodeKloud>           |
 |            | <https://www.youtube.com/watch?v=7bA0gTroJjw&ab_channel=NetworkChuck>        |
 |            | <https://www.youtube.com/watch?v=4ht22ReBjno&ab_channel=Deis%2CInc.>         |
 |            | <https://www.youtube.com/watch?v=PziYflu8cB8&ab_channel=Fireship>            |
