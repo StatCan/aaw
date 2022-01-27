@@ -882,18 +882,22 @@ votre équipe.</p>
 <h2 id="creer-un-serveur">Créer un serveur</h2>
 <h3 id="se-connecter-a-kubeflow">Se connecter à Kubeflow</h3>
 <h2 id="didacticiel-video">Didacticiel vidéo</h2>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">Cette vidéo n'est pas à jour, certaines choses pourraient avoir changé depuis.</p>
+</div>
 <p><a href="https://www.youtube.com/watch?v=xaI6ExYdxc4&amp;list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&amp;index=1" title="Espace de travail d'analyse avancée - Kubeflow"><img alt="Click here for the video" src="../images/KubeflowVideo.PNG" /></a></p>
 <h2 id="installation">Installation</h2>
 <h3 id="connectez-vous-a-kubeflow">Connectez-vous à Kubeflow</h3>
 <!-- prettier-ignore -->
 <div class="admonition avertissement">
 <p class="admonition-title">Connectez-vous au portail Azure à l'aide de vos identifiants cloud</p>
-<p>Vous devez vous connecter au portail azur <strong> en utilisant vos informations d'identification StatCan </strong>.<code>first.lastname@cloud.statcan.ca</code>. Vous pouvez le faire en utilisant
+<p>Vous devez vous connecter au portail Azure <strong> en utilisant vos informations d'identification StatCan </strong>.<code>first.lastname@cloud.statcan.ca</code> ou <strong> en utilisant vos informations d'identification StatCan </strong> <code>first.lastname@statcan.gc.ca</code>. Vous pouvez le faire en utilisant
 <a href="https://portal.azure.com">Portail Azure</a>.
 <img alt="Azure Portal: Choisir l'adresse @cloud.statcan.ca " src="../../images/azure-login.png" /></p>
 </div>
 <ul>
-<li>Se connecter à <a href="https://kubeflow.covid.cloud.statcan.ca">Kubeflow</a></li>
+<li>Se connecter à <a href="https://kubeflow.aaw.cloud.statcan.ca">Kubeflow</a></li>
 </ul>
 <ul>
 <li>Accédez à l'onglet Serveurs bloc-notes</li>
@@ -920,19 +924,22 @@ votre équipe.</p>
 <h3 id="cpu-et-memoire">CPU et mémoire</h3>
 <ul>
 <li>
-<p>Au moment de la rédaction (21 avril 2020), il existe deux types d'ordinateurs
+<p>Au moment de la rédaction (23 décembre, 2021), il existe deux types d'ordinateurs
   dans la grappe</p>
 <ul>
-<li><strong>CPU:</strong> <code>D16s v3</code> (16 CPU , 64 G mémoire)</li>
-<li><strong>GPU:</strong> <code>NC6s_v3</code> (6 CPU , 112 G mémoire, 1 GPU)</li>
+<li><strong>CPU:</strong> <code>D16s v3</code> (16 CPU , 64 G mémoire; 15 CPU et 48 G mémoire sont disponible pour l'utilisateur, 1 CPU et 16 G mémoire sont réservés pour l'utilisation du système)</li>
+<li><strong>GPU:</strong> <code>NC6s_v3</code> (6 CPU , 112 G mémoire, 1 GPU; 96 G de mémoire disponible pour l'utilisatuer, 16 G sont réservés pour l'utilisation du système)</li>
 </ul>
 </li>
 </ul>
-<p>Pour cette raison, si vous demandez trop de RAM ou trop de processeurs, il peut
-être difficile ou impossible de satisfaire votre demande.</p>
-<p>À l'avenir (peut-être lorsque vous lisez ceci), il se peut que des machines plus
-grandes soient fabriquées disponibles, vous pouvez donc avoir des restrictions
-plus souples.</p>
+<p>Lors de la création d'un serveur de bloc-notes, le système vous limitera aux spécifications maximales ci-dessus. Pour les serveurs de bloc-notes CPU, vous pouvez spécifier la quantité exacte de CPU et de mémoire dont vous avez besoin. Cela vous permet de répondre à vos besoins de calcul tout en minimisant les coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur complet (6 cœurs CPU, 96 Gio de mémoire accessible et 1 GPU).</p>
+<p>À l'avenir, il se peut que des machines plus grandes soient disponibles, vous pourriez donc avoir des restrictions plus souples.</p>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">Bogue de création de nœud lent.</p>
+</div>
+<p>En raison d'un bug avec le pare-feu, la création d'un nouveau nœud peut être très
+   lente dans certains cas (jusqu'à quelques heures). Un correctif pour ce problème est en cours.</p>
 <!-- prettier-ignore -->
 <div class="admonition note">
 <p class="admonition-title">Utilisez les machines GPU de manière responsable</p>

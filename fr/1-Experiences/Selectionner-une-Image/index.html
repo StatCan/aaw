@@ -675,6 +675,8 @@ machine. L'image <code>jupyterlab-cpu</code> fournit une bonne expérience de ba
 vous êtes intéressé spécifiquement par <strong><em>TensorFlow</em></strong> ou <strong><em>PyTorch</em></strong>, nous
 avons également les images <code>jupyterlab-tensorflow</code> et<code>jupyterlab-pytorch</code> qui
 viennent avec ces outils pré-installés.</p>
+<p>Pour l'image <code>jupyterlab-pytorch</code>, les packages PyTorch (torch, torchvision et torchaudio) sont installés dans l'environnement conda <code>torch</code>. Vous devez activer cet environnement pour utiliser PyTorch.</p>
+<p>Pour les images <code>jupyterlab-cpu</code>, <code>jupyterlab-tensorflow</code> et <code>jupyterlab-pytorch</code>, dans le shell par défaut, la commande <code>conda activate</code> peut ne pas fonctionner. Cela est dû au fait que l'environnement n'est pas correctement initialisé. Dans ce cas, exécutez « bash », vous devriez voir le logo AAW et quelques instructions apparaissent. Après cela, "conda activate" devrait fonctionner correctement. Si vous voyez le logo AAW au démarrage, cela signifie que l'environnement est correctement initialisé et que « conda activate » devrait fonctionner correctement. Un correctif pour ce bogue est en préparation, une fois cela corrigé, ce paragraphe sera supprimé.</p>
 <p>Chaque image est préchargée avec VS Code dans le navigateur si vous préférez une
 expérience IDE complète.</p>
 <h4 id="rstudio">RStudio</h4>
