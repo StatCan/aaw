@@ -29,7 +29,7 @@ votre équipe.
 
 <!-- prettier-ignore -->
 !!! avertissement "Connectez-vous au portail Azure à l'aide de vos identifiants cloud"
-    Vous devez vous connecter au portail azur ** en utilisant vos informations d'identification StatCan **.`first.lastname@cloud.statcan.ca` ou ** en utilisant vos informations d'identification StatCan ** `first.lastname@statcan.gc.ca`. Vous pouvez le faire en utilisant
+    Vous devez vous connecter au portail Azure ** en utilisant vos informations d'identification StatCan **.`first.lastname@cloud.statcan.ca` ou ** en utilisant vos informations d'identification StatCan ** `first.lastname@statcan.gc.ca`. Vous pouvez le faire en utilisant
     [Portail Azure](https://portal.azure.com).
     ![Azure Portal: Choisir l'adresse `@cloud.statcan.ca` ](../images/azure-login.png)
 
