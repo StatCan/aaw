@@ -35,10 +35,15 @@ Notebook Server it is attached).
 
 The following MinIO tenants (e.g.: separate services) are available:
 
-|            Tenant | Speed   | Cost    | Access via File Browser     | Access via `mc`                        | Access via Web Portal                                           |
-| ----------------: | ------- | ------- | --------------------------- | -------------------------------------- | --------------------------------------------------------------- |
-| standard-tenant-1 | Average | Low     | `~/minio/standard-tenant-1` | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio-standard-tenant-1.covid.cloud.statcan.ca/) |
-|  premium-tenant-1 | Fast    | Average | `~/minio/premium-tenant-1`  | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium-tenant-1.covid.cloud.statcan.ca/)  |
+|        Tenant  | Access via File Browser     | Access via `mc`                        | Access via Web      | Protected-b/Unclassified Notebooks                                           |
+| ----------------: | --------------------------- | -------------------------------------- |  -------------------------------------- |   ------------------------------------------------------ |
+| standard-tenant-1 | `~/minio/standard-tenant-1` | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio.aaw.cloud.statcan.ca/minio/login) | Unclassified |
+|  premium-tenant-1 | `~/minio/premium-tenant-1`  | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium.aaw.cloud.statcan.ca/minio/login)  | Unclassified
+|  fdi-gateway-unclassified | `~/minio/fdi-gateway-unclassified`  | `mc ls fdi-gateway-unclassified/$NB_NOTEBOOK`  |  N/A | Unclassified |
+|  minio-standard-ro | `~/minio/minio-standard-ro`  | `mc ls minio-standard-ro/$NB_NOTEBOOK`  | N/A  | Protected-b |
+|  minio-premium-ro | `~/minio/minio-premium-ro`  | `mc ls minio-premium-ro/$NB_NOTEBOOK`  | N/A  | Protected-b |
+|  minio-protected-b | `~/minio/minio-protected-b`  | `mc ls minio-protected-b/$NB_NOTEBOOK`  |  N/A | Protected-b |
+|  fdi-gateway-protected-b | `~/minio/fdi-gateway-protected-b`  | `mc ls fdi-gateway-protected-b/$NB_NOTEBOOK`  | N/A  | Protected-b |
 
 <!-- prettier-ignore -->
 ??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
@@ -47,10 +52,10 @@ The following MinIO tenants (e.g.: separate services) are available:
 Accessing all MinIO tenants is the same. The difference between tenants is the
 storage type behind them:
 
-- **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):** By
+- **[Standard](https://minio.aaw.cloud.statcan.ca/minio/login):** By
   default, use this one. It is backed by an SSD and provides a good balance of
   cost and performance.
-- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):** Use
+- **[Premium](https://minio-premium.aaw.cloud.statcan.ca/minio/login):** Use
   this if you need high read/write speeds and don't mind paying ~2x the storage
   cost. These are somewhat faster than the standard storage.
 
@@ -75,7 +80,7 @@ providing different access scopes:
 ## MinIO Web Portal
 
 The MinIO service can be accessible through a
-[web portal](https://minio-standard-tenant-1.covid.cloud.statcan.ca/). To sign
+[web portal](https://minio.aaw.cloud.statcan.ca/minio/login). To sign
 in using your existing credentials, use the "Log in with OpenID" button.
 
 ![MinIO sign-in view, indicating the OpenID option](../images/minio_self_serve_login.png)
