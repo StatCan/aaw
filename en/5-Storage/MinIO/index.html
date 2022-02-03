@@ -600,6 +600,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#accessing-internal-data" class="md-nav__link">
+    Accessing Internal Data
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -770,6 +777,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#accessing-internal-data" class="md-nav__link">
+    Accessing Internal Data
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -901,8 +915,9 @@ S3 storage). Buckets are good at three things:</p>
 </ul>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="minio-mounted-folders-on-a-notebook-server">MinIO Mounted Folders on a Notebook Server<a class="headerlink" href="#minio-mounted-folders-on-a-notebook-server" title="Permanent link">&para;</a></h3>
-<p>All Notebook Servers have your MinIO storage mounted as directories by default.
-The MinIO storage is located in <code>~/minio</code>:</p>
+<p>Your MinIO storage are mounted as directories if you select the option
+<code>Mount MinIO storage into the minio/ folder</code> when creating a Notebook Server.</p>
+<p>The MinIO storage is located in <code>~/minio</code>:</p>
 <p><img alt="MinIO folders mounted as Jupyter Notebook directories" src="../../images/minio_automount_folder.png" /></p>
 <p>These folders can be used like any other - you can copy files to/from using the
 file browser, write from Python/R, etc. The only difference is that the data is
@@ -920,29 +935,61 @@ Notebook Server it is attached).</p>
 <thead>
 <tr>
 <th align="right">Tenant</th>
-<th>Speed</th>
-<th>Cost</th>
 <th>Access via File Browser</th>
 <th>Access via <code>mc</code></th>
-<th>Access via Web Portal</th>
+<th>Access via Web</th>
+<th>Protected-b/Unclassified Notebooks</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="right">standard-tenant-1</td>
-<td>Average</td>
-<td>Low</td>
 <td><code>~/minio/standard-tenant-1</code></td>
 <td><code>mc ls standard-tenant-1/$NB_NOTEBOOK</code></td>
-<td><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca/">link</a></td>
+<td><a href="https://minio.aaw.cloud.statcan.ca/minio/login">link</a></td>
+<td>Unclassified</td>
 </tr>
 <tr>
 <td align="right">premium-tenant-1</td>
-<td>Fast</td>
-<td>Average</td>
 <td><code>~/minio/premium-tenant-1</code></td>
 <td><code>mc ls premium-tenant-1/$NB_NOTEBOOK</code></td>
-<td><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">link</a></td>
+<td><a href="https://minio-premium.aaw.cloud.statcan.ca/minio/login">link</a></td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td align="right">fdi-gateway-unclassified</td>
+<td><code>~/minio/fdi-gateway-unclassified</code></td>
+<td><code>mc ls fdi-gateway-unclassified/$NB_NOTEBOOK</code></td>
+<td>N/A</td>
+<td>Unclassified</td>
+</tr>
+<tr>
+<td align="right">minio-standard-ro</td>
+<td><code>~/minio/minio-standard-ro</code></td>
+<td><code>mc ls minio-standard-ro/$NB_NOTEBOOK</code></td>
+<td>N/A</td>
+<td>Protected-b</td>
+</tr>
+<tr>
+<td align="right">minio-premium-ro</td>
+<td><code>~/minio/minio-premium-ro</code></td>
+<td><code>mc ls minio-premium-ro/$NB_NOTEBOOK</code></td>
+<td>N/A</td>
+<td>Protected-b</td>
+</tr>
+<tr>
+<td align="right">minio-protected-b</td>
+<td><code>~/minio/minio-protected-b</code></td>
+<td><code>mc ls minio-protected-b/$NB_NOTEBOOK</code></td>
+<td>N/A</td>
+<td>Protected-b</td>
+</tr>
+<tr>
+<td align="right">fdi-gateway-protected-b</td>
+<td><code>~/minio/fdi-gateway-protected-b</code></td>
+<td><code>mc ls fdi-gateway-protected-b/$NB_NOTEBOOK</code></td>
+<td>N/A</td>
+<td>Protected-b</td>
 </tr>
 </tbody>
 </table>
@@ -954,10 +1001,10 @@ Notebook Server it is attached).</p>
 <p>Accessing all MinIO tenants is the same. The difference between tenants is the
 storage type behind them:</p>
 <ul>
-<li><strong><a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca">Standard</a>:</strong> By
-  default, use this one. It is backed by an SSD and provides a good balance of
-  cost and performance.</li>
-<li><strong><a href="https://minio-premium-tenant-1.covid.cloud.statcan.ca/">Premium</a>:</strong> Use
+<li><strong><a href="https://minio.aaw.cloud.statcan.ca/minio/login">Standard</a>:</strong> By default,
+  use this one. It is backed by an SSD and provides a good balance of cost and
+  performance.</li>
+<li><strong><a href="https://minio-premium.aaw.cloud.statcan.ca/minio/login">Premium</a>:</strong> Use
   this if you need high read/write speeds and don't mind paying ~2x the storage
   cost. These are somewhat faster than the standard storage.</li>
 </ul>
@@ -996,11 +1043,18 @@ providing different access scopes:</p>
 <summary>You can see many directories in the shared MinIO bucket, but you can only write to your own</summary>
 <p>Everyone has read access to all folders in the <code>shared</code> MinIO bucket, but write permissions are always restricted to the owner.</p>
 </details>
+<h3 id="accessing-internal-data">Accessing Internal Data<a class="headerlink" href="#accessing-internal-data" title="Permanent link">&para;</a></h3>
+<p>AAW has an integration with the FAIR Data Infrastructure team that allows users
+to transfer unclassified and protected-b data to Azure Storage Accounts. These
+storage accounts are used my MinIO Gateway instances, thus allowing users to
+access this data from Notebook Servers.</p>
+<p>Please reach out to the FAIR Data Infrastructure team if you have a use case for
+this data.</p>
 <h2 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h2>
 <h3 id="minio-web-portal">MinIO Web Portal<a class="headerlink" href="#minio-web-portal" title="Permanent link">&para;</a></h3>
 <p>The MinIO service can be accessible through a
-<a href="https://minio-standard-tenant-1.covid.cloud.statcan.ca/">web portal</a>. To sign
-in using your existing credentials, use the "Log in with OpenID" button.</p>
+<a href="https://minio.aaw.cloud.statcan.ca/minio/login">web portal</a>. To sign in using
+your existing credentials, use the "Log in with OpenID" button.</p>
 <p><img alt="MinIO sign-in view, indicating the OpenID option" src="../../images/minio_self_serve_login.png" /></p>
 <p>From this portal you can browse to your personal bucket, which has the same name
 as your Kubeflow namespace (likely <code>firstname-lastname</code>):</p>
