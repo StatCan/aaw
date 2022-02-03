@@ -16,7 +16,9 @@ S3 storage). Buckets are good at three things:
 
 ## MinIO Mounted Folders on a Notebook Server
 
-All Notebook Servers have your MinIO storage mounted as directories by default.
+Your MinIO storage are mounted as directories if you select the option
+`Mount MinIO storage into the minio/ folder` when creating a Notebook Server.
+
 The MinIO storage is located in `~/minio`:
 
 ![MinIO folders mounted as Jupyter Notebook directories](../images/minio_automount_folder.png)
@@ -35,15 +37,15 @@ Notebook Server it is attached).
 
 The following MinIO tenants (e.g.: separate services) are available:
 
-|        Tenant  | Access via File Browser     | Access via `mc`                        | Access via Web      | Protected-b/Unclassified Notebooks                                           |
-| ----------------: | --------------------------- | -------------------------------------- |  -------------------------------------- |   ------------------------------------------------------ |
-| standard-tenant-1 | `~/minio/standard-tenant-1` | `mc ls standard-tenant-1/$NB_NOTEBOOK` | [link](https://minio.aaw.cloud.statcan.ca/minio/login) | Unclassified |
-|  premium-tenant-1 | `~/minio/premium-tenant-1`  | `mc ls premium-tenant-1/$NB_NOTEBOOK`  | [link](https://minio-premium.aaw.cloud.statcan.ca/minio/login)  | Unclassified
-|  fdi-gateway-unclassified | `~/minio/fdi-gateway-unclassified`  | `mc ls fdi-gateway-unclassified/$NB_NOTEBOOK`  |  N/A | Unclassified |
-|  minio-standard-ro | `~/minio/minio-standard-ro`  | `mc ls minio-standard-ro/$NB_NOTEBOOK`  | N/A  | Protected-b |
-|  minio-premium-ro | `~/minio/minio-premium-ro`  | `mc ls minio-premium-ro/$NB_NOTEBOOK`  | N/A  | Protected-b |
-|  minio-protected-b | `~/minio/minio-protected-b`  | `mc ls minio-protected-b/$NB_NOTEBOOK`  |  N/A | Protected-b |
-|  fdi-gateway-protected-b | `~/minio/fdi-gateway-protected-b`  | `mc ls fdi-gateway-protected-b/$NB_NOTEBOOK`  | N/A  | Protected-b |
+|                   Tenant | Access via File Browser            | Access via `mc`                               | Access via Web                                                 | Protected-b/Unclassified Notebooks |
+| -----------------------: | ---------------------------------- | --------------------------------------------- | -------------------------------------------------------------- | ---------------------------------- |
+|        standard-tenant-1 | `~/minio/standard-tenant-1`        | `mc ls standard-tenant-1/$NB_NOTEBOOK`        | [link](https://minio.aaw.cloud.statcan.ca/minio/login)         | Unclassified                       |
+|         premium-tenant-1 | `~/minio/premium-tenant-1`         | `mc ls premium-tenant-1/$NB_NOTEBOOK`         | [link](https://minio-premium.aaw.cloud.statcan.ca/minio/login) | Unclassified                       |
+| fdi-gateway-unclassified | `~/minio/fdi-gateway-unclassified` | `mc ls fdi-gateway-unclassified/$NB_NOTEBOOK` | N/A                                                            | Unclassified                       |
+|        minio-standard-ro | `~/minio/minio-standard-ro`        | `mc ls minio-standard-ro/$NB_NOTEBOOK`        | N/A                                                            | Protected-b                        |
+|         minio-premium-ro | `~/minio/minio-premium-ro`         | `mc ls minio-premium-ro/$NB_NOTEBOOK`         | N/A                                                            | Protected-b                        |
+|        minio-protected-b | `~/minio/minio-protected-b`        | `mc ls minio-protected-b/$NB_NOTEBOOK`        | N/A                                                            | Protected-b                        |
+|  fdi-gateway-protected-b | `~/minio/fdi-gateway-protected-b`  | `mc ls fdi-gateway-protected-b/$NB_NOTEBOOK`  | N/A                                                            | Protected-b                        |
 
 <!-- prettier-ignore -->
 ??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
@@ -52,9 +54,9 @@ The following MinIO tenants (e.g.: separate services) are available:
 Accessing all MinIO tenants is the same. The difference between tenants is the
 storage type behind them:
 
-- **[Standard](https://minio.aaw.cloud.statcan.ca/minio/login):** By
-  default, use this one. It is backed by an SSD and provides a good balance of
-  cost and performance.
+- **[Standard](https://minio.aaw.cloud.statcan.ca/minio/login):** By default,
+  use this one. It is backed by an SSD and provides a good balance of cost and
+  performance.
 - **[Premium](https://minio-premium.aaw.cloud.statcan.ca/minio/login):** Use
   this if you need high read/write speeds and don't mind paying ~2x the storage
   cost. These are somewhat faster than the standard storage.
@@ -75,13 +77,23 @@ providing different access scopes:
 ??? info "You can see many directories in the shared MinIO bucket, but you can only write to your own"
     Everyone has read access to all folders in the `shared` MinIO bucket, but write permissions are always restricted to the owner.
 
+## Accessing Internal Data
+
+AAW has an integration with the FAIR Data Infrastructure team that allows users
+to transfer unclassified and protected-b data to Azure Storage Accounts. These
+storage accounts are used my MinIO Gateway instances, thus allowing users to
+access this data from Notebook Servers.
+
+Please reach out to the FAIR Data Infrastructure team if you have a use case for
+this data.
+
 # Once you've got the basics ...
 
 ## MinIO Web Portal
 
 The MinIO service can be accessible through a
-[web portal](https://minio.aaw.cloud.statcan.ca/minio/login). To sign
-in using your existing credentials, use the "Log in with OpenID" button.
+[web portal](https://minio.aaw.cloud.statcan.ca/minio/login). To sign in using
+your existing credentials, use the "Log in with OpenID" button.
 
 ![MinIO sign-in view, indicating the OpenID option](../images/minio_self_serve_login.png)
 

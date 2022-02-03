@@ -1,3 +1,4 @@
+activate
 APIs
 AzureML
 canada.ca
@@ -70,6 +71,7 @@ Slack
 sqlite
 StatCan
 subfolders
+torch
 torchaudio
 torchvision
 Vault
