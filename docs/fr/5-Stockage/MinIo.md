@@ -71,7 +71,7 @@ Nous avons trois types de stockage en compartiment.
 
 - **[Standard](https://minio-standard-tenant-1.covid.cloud.statcan.ca):**
   Stockage soutenu par des HDD. Par défaut, utilisez cette option.
-- **[Premium](https://minio-premium-tenant-1.covid.cloud.statcan.ca/):**
+- **[Premium](https://minio-premium.aaw.cloud.statcan.ca/minio/login):**
   Utilisez cette option si vous avez besoin de vitesses de lecture / écriture
   très élevées, comme pour l'entraînement de modèles sur de très grands
   ensembles de données.
@@ -150,7 +150,7 @@ mc cp test.txt standard/${NOMCOMPLET}/test.txt
 ```
 
 Maintenant, ouvrez le document dans
-[le navigateur MinIO](https://minio-standard-tenant-1.covid.cloud.statcan.ca/).
+[le navigateur MinIO](https://minio.aaw.cloud.statcan.ca/minio/login).
 Vous y verrez votre fichier de test.
 
 Vous pouvez utiliser `mc` pour copier des fichiers vers/depuis le compartiment.

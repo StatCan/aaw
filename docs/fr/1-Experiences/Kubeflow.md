@@ -19,7 +19,8 @@ votre équipe.
 # Didacticiel vidéo
 
 <!-- prettier-ignore -->
-!!! note "Cette vidéo n'est pas à jour, certaines choses pourraient avoir changé depuis."
+!!! note "" 
+    Cette vidéo n'est pas à jour, certaines choses pourraient avoir changé depuis.
 
 [![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Espace de travail d'analyse avancée - Kubeflow")
 
@@ -57,20 +58,29 @@ votre équipe.
 
 ## CPU et mémoire
 
-- Au moment de la rédaction (23 décembre, 2021), il existe deux types d'ordinateurs
-  dans la grappe
+- Au moment de la rédaction (23 décembre, 2021), il existe deux types
+  d'ordinateurs dans la grappe
 
-  - **CPU:** `D16s v3` (16 CPU , 64 G mémoire; 15 CPU et 48 G mémoire sont disponible pour l'utilisateur, 1 CPU et 16 G mémoire sont réservés pour l'utilisation du système)
-  - **GPU:** `NC6s_v3` (6 CPU , 112 G mémoire, 1 GPU; 96 G de mémoire disponible pour l'utilisatuer, 16 G sont réservés pour l'utilisation du système)
+  - **CPU:** `D16s v3` (16 CPU , 64 G mémoire; 15 CPU et 48 G mémoire sont
+    disponible pour l'utilisateur, 1 CPU et 16 G mémoire sont réservés pour
+    l'utilisation du système)
+  - **GPU:** `NC6s_v3` (6 CPU , 112 G mémoire, 1 GPU; 96 G de mémoire disponible
+    pour l'utilisateur, 16 G sont réservés pour l'utilisation du système)
 
-Lors de la création d'un serveur de bloc-notes, le système vous limitera aux spécifications maximales ci-dessus. Pour les serveurs de bloc-notes CPU, vous pouvez spécifier la quantité exacte de CPU et de mémoire dont vous avez besoin. Cela vous permet de répondre à vos besoins de calcul tout en minimisant les coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur complet (6 cœurs CPU, 96 Gio de mémoire accessible et 1 GPU).
+Lors de la création d'un serveur de bloc-notes, le système vous limitera aux
+spécifications maximales ci-dessus. Pour les serveurs de bloc-notes CPU, vous
+pouvez spécifier la quantité exacte de CPU et de mémoire dont vous avez besoin.
+Cela vous permet de répondre à vos besoins de calcul tout en minimisant les
+coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur complet
+(6 cœurs CPU, 96 Gio de mémoire accessible et 1 GPU).
 
-À l'avenir, il se peut que des machines plus grandes soient disponibles, vous pourriez donc avoir des restrictions plus souples.
+À l'avenir, il se peut que des machines plus grandes soient disponibles, vous
+pourriez donc avoir des restrictions plus souples.
 
 <!-- prettier-ignore -->
 !!! note "Bogue de création de nœud lent."
-   En raison d'un bug avec le pare-feu, la création d'un nouveau nœud peut être très
-   lente dans certains cas (jusqu'à quelques heures). Un correctif pour ce problème est en cours.
+    En raison d'un bug avec le pare-feu, la création d'un nouveau nœud peut être très
+    lente dans certains cas (jusqu'à quelques heures). Un correctif pour ce problème est en cours.
 
 <!-- prettier-ignore -->
 !!! note "Utilisez les machines GPU de manière responsable"
