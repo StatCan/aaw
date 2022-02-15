@@ -65,7 +65,9 @@ you create may not have access rights to resources required for the project.
     and 48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for
     system use).
   - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
-    memory are available; 16 GiB memory reserved for system use).
+    memory are available; 16 GiB memory reserved for system use). The available
+    GPU is the NVIDIA Tesla V100 GPU with specs 
+    [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
 
   When creating a notebook server, the system will limit you to the maximum
   specifications above. For CPU notebook servers, you can specify the exact
