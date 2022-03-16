@@ -2,8 +2,75 @@
 
 # Data Analytics as a Service
 
-Data Analytics as a Service for the Government of Canada and external
-collaborators.
+Data Analytics as a Service for the Government of Canada and external collaborators.
+
+## Frequently Asked Questions (FAQ)
+
+If your question does not appear in this document, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
+
+### Who an access the AAW?
+
+- Anyone with a Statistics Canada (`@statcan.gc.ca`) email address can access the AAW.
+
+### What data formats are supported in the AAW?
+
+The AAW includes tools that allow data science users to open almost any file. The AAW supports many commonly used file formats, including (but not limited to):
+
+- csv
+- xlsx
+- json
+- xml
+- sas7bdat
+- sqlite
+- many others... just ask :-)
+
+### How much does the AAW cost?
+
+StatCan is footing the bill for the time being. To give you a rough estimate of costs, please consult the following table. NB: these are just estimates.
+
+#### CPU Only
+
+| **Use Case**                      | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |           |
+|-----------------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|-----------|
+|                                   | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_|
+| CPU: Occasional Use               | 2                     | 8          | 0     | 8                     | 1.1367   | 4.88781   | 59.1084   |
+| CPU: During Business Hours        | 2                     | 8          | 0     | 40                    | 5.6835   | 24.43905  | 295.542   |
+| CPU: 24/7                         | 2                     | 8          | 0     | 168                   | 23.8707  | 102.64401 | 1241.2764 |
+
+#### Add a GPU
+
+| **Use Case**                      | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost**   |           |           |
+|-----------------------------------|-----------------------|------------|-------|-----------------------|------------|-----------|-----------|
+|                                   | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_   | _Monthly_ | _Annually_|
+| GPU: Occaisonal Use               | 0                     | 0          | 1     | 8                     | 34.468     | 148.2124  | 1792.336  |
+| GPU: During Business Hours        | 0                     | 0          | 1     | 40                    | 172.34     | 741.062   | 8961.68   |
+| GPU: 24/7                         | 0                     | 0          | 1     | 168                   | 723.828    | 3112.4604 | 37639.056 |
+
+### What are the steps for getting Protected B data into MinIO? 
+
+- One must consult with FDI (F.A.I.R. Data Infrastructure) before Protected B Data can be loaded into MinIO. The FDI team owns an Azure Data Factory pipeline for moving data, typically from on premise, to an Azure Storage Account and MinIO is our S3 gateway to that storage account.
+
+### Can we use Power BI on the AAW?
+
+- At the moment, no. We are currently looking into solutions for sharing data between the AAW and CAE (which supports Power BI).
+
+### Does using SAS entail different costs than the others? Are there a limited number of licenses or instances that can be run?
+
+- SAS support is currently experimental and will rely on existing Statistics Canada SAS software licenses.
+
+### How do you suspend your server (to save costs)?
+
+- As of now you must destroy your server. Make sure to save the data volumes, they can be reused with a new server.
+- The version of Kubeflow in the dev branch has an option to suspend the session. Once that has rolled out to production, users will have the ability to suspend workspaces to save on costs.
+
+### How do I add other people to my namespace (for collaboration)?
+
+1. Do we need to stop any running instances in our notebooks when we’re not using it? If so, how do we do this? I checked the documentation and there is no guidelines on how to stop any running notebooks as a cost-saving measure.
+
+### Are there any pre-loaded data (datasets) in AAW that we can access and use for both R and Python notebooks?
+
+- Our JupyterLab images come with some example notebooks and data, they can be found in `/aaw-contrib-jupyter-notebooks/`. 
+- Our R Studio image also has some example notebooks and data, they can be found in `/aaw-contrib-r-notebooks/`.
 
 ## Presentations
 
@@ -11,6 +78,7 @@ We highly encourage you to watch our YouTube presentation given at Stratosphere:
 
 - [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
 - [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
+- [AAW Onboarding Presentation (work in progress)](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit#slide=id.g113e8bbc6e6_0_27)
 
 ## Security
 
@@ -20,8 +88,7 @@ A discussion about some of the security best practices in use by this platform:
 
 ## Advanced Analytics Workspace
 
-The following is a list of all the `general` related repositories for the
-Advanced Analytics Workspace project.
+The following is a list of all the `general` related repositories for the Advanced Analytics Workspace project.
 
 | Repository                                                                                                | Description                                                                                   | Visibility |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------- |
