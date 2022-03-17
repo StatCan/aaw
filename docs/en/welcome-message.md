@@ -56,7 +56,7 @@ AAW is a flexible platform for data analysis and machine learning, featuring:
 
 ## 🐱 Demos
 
-If you would like an Onboarding/Quick Demo session or require any help or have any questions, please do not hesitate to reach out through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
+If you would like a quick Onboarding Demo session or require any help or have any questions, please do not hesitate to reach out through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
 
 ## FAQ
 
