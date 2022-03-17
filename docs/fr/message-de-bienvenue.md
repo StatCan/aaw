@@ -49,7 +49,7 @@ AAW est une plateforme flexible pour l'analyse de données et l'apprentissage au
   - 🐍 Python
   - 📈 R
   - 👩🔬 Julia
-  - SAS (coming soon!)
+  - SAS (À venir!)
 - 🧮 Environnements de développement
   - VS Code
   - R Studio
