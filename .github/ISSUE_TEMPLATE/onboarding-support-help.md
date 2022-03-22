@@ -1,15 +1,17 @@
 ---
 name: Onboarding support/help
 about: Just got your account setup and need help getting started?
-title: "[HELP] <my goal>"
-labels: help-wanted
-assignees: ''
-
+title: "[Help] <my goal>"
+labels: triage/support
+assignees: ""
 ---
 
 Before submitting your ticket did you first try the following?
-- [ ] have you checked our wiki? https://statcan.github.io/daaas/
-- [ ] ask your questions in our Slack support channel? https://statcan-aaw.slack.com
+
+- [ ] Checked our wiki? https://statcan.github.io/daaas/
+- [ ] Asked your questions in our Slack support channel?
+      https://statcan-aaw.slack.com
 
 If you did, then let us know what's up!
-**Describe what you need help with**
+
+#### Describe what you need help with
