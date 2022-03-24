@@ -1,4 +1,5 @@
 activate
+aaw
 APIs
 AzureML
 canada.ca
@@ -46,11 +47,14 @@ MLOps
 NB_NOTEBOOK
 Netdata
 Node.js
+Notebook
+Notebooks
 noVNC
 npm
 OIDC
-Onboarding 
+Onboarding
 OpenID
+OpenM
 OpenM++
 PaaS
 Power
@@ -67,6 +71,7 @@ RStudio
 SAS
 scalable
 Seldon
+Servers
 Serverless
 shapefiles
 Shiny
@@ -81,3 +86,6 @@ torchaudio
 torchvision
 Vault
 with
+data-analytics-service
+www.kubeflow.org
+www.statcan.gc.ca

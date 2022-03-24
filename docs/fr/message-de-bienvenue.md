@@ -22,14 +22,14 @@ EAA est basé sur le projet Kubeflow qui est une solution complète open source 
   - **Interne/externe** [https://analytics-platform.statcan.gc.ca/covid19](https://analytics-platform.statcan.gc.ca/covid19)
 
 - 🤖 Tableau de bord Kubeflow
-  - [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/) 
+  - [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/)
 
 ### 💡 Aide
 
 - 📗 Documentation du portail EAA
   - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
 - 📘 Documentation sur Kubeflow
-  - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
+  - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)
 - 🤝 Canal de support Slack
   - [https://statcan-aaw.slack.com](https://statcan-aaw.slack.com)
 
@@ -49,7 +49,7 @@ AAW est une plateforme flexible pour l'analyse de données et l'apprentissage au
   - 🐍 Python
   - 📈 R
   - 👩🔬 Julia
-  - SAS (coming soon!)
+  - SAS (Prochainement!)
 - 🧮 Environnements de développement
   - VS Code
   - R Studio

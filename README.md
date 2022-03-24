@@ -30,23 +30,23 @@ StatCan is footing the bill for the time being. To give you a rough estimate of 
 
 #### CPU Only
 
-| **Use Case**                      | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |           |
-|-----------------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|-----------|
-|                                   | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_|
-| CPU: Occasional Use               | 2                     | 8          | 0     | 8                     | 1.1367   | 4.88781   | 59.1084   |
-| CPU: During Business Hours        | 2                     | 8          | 0     | 40                    | 5.6835   | 24.43905  | 295.542   |
-| CPU: 24/7                         | 2                     | 8          | 0     | 168                   | 23.8707  | 102.64401 | 1241.2764 |
+| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
+|----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
+|                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
+| CPU: Occasional Use        | 2                     | 8          | 0     | 8                     | 1.1367   | 4.88781   | 59.1084    |
+| CPU: During Business Hours | 2                     | 8          | 0     | 40                    | 5.6835   | 24.43905  | 295.542    |
+| CPU: 24/7                  | 2                     | 8          | 0     | 168                   | 23.8707  | 102.64401 | 1241.2764  |
 
 #### Add a GPU
 
-| **Use Case**                      | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost**   |           |           |
-|-----------------------------------|-----------------------|------------|-------|-----------------------|------------|-----------|-----------|
-|                                   | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_   | _Monthly_ | _Annually_|
-| GPU: Occaisonal Use               | 0                     | 0          | 1     | 8                     | 34.468     | 148.2124  | 1792.336  |
-| GPU: During Business Hours        | 0                     | 0          | 1     | 40                    | 172.34     | 741.062   | 8961.68   |
-| GPU: 24/7                         | 0                     | 0          | 1     | 168                   | 723.828    | 3112.4604 | 37639.056 |
+| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
+|----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
+|                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
+| GPU: Occaisonal Use        | 0                     | 0          | 1     | 8                     | 34.468   | 148.2124  | 1792.336   |
+| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | 172.34   | 741.062   | 8961.68    |
+| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | 723.828  | 3112.4604 | 37639.056  |
 
-### What are the steps for getting Protected B data into MinIO? 
+### What are the steps for getting Protected B data into MinIO?
 
 - One must consult with FDI (F.A.I.R. Data Infrastructure) before Protected B Data can be loaded into MinIO. The FDI team owns an Azure Data Factory pipeline for moving data, typically from on premise, to an Azure Storage Account and MinIO is our S3 gateway to that storage account.
 
@@ -69,7 +69,7 @@ StatCan is footing the bill for the time being. To give you a rough estimate of 
 
 ### Are there any pre-loaded data (datasets) in AAW that we can access and use for both R and Python notebooks?
 
-- Our JupyterLab images come with some example notebooks and data, they can be found in `/aaw-contrib-jupyter-notebooks/`. 
+- Our JupyterLab images come with some example notebooks and data, they can be found in `/aaw-contrib-jupyter-notebooks/`.
 - Our R Studio image also has some example notebooks and data, they can be found in `/aaw-contrib-r-notebooks/`.
 
 ## Presentations
@@ -91,18 +91,18 @@ A discussion about some of the security best practices in use by this platform:
 The following is a list of all the `general` related repositories for the Advanced Analytics Workspace project.
 
 | Repository                                                                                                | Description                                                                                   | Visibility |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------- |
+|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|------------|
 | [aaw-argocd-applications](https://github.com/StatCan/aaw-argocd-applications)                             | ArgoCD Applications                                                                           | Private    |
 | [aaw-argocd-manifests](https://github.com/StatCan/aaw-argocd-manifests)                                   | Manifests used for ArgoCD deployments                                                         | Public     |
 | [aaw-argoflow-azure](https://github.com/StatCan/aaw-argoflow-azure)                                       | Kubeflow deployment powered by ArgoCD                                                         | Public     |
-| [aaw-kubeflow-containers](https://github.com/StatCan/aaw-kubeflow-containers)                             | Containers to be used within Kubeflow                                                         | Public     |                 
+| [aaw-kubeflow-containers](https://github.com/StatCan/aaw-kubeflow-containers)                             | Containers to be used within Kubeflow                                                         | Public     |
 | [aaw-contrib-containers](https://github.com/StatCan/aaw-contrib-containers)                               | Containers to be used for general purpose Data Science                                        | Public     |
 | [aaw-contrib-jupyter-notebooks](https://github.com/StatCan/aaw-contrib-jupyter-notebooks)                 | Jupyter Notebooks to be used with the Advanced Analytics Workspace platform                   | Public     |
 | [aaw-contrib-r-notebooks](https://github.com/StatCan/aaw-contrib-r-notebooks)                             | R Notebooks to be used with Advanced Analytics Workspace platform                             | Public     |
 | [aaw-gatekeeper-constraints](https://github.com/StatCan/aaw-gatekeeper-constraints)                       | Gatekeeper constraints built specifically for AAW                                             | Private    |
 | [aaw-goofys-injector](https://github.com/StatCan/aaw-goofys-injector)                                     | Mount an S3 bucket, Data Lake, Blob Storage as a file system in a Notebook                    | Public     |
 | [aaw-inferenceservices-controller](https://github.com/StatCan/aaw-inferenceservices-controller)           | Kubernetes controller for managing inference services                                         | Public     |
-| [aaw-kubeflow-manifest](https://github.com/StatCan/aaw-kubeflow-manifest)                                 | Kustomize installation manifests for Kubeflow                                                 | Public     |
+| [aaw-kubeflow-manifests](https://github.com/StatCan/aaw-kubeflow-manifests)                               | Kustomize installation manifests for Kubeflow                                                 | Public     |
 | [aaw-kubeflow-controller](https://github.com/StatCan/aaw-kubeflow-controller)                             | Kubeflow controller which sets PodDefaults + Vault policies for each Profile detected         | Public     |
 | [aaw-kubeflow-mlops](https://github.com/StatCan/aaw-kubeflow-mlops)                                       | Kubeflow MLOps pipeline using GitHub Actions                                                  | Public     |
 | [aaw-kubeflow-opa-sync](https://github.com/StatCan/aaw-kubeflow-opa-sync)                                 | Synchronize profile editors into the Open Policy Agent for use in MinIO Access Control        | Public     |
@@ -120,13 +120,75 @@ The following is a list of all the `general` related repositories for the Advanc
 The following is a list of all the `terraform` related repositories for the
 Advanced Analytics Workspace project.
 
-| Repository                                                                                                                                  | Description                                                                  | Visibility |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
-| [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases)                                               | Terraform to deploy Azure Managed Databases                                  | Private    |
-| [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                                                                       | Terraform for configuring Hashicorp Vault                                    | Private    |
-| [terraform-advanced-analytics-workspaces-infrastructure](https://github.com/StatCan/terraform-advanced-analytics-workspaces-infrastructure) | Terraform to deploy the infrastructure for the Advanced Analytics Workspaces | Private    |
-| [terraform-aaw-infrastructure-aaw-dev-cc-00](https://github.com/StatCan/terraform-aaw-infrastructure-aaw-dev-cc-00)                         | Terraform to deploy the AAW infrastructure for the development environment   | Private    |
-| [terraform-aaw-infrastructure-aaw-prod-cc-00](https://github.com/StatCan/terraform-aaw-infrastructure-aaw-prod-cc-00)                       | Terraform to deploy the AAW infrastructure for the production environment    | Private    |
+### Install the AAW Platform and Infrastructure
+
+```sh
+## Installs AAW Platform and Infrastructure
+##
+## └─── https://github.com/statcan/terraform-advanced-analytics-workspaces-infrastructure
+##      ├─── https://github.com/statcan/aaw-dev-cc-00
+##      ├─── https://github.com/statcan/aaw-prod-cc-00
+##      │    ├── https://github.com/statcan/terraform-azure-statcan-aaw-environment
+##      │    │   ├── https://github.com/statcan/terraform-statcan-aaw-network
+##      │    │   └── https://github.com/statcan/terraform-azure-statcan-cloud-native-environment-infrastructure
+##      │    │       ├── https://github.com/canada-ca-terraform-modules/terraform-azurerm-kubernetes-cluster
+##      │    │       └── https://github.com/canada-ca-terraform-modules/terraform-azurerm-kubernetes-cluster-nodepool
+##      │    └─── https://github.com/statcan/terraform-statcan-aaw-platform (see below)
+##      └─── https://github.com/statcan/terraform-azure-statcan-aaw-region-environment
+```
+
+| Component | Repository                                                                                                                                                    | Description                                                                                  |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| AAW       | terraform-advanced-analytics-workspaces-infrastructure                                                                                                        | Reference implementation for an Advanced Analytics Workspaces (AAW) infrastructure pipeline  |
+| AAW       | aaw-dev-cc-00                                                                                                                                                 | Reference implementation for an Advanced Analytics Workspaces (AAW) development environment  |
+| AAW       | aaw-prod-cc-00                                                                                                                                                | Reference implementation for an Advanced Analytics Workspaces (AAW) production environment   |
+| AAW       | [terraform-azure-statcan-aaw-environment](https://github.com/statcan/terraform-azure-statcan-aaw-environment)                                                 | Terraform module of Advanced Analytics Workspaces (AAW) per-environment Azure configuration  |
+| AAW       | [terraform-azure-statcan-aaw-network](https://github.com/statcan/terraform-azure-statcan-aaw-network)                                                         | Terraform module of Advanced Analytics Workspaces (AAW) networking                           |
+| AAW       | [terraform-azure-statcan-cloud-native-environment-infrastructure](https://github.com/statcan/terraform-azure-statcan-cloud-native-environment-infrastructure) | Terraform module for Statistics Canada's Cloud Native Environment Azure Cloud Infrastructure |
+| AAW       | [terraform-azurerm-kubernetes-cluster](https://github.com/statcan/terraform-azurerm-kubernetes-cluster)                                                       | Terraform module for Azure Kubernetes Service (AKS) cluster                                  |
+| AAW       | [terraform-azurerm-kubernetes-cluster-nodepool](https://github.com/statcan/terraform-azurerm-kubernetes-cluster-nodepool)                                     | Terraform module for Azure Kubernetes Service (AKS) nodepool                                 |
+| AAW       | [terraform-azure-statcan-aaw-region-environment](https://github.com/statcan/terraform-azure-statcan-aaw-region-environment)                                   | Terraform module of Advanced Analytics Workspaces (AAW) per-region configuration of Azure    |
+| AAW       | [terraform-statcan-aaw-platform](https://github.com/statcan/terraform-statcan-aaw-platform)                                                                   | Terraform module for the Advanced Analytics Workspaces (AAW) platform                        |
+
+### Install the Cloud Native Platform
+
+```sh
+## Statistics Canada's Cloud Native Platform (CNP)
+##
+## └─── https://github.com/statcan/terraform-statcan-aaw-platform
+##      ├─── https://github.com/statcan/terraform-azure-statcan-cloud-native-platform-infrastructure
+##      │    ├─── aad_pod_identity
+##      │    ├─── cert_manager
+##      │    ├─── vault
+##      │    └─── velero
+##      ├─── https://github.com/statcan/terraform-statcan-kubernetes-core-platform
+##      │    ├─── aad_pod_identity
+##      │    ├─── cert_manager
+##      │    ├─── fluentd
+##      │    ├─── gatekeeper
+##      │    ├─── kubecost
+##      │    ├─── prometheus
+##      │    ├─── vault_agent
+##      │    └─── velero
+##      ├─── https://github.com/statcan/terraform-statcan-kubernetes-app-platform
+##      │    ├─── istio operator
+##      │    └─── istio gateway handling
+##      └─── https://github.com/statcan/terraform-kubernetes-namespace
+##           └─── daaas-system
+```
+
+| Component | Repository                                                                                                                                              | Description                                                                       |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| CNS       | [terraform-azure-statcan-cloud-native-platform-infrastructure](https://github.com/statcan/terraform-azure-statcan-cloud-native-platform-infrastructure) | Terraform module for Statistics Canada Azure Cloud Native Platform Infrastructure |
+| CNS       | [terraform-statcan-kubernetes-core-platform](https://github.com/statcan/terraform-statcan-kubernetes-core-platform)                                     | Terraform module for Statistics Canada Core Kubernetes Platform                   |
+| CNS       | [terraform-statcan-kubernetes-app-platform](https://github.com/statcan/terraform-statcan-kubernetes-app-platform)                                       | Terraform module for Statistics Canada Kubernetes Application Platform            |
+
+### Misc
+
+| Repository                                                                                    | Description                                                | Visibility |
+|-----------------------------------------------------------------------------------------------|------------------------------------------------------------|------------|
+| [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases) | Terraform module for deployment of Azure Managed Databases | Private    |
+| [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                         | Terraform module for configuring Hashicorp Vault           | Private    |
 
 ## Community Engagement
 
@@ -134,7 +196,7 @@ The following is a list of some of the `collaborative` work we made available to
 improve upstream projects.
 
 | Repository                                                                                  | Description                                                 | Visibility |
-| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------- |
+|---------------------------------------------------------------------------------------------|-------------------------------------------------------------|------------|
 | [boathouse](https://github.com/StatCan/boathouse)                                           | Manage Kubernetes storage mounts with Goofys                | Public     |
 | [jupyter-apis](https://github.com/StatCan/jupyter-apis)                                     | Golang replacement for the Kubeflow Jupyter Web APIs        | Public     |
 | [jupyterlab-language-pack-fr_FR](https://github.com/StatCan/jupyterlab-language-pack-fr_FR) | JupyterLab fr-FR Language Pack                              | Public     |
@@ -144,7 +206,7 @@ The following is a list of some of the `forked` projects where we have provided
 multilingual support and other UX related enhancements.
 
 | Repository                                                          | Description                                 | Visibility |
-| ------------------------------------------------------------------- | ------------------------------------------- | ---------- |
+|---------------------------------------------------------------------|---------------------------------------------|------------|
 | [kubeflow](https://github.com/StatCan/kubeflow)                     | Multilingual support for Kubeflow           | Public     |
 | [kubeflow-pipelines](https://github.com/StatCan/kubeflow-pipelines) | Multilingual support for Kubeflow Pipelines | Public     |
 | [minio](https://github.com/StatCan/minio)                           | Multilingual support for MinIO              | Public     |
