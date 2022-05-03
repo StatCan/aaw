@@ -29,10 +29,12 @@ markdown_extensions:
   - toc:
       baselevel: 2
   - attr_list
+  - md_in_html
   - admonition
   - codehilite
   - mdx_truly_sane_lists
   - pymdownx.details
+  - tables
 
 extra:
   social:

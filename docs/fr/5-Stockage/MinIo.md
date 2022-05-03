@@ -150,8 +150,8 @@ mc cp test.txt standard/${NOMCOMPLET}/test.txt
 ```
 
 Maintenant, ouvrez le document dans
-[le navigateur MinIO](https://minio.aaw.cloud.statcan.ca/minio/login).
-Vous y verrez votre fichier de test.
+[le navigateur MinIO](https://minio.aaw.cloud.statcan.ca/minio/login). Vous y
+verrez votre fichier de test.
 
 Vous pouvez utiliser `mc` pour copier des fichiers vers/depuis le compartiment.
 Cette opération est très rapide. Vous pouvez également utiliser `mc --help` pour

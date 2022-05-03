@@ -52,9 +52,9 @@ for your team.
 ![Choose an Image](../images/kubeflow_image_selection.jpg)
 
 - You will also need to specify a namespace. By default you will have a default
-namespace for your account, but for projects you may need to select the
-namespace created specifically for that project. Otherwise the notebook server
-you create may not have access rights to resources required for the project.
+  namespace for your account, but for projects you may need to select the
+  namespace created specifically for that project. Otherwise the notebook server
+  you create may not have access rights to resources required for the project.
 
 ## CPU and Memory
 
@@ -66,7 +66,7 @@ you create may not have access rights to resources required for the project.
     system use).
   - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
     memory are available; 16 GiB memory reserved for system use). The available
-    GPU is the NVIDIA Tesla V100 GPU with specs 
+    GPU is the NVIDIA Tesla V100 GPU with specs
     [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
 
   When creating a notebook server, the system will limit you to the maximum
@@ -103,20 +103,20 @@ you create may not have access rights to resources required for the project.
 There are currently two checkbox options available here:
 
 - **Run a Protected B notebook**: Enable this if the server you create needs
-access to any Protected B resources. Protected B notebook servers run with many
-security restrictions and have access to separate MinIO instances specifically
-designed for Protected B data.
+  access to any Protected B resources. Protected B notebook servers run with
+  many security restrictions and have access to separate MinIO instances
+  specifically designed for Protected B data.
 - **Mount MinIO storage into the minio/ folder**: This should make MinIO
-repositories accessible as subfolders / files of the `minio/` folder.
-Unfortunately this is not working currently, when this is fixed the
-documentation will be updated.
+  repositories accessible as subfolders / files of the `minio/` folder.
+  Unfortunately this is not working currently, when this is fixed the
+  documentation will be updated.
 
 ## GPUs
 
-If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the GPU
-vendor (the create button will be greyed out until the GPU vendor is selected if
-you have a GPU specified). Multi-GPU servers are not currently supported on the
-AAW system.
+If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the
+GPU vendor (the create button will be greyed out until the GPU vendor is
+selected if you have a GPU specified). Multi-GPU servers are not currently
+supported on the AAW system.
 
 ![GPU Configuration](../images/kubeflow_gpu_selection.jpg)
 
@@ -127,12 +127,12 @@ cores and 112 GiB of memory.
 
 There are two things that can be customized here:
 
-- **Enable Shared Memory**: This is required if you use PyTorch with multiple data
-loaders, which otherwise will generate an error. If using PyTorch make sure this
-is enabled, otherwise it does not matter unless you have another application
-that requires shared memory.
+- **Enable Shared Memory**: This is required if you use PyTorch with multiple
+  data loaders, which otherwise will generate an error. If using PyTorch make
+  sure this is enabled, otherwise it does not matter unless you have another
+  application that requires shared memory.
 - **System language**: You can select either English or French as the system
-language.
+  language.
 
 ## And... Create!!!
 

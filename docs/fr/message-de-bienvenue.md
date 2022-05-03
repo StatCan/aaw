@@ -1,25 +1,44 @@
 ![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 
-
 # 🧙🔮 Bienvenue à l’Espace d'analyse avancé (EAA)
 
-Veuillez trouver ci-dessous des informations, des vidéos et des liens supplémentaires pour mieux comprendre comment démarrer avec l’Espace d'analyse avancé (EAA).
+Veuillez trouver ci-dessous des informations, des vidéos et des liens
+supplémentaires pour mieux comprendre comment démarrer avec l’Espace d'analyse
+avancé (EAA).
 
-L’Espace d'analyse avancé (EAA) est notre **_plateforme open source pour la science des données et l'apprentissage automatique (ML)_** destinée aux praticiens avancés, qui peuvent ainsi accomplir leur travail dans **un environnement sans restriction**, conçu par des scientifiques des données _pour_ des scientifiques des données. Avec EAA, vous pouvez personnaliser vos déploiements d'ordinateurs portables pour répondre à vos besoins en matière de science des données. Nous disposons également d'un petit nombre d'images réalisées par notre équipe experte en science des données.
+L’Espace d'analyse avancé (EAA) est notre **_plateforme open source pour la
+science des données et l'apprentissage automatique (ML)_** destinée aux
+praticiens avancés, qui peuvent ainsi accomplir leur travail dans **un
+environnement sans restriction**, conçu par des scientifiques des données _pour_
+des scientifiques des données. Avec EAA, vous pouvez personnaliser vos
+déploiements d'ordinateurs portables pour répondre à vos besoins en matière de
+science des données. Nous disposons également d'un petit nombre d'images
+réalisées par notre équipe experte en science des données.
 
-EAA est basé sur le projet Kubeflow qui est une solution complète open source pour le déploiement et la gestion de flux de travail ML de bout en bout. Kubeflow est conçu pour rendre les déploiements de flux de travail ML sur **Kubernetes** simples, portables et évolutifs.
+EAA est basé sur le projet Kubeflow qui est une solution complète open source
+pour le déploiement et la gestion de flux de travail ML de bout en bout.
+Kubeflow est conçu pour rendre les déploiements de flux de travail ML sur
+**Kubernetes** simples, portables et évolutifs.
 
-🔔 **Important!** Les utilisateurs externes à Statistique Canada devront disposer d'un compte cloud dont l'accès est accordé par le commanditaire de l'entreprise.
+🔔 **Important!** Les utilisateurs externes à Statistique Canada devront
+disposer d'un compte cloud dont l'accès est accordé par le commanditaire de
+l'entreprise.
 
-🔔 **Important!** Les utilisateurs internes à Statistique Canada peuvent commencer tout de suite sans procédure d'inscription supplémentaire, il suffit de se rendre à l'adresse [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
+🔔 **Important!** Les utilisateurs internes à Statistique Canada peuvent
+commencer tout de suite sans procédure d'inscription supplémentaire, il suffit
+de se rendre à l'adresse
+[https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
 
 ## 🔗 Liens utiles
 
 ### 🛎️ Services EAA
 
 - 🌀 Page d'accueil du portail EEA
-  - **Interne seulement** [https://www.statcan.gc.ca/data-analytics-service/aaw](https://www.statcan.gc.ca/data-analytics-service/aaw)
-  - **Interne/externe** [https://analytics-platform.statcan.gc.ca/covid19](https://analytics-platform.statcan.gc.ca/covid19)
+
+  - **Interne seulement**
+    [https://www.statcan.gc.ca/data-analytics-service/aaw](https://www.statcan.gc.ca/data-analytics-service/aaw)
+  - **Interne/externe**
+    [https://analytics-platform.statcan.gc.ca/covid19](https://analytics-platform.statcan.gc.ca/covid19)
 
 - 🤖 Tableau de bord Kubeflow
   - [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/)
@@ -37,13 +56,15 @@ EAA est basé sur le projet Kubeflow qui est une solution complète open source 
 
 Afin d'accéder aux services de l'EAA, vous devrez:
 
-1. Vous connecter à Kubeflow avec votre compte cloud invité StatCan. Vous serez invité à authentifier le compte.
+1. Vous connecter à Kubeflow avec votre compte cloud invité StatCan. Vous serez
+   invité à authentifier le compte.
 2. Sélectionnez Notebook Servers.
 3. Cliquez sur le bouton " ➕ Nouveau serveur ".
 
 ## 🧰 Outils offerts
 
-AAW est une plateforme flexible pour l'analyse de données et l'apprentissage automatique, avec:
+AAW est une plateforme flexible pour l'analyse de données et l'apprentissage
+automatique, avec:
 
 - 📜 Langues
   - 🐍 Python
@@ -54,11 +75,14 @@ AAW est une plateforme flexible pour l'analyse de données et l'apprentissage au
   - VS Code
   - R Studio
   - Jupyter Notebooks
-- 🐧 Bureaux virtuels Linux pour des outils supplémentaires (🧫 OpenM++, 🌏 QGIS, etc.)
+- 🐧 Bureaux virtuels Linux pour des outils supplémentaires (🧫 OpenM++, 🌏
+  QGIS, etc.)
 
 ## 🐱 Démonstrations
 
-Si vous souhaitez une session d'embarquement/démo rapide ou si vous avez besoin d'aide ou avez des questions, n'hésitez pas à nous contacter via notre canal de support 🤝 Slack.
+Si vous souhaitez une session d'embarquement/démo rapide ou si vous avez besoin
+d'aide ou avez des questions, n'hésitez pas à nous contacter via notre canal de
+support 🤝 Slack.
 
 ## FAQ
 

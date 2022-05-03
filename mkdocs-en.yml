@@ -27,10 +27,12 @@ markdown_extensions:
       baselevel: 2
       permalink: true
   - attr_list
+  - md_in_html
   - admonition
   - codehilite
   - mdx_truly_sane_lists
   - pymdownx.details
+  - tables
 
 extra:
   social:
@@ -64,4 +66,6 @@ nav:
       - Overview: 5-Storage/Overview.md
       - Disks: 5-Storage/Disks.md
       - MinIO: 5-Storage/MinIO.md
+  - FAQ:
+      - FAQ: 6-FAQ/FAQ.md
   - Help/Contact: Help.md

@@ -1,3 +1,86 @@
+# Welcome to Advanced Analytics Workspace (AAW)
+
+Please find below additional information, videos and links to help better
+understand how to get started with Advanced Analytics Workspace (AAW).
+
+Advanced Analytics Workspace (AAW) is our **_open source platform for data
+science and machine learning (ML)_** for **advanced practitioners** to get their
+work done in an **unrestricted environment** made by data scientists _for_ data
+scientists. With AAW, you can customize your notebook deployments to suit your
+data science needs. We also have a small number of expertly crafted images made
+by our expert data science team.
+
+![Getting Started](images/banner.png)
+
+AAW is based on the Kubeflow project which is an open source comprehensive
+solution for deploying and managing end-to-end ML workflows. Kubeflow is
+designed to make deployments of ML workflows on **Kubernetes** simple, portable
+and scalable.
+
+🔔 **Important!** Users external to Statistics Canada will require a cloud
+account granted access by the business sponsor.
+
+🔔 **Important!** Users internal to Statistics Canada can get started right away
+without any additional sign up procedures, just head to
+[https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
+
+## AAW Services
+
+The Advanced Analytics Workspaces' services can be accessed from one of two portals.
+<center>
+
+| AAW Portals | |
+|---|---|
+| <center><h3> [![Getting Started](images/portal-internal.png)](https://www.statcan.gc.ca/data-analytics-service/aaw) <br> [**Internal**](https://www.statcan.gc.ca/data-analytics-service/aaw) </h3></center> | <center><h3> [![Analysis](images/portal-external.png)](https://analytics-platform.statcan.gc.ca/covid19) <br> [**External**](https://analytics-platform.statcan.gc.ca/covid19) </h3></center> |
+
+</center>
+
+## Getting Help
+
+https://statcan.github.io/daaas/
+https://statcan-aaw.slack.com
+
+
+<div class="grid cards" markdown>
+
+- __HTML__ for content and structure
+- __JavaScript__ for interactivity
+- __CSS__ for text running out of boxes
+- __Internet Explorer__ ... huh?
+
+</div>
+
+## Getting Started
+
+In order to access the AAW services, you will need to:
+
+1. Login to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) with your StatCan
+   guest cloud account. You will be prompted to authenticate the account.
+2. Select Notebook Servers.
+3. Click the "➕ New Server" button.
+
+## Tools Offered
+
+AAW is a flexible platform for data analysis and machine learning, featuring:
+
+- Languages: Python, R, Julia, SAS
+- Development environments: VS Code, R Studio, Jupyter Notebooks
+- Linux virtual desktops for additional tools: OpenM++, QGIS
+
+## Demos
+
+If you would like a quick Onboarding Demo session or require any help or have
+any questions, please do not hesitate to reach out through our
+[Slack Support Channel](https://statcan-aaw.slack.com).
+
+## FAQ
+
+- Frequently Asked Questions are located
+  [here](https://github.com/StatCan/daaas/blob/master/README.md).
+
+Thank you!
+
+
 # Starting on the Advanced Analytics Workspace
 
 The
@@ -7,27 +90,29 @@ talking about here.
 
 ## What are you looking for?
 
-[![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
+<center>
 
-[![Analysis](images/Analysis.PNG)](#experiments)
-[![Publishing](images/Publishing.PNG)](#publishing)
-[![Pipelines](images/Pipelines.PNG)](#pipelines)
-[![Collaboration](images/Collaboration.PNG)](#collaboration)
-[![Storage](images/Storage.PNG)](#storage)
+| Tools and Services | | |
+|---|---|---|
+| <center><h3> [![Getting Started](images/GettingStarted.PNG)](#gettingstarted) <br> [Getting Started](#gettingstarted) </h3></center> | <center><h3> [![Analysis](images/Analysis.PNG)](#experiments) <br> [Data Analysis](#experiments) </h3></center> | <center><h3> [![Publishing](images/Publishing.PNG)](#publishing) <br> [Data Publishing](#publishing) </h3></center> |
+| <center><h3> [![Pipelines](images/Pipelines.PNG)](#pipelines) <br> [Kubeflow Pipelines](#pipelines) </h3></center> | <center><h3> [![Collaboration](images/Collaboration.PNG)](#collaboration) <br> [Collaboration](#collaboration) </h3></center> | <center><h3> [![Storage](images/Storage.PNG)](#storage) <br> [Storage](#storage) </h3></center> |
+
+</center>
 
 # Get Started with AAW
 
-[![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/) Everything
-starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
+[![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/)
+
+Everything starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
 
 [![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
-You're going to have questions. Join our
-**[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers!
-<img src="images/SlackAAW.PNG" alt="A screenshot of the slack page. In the top right-hand corner is a link to create a new account" width="50%">
 
-Click on the link, then choose "Create an account" in the upper right-hand
-corner.
-<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
+You're going to have questions. Join our **[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers!
+[![A screenshot of the slack page. In the top right-hand corner is a link to create a new account](images/SlackAAW.PNG)](https://statcan-aaw.slack.com/)
+
+Click on the link, then choose "Create an account" in the upper right-hand corner.
+
+[![A screenshot of the next page, with a box to use your @canada.ca email](images/SlackAAW2.PNG)](https://statcan-aaw.slack.com/)
 
 Use your @canada.ca email address so that you will be automatically approved.
 
