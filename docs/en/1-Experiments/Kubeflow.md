@@ -39,7 +39,7 @@ for your team.
 
 - Then click **+ New Server**
 
-## Configuring your server
+## Server Name and Namespace
 
 - You will get a template to create your notebook server. **Note:** the name of
   your server can consist of only lowercase letters, numbers, and hyphens. **No spaces, and no
@@ -50,11 +50,16 @@ for your team.
   namespace created specifically for that project. Otherwise the notebook server
   you create may not have access rights to resources required for the project.
 
-- You will need to choose an image. Check the name of the images and choose one
-  that matches what you want to do. (Don't know which one to choose? Check out
-  your options [here](./Selecting-an-Image.md).)
+## Image
 
-![Choose an Image](../images/kubeflow_image_selection.jpg)
+You will need to choose an image. There are JupyterLab, RStudio, and Ubuntu remote
+desktop images available. Select the drop down menu to select additional options
+within these (for instance, CPU, PyTorch, and TensorFlow images for JupyterLab).
+
+Check the name of the images and choose one that matches what you want to do. Don't know
+which one to choose? Check out your options [here](./Selecting-an-Image.md).
+
+![Choose an Image](../images/select-image-screenshot.PNG)
 
 ## CPU and Memory
 
@@ -96,19 +101,45 @@ cores and 112 GiB of memory.
     GPU machines are significantly more expensive than CPU machines,
     so use them responsibly.
 
-## Storing your data
+## Workspace Volume
 
-- You'll want to create a data volume! You'll be able to save your work here,
-  and if you shut down your server, you'll be able to just remount your old data
-  by entering the name of your old disk. **It is important that you remember the
-  volume's name.**
+You will need a workspace volume, which is where the home folder will be mounted. There
+are various configuration options available:
 
-![Create a Data Volume](../images/kubeflow_volumes.png)
+- You can either reuse an existing workspace volume from before, or create a new one.
+
+- You can specify the size of the workspace volume, from 4 GiB to 32 GiB.
+
+- You can choose the option to not use persistent storage for home, in which case the
+  home folder will be deleted as soon as the notebook server is closed. Otherwise the
+  home folder will remain and can be used again for a new notebook server in the future.
+
+![Create a Workspace Volume](../images/workspace-volume.PNG)
 
 <!-- prettier-ignore -->
 !!! tip "Check for old volumes by looking at the Existing option"
     When you create your server you have the option of reusing an old volume
     or creating a new one. You probably want to reuse your old volume.
+
+## Data Volumes
+
+You can also create data volumes that can be used to store additional data. Multiple
+data volumes can be created. Click the add volume button to create a new volume and specify 
+its configuration. There are the following configuration parameters as for data volumes:
+
+- **Type**: Create a new volume or use an existing volume.
+
+- **Name**: Name of the volume.
+
+- **Size in GiB**: From 4 GiB to 512 GiB.
+
+- **Mount Point**: Path where the data volume can be accessed on the notebook server, by
+  default `/home/jovyan/<volume name>`.
+
+The garbage can icon on the right can be used to delete an existing or accidentally created
+data volume.
+
+![Create a Data Volume](../images/kubeflow_volumes.png)
 
 ## Configurations
 
