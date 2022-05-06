@@ -25,7 +25,7 @@ for your team.
 
 <!-- prettier-ignore -->
 ??? warning "Log into the Azure Portal using your Cloud Credentials"
-    You have to login to the Azure Portal **using your StatCan credentials**.
+    You have to login to the Azure Portal **using your StatCan cloud credentials**.
     `first.lastname@cloud.statcan.ca` or **StatCan credentials**
     `first.lastname@statcan.gc.ca`. You can do that using
     [the Azure Portal](https://portal.azure.com).
@@ -42,19 +42,19 @@ for your team.
 ## Configuring your server
 
 - You will get a template to create your notebook server. **Note:** the name of
-  your server must be lowercase letters with hyphens. **No spaces, and no
+  your server can consist of only lowercase letters, numbers, and hyphens. **No spaces, and no
   underscores.**
 
-- You'll need to choose an image. Check the name of the images and choose one
+- You will need to specify a namespace. By default you will have a default
+  namespace for your account, but for projects you may need to select the
+  namespace created specifically for that project. Otherwise the notebook server
+  you create may not have access rights to resources required for the project.
+
+- You will need to choose an image. Check the name of the images and choose one
   that matches what you want to do. (Don't know which one to choose? Check out
   your options [here](./Selecting-an-Image.md).)
 
 ![Choose an Image](../images/kubeflow_image_selection.jpg)
-
-- You will also need to specify a namespace. By default you will have a default
-namespace for your account, but for projects you may need to select the
-namespace created specifically for that project. Otherwise the notebook server
-you create may not have access rights to resources required for the project.
 
 ## CPU and Memory
 
@@ -79,6 +79,18 @@ you create may not have access rights to resources required for the project.
   In the future there may be larger machines available, so you may have looser
   restrictions.
 
+## GPUs
+
+If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the GPU
+vendor (the create button will be greyed out until the GPU vendor is selected if
+you have a GPU specified). Multi-GPU servers are not currently supported on the
+AAW system.
+
+![GPU Configuration](../images/kubeflow_gpu_selection.jpg)
+
+As mentioned before, if you select a GPU server you will automatically get 6 CPU
+cores and 112 GiB of memory.
+
 <!-- prettier-ignore -->
 !!! note "Use GPU machines responsibly"
     GPU machines are significantly more expensive than CPU machines,
@@ -100,50 +112,38 @@ you create may not have access rights to resources required for the project.
 
 ## Configurations
 
-There are currently two checkbox options available here:
+There are currently three checkbox options available here:
 
+- **Mount MinIO storage to ~/minio (experimental)**: This should make MinIO
+  repositories accessible as subfolders / files of the `minio/` folder. This is
+  still experimental and may not work properly currently.
 - **Run a Protected B notebook**: Enable this if the server you create needs
-access to any Protected B resources. Protected B notebook servers run with many
-security restrictions and have access to separate MinIO instances specifically
-designed for Protected B data.
-- **Mount MinIO storage into the minio/ folder**: This should make MinIO
-repositories accessible as subfolders / files of the `minio/` folder.
-Unfortunately this is not working currently, when this is fixed the
-documentation will be updated.
+  access to any Protected B resources. Protected B notebook servers run with many
+  security restrictions and have access to separate MinIO instances specifically
+  designed for Protected B data.
+- **Allow access to Kubeflow Pipelines**: This will allow the notebook server to
+  create and manage Kubeflow pipelines. Enable this if you want to use Kubeflow
+  pipelines.
 
-## GPUs
+## Affinity / Tolerations
 
-If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the GPU
-vendor (the create button will be greyed out until the GPU vendor is selected if
-you have a GPU specified). Multi-GPU servers are not currently supported on the
-AAW system.
+<!-- prettier-ignore -->
+!!! note "This section needs to be filled in."
 
-![GPU Configuration](../images/kubeflow_gpu_selection.jpg)
+## Miscellaneous Settings
 
-As mentioned before, if you select a GPU server you will automatically get 6 CPU
-cores and 112 GiB of memory.
-
-## Advanced Settings
-
-There are two things that can be customized here:
+The following can be customized here:
 
 - **Enable Shared Memory**: This is required if you use PyTorch with multiple data
-loaders, which otherwise will generate an error. If using PyTorch make sure this
-is enabled, otherwise it does not matter unless you have another application
-that requires shared memory.
-- **System language**: You can select either English or French as the system
-language.
+  loaders, which otherwise will generate an error. If using PyTorch make sure this
+  is enabled, otherwise it does not matter unless you have another application
+  that requires shared memory.
 
 ## And... Create!!!
 
 - If you're satisfied with the settings, you can now create the server! It may
   take a few minutes to spin up depending on the resources you asked for. GPUs
   take longer.
-
-<!-- prettier-ignore -->
-!!! note "Slow node creation bug."
-    Due to a bug with the firewall, creating a new node may be very
-    slow in some cases (up to a few hours). A fix for this issue is in the works.
 
 <!-- prettier-ignore -->
 !!! success "Your server is running"
