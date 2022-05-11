@@ -302,8 +302,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-your-server" class="md-nav__link">
-    Configuring your server
+  <a href="#server-name-and-namespace" class="md-nav__link">
+    Server Name and Namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    Image
   </a>
   
 </li>
@@ -316,8 +323,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#storing-your-data" class="md-nav__link">
-    Storing your data
+  <a href="#gpus" class="md-nav__link">
+    GPUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-volume" class="md-nav__link">
+    Workspace Volume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-volumes" class="md-nav__link">
+    Data Volumes
   </a>
   
 </li>
@@ -330,15 +351,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gpus" class="md-nav__link">
-    GPUs
+  <a href="#affinity-tolerations" class="md-nav__link">
+    Affinity / Tolerations
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    Advanced Settings
+  <a href="#miscellaneous-settings" class="md-nav__link">
+    Miscellaneous Settings
   </a>
   
 </li>
@@ -777,8 +798,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-your-server" class="md-nav__link">
-    Configuring your server
+  <a href="#server-name-and-namespace" class="md-nav__link">
+    Server Name and Namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    Image
   </a>
   
 </li>
@@ -791,8 +819,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#storing-your-data" class="md-nav__link">
-    Storing your data
+  <a href="#gpus" class="md-nav__link">
+    GPUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-volume" class="md-nav__link">
+    Workspace Volume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-volumes" class="md-nav__link">
+    Data Volumes
   </a>
   
 </li>
@@ -805,15 +847,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gpus" class="md-nav__link">
-    GPUs
+  <a href="#affinity-tolerations" class="md-nav__link">
+    Affinity / Tolerations
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
-    Advanced Settings
+  <a href="#miscellaneous-settings" class="md-nav__link">
+    Miscellaneous Settings
   </a>
   
 </li>
@@ -891,7 +933,7 @@ for your team.</p>
 <!-- prettier-ignore -->
 <details class="warning">
 <summary>Log into the Azure Portal using your Cloud Credentials</summary>
-<p>You have to login to the Azure Portal <strong>using your StatCan credentials</strong>.
+<p>You have to login to the Azure Portal <strong>using your StatCan cloud credentials</strong>.
 <code>first.lastname@cloud.statcan.ca</code> or <strong>StatCan credentials</strong>
 <code>first.lastname@statcan.gc.ca</code>. You can do that using
 <a href="https://portal.azure.com">the Azure Portal</a>.
@@ -907,24 +949,25 @@ for your team.</p>
 <ul>
 <li>Then click <strong>+ New Server</strong></li>
 </ul>
-<h3 id="configuring-your-server">Configuring your server<a class="headerlink" href="#configuring-your-server" title="Permanent link">&para;</a></h3>
+<h3 id="server-name-and-namespace">Server Name and Namespace<a class="headerlink" href="#server-name-and-namespace" title="Permanent link">&para;</a></h3>
 <ul>
 <li>You will get a template to create your notebook server. <strong>Note:</strong> the name of
-  your server must be lowercase letters with hyphens. <strong>No spaces, and no
+  your server can consist of only lowercase letters, numbers, and hyphens. <strong>No spaces, and no
   underscores.</strong></li>
 </ul>
 <ul>
-<li>You'll need to choose an image. Check the name of the images and choose one
-  that matches what you want to do. (Don't know which one to choose? Check out
-  your options <a href="../Selecting-an-Image/">here</a>.)</li>
+<li>You will need to specify a namespace. By default you will have a default
+  namespace for your account, but for projects you may need to select the
+  namespace created specifically for that project. Otherwise the notebook server
+  you create may not have access rights to resources required for the project.</li>
 </ul>
-<p><img alt="Choose an Image" src="../../images/kubeflow_image_selection.jpg" /></p>
-<ul>
-<li>You will also need to specify a namespace. By default you will have a default
-namespace for your account, but for projects you may need to select the
-namespace created specifically for that project. Otherwise the notebook server
-you create may not have access rights to resources required for the project.</li>
-</ul>
+<h3 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h3>
+<p>You will need to choose an image. There are JupyterLab, RStudio, and Ubuntu remote
+desktop images available. Select the drop down menu to select additional options
+within these (for instance, CPU, PyTorch, and TensorFlow images for JupyterLab).</p>
+<p>Check the name of the images and choose one that matches what you want to do. Don't know
+which one to choose? Check out your options <a href="../Selecting-an-Image/">here</a>.</p>
+<p><img alt="Choose an Image" src="../../images/select-image-screenshot.PNG" /></p>
 <h3 id="cpu-and-memory">CPU and Memory<a class="headerlink" href="#cpu-and-memory" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -949,38 +992,6 @@ See below section on GPUs for information on how to select a GPU server.</p>
 restrictions.</p>
 </li>
 </ul>
-<!-- prettier-ignore -->
-<div class="admonition note">
-<p class="admonition-title">Use GPU machines responsibly</p>
-<p>GPU machines are significantly more expensive than CPU machines,
-so use them responsibly.</p>
-</div>
-<h3 id="storing-your-data">Storing your data<a class="headerlink" href="#storing-your-data" title="Permanent link">&para;</a></h3>
-<ul>
-<li>You'll want to create a data volume! You'll be able to save your work here,
-  and if you shut down your server, you'll be able to just remount your old data
-  by entering the name of your old disk. <strong>It is important that you remember the
-  volume's name.</strong></li>
-</ul>
-<p><img alt="Create a Data Volume" src="../../images/kubeflow_volumes.png" /></p>
-<!-- prettier-ignore -->
-<div class="admonition tip">
-<p class="admonition-title">Check for old volumes by looking at the Existing option</p>
-<p>When you create your server you have the option of reusing an old volume
-or creating a new one. You probably want to reuse your old volume.</p>
-</div>
-<h3 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
-<p>There are currently two checkbox options available here:</p>
-<ul>
-<li><strong>Run a Protected B notebook</strong>: Enable this if the server you create needs
-access to any Protected B resources. Protected B notebook servers run with many
-security restrictions and have access to separate MinIO instances specifically
-designed for Protected B data.</li>
-<li><strong>Mount MinIO storage into the minio/ folder</strong>: This should make MinIO
-repositories accessible as subfolders / files of the <code>minio/</code> folder.
-Unfortunately this is not working currently, when this is fixed the
-documentation will be updated.</li>
-</ul>
 <h3 id="gpus">GPUs<a class="headerlink" href="#gpus" title="Permanent link">&para;</a></h3>
 <p>If you want a GPU server, select <code>1</code> as the number of GPUs and <code>NVIDIA</code> as the GPU
 vendor (the create button will be greyed out until the GPU vendor is selected if
@@ -989,15 +1000,79 @@ AAW system.</p>
 <p><img alt="GPU Configuration" src="../../images/kubeflow_gpu_selection.jpg" /></p>
 <p>As mentioned before, if you select a GPU server you will automatically get 6 CPU
 cores and 112 GiB of memory.</p>
-<h3 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h3>
-<p>There are two things that can be customized here:</p>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">Use GPU machines responsibly</p>
+<p>GPU machines are significantly more expensive than CPU machines,
+so use them responsibly.</p>
+</div>
+<h3 id="workspace-volume">Workspace Volume<a class="headerlink" href="#workspace-volume" title="Permanent link">&para;</a></h3>
+<p>You will need a workspace volume, which is where the home folder will be mounted. There
+are various configuration options available:</p>
+<ul>
+<li>You can either reuse an existing workspace volume from before, or create a new one.</li>
+</ul>
+<ul>
+<li>You can specify the size of the workspace volume, from 4 GiB to 32 GiB.</li>
+</ul>
+<ul>
+<li>You can choose the option to not use persistent storage for home, in which case the
+  home folder will be deleted as soon as the notebook server is closed. Otherwise the
+  home folder will remain and can be used again for a new notebook server in the future.</li>
+</ul>
+<p><img alt="Create a Workspace Volume" src="../../images/workspace-volume.PNG" /></p>
+<!-- prettier-ignore -->
+<div class="admonition tip">
+<p class="admonition-title">Check for old volumes by looking at the Existing option</p>
+<p>When you create your server you have the option of reusing an old volume
+or creating a new one. You probably want to reuse your old volume.</p>
+</div>
+<h3 id="data-volumes">Data Volumes<a class="headerlink" href="#data-volumes" title="Permanent link">&para;</a></h3>
+<p>You can also create data volumes that can be used to store additional data. Multiple
+data volumes can be created. Click the add volume button to create a new volume and specify 
+its configuration. There are the following configuration parameters as for data volumes:</p>
+<ul>
+<li><strong>Type</strong>: Create a new volume or use an existing volume.</li>
+</ul>
+<ul>
+<li><strong>Name</strong>: Name of the volume.</li>
+</ul>
+<ul>
+<li><strong>Size in GiB</strong>: From 4 GiB to 512 GiB.</li>
+</ul>
+<ul>
+<li><strong>Mount Point</strong>: Path where the data volume can be accessed on the notebook server, by
+  default <code>/home/jovyan/&lt;volume name&gt;</code>.</li>
+</ul>
+<p>The garbage can icon on the right can be used to delete an existing or accidentally created
+data volume.</p>
+<p><img alt="Create a Data Volume" src="../../images/kubeflow_volumes.png" /></p>
+<h3 id="configurations">Configurations<a class="headerlink" href="#configurations" title="Permanent link">&para;</a></h3>
+<p>There are currently three checkbox options available here:</p>
+<ul>
+<li><strong>Mount MinIO storage to ~/minio (experimental)</strong>: This should make MinIO
+  repositories accessible as subfolders / files of the <code>minio/</code> folder. This is
+  still experimental and may not work properly currently.</li>
+<li><strong>Run a Protected B notebook</strong>: Enable this if the server you create needs
+  access to any Protected B resources. Protected B notebook servers run with many
+  security restrictions and have access to separate MinIO instances specifically
+  designed for Protected B data.</li>
+<li><strong>Allow access to Kubeflow Pipelines</strong>: This will allow the notebook server to
+  create and manage Kubeflow pipelines. Enable this if you want to use Kubeflow
+  pipelines.</li>
+</ul>
+<h3 id="affinity-tolerations">Affinity / Tolerations<a class="headerlink" href="#affinity-tolerations" title="Permanent link">&para;</a></h3>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">This section needs to be filled in.</p>
+</div>
+<h3 id="miscellaneous-settings">Miscellaneous Settings<a class="headerlink" href="#miscellaneous-settings" title="Permanent link">&para;</a></h3>
+<p>The following can be customized here:</p>
 <ul>
 <li><strong>Enable Shared Memory</strong>: This is required if you use PyTorch with multiple data
-loaders, which otherwise will generate an error. If using PyTorch make sure this
-is enabled, otherwise it does not matter unless you have another application
-that requires shared memory.</li>
-<li><strong>System language</strong>: You can select either English or French as the system
-language.</li>
+  loaders, which otherwise will generate an error. If using PyTorch make sure this
+  is enabled, otherwise it does not matter unless you have another application
+  that requires shared memory.</li>
 </ul>
 <h3 id="and-create">And... Create!!!<a class="headerlink" href="#and-create" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1005,12 +1080,6 @@ language.</li>
   take a few minutes to spin up depending on the resources you asked for. GPUs
   take longer.</li>
 </ul>
-<!-- prettier-ignore -->
-<div class="admonition note">
-<p class="admonition-title">Slow node creation bug.</p>
-<p>Due to a bug with the firewall, creating a new node may be very
-slow in some cases (up to a few hours). A fix for this issue is in the works.</p>
-</div>
 <!-- prettier-ignore -->
 <div class="admonition success">
 <p class="admonition-title">Your server is running</p>
