@@ -25,7 +25,7 @@ for your team.
 
 <!-- prettier-ignore -->
 ??? warning "Log into the Azure Portal using your Cloud Credentials"
-    You have to login to the Azure Portal **using your StatCan credentials**.
+    You have to login to the Azure Portal **using your StatCan cloud credentials**.
     `first.lastname@cloud.statcan.ca` or **StatCan credentials**
     `first.lastname@statcan.gc.ca`. You can do that using
     [the Azure Portal](https://portal.azure.com).
@@ -39,22 +39,27 @@ for your team.
 
 - Then click **+ New Server**
 
-## Configuring your server
+## Server Name and Namespace
 
 - You will get a template to create your notebook server. **Note:** the name of
-  your server must be lowercase letters with hyphens. **No spaces, and no
+  your server can consist of only lowercase letters, numbers, and hyphens. **No spaces, and no
   underscores.**
 
-- You'll need to choose an image. Check the name of the images and choose one
-  that matches what you want to do. (Don't know which one to choose? Check out
-  your options [here](./Selecting-an-Image.md).)
+- You will need to specify a namespace. By default you will have a default
+  namespace for your account, but for projects you may need to select the
+  namespace created specifically for that project. Otherwise the notebook server
+  you create may not have access rights to resources required for the project.
 
-![Choose an Image](../images/kubeflow_image_selection.jpg)
+## Image
 
-- You will also need to specify a namespace. By default you will have a default
-namespace for your account, but for projects you may need to select the
-namespace created specifically for that project. Otherwise the notebook server
-you create may not have access rights to resources required for the project.
+You will need to choose an image. There are JupyterLab, RStudio, and Ubuntu remote
+desktop images available. Select the drop down menu to select additional options
+within these (for instance, CPU, PyTorch, and TensorFlow images for JupyterLab).
+
+Check the name of the images and choose one that matches what you want to do. Don't know
+which one to choose? Check out your options [here](./Selecting-an-Image.md).
+
+![Choose an Image](../images/select-image-screenshot.PNG)
 
 ## CPU and Memory
 
@@ -79,38 +84,6 @@ you create may not have access rights to resources required for the project.
   In the future there may be larger machines available, so you may have looser
   restrictions.
 
-<!-- prettier-ignore -->
-!!! note "Use GPU machines responsibly"
-    GPU machines are significantly more expensive than CPU machines,
-    so use them responsibly.
-
-## Storing your data
-
-- You'll want to create a data volume! You'll be able to save your work here,
-  and if you shut down your server, you'll be able to just remount your old data
-  by entering the name of your old disk. **It is important that you remember the
-  volume's name.**
-
-![Create a Data Volume](../images/kubeflow_volumes.png)
-
-<!-- prettier-ignore -->
-!!! tip "Check for old volumes by looking at the Existing option"
-    When you create your server you have the option of reusing an old volume
-    or creating a new one. You probably want to reuse your old volume.
-
-## Configurations
-
-There are currently two checkbox options available here:
-
-- **Run a Protected B notebook**: Enable this if the server you create needs
-access to any Protected B resources. Protected B notebook servers run with many
-security restrictions and have access to separate MinIO instances specifically
-designed for Protected B data.
-- **Mount MinIO storage into the minio/ folder**: This should make MinIO
-repositories accessible as subfolders / files of the `minio/` folder.
-Unfortunately this is not working currently, when this is fixed the
-documentation will be updated.
-
 ## GPUs
 
 If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the GPU
@@ -123,27 +96,85 @@ AAW system.
 As mentioned before, if you select a GPU server you will automatically get 6 CPU
 cores and 112 GiB of memory.
 
-## Advanced Settings
+<!-- prettier-ignore -->
+!!! note "Use GPU machines responsibly"
+    GPU machines are significantly more expensive than CPU machines,
+    so use them responsibly.
 
-There are two things that can be customized here:
+## Workspace Volume
+
+You will need a workspace volume, which is where the home folder will be mounted. There
+are various configuration options available:
+
+- You can either reuse an existing workspace volume from before, or create a new one.
+
+- You can specify the size of the workspace volume, from 4 GiB to 32 GiB.
+
+- You can choose the option to not use persistent storage for home, in which case the
+  home folder will be deleted as soon as the notebook server is closed. Otherwise the
+  home folder will remain and can be used again for a new notebook server in the future.
+
+![Create a Workspace Volume](../images/workspace-volume.PNG)
+
+<!-- prettier-ignore -->
+!!! tip "Check for old volumes by looking at the Existing option"
+    When you create your server you have the option of reusing an old volume
+    or creating a new one. You probably want to reuse your old volume.
+
+## Data Volumes
+
+You can also create data volumes that can be used to store additional data. Multiple
+data volumes can be created. Click the add volume button to create a new volume and specify 
+its configuration. There are the following configuration parameters as for data volumes:
+
+- **Type**: Create a new volume or use an existing volume.
+
+- **Name**: Name of the volume.
+
+- **Size in GiB**: From 4 GiB to 512 GiB.
+
+- **Mount Point**: Path where the data volume can be accessed on the notebook server, by
+  default `/home/jovyan/<volume name>`.
+
+The garbage can icon on the right can be used to delete an existing or accidentally created
+data volume.
+
+![Create a Data Volume](../images/kubeflow_volumes.png)
+
+## Configurations
+
+There are currently three checkbox options available here:
+
+- **Mount MinIO storage to ~/minio (experimental)**: This should make MinIO
+  repositories accessible as subfolders / files of the `minio/` folder. This is
+  still experimental and may not work properly currently.
+- **Run a Protected B notebook**: Enable this if the server you create needs
+  access to any Protected B resources. Protected B notebook servers run with many
+  security restrictions and have access to separate MinIO instances specifically
+  designed for Protected B data.
+- **Allow access to Kubeflow Pipelines**: This will allow the notebook server to
+  create and manage Kubeflow pipelines. Enable this if you want to use Kubeflow
+  pipelines.
+
+## Affinity / Tolerations
+
+<!-- prettier-ignore -->
+!!! note "This section needs to be filled in."
+
+## Miscellaneous Settings
+
+The following can be customized here:
 
 - **Enable Shared Memory**: This is required if you use PyTorch with multiple data
-loaders, which otherwise will generate an error. If using PyTorch make sure this
-is enabled, otherwise it does not matter unless you have another application
-that requires shared memory.
-- **System language**: You can select either English or French as the system
-language.
+  loaders, which otherwise will generate an error. If using PyTorch make sure this
+  is enabled, otherwise it does not matter unless you have another application
+  that requires shared memory.
 
 ## And... Create!!!
 
 - If you're satisfied with the settings, you can now create the server! It may
   take a few minutes to spin up depending on the resources you asked for. GPUs
   take longer.
-
-<!-- prettier-ignore -->
-!!! note "Slow node creation bug."
-    Due to a bug with the firewall, creating a new node may be very
-    slow in some cases (up to a few hours). A fix for this issue is in the works.
 
 <!-- prettier-ignore -->
 !!! success "Your server is running"
