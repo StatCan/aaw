@@ -1,8 +1,7 @@
-# Frequently Asked Questions with Answers
+**IMPORTANT** If your question does not appear in this document, please reach
+out to us on [Slack](https://statcan-aaw.slack.com/) in the #general channel.
 
-**IMPORTANT**: If your question does not appear in this document, please reach
-out to us on [Slack](https://statcan-aaw.slack.com/) in the \#general channel.
-
+# General
 
 ## What is the AAW?
 
@@ -17,7 +16,7 @@ Kubeflow is a free and open-source machine learning platform designed to enable
 using machine learning pipelines to orchestrate complicated workflows running on
 Kubernetes (e.g. doing data processing then using TensorFlow or PyTorch to train
 a model, and deploying to TensorFlow Serving or Seldon). Kubeflow was based on
-Google\'s internal method to deploy TensorFlow models called TensorFlow
+Google's internal method to deploy TensorFlow models called TensorFlow
 Extended.
 
 ## What is MinIO?
@@ -38,7 +37,7 @@ enable collaboration on the same data and code.
 GPUs are efficient matrix multipliers. When training a machine learning model,
 especially a neural network, most of the performed calculations are matrix
 multiplications, hence GPUs are well suited for training neural networks. If you
-do not need to train a neural network model then you probably don\'t need a GPU.
+do not need to train a neural network model then you probably don't need a GPU.
 Since GPUs consume a lot of energy they are expensive to run in the cloud so
 please use them sparingly.
 
@@ -46,7 +45,7 @@ please use them sparingly.
 
 ## Who Can Access the AAW?
 
-Anyone with a Statistics Canada (\@statcan.gc.ca) email address can access the
+Anyone with a Statistics Canada (@statcan.gc.ca) email address can access the
 AAW. If an external partner / department needs to have access, they would need a
 Statistics Canada cloud account and they would need to apply and reach an
 agreement with Statistics Canada.
@@ -61,13 +60,12 @@ The AAW and its services are accessible from the
 From the AAW portal you can find Kubeflow and MinIO.
 
 - [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/)
-
 - [MinIO](https://minio.aaw.cloud.statcan.ca/)
 
 ## Where can I find extra documentation?
 
 The portal contains links to our user guide, videos, and our slack channel. If
-the user guide and videos don\'t contain the answers you are looking for,
+the user guide and videos don't contain the answers you are looking for,
 contact us on Slack.
 
 ## Can I leave feedback?
@@ -75,9 +73,9 @@ contact us on Slack.
 Of course, we welcome all sorts of feedback. Simply follow the Leave Feedback
 link on our portal and leave your comment.
 
-[Advanced Analytics Workspace Portal](https://analytics-platform.statcan.gc.ca/covid19)
+- [Advanced Analytics Workspace Portal](https://analytics-platform.statcan.gc.ca/covid19)
 
-## Is there a preference to use the \@statcan.gc.ca or the \@cloud.statcan.ca or does it matter?
+## Is there a preference for @statcan.gc.ca or @cloud.statcan.ca?
 
 While you are free to use either one, your workspaces will only be available to
 the associated account. To simplify use of the AAW it is recommended to pick an
@@ -95,7 +93,7 @@ domain to permit access in Slack.
 
 ## Which channel within the AAW Slack workspace do I leave my request / question / concerns?
 
-Please use the \#general channel.
+Please use the #general channel.
 
 # Questions and Answers Related to Kubeflow
 
@@ -103,8 +101,8 @@ Please use the \#general channel.
 
 ### Where can I find which namespace I am presently using?
 
-You can find your namespace in KUBEFLOW in the upper left corner next to
-KUBEFLOW icon.
+You can find your namespace in Kubeflow in the upper left corner next to
+the Kubeflow icon.
 
 ### Can I share data from my namespace(s) with other users?
 
@@ -144,7 +142,6 @@ us and we will do that for you.
 - **PROTECTED B**
 
   - A Protected B workspace does not have internet access.
-
   - Creating a Protected B workspace doesn't mean that you will automatically
     have rights to access to confidential Protected B data. A user will need to
     submit a request through our Customer Success Unit which will need to
@@ -156,12 +153,10 @@ us and we will do that for you.
 
 - Workspace volumes are equivalent to your home directory on a Unix-like
   operating system such as Linux. On the AAW this is where your Python and R packages will be installed. You can store anything you like in your workspace volume but the AAW offers additional storage options for large datasets.
-
 - Data volumes are more appropriate for datasets and can be mounted to any location in your server. A data volume can only be attached to one server at a time.
-
 - MinIO is our cloud storage offering. Your MinIO buckets can store data you want to share across projects and servers.
 
-### Does AAW offer realtime collaboration with workspaces?
+### Does AAW offer real-time collaboration with workspaces?
 
 Workspaces cannot have multiple instances. A workspace is 1 tenant at a time.
 
@@ -172,9 +167,9 @@ out to our Slack Channel for further support.
 
 ### Is there an upper bound on time to create a new notebook server?
 
-If we\'re hitting our limits on the number of compute nodes it could take longer
+If we're hitting our limits on the number of compute nodes it could take longer
 than 10 minutes while the cluster scales up, making room for additional nodes.
-Additionally, there\'s also the case where a new node needs to join the cluster
+Additionally, there's also the case where a new node needs to join the cluster
 and that may take anywhere from a few minutes to half an hour depending on the
 node type and how Azure (our underlying cloud computing platform) is feeling
 that day.
@@ -251,21 +246,21 @@ give you a rough estimate of costs, please consult the following table.
 
 #### CPU Only
 
-| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
+| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost (CAD)** |           |            |
 |----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
 |                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| CPU: Occasional Use        | 2                     | 8          | 0     | 8                     | 1.1367   | 4.88781   | 59.1084    |
-| CPU: During Business Hours | 2                     | 8          | 0     | 40                    | 5.6835   | 24.43905  | 295.542    |
-| CPU: 24/7                  | 2                     | 8          | 0     | 168                   | 23.8707  | 102.64401 | 1241.2764  |
+| CPU: Occasional Use        | 2                     | 8.0        | 0     | 8                     | $1.14   | $4.89   | $59.11    |
+| CPU: During Business Hours | 2                     | 8.0        | 0     | 40                    | $5.68   | $24.44  | $295.54    |
+| CPU: 24/7                  | 2                     | 8.0        | 0     | 168                   | $23.87  | $102.64 | $1,241.28   |
 
 #### Add a GPU
 
 | **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
 |----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
 |                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| GPU: Occasional Use        | 0                     | 0          | 1     | 8                     | 34.468   | 148.2124  | 1792.336   |
-| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | 172.34   | 741.062   | 8961.68    |
-| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | 723.828  | 3112.4604 | 37639.056  |
+| GPU: Occasional Use        | 0                     | 0          | 1     | 8                     | $34.47   | 148.2124  | 1792.336   |
+| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | $172.34   | 741.062   | 8961.68    |
+| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | $723.83  | 3112.4604 | 37639.056  |
 
 ### What packages are available?
 
@@ -297,9 +292,8 @@ the cluster.
 
 ### How can I access MinIO?
 
-[MinIO Portal](https://minio.aaw.cloud.statcan.ca/)
-
-You can access your MinIO account from the
+- [MinIO Portal](https://minio.aaw.cloud.statcan.ca/)
+- You can access your MinIO account from the
 [MinIO Portal](https://minio.aaw.cloud.statcan.ca/). You'll need your
 Statistics Canada Windows username and password.
 
@@ -310,10 +304,10 @@ can be loaded into MinIO. The FDI team owns an Azure Data Factory pipeline for
 moving data, typically from on premise, to an Azure Storage Account and MinIO is
 our S3 gateway to that storage account.
 
-### Do we have a way to transfer Protected B data from our cloud to let\'s say another government department\'s protected cloud or even another government\'s protected cloud?
+### How do I transfer Protected B data from one cloud to another cloud?
 
 Statcan has an Electronic File Transfer (EFT) system that is made to securely
-transfer data between external partners, I don\'t know of any cloud specific
+transfer data between external partners, I don't know of any cloud specific
 mechanism
 
 ### **How can I programmatically access MinIO from JupyterLab?
@@ -340,9 +334,9 @@ to transfer from Net A to AAW Cloud.
 No. But you can use SQLite, which is a database in a file. You can also use
 Parquet files which offer a performant file-based alternative to databases.
 
-### What\'s a good size for the different volumes?
+### What's a good size for the different volumes?
 
-16GB is pretty safe. It\'s mostly going to be your Python/R packages that are
+16GB is pretty safe. It's mostly going to be your Python/R packages that are
 stored in the main storage volume.
 
 ### Are there any preloaded datasets in AAW that we can access and use for both R and Python notebooks?
@@ -354,8 +348,6 @@ example notebooks and data, they can be found in /aaw-contrib-r-notebooks/.
 ## SAS
 
 [SAS Kernel for Jupyter](https://github.com/sassoftware/sas_kernel)
-
----
 
 ### Can we use SAS in the AAW?
 
@@ -381,13 +373,13 @@ The internet abounds with documents on how to use SAS with Python, the following
 are a couple of good places to start your research.
 
 - [An Introduction to SASPy and Jupyter Notebooks](https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2822-2018.pdf)
-- [SASPy \| SAS Support](https://support.sas.com/en/software/saspy.html)
+- [SASPy | SAS Support](https://support.sas.com/en/software/saspy.html)
 
 ## Advanced
 
 ### Can I Create My Own Web API Service Powered by Kubernetes?
 
-You can create an API from within your namespace. For the time being, it\'s done
+You can create an API from within your namespace. For the time being, it's done
 by creating
 [Seldon Deployments](https://www.kubeflow.org/docs/external-add-ons/serving/seldon/)
 or by creating Kubernetes Deployments/StatefulSets.

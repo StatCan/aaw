@@ -38,18 +38,20 @@
 
 ## Access / Usage
 
-- Internal (Statistics Canada employees) users with statcan.gc.ca email addresses can use either the internal or the external portals.
+- Statistics Canada employees with an `@statcan.gc.ca` email addresses can use either the internal or the external portals.
 
   - [Internal Portal ](https://www.statcan.gc.ca/data-analytics-service)
   - [External Portal](https://analytics-platform.statcan.gc.ca/covid19)
 
-- External users need to fill an Intake form to obtain a cloud account (cloud.statcan.ca). External users need to be sponsored, need approval from Opmic and need to be given either a Statistics Canada cloud email or guest account. External users have to use the external portal.
+- External users need to fill an Intake form to obtain a cloud account with an `@cloud.statcan.ca` account.
+  - External users need to be sponsored, need approval from Opmic and need to be given either a Statistics Canada cloud email or guest account.
+  - External users have to use the external portal.
 
   - [External Portal](https://analytics-platform.statcan.gc.ca/covid19)
 
 ## Frequently Asked Questions
 
-If you have any questions regarding the platform please consult our [English FAQ](https://statcan.github.io/daaas/en/6-FAQ/FAQ/) or our [French FAQ](https://statcan.github.io/daaas/fr/6-FAQ/FAQ/). If your question does not appear in the FAQ, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
+If you have any questions regarding the platform please consult our [English FAQ](https://github.com/StatCan/daaas/blob/FAQ/docs/en/6-FAQ/FAQ.md) or our [French FAQ](https://github.com/StatCan/daaas/blob/FAQ/docs/fr/6-FAQ/FAQ.md). If your question does not appear in the FAQ, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
 
 ## Presentations on AAW
 

@@ -68,4 +68,6 @@ nav:
       - Aperçu: 5-Stockage/Aperçu.md
       - MinIo: 5-Stockage/MinIo.md
       - Disque: 5-Stockage/Disque.md
+  - FAQ:
+      - FAQ: 6-FAQ/FAQ.md
   - Aide/Contactez-nous: Aide.md
