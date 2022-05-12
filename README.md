@@ -41,11 +41,11 @@
 - Internal (Statistics Canada employees) users with statcan.gc.ca email addresses can use either the internal or the external portals.
 
   - [Internal Portal ](https://www.statcan.gc.ca/data-analytics-service)
-  - [External Portal]([Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/covid19))
+  - [External Portal](https://analytics-platform.statcan.gc.ca/covid19)
 
 - External users need to fill an Intake form to obtain a cloud account (cloud.statcan.ca). External users need to be sponsored, need approval from Opmic and need to be given either a Statistics Canada cloud email or guest account. External users have to use the external portal.
 
-  - [External Portal]([Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/covid19))
+  - [External Portal](https://analytics-platform.statcan.gc.ca/covid19)
 
 ## Frequently Asked Questions
 
