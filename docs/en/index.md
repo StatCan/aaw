@@ -27,13 +27,14 @@ without any additional sign up procedures, just head to
 ## AAW Services
 
 The Advanced Analytics Workspaces' services can be accessed from one of two portals.
-<center>
 
-| AAW Portals | |
-|---|---|
-| <center><h3> [![Getting Started](images/portal-internal.png)](https://www.statcan.gc.ca/data-analytics-service/aaw) <br> [**Internal**](https://www.statcan.gc.ca/data-analytics-service/aaw) </h3></center> | <center><h3> [![Analysis](images/portal-external.png)](https://analytics-platform.statcan.gc.ca/covid19) <br> [**External**](https://analytics-platform.statcan.gc.ca/covid19) </h3></center> |
+<div class="grid" markdown>
 
-</center>
+- [![Analysis](images/portal-external.png)](https://analytics-platform.statcan.gc.ca/covid19) <br> [**External**](https://analytics-platform.statcan.gc.ca/covid19){ .md-button .md-button--primary }
+- [![Getting Started](images/portal-internal.png)](https://www.statcan.gc.ca/data-analytics-service/aaw) <br> [**Internal**](https://www.statcan.gc.ca/data-analytics-service/aaw){ .md-button }
+
+</div>
+
 
 ## Getting Help
 
@@ -43,10 +44,10 @@ https://statcan-aaw.slack.com
 
 <div class="grid cards" markdown>
 
-- __HTML__ for content and structure
-- __JavaScript__ for interactivity
-- __CSS__ for text running out of boxes
-- __Internet Explorer__ ... huh?
+  - __HTML__ for content and structure
+  - __JavaScript__ for interactivity
+  - __CSS__ for text running out of boxes
+  - __Internet Explorer__ ... huh?
 
 </div>
 

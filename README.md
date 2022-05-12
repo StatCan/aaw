@@ -1,97 +1,84 @@
-<!-- markdownlint-disable no-bare-urls no-duplicate-header -->
+<h1 align="center">AAW: Advanced Analytics Workspace</h1>
 
-# Data Analytics as a Service
+<h2 align="center">
+<img style="border: 2px solid #555; border-radius: 8px; box-shadow: 10px 10px lightblue;" src="./docs/en/images/make-your-own-workspaces.png">
+</h2>
 
-Data Analytics as a Service for the Government of Canada and external collaborators.
+<h3 align="center">by The Data Analytics as a Service Division at Statistics Canada</h3>
 
-## Frequently Asked Questions (FAQ)
+<h2 align="center">⭐ Star us on GitHub — it motivates us a lot! ⭐</h2>
 
-If your question does not appear in this document, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
+<h4 align="center">A Kubeflow-based data science platform for professionals.</h4>
 
-### Who an access the AAW?
+<p align="center">
+<a href="https://statcan-aaw.slack.com/"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--9OaJAiEH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://img.shields.io/badge/Slack-4A154B%3Fstyle%3Dfor-the-badge%26logo%3Dslack%26logoColor%3Dwhite" alt="Slack"></a>
+<a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--MRXwUmKz--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://img.shields.io/badge/Python-14354C%3Fstyle%3Dfor-the-badge%26logo%3Dpython%26logoColor%3Dwhite"></a>
+<a href="https://github.com/StatCan/aaw-contrib-r-notebooks"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--n5ddUkgx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://img.shields.io/badge/R-276DC3%3Fstyle%3Dfor-the-badge%26logo%3Dr%26logoColor%3Dwhite"></a>
+</p>
 
-- Anyone with a Statistics Canada (`@statcan.gc.ca`) email address can access the AAW.
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#key-features">Access</a> •
+  <a href="#presentations">Presentations</a> •
+  <a href="#faq">FAQ</a> •
+  <a href="#contribute">Contribute</a> •
+  <a href="#security">Security</a> •
+  <a href="#community">Community</a>
+</p>
 
-### What data formats are supported in the AAW?
+## Key Features
 
-The AAW includes tools that allow data science users to open almost any file. The AAW supports many commonly used file formats, including (but not limited to):
+- Based on Kubernetes and is therefore cloud agnostic.
+- Access all the best software.
+- MLOps with Kubeflow.
+- GitOps with Gitea.
+- Data Analysis with Python and R in JupyterLab or R Studio.
+- Support for Python, R, Julia and SAS.
+- VSCode.
 
-- csv
-- xlsx
-- json
-- xml
-- sas7bdat
-- sqlite
-- many others... just ask :-)
+## Access / Usage
 
-### How much does the AAW cost?
+- Internal (Statistics Canada employees) users with statcan.gc.ca email addresses can use either the internal or the external portals.
 
-StatCan is footing the bill for the time being. To give you a rough estimate of costs, please consult the following table. NB: these are just estimates.
+  - [Internal Portal ](https://www.statcan.gc.ca/data-analytics-service)
+  - [External Portal]([Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/covid19))
 
-#### CPU Only
+- External users need to fill an Intake form to obtain a cloud account (cloud.statcan.ca). External users need to be sponsored, need approval from Opmic and need to be given either a Statistics Canada cloud email or guest account. External users have to use the external portal.
 
-| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
-|----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
-|                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| CPU: Occasional Use        | 2                     | 8          | 0     | 8                     | 1.1367   | 4.88781   | 59.1084    |
-| CPU: During Business Hours | 2                     | 8          | 0     | 40                    | 5.6835   | 24.43905  | 295.542    |
-| CPU: 24/7                  | 2                     | 8          | 0     | 168                   | 23.8707  | 102.64401 | 1241.2764  |
+  - [External Portal]([Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/covid19))
 
-#### Add a GPU
+## Frequently Asked Questions
 
-| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
-|----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
-|                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| GPU: Occaisonal Use        | 0                     | 0          | 1     | 8                     | 34.468   | 148.2124  | 1792.336   |
-| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | 172.34   | 741.062   | 8961.68    |
-| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | 723.828  | 3112.4604 | 37639.056  |
+If you have any questions regarding the platform please consult our [English FAQ](https://statcan.github.io/daaas/en/6-FAQ/FAQ/) or our [French FAQ](https://statcan.github.io/daaas/fr/6-FAQ/FAQ/). If your question does not appear in the FAQ, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
 
-### What are the steps for getting Protected B data into MinIO?
-
-- One must consult with FDI (F.A.I.R. Data Infrastructure) before Protected B Data can be loaded into MinIO. The FDI team owns an Azure Data Factory pipeline for moving data, typically from on premise, to an Azure Storage Account and MinIO is our S3 gateway to that storage account.
-
-### Can we use Power BI on the AAW?
-
-- At the moment, no. We are currently looking into solutions for sharing data between the AAW and CAE (which supports Power BI).
-
-### Does using SAS entail different costs than the others? Are there a limited number of licenses or instances that can be run?
-
-- SAS support is currently experimental and will rely on existing Statistics Canada SAS software licenses.
-
-### How do you suspend your server (to save costs)?
-
-- As of now you must destroy your server. Make sure to save the data volumes, they can be reused with a new server.
-- The version of Kubeflow in the dev branch has an option to suspend the session. Once that has rolled out to production, users will have the ability to suspend workspaces to save on costs.
-
-### How do I add other people to my namespace (for collaboration)?
-
-1. Do we need to stop any running instances in our notebooks when we’re not using it? If so, how do we do this? I checked the documentation and there is no guidelines on how to stop any running notebooks as a cost-saving measure.
-
-### Are there any pre-loaded data (datasets) in AAW that we can access and use for both R and Python notebooks?
-
-- Our JupyterLab images come with some example notebooks and data, they can be found in `/aaw-contrib-jupyter-notebooks/`.
-- Our R Studio image also has some example notebooks and data, they can be found in `/aaw-contrib-r-notebooks/`.
-
-## Presentations
+## Presentations on AAW
 
 We highly encourage you to watch our YouTube presentation given at Stratosphere:
 
 - [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
 - [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
-- [AAW Onboarding Presentation (work in progress)](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit#slide=id.g113e8bbc6e6_0_27)
+- [AAW Onboarding Presentation](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing)
 
-## Security
+## Security Best Practices
 
 A discussion about some of the security best practices in use by this platform:
 
-- [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)
+- [AAW Security Proposal](https://github.com/StatCan/aaw-security-proposal)
 
-## Advanced Analytics Workspace
+## How to Contribute
 
-The following is a list of all the `general` related repositories for the Advanced Analytics Workspace project.
+Below you will find our Github repositories. Peruse the repositories below and find the one pertaining to the component you are interested in contributing to.
+
+1. Clone repo and create a new branch: `$ git checkout https://github.com/StatCan/repo_name -b name_for_new_branch`.
+2. Make changes and test.
+3. Submit Pull Request with comprehensive description of changes.
+
+### AAW
+
+The following is a list of all the `general` related repositories for the AAW project.
 
 | Repository                                                                                                | Description                                                                                   | Visibility |
-|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|------------|
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------- |
 | [aaw-argocd-applications](https://github.com/StatCan/aaw-argocd-applications)                             | ArgoCD Applications                                                                           | Private    |
 | [aaw-argocd-manifests](https://github.com/StatCan/aaw-argocd-manifests)                                   | Manifests used for ArgoCD deployments                                                         | Public     |
 | [aaw-argoflow-azure](https://github.com/StatCan/aaw-argoflow-azure)                                       | Kubeflow deployment powered by ArgoCD                                                         | Public     |
@@ -115,12 +102,11 @@ The following is a list of all the `general` related repositories for the Advanc
 | [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)                                 | Proposal for the implementation of Protected B workloads in AAW                               | Public     |
 | [aaw-toleration-injector](https://github.com/StatCan/aaw-toleration-injector)                             | Kubernetes toleration injector with support for GPUs and Node Pools                           | Public     |
 
-## Terraform
+### Terraform Repositories
 
-The following is a list of all the `terraform` related repositories for the
-Advanced Analytics Workspace project.
+The following is a list of all the `terraform` related repositories for the Advanced Analytics Workspace project.
 
-### Install the AAW Platform and Infrastructure
+#### Install the AAW Platform and Infrastructure
 
 ```sh
 ## Installs AAW Platform and Infrastructure
@@ -138,7 +124,7 @@ Advanced Analytics Workspace project.
 ```
 
 | Component | Repository                                                                                                                                                    | Description                                                                                  |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | AAW       | [terraform-advanced-analytics-workspaces-infrastructure](https://github.com/statcan/terraform-advanced-analytics-workspaces-infrastructure-example)           | Reference implementation for an Advanced Analytics Workspaces (AAW) infrastructure pipeline  |
 | AAW       | [aaw-dev-cc-00](https://github.com/statcan/terraform-statcan-aaw-infrastructure-example)                                                                      | Reference implementation for an Advanced Analytics Workspaces (AAW) development environment  |
 | AAW       | [aaw-prod-cc-00](https://github.com/statcan/terraform-statcan-aaw-infrastructure-example)                                                                     | Reference implementation for an Advanced Analytics Workspaces (AAW) production environment   |
@@ -150,7 +136,7 @@ Advanced Analytics Workspace project.
 | AAW       | [terraform-azure-statcan-aaw-region-environment](https://github.com/statcan/terraform-azure-statcan-aaw-region-environment)                                   | Terraform module of Advanced Analytics Workspaces (AAW) per-region configuration of Azure    |
 | AAW       | [terraform-statcan-aaw-platform](https://github.com/statcan/terraform-statcan-aaw-platform)                                                                   | Terraform module for the Advanced Analytics Workspaces (AAW) platform                        |
 
-### Install the Cloud Native Platform
+#### Install the Cloud Native Platform
 
 ```sh
 ## Statistics Canada's Cloud Native Platform (CNP)
@@ -178,25 +164,25 @@ Advanced Analytics Workspace project.
 ```
 
 | Component | Repository                                                                                                                                              | Description                                                                       |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | CNS       | [terraform-azure-statcan-cloud-native-platform-infrastructure](https://github.com/statcan/terraform-azure-statcan-cloud-native-platform-infrastructure) | Terraform module for Statistics Canada Azure Cloud Native Platform Infrastructure |
 | CNS       | [terraform-statcan-kubernetes-core-platform](https://github.com/statcan/terraform-statcan-kubernetes-core-platform)                                     | Terraform module for Statistics Canada Core Kubernetes Platform                   |
 | CNS       | [terraform-statcan-kubernetes-app-platform](https://github.com/statcan/terraform-statcan-kubernetes-app-platform)                                       | Terraform module for Statistics Canada Kubernetes Application Platform            |
 
-### Misc
+#### Misc
 
 | Repository                                                                                    | Description                                                | Visibility |
-|-----------------------------------------------------------------------------------------------|------------------------------------------------------------|------------|
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------- |
 | [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases) | Terraform module for deployment of Azure Managed Databases | Private    |
 | [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                         | Terraform module for configuring Hashicorp Vault           | Private    |
 
-## Community Engagement
+### Community Engagement
 
 The following is a list of some of the `collaborative` work we made available to
 improve upstream projects.
 
 | Repository                                                                                  | Description                                                 | Visibility |
-|---------------------------------------------------------------------------------------------|-------------------------------------------------------------|------------|
+| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------- |
 | [boathouse](https://github.com/StatCan/boathouse)                                           | Manage Kubernetes storage mounts with Goofys                | Public     |
 | [jupyter-apis](https://github.com/StatCan/jupyter-apis)                                     | Golang replacement for the Kubeflow Jupyter Web APIs        | Public     |
 | [jupyterlab-language-pack-fr_FR](https://github.com/StatCan/jupyterlab-language-pack-fr_FR) | JupyterLab fr-FR Language Pack                              | Public     |
@@ -206,7 +192,7 @@ The following is a list of some of the `forked` projects where we have provided
 multilingual support and other UX related enhancements.
 
 | Repository                                                          | Description                                 | Visibility |
-|---------------------------------------------------------------------|---------------------------------------------|------------|
+| ------------------------------------------------------------------- | ------------------------------------------- | ---------- |
 | [kubeflow](https://github.com/StatCan/kubeflow)                     | Multilingual support for Kubeflow           | Public     |
 | [kubeflow-pipelines](https://github.com/StatCan/kubeflow-pipelines) | Multilingual support for Kubeflow Pipelines | Public     |
 | [minio](https://github.com/StatCan/minio)                           | Multilingual support for MinIO              | Public     |
