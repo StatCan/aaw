@@ -178,7 +178,7 @@ The following is a list of all the `terraform` related repositories for the Adva
 | [terraform-aaw-managed-databases](https://github.com/StatCan/terraform-aaw-managed-databases) | Terraform module for deployment of Azure Managed Databases | Private    |
 | [terraform-aaw-vault](https://github.com/StatCan/terraform-aaw-vault)                         | Terraform module for configuring Hashicorp Vault           | Private    |
 
-### Community Engagement
+## Community Engagement
 
 The following is a list of some of the `collaborative` work we made available to
 improve upstream projects.
