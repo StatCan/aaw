@@ -1,8 +1,8 @@
 <h1 align="center">AAW: Advanced Analytics Workspace</h1>
 
-<h2 align="center">
+<p align="center">
 <img style="border: 2px solid #555; border-radius: 8px; box-shadow: 10px 10px lightblue;" src="./docs/en/images/make-your-own-workspaces.png">
-</h2>
+</p>
 
 <h3 align="center">by The Data Analytics as a Service Division at Statistics Canada</h3>
 
