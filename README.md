@@ -18,12 +18,12 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#key-features">Access</a> •
-  <a href="#presentations">Presentations</a> •
-  <a href="#faq">FAQ</a> •
-  <a href="#contribute">Contribute</a> •
-  <a href="#security">Security</a> •
-  <a href="#community">Community</a>
+  <a href="#access--usage">Access</a> •
+  <a href="#frequently-asked-questions">FAQ</a> •
+  <a href="#presentations-on-aaw">Presentations</a> •
+  <a href="#security-best-practices">Security</a> •
+  <a href="#how-to-contribute">Contribute</a> •
+  <a href="#community-engagement">Community</a>
 </p>
 
 ## Key Features
