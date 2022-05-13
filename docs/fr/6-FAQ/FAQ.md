@@ -188,9 +188,9 @@ StatCan couvre actuellement le coût de l'utilisation de l'espace de travail pou
 | **Cas d'utilisation**               | **Ressources informatiques** |            |       | **Temps (Heures/Semaine)** | **Coût (CAD)** |           |            |
 |----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
 |                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| GPU: Occasional Use        | 0                     | 0          | 1     | 8                     | $34.47   | 148.2124  | 1792.336   |
-| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | $172.34   | 741.062   | 8961.68    |
-| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | $723.83  | 3112.4604 | 37639.056  |
+| GPU: Occasional Use        | 0                     | 0          | 1     | 8                     | $34.47   | $148.21  | $1,792.34   |
+| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | $172.34   | $741.06   | $8,961.68    |
+| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | $723.83  | $3,112.46 | $37,639.06  |
 
 ## Quels sont les paquets disponibles?
 
