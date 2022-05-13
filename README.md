@@ -6,7 +6,7 @@
 
 <h3 align="center">by The Data Analytics as a Service Division at Statistics Canada</h3>
 
-<h2 align="center">⭐ Star us on GitHub — it motivates us a lot! ⭐</h2>
+<p align="center">⭐ Star us on GitHub — it motivates us a lot! ⭐</p>
 
 <h4 align="center">A Kubeflow-based data science platform for professionals.</h4>
 
