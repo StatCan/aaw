@@ -169,6 +169,9 @@ The following can be customized here:
   loaders, which otherwise will generate an error. If using PyTorch make sure this
   is enabled, otherwise it does not matter unless you have another application
   that requires shared memory.
+- **System Language**: Can specify English or French here.
+
+![Miscellaneous Settings](../images/misc-settings.PNG)
 
 ## And... Create!!!
 
