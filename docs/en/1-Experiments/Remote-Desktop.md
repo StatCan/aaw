@@ -35,6 +35,40 @@ fullscreen and clipboard access.
 
 ![NoVNC Panel](../images/rd_novnc_panel.png)
 
+## Accessing the Clipboard
+
+This is done via the second button from the top of the panel on the left.
+It brings up a text box which we can modify to change the contents of the clipboard
+or copy stuff from the clipboard of the remote desktop.
+
+For example, suppose we want to execute the command `head -c 20 /dev/urandom | md5sum`
+and copy-paste the result into a text file on our computer used to connect to the
+remote desktop.
+
+We first open the clipboard from the panel on the left and paste in that command into
+the text box:
+
+![Clipboard Paste Command from Computer](../images/rd-clipboard-send-to-rd.png)
+
+To close the clipboard window over the remote desktop, simply click the clipboard
+button again.
+
+We then right click on a terminal window to paste in that command and press enter to
+execute the command. At that point we select the MD5 result, right click, and click
+copy:
+
+![Copy to Clipboard from Remote Desktop](../images/rd-clipboard-copy-from-rd.png)
+
+If we open the clipboard from the panel on the left again, it will now have the new
+contents:
+
+![Copy to Clipboard from Remote Desktop](../images/rd-clipboard-copy-from-rd.png)
+
+The clipboard window will even update in-place if we leave it open the whole time
+and we simply select new material on the remote desktop and press copy again. We can
+simply copy what we have in that text box and paste it into any other software running
+on the computer used to connect.
+
 ## In-browser Tools
 
 ### VS Code
