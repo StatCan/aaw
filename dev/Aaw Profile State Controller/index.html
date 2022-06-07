@@ -19,7 +19,7 @@
     
     
       
-        <title>Index - AAW Dev Docs</title>
+        <title>Profile State Controller - AAW Dev Docs</title>
       
     
     
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Index
+              Profile State Controller
             
           </span>
         </div>
@@ -1034,14 +1034,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Index
+        Profile State Controller
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Index" class="md-nav__link md-nav__link--active">
-      Index
+    <a href="./" title="Profile State Controller" class="md-nav__link md-nav__link--active">
+      Profile State Controller
     </a>
     
       
@@ -1066,6 +1066,48 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#employee-only-features" class="md-nav__link">
+    Employee Only Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Employee Only Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-test-cases" class="md-nav__link">
+    Unit Test Cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-employee-users" class="md-nav__link">
+    Non-Employee Users
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Employee Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-test-cases_1" class="md-nav__link">
+    Unit Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-in-kubeflow" class="md-nav__link">
+    Implementation in Kubeflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-to-contribute" class="md-nav__link">
     How to Contribute
   </a>
@@ -1076,6 +1118,11 @@
   <a href="#license" class="md-nav__link">
     License
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2689,6 +2736,48 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#employee-only-features" class="md-nav__link">
+    Employee Only Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Employee Only Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-test-cases" class="md-nav__link">
+    Unit Test Cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-employee-users" class="md-nav__link">
+    Non-Employee Users
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-Employee Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-test-cases_1" class="md-nav__link">
+    Unit Test Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-in-kubeflow" class="md-nav__link">
+    Implementation in Kubeflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-to-contribute" class="md-nav__link">
     How to Contribute
   </a>
@@ -2699,6 +2788,11 @@
   <a href="#license" class="md-nav__link">
     License
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2734,19 +2828,61 @@
                   
                 
                 
-                  <h1>Index</h1>
+                  <h1>Profile State Controller</h1>
                 
-                <h3 id="profile-state-controller">Profile State Controller<a class="headerlink" href="#profile-state-controller" title="Permanent link">&para;</a></h3>
-<p>This controller adds the <code>state.aaw.statcan.gc.ca/employee-only-features</code> label to the Profiles based on the Pods in that namespace. 
+                <h2 id="profile-state-controller">Profile State Controller<a class="headerlink" href="#profile-state-controller" title="Permanent link">&para;</a></h2>
+<p>The Profile State Controller applies labels to Kubeflow Profiles and Kubernetes namespaces that indicate certain properties of users in those namespaces.</p>
+<p>The purpose of this controller is to ensure that profiles/namespaces are correctly labelled so that other applications in the cluster can make allow/deny decisions based on these labels.</p>
+<p>The sections below detail specific labels and the logic they use.</p>
+<h3 id="employee-only-features">Employee Only Features<a class="headerlink" href="#employee-only-features" title="Permanent link">&para;</a></h3>
+<p>This controller adds the <code>state.aaw.statcan.gc.ca/employee-only-features</code> label to the Profiles based on the Pods in that namespace.
 If any Pods in that namespace are using a SAS image, it will set the label in the Profile to <code>true</code>, otherwise <code>false</code>.</p>
-<p>This controller also adds the <code>state.aaw.statcan.gc.ca/non-employee-user</code> label to the Profiles based on the RoleBindings in that namespace.
-If the RoleBinding shows that the user is external (email does not end with an accepted domain), it will set the label in the Profile to <code>true</code> otherwise <code>false</code>.</p>
+<h4 id="unit-test-cases">Unit Test Cases<a class="headerlink" href="#unit-test-cases" title="Permanent link">&para;</a></h4>
+<ol>
+<li>If <strong>any pod</strong> in a list of pods contains a SAS image, <code>hasEmployeeOnlyFeatures</code> should return <code>true</code>.</li>
+<li>If <strong>no pod</strong> in a list of pods contains a SAS image,  <code>hasEmployeeOnlyFeatures</code> should return <code>false</code>.</li>
+<li>If an empty list is passed to <code>hasEmployeeOnlyFeatures</code>, it should return <code>false</code>.</li>
+</ol>
+<h3 id="non-employee-users">Non-Employee Users<a class="headerlink" href="#non-employee-users" title="Permanent link">&para;</a></h3>
+<p>This controller also adds the <code>state.aaw.statcan.gc.ca/non-employee-users</code> label to the Profiles based on the RoleBindings in that namespace.</p>
+<p>When the owner of a Kubeflow Profile adds a contributor to their namespace, a rolebinding is <a href="https://www.kubeflow.org/docs/components/multi-tenancy/getting-started/#managing-contributors-manually">created in that namespace</a>, binding the new contributor to the <code>kubeflow-edit</code> role in that namespace.</p>
+<p>Specifically, contributors are named by their email address (emails with a StatCan domain are considered employees and all other domains are considered non-employees).</p>
+<p>If at any point a contributor with an external email address is added to a Kubeflow Profile, the Profile State Controller sets the label <code>state.aaw.statcan.gc.ca/non-employee-users=true</code> on both the Kubeflow Profile and the corresponding namespace.</p>
+<p>If the RoleBinding shows that the user is external (email does not end with an accepted domain), it will set the label in the Profile to <code>true</code> otherwise <code>false</code>.</p>
+<p>Other applications on the cluster can use this label to make decisions based on whether namespaces contain non-employee users.</p>
+<h4 id="unit-test-cases_1">Unit Test Cases<a class="headerlink" href="#unit-test-cases_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>If <strong>any rolebinding</strong> in a list of rolebindings contains a non-employee user, <code>hasNonEmployeeUser</code> should return <code>true</code>.</li>
+<li>If <strong>no rolebinding</strong> in a list of rolebindings contains a non-employee user, <code>hasNonEmployeeUser</code> should return <code>false</code>.</li>
+<li>If an empty list is passed to <code>hasNonEmployeeUser</code>, it should return <code>false</code>.</li>
+</ol>
+<p>The Gatekeeper Policies check for these labels in the Profile and allow objects to be created or denied accordingly. More information about these policies and how the objects interact can be found in their README in the Gatekeeper Policies repository (linked below).
+- <a href="https://github.com/StatCan/gatekeeper-policies/tree/master/general/deny-external-users">Deny External Users Policy</a>
+  - <code>state.aaw.statcan.gc.ca/employee-only-features</code> affects RoleBinding and AuthorizationPolicy objects - which allows or denies adding external contributors
+  - Checks to see if there are any employee only features (like SAS images) in the namespace through a profile label. If there are, then it will only allow the RoleBinding and AuthorizationPolicy to be created for internal users.
+- <a href="https://github.com/StatCan/gatekeeper-policies/tree/master/pod-security-policy/deny-employee-only-features">Employee-Only Features Policy</a>
+  - <code>state.aaw.statcan.gc.ca/non-employee-users</code> affects Pod and Notebook objects - which allows or denies creation of SAS Notebook Servers
+  - Checks to see if there are any external users in a namespace through a Profile label. If there are, then it will not allow the SAS Pod and Notebook to be created.</p>
+<h4 id="implementation-in-kubeflow">Implementation in Kubeflow<a class="headerlink" href="#implementation-in-kubeflow" title="Permanent link">&para;</a></h4>
+<p><strong>Add an External Contributor with a SAS image on your namespace</strong>
+- Create a new notebook server with a custom SAS image
+- If you go to Manage Contributors and try to add an external user then it will give you an error so you will not be allowed to add them as a contributor to your namespace.
+<img alt="image" src="https://user-images.githubusercontent.com/57377830/171225642-4291de80-9e33-4f3f-9192-d0d608269198.png" />
+*If you want to add the external contributor, you will have to delete the notebook server with the SAS image first and then add retry adding them a contributor.</p>
+<p><strong>Try to create a notebook with a SAS image when you have an external contributor on your namespace</strong>
+- Add external user as a contributor (make sure you have no SAS images to do this).
+<img alt="image" src="https://user-images.githubusercontent.com/57377830/171225762-69ec2ac1-425b-4d9f-975b-dc6bc251833d.png" />
+- If you try to create a new notebook server with a custom SAS image (k8scc01covidacr.azurecr.io/sas:latest), you will get the following error, stopping you from creating it:
+<img alt="image" src="https://user-images.githubusercontent.com/57377830/171225844-5f1e9da6-f304-4c82-8d26-81f0be0aa577.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/57377830/171225864-cfd8fa61-b8a8-41ed-a5f8-3d316d7bf35c.png" /></p>
+<p>*If you want to create the SAS notebook, you will have to remove the external contributor from your namespace first and then retry creating the notebook.</p>
+<p>**Sometimes it will take a few seconds in between removing/adding a contributor and notebook for the policies to take effect</p>
 <h4 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h4>
 <p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
 <h4 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h4>
 <p>Unless otherwise noted, the source code of this project is covered under Crown Copyright, Government of Canada, and is distributed under the <a href="LICENSE">MIT License</a>.</p>
-<p>The Canada wordmark and related graphics associated with this distribution are protected under trademark law and copyright law. 
-No permission is granted to use them outside the parameters of the Government of Canada's corporate identity program. 
+<p>The Canada wordmark and related graphics associated with this distribution are protected under trademark law and copyright law.
+No permission is granted to use them outside the parameters of the Government of Canada's corporate identity program.
 For more information, see <a href="https://www.canada.ca/en/treasury-board-secretariat/topics/government-communications/federal-identity-requirements.html">Federal identity requirements</a>.</p>
 <h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/StatCan/aaw-profile-state-controller">aaw-profile-state-controller</a></p>

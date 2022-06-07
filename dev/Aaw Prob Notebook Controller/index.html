@@ -1133,8 +1133,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Aaw%20Profile%20State%20Controller/" title="Index" class="md-nav__link">
-      Index
+    <a href="../Aaw%20Profile%20State%20Controller/" title="Profile State Controller" class="md-nav__link">
+      Profile State Controller
     </a>
   </li>
 
@@ -2822,8 +2822,30 @@
 <h3 id="prob-notebook-controller">Prob Notebook Controller<a class="headerlink" href="#prob-notebook-controller" title="Permanent link">&para;</a></h3>
 <p>Based on https://github.com/StatCan/kubeflow-controller
 <strong>There is a dependency on that repository</strong> as well since it needs to be imported in order to use the <code>Notebook</code> struct and <code>NotebookInformer</code>.</p>
-<p>This controller creates and deletes Authorization Policies based on Notebooks. 
-The Authorization Policies block uploads and downloads on jupyterlab and rstudio images.</p>
+<p>This controller creates and deletes Authorization Policies based on Notebooks to ensure protected B notebooks have the correct restrictions. 
+Specifically, it watches the creation of Notebook CRDs and creates authorization policies for protected B notebooks. It can also detect if a protected B notebook did not have the policies. </p>
+<p>The <a href="https://istio.io/latest/docs/tasks/security/authentication/authn-policy/">Authorization Policies</a> are generated in the handler.go and <a href="https://github.com/StatCan/aaw-prob-notebook-controller/blob/dc1cd29e818c413b24385b406f4c22a0bdbf009a/pkg/controller/handler.go#L87-L117">blocks specific paths</a> those API calls/paths are the ones used in the uploads and downloads on jupyterlab and rstudio images.
+Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">apiVersion</span><span class="o">:</span><span class="w"> </span><span class="n">security</span><span class="o">.</span><span class="na">istio</span><span class="o">.</span><span class="na">io</span><span class="o">/</span><span class="n">v1beta1</span><span class="w"></span>
+<span class="n">kind</span><span class="o">:</span><span class="w"> </span><span class="n">AuthorizationPolicy</span><span class="w"></span>
+<span class="n">metadata</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="n">httpbin</span><span class="w"></span>
+<span class="w">  </span><span class="kd">namespace</span><span class="o">:</span><span class="w"> </span><span class="n">foo</span><span class="w"></span>
+<span class="n">spec</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">action</span><span class="o">:</span><span class="w"> </span><span class="n">ALLOW</span><span class="w"></span>
+<span class="w">  </span><span class="n">rules</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">from</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">source</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">principals</span><span class="o">:</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;cluster.local/ns/default/sa/sleep&quot;</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">source</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">namespaces</span><span class="o">:</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;test&quot;</span><span class="o">]</span><span class="w"></span>
+<span class="w">    </span><span class="n">to</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">operation</span><span class="o">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">methods</span><span class="o">:</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;GET&quot;</span><span class="o">]</span><span class="w"></span>
+<span class="w">        </span><span class="n">paths</span><span class="o">:</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;/info*&quot;</span><span class="o">]</span><span class="w"></span>
+</code></pre></div>
+
+<p>source: https://istio.io/latest/docs/reference/config/security/authorization-policy/</p>
 <h4 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h4>
 <p>Go check the <a href="https://github.com/StatCan/prob-notebook-controller/blob/master/kind/README.md">README</a> in the kind folder for instruction on running it locally.</p>
 <h4 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h4>
@@ -2833,6 +2855,7 @@ The Authorization Policies block uploads and downloads on jupyterlab and rstudio
 <p>The Canada wordmark and related graphics associated with this distribution are protected under trademark law and copyright law. 
 No permission is granted to use them outside the parameters of the Government of Canada's corporate identity program. 
 For more information, see <a href="https://www.canada.ca/en/treasury-board-secretariat/topics/government-communications/federal-identity-requirements.html">Federal identity requirements</a>.</p>
+<hr />
 <h3 id="controleur-bloc-note-prob">Contrôleur bloc-note prob<a class="headerlink" href="#controleur-bloc-note-prob" title="Permanent link">&para;</a></h3>
 <p>Basé sur https://github.com/StatCan/kubeflow-controller
 <strong>Il y a une dépendance sur ce répertoire</strong> puique certains de ses éléments sont importés de façon a utilisé la structure <code>Notebook</code> et <code>NotebookInformer</code>.</p>
@@ -2882,13 +2905,13 @@ Pour obtenir davantage de renseignements à ce sujet, veuillez consulter les <a 
           </a>
         
         
-          <a href="../Aaw%20Profile%20State%20Controller/" title="Index" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Aaw%20Profile%20State%20Controller/" title="Profile State Controller" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Index
+                Profile State Controller
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -653,6 +653,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#list-of-maintained-images-in-this-github-repository" class="md-nav__link">
+    List of maintained images in this github repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -738,6 +745,20 @@
           <li class="md-nav__item">
   <a href="#modifying-dockerfiles-on-platform-testing" class="md-nav__link">
     Modifying Dockerfiles (on-platform testing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-bits-the-makefile-and-you" class="md-nav__link">
+    docker-bits, the Makefile and You
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-software" class="md-nav__link">
+    Adding new software
   </a>
   
 </li>
@@ -1235,8 +1256,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Aaw%20Profile%20State%20Controller/" title="Index" class="md-nav__link">
-      Index
+    <a href="../Aaw%20Profile%20State%20Controller/" title="Profile State Controller" class="md-nav__link">
+      Profile State Controller
     </a>
   </li>
 
@@ -2839,6 +2860,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#list-of-maintained-images-in-this-github-repository" class="md-nav__link">
+    List of maintained images in this github repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     Usage
   </a>
@@ -2924,6 +2952,20 @@
           <li class="md-nav__item">
   <a href="#modifying-dockerfiles-on-platform-testing" class="md-nav__link">
     Modifying Dockerfiles (on-platform testing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-bits-the-makefile-and-you" class="md-nav__link">
+    docker-bits, the Makefile and You
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-software" class="md-nav__link">
+    Adding new software
   </a>
   
 </li>
@@ -3023,9 +3065,51 @@
                   <h1>Containers for Kubeflow</h1>
                 
                 <h2 id="containers-for-kubeflow">Containers for Kubeflow<a class="headerlink" href="#containers-for-kubeflow" title="Permanent link">&para;</a></h2>
-<p>Containers to be used with Kubeflow for Data Science.</p>
+<p>Container images to be used with kubeflow on the AAW platform for Data Science &amp; other workloads.</p>
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
-<p>Our Container images are based on the community driven <a href="https://github.com/jupyter/docker-stacks">jupyter/docker-stacks</a>. This enables us to focus only on the additional toolsets that we require to enable our data scientists.</p>
+<p>Our Container images are based on the community driven <a href="https://github.com/jupyter/docker-stacks">jupyter/docker-stacks</a>. We chose those images because they are continuously updated and install the most common utilities. This enables us to focus only on the additional toolsets that we require to enable our data scientists. These customized images are maintained by the AAW team and are the default images available on the kubeflow UI. This is different from the <a href="https://github.com/StatCan/aaw-contrib-containers">aaw-contrib-containers</a> as those images are built by AAW user-base. These are often created when a user's workload is more specific and our generic images are not suitable for them. Those images can be used via the <code>custom-image</code> feature in kubeflow and do not populate the default images drop-down. Additionally, the AAW team is not responsible for maintaining those images.</p>
+<h3 id="list-of-maintained-images-in-this-github-repository">List of maintained images in this github repository<a class="headerlink" href="#list-of-maintained-images-in-this-github-repository" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Image Name</th>
+<th>Notes</th>
+<th>Extra Installations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jupyterlab-cpu</td>
+<td>The base experience. A jupyterlab notebook with various installations.</td>
+<td>VsCode, R, Julia</td>
+</tr>
+<tr>
+<td>jupyterlab-pytorch</td>
+<td>For users looking to leverage a GPU machine. Comes installed with pytorch</td>
+<td>pytorch, torchvision</td>
+</tr>
+<tr>
+<td>jupyterlab-tensorflow</td>
+<td>For users looking to leverage a GPU machine. Comes installed with tensorflow</td>
+<td>tensorflow-gpu</td>
+</tr>
+<tr>
+<td>remote-desktop</td>
+<td>For users looking to have a desktop-like experience.</td>
+<td>Open M++, QGIS</td>
+</tr>
+<tr>
+<td>rstudio</td>
+<td>For users looking to have a rstudio tuned experience.</td>
+<td></td>
+</tr>
+<tr>
+<td>sas</td>
+<td>Similar to our jupyterlab-cpu image, except with SAS. This is only available  to Statistics Canada employees as that is what our license allows.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
 <h4 id="generating-dockerfiles">Generating Dockerfiles<a class="headerlink" href="#generating-dockerfiles" title="Permanent link">&para;</a></h4>
 <p>Use <code>make generate-dockerfiles</code> to generate all <code>Dockerfile</code>s.  These will be written to <code>./output/imagename</code>, along with any required files for the build context</p>
@@ -3117,12 +3201,36 @@ This allows developers to opt-in to on-platform testing. For example, when you n
   * k8scc01covidacrdev.azurecr.io/IMAGENAME:SHORT_SHA
   * k8scc01covidacrdev.azurecr.io/IMAGENAME:dev (for convenience in testing)</p>
 <p>Images pushed to the dev acr are only available to the DEV cluster, attempting to use them in prod will fail.</p>
-<h4 id="adding-new-images">Adding new Images<a class="headerlink" href="#adding-new-images" title="Permanent link">&para;</a></h4>
-<p>Dockerfiles are defined using <code>make</code> with recipes defined in the <code>Makefile</code>.  They pull segments of <code>Dockerfile</code>s from <a href="/docker-bits">docker-bits</a> and assemble them.  All output images should meet the following criteria:</p>
+<h4 id="docker-bits-the-makefile-and-you">docker-bits, the Makefile and You<a class="headerlink" href="#docker-bits-the-makefile-and-you" title="Permanent link">&para;</a></h4>
+<p>The files in the <code>docker-bits</code> directory each make up a part of the final dockerfile and are combined depending on what type of dockerfile is being generated. You can see which "docker-bits" go into the dockerfile under their respective 'target'.</p>
+<p>For example for the <code>remote-desktop</code> image you can see in the makefile the following</p>
+<div class="codehilite"><pre><span></span><code><span class="err">mkdir</span><span class="w"> </span><span class="err">-p</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span><span class="w"></span>
+<span class="w">    </span><span class="err">echo</span><span class="w"> </span><span class="s2">&quot;REMOTE DESKTOP&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="err">cp</span><span class="w"> </span><span class="err">-r</span><span class="w"> </span><span class="err">scripts/remote-desktop</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span><span class="w"></span>
+<span class="w">    </span><span class="err">cp</span><span class="w"> </span><span class="err">-r</span><span class="w"> </span><span class="err">resources/common/.</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span><span class="w"></span>
+<span class="w">    </span><span class="err">cp</span><span class="w"> </span><span class="err">-r</span><span class="w"> </span><span class="err">resources/remote-desktop/.</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span><span class="w"></span>
+
+<span class="c">  ## HERE IS WHAT GOES INTO THE DOCKERFILE</span>
+<span class="w">    </span><span class="k">$(</span><span class="nv">CAT</span><span class="k">)</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/0_Rocker.Dockerfile</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/3_Kubeflow.Dockerfile</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/4_CLI.Dockerfile</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/6_remote-desktop.Dockerfile</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/7_remove_vulnerabilities.Dockerfile</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/∞_CMD_remote-desktop.Dockerfile</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+<span class="w">    </span><span class="err">&gt;</span><span class="w">   </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span><span class="err">/Dockerfile</span><span class="w"></span>
+</code></pre></div>
+
+<p>The first portion sets up and copies locally what scripts or utilities the final <code>Dockerfile</code> will need. The final <code>Dockerfile</code> is then generated using <code>0_Rocker.Dockerfile</code> up to <code>∞_CMD_remote-desktop.Dockerfile</code> as you can see above.</p>
+<p>The <code>Makefile</code> sits in the root level of this directory and orchestrates the final dockerfile using the <code>make generate-dockerfiles</code> command. The segments of <code>Dockerfile</code>s are assembled and you can view which <code>docker-bit</code> it came from from the <code>Dockerfile</code> comments.  All output images should meet the following criteria:</p>
 <ul>
 <li>be generated by calling <code>make generate-dockerfiles</code></li>
 <li>have outputs written to <code>output/imagename</code>, where <code>imagename</code> is a <strong>valid Docker image name</strong> (eg: all lowercase, no special characters)</li>
 </ul>
+<p>Always, before pushing to a branch ensure you run <code>make generate-dockerfiles</code> as if the <code>output</code> dockerfiles are out of sync from the <code>make generate-dockerfiles</code> the CI will fail.  </p>
+<h4 id="adding-new-software">Adding new software<a class="headerlink" href="#adding-new-software" title="Permanent link">&para;</a></h4>
+<p>The developer has to make changes to the relevant <code>docker-bit</code> and then run the <code>make generate-dockerfiles</code>. <em>NOTE:</em> We do not allow for adding of software willy nilly, as our image sizes are already quite big (8Gb plus) and increasing that size would negatively impact the time it takes up for a workspace server to come up (as well as first time image pulls to a node). In such cases it may be more relevant to make an image under <a href="https://github.com/StatCan/aaw-contrib-containers">aaw-contrib-containers</a> as mentioned earlier.</p>
+<h4 id="adding-new-images">Adding new Images<a class="headerlink" href="#adding-new-images" title="Permanent link">&para;</a></h4>
 <p>To add new images, edit the makefile such that it generates the <code>./output/imagename</code> directory.  You can usually follow the existing recipes (or even add an extra piece to them), or you can add a whole new <code>make</code> target (but make sure to add your new target to <code>make generate-dockerfiles</code> as well).</p>
 <h4 id="modifying-and-testing-ci">Modifying and Testing CI<a class="headerlink" href="#modifying-and-testing-ci" title="Permanent link">&para;</a></h4>
 <p>If making changes to CI that cannot be done on a branch (eg: changes to issue_comment triggers), you can:
