@@ -60,8 +60,10 @@ StatCan is footing the bill for the time being. To give you a rough estimate of 
 
 ### How do you suspend your server (to save costs)?
 
-- As of now you must destroy your server. Make sure to save the data volumes, they can be reused with a new server.
-- The version of Kubeflow in the dev branch has an option to suspend the session. Once that has rolled out to production, users will have the ability to suspend workspaces to save on costs.
+- Press the suspend server button (square to the left of the garbage can icon to delete a server). This will suspend the workspace to save on costs.
+- Please keep in mind all data that is not stored on persistent disks (persistent workspace volume or persistent data volumes) is deleted when a workspace is suspended. In particular data on non-persistent disks and data on the filesystem outside the workspace or data volume (for instance the `/tmp` folder) will be permanently lost.
+- When suspended the workspace and data volumes remain locked and cannot be deleted or attached to another server.
+- To resume a suspended server, press the resume button (triangle icon to the left of the garbage can). When resumed the server will have the same workspace and data volumes as before (with all data kept as-is if the volumes were persistent) and has the exact same specification (CPU, RAM, GPU, and other settings). Things stored outside the home directory and persistent data volumes (like conda virtual environments) will be gone and will need to be recreated if necessary.
 
 ### How do I add other people to my namespace (for collaboration)?
 
