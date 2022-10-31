@@ -16,6 +16,8 @@ S3 storage). Buckets are good at three things:
 
 ## MinIO Mounted Folders on a Notebook Server
 
+!!! warning "MinIO mounts are not currently working on Protected B servers."
+
 Your MinIO storage are mounted as directories if you select the option
 `Mount MinIO storage into the minio/ folder` when creating a Notebook Server.
 
@@ -39,17 +41,13 @@ The following MinIO tenants (e.g.: separate services) are available:
 
 |                   Tenant | Access via File Browser            | Access via `mc`                               | Access via Web                                                 | Protected-b/Unclassified Notebooks |
 | -----------------------: | ---------------------------------- | --------------------------------------------- | -------------------------------------------------------------- | ---------------------------------- |
-|        standard-tenant-1 | `~/minio/standard-tenant-1`        | `mc ls standard-tenant-1/$NB_NOTEBOOK`        | [link](https://minio.aaw.cloud.statcan.ca/minio/login)         | Unclassified                       |
-|         premium-tenant-1 | `~/minio/premium-tenant-1`         | `mc ls premium-tenant-1/$NB_NOTEBOOK`         | [link](https://minio-premium.aaw.cloud.statcan.ca/minio/login) | Unclassified                       |
-| fdi-gateway-unclassified | `~/minio/fdi-gateway-unclassified` | `mc ls fdi-gateway-unclassified/$NB_NOTEBOOK` | N/A                                                            | Unclassified                       |
-|        minio-standard-ro | `~/minio/minio-standard-ro`        | `mc ls minio-standard-ro/$NB_NOTEBOOK`        | N/A                                                            | Protected-b                        |
-|         minio-premium-ro | `~/minio/minio-premium-ro`         | `mc ls minio-premium-ro/$NB_NOTEBOOK`         | N/A                                                            | Protected-b                        |
-|        minio-protected-b | `~/minio/minio-protected-b`        | `mc ls minio-protected-b/$NB_NOTEBOOK`        | N/A                                                            | Protected-b                        |
-|  fdi-gateway-protected-b | `~/minio/fdi-gateway-protected-b`  | `mc ls fdi-gateway-protected-b/$NB_NOTEBOOK`  | N/A                                                            | Protected-b                        |
-
-<!-- prettier-ignore -->
-??? note "Note: $NB_NOTEBOOK is an environment variable that contains your namespace"
-    You could also just type `mc ls standard-tenant-1/john-smith`, etc.
+|        gateway-standard  | `~/minio/standard`                 | `mc ls gateway-standard`        | [link](https://minio.aaw.cloud.statcan.ca/minio/login)         | Unclassified                       |
+|        gateway-premium   | `~/minio/premium`                  | `mc ls gateway-premium`         | [link](https://minio-premium.aaw.cloud.statcan.ca/minio/login) | Unclassified                       |
+| fdi-gateway-unclassified | `~/minio/fdi-gateway-unclassified` | `mc ls fdi-gateway-unclassified` | N/A                                                            | Unclassified                       |
+|      gateway-standard-ro | MinIO mounts not working.          | `mc ls gateway-standard-ro`        | N/A                                                            | Protected-B                        |
+|      gateway-premium-ro  | MinIO mounts not working.          | `mc ls gateway-premium-ro`         | N/A                                                            | Protected-B                        |
+|      gateway-protected-b | MinIO mounts not working.          | `mc ls gateway-protected-b`        | N/A                                                            | Protected-B                        |
+|  fdi-gateway-protected-b | MinIO mounts not working.          | `mc ls fdi-gateway-protected-b`  | N/A                                                            | Protected-B                        |
 
 Accessing all MinIO tenants is the same. The difference between tenants is the
 storage type behind them:
@@ -70,7 +68,7 @@ providing different access scopes:
 |                                        |                                                                                                                  Private                                                                                                                  |                                                        Shared                                                        |
 | -------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 |                                Summary | Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a [shared namespace](../4-Collaboration/Overview.md#share-compute-namespace-in-kubeflow)) | Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams |
-| Mount location in the Notebook Server: |                                                                                            `~/minio/standard-tenant-1/private/myfolder/myfile`                                                                                            |                                  `~/minio/standard-tenant-1/shared/myfolder/myfile`                                  |
+| Mount location in the Notebook Server: |                                                                                            `~/minio/standard/private/myfolder/myfile`                                                                                            |                                  `~/minio/standard/shared/myfolder/myfile`                                  |
 |    Location in `mc` tool/MinIO portal: |                                                                                                   `firstname-lastname/myfolder/myfile`                                                                                                    |                                     `shared/firstname-lastname/myfolder/myfile`                                      |
 
 <!-- prettier-ignore -->
@@ -106,6 +104,8 @@ This lets you browse, upload/download, delete, or share files.
 
 ## Browse Datasets
 
+!!! warning "The link below is not currently working."
+
 Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These data
 sets are meant to store widely shared data. Either data that has been brought
 it, or data to be released out as a product. **As always, ensure that the data
@@ -128,9 +128,9 @@ files. For example:
 # Typically this is "firstname-lastname", but it might be different if working in a shared namespace
 BUCKETNAME=firstname-lastname
 
-# Get your personal credentials for the "minio-standard-tenant-1" MinIO instance
+# Get your personal credentials for the "gateway-standard" MinIO instance
 # (this initializes $MINIO_URL, $MINIO_ACCESS_KEY, and $MINIO_SECRET_KEY environment variables)
-source /vault/secrets/minio-standard-tenant-1
+source /vault/secrets/minio-gateway-standard
 
 # Create a MinIO alias (called "standard") for "standard" using your credentials
 mc config host add standard $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
@@ -152,11 +152,11 @@ mc cp test.txt standard/${BUCKETNAME}/test.txt
 ```
 
 Now open the [MinIO Web Portal](#minio-web-portal) or browse to
-`~/minio/standard-tenant-1/private` to see your test file!
+`~/minio/standard/private` to see your test file!
 
 <!-- prettier-ignore -->
 ??? tip "`mc` can do a lot"
-    In addition to copying files, `mc` can do a lot more (like `mc ls standard/FIRSTNAME-LASTNAME` to list the contents of a bucket).  Check out the [mc docs](https://docs.min.io/docs/minio-client-complete-guide.html) or run `mc --help` for more information.
+    In addition to copying files, `mc` can do a lot more (like `mc ls gateway-standard/FIRSTNAME-LASTNAME` to list the contents of a bucket).  Check out the [mc docs](https://docs.min.io/docs/minio-client-complete-guide.html) or run `mc --help` for more information.
 
 <!-- prettier-ignore -->
 ??? tip "See the example notebooks!"
@@ -175,7 +175,7 @@ import json, minio, re
 http = lambda url: re.sub('^https?://', '', url)
 
 # Get the MinIO creds
-with open("/vault/secrets/minio-standard-tenant-1.json") as secrets:
+with open("/vault/secrets/minio-gateway-standard.json") as secrets:
     d = json.load(f)
 
 # Create the minio client.
@@ -218,9 +218,11 @@ send to a collaborator!
 
 ## Get MinIO Credentials
 
+!!! warning "The methods below have not been tested recently, since certain MinIO changes. These may require adjustment."
+
 <!-- prettier-ignore -->
 !!! note "The following methods still work, but you often don't need this anymore because of automation!"
-    If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the `mc` command line tool for you. You can use the `mc` tool without accessing credentials like shown below (e.g.: just type `mc ls standard-tenant-1/MY_NAMESPACE/`). If you do need credentials, you can still get them from `/vault/secrets/minio-*`
+    If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the `mc` command line tool for you. You can use the `mc` tool without accessing credentials like shown below (e.g.: just type `mc ls gateway-standard/MY_NAMESPACE/`). If you do need credentials, you can still get them from `/vault/secrets/minio-*`
 
 To access your MinIO buckets programmatically (for example through the
 [`mc` command line tool](#MinIO-Command-Line-Tool), or via Python or R) you
@@ -249,10 +251,10 @@ read minio_standard_tenant_1/keys/profile-yourfirstname-yourlastname
 Open a terminal in your Notebook and run:
 
 ```sh
-cat /vault/secrets/minio-standard-tenant-1
+cat /vault/secrets/minio-gateway-standard
 
 # Output:
-# export MINIO_URL="http://minio.minio-standard-tenant-1 ..."
+# export MINIO_URL="http://minio.minio-gateway-standard ..."
 # export MINIO_ACCESS_KEY="..."
 # export MINIO_SECRET_KEY="..."
 ```
@@ -268,8 +270,8 @@ across multiple users. In general though, the underlying storage is provided by
 [Azure Manage Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/)
 and they give a rough guide for MinIO storage cost based on the MinIO instance:
 
-- premium-tenant-1:
+- premium:
   - See **Premium SSD Managed Disks**
-- standard-tenant-1:
+- standard:
   - See **Standard SSD Managed Disks**
-  - Typically 50% the cost of `premium-tenant-1`
+  - Typically 50% the cost of `premium`
