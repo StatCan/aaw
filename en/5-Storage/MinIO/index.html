@@ -915,6 +915,9 @@ S3 storage). Buckets are good at three things:</p>
 </ul>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="minio-mounted-folders-on-a-notebook-server">MinIO Mounted Folders on a Notebook Server<a class="headerlink" href="#minio-mounted-folders-on-a-notebook-server" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">MinIO mounts are not currently working on Protected B servers.</p>
+</div>
 <p>Your MinIO storage are mounted as directories if you select the option
 <code>Mount MinIO storage into the minio/ folder</code> when creating a Notebook Server.</p>
 <p>The MinIO storage is located in <code>~/minio</code>:</p>
@@ -934,7 +937,7 @@ Notebook Server it is attached).</p>
 <table>
 <thead>
 <tr>
-<th align="right">Tenant</th>
+<th style="text-align: right;">Tenant</th>
 <th>Access via File Browser</th>
 <th>Access via <code>mc</code></th>
 <th>Access via Web</th>
@@ -943,61 +946,56 @@ Notebook Server it is attached).</p>
 </thead>
 <tbody>
 <tr>
-<td align="right">standard-tenant-1</td>
-<td><code>~/minio/standard-tenant-1</code></td>
-<td><code>mc ls standard-tenant-1/$NB_NOTEBOOK</code></td>
+<td style="text-align: right;">gateway-standard</td>
+<td><code>~/minio/standard</code></td>
+<td><code>mc ls gateway-standard</code></td>
 <td><a href="https://minio.aaw.cloud.statcan.ca/minio/login">link</a></td>
 <td>Unclassified</td>
 </tr>
 <tr>
-<td align="right">premium-tenant-1</td>
-<td><code>~/minio/premium-tenant-1</code></td>
-<td><code>mc ls premium-tenant-1/$NB_NOTEBOOK</code></td>
+<td style="text-align: right;">gateway-premium</td>
+<td><code>~/minio/premium</code></td>
+<td><code>mc ls gateway-premium</code></td>
 <td><a href="https://minio-premium.aaw.cloud.statcan.ca/minio/login">link</a></td>
 <td>Unclassified</td>
 </tr>
 <tr>
-<td align="right">fdi-gateway-unclassified</td>
+<td style="text-align: right;">fdi-gateway-unclassified</td>
 <td><code>~/minio/fdi-gateway-unclassified</code></td>
-<td><code>mc ls fdi-gateway-unclassified/$NB_NOTEBOOK</code></td>
+<td><code>mc ls fdi-gateway-unclassified</code></td>
 <td>N/A</td>
 <td>Unclassified</td>
 </tr>
 <tr>
-<td align="right">minio-standard-ro</td>
-<td><code>~/minio/minio-standard-ro</code></td>
-<td><code>mc ls minio-standard-ro/$NB_NOTEBOOK</code></td>
+<td style="text-align: right;">gateway-standard-ro</td>
+<td>MinIO mounts not working.</td>
+<td><code>mc ls gateway-standard-ro</code></td>
 <td>N/A</td>
-<td>Protected-b</td>
+<td>Protected-B</td>
 </tr>
 <tr>
-<td align="right">minio-premium-ro</td>
-<td><code>~/minio/minio-premium-ro</code></td>
-<td><code>mc ls minio-premium-ro/$NB_NOTEBOOK</code></td>
+<td style="text-align: right;">gateway-premium-ro</td>
+<td>MinIO mounts not working.</td>
+<td><code>mc ls gateway-premium-ro</code></td>
 <td>N/A</td>
-<td>Protected-b</td>
+<td>Protected-B</td>
 </tr>
 <tr>
-<td align="right">minio-protected-b</td>
-<td><code>~/minio/minio-protected-b</code></td>
-<td><code>mc ls minio-protected-b/$NB_NOTEBOOK</code></td>
+<td style="text-align: right;">gateway-protected-b</td>
+<td>MinIO mounts not working.</td>
+<td><code>mc ls gateway-protected-b</code></td>
 <td>N/A</td>
-<td>Protected-b</td>
+<td>Protected-B</td>
 </tr>
 <tr>
-<td align="right">fdi-gateway-protected-b</td>
-<td><code>~/minio/fdi-gateway-protected-b</code></td>
-<td><code>mc ls fdi-gateway-protected-b/$NB_NOTEBOOK</code></td>
+<td style="text-align: right;">fdi-gateway-protected-b</td>
+<td>MinIO mounts not working.</td>
+<td><code>mc ls fdi-gateway-protected-b</code></td>
 <td>N/A</td>
-<td>Protected-b</td>
+<td>Protected-B</td>
 </tr>
 </tbody>
 </table>
-<!-- prettier-ignore -->
-<details class="note">
-<summary>Note: $NB_NOTEBOOK is an environment variable that contains your namespace</summary>
-<p>You could also just type <code>mc ls standard-tenant-1/john-smith</code>, etc.</p>
-</details>
 <p>Accessing all MinIO tenants is the same. The difference between tenants is the
 storage type behind them:</p>
 <ul>
@@ -1015,26 +1013,26 @@ providing different access scopes:</p>
 <table>
 <thead>
 <tr>
-<th align="right"></th>
-<th align="center">Private</th>
-<th align="center">Shared</th>
+<th style="text-align: right;"></th>
+<th style="text-align: center;">Private</th>
+<th style="text-align: center;">Shared</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="right">Summary</td>
-<td align="center">Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a <a href="../../4-Collaboration/Overview/#share-compute-namespace-in-kubeflow">shared namespace</a>)</td>
-<td align="center">Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams</td>
+<td style="text-align: right;">Summary</td>
+<td style="text-align: center;">Accessible only by someone within your namespace (typically only by you from your own notebook servers/remote desktop, unless you're working in a <a href="../../4-Collaboration/Overview/#share-compute-namespace-in-kubeflow">shared namespace</a>)</td>
+<td style="text-align: center;">Writable only by you, but readable by anyone with access to the platform. Great for sharing public data across teams</td>
 </tr>
 <tr>
-<td align="right">Mount location in the Notebook Server:</td>
-<td align="center"><code>~/minio/standard-tenant-1/private/myfolder/myfile</code></td>
-<td align="center"><code>~/minio/standard-tenant-1/shared/myfolder/myfile</code></td>
+<td style="text-align: right;">Mount location in the Notebook Server:</td>
+<td style="text-align: center;"><code>~/minio/standard/private/myfolder/myfile</code></td>
+<td style="text-align: center;"><code>~/minio/standard/shared/myfolder/myfile</code></td>
 </tr>
 <tr>
-<td align="right">Location in <code>mc</code> tool/MinIO portal:</td>
-<td align="center"><code>firstname-lastname/myfolder/myfile</code></td>
-<td align="center"><code>shared/firstname-lastname/myfolder/myfile</code></td>
+<td style="text-align: right;">Location in <code>mc</code> tool/MinIO portal:</td>
+<td style="text-align: center;"><code>firstname-lastname/myfolder/myfile</code></td>
+<td style="text-align: center;"><code>shared/firstname-lastname/myfolder/myfile</code></td>
 </tr>
 </tbody>
 </table>
@@ -1061,6 +1059,9 @@ as your Kubeflow namespace (likely <code>firstname-lastname</code>):</p>
 <p><img alt="MinIO browser with personal bucket using first name, last name format (hyphenated)" src="../../images/minio_self_serve_bucket.png" /></p>
 <p>This lets you browse, upload/download, delete, or share files.</p>
 <h3 id="browse-datasets">Browse Datasets<a class="headerlink" href="#browse-datasets" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">The link below is not currently working.</p>
+</div>
 <p>Browse some <a href="https://datasets.covid.cloud.statcan.ca">datasets</a> here. These data
 sets are meant to store widely shared data. Either data that has been brought
 it, or data to be released out as a product. <strong>As always, ensure that the data
@@ -1080,9 +1081,9 @@ files. For example:</p>
 <span class="c1"># Typically this is &quot;firstname-lastname&quot;, but it might be different if working in a shared namespace</span>
 <span class="nv">BUCKETNAME</span><span class="o">=</span>firstname-lastname
 
-<span class="c1"># Get your personal credentials for the &quot;minio-standard-tenant-1&quot; MinIO instance</span>
+<span class="c1"># Get your personal credentials for the &quot;gateway-standard&quot; MinIO instance</span>
 <span class="c1"># (this initializes $MINIO_URL, $MINIO_ACCESS_KEY, and $MINIO_SECRET_KEY environment variables)</span>
-<span class="nb">source</span> /vault/secrets/minio-standard-tenant-1
+<span class="nb">source</span> /vault/secrets/minio-gateway-standard
 
 <span class="c1"># Create a MinIO alias (called &quot;standard&quot;) for &quot;standard&quot; using your credentials</span>
 mc config host add standard <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
@@ -1104,11 +1105,11 @@ mc cp test.txt standard/<span class="si">${</span><span class="nv">BUCKETNAME</s
 </code></pre></div>
 
 <p>Now open the <a href="#minio-web-portal">MinIO Web Portal</a> or browse to
-<code>~/minio/standard-tenant-1/private</code> to see your test file!</p>
+<code>~/minio/standard/private</code> to see your test file!</p>
 <!-- prettier-ignore -->
 <details class="tip">
 <summary><code>mc</code> can do a lot</summary>
-<p>In addition to copying files, <code>mc</code> can do a lot more (like <code>mc ls standard/FIRSTNAME-LASTNAME</code> to list the contents of a bucket).  Check out the <a href="https://docs.min.io/docs/minio-client-complete-guide.html">mc docs</a> or run <code>mc --help</code> for more information.</p>
+<p>In addition to copying files, <code>mc</code> can do a lot more (like <code>mc ls gateway-standard/FIRSTNAME-LASTNAME</code> to list the contents of a bucket).  Check out the <a href="https://docs.min.io/docs/minio-client-complete-guide.html">mc docs</a> or run <code>mc --help</code> for more information.</p>
 </details>
 <!-- prettier-ignore -->
 <details class="tip">
@@ -1125,7 +1126,7 @@ copy-paste and edit these examples! They should suit most of your needs.</p>
 <span class="n">http</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">url</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;^https?://&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
 
 <span class="c1"># Get the MinIO creds</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/vault/secrets/minio-standard-tenant-1.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">secrets</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/vault/secrets/minio-gateway-standard.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">secrets</span><span class="p">:</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 
 <span class="c1"># Create the minio client.</span>
@@ -1164,10 +1165,13 @@ examples of this are shown in
 send to a collaborator!</p>
 <p><img alt="MinIO browser with a shareable link to a file" src="../../images/minio_self_serve_share.png" /></p>
 <h3 id="get-minio-credentials">Get MinIO Credentials<a class="headerlink" href="#get-minio-credentials" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">The methods below have not been tested recently, since certain MinIO changes. These may require adjustment.</p>
+</div>
 <!-- prettier-ignore -->
 <div class="admonition note">
 <p class="admonition-title">The following methods still work, but you often don't need this anymore because of automation!</p>
-<p>If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the <code>mc</code> command line tool for you. You can use the <code>mc</code> tool without accessing credentials like shown below (e.g.: just type <code>mc ls standard-tenant-1/MY_NAMESPACE/</code>). If you do need credentials, you can still get them from <code>/vault/secrets/minio-*</code></p>
+<p>If you're accessing MinIO from on a Notebook Server or in a Kubeflow Pipeline, these credentials will automatically be loaded into the <code>mc</code> command line tool for you. You can use the <code>mc</code> tool without accessing credentials like shown below (e.g.: just type <code>mc ls gateway-standard/MY_NAMESPACE/</code>). If you do need credentials, you can still get them from <code>/vault/secrets/minio-*</code></p>
 </div>
 <p>To access your MinIO buckets programmatically (for example through the
 <a href="#MinIO-Command-Line-Tool"><code>mc</code> command line tool</a>, or via Python or R) you
@@ -1186,10 +1190,10 @@ method OIDC, leave <strong>Role</strong> blank and Sign in with OIDC Provider.</
 <p><img alt="Vault AccessKey" src="../../images/accessKey.png" /></p>
 <h4 id="method-2-get-credentials-from-running-notebook-server">Method 2: Get Credentials from Running Notebook Server<a class="headerlink" href="#method-2-get-credentials-from-running-notebook-server" title="Permanent link">&para;</a></h4>
 <p>Open a terminal in your Notebook and run:</p>
-<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-standard-tenant-1
+<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-gateway-standard
 
 <span class="c1"># Output:</span>
-<span class="c1"># export MINIO_URL=&quot;http://minio.minio-standard-tenant-1 ...&quot;</span>
+<span class="c1"># export MINIO_URL=&quot;http://minio.minio-gateway-standard ...&quot;</span>
 <span class="c1"># export MINIO_ACCESS_KEY=&quot;...&quot;</span>
 <span class="c1"># export MINIO_SECRET_KEY=&quot;...&quot;</span>
 </code></pre></div>
@@ -1205,13 +1209,13 @@ across multiple users. In general though, the underlying storage is provided by
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure Manage Disks</a>
 and they give a rough guide for MinIO storage cost based on the MinIO instance:</p>
 <ul>
-<li>premium-tenant-1:<ul>
+<li>premium:<ul>
 <li>See <strong>Premium SSD Managed Disks</strong></li>
 </ul>
 </li>
-<li>standard-tenant-1:<ul>
+<li>standard:<ul>
 <li>See <strong>Standard SSD Managed Disks</strong></li>
-<li>Typically 50% the cost of <code>premium-tenant-1</code></li>
+<li>Typically 50% the cost of <code>premium</code></li>
 </ul>
 </li>
 </ul>

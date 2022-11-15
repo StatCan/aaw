@@ -3275,67 +3275,67 @@ RUN fix-permissions /home/$NB_USER
 
 <p>would add two layers, each about 1GB (2GB total).</p>
 <h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>.
-├── <span class="nv">Makefile</span>                                # <span class="nv">Cats</span> <span class="nv">the</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span> <span class="nv">together</span>
-│
-├── <span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span>                             # <span class="nv">The</span> <span class="nv">docker</span> <span class="nv">snippets</span>. <span class="nv">Numbering</span> <span class="nv">indicates</span> <span class="nv">the</span> <span class="nv">DAG</span>.
-│   ├── <span class="mi">0</span><span class="nv">_CPU</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">0</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">1</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">2</span><span class="nv">_PyTorch</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">2</span><span class="nv">_Tensorflow</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">3</span><span class="nv">_Kubeflow</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">4</span><span class="nv">_CLI</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">5</span><span class="nv">_DB</span><span class="o">-</span><span class="nv">Drivers</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">6</span><span class="nv">_JupyterLab</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">6</span><span class="nv">_RStudio</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">6</span><span class="nv">_JupyterLab</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">Dockerfile</span>
-│   ├── <span class="mi">6</span><span class="nv">_RemoteDesktop</span>.<span class="nv">Dockerfile</span>
-│   ├── ∞<span class="nv">_CMD</span>.<span class="nv">Dockerfile</span>
-│   └── ∞<span class="nv">_CMD_RemoteDesktop</span>.<span class="nv">Dockerfile</span>
-│
-├── <span class="nv">resources</span>                               # <span class="nv">the</span> <span class="nv">Docker</span> <span class="nv">context</span> <span class="ss">(</span><span class="nv">files</span> <span class="k">for</span> <span class="nv">COPY</span><span class="ss">)</span>
-├── ├── <span class="nv">common</span>                              # <span class="nv">files</span> <span class="nv">required</span> <span class="nv">by</span> <span class="nv">all</span> <span class="nv">images</span>
-│      ├── <span class="nv">clean</span><span class="o">-</span><span class="nv">layer</span>.<span class="nv">sh</span>
-│      ├── <span class="nv">helpers</span>.<span class="nv">zsh</span>
-│      ├── <span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">overrides</span>.<span class="nv">json</span>
-│      ├── <span class="nv">landing_page</span>
-│      ├── <span class="nv">nginx</span>
-│      ├── <span class="nv">README</span>.<span class="nv">md</span>
-│      └── <span class="nv">start</span><span class="o">-</span><span class="nv">custom</span>.<span class="nv">sh</span>
-├── ├── <span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span>                      # <span class="nv">directory</span> <span class="nv">containing</span> <span class="nv">files</span> <span class="nv">only</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">remote</span> <span class="nv">desktop</span>
-<span class="o">|</span>      ├── <span class="nv">desktop</span><span class="o">-</span><span class="nv">files</span>                    # <span class="nv">desktop</span> <span class="nv">configuration</span> 
-<span class="o">|</span>      ├── <span class="nv">French</span>                           # <span class="nv">files</span> <span class="nv">to</span> <span class="nv">support</span> <span class="nv">i18n</span> <span class="nv">of</span> <span class="nv">remote</span> <span class="nv">desktop</span>
-<span class="o">|</span>      ├── <span class="nv">qgis</span><span class="o">-</span><span class="mi">2020</span>.<span class="nv">gpg</span>.<span class="nv">key</span>
-<span class="o">|</span>      └── <span class="nv">start</span><span class="o">-</span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span>
-<span class="o">|</span>      
-│
-├── <span class="nv">scripts</span>                                 # <span class="nv">Helper</span> <span class="nv">Scripts</span> <span class="ss">(</span><span class="nv">NOT</span> <span class="nv">automated</span>.<span class="ss">)</span>
-├── ├── <span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span>                      # <span class="nv">Scripts</span> <span class="nv">installing</span> <span class="nv">applications</span> <span class="nv">on</span> <span class="nv">remote</span> <span class="nv">desktop</span>
-<span class="o">|</span>      ├── <span class="nv">firefox</span>.<span class="nv">sh</span>
-<span class="o">|</span>      ├── <span class="nv">fix</span><span class="o">-</span><span class="nv">permissions</span>.<span class="nv">sh</span>
-<span class="o">|</span>      ├── <span class="nv">qgis</span>.<span class="nv">sh</span>
-<span class="o">|</span>      ├── <span class="nv">r</span><span class="o">-</span><span class="nv">studio</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span>
-<span class="o">|</span>      └── <span class="nv">vs</span><span class="o">-</span><span class="nv">code</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span>
-│   ├── <span class="nv">CHECKSUMS</span>
-│   ├── <span class="nv">checksums</span>.<span class="nv">sh</span>
-│   ├── <span class="nv">get</span><span class="o">-</span><span class="nv">nvidia</span><span class="o">-</span><span class="nv">stuff</span>.<span class="nv">sh</span>
-│   ├── <span class="nv">start</span><span class="o">-</span><span class="nv">custom</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">sh</span>
-│   └── <span class="nv">README</span>.<span class="nv">md</span>
-│
-└── <span class="nv">output</span>                                  # <span class="nv">Staging</span> <span class="nv">area</span> <span class="k">for</span> <span class="nv">a</span> `<span class="nv">docker</span> <span class="nv">build</span> .`
-    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">/</span>
-    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">/</span>
-    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">/</span>
-    <span class="o">|</span>── <span class="nv">RStudio</span><span class="o">/</span>
-    <span class="o">|</span>── <span class="nv">RemoteDesktop</span><span class="o">/</span>
-    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>        # <span class="nv">These</span> <span class="nv">images</span> <span class="nv">use</span> <span class="nv">JupyterLab</span> <span class="mi">3</span>.<span class="mi">0</span> <span class="nv">and</span> <span class="nv">contain</span> <span class="nv">only</span> <span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span> <span class="nv">extensions</span>
-    ├── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>
-    └── <span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>
-└── <span class="nv">tests</span>
-    ├── <span class="nv">general</span>                             # <span class="nv">General</span> <span class="nv">tests</span> <span class="nv">applied</span> <span class="nv">to</span> <span class="nv">all</span> <span class="nv">images</span>
-    ├── <span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">cpu</span>                      # <span class="nv">Test</span> <span class="nv">applied</span> <span class="nv">to</span> <span class="nv">a</span> <span class="nv">specific</span> <span class="nv">image</span>
-    └── <span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">tensorflow</span>
+<div class="codehilite"><pre><span></span><code>.<span class="w"></span>
+├──<span class="w"> </span><span class="nv">Makefile</span><span class="w">                                </span>#<span class="w"> </span><span class="nv">Cats</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span><span class="w"> </span><span class="nv">together</span><span class="w"></span>
+│<span class="w"></span>
+├──<span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span><span class="w">                             </span>#<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="nv">snippets</span>.<span class="w"> </span><span class="nv">Numbering</span><span class="w"> </span><span class="nv">indicates</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">DAG</span>.<span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">0</span><span class="nv">_CPU</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">6</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">7</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">2</span><span class="nv">_PyTorch</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">2</span><span class="nv">_Tensorflow</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">3</span><span class="nv">_Kubeflow</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">4</span><span class="nv">_CLI</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">5</span><span class="nv">_DB</span><span class="o">-</span><span class="nv">Drivers</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_JupyterLab</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_RStudio</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_JupyterLab</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_RemoteDesktop</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span>∞<span class="nv">_CMD</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w">   </span>└──<span class="w"> </span>∞<span class="nv">_CMD_RemoteDesktop</span>.<span class="nv">Dockerfile</span><span class="w"></span>
+│<span class="w"></span>
+├──<span class="w"> </span><span class="nv">resources</span><span class="w">                               </span>#<span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">Docker</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="ss">(</span><span class="nv">files</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">COPY</span><span class="ss">)</span><span class="w"></span>
+├──<span class="w"> </span>├──<span class="w"> </span><span class="nv">common</span><span class="w">                              </span>#<span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">required</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">images</span><span class="w"></span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">clean</span><span class="o">-</span><span class="nv">layer</span>.<span class="nv">sh</span><span class="w"></span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">helpers</span>.<span class="nv">zsh</span><span class="w"></span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">overrides</span>.<span class="nv">json</span><span class="w"></span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">landing_page</span><span class="w"></span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">nginx</span><span class="w"></span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">README</span>.<span class="nv">md</span><span class="w"></span>
+│<span class="w">      </span>└──<span class="w"> </span><span class="nv">start</span><span class="o">-</span><span class="nv">custom</span>.<span class="nv">sh</span><span class="w"></span>
+├──<span class="w"> </span>├──<span class="w"> </span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span><span class="w">                      </span>#<span class="w"> </span><span class="nv">directory</span><span class="w"> </span><span class="nv">containing</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">desktop</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">desktop</span><span class="o">-</span><span class="nv">files</span><span class="w">                    </span>#<span class="w"> </span><span class="nv">desktop</span><span class="w"> </span><span class="nv">configuration</span><span class="w"> </span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">French</span><span class="w">                           </span>#<span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">support</span><span class="w"> </span><span class="nv">i18n</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">desktop</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">qgis</span><span class="o">-</span><span class="mi">2022</span>.<span class="nv">gpg</span>.<span class="nv">key</span><span class="w">                </span>#<span class="w"> </span><span class="nv">expires</span><span class="w"> </span><span class="nv">annually</span><span class="w"> </span><span class="nv">aug</span><span class="w"> </span><span class="o">~</span><span class="mi">8</span><span class="w"> </span>
+<span class="o">|</span><span class="w">      </span>└──<span class="w"> </span><span class="nv">start</span><span class="o">-</span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>
+│<span class="w"></span>
+├──<span class="w"> </span><span class="nv">scripts</span><span class="w">                                 </span>#<span class="w"> </span><span class="nv">Helper</span><span class="w"> </span><span class="nv">Scripts</span><span class="w"> </span><span class="ss">(</span><span class="nv">NOT</span><span class="w"> </span><span class="nv">automated</span>.<span class="ss">)</span><span class="w"></span>
+├──<span class="w"> </span>├──<span class="w"> </span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span><span class="w">                      </span>#<span class="w"> </span><span class="nv">Scripts</span><span class="w"> </span><span class="nv">installing</span><span class="w"> </span><span class="nv">applications</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">desktop</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">firefox</span>.<span class="nv">sh</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">fix</span><span class="o">-</span><span class="nv">permissions</span>.<span class="nv">sh</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">qgis</span>.<span class="nv">sh</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">r</span><span class="o">-</span><span class="nv">studio</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span><span class="w"></span>
+<span class="o">|</span><span class="w">      </span>└──<span class="w"> </span><span class="nv">vs</span><span class="o">-</span><span class="nv">code</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">CHECKSUMS</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">checksums</span>.<span class="nv">sh</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">get</span><span class="o">-</span><span class="nv">nvidia</span><span class="o">-</span><span class="nv">stuff</span>.<span class="nv">sh</span><span class="w"></span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">start</span><span class="o">-</span><span class="nv">custom</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">sh</span><span class="w"></span>
+│<span class="w">   </span>└──<span class="w"> </span><span class="nv">README</span>.<span class="nv">md</span><span class="w"></span>
+│<span class="w"></span>
+└──<span class="w"> </span><span class="nv">output</span><span class="w">                                  </span>#<span class="w"> </span><span class="nv">Staging</span><span class="w"> </span><span class="nv">area</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span>`<span class="nv">docker</span><span class="w"> </span><span class="nv">build</span><span class="w"> </span>.`<span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span><span class="o">|</span>──<span class="w"> </span><span class="nv">RStudio</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span><span class="o">|</span>──<span class="w"> </span><span class="nv">RemoteDesktop</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span><span class="w">        </span>#<span class="w"> </span><span class="nv">These</span><span class="w"> </span><span class="nv">images</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="nv">JupyterLab</span><span class="w"> </span><span class="mi">3</span>.<span class="mi">0</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">contain</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="w"> </span><span class="nv">extensions</span><span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span><span class="w"></span>
+<span class="w">    </span>└──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span><span class="w"></span>
+└──<span class="w"> </span><span class="nv">tests</span><span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">general</span><span class="w">                             </span>#<span class="w"> </span><span class="nv">General</span><span class="w"> </span><span class="nv">tests</span><span class="w"> </span><span class="nv">applied</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">images</span><span class="w"></span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">cpu</span><span class="w">                      </span>#<span class="w"> </span><span class="nv">Test</span><span class="w"> </span><span class="nv">applied</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">specific</span><span class="w"> </span><span class="nv">image</span><span class="w"></span>
+<span class="w">    </span>└──<span class="w"> </span><span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">tensorflow</span><span class="w"></span>
 </code></pre></div>
 
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>

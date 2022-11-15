@@ -958,6 +958,26 @@
     blob-csi.go
   </a>
   
+    <nav class="md-nav" aria-label="blob-csi.go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local Development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -971,6 +991,13 @@
           <li class="md-nav__item">
   <a href="#gitea-user-interface" class="md-nav__link">
     Gitea User Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
@@ -2892,6 +2919,26 @@
     blob-csi.go
   </a>
   
+    <nav class="md-nav" aria-label="blob-csi.go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local Development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2905,6 +2952,13 @@
           <li class="md-nav__item">
   <a href="#gitea-user-interface" class="md-nav__link">
     Gitea User Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
@@ -3030,11 +3084,14 @@
 <p>[^1]: Gitlab icons provided by <a href="https://about.gitlab.com/press/press-kit/">Gitlab Press Kit</a>.
 [^2]: Github icons provided by <a href="https://github.com/logos">Github logos</a>.
 [^3]: Argo icon provided by <a href="https://cncf-branding.netlify.app/projects/argo/">CNCF branding</a>.</p>
+<p>[^5]: Terraform icon provided by <a href="https://www.hashicorp.com/brand">hashicorp</a>
+[^6]: Kubeflow icon provided by <a href="https://www.kubeflow.org/images/logo.svg">kubeflow</a>
+[^7]: Istio icons provided by <a href="https://istio.io/latest/about/media-resources/">Istio Media Resources</a></p>
 <h4 id="how-to-create-a-controller">How to Create a Controller<a class="headerlink" href="#how-to-create-a-controller" title="Permanent link">&para;</a></h4>
 <p><strong>Note</strong>: Modifying a controller is a subset of these steps; if you are only updating an existing controller, ignore the steps that don't apply.</p>
 <ol>
 <li>Create a <code>.go</code> file in the <code>cmd</code> folder of <strong>this</strong> repository with the name of your controller. Your controller must create a <code>cobra.Command</code> and register it with the <code>rootCmd</code> of the application. Your controller will be invoked with the entrypoint <code>./profiles-controller &lt;your controller name&gt;</code>.</li>
-<li>Modify the profiles-controller helm chart in the <a href="https://github.com/StatCan/charts">StatCan charts</a> repo. Add the deployment containing your new controller and update the <code>values.yaml</code> file accordingly with any new parameters specific to your container.</li>
+<li>Modify the profiles-controller helm chart in the <a href="https://github.com/StatCan/charts">StatCan charts</a> repo. Add the deployment containing your new controller and update the <code>values.yaml</code> file accordingly with any new parameters specific to your container. <strong>Don't forget to increment the helm chart version if you made changes to the helm chart</strong>.</li>
 <li>Once your new controller is ready, merge your branch to the <code>main</code> branch of <strong>this</strong> repository. A Github action in <strong>this</strong> repository runs a build job (see <code>.github/workflows/build.yml</code>) that builds the profiles-controller container image and pushes it to Azure container registry. The pushed image is tagged with the commit SHA of the git commit that triggered the Github Action.</li>
 <li>Go to the build job in the Github action and copy the commit SHA that the image is tagged with to your clipboard. This can be found at the top of the step called <strong>Run docker build</strong> in the <strong>build</strong> job.</li>
 <li>Go to the <a href="https://github.com/StatCan/aaw-argocd-manifests">aaw-argocd-manifests</a> repository and open the <code>application.jsonnet</code> file that deploys the <code>profiles-controller</code> ArgoCD application in the <code>daaas-system</code> namespace. In this file, paste the commit SHA from the previous step to the <code>image.tag</code> field. This updates the image tag for the base image used by the <code>profiles-controller</code> deployment. Note that you can make this edit directly through Github's editing features. This edit should be merged into either the <code>aaw-dev-cc-00</code> branch or the <code>aaw-prod-cc-00</code> branch depending on whether the update applies to the dev or prod environments. The <code>profiles-controller</code> ArgoCD application watches for changes to the <code>application.jsonnet</code> file on these branches.</li>
@@ -3046,7 +3103,7 @@
 <li>Depending on what a particular per-namespace application looks like, there may be a manual step required where a developer must build the manifests by, for example, templating a helm chart and saving the output in a <code>manifest.yaml</code> file. In this case, a PR must be made to either the <code>aaw-dev-cc-00</code> or <code>aaw-prod-cc-00</code> branches of the aaw-argocd-manifests repo with the newly build <code>manifest.yaml</code> file.</li>
 </ol>
 <h3 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h3>
-<p>Helpful links to k8s resources and other terminologies related to this project are provided below.</p>
+<p>Helpful links to k8s resources, technologies and other terminologies related to this project are provided below.</p>
 <ul>
 <li><a href="https://www.kubeflow.org/docs/components/multi-tenancy/getting-started/">Profile</a></li>
 <li><a href="https://istio.io/latest/docs/reference/config/security/authorization-policy/#Source">Istio AuthorizationPolicy</a></li>
@@ -3056,6 +3113,7 @@
 <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Roles and RoleBinding (RBAC)</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/">Labels</a></li>
 <li><a href="https://github.com/kubernetes-sigs/blob-csi-driver">Blob CSI Driver</a></li>
+<li><a href="https://www.openpolicyagent.org/">Open Policy Agent (OPA)</a></li>
 </ul>
 <h3 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h3>
 <p>The profiles controller uses <a href="https://github.com/kubernetes/client-go/tree/master/tools/cache">client-go library</a> extensively.
@@ -3075,18 +3133,64 @@ developing custom profile controllers. The mechanisms are defined in the
 <li>PVCs are ReadWriteMany or ReadOnlyMany, respectively</li>
 <li>Supports both protected-b and unclassified mounts.</li>
 </ul>
+<p>In addition, the controller is responsible for managing links from <code>PersistentVolume</code>'s to any buckets from Fair Data Infrastructure (FDI) Section of DAaas.  This is accomplished by querying unclassified and protected-b <code>OPA</code> gateways which return <code>json</code> responses containing buckets along with permissions. The controller parses the returned <code>json</code>, creating a <code>PersistentVolume</code> and <code>PersistentVolumeClaim</code> for each bucket in accordance with the permission constraints.</p>
+<h5 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>BLOB_CSI_FDI_OPA_DAEMON_TICKER_MILLIS</code>: the time interval at which the opa gateways are queried, in milliseconds.</li>
+<li><code>BLOB_CSI_FDI_UNCLASS_OPA_ENDPOINT</code>: the http address pointing to the unclassified OPA gateway.</li>
+<li><code>BLOB_CSI_FDI_UNCLASS_SPN_SECRET_NAME</code>: the name of a secret containing data <code>azurestoragespnclientsecret: value</code>,
+where value is a secret registered under the unclassified FDI service principal.</li>
+<li><code>BLOB_CSI_FDI_UNCLASS_SPN_SECRET_NAMESPACE</code>: the namespace the above secret is contained in.</li>
+<li><code>BLOB_CSI_FDI_UNCLASS_PV_STORAGE_CAP</code>: the storage capacity for FDI PV's in Terabytes.</li>
+<li><code>BLOB_CSI_FDI_UNCLASS_AZURE_STORAGE_AUTH_TYPE</code>: for the current implementation, only <code>spn</code> auth type is supported</li>
+<li><code>BLOB_CSI_FDI_UNCLASS_AZURE_STORAGE_AAD_ENDPOINT</code>: the azure active directory endpoint</li>
+<li><code>BLOB_CSI_FDI_PROTECTED_B_OPA_ENDPOINT</code>: the http address pointing to the protected-b OPA gateway.</li>
+<li><code>BLOB_CSI_FDI_PROTECTED_B_SPN_SECRET_NAME</code>: the name of a secret containing data <code>azurestoragespnclientsecret: value</code>,
+where value is a secret registered under the protected-b FDI service principal.</li>
+<li><code>BLOB_CSI_FDI_PROTECTED_B_SPN_SECRET_NAMESPACE</code>: the namespace the above secret is contained in.</li>
+<li><code>BLOB_CSI_FDI_PROTECTED_B_PV_STORAGE_CAP</code>: the storage capacity for FDI PV's in Terabytes.</li>
+<li><code>BLOB_CSI_FDI_PROTECTED_B_AZURE_STORAGE_AUTH_TYPE</code>: for the current implementation, only <code>spn</code> auth type is supported</li>
+<li><code>BLOB_CSI_FDI_PROTECTED_B_AZURE_STORAGE_AAD_ENDPOINT</code>: the azure active directory endpoint</li>
+</ul>
+<p>For more context on the blob-csi system as a whole, see <a href="https://github.com/StatCan/aaw-developer-docs/blob/main/docs/features/object-storage/blobcsi.md">here</a></p>
 <p><em>This will deprecate the minio controller.</em></p>
+<h5 id="local-development">Local Development<a class="headerlink" href="#local-development" title="Permanent link">&para;</a></h5>
+<p>The <a href="./Taskfile.yml">Taskfile</a> includes task <code>blobcsi:dev</code> for preparing your local environment for development and testing. Due to the controller's dependency on Azure <a href="https://github.com/kubernetes-sigs/blob-csi-driver">blob-csi driver</a> a cluster with the <a href="https://github.com/kubernetes-sigs/blob-csi-driver">blob-csi driver</a> installed is required. As such, it is recommended to debug and test against the development k8s context for AAW. With the local environment configured, the Vscode Debugger can be used through <code>Run and Debug: blobcsi Controller</code> in the debug pane.</p>
 <h4 id="giteago"><a href="./cmd/gitea.go">gitea.go</a><a class="headerlink" href="#giteago" title="Permanent link">&para;</a></h4>
 <p>Responsible for deploying <a href="https://github.com/go-gitea/gitea">gitea</a> as <a href="https://github.com/argoproj/argo-cd">argocd</a> applications per <code>Profile</code>. Currently, <a href="https://github.com/argoproj/argo-cd">argocd</a> applications are deployed by the gitea controller based on the customized gitea manifest found <a href="https://github.com/StatCan/aaw-argocd-manifests/tree/aaw-dev-cc-00/profiles-argocd-system/template/gitea">here</a>.</p>
-<p>The diagram below highlights the key components involved with the Gitea controller[^5]</p>
+<p>The diagram below highlights the key components involved with the Gitea controller</p>
 <p><img alt="Gitea Controller Diagram" src="docs/diagrams/gitea_controller.png" /></p>
 <h5 id="gitea-user-interface">Gitea User Interface<a class="headerlink" href="#gitea-user-interface" title="Permanent link">&para;</a></h5>
-<p>The Gitea user interface is embedded within the <a href="https://github.com/StatCan/aaw-kubeflow-manifests/blob/aaw-dev-cc-00/kustomize/apps/centraldashboard/base/centraldashboard-config.yaml">Kubeflow dashboard</a>'s user interface, rendered by an iframe.</p>
-<p>Requests to a namespace's Gitea server are made to the Kubeflow base url with the suffix <code>/gitea/?ns=&lt;user-namespace&gt;</code>, where the user's namespace is passed as an http parameter. An Istio Virtual Service created by the <code>gitea.go</code> controller contains an http route that redirects traffic from <code>/gitea/?ns=&lt;user-namespace&gt;</code> to <code>/gitea/&lt;user-namespace&gt;/</code>. A second http route routes traffic from <code>/gitea/&lt;user-namespace&gt;/</code> to the Gitea instance in the user's namespace.</p>
-<p>The <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-dev-cc-00/profiles-argocd-system/template/gitea/">Gitea application server</a> sets the <code>ROOT_URL</code> environment variable to contain the Kubeflow base URL with the <code>/gitea/&lt;user-namespace&gt;/</code>. This is required as it is the application's responsibility to establish the URLS that will be used in the browser to retrieve static assets and send requests to application endpoints.</p>
+<p>The unclassified Gitea user interface is embedded within the <a href="https://github.com/StatCan/aaw-kubeflow-manifests/blob/aaw-dev-cc-00/kustomize/apps/centraldashboard/base/centraldashboard-config.yaml">Kubeflow dashboard</a>'s user interface, rendered by an iframe. Protected-b gitea is setup to be accessible only through a protected-b node, and thus the user is expected to access their protected-b gitea instance within an AAW ubuntu VM, or through the CLI in a protected-b notebook.</p>
+<p>Requests to a namespace's Gitea server are made to the Kubeflow base url with the suffix <code>/gitea-unclassified/?ns=&lt;user-namespace&gt;</code>, where the user's namespace is passed as an http parameter. An Istio Virtual Service created by the <code>gitea.go</code> controller contains an http route that redirects traffic from <code>/gitea-unclassified/?ns=&lt;user-namespace&gt;</code> to <code>/gitea-unclassified/&lt;user-namespace&gt;/</code>. A second http route routes traffic from <code>/gitea-unclassified/&lt;user-namespace&gt;/</code> to the Gitea instance in the user's namespace.</p>
+<p>The <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-dev-cc-00/profiles-argocd-system/template/gitea/">Gitea application server</a> sets the <code>ROOT_URL</code> environment variable to contain the Kubeflow base URL with the <code>/gitea-unclassified/&lt;user-namespace&gt;/</code>. This is required as it is the application's responsibility to establish the URLS that will be used in the browser to retrieve static assets and send requests to application endpoints.</p>
 <p>The Gitea application <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-dev-cc-00/profiles-argocd-system/template/gitea/values.yaml#L37-L45">values.yaml file</a> makes use of <a href="https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/">pod fields as environment variables</a> and <a href="https://kubernetes.io/docs/tasks/inject-data-application/define-interdependent-environment-variables/#define-an-environment-dependent-variable-for-a-container">dependent environment variables</a> to create a <code>ROOT_URL</code> that depends on the user's namespace. Additionally, an <a href="https://github.com/go-gitea/gitea/issues/6397">upstream gitea issue</a> indicates that it is possible to set multiple domains in the <code>ROOT_URL</code> environment variable by using the syntax <code>ROOT_URL=https://(domain1,domain2)/gitea/</code>, which is how the dev/prod domains are set without needing to check the deployment environment.</p>
-<p>To allow requests to reach the user's Gitea instance, a Network Policy is set in the user's namespace that allows ingress traffic from the kubeflow-gateway to be sent to any pods in the user's namespace that match the <code>app: gitea</code> label selector.</p>
-<p>[^5]: Istio icons provided by <a href="https://istio.io/latest/about/media-resources/">Istio Media Resources</a></p>
+<p>To allow requests to reach the user's Gitea instance, a Network Policy is set in the user's namespace that allows ingress traffic from the kubeflow-gateway to be sent to any pods in the user's namespace that match the <code>app: gitea &amp;&amp; app.kubernetes.io/instance: gitea-unclassified</code> label selector.</p>
+<h5 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">&para;</a></h5>
+<p>The Gitea controller is configurable to run in unclassified or protected-b mode. The configuration of the following
+parameters thus need set to run the controller:</p>
+<ul>
+<li><code>GITEA_CLASSIFICATION</code>: the classification the controller should be running against. Currently, <code>unclassified</code> and <code>protected-b</code> are supported
+as values.</li>
+<li><code>GITEA_PSQL_PORT</code>: port of the postgres instance the gitea application will connect to</li>
+<li><code>GITEA_PSQL_ADMIN_UNAME</code>: username of a priviledged user within the postgres instance</li>
+<li><code>GITEA_PSQL_ADMIN_PASSWD</code>: password for the above user</li>
+<li><code>GITEA_PSQL_MAINTENANCE_DB</code>: maintenance DB name in the postgres instance</li>
+<li><code>GITEA_SERVICE_URL</code>: internal Gitea URL is specified in
+  <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-dev-cc-00/profiles-argocd-system/template/gitea/manifest.yaml#L350">here</a></li>
+<li><code>GITEA_URL_PREFIX</code>: url prefix for redirecting gitea</li>
+<li><code>GITEA_SERVICE_PORT</code>: the port exposed by gitea service, as specified
+  <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-dev-cc-00/profiles-argocd-system/template/gitea/manifest.yaml#L365">here</a></li>
+<li><code>GITEA_BANNER_CONFIGMAP_NAME</code>: gitea banner configmap name (configmap which corresponds to the banner at the top of the gitea ui)</li>
+<li><code>GITEA_ARGOCD_NAMESPACE</code>:  namespace for arcocd instance that the controller will install applications into</li>
+<li><code>GITEA_ARGOCD_SOURCE_REPO_URL</code>: repository url containing the gitea deployment manifest</li>
+<li><code>GITEA_ARGOCD_SOURCE_TARGET_REVISION</code>: git branch to deploy from</li>
+<li><code>GITEA_ARGOCD_SOURCE_PATH</code>: path to the manifest from the root of the git source repo</li>
+<li><code>GITEA_ARGOCD_PROJECT</code>: argocd instances's project to deploy applications within</li>
+<li><code>GITEA_SOURCE_CONTROL_ENABLED_LABEL</code>: this label will be searched for within profiles to indicate if a user has opted in.</li>
+<li><code>GITEA_KUBEFLOW_ROOT_URL</code>: the url for kubeflow's central dashboard (for dev: https://kubeflow.aaw-dev.cloud.statcan.ca, for production: https://kubeflow.aaw.cloud.statcan.ca)</li>
+</ul>
+<p>Within AAW, these variables are defined in the <a href="https://github.com/StatCan/charts/blob/master/stable/profiles-controller/values.yaml">statcan charts repo</a>, and they are configured within the dev <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-dev-cc-00/daaas-system/profile-controllers/profiles-controller/application.jsonnet">argocd-manifests-repo</a> or prod <a href="https://github.com/StatCan/aaw-argocd-manifests/blob/aaw-prod-cc-00/daaas-system/profile-controllers/profiles-controller/application.jsonnet">argocd-manifests-repo</a>.</p>
 <h4 id="limitrangego"><a href="./cmd/limitrange.go">limitrange.go</a><a class="headerlink" href="#limitrangego" title="Permanent link">&para;</a></h4>
 <p>Responsible for creating, removing and updating <code>LimitRange</code> resources for a given profile. <code>LimitRange</code> resources are generated to limit the cpu and memory resources for the kubeflow profile's default container. <code>LimitRange</code> resources require the implementation of a controller managing <code>ResourceQuotas</code>, which is provided in this package (see <a href="./cmd/quotas.go">quotas.go</a>). Implementing <code>LimitRange</code> resources allows any Pod to run associated with the <code>Profile</code>, restricted by a <code>ResourceQuota</code>.</p>
 <h4 id="miniogo"><a href="./cmd/minio.go">minio.go</a><a class="headerlink" href="#miniogo" title="Permanent link">&para;</a></h4>

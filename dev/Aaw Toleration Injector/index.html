@@ -1146,7 +1146,28 @@
     DAaaS AAW Toleration Injector
   </a>
   
-    <nav class="md-nav" aria-label="DAaaS AAW Toleration Injector">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-node-pool" class="md-nav__link">
+    Adding a node pool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-workflow" class="md-nav__link">
+    Development Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2712,7 +2733,28 @@
     DAaaS AAW Toleration Injector
   </a>
   
-    <nav class="md-nav" aria-label="DAaaS AAW Toleration Injector">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-node-pool" class="md-nav__link">
+    Adding a node pool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-workflow" class="md-nav__link">
+    Development Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2792,6 +2834,24 @@
                 
                 <p><a href="#injecteur-de-toleration-pour-ads-eaa">(Français)</a></p>
 <h3 id="daaas-aaw-toleration-injector">DAaaS AAW Toleration Injector<a class="headerlink" href="#daaas-aaw-toleration-injector" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="adding-a-node-pool">Adding a node pool<a class="headerlink" href="#adding-a-node-pool" title="Permanent link">&para;</a></h3>
+<p>When adding a new node pool type, the toleration injector should be extended to include tolerations for the new node pool. Once the taints have been defined for the nodes, they can be injected as tolerations to the appropriate pods. To allow specific namespaces to tolerate to special node pools, a <a href="https://github.com/StatCan/aaw-kubeflow-profiles#profiles-requiring-scheduling-to-special-node-pools">config map</a> was created to map the node types to allowed namespaces.</p>
+<h3 id="development-workflow">Development Workflow<a class="headerlink" href="#development-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Modify mutate.go to include the appropriate case (this should be refactored to a switch block)</li>
+<li>Create a PR to main</li>
+<li>Once merged, get docker image sha from github actions</li>
+<li>Modify the reference in <a href="https://github.com/StatCan/aaw-argocd-manifests/pull/154/files#diff-aa7775a5d7c9b88f528afe33704be4c4a75fdcc739e3a7a30b3aaffb5db3dafcL65">aaw-argocd-manifests</a>
+then PR changes into the appropriate environment branch</li>
+</ol>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<p>For testing, once the image is built at step 3, the following steps can be taken instead:
+1. Modify the reference in a local branch of aaw-argocd-manifest
+2. Disable auto-sync in argocd for the "statcan-system" app (notify your fellow devs :smiley:)
+3. Deploy the manifest to aaw-dev using <code>kubectl apply -f</code> 
+4. To revert, simply reference the previous image and reapply or enable auto-sync in argo</p>
+<hr />
 <h4 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h4>
 <p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
 <h4 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h4>

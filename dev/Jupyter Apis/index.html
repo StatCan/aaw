@@ -2952,13 +2952,13 @@ cluster (typically <code>user</code>).</p>
 <p>Each time you need to start the cluster, navigate to the directory you created
 and run <code>vagrant up</code>.</p>
 <p><strong>Note</strong>: after some experimentation, it was found that the vagrant file could be modified on line 57 to use 8gb instead of the default 12.</p>
-<div class="codehilite"><pre><span></span><code>  <span class="nv">config</span>.<span class="nv">vm</span>.<span class="nv">provider</span> <span class="s2">&quot;</span><span class="s">virtualbox</span><span class="s2">&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="nv">vb</span><span class="o">|</span>
-    # <span class="nv">Display</span> <span class="nv">the</span> <span class="nv">VirtualBox</span> <span class="nv">GUI</span> <span class="nv">when</span> <span class="nv">booting</span> <span class="nv">the</span> <span class="nv">machine</span>
-    #<span class="nv">vb</span>.<span class="nv">gui</span> <span class="o">=</span> <span class="nv">true</span>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="nv">config</span>.<span class="nv">vm</span>.<span class="nv">provider</span><span class="w"> </span><span class="s2">&quot;virtualbox&quot;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="nv">vb</span><span class="o">|</span><span class="w"></span>
+<span class="w">    </span>#<span class="w"> </span><span class="nv">Display</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">VirtualBox</span><span class="w"> </span><span class="nv">GUI</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">booting</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">machine</span><span class="w"></span>
+<span class="w">    </span>#<span class="nv">vb</span>.<span class="nv">gui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">true</span><span class="w"></span>
 
-    # <span class="nv">Customize</span> <span class="nv">the</span> <span class="nv">amount</span> <span class="nv">of</span> <span class="nv">memory</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">VM</span>:
-    <span class="nv">vb</span>.<span class="nv">memory</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">8192</span><span class="s2">&quot;</span>
-  <span class="k">end</span>
+<span class="w">    </span>#<span class="w"> </span><span class="nv">Customize</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">amount</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">memory</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">VM</span>:<span class="w"></span>
+<span class="w">    </span><span class="nv">vb</span>.<span class="nv">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;8192&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="k">end</span><span class="w"></span>
 </code></pre></div>
 
 <h5 id="remote-aks-cluster">Remote AKS Cluster<a class="headerlink" href="#remote-aks-cluster" title="Permanent link">&para;</a></h5>

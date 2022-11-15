@@ -2839,9 +2839,9 @@
 If any Pods in that namespace are using a SAS image, it will set the label in the Profile to <code>true</code>, otherwise <code>false</code>.</p>
 <h4 id="unit-test-cases">Unit Test Cases<a class="headerlink" href="#unit-test-cases" title="Permanent link">&para;</a></h4>
 <ol>
-<li>If <strong>any pod</strong> in a list of pods contains a SAS image, <code>hasEmployeeOnlyFeatures</code> should return <code>true</code>.</li>
-<li>If <strong>no pod</strong> in a list of pods contains a SAS image,  <code>hasEmployeeOnlyFeatures</code> should return <code>false</code>.</li>
-<li>If an empty list is passed to <code>hasEmployeeOnlyFeatures</code>, it should return <code>false</code>.</li>
+<li>If <strong>any pod</strong> in a list of pods contains a SAS image, <code>hasSasNotebookFeature</code> should return <code>true</code>.</li>
+<li>If <strong>no pod</strong> in a list of pods contains a SAS image,  <code>hasSasNotebookFeature</code> should return <code>false</code>.</li>
+<li>If an empty list is passed to <code>hasSasNotebookFeature</code>, it should return <code>false</code>.</li>
 </ol>
 <h3 id="non-employee-users">Non-Employee Users<a class="headerlink" href="#non-employee-users" title="Permanent link">&para;</a></h3>
 <p>This controller also adds the <code>state.aaw.statcan.gc.ca/non-employee-users</code> label to the Profiles based on the RoleBindings in that namespace.</p>
@@ -2852,9 +2852,9 @@ If any Pods in that namespace are using a SAS image, it will set the label in th
 <p>Other applications on the cluster can use this label to make decisions based on whether namespaces contain non-employee users.</p>
 <h4 id="unit-test-cases_1">Unit Test Cases<a class="headerlink" href="#unit-test-cases_1" title="Permanent link">&para;</a></h4>
 <ol>
-<li>If <strong>any rolebinding</strong> in a list of rolebindings contains a non-employee user, <code>hasNonEmployeeUser</code> should return <code>true</code>.</li>
-<li>If <strong>no rolebinding</strong> in a list of rolebindings contains a non-employee user, <code>hasNonEmployeeUser</code> should return <code>false</code>.</li>
-<li>If an empty list is passed to <code>hasNonEmployeeUser</code>, it should return <code>false</code>.</li>
+<li>If <strong>any rolebinding</strong> in a list of rolebindings contains a non-employee user, <code>existsNonSasUser</code> should return <code>true</code>.</li>
+<li>If <strong>no rolebinding</strong> in a list of rolebindings contains a non-employee user, <code>existsNonSasUser</code> should return <code>false</code>.</li>
+<li>If an empty list is passed to <code>existsNonSasUser</code>, it should return <code>false</code>.</li>
 </ol>
 <p>The Gatekeeper Policies check for these labels in the Profile and allow objects to be created or denied accordingly. More information about these policies and how the objects interact can be found in their README in the Gatekeeper Policies repository (linked below).
 - <a href="https://github.com/StatCan/gatekeeper-policies/tree/master/general/deny-external-users">Deny External Users Policy</a>
