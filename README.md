@@ -24,9 +24,6 @@ The AAW includes tools that allow data science users to open almost any file. Th
 - sqlite
 - many others... just ask :-)
 
-### How much does the AAW cost?
-
-StatCan is footing the bill for the time being. To give you a rough estimate of costs, please consult the following table. NB: these are just estimates.
 
 #### CPU Only
 
