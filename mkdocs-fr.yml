@@ -62,6 +62,7 @@ nav:
   - Collaboration:
       - Aperçu: 4-Collaboration/Aperçu.md
       - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
+      - EAG: Environnement-Analyse-Geospatiale.md
   - Stockage:
       - Aperçu: 5-Stockage/Aperçu.md
       - MinIo: 5-Stockage/MinIo.md
