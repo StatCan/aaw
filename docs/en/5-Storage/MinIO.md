@@ -16,6 +16,7 @@ S3 storage). Buckets are good at three things:
 
 ## MinIO Mounted Folders on a Notebook Server
 
+<!-- prettier-ignore -->
 !!! warning "MinIO mounts are not currently working on Protected B servers."
 
 Your MinIO storage are mounted as directories if you select the option
@@ -104,6 +105,7 @@ This lets you browse, upload/download, delete, or share files.
 
 ## Browse Datasets
 
+<!-- prettier-ignore -->
 !!! warning "The link below is not currently working."
 
 Browse some [datasets](https://datasets.covid.cloud.statcan.ca) here. These data
@@ -218,6 +220,7 @@ send to a collaborator!
 
 ## Get MinIO Credentials
 
+<!-- prettier-ignore -->
 !!! warning "The methods below have not been tested recently, since certain MinIO changes. These may require adjustment."
 
 <!-- prettier-ignore -->
