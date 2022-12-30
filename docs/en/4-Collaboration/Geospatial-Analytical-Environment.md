@@ -1,9 +1,11 @@
 # Geospatial Analytical Environment (GAE) - Cross Platform Access
+
 <!-- prettier-ignore -->
 ??? danger "Unprotected data only; SSI coming soon:"
 	At this time, our Geospatial server can only host and provide access to non-sensitive statistical information.  
 	
 ## Getting Started
+
 <!-- prettier-ignore -->
 ??? success "Prerequisites"
 	1. An onboarded project with access to DAS GAE ArcGIS Portal 	
@@ -53,6 +55,7 @@ For example, in AAW and the use of [Jupyter Notebooks](https://statcan.github.io
 	- Use the StatCan Azure Login option, and your Cloud ID 
 	- After successful login, you will receive a code to sign in using SAML. 
 	- Paste this code into the output. 
+
 
 	![OAuth2 Approval](../images/OAuth2Key.png)
 
