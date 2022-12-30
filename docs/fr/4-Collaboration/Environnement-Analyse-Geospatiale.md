@@ -1,11 +1,12 @@
 # Environnement d'Analyse Géospatiale (EAG) - Accès multiplateforme
 
-
+<!-- prettier-ignore -->
 ??? danger "Données non protégées uniquement ; SSI bientôt disponible :"
 	À l'heure actuelle, notre serveur géospatial ne peut héberger et donner accès qu'à des informations statistiques non sensibles.  
 	
 ## Démarrage
 
+<!-- prettier-ignore -->
 ??? success "Conditions préalables"
 	1. Un projet intégré avec accès au portail DAS EAG ArcGIS
     2. Un identifiant client ArcGIS Portal (clé API)
@@ -55,7 +56,7 @@ Par exemple, dans AAW et l'utilisation de [Jupyter Notebooks](https://statcan.gi
    - Après une connexion réussie, vous recevrez un code pour vous connecter en utilisant SAML.
    - Collez ce code dans la sortie.
 
-	![Approbation OAuth2](images/OAuth2Key.png)
+	![Approbation OAuth2](../images/OAuth2Key.png)
 
 <hr>
 
