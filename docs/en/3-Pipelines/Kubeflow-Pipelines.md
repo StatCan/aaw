@@ -1,5 +1,10 @@
 # Overview
 
+<!-- prettier-ignore -->
+!!! warning "Kubeflow pipelines are in the process of being removed from AAW." 
+    No new development should use Kubeflow pipelines. If you have questions
+    about this removal, please speak with the AAW maintainers.
+
 [Kubeflow Pipelines](https://www.kubeflow.org/docs/components/pipelines/overview/)
 is a platform for building machine learning workflows for deployment in a
 Kubernetes environment. It enables authoring _pipelines_ that encapsulate
