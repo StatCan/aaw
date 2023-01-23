@@ -24,6 +24,7 @@ The AAW includes tools that allow data science users to open almost any file. Th
 - sqlite
 - many others... just ask :-)
 
+### How much does the AAW cost?
 
 #### CPU Only
 
