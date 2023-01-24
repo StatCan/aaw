@@ -166,14 +166,6 @@ There are currently three checkbox options available here:
   access to any Protected B resources. Protected B notebook servers run with many
   security restrictions and have access to separate MinIO instances specifically
   designed for Protected B data.
-- **Allow access to Kubeflow Pipelines**: This will allow the notebook server to
-  create and manage Kubeflow pipelines. Enable this if you want to use Kubeflow
-  pipelines.
-
-## Affinity / Tolerations
-
-<!-- prettier-ignore -->
-!!! note "This section needs to be filled in."
 
 ## Miscellaneous Settings
 
