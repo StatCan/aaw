@@ -132,17 +132,23 @@ are various configuration options available:
 ## Data Volumes
 
 You can also create data volumes that can be used to store additional data. Multiple
-data volumes can be created. Click the add volume button to create a new volume and specify 
-its configuration. There are the following configuration parameters as for data volumes:
-
-- **Type**: Create a new volume or use an existing volume.
+data volumes can be created. Click the add new volume button to create a new volume and
+specify its configuration. Click the attach existing volume button to mount an existing
+data volume to the notebook server. There are the following configuration parameters for
+data volumes:
 
 - **Name**: Name of the volume.
 
 - **Size in GiB**: From 4 GiB to 512 GiB.
 
-- **Mount Point**: Path where the data volume can be accessed on the notebook server, by
-  default `/home/jovyan/<volume name>`.
+- **Mount path**: Path where the data volume can be accessed on the notebook server, by
+  default `/home/jovyan/vol-1`, `/home/jovyan/vol-2`, etc. (incrementing counter per data
+  volume mounted).
+
+When mounting an existing data volume, the name option becomes a drop-down list of the
+existing data volumes. Only a volume not currently mounted to an existing notebook server
+can be used. The mount path option remains user-configurable with the same defaults as
+creating a new volume.
 
 The garbage can icon on the right can be used to delete an existing or accidentally created
 data volume.
