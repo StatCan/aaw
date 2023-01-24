@@ -52,9 +52,11 @@ for your team.
 
 ## Image
 
-You will need to choose an image. There are JupyterLab, RStudio, and Ubuntu remote
-desktop images available. Select the drop down menu to select additional options
-within these (for instance, CPU, PyTorch, and TensorFlow images for JupyterLab).
+You will need to choose an image. There are JupyterLab, RStudio, Ubuntu remote
+desktop, and SAS images available. The SAS image is only available for StatCan
+employees (due to license limitations), the others are available for everyone.
+Select the drop down menu to select additional options within these (for
+instance, CPU, PyTorch, and TensorFlow images for JupyterLab).
 
 Check the name of the images and choose one that matches what you want to do. Don't know
 which one to choose? Check out your options [here](./Selecting-an-Image.md).
