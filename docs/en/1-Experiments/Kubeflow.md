@@ -122,10 +122,6 @@ are various configuration options available:
 
 - You can specify the size of the workspace volume, from 4 GiB to 32 GiB.
 
-- You can choose the option to not use persistent storage for home, in which case the
-  home folder will be deleted as soon as the notebook server is closed. Otherwise the
-  home folder will remain and can be used again for a new notebook server in the future.
-
 ![Create a Workspace Volume](../images/workspace-volume.PNG)
 
 <!-- prettier-ignore -->
