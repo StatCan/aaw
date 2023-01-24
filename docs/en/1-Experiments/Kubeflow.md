@@ -65,33 +65,43 @@ which one to choose? Check out your options [here](./Selecting-an-Image.md).
 
 ## CPU and Memory
 
-- At the time of writing (December 23, 2021) there are two types of computers in
-  the cluster
+At the time of writing (December 23, 2021) there are two types of computers in
+the cluster
 
-  - **CPU:** `D16s v3` (16 CPU cores, 64 GiB memory; for user use 15 CPU cores
-    and 48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for
-    system use).
-  - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
-    memory are available; 16 GiB memory reserved for system use). The available
-    GPU is the NVIDIA Tesla V100 GPU with specs 
-    [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
+ - **CPU:** `D16s v3` (16 CPU cores, 64 GiB memory; for user use 15 CPU cores
+   and 48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for
+   system use).
+ - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
+   memory are available; 16 GiB memory reserved for system use). The available
+   GPU is the NVIDIA Tesla V100 GPU with specs
+   [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
 
-  When creating a notebook server, the system will limit you to the maximum
-  specifications above. For CPU notebook servers, you can specify the exact
-  amount of CPU and memory that you require. This allows you to meet your
-  compute needs while minimising cost. For a GPU notebook server, you will
-  always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).
-  See below section on GPUs for information on how to select a GPU server.
+When creating a notebook server, the system will limit you to the maximum
+specifications above. For CPU notebook servers, you can specify the exact
+amount of CPU and memory that you require. This allows you to meet your
+compute needs while minimising cost. For a GPU notebook server, you will
+always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).
+See below section on GPUs for information on how to select a GPU server.
 
-  In the future there may be larger machines available, so you may have looser
-  restrictions.
+In the advanced options, you can select a higher limit than the number of CPU cores and
+RAM requested. The amount requested is the amount guaranteed to be available for your
+notebook server and you will always pay for at least this much. If the limit is higher
+than the amount requested, if additional RAM and CPU cores are available on that shared
+server in the cluster your notebook server can use them as needed. One use case for this
+is jobs that usually need only one CPU core but can benefit from multithreading to speed
+up certain operations. By requesting one CPU core but a higher limit, you can pay much
+less for the notebook server while allowing it to use spare unused CPU cores as needed
+to speed up computations.
+
+![Select CPU and RAM](../images/cpu-ram-select.png)
 
 ## GPUs
 
 If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the GPU
 vendor (the create button will be greyed out until the GPU vendor is selected if
-you have a GPU specified). Multi-GPU servers are not currently supported on the
-AAW system.
+you have a GPU specified). Multi-GPU servers are currently supported on the AAW
+system only on a special on-request basis, please contact the AAW maintainers if
+you would like a multi-GPU server.
 
 ![GPU Configuration](../images/kubeflow_gpu_selection.jpg)
 
