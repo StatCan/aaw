@@ -800,14 +800,14 @@ in the below file.</p>
 <span class="c1"># that you can use it within kubeflow.</span>
 
 <span class="c1"># Get an example database</span>
-wget https://github.com/StatCan/aaw-contrib-r-notebooks/raw/master/database-connections/latin_phrases.db
+wget<span class="w"> </span>https://github.com/StatCan/aaw-contrib-r-notebooks/raw/master/database-connections/latin_phrases.db
 
 <span class="c1"># If you have your own database, you can change this line!</span>
 <span class="nv">DATABASE</span><span class="o">=</span>latin_phrases.db
 
-<span class="nb">export</span> <span class="nv">BASE_URL</span><span class="o">=</span><span class="s2">&quot;https://kubeflow.covid.cloud.statcan.ca</span><span class="si">${</span><span class="nv">JUPYTER_SERVER_URL</span><span class="p">:</span><span class="nv">19</span><span class="si">}</span><span class="s2">proxy/8001/&quot;</span>
-<span class="nb">echo</span> <span class="s2">&quot;Base url: </span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">&quot;</span>
-datasette <span class="nv">$DATABASE</span> --cors --config max_returned_rows:100000 --config sql_time_limit_ms:5500 --config base_url:<span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">BASE_URL</span><span class="o">=</span><span class="s2">&quot;https://kubeflow.covid.cloud.statcan.ca</span><span class="si">${</span><span class="nv">JUPYTER_SERVER_URL</span><span class="p">:</span><span class="nv">19</span><span class="si">}</span><span class="s2">proxy/8001/&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Base url: </span><span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span><span class="s2">&quot;</span>
+datasette<span class="w"> </span><span class="nv">$DATABASE</span><span class="w"> </span>--cors<span class="w"> </span>--config<span class="w"> </span>max_returned_rows:100000<span class="w"> </span>--config<span class="w"> </span>sql_time_limit_ms:5500<span class="w"> </span>--config<span class="w"> </span>base_url:<span class="si">${</span><span class="nv">BASE_URL</span><span class="si">}</span>
 </code></pre></div>
 
 <!-- prettier-ignore -->

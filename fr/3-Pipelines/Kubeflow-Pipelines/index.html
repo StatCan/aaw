@@ -859,7 +859,7 @@ arguments et les résultats à extraire du conteneur. Pour utiliser réellement 
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span>\<span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Fabrique de ContainerOp moyen</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Fabrique de ContainerOp moyen</span>
 
 <span class="sd">    Accepte un nombre arbitraire de nombres d&#39;entrée, en renvoyant un ContainerOp</span>
 <span class="sd">    qui transmet ces nombres à l&#39;image du menu fixe sous-jacent pour faire la</span>
@@ -895,7 +895,7 @@ transmettant à des fonctions plus tard par l'accès à <code>avg\_\*.output</co
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;nom de mon pipeline&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de moyenne de pipeline, qui accepte cinq nombres et effectue quelques calculs de moyenne sur ceux-ci</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 

@@ -998,19 +998,19 @@ de vos besoins.</p>
 <div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/sh</span>
 <span class="nv">NOMCOMPLET</span><span class="o">=</span>blair-drummond
 <span class="c1"># Obtenir les justificatifs d&#39;identité</span>
-<span class="nb">source</span> /vault/secrets/minio-standard-tenant-1
+<span class="nb">source</span><span class="w"> </span>/vault/secrets/minio-standard-tenant-1
 <span class="c1"># Ajouter le stockage sous le pseudonyme « standard »</span>
-mc config host add standard <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
+mc<span class="w"> </span>config<span class="w"> </span>host<span class="w"> </span>add<span class="w"> </span>standard<span class="w"> </span><span class="nv">$MINIO_URL</span><span class="w"> </span><span class="nv">$MINIO_ACCESS_KEY</span><span class="w"> </span><span class="nv">$MINIO_SECRET_KEY</span>
 <span class="c1"># Créer un compartiment à votre nom</span>
 <span class="c1"># NOTE : Vous pouvez *uniquement* créer des compartiments nommés avec votre PRÉNOM-NOM.</span>
 <span class="c1"># Tout autre nom sera rejeté.</span>
 <span class="c1"># Compartiment privé (&quot;mb&quot; = &quot;créer compartiment&quot;)</span>
-mc mb standard/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
+mc<span class="w"> </span>mb<span class="w"> </span>standard/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
 <span class="c1"># Compartiment partagé</span>
-mc mb standard/shared/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
+mc<span class="w"> </span>mb<span class="w"> </span>standard/shared/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>
 <span class="c1"># Voilà! Vous pouvez maintenant copier des fichiers ou des dossiers!</span>
-<span class="o">[</span> -f test.txt <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Ceci est un test&quot;</span> &gt; test.txt
-mc cp test.txt standard/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>/test.txt
+<span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>test.txt<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Ceci est un test&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+mc<span class="w"> </span>cp<span class="w"> </span>test.txt<span class="w"> </span>standard/<span class="si">${</span><span class="nv">NOMCOMPLET</span><span class="si">}</span>/test.txt
 </code></pre></div>
 
 <p>Maintenant, ouvrez le document dans
@@ -1040,13 +1040,13 @@ OIDC Provider ».</p>
 <p><img alt="vault_Signin" src="images/vault_signin.png" /></p>
 <p>Exécutez la commande suivante dans le terminal situé dans le coin à droit:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Replacez standard avec premium pour changer le type de compartiment</span>
-<span class="nb">read</span> minio_standard_tenant_1/keys/profile-votreprénom-votrenom
+<span class="nb">read</span><span class="w"> </span>minio_standard_tenant_1/keys/profile-votreprénom-votrenom
 </code></pre></div>
 
 <p><img alt="Vault AccessKey" src="images/accessKey.png" /></p>
 <h4 id="methode-2-utiliser-le-serveur">Méthode 2: Utiliser le Serveur</h4>
 <p>Démarrez votre serveur et exécutez la commande suivante:</p>
-<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-standard-tenant-1
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/vault/secrets/minio-standard-tenant-1
 
 <span class="c1"># Output:</span>
 <span class="c1"># export MINIO_URL=&quot;http://minio.minio-standard-tenant-1 ...&quot;</span>

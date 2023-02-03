@@ -1097,25 +1097,25 @@ files. For example:</p>
 
 <span class="c1"># Get your personal credentials for the &quot;gateway-standard&quot; MinIO instance</span>
 <span class="c1"># (this initializes $MINIO_URL, $MINIO_ACCESS_KEY, and $MINIO_SECRET_KEY environment variables)</span>
-<span class="nb">source</span> /vault/secrets/minio-gateway-standard
+<span class="nb">source</span><span class="w"> </span>/vault/secrets/minio-gateway-standard
 
 <span class="c1"># Create a MinIO alias (called &quot;standard&quot;) for &quot;standard&quot; using your credentials</span>
-mc config host add standard <span class="nv">$MINIO_URL</span> <span class="nv">$MINIO_ACCESS_KEY</span> <span class="nv">$MINIO_SECRET_KEY</span>
+mc<span class="w"> </span>config<span class="w"> </span>host<span class="w"> </span>add<span class="w"> </span>standard<span class="w"> </span><span class="nv">$MINIO_URL</span><span class="w"> </span><span class="nv">$MINIO_ACCESS_KEY</span><span class="w"> </span><span class="nv">$MINIO_SECRET_KEY</span>
 
 <span class="c1"># Create a bucket under your name</span>
 <span class="c1"># NOTE: You can *only* create buckets named the same as your namespace. Any</span>
 <span class="c1"># other name will be rejected.</span>
 
 <span class="c1"># Private bucket (&quot;mb&quot; = &quot;make bucket&quot;)</span>
-mc mb -p standard/<span class="si">${</span><span class="nv">BUCKETNAME</span><span class="si">}</span>
+mc<span class="w"> </span>mb<span class="w"> </span>-p<span class="w"> </span>standard/<span class="si">${</span><span class="nv">BUCKETNAME</span><span class="si">}</span>
 
 <span class="c1"># Shared bucket</span>
-mc mb -p standard/shared/<span class="si">${</span><span class="nv">BUCKETNAME</span><span class="si">}</span>
+mc<span class="w"> </span>mb<span class="w"> </span>-p<span class="w"> </span>standard/shared/<span class="si">${</span><span class="nv">BUCKETNAME</span><span class="si">}</span>
 
 <span class="c1"># There you go! Now you can copy over files or folders!</span>
 <span class="c1"># Create test.txt (if it does not exist) and copy it to your bucket:</span>
-<span class="o">[</span> -f test.txt <span class="o">]</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;This is a test&quot;</span> &gt; test.txt
-mc cp test.txt standard/<span class="si">${</span><span class="nv">BUCKETNAME</span><span class="si">}</span>/test.txt
+<span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>test.txt<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is a test&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+mc<span class="w"> </span>cp<span class="w"> </span>test.txt<span class="w"> </span>standard/<span class="si">${</span><span class="nv">BUCKETNAME</span><span class="si">}</span>/test.txt
 </code></pre></div>
 
 <p>Now open the <a href="#minio-web-portal">MinIO Web Portal</a> or browse to
@@ -1199,13 +1199,13 @@ method OIDC, leave <strong>Role</strong> blank and Sign in with OIDC Provider.</
 <p><img alt="vault_Signin" src="../../images/vault_signin.png" /></p>
 <p>Run the following command in the terminal located at the top right corner:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Replace standard with premium depending on your Bucket type</span>
-<span class="nb">read</span> minio_standard_tenant_1/keys/profile-yourfirstname-yourlastname
+<span class="nb">read</span><span class="w"> </span>minio_standard_tenant_1/keys/profile-yourfirstname-yourlastname
 </code></pre></div>
 
 <p><img alt="Vault AccessKey" src="../../images/accessKey.png" /></p>
 <h4 id="method-2-get-credentials-from-running-notebook-server">Method 2: Get Credentials from Running Notebook Server<a class="headerlink" href="#method-2-get-credentials-from-running-notebook-server" title="Permanent link">&para;</a></h4>
 <p>Open a terminal in your Notebook and run:</p>
-<div class="codehilite"><pre><span></span><code>cat /vault/secrets/minio-gateway-standard
+<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/vault/secrets/minio-gateway-standard
 
 <span class="c1"># Output:</span>
 <span class="c1"># export MINIO_URL=&quot;http://minio.minio-gateway-standard ...&quot;</span>

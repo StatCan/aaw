@@ -1170,7 +1170,7 @@ we instead create a factory function we can reuse:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
 
 <span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Factory for average ContainerOps</span>
 
 <span class="sd">    Accepts an arbitrary number of input numbers, returning a ContainerOp that</span>
@@ -1201,7 +1201,7 @@ accessing <code>avg_*.output</code>.</p>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts five numbers and does some averaging</span>
 <span class="sd">    operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -1300,7 +1300,7 @@ recompiling our pipeline:</p>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># NEW CODE</span>
@@ -1321,8 +1321,8 @@ recompiling our pipeline:</p>
 
 <p>And when we <code>compile</code>, we see print statements:</p>
 <div class="codehilite"><pre><span></span><code><span class="x">The value of x is 2</span>
-<span class="x">The value of a is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">a</span><span class="cp">}}</span><span class="x"></span>
-<span class="x">The value of avg_1.output is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="nv">averge</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">data</span><span class="cp">}}</span><span class="x"></span>
+<span class="x">The value of a is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">a</span><span class="cp">}}</span>
+<span class="x">The value of avg_1.output is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="nv">averge</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">data</span><span class="cp">}}</span>
 </code></pre></div>
 
 <p>In the first print statement everything is normal. In the second and third print
@@ -1331,23 +1331,23 @@ while <code>compile</code> does "execute" <code>my_pipeline</code>, the KFP-spec
 don't actually generate results. This can also be seen in the YAML file that
 <code>compile</code> generates, for example looking at the portion defining our
 <code>average_result_overall</code> component:</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">average-3</span><span class="w"></span>
-<span class="w">  </span><span class="nt">container</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">args</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">[</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-data}}&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-2-data}}&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8scc01covidacr.azurecr.io/kfp-components/average:v1</span><span class="w"></span>
-<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-2-data</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-data</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">  </span><span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">artifacts</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-3-data</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">./out.txt</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> pipelines.kubeflow.org/pipeline-sdk-type</span><span class="p">:</span><span class="w"> </span><span class="nv">kfp</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">average-3</span>
+<span class="w">  </span><span class="nt">container</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">args</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">[</span>
+<span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-data}}&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-2-data}}&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">      </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8scc01covidacr.azurecr.io/kfp-components/average:v1</span>
+<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-2-data</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-data</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-3-data</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">./out.txt</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> pipelines.kubeflow.org/pipeline-sdk-type</span><span class="p">:</span><span class="w"> </span><span class="nv">kfp</span><span class="w"> </span><span class="p p-Indicator">}</span>
 </code></pre></div>
 
 <p>In this YAML we see the input parameters passed are placeholders for data from
@@ -1378,7 +1378,7 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">another_pipeline</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Prints to the screen 10 times</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -1397,7 +1397,7 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">another_another_pipeline</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Prints to the screen n times</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1460,7 +1460,7 @@ make <code>average_result_overall</code>, that component needs to deserialize th
 JSON and pull the data from it that it needs. And because these results are not
 available when authoring the pipeline, something like this does not work:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Compute averages for two groups</span>
@@ -1503,14 +1503,14 @@ contains two key-value pairs:</p>
 &quot;password&quot;: &quot;PASSWORD&quot;
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>kubectl create secret generic elastic-credentials <span class="se">\</span>
-    --from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span> <span class="se">\</span>
-    --from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span>
+<div class="codehilite"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>elastic-credentials<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span>
 </code></pre></div>
 
 <h5 id="get-an-existing-key-value-store">Get an existing key-value store<a class="headerlink" href="#get-an-existing-key-value-store" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><code><span class="c1"># The secrets will be base64 encoded.</span>
-kubectl get secret elastic-credentials
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>elastic-credentials
 </code></pre></div>
 
 <h5 id="mounting-kubernetes-secrets-to-environment-variables-in-container-operations">Mounting Kubernetes Secrets to Environment Variables in Container Operations<a class="headerlink" href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" title="Permanent link">&para;</a></h5>
@@ -1602,7 +1602,7 @@ pattern would be:</p>
 </ul>
 <p>Here is a schematic example of this pattern:</p>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Averaging pipeline which accepts two groups of numbers and does some averaging operations on them</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># Compute averages for two groups</span>
@@ -1741,32 +1741,32 @@ terminal commands from a given Docker image. This can be a great way to make
 non-Python pipeline components from existing containers. As with all components,
 we can pass both arguments and data files into/out of the component. For
 example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concat Strings</span><span class="w"></span>
-<span class="nt">inputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="nt">outputs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="nt">implementation</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">container</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash:5</span><span class="w"></span>
-<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-ex</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">        </span><span class="no">echo &quot;$0 | $1&quot; | tee $2</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> outputPath</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="p p-Indicator">,</span>
+<span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span>
+<span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="p p-Indicator">,</span>
+<span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span>
+<span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="p p-Indicator">}</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="nt">implementation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">container</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash:5</span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-ex</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">echo &quot;$0 | $1&quot; | tee $2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> outputPath</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="w"> </span><span class="p p-Indicator">}</span>
 </code></pre></div>
 
 <p>This example concatenates two strings like our lightweight example above. We
