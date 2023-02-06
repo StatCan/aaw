@@ -65,4 +65,6 @@ nav:
       - Overview: 5-Storage/Overview.md
       - Disks: 5-Storage/Disks.md
       - MinIO: 5-Storage/MinIO.md
+  - Gitlab:
+      - Gitlab: 6-Gitlab/Gitlab.md
   - Help/Contact: Help.md
