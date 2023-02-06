@@ -11,7 +11,7 @@
         <meta name="description" content="User guide for the DAaaS AAW Platform">
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/en/3-Pipelines/PaaS/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/6-Gitlab/Gitlab/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -19,7 +19,7 @@
     
     
       
-        <title>PaaS Integration - Advanced Analytics Workspace</title>
+        <title>Gitlab - Advanced Analytics Workspace</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#step-1-locate-the-git-repo-you-want-to-clone-and-copy-the-clone-with-https-option" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              PaaS Integration
+              Gitlab
             
           </span>
         </div>
@@ -368,12 +368,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Pipelines
@@ -397,7 +395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
+    <a href="../../3-Pipelines/Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-nav__link">
       Kubeflow Pipelines
     </a>
   </li>
@@ -407,69 +405,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        PaaS Integration
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="PaaS Integration" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../3-Pipelines/PaaS/" title="PaaS Integration" class="md-nav__link">
       PaaS Integration
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integrate-with-platforms-like-databricks-and-azureml" class="md-nav__link">
-    Integrate with Platforms like Databricks and AzureML
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -479,7 +419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Serving/" title="Model Serving" class="md-nav__link">
+    <a href="../../3-Pipelines/Serving/" title="Model Serving" class="md-nav__link">
       Model Serving
     </a>
   </li>
@@ -626,10 +566,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Gitlab
@@ -651,11 +593,91 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../6-Gitlab/Gitlab/" title="Gitlab" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Gitlab
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Gitlab" class="md-nav__link md-nav__link--active">
       Gitlab
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-locate-the-git-repo-you-want-to-clone-and-copy-the-clone-with-https-option" class="md-nav__link">
+    Step 1: Locate the Git repo you want to clone and copy the clone with HTTPS option
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-paste-the-copied-link-into-one-of-your-workspace-servers" class="md-nav__link">
+    Step 2: Paste the copied link into one of your workspace servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-success" class="md-nav__link">
+    Step 3: Success!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-a-personal-access-token-for-pushing-also-used-if-pulling-from-a-private-repository" class="md-nav__link">
+    Step 4: Create a Personal Access Token for pushing (also used if pulling from a private repository)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-personalize-git-to-be-you" class="md-nav__link">
+    Step 5: Personalize Git to be you
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-supply-the-generated-token-when-asked-for-your-password" class="md-nav__link">
+    Step 6: Supply the Generated Token when asked for your password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-see-the-results-of-your-hard-work-in-gitlab" class="md-nav__link">
+    Step 7: See the results of your hard work in gitlab
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -700,28 +722,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#step-1-locate-the-git-repo-you-want-to-clone-and-copy-the-clone-with-https-option" class="md-nav__link">
+    Step 1: Locate the Git repo you want to clone and copy the clone with HTTPS option
   </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integrate-with-platforms-like-databricks-and-azureml" class="md-nav__link">
-    Integrate with Platforms like Databricks and AzureML
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
+  <a href="#step-2-paste-the-copied-link-into-one-of-your-workspace-servers" class="md-nav__link">
+    Step 2: Paste the copied link into one of your workspace servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-success" class="md-nav__link">
+    Step 3: Success!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-a-personal-access-token-for-pushing-also-used-if-pulling-from-a-private-repository" class="md-nav__link">
+    Step 4: Create a Personal Access Token for pushing (also used if pulling from a private repository)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-personalize-git-to-be-you" class="md-nav__link">
+    Step 5: Personalize Git to be you
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-supply-the-generated-token-when-asked-for-your-password" class="md-nav__link">
+    Step 6: Supply the Generated Token when asked for your password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-see-the-results-of-your-hard-work-in-gitlab" class="md-nav__link">
+    Step 7: See the results of your hard work in gitlab
   </a>
   
 </li>
@@ -738,7 +782,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/StatCan/daaas/edit/master/docs/en/3-Pipelines/PaaS.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/StatCan/daaas/edit/master/docs/en/6-Gitlab/Gitlab.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -746,20 +790,32 @@
                   
                 
                 
-                  <h1>PaaS Integration</h1>
+                  <h1>Gitlab</h1>
                 
-                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<h3 id="integrate-with-platforms-like-databricks-and-azureml">Integrate with Platforms like Databricks and AzureML<a class="headerlink" href="#integrate-with-platforms-like-databricks-and-azureml" title="Permanent link">&para;</a></h3>
-<p>The AAW platform is built around the idea of integrations, and so we can
-integrate with many <em>Platform as a Service</em> (PaaS) offerings, such as
-<a href="https://azure.microsoft.com/en-us/services/machine-learning/">Azure ML</a> and
-<a href="https://azure.microsoft.com/en-ca/services/databricks/">Databricks</a>.</p>
-<p>See some examples on our
-<a href="https://github.com/StatCan/aaw-kubeflow-mlops">"MLOps" github Repo</a>.</p>
-<p><img alt="PaaS" src="../../images/PaaS.png" /></p>
-<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<p>If you need help integrating with a platform as a service offering, we're happy
-to help!</p>
+                <p><img alt="image" src="https://user-images.githubusercontent.com/23174198/217059855-1ea17aba-d722-467e-96f4-0a37eda3f035.png" /></p>
+<p>Thankfully, using the cloud main gitlab on the AAW is just like how you would regularly use git. </p>
+<h4 id="step-1-locate-the-git-repo-you-want-to-clone-and-copy-the-clone-with-https-option">Step 1: Locate the Git repo you want to clone and copy the clone with HTTPS option<a class="headerlink" href="#step-1-locate-the-git-repo-you-want-to-clone-and-copy-the-clone-with-https-option" title="Permanent link">&para;</a></h4>
+<p>If your repository is private, you will need to also do Step 4 (Creating a Personal Access Token) for this to go through. 
+For me this was a test repo 
+<img alt="image" src="https://user-images.githubusercontent.com/23174198/217060353-ba229ced-b5c1-4eae-8878-9608835cc65f.png" /></p>
+<h4 id="step-2-paste-the-copied-link-into-one-of-your-workspace-servers">Step 2: Paste the copied link into one of your workspace servers<a class="headerlink" href="#step-2-paste-the-copied-link-into-one-of-your-workspace-servers" title="Permanent link">&para;</a></h4>
+<p><img alt="image" src="https://user-images.githubusercontent.com/23174198/217060697-535df6c1-d9bb-4bc3-a42b-9f085a5386d5.png" /></p>
+<h4 id="step-3-success">Step 3: Success!<a class="headerlink" href="#step-3-success" title="Permanent link">&para;</a></h4>
+<p>As seen in the above screenshot I have cloned the repo!</p>
+<h4 id="step-4-create-a-personal-access-token-for-pushing-also-used-if-pulling-from-a-private-repository">Step 4: Create a Personal Access Token for pushing (also used if pulling from a private repository)<a class="headerlink" href="#step-4-create-a-personal-access-token-for-pushing-also-used-if-pulling-from-a-private-repository" title="Permanent link">&para;</a></h4>
+<p>If you try to <code>git push ....</code> you will encounter an error eventually leading you to the <a href="https://gitlab.k8s.cloud.statcan.ca/help/user/profile/account/two_factor_authentication.md#error-http-basic-access-denied-the-provided-password-or-token-">gitlab help documentation</a></p>
+<p>You will need to make a Personal Access Token for this. To achieve this go in gitlab, click your profile icon and then hit <code>Preferences</code> and then <code>Access Tokens</code>
+<img alt="image" src="https://user-images.githubusercontent.com/23174198/217061060-122dded8-dc80-46ce-a907-a85913cf5dd7.png" />
+Follow the prompts entering the name, the token expiration date and granting the token permissions (I granted <code>write_repository</code>)</p>
+<h4 id="step-5-personalize-git-to-be-you">Step 5: Personalize <code>Git</code> to be you<a class="headerlink" href="#step-5-personalize-git-to-be-you" title="Permanent link">&para;</a></h4>
+<p>Run <code>git config user.email ....</code> and <code>git config user.name ...</code> to match your gitlab identity.</p>
+<h4 id="step-6-supply-the-generated-token-when-asked-for-your-password">Step 6: Supply the Generated Token when asked for your password<a class="headerlink" href="#step-6-supply-the-generated-token-when-asked-for-your-password" title="Permanent link">&para;</a></h4>
+<p>The token will by copy-able at the top once you hit <code>Create personal access token</code> at the bottom
+<img alt="image" src="https://user-images.githubusercontent.com/23174198/217062846-03a715f1-ded5-4d80-ad4b-c647ae5e30fd.png" /></p>
+<p>Once you have prepared everything it's time
+<img alt="image" src="https://user-images.githubusercontent.com/23174198/217063198-c1bd6c3a-ebc5-444d-98ba-24ef32faa20e.png" /></p>
+<h4 id="step-7-see-the-results-of-your-hard-work-in-gitlab">Step 7: See the results of your hard work in gitlab<a class="headerlink" href="#step-7-see-the-results-of-your-hard-work-in-gitlab" title="Permanent link">&para;</a></h4>
+<p><img alt="image" src="https://user-images.githubusercontent.com/23174198/217063990-efaa8e81-a0eb-4b6d-842e-2ca3112bb4f7.png" /></p>
                 
               
               
@@ -778,7 +834,7 @@ to help!</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Kubeflow-Pipelines/" title="Kubeflow Pipelines" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../5-Storage/MinIO/" title="MinIO" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -787,19 +843,19 @@ to help!</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Kubeflow Pipelines
+                MinIO
               </div>
             </div>
           </a>
         
         
-          <a href="../Serving/" title="Model Serving" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Help/" title="Help/Contact" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Model Serving
+                Help/Contact
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
