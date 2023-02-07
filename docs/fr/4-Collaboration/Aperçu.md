@@ -109,5 +109,5 @@ possédez déjà via le Menu **Gérer les contributeurs** dans Kubeflow.
 ![Contributors Menu](../images/kubeflow_contributors.png)
 
 <!-- prettier-ignore -->
- info "Maintenant, vous et vos collègues pouvez partager l'accès à un serveur!"
+!!! info "Maintenant, vous et vos collègues pouvez partager l'accès à un serveur!"
     Essayer le!

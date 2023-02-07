@@ -60,8 +60,11 @@ nav:
   - Collaboration:
       - Overview: 4-Collaboration/Overview.md
       - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
+      - GEA: 4-Collaboration/Geospatial-Analytical-Environment.md
   - Storage:
       - Overview: 5-Storage/Overview.md
       - Disks: 5-Storage/Disks.md
       - MinIO: 5-Storage/MinIO.md
+  - Gitlab:
+      - Gitlab: 6-Gitlab/Gitlab.md
   - Help/Contact: Help.md
