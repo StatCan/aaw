@@ -1,0 +1,3453 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Developer Docs">
+      
+      
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/Aaw%20Kubeflow%20Containers/">
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Containers for Kubeflow - AAW Dev Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#containers-for-kubeflow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://statcan.github.io/daaas/en/" title="AAW Dev Docs" class="md-header-nav__button md-logo" aria-label="AAW Dev Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            AAW Dev Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Containers for Kubeflow
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/StatCan/daaas/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    StatCan/daaas
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://statcan.github.io/daaas/en/" title="AAW Dev Docs" class="md-nav__button md-logo" aria-label="AAW Dev Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AAW Dev Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/StatCan/daaas/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    StatCan/daaas
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="AAW Dev docs" class="md-nav__link">
+      AAW Dev docs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Aaw Argocd Applications
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Argocd Applications" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Argocd Applications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Argocd%20Applications/" title="ArgoCD Applications" class="md-nav__link">
+      ArgoCD Applications
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Aaw Argocd Manifests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Argocd Manifests" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Argocd Manifests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Argocd%20Manifests/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Aaw Argoflow Azure
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Argoflow Azure" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Argoflow Azure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Argoflow%20Azure/" title="Deploying Kubeflow with ArgoCD" class="md-nav__link">
+      Deploying Kubeflow with ArgoCD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Aaw Contrib Containers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Contrib Containers" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Contrib Containers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Contrib%20Containers/" title="Containers for DAaaS" class="md-nav__link">
+      Containers for DAaaS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Aaw Contrib Jupyter Notebooks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Contrib Jupyter Notebooks" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Contrib Jupyter Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Contrib%20Jupyter%20Notebooks/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Aaw Contrib R Notebooks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Contrib R Notebooks" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Contrib R Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Contrib%20R%20Notebooks/" title="R-notebooks" class="md-nav__link">
+      R-notebooks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Aaw Goofys Injector
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Goofys Injector" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Goofys Injector
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Goofys%20Injector/" title="Goofys Injector" class="md-nav__link">
+      Goofys Injector
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Aaw Gpu Toleration Injector
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Gpu Toleration Injector" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Gpu Toleration Injector
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Gpu%20Toleration%20Injector/" title="GPU Toleration Injector" class="md-nav__link">
+      GPU Toleration Injector
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Aaw Inferenceservices Controller
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Inferenceservices Controller" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Inferenceservices Controller
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Inferenceservices%20Controller/" title="inferenceservices-controller" class="md-nav__link">
+      inferenceservices-controller
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+    
+    <label class="md-nav__link" for="nav-11">
+      Aaw Kubeflow Containers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Containers" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Containers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Containers for Kubeflow
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Containers for Kubeflow" class="md-nav__link md-nav__link--active">
+      Containers for Kubeflow
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containers-for-kubeflow" class="md-nav__link">
+    Containers for Kubeflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Containers for Kubeflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-maintained-images-in-this-github-repository" class="md-nav__link">
+    List of maintained images in this github repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-dockerfiles" class="md-nav__link">
+    Generating Dockerfiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-and-tagging-docker-images" class="md-nav__link">
+    Building and Tagging Docker Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulling-and-pushing-docker-images" class="md-nav__link">
+    Pulling and Pushing Docker Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-images" class="md-nav__link">
+    Testing images
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-and-connecting-to-images-locallyinteractively" class="md-nav__link">
+    Running and Connecting to Images Locally/Interactively
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing" class="md-nav__link">
+    Automated Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-development-workflow" class="md-nav__link">
+    General Development Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="General Development Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-aaw-locally-simple-instructions" class="md-nav__link">
+    💻 Running AAW Locally (simple instructions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-dockerfiles-local-testing" class="md-nav__link">
+    Modifying Dockerfiles (local testing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-dockerfiles-on-platform-testing" class="md-nav__link">
+    Modifying Dockerfiles (on-platform testing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-bits-the-makefile-and-you" class="md-nav__link">
+    docker-bits, the Makefile and You
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-software" class="md-nav__link">
+    Adding new software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-images" class="md-nav__link">
+    Adding new Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-and-testing-ci" class="md-nav__link">
+    Modifying and Testing CI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-development-notes" class="md-nav__link">
+    Other Development Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Development Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-latest-and-v1-tags-for-the-master-branch" class="md-nav__link">
+    The latest and v1 tags for the master branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files" class="md-nav__link">
+    Set User File Permissions after Every pip/conda Install or Edit of User's Home Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Aaw Kubeflow Controller
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Controller" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Controller
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Kubeflow%20Controller/" title="kubeflow-controller" class="md-nav__link">
+      kubeflow-controller
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Aaw Kubeflow Manifests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Manifests" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Manifests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Kubeflow%20Manifests/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Aaw Kubeflow Mlops
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Mlops" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Mlops
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Kubeflow%20Mlops/" title="Kubeflow MLOps" class="md-nav__link">
+      Kubeflow MLOps
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      Aaw Kubeflow Opa Sync
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Opa Sync" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Opa Sync
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Kubeflow%20Opa%20Sync/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Aaw Kubeflow Pipelines Secret Scanner
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Pipelines Secret Scanner" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Pipelines Secret Scanner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" title="kfp-secret-scanner" class="md-nav__link">
+      kfp-secret-scanner
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Aaw Kubeflow Profiles Controller
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Kubeflow Profiles Controller" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Kubeflow Profiles Controller
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Kubeflow%20Profiles%20Controller/" title="profiles-controller" class="md-nav__link">
+      profiles-controller
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      Aaw Minio Credential Injector
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Minio Credential Injector" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Minio Credential Injector
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Minio%20Credential%20Injector/" title="minio-credential-injector" class="md-nav__link">
+      minio-credential-injector
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-19" type="checkbox" id="nav-19">
+    
+    <label class="md-nav__link" for="nav-19">
+      Aaw Namespace Injector
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Namespace Injector" data-md-level="1">
+      <label class="md-nav__title" for="nav-19">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Namespace Injector
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Namespace%20Injector/" title="namespace-injector" class="md-nav__link">
+      namespace-injector
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      Aaw Prob Notebook Controller
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Prob Notebook Controller" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Prob Notebook Controller
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Prob%20Notebook%20Controller/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-21" type="checkbox" id="nav-21">
+    
+    <label class="md-nav__link" for="nav-21">
+      Aaw Profile State Controller
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Profile State Controller" data-md-level="1">
+      <label class="md-nav__title" for="nav-21">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Profile State Controller
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Profile%20State%20Controller/" title="Profile State Controller" class="md-nav__link">
+      Profile State Controller
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-22" type="checkbox" id="nav-22">
+    
+    <label class="md-nav__link" for="nav-22">
+      Aaw Security Scanning Containers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Security Scanning Containers" data-md-level="1">
+      <label class="md-nav__title" for="nav-22">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Security Scanning Containers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Security%20Scanning%20Containers/" title="aaw-platform-containers" class="md-nav__link">
+      aaw-platform-containers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23" type="checkbox" id="nav-23">
+    
+    <label class="md-nav__link" for="nav-23">
+      Aaw Toleration Injector
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aaw Toleration Injector" data-md-level="1">
+      <label class="md-nav__title" for="nav-23">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aaw Toleration Injector
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Aaw%20Toleration%20Injector/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-24" type="checkbox" id="nav-24">
+    
+    <label class="md-nav__link" for="nav-24">
+      Boathouse
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Boathouse" data-md-level="1">
+      <label class="md-nav__title" for="nav-24">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Boathouse
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Boathouse/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-25" type="checkbox" id="nav-25">
+    
+    <label class="md-nav__link" for="nav-25">
+      Charts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Charts" data-md-level="1">
+      <label class="md-nav__title" for="nav-25">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Charts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Charts/" title="Helm Charts" class="md-nav__link">
+      Helm Charts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      Daaas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Daaas" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Daaas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Daaas/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Daaas/CHANGELOG/" title="CHANGELOG" class="md-nav__link">
+      CHANGELOG
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Geoserver
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Geoserver" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Geoserver
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Geoserver/" title="GeoServer" class="md-nav__link">
+      GeoServer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-28" type="checkbox" id="nav-28">
+    
+    <label class="md-nav__link" for="nav-28">
+      Goofys
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Goofys" data-md-level="1">
+      <label class="md-nav__title" for="nav-28">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Goofys
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Goofys/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-29" type="checkbox" id="nav-29">
+    
+    <label class="md-nav__link" for="nav-29">
+      Jupyter Apis
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Jupyter Apis" data-md-level="1">
+      <label class="md-nav__title" for="nav-29">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Jupyter Apis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Jupyter%20Apis/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-30" type="checkbox" id="nav-30">
+    
+    <label class="md-nav__link" for="nav-30">
+      Jupyterlab Language Pack Fr fr
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Jupyterlab Language Pack Fr fr" data-md-level="1">
+      <label class="md-nav__title" for="nav-30">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Jupyterlab Language Pack Fr fr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Jupyterlab%20Language%20Pack%20Fr_fr/" title="JupyterLab fr-FR Language Pack" class="md-nav__link">
+      JupyterLab fr-FR Language Pack
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-31" type="checkbox" id="nav-31">
+    
+    <label class="md-nav__link" for="nav-31">
+      Kubecost
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubecost" data-md-level="1">
+      <label class="md-nav__title" for="nav-31">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Kubecost
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubecost/" title="Kubecost" class="md-nav__link">
+      Kubecost
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-32" type="checkbox" id="nav-32">
+    
+    <label class="md-nav__link" for="nav-32">
+      Kubeflow
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubeflow" data-md-level="1">
+      <label class="md-nav__title" for="nav-32">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Kubeflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubeflow/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubeflow/CHANGELOG/" title="Change Log" class="md-nav__link">
+      Change Log
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-33" type="checkbox" id="nav-33">
+    
+    <label class="md-nav__link" for="nav-33">
+      Kubeflow Containers Desktop
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubeflow Containers Desktop" data-md-level="1">
+      <label class="md-nav__title" for="nav-33">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Kubeflow Containers Desktop
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubeflow%20Containers%20Desktop/" title="Important" class="md-nav__link">
+      Important
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-34" type="checkbox" id="nav-34">
+    
+    <label class="md-nav__link" for="nav-34">
+      Kubeflow Pipelines
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubeflow Pipelines" data-md-level="1">
+      <label class="md-nav__title" for="nav-34">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Kubeflow Pipelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubeflow%20Pipelines/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubeflow%20Pipelines/CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-35" type="checkbox" id="nav-35">
+    
+    <label class="md-nav__link" for="nav-35">
+      Minio Deploy
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Minio Deploy" data-md-level="1">
+      <label class="md-nav__title" for="nav-35">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Minio Deploy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minio%20Deploy/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-36" type="checkbox" id="nav-36">
+    
+    <label class="md-nav__link" for="nav-36">
+      Minio Operator
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Minio Operator" data-md-level="1">
+      <label class="md-nav__title" for="nav-36">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Minio Operator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minio%20Operator/" title="Minio" class="md-nav__link">
+      Minio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-37" type="checkbox" id="nav-37">
+    
+    <label class="md-nav__link" for="nav-37">
+      Mlflow Operator
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mlflow Operator" data-md-level="1">
+      <label class="md-nav__title" for="nav-37">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Mlflow Operator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Mlflow%20Operator/" title="MLFlow Operator" class="md-nav__link">
+      MLFlow Operator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-38" type="checkbox" id="nav-38">
+    
+    <label class="md-nav__link" for="nav-38">
+      Pachyderm
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Pachyderm" data-md-level="1">
+      <label class="md-nav__title" for="nav-38">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Pachyderm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Pachyderm/" title="Pachyderm" class="md-nav__link">
+      Pachyderm
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-39" type="checkbox" id="nav-39">
+    
+    <label class="md-nav__link" for="nav-39">
+      R Dashboards
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="R Dashboards" data-md-level="1">
+      <label class="md-nav__title" for="nav-39">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        R Dashboards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../R%20Dashboards/" title="R-dashboards" class="md-nav__link">
+      R-dashboards
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-40" type="checkbox" id="nav-40">
+    
+    <label class="md-nav__link" for="nav-40">
+      Shiny
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Shiny" data-md-level="1">
+      <label class="md-nav__title" for="nav-40">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Shiny
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Shiny/" title="Shiny Server" class="md-nav__link">
+      Shiny Server
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-41" type="checkbox" id="nav-41">
+    
+    <label class="md-nav__link" for="nav-41">
+      Terraform Advanced Analytics Workspaces Infrastructure Example
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Advanced Analytics Workspaces Infrastructure Example" data-md-level="1">
+      <label class="md-nav__title" for="nav-41">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Advanced Analytics Workspaces Infrastructure Example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-42" type="checkbox" id="nav-42">
+    
+    <label class="md-nav__link" for="nav-42">
+      Terraform Azure Statcan Aaw Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Azure Statcan Aaw Environment" data-md-level="1">
+      <label class="md-nav__title" for="nav-42">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Azure Statcan Aaw Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Azure%20Statcan%20Aaw%20Environment/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-43" type="checkbox" id="nav-43">
+    
+    <label class="md-nav__link" for="nav-43">
+      Terraform Azure Statcan Aaw Network
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Azure Statcan Aaw Network" data-md-level="1">
+      <label class="md-nav__title" for="nav-43">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Azure Statcan Aaw Network
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Azure%20Statcan%20Aaw%20Network/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-44" type="checkbox" id="nav-44">
+    
+    <label class="md-nav__link" for="nav-44">
+      Terraform Azure Statcan Aaw Region Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Azure Statcan Aaw Region Environment" data-md-level="1">
+      <label class="md-nav__title" for="nav-44">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Azure Statcan Aaw Region Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-45" type="checkbox" id="nav-45">
+    
+    <label class="md-nav__link" for="nav-45">
+      Terraform Azure Statcan Cloud Native Environment Infrastructure
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Azure Statcan Cloud Native Environment Infrastructure" data-md-level="1">
+      <label class="md-nav__title" for="nav-45">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Azure Statcan Cloud Native Environment Infrastructure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" title="Statistics Canada: Azure Cloud Native Environment Infrastructure" class="md-nav__link">
+      Statistics Canada: Azure Cloud Native Environment Infrastructure
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-46" type="checkbox" id="nav-46">
+    
+    <label class="md-nav__link" for="nav-46">
+      Terraform Azurerm Kubernetes Cluster
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Azurerm Kubernetes Cluster" data-md-level="1">
+      <label class="md-nav__title" for="nav-46">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Azurerm Kubernetes Cluster
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster/" title="Azure Kubernetes Service (AKS) Cluster" class="md-nav__link">
+      Azure Kubernetes Service (AKS) Cluster
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-47" type="checkbox" id="nav-47">
+    
+    <label class="md-nav__link" for="nav-47">
+      Terraform Azurerm Kubernetes Cluster Nodepool
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Azurerm Kubernetes Cluster Nodepool" data-md-level="1">
+      <label class="md-nav__title" for="nav-47">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Azurerm Kubernetes Cluster Nodepool
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" title="Azure Kubernetes Service (AKS) Cluster" class="md-nav__link">
+      Azure Kubernetes Service (AKS) Cluster
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-48" type="checkbox" id="nav-48">
+    
+    <label class="md-nav__link" for="nav-48">
+      Terraform Kubernetes Aks Daaas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Kubernetes Aks Daaas" data-md-level="1">
+      <label class="md-nav__title" for="nav-48">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Kubernetes Aks Daaas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Kubernetes%20Aks%20Daaas/" title="Terraform for Azure Kubernetes Service" class="md-nav__link">
+      Terraform for Azure Kubernetes Service
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-49" type="checkbox" id="nav-49">
+    
+    <label class="md-nav__link" for="nav-49">
+      Terraform Kubernetes Aks Platform Daaas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Kubernetes Aks Platform Daaas" data-md-level="1">
+      <label class="md-nav__title" for="nav-49">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Kubernetes Aks Platform Daaas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" title="Terraform for Azure Kubernetes Service Platform" class="md-nav__link">
+      Terraform for Azure Kubernetes Service Platform
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-50" type="checkbox" id="nav-50">
+    
+    <label class="md-nav__link" for="nav-50">
+      Terraform Kubernetes Cert Manager Certificate
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Kubernetes Cert Manager Certificate" data-md-level="1">
+      <label class="md-nav__title" for="nav-50">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Kubernetes Cert Manager Certificate
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" title="Terraform Kubernetes Cert-Manager Certificate" class="md-nav__link">
+      Terraform Kubernetes Cert-Manager Certificate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-51" type="checkbox" id="nav-51">
+    
+    <label class="md-nav__link" for="nav-51">
+      Terraform Kubernetes Cert Manager Issuer
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Kubernetes Cert Manager Issuer" data-md-level="1">
+      <label class="md-nav__title" for="nav-51">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Kubernetes Cert Manager Issuer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" title="Terraform Kubernetes Cert Manager Issuer" class="md-nav__link">
+      Terraform Kubernetes Cert Manager Issuer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-52" type="checkbox" id="nav-52">
+    
+    <label class="md-nav__link" for="nav-52">
+      Terraform Kubernetes Istio Operator Cr
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Kubernetes Istio Operator Cr" data-md-level="1">
+      <label class="md-nav__title" for="nav-52">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Kubernetes Istio Operator Cr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" title="terraform-kubernetes-istio-operator-cr" class="md-nav__link">
+      terraform-kubernetes-istio-operator-cr
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-53" type="checkbox" id="nav-53">
+    
+    <label class="md-nav__link" for="nav-53">
+      Terraform Statcan Aaw Infrastructure Example
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Statcan Aaw Infrastructure Example" data-md-level="1">
+      <label class="md-nav__title" for="nav-53">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Statcan Aaw Infrastructure Example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-54" type="checkbox" id="nav-54">
+    
+    <label class="md-nav__link" for="nav-54">
+      Terraform Statcan Aaw Platform
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terraform Statcan Aaw Platform" data-md-level="1">
+      <label class="md-nav__title" for="nav-54">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Terraform Statcan Aaw Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Terraform%20Statcan%20Aaw%20Platform/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-55" type="checkbox" id="nav-55">
+    
+    <label class="md-nav__link" for="nav-55">
+      Vault Plugin Secrets Minio
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vault Plugin Secrets Minio" data-md-level="1">
+      <label class="md-nav__title" for="nav-55">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vault Plugin Secrets Minio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vault%20Plugin%20Secrets%20Minio/" title="vault-plugin-secrets-minio" class="md-nav__link">
+      vault-plugin-secrets-minio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-56" type="checkbox" id="nav-56">
+    
+    <label class="md-nav__link" for="nav-56">
+      Getting started
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Getting started" data-md-level="1">
+      <label class="md-nav__title" for="nav-56">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Getting started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting%20started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting%20started/login/" title="Login" class="md-nav__link">
+      Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting%20started/setup/" title="Setup" class="md-nav__link">
+      Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting%20started/tms/" title="Time Managment System" class="md-nav__link">
+      Time Managment System
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getting%20started/vm/" title="Setting up your Cloud VM" class="md-nav__link">
+      Setting up your Cloud VM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containers-for-kubeflow" class="md-nav__link">
+    Containers for Kubeflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Containers for Kubeflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-maintained-images-in-this-github-repository" class="md-nav__link">
+    List of maintained images in this github repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-dockerfiles" class="md-nav__link">
+    Generating Dockerfiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-and-tagging-docker-images" class="md-nav__link">
+    Building and Tagging Docker Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulling-and-pushing-docker-images" class="md-nav__link">
+    Pulling and Pushing Docker Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-images" class="md-nav__link">
+    Testing images
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-and-connecting-to-images-locallyinteractively" class="md-nav__link">
+    Running and Connecting to Images Locally/Interactively
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-testing" class="md-nav__link">
+    Automated Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-development-workflow" class="md-nav__link">
+    General Development Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="General Development Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-aaw-locally-simple-instructions" class="md-nav__link">
+    💻 Running AAW Locally (simple instructions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-dockerfiles-local-testing" class="md-nav__link">
+    Modifying Dockerfiles (local testing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-dockerfiles-on-platform-testing" class="md-nav__link">
+    Modifying Dockerfiles (on-platform testing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-bits-the-makefile-and-you" class="md-nav__link">
+    docker-bits, the Makefile and You
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-software" class="md-nav__link">
+    Adding new software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-images" class="md-nav__link">
+    Adding new Images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-and-testing-ci" class="md-nav__link">
+    Modifying and Testing CI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-development-notes" class="md-nav__link">
+    Other Development Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Development Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-latest-and-v1-tags-for-the-master-branch" class="md-nav__link">
+    The latest and v1 tags for the master branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files" class="md-nav__link">
+    Set User File Permissions after Every pip/conda Install or Edit of User's Home Files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link" class="md-nav__link">
+    Link
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/StatCan/daaas/edit/master/docs/dev/Aaw Kubeflow Containers/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Containers for Kubeflow</h1>
+                
+                <h2 id="containers-for-kubeflow">Containers for Kubeflow<a class="headerlink" href="#containers-for-kubeflow" title="Permanent link">&para;</a></h2>
+<p>Container images to be used with kubeflow on the AAW platform for Data Science &amp; other workloads.</p>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<p>Our Container images are based on the community driven <a href="https://github.com/jupyter/docker-stacks">jupyter/docker-stacks</a>. We chose those images because they are continuously updated and install the most common utilities. This enables us to focus only on the additional toolsets that we require to enable our data scientists. These customized images are maintained by the AAW team and are the default images available on the kubeflow UI. This is different from the <a href="https://github.com/StatCan/aaw-contrib-containers">aaw-contrib-containers</a> as those images are built by AAW user-base. These are often created when a user's workload is more specific and our generic images are not suitable for them. Those images can be used via the <code>custom-image</code> feature in kubeflow and do not populate the default images drop-down. Additionally, the AAW team is not responsible for maintaining those images.</p>
+<h3 id="list-of-maintained-images-in-this-github-repository">List of maintained images in this github repository<a class="headerlink" href="#list-of-maintained-images-in-this-github-repository" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Image Name</th>
+<th>Notes</th>
+<th>Extra Installations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jupyterlab-cpu</td>
+<td>The base experience. A jupyterlab notebook with various installations.</td>
+<td>VsCode, R, Julia</td>
+</tr>
+<tr>
+<td>jupyterlab-pytorch</td>
+<td>For users looking to leverage a GPU machine. Comes installed with pytorch</td>
+<td>pytorch, torchvision</td>
+</tr>
+<tr>
+<td>jupyterlab-tensorflow</td>
+<td>For users looking to leverage a GPU machine. Comes installed with tensorflow</td>
+<td>tensorflow-gpu</td>
+</tr>
+<tr>
+<td>remote-desktop</td>
+<td>For users looking to have a desktop-like experience.</td>
+<td>Open M++, QGIS</td>
+</tr>
+<tr>
+<td>rstudio</td>
+<td>For users looking to have a rstudio tuned experience.</td>
+<td></td>
+</tr>
+<tr>
+<td>sas</td>
+<td>Similar to our jupyterlab-cpu image, except with SAS. This is only available  to Statistics Canada employees as that is what our license allows.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<h4 id="generating-dockerfiles">Generating Dockerfiles<a class="headerlink" href="#generating-dockerfiles" title="Permanent link">&para;</a></h4>
+<p>Use <code>make generate-dockerfiles</code> to generate all <code>Dockerfile</code>s.  These will be written to <code>./output/imagename</code>, along with any required files for the build context</p>
+<h4 id="building-and-tagging-docker-images">Building and Tagging Docker Images<a class="headerlink" href="#building-and-tagging-docker-images" title="Permanent link">&para;</a></h4>
+<p>Use <code>make build/IMAGENAME</code> to build an <strong>already generated</strong> (see above) <code>Dockerfile</code>.  This by default generates images with:
+* <code>repo=k8scc01covidacr.azurecr.io</code>
+* <code>tag=BRANCH_NAME</code>
+For example: <code>k8scc01covidacr.azurecr.io/IMAGENAME:BRANCH_NAME</code>.  </p>
+<p><code>make build</code> also accepts arguments for REPO and TAG to override these behaviours.  For example, <code>make build/jupyterlab-cpu REPO=myrepo TAG=notLatest</code>.</p>
+<p><code>make post-build/IMAGENAME</code> is meant for anything that is commonly done after building an image, but currently only adds common tags.  It adds tags of SHA, SHORT_SHA, and BRANCH_NAME to the given image, and accepts a <code>SOURCE_FULL_IMAGE_NAME</code> argument if you're trying to tag an existing image that has a non-typical name.  For example:
+* <code>make post-build/IMAGENAME</code> will apply SHA, SHORT_SHA, and BRANCH_NAME tags to <code>k8scc01covidacr.azurecr.io/IMAGENAME:BRANCH_NAME</code> (eg: using the default REPO and TAG names)
+* <code>make post-build/IMAGENAME SOURCE_FULL_IMAGE_NAME=oldRepo/oldImage:oldTag REPO=newRepo</code> will make the following new aliases for <code>oldRepo/oldImage:oldTag REPO=newRepo</code>:
+  * <code>newRepo/IMAGENAME:SHA</code>
+  * <code>newRepo/IMAGENAME:SHORT_SHA</code>
+  * <code>newRepo/IMAGENAME:BRANCH_NAME</code></p>
+<h4 id="pulling-and-pushing-docker-images">Pulling and Pushing Docker Images<a class="headerlink" href="#pulling-and-pushing-docker-images" title="Permanent link">&para;</a></h4>
+<p><code>make pull/IMAGENAME</code> and <code>make push/IMAGENAME</code> work similarly to <code>make build/IMAGENAME</code>.  <code>REPO</code> and <code>TAG</code> arguments are available to override their default values.</p>
+<p><strong>Note:</strong> To use <code>make pull</code> or <code>make push</code>, you must first log in to ACR (<code>az acr login -n k8scc01covidacr</code>)
+<strong>Note:</strong> <code>make push</code> by default does <code>docker push --all-tags</code> in order to push the SHA, SHORT_SHA, etc., tags.  </p>
+<h4 id="testing-images">Testing images<a class="headerlink" href="#testing-images" title="Permanent link">&para;</a></h4>
+<h5 id="running-and-connecting-to-images-locallyinteractively">Running and Connecting to Images Locally/Interactively<a class="headerlink" href="#running-and-connecting-to-images-locallyinteractively" title="Permanent link">&para;</a></h5>
+<p>To test an image interactively, use <code>make dev/IMAGENAME</code>.  This <code>docker run</code>'s a built image, automatically forwarding ports to your local machine and providing a link to connect to.</p>
+<h5 id="automated-testing">Automated Testing<a class="headerlink" href="#automated-testing" title="Permanent link">&para;</a></h5>
+<p>Automated tests are included for the generated Docker images using <code>pytest</code>.  This testing suite is modified from the <a href="https://github.com/jupyter/docker-stacks">docker-stacks</a> test suite.  Image testing is invoked through <code>make test/IMAGENAME</code>  (with optional <code>REPO</code> and <code>TAG</code> arguments like <code>make build</code>).</p>
+<p>Testing of a given image consists of general and image-specific tests:</p>
+<div class="codehilite"><pre><span></span><code>└── tests
+    ├── general                             # General tests applied to all images
+    │   └── some_general_test.py
+    ├── jupyterlab-cpu                      # Test applied to a specific image
+    │   └── some_jupyterlab-cpu-specific_test.py
+    └── jupyterlab-tensorflow
+</code></pre></div>
+
+<p>Where <code>tests/general</code> tests are applied to all images, and <code>tests/IMAGENAME</code> are applied only to a specific image.  Pytest will start the image locally and then run the provided tests to determine if Jupyterlab is running, python packages are working properly, etc.  Tests are formatted using typical pytest formats (python files with <code>def test_SOMETHING()</code> functions).  <code>conftest.py</code> defines some standard scaffolding for image management, etc.</p>
+<h3 id="general-development-workflow">General Development Workflow<a class="headerlink" href="#general-development-workflow" title="Permanent link">&para;</a></h3>
+<h4 id="running-aaw-locally-simple-instructions">💻 Running AAW Locally (simple instructions)<a class="headerlink" href="#running-aaw-locally-simple-instructions" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Clone the repository with <code>git clone https://github.com/StatCan/aaw-kubeflow-containers</code>.</li>
+<li>Build your image using <code>make build/IMAGENAME</code>, e.g. run <code>make build/jupyterlab-tensorflow</code>.</li>
+<li>Run <code>make install-python-dev-venv</code> to build a development Python virtual environment.</li>
+<li>Test your image using automated tests through <code>make test/IMAGENAME</code>, e.g. run <code>make test/jupyterlab-tensorflow</code>.</li>
+<li>Find your images (required for the next step) with <code>docker images</code>. You should see a table printed in the console with your images. For example you may see:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="n">username</span><span class="nv">@hostname</span><span class="err">:</span><span class="o">~</span><span class="err">$</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">images</span>
+<span class="n">REPOSITORY</span><span class="w">                                         </span><span class="n">TAG</span><span class="w">            </span><span class="nc">IMAGE</span><span class="w"> </span><span class="n">ID</span><span class="w">       </span><span class="n">CREATED</span><span class="w">          </span><span class="k">SIZE</span>
+<span class="n">k8scc01covidacr</span><span class="p">.</span><span class="n">azurecr</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">tensorflow</span><span class="w">   </span><span class="n">master</span><span class="w">         </span><span class="mi">13</span><span class="n">f8dc0e4f7a</span><span class="w">   </span><span class="mi">26</span><span class="w"> </span><span class="n">minutes</span><span class="w"> </span><span class="n">ago</span><span class="w">   </span><span class="mf">14.6</span><span class="n">GB</span>
+<span class="n">k8scc01covidacr</span><span class="p">.</span><span class="n">azurecr</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">pytorch</span><span class="w">      </span><span class="n">master</span><span class="w">         </span><span class="mi">2</span><span class="n">b9acb795079</span><span class="w">   </span><span class="mi">19</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="n">ago</span><span class="w">     </span><span class="mf">15.5</span><span class="n">GB</span>
+<span class="n">jupyter</span><span class="o">/</span><span class="n">datascience</span><span class="o">-</span><span class="n">notebook</span><span class="w">                       </span><span class="mi">9</span><span class="n">ed3b8de5de1</span><span class="w">   </span><span class="mi">9</span><span class="n">a0c8d86de1a</span><span class="w">   </span><span class="mi">5</span><span class="w"> </span><span class="n">weeks</span><span class="w"> </span><span class="n">ago</span><span class="w">      </span><span class="mf">4.25</span><span class="n">GB</span>
+</code></pre></div>
+
+<ol>
+<li>Run your image with <code>docker run -p 8888:8888 REPO/IMAGENAME:TAG</code>, e.g. <code>docker run -p 8888:8888 k8scc01covidacr.azurecr.io/jupyterlab-tensorflow:master</code>.</li>
+<li>Open <a href="http://localhost:8888">http://localhost:8888</a> or <code>&lt;ip-address-of-server&gt;:8888</code>.</li>
+</ol>
+<h4 id="modifying-dockerfiles-local-testing">Modifying Dockerfiles (local testing)<a class="headerlink" href="#modifying-dockerfiles-local-testing" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Clone the repo</li>
+<li>(optional) <code>make pull/IMAGENAME TAG=SOMEEXISTINGTAG</code> to pull an existing version of the image you are working on (this could be useful as a build cache to reduce development time below)</li>
+<li>Change an image via the <a href="/docker-bits">docker-bits</a> that are used to create it, <strong>not the files in the output/ folder</strong>.  Same goes for the shell scripts and json files - they should be modified from the <a href="/resources">resources</a> folder. <ul>
+<li>For quick-iteration debugging you can directly edit the <code>./output</code> files, but make sure you commit any changes you want to keep back to the <code>./docker-bits</code></li>
+</ul>
+</li>
+<li>After making your changes, generate new Dockerfiles through <code>make generate-dockerfiles</code></li>
+<li>Build your edited image using <code>make build/IMAGENAME</code> (or, if you pulled a version of it above, you can use <code>make build/IMAGENAME DARGS="--cache-from SOMEOLDREPO/SOMEOLDIMAGE:SOMETAG"</code>, which will use layers from the pulled image as cached layers if possible, speeding up your build)</li>
+<li>Test your image:<ul>
+<li>using automated tests through <code>make test/IMAGENAME</code></li>
+<li>manually by <code>docker run -it -p 8888:8888 REPO/IMAGENAME:TAG</code>, then opening it in <a href="http://localhost:8888">http://localhost:8888</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="modifying-dockerfiles-on-platform-testing">Modifying Dockerfiles (on-platform testing)<a class="headerlink" href="#modifying-dockerfiles-on-platform-testing" title="Permanent link">&para;</a></h4>
+<p>GitHub Actions CI is enabled to do building, scanning, automated testing, and (optionally) pushing of our images to ACR.  Build, test, and scan CI triggers on:
+* any push to master
+* any push to an open PR
+This allows for easy scanning and automated testing for images.</p>
+<p>GitHub Actions CI also enables pushing built images to our ACRs, making them accessible from the platform. </p>
+<p>Pushes to the <code>master</code> branch will push to the k8scc01covidacr.azurecr.io ACR and these are accessible from both the dev and prod cluster.
+You can access these images using any of the following:
+* k8scc01covidacr.azurecr.io/IMAGENAME:SHA
+* k8scc01covidacr.azurecr.io/IMAGENAME:SHORT_SHA
+* k8scc01covidacr.azurecr.io/IMAGENAME:latest
+* k8scc01covidacr.azurecr.io/IMAGENAME:v1</p>
+<p>Any push to an open PR <strong>that also has the <code>auto-deploy</code> label on the PR</strong>
+This allows developers to opt-in to on-platform testing. For example, when you need to build in github and test on platform (or want someone else to be able to pull your image):
+* open a PR and add the <code>auto-deploy</code> label
+* push to your PR and watch the GitHub Action CI
+* access your image in Kubeflow DEV via a custom image from any of:
+  * k8scc01covidacrdev.azurecr.io/IMAGENAME:SHA
+  * k8scc01covidacrdev.azurecr.io/IMAGENAME:SHORT_SHA
+  * k8scc01covidacrdev.azurecr.io/IMAGENAME:dev (for convenience in testing)</p>
+<p>Images pushed to the dev acr are only available to the DEV cluster, attempting to use them in prod will fail.</p>
+<h4 id="docker-bits-the-makefile-and-you">docker-bits, the Makefile and You<a class="headerlink" href="#docker-bits-the-makefile-and-you" title="Permanent link">&para;</a></h4>
+<p>The files in the <code>docker-bits</code> directory each make up a part of the final dockerfile and are combined depending on what type of dockerfile is being generated. You can see which "docker-bits" go into the dockerfile under their respective 'target'.</p>
+<p>For example for the <code>remote-desktop</code> image you can see in the makefile the following</p>
+<div class="codehilite"><pre><span></span><code><span class="err">mkdir</span><span class="w"> </span><span class="err">-p</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span>
+<span class="w">    </span><span class="err">echo</span><span class="w"> </span><span class="s2">&quot;REMOTE DESKTOP&quot;</span>
+<span class="w">    </span><span class="err">cp</span><span class="w"> </span><span class="err">-r</span><span class="w"> </span><span class="err">scripts/remote-desktop</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span>
+<span class="w">    </span><span class="err">cp</span><span class="w"> </span><span class="err">-r</span><span class="w"> </span><span class="err">resources/common/.</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span>
+<span class="w">    </span><span class="err">cp</span><span class="w"> </span><span class="err">-r</span><span class="w"> </span><span class="err">resources/remote-desktop/.</span><span class="w"> </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span>
+
+<span class="c">  ## HERE IS WHAT GOES INTO THE DOCKERFILE</span>
+<span class="w">    </span><span class="k">$(</span><span class="nv">CAT</span><span class="k">)</span><span class="w"> </span><span class="err">\</span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/0_Rocker.Dockerfile</span><span class="w"> </span><span class="err">\</span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/3_Kubeflow.Dockerfile</span><span class="w"> </span><span class="err">\</span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/4_CLI.Dockerfile</span><span class="w"> </span><span class="err">\</span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/6_remote-desktop.Dockerfile</span><span class="w"> </span><span class="err">\</span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/7_remove_vulnerabilities.Dockerfile</span><span class="w"> </span><span class="err">\</span>
+<span class="w">        </span><span class="k">$(</span><span class="nv">SRC</span><span class="k">)</span><span class="err">/∞_CMD_remote-desktop.Dockerfile</span><span class="w"> </span><span class="err">\</span>
+<span class="w">    </span><span class="err">&gt;</span><span class="w">   </span><span class="k">$(</span><span class="nv">OUT</span><span class="k">)</span><span class="err">/</span><span class="k">$@</span><span class="err">/Dockerfile</span>
+</code></pre></div>
+
+<p>The first portion sets up and copies locally what scripts or utilities the final <code>Dockerfile</code> will need. The final <code>Dockerfile</code> is then generated using <code>0_Rocker.Dockerfile</code> up to <code>∞_CMD_remote-desktop.Dockerfile</code> as you can see above.</p>
+<p>The <code>Makefile</code> sits in the root level of this directory and orchestrates the final dockerfile using the <code>make generate-dockerfiles</code> command. The segments of <code>Dockerfile</code>s are assembled and you can view which <code>docker-bit</code> it came from from the <code>Dockerfile</code> comments.  All output images should meet the following criteria:</p>
+<ul>
+<li>be generated by calling <code>make generate-dockerfiles</code></li>
+<li>have outputs written to <code>output/imagename</code>, where <code>imagename</code> is a <strong>valid Docker image name</strong> (eg: all lowercase, no special characters)</li>
+</ul>
+<p>Always, before pushing to a branch ensure you run <code>make generate-dockerfiles</code> as if the <code>output</code> dockerfiles are out of sync from the <code>make generate-dockerfiles</code> the CI will fail.  </p>
+<h4 id="adding-new-software">Adding new software<a class="headerlink" href="#adding-new-software" title="Permanent link">&para;</a></h4>
+<p>The developer has to make changes to the relevant <code>docker-bit</code> and then run the <code>make generate-dockerfiles</code>. <em>NOTE:</em> We do not allow for adding of software willy nilly, as our image sizes are already quite big (8Gb plus) and increasing that size would negatively impact the time it takes up for a workspace server to come up (as well as first time image pulls to a node). In such cases it may be more relevant to make an image under <a href="https://github.com/StatCan/aaw-contrib-containers">aaw-contrib-containers</a> as mentioned earlier.</p>
+<h4 id="adding-new-images">Adding new Images<a class="headerlink" href="#adding-new-images" title="Permanent link">&para;</a></h4>
+<p>To add new images, edit the makefile such that it generates the <code>./output/imagename</code> directory.  You can usually follow the existing recipes (or even add an extra piece to them), or you can add a whole new <code>make</code> target (but make sure to add your new target to <code>make generate-dockerfiles</code> as well).</p>
+<h4 id="modifying-and-testing-ci">Modifying and Testing CI<a class="headerlink" href="#modifying-and-testing-ci" title="Permanent link">&para;</a></h4>
+<p>If making changes to CI that cannot be done on a branch (eg: changes to issue_comment triggers), you can:
+* fork the 'kubeflow-containers' repo
+* Modify the CI with 
+  * REGISTRY: (your own dockerhub repo, eg: "j-smith" (no need for the full url))
+  * Change 
+    <code>- uses: azure/docker-login@v1
+      with:
+        login-server: ${{ env.REGISTRY_NAME }}.azurecr.io
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}</code>
+    to 
+    <code>- uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}</code>
+  * In your forked repo, define secrets for REGISTRY_USERNAME and REGISTRY_PASSWORD with your dockerhub credentials (you should use an API token, not your actual dockerhub password)</p>
+<p><strong>Note:</strong> Since pushing comes right at the end of the CI, in many cases you don't need to have a valid registry to test the CI on a fork.  It will fail on the push step, but all other steps will clearly work and you can know it should safely merge back into the main repo.</p>
+<h3 id="other-development-notes">Other Development Notes<a class="headerlink" href="#other-development-notes" title="Permanent link">&para;</a></h3>
+<h4 id="the-latest-and-v1-tags-for-the-master-branch">The <code>latest</code> and <code>v1</code> tags for the master branch<a class="headerlink" href="#the-latest-and-v1-tags-for-the-master-branch" title="Permanent link">&para;</a></h4>
+<p>These are intended to be <code>long-lived</code> in that they will not change. Subsequent pushes will clobber the previous <code>jupyterlab-cpu:latest</code> image. Previously when we built and pushed to master with updates to an image, we would need to go and change the spawner to use that new image. This will allow us to have them reference <code>jupyterlab-cpu:latest</code> and remove us from needing to update it. Additionally, upon changing the <code>ImagePullPolicy</code> to <code>Always</code> we could do restarts of workloads and then guarantee that users are on the 'latest' image.</p>
+<p>The <code>v1</code> tag is intended for when we encounter a breaking change but still want to support the features of that current image. We would then branch off and modify the CI as well as increment the tag. </p>
+<hr />
+<h4 id="set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files">Set User File Permissions after Every <code>pip</code>/<code>conda</code> Install or Edit of User's Home Files<a class="headerlink" href="#set-user-file-permissions-after-every-pipconda-install-or-edit-of-users-home-files" title="Permanent link">&para;</a></h4>
+<p>The Dockerfiles in this repo are intended to construct compute environments for a non-root user <strong>jovyan</strong> to ensure the end user has the least privileges required for their task, but installation of some of the software needed by the user must be done as the <strong>root</strong> user.  This means that installation of anything that should be user editable (eg: <code>pip</code> and <code>conda</code> installs, additional files in <code>/home/$NB_USER</code>, etc.) will by default be owned by <strong>root</strong> and not modifiable by <strong>jovyan</strong>. <strong>Therefore we must change the permissions of these files to allow the user specific access for modification.</strong>  For example, most pip install/conda install commands occur as the root user and result in new files in the $CONDA_DIR directory that will be owned by <strong>root</strong> and cause issues if user <strong>jovyan</strong> tried to update or uninstall these packages (as they by default will not have permission to change/remove these files).</p>
+<p>To fix this issue, end any <code>RUN</code> command that edits any user-editable files with:</p>
+<div class="codehilite"><pre><span></span><code>fix-permissions $CONDA_DIR &amp;&amp; \
+fix-permissions /home/$NB_USER
+</code></pre></div>
+
+<p>This fix edits the permissions of files in these locations to allow user access.  Note that if these are not applied <strong>in the same layer as when the new files were added</strong> it will result in a duplication of data in the layer because the act of changing permissions on a file from a previous layer requires a copy of that file into the current layer.  So something like:</p>
+<div class="codehilite"><pre><span></span><code>RUN add_1GB_file_with_wrong_permissions_to_NB_USER.sh &amp;&amp; \
+    fix-permissions /home/$NB_USER
+</code></pre></div>
+
+<p>would add a single layer of about 1GB, whereas</p>
+<div class="codehilite"><pre><span></span><code>RUN add_1GB_file_with_wrong_permissions_to_NB_USER.sh
+
+RUN fix-permissions /home/$NB_USER
+</code></pre></div>
+
+<p>would add two layers, each about 1GB (2GB total).</p>
+<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>.
+├──<span class="w"> </span><span class="nv">Makefile</span><span class="w">                                </span>#<span class="w"> </span><span class="nv">Cats</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span><span class="w"> </span><span class="nv">together</span>
+│
+├──<span class="w"> </span><span class="nv">docker</span><span class="o">-</span><span class="nv">bits</span><span class="w">                             </span>#<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">docker</span><span class="w"> </span><span class="nv">snippets</span>.<span class="w"> </span><span class="nv">Numbering</span><span class="w"> </span><span class="nv">indicates</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">DAG</span>.
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">0</span><span class="nv">_CPU</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">6</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">1</span><span class="nv">_CUDA</span><span class="o">-</span><span class="mi">11</span>.<span class="mi">7</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">2</span><span class="nv">_PyTorch</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">2</span><span class="nv">_Tensorflow</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">3</span><span class="nv">_Kubeflow</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">4</span><span class="nv">_CLI</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">5</span><span class="nv">_DB</span><span class="o">-</span><span class="nv">Drivers</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_JupyterLab</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_RStudio</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_JupyterLab</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="mi">6</span><span class="nv">_RemoteDesktop</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>├──<span class="w"> </span>∞<span class="nv">_CMD</span>.<span class="nv">Dockerfile</span>
+│<span class="w">   </span>└──<span class="w"> </span>∞<span class="nv">_CMD_RemoteDesktop</span>.<span class="nv">Dockerfile</span>
+│
+├──<span class="w"> </span><span class="nv">resources</span><span class="w">                               </span>#<span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">Docker</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="ss">(</span><span class="nv">files</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">COPY</span><span class="ss">)</span>
+├──<span class="w"> </span>├──<span class="w"> </span><span class="nv">common</span><span class="w">                              </span>#<span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">required</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">images</span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">clean</span><span class="o">-</span><span class="nv">layer</span>.<span class="nv">sh</span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">helpers</span>.<span class="nv">zsh</span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">overrides</span>.<span class="nv">json</span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">landing_page</span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">nginx</span>
+│<span class="w">      </span>├──<span class="w"> </span><span class="nv">README</span>.<span class="nv">md</span>
+│<span class="w">      </span>└──<span class="w"> </span><span class="nv">start</span><span class="o">-</span><span class="nv">custom</span>.<span class="nv">sh</span>
+├──<span class="w"> </span>├──<span class="w"> </span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span><span class="w">                      </span>#<span class="w"> </span><span class="nv">directory</span><span class="w"> </span><span class="nv">containing</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">desktop</span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">desktop</span><span class="o">-</span><span class="nv">files</span><span class="w">                    </span>#<span class="w"> </span><span class="nv">desktop</span><span class="w"> </span><span class="nv">configuration</span><span class="w"> </span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">French</span><span class="w">                           </span>#<span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">support</span><span class="w"> </span><span class="nv">i18n</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">desktop</span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">qgis</span><span class="o">-</span><span class="mi">2022</span>.<span class="nv">gpg</span>.<span class="nv">key</span><span class="w">                </span>#<span class="w"> </span><span class="nv">expires</span><span class="w"> </span><span class="nv">annually</span><span class="w"> </span><span class="nv">aug</span><span class="w"> </span><span class="o">~</span><span class="mi">8</span><span class="w"> </span>
+<span class="o">|</span><span class="w">      </span>└──<span class="w"> </span><span class="nv">start</span><span class="o">-</span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span>
+<span class="o">|</span><span class="w">      </span>
+│
+├──<span class="w"> </span><span class="nv">scripts</span><span class="w">                                 </span>#<span class="w"> </span><span class="nv">Helper</span><span class="w"> </span><span class="nv">Scripts</span><span class="w"> </span><span class="ss">(</span><span class="nv">NOT</span><span class="w"> </span><span class="nv">automated</span>.<span class="ss">)</span>
+├──<span class="w"> </span>├──<span class="w"> </span><span class="nv">remote</span><span class="o">-</span><span class="nv">desktop</span><span class="w">                      </span>#<span class="w"> </span><span class="nv">Scripts</span><span class="w"> </span><span class="nv">installing</span><span class="w"> </span><span class="nv">applications</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">remote</span><span class="w"> </span><span class="nv">desktop</span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">firefox</span>.<span class="nv">sh</span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">fix</span><span class="o">-</span><span class="nv">permissions</span>.<span class="nv">sh</span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">qgis</span>.<span class="nv">sh</span>
+<span class="o">|</span><span class="w">      </span>├──<span class="w"> </span><span class="nv">r</span><span class="o">-</span><span class="nv">studio</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span>
+<span class="o">|</span><span class="w">      </span>└──<span class="w"> </span><span class="nv">vs</span><span class="o">-</span><span class="nv">code</span><span class="o">-</span><span class="nv">desktop</span>.<span class="nv">sh</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">CHECKSUMS</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">checksums</span>.<span class="nv">sh</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">get</span><span class="o">-</span><span class="nv">nvidia</span><span class="o">-</span><span class="nv">stuff</span>.<span class="nv">sh</span>
+│<span class="w">   </span>├──<span class="w"> </span><span class="nv">start</span><span class="o">-</span><span class="nv">custom</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span>.<span class="nv">sh</span>
+│<span class="w">   </span>└──<span class="w"> </span><span class="nv">README</span>.<span class="nv">md</span>
+│
+└──<span class="w"> </span><span class="nv">output</span><span class="w">                                  </span>#<span class="w"> </span><span class="nv">Staging</span><span class="w"> </span><span class="nv">area</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span>`<span class="nv">docker</span><span class="w"> </span><span class="nv">build</span><span class="w"> </span>.`
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">/</span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">/</span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">/</span>
+<span class="w">    </span><span class="o">|</span>──<span class="w"> </span><span class="nv">RStudio</span><span class="o">/</span>
+<span class="w">    </span><span class="o">|</span>──<span class="w"> </span><span class="nv">RemoteDesktop</span><span class="o">/</span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">CPU</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span><span class="w">        </span>#<span class="w"> </span><span class="nv">These</span><span class="w"> </span><span class="nv">images</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="nv">JupyterLab</span><span class="w"> </span><span class="mi">3</span>.<span class="mi">0</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">contain</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="w"> </span><span class="nv">extensions</span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">PyTorch</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>
+<span class="w">    </span>└──<span class="w"> </span><span class="nv">JupyterLab</span><span class="o">-</span><span class="nv">Tensorflow</span><span class="o">-</span><span class="nv">OL</span><span class="o">-</span><span class="nv">compliant</span><span class="o">/</span>
+└──<span class="w"> </span><span class="nv">tests</span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">general</span><span class="w">                             </span>#<span class="w"> </span><span class="nv">General</span><span class="w"> </span><span class="nv">tests</span><span class="w"> </span><span class="nv">applied</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">images</span>
+<span class="w">    </span>├──<span class="w"> </span><span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">cpu</span><span class="w">                      </span>#<span class="w"> </span><span class="nv">Test</span><span class="w"> </span><span class="nv">applied</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">specific</span><span class="w"> </span><span class="nv">image</span>
+<span class="w">    </span>└──<span class="w"> </span><span class="nv">jupyterlab</span><span class="o">-</span><span class="nv">tensorflow</span>
+</code></pre></div>
+
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<p>If running using a VM and RStudio image was built successfully but is not opening correctly on localhost (error 5000 page), change your CPU allocation in your Linux VM settings to &gt;= 3. You can also use your VM's system monitor to examine if all CPUs are 100% being used as your container is running. If so, increase CPU allocation. 
+This was tested on Linux Ubuntu 20.04 virtual machine.</p>
+<h2 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/StatCan/aaw-kubeflow-containers">aaw-kubeflow-containers</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Aaw%20Inferenceservices%20Controller/" title="inferenceservices-controller" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                inferenceservices-controller
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Aaw%20Kubeflow%20Controller/" title="kubeflow-controller" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                kubeflow-controller
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Statistics Canada
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/StatCan/daaas" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://statcan-aaw.slack.com" target="_blank" rel="noopener" title="statcan-aaw.slack.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
