@@ -30,6 +30,9 @@ The token will by copy-able at the top once you hit `Create personal access toke
 Once you have prepared everything it's time
 ![image](https://user-images.githubusercontent.com/23174198/217063198-c1bd6c3a-ebc5-444d-98ba-24ef32faa20e.png)
 
+__NOTE__
+IMPORTANT: Please do NOT store your token _anywhere_ in your workspace server file system. Contributors to a namespace will have access to them.
+
 ### Step 7: See the results of your hard work in gitlab
 ![image](https://user-images.githubusercontent.com/23174198/217063990-efaa8e81-a0eb-4b6d-842e-2ca3112bb4f7.png)
 
