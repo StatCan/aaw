@@ -21,7 +21,7 @@
 - [All Training Courses](https://icn-rci.statcan.ca/07/07m/07m08/07m08_007-eng.html)
 - [Registration](https://idp.csps-efpc.gc.ca/idp/RegistrationUtilities)
   - To create an account you will need access to your
-    firstname.lastname@canada.ca email and PRI
+    firstname.lastname@statcan.gc.ca email and PRI
 - After creating an account, do the training on your personal laptop
 
 <!-- prettier-ignore -->
