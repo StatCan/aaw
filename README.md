@@ -8,7 +8,7 @@ Data Analytics as a Service for the Government of Canada and external collaborat
 
 If your question does not appear in this document, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
 
-### Who an access the AAW?
+### Who can access the AAW?
 
 - Anyone with a Statistics Canada (`@statcan.gc.ca`) email address can access the AAW.
 
