@@ -131,23 +131,40 @@ machine) is described in more detail in the
 buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md)**
 section.
 
-# Storage
+# Cloud Storage
+
+Cloud storage offers numerous advantages over traditional on-premises storage solutions. One of the key benefits is the ability to easily scale up or down your storage needs with just a few clicks, without having to purchase and install additional hardware. With cloud storage, you only pay for the amount of storage you use, making it a cost-effective solution for businesses of all sizes.
+
+Another advantage of cloud storage is that it offers greater accessibility and flexibility. Your data can be accessed from anywhere with an internet connection, making it easier for remote workers to collaborate and share files. Additionally, cloud storage providers often offer advanced security features, such as data encryption and access controls, to help protect your data from unauthorized access or data breaches.
+
+Overall, cloud storage is a reliable and convenient solution for storing and managing your data. Whether you need to store large amounts of data or just a few files, cloud storage makes it easy to manage your storage needs without the hassle of traditional storage solutions.
 
 The platform provides several types of storage:
 
-- Disk (also called Volumes on the Notebook Server creation screen)
-- Bucket ("Blob" or S3 storage, provided through MinIO)
+- Disks (also called Volumes on the Kubeflow Notebook Server creation screen)
+- Buckets ("Blob" or S3 storage, provided through MinIO)
 - Data Lakes (coming soon)
 
-Depending on your use case, either disk or bucket may be most suitable. Our
-[storage overview](./5-Storage/Overview.md) will help you compare them.
+Depending on your use case, either disk or bucket may be most suitable. Our [storage overview](./5-Storage/Overview.md) will help you compare them.
 
 ## Disks
 
-[![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md)** are
-added to your notebook server by adding Data Volumes.
+[![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md)** are added to your notebook server by adding Data Volumes.
 
 ## Buckets
 
-[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md)** is a
-cloud-native scalable object store. We use it for buckets (blob or S3 storage).
+MinIO is an S3-API compatible object storage system that provides an open source alternative to proprietary cloud storage services. While we currently use MinIO as our cloud storage solution, we plan on replacing it with s3-proxy in the near future. S3-proxy is a lightweight, open source reverse proxy server that allows you to access Amazon S3-compatible storage services with your existing applications. By switching to s3-proxy, we will be able to improve our cloud storage performance, security, and scalability, while maintaining compatibility with the S3 API.
+
+[![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md)** is a cloud-native scalable object store. We use it for buckets (blob or S3 storage).
+
+## Data Lakes
+
+A data lake is a central repository that allows you to store all your structured and unstructured data at any scale. It's a cost-effective way to store and manage all types of data, from raw data to processed data, and it's an essential tool for data scientists.
+
+One of the primary advantages of a data lake is its flexibility. It allows you to store all types of data without the need to define a schema in advance, which is especially useful when dealing with unstructured data. This flexibility allows data scientists to easily explore, experiment, and extract insights from their data without being constrained by the limitations of a traditional relational database.
+
+Data lakes also enable data scientists to centralize their data, making it easier to manage and analyze large volumes of data from various sources. With a data lake, data scientists can easily ingest and store data from a variety of sources, such as databases, cloud storage, and third-party APIs. Additionally, data lakes often provide features for data governance, metadata management, and access control, which helps ensure the data is of high quality and compliant with relevant regulations.
+
+Furthermore, cloud-based data lakes provide scalable, cost-effective storage solutions that can be easily expanded at the click of a button. As a data scientist's data storage needs grow, they can add additional storage capacity to their data lake with minimal effort, without worrying about the underlying infrastructure or maintenance.
+
+Overall, data lakes are a critical tool for data scientists, as they provide the flexibility, scalability, and ease of use needed to store and manage large volumes of data, enabling data scientists to focus on extracting insights and value from the data.
