@@ -11,8 +11,8 @@ et y accéder.
 
 [![Analyse](images/Analyse.PNG)](#experiences)
 [![Publication](images/Publication.PNG)](#publication)
-[![Pipelines](images/Pipelines.PNG)](#pipelines)
-[![Collaboration](images/Collaboration.PNG)](#collaboration)
+[![Pipelines](images/pipelines.jpg)](#pipelines)
+[![Collaboration](images/collaboration.jpg)](#collaboration)
 
 # Démarrer avec AAW
 

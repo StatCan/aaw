@@ -6,11 +6,11 @@ Welcome to the world of data science and machine learning! The **[Advanced Analy
 
 ## What are you looking for?
 
-[![Analysis](images/Analysis.jpg)](#experiments)
-[![Publishing](images/Publishing.jpg)](#publishing)
-[![Pipelines](images/Pipelines.PNG)](#pipelines)
-[![Collaboration](images/Collaboration.PNG)](#collaboration)
-[![Storage](images/Storage.PNG)](#storage)
+[![Analysis](images/data-analysis.jpg)](#experiments)
+[![Publishing](images/publishing.jpg)](#publishing)
+[![Pipelines](images/pipelines.jpg)](#pipelines)
+[![Collaboration](images/collaboration.jpg)](#collaboration)
+[![Storage](images/storage.jpg)](#storage)
 
 What are you looking to do? Whether you're just getting started or already knee-deep in data analysis, the Advanced Analytics Workspace has everything you need to take your work to the next level. From powerful tools for data pipelines to cloud storage for your datasets, our platform has it all. Need to collaborate with colleagues or publish your results? No problem. We offer seamless collaboration features that make it easy to work together and share your work with others. So, no matter what stage of your data science journey you're at, the Advanced Analytics Workspace has the resources you need to succeed.
 
@@ -116,7 +116,7 @@ Use **[Datasette](/2-Publishing/Datasette/)** , an instant JSON API for your SQL
 
 _Build and schedule data/analysis pipelines._
 
-[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/)
+[![Build Piplines](images/Buildpipelines.jpg)](/3-Pipelines/Kubeflow-Pipelines/)
 
 **[Argo Workflows](/3-Pipelines/Kubeflow-Pipelines/)**  is an open-source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows. Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment. It is an excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production.
 
