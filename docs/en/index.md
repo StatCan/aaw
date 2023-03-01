@@ -18,22 +18,31 @@ What are you looking to do? Whether you're just getting started or already knee-
 
 Getting started with the Advanced Analytics Workspace (AAW) is easy and quick. First, you'll want to set up Kubeflow for MLOps and Jupyter Notebooks. Kubeflow makes it easy to deploy and manage end-to-end machine learning workflows, while Jupyter Notebooks provide a flexible and powerful environment for data analysis and experimentation. Once you have Kubeflow and Jupyter Notebooks set up, you can start exploring the many resources and tools available through the AAW portal. Additionally, we encourage you to join our Slack channel to connect with other data scientists and analysts, ask questions, and share your experiences with the AAW platform.
 
-[![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/) Everything
-starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
+[![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/) Everything starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
 
-[![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/)
-You're going to have questions. Join our
-**[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers!
-<img src="images/SlackAAW.PNG" alt="A screenshot of the slack page. In the top right-hand corner is a link to create a new account" width="50%">
-Click on the link, then choose "Create an account" in the upper right-hand
-corner.
-<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
+[![Ask questions on Slack](images/Slack.PNG)](https://statcan-aaw.slack.com/) You're going to have questions. Join our **[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers! <img src="images/SlackAAW.PNG" alt="A screenshot of the slack page. In the top right-hand corner is a link to create a new account" width="50%"> Click on the link, then choose "Create an account" in the upper right-hand corner. <img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
 
 Use your @canada.ca email address so that you will be automatically approved.
 
-# Experiments
+# Data Science Experiments
 
-## Process data using `R`, `Python`, or `Julia`
+Process data using R, Python, or Julia with Kubeflow, a machine learning platform that provides a simple, unified, and scalable infrastructure for machine learning workloads. With Kubeflow, you can process data in a scalable and efficient way using the programming language of your choice. Once you have Kubeflow set up, use Jupyter Notebooks to create and share documents that contain live code, equations, or visualizations.
+
+You can also run Ubuntu as a virtual desktop with Kubeflow, giving you access to a powerful development environment that can be customized to your needs. With R Shiny, a web application framework for R, you can easily create and publish static and interactive dashboards to communicate your analysis results to stakeholders.
+
+For data exploration and data pipelines, Kubeflow provides a range of tools and frameworks, including Apache Beam and TensorFlow Extended (TFX). Apache Beam is an open-source, unified model for defining both batch and streaming data-parallel processing pipelines. TFX is a production-scale machine learning platform that helps you build and deploy your ML models.
+
+Kubeflow also provides integration with external platforms as a service, such as Google Cloud Platform (GCP) and Amazon Web Services (AWS), allowing you to easily move data and workloads between different cloud services. Additionally, with Kubeflow's collaboration features, you can work on your projects with your team in real-time, sharing your analysis, code, and results seamlessly.
+
+## JupyterLab
+
+_Process data using R, Python, or Julia in JupyterLab_
+
+Processing data using R, Python, or Julia is made easy with the Advanced Analytics Workspace. Whether you're new to data analysis or an experienced data scientist, our platform supports a range of programming languages to fit your needs. You can install and run packages for R or Python to perform data processing tasks such as data cleaning, transformation, and modeling. If you prefer Julia, our platform also offers support for this programming language.
+
+Once you have your code ready, use Jupyter Notebooks on our platform to create and share documents that contain live code, equations, or visualizations. You can also run Ubuntu as a virtual desktop for data exploration and other data analysis tasks. Additionally, our platform supports publishing static and interactive dashboards with R Shiny, a popular web application framework for R.
+
+With our platform, you can easily create data pipelines for automating data processing and integrating with external platforms as a service. Whether you're working on a solo project or collaborating with a team, the Advanced Analytics Workspace has the tools you need to streamline your data analysis workflow.
 
 [![R, Python, or Julia in Jupyter notebooks](images/Jupyter.PNG)](1-Experiments/Jupyter.md)
 Once you have Kubeflow set up, use
@@ -41,47 +50,52 @@ Once you have Kubeflow set up, use
 that contain live code, equations, or visualizations.
 ![Jupyter Notebooks](images/jupyter_in_action.png)
 
-## Process data using 'R' or 'Python'
+## R Studio
+_Process data using R or Python in R Studio_
+
+R Studio is a powerful integrated development environment (IDE) that supports both the R and Python programming languages, making it an ideal choice for data analysts and scientists. With R Studio, you can perform a wide range of data processing tasks, from data cleaning and transformation to statistical analysis and machine learning. The software provides a user-friendly interface and a variety of tools and libraries that simplify complex data analysis tasks. In addition, R Studio makes it easy to share your work with others by creating dynamic, interactive reports and visualizations that can be published online or shared as standalone documents. Overall, R Studio is a versatile and powerful tool that is essential for anyone working with data in R or Python.
 
 [![R or Python in R Studio](images/RStudio.PNG)](1-Experiments/RStudio.md)
 **[R Studio](1-Experiments/RStudio.md)** gives you an integrated development
 environment for R and Python. Use the r-studio-cpu image to get an R Studio
 environment.
 
-## Run a virtual desktop
+## Ubuntu Virtual Desktop
 
-[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/Remote-Desktop.md)
-You can run a full Ubuntu desktop, with typical applications, right inside your
-browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
+The Ubuntu Virtual Desktop is a powerful tool for data scientists and machine learning engineers who need to run resource-intensive workloads in the cloud. Ubuntu is a popular Linux distribution that is widely used in the data science and machine learning communities due to its strong support for open source tools such as R and Python. With the Ubuntu Virtual Desktop, you can quickly spin up a virtual machine with Ubuntu pre-installed and access it from anywhere with an internet connection. This means you can perform data analysis and machine learning tasks from your laptop, tablet, or phone without having to worry about hardware limitations.
+
+One of the key advantages of using Ubuntu for data science and machine learning is its rich ecosystem of tools and packages. Ubuntu comes with a vast array of open source packages and libraries for data processing, analysis, and visualization, such as Pandas, NumPy, and Matplotlib. Additionally, Ubuntu is compatible with popular machine learning frameworks like TensorFlow, PyTorch, and Scikit-learn. This makes it easy to run your favorite data science and machine learning tools on the Ubuntu Virtual Desktop without having to worry about compatibility issues or dependencies.
+
+Another advantage of the Ubuntu Virtual Desktop is that it provides a consistent environment for your data science and machine learning workloads. This helps to ensure that your results are reproducible and that you can easily share your work with others. With the Ubuntu Virtual Desktop, you can easily create and manage multiple virtual machines, allowing you to experiment with different configurations and setups without having to worry about damaging your local machine. This makes it easy to collaborate with other data scientists and machine learning engineers and share your work with the wider community.
+
+[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/Remote-Desktop.md) You can run a full Ubuntu desktop, with typical applications, right inside your browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
 
 # Publishing
 
-## Build and publish an interactive dashboard
+## R Shiny
+_Publish Professional Quality Graphics_
 
-[![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
-Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight
-from R. You can deploy your R-Shiny dashboard by submitting a pull request to
-our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
-![R Shiny Server](images/readme/shiny_ui.png)
+R Shiny is an open-source web application framework that allows data scientists and analysts to create interactive, web-based dashboards and data visualizations using the R programming language. One of the main advantages of R Shiny is that it offers a straightforward way to create high-quality, interactive dashboards without the need for extensive web development expertise. With R Shiny, data scientists can leverage their R coding skills to create dynamic, data-driven web applications that can be shared easily with stakeholders.
 
-**[Dash](/2-Publishing/Dash/)** is a data visualization tool that lets you build
-an interactive GUI around your data analysis code.
+Another advantage of R Shiny is that it supports a variety of data visualizations that can be easily customized to meet the needs of the project. Users can create a wide range of charts and graphs, from simple bar charts and scatter plots to more complex heatmaps and network graphs. Additionally, R Shiny supports a variety of interactive widgets that allow users to manipulate and explore data in real-time.
+
+R Shiny is also highly extensible and can be integrated with other open-source tools and platforms to build end-to-end data science workflows. With its powerful and flexible features, R Shiny is a popular choice for building data visualization dashboards for a wide range of applications, from scientific research to business analytics. Overall, R Shiny offers a powerful, customizable, and cost-effective solution for creating interactive dashboards and data visualizations.
+
+[![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/) Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight from R. You can deploy your R Shiny dashboard by submitting a pull request to our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards). ![R Shiny Server](images/readme/shiny_ui.png)
+
+## Plotly Dash
+
+**[Plotly Dash](/2-Publishing/Dash/)** is a popular Python library that allows you to create interactive web-based visualizations and dashboards with ease. Developed by the Montreal-based company Plotly, Dash has gained a reputation for being a powerful and flexible tool for building custom data science graphics. With Dash, you can create everything from simple line charts to complex, multi-page dashboards with interactive widgets and controls. Because it's built on open-source technologies like Flask, React, and Plotly.js, Dash is highly customizable and can be easily integrated with other data science tools and workflows. Whether you're a data scientist, analyst, or developer, Dash can help you create engaging and informative visualizations that bring your data to life.
 
 ## Explore your data
 
-[![Explore your data](images/ExploreData.PNG)](/2-Publishing/Datasette/) Use
-**[Datasette](/2-Publishing/Datasette/)** , an instant JSON API for your SQLite
-databases. Run SQL queries in a more interactive way!
+[![Explore your data](images/ExploreData.PNG)](/2-Publishing/Datasette/) Use **[Datasette](/2-Publishing/Datasette/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
 
 # Pipelines
 
 ## Build and schedule data/analysis pipelines
 
-[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/)
-**[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up
-pipelines. Each pipeline encapsulates analytical workflows, and can be shared,
-reused, and scheduled.
-![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
+[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/) **[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up pipelines. Each pipeline encapsulates analytical workflows, and can be shared, reused, and scheduled. ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
 [![Integrate with PaaS](images/IntegratePaaS.PNG)]()
 
