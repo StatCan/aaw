@@ -14,7 +14,7 @@ We welcome contributions to this documentation in the official language of your 
 Ensure that you have the following software available on your system before you begin contributing:
 
 - GNU Make (e.g. `apt install make`)
-- [Node.js][] (e.g. see [`nvm-sh/nvm`][nvm-installation])
+- Node.js (e.g. see [nvm-sh/nvm][nvm-installation])
 - npm (comes with Node.js)
 - Yarn (e.g. `npm install --global yarn`)
 - Python 3.x (e.g. `apt install python3`)
