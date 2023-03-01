@@ -4,6 +4,8 @@ Welcome to the world of data science and machine learning! The **[Advanced Analy
 
 ## What are you looking for?
 
+What are you looking to do? Whether you're just getting started or already knee-deep in data analysis, the Advanced Analytics Workspace has everything you need to take your work to the next level. From powerful tools for data pipelines to cloud storage for your datasets, our platform has it all. Need to collaborate with colleagues or publish your results? No problem. We offer seamless collaboration features that make it easy to work together and share your work with others. So, no matter what stage of your data science journey you're at, the Advanced Analytics Workspace has the resources you need to succeed.
+
 [![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
 
 [![Analysis](images/Analysis.PNG)](#experiments)
