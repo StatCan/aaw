@@ -5,19 +5,21 @@
 > "What we want to do is make a leapfrog product that is way smarter than any mobile device has ever been, and super-easy to use. This is what iPhone is. OK? So, we're going to reinvent the phone."
 > -- Steve Jobs
 
-Advanced Analytics Workspace (AAW) is an open-source platform designed for data science and machine learning (ML) practitioners. Developed by data scientists for data scientists, AAW provides an unrestricted environment that enables advanced practitioners to get their work done with ease.
-
-Built on the Kubeflow project, AAW is a comprehensive solution for deploying and managing end-to-end ML workflows. It simplifies the deployment of ML workflows on Kubernetes, making it simple, portable, and scalable. With AAW, you can customize your notebook deployments to suit your specific data science needs. Additionally, we have a small number of expertly crafted images made by our team of data science experts.
-
-## Kubernetes
-
-Kubernetes has become the go-to platform for deploying, scaling, and managing containerized applications. With its robust orchestration capabilities, it has also proven to be an excellent tool for implementing MLOps (Machine Learning Operations) workflows. Kubernetes provides a unified platform to manage the entire ML lifecycle from data preparation and model training to deployment and monitoring. By leveraging Kubernetes for MLOps, you can streamline your ML workflows, improve reproducibility, and ensure scalability and reliability in your production environments. With Kubernetes, you can manage containerized ML applications and microservices, scale resources on-demand, and automate rollouts and rollbacks of ML models. In short, Kubernetes can help you achieve greater agility, efficiency, and control in your ML operations.
-
 ## Notices
 
 🔔 **Important!** Users external to Statistics Canada will require a cloud account granted access by the business sponsor.
 
 🔔 **Important!** Users internal to Statistics Canada can get started right away without any additional sign up procedures, just head to  [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
+
+## Introduction
+
+Advanced Analytics Workspace (AAW) is an open-source platform designed for data science and machine learning (ML) practitioners. Developed by data scientists for data scientists, AAW provides an unrestricted environment that enables advanced practitioners to get their work done with ease.
+
+Built on the Kubeflow project, AAW is a comprehensive solution for deploying and managing end-to-end ML workflows. It simplifies the deployment of ML workflows on Kubernetes, making it simple, portable, and scalable. With AAW, you can customize your notebook deployments to suit your specific data science needs. Additionally, we have a small number of expertly crafted images made by our team of data science experts.
+
+## Why Kubernetes?
+
+Kubernetes has become the go-to platform for deploying, scaling, and managing containerized applications. With its robust orchestration capabilities, it has also proven to be an excellent tool for implementing MLOps (Machine Learning Operations) workflows. Kubernetes provides a unified platform to manage the entire ML lifecycle from data preparation and model training to deployment and monitoring. By leveraging Kubernetes for MLOps, you can streamline your ML workflows, improve reproducibility, and ensure scalability and reliability in your production environments. With Kubernetes, you can manage containerized ML applications and microservices, scale resources on-demand, and automate rollouts and rollbacks of ML models. In short, Kubernetes can help you achieve greater agility, efficiency, and control in your ML operations.
 
 ## 🧰 Tools Offered
 
