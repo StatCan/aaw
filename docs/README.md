@@ -3,7 +3,7 @@
 > "Success is a lousy teacher. It seduces smart people into thinking they can't lose."
 > -- Bill Gates
 
-_Welcome to the Advanced Analytics Workspace Documentation!_
+### _Welcome to the Advanced Analytics Workspace Documentation!_
 
 This repository houses the source for the documentation, which provides guidance for using the platform's major services.
 
