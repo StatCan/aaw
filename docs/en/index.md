@@ -1,6 +1,6 @@
 # Get Started
 
-[![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
+[![Getting Started](images/GettingStarted.jpg)](#get-started-with-aaw)
 
 Welcome to the world of data science and machine learning! The **[Advanced Analytics Workspace portal](https://analytics-platform.statcan.gc.ca/)** is your one-stop-shop for all things data. It's like a secret passage to a treasure trove of knowledge, insights, and cutting-edge tools that'll take your data skills to the next level. With just a few clicks, you can unlock a world of possibility and connect to a community of like-minded data wizards. So get ready to don your cape and wizard hat, and join us on an exciting adventure through the Advanced Analytics Workspace portal!
 
