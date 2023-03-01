@@ -5,19 +5,61 @@
 > "What we want to do is make a leapfrog product that is way smarter than any mobile device has ever been, and super-easy to use. This is what iPhone is. OK? So, we're going to reinvent the phone."
 > -- Steve Jobs
 
-_Please find below additional information, videos and links to help better understand how to get started with Advanced Analytics Workspace (AAW)._
-
 Advanced Analytics Workspace (AAW) is an open-source platform designed for data science and machine learning (ML) practitioners. Developed by data scientists for data scientists, AAW provides an unrestricted environment that enables advanced practitioners to get their work done with ease.
 
 Built on the Kubeflow project, AAW is a comprehensive solution for deploying and managing end-to-end ML workflows. It simplifies the deployment of ML workflows on Kubernetes, making it simple, portable, and scalable. With AAW, you can customize your notebook deployments to suit your specific data science needs. Additionally, we have a small number of expertly crafted images made by our team of data science experts.
 
-Advanced Analytics Workspace (AAW) is our **_open source platform for data science and machine learning (ML)_** for **advanced practitioners** to get their work done in an **unrestricted environment** made by data scientists _for_ data scientists. With AAW, you can customize your notebook deployments to suit your data science needs. We also have a small number of expertly crafted images made by our expert data science team.
+## Kubernetes
 
-AAW is based on the Kubeflow project which is an open source comprehensive solution for deploying and managing end-to-end ML workflows. Kubeflow is designed to make deployments of ML workflows on **Kubernetes** simple, portable and scalable.
+Kubernetes has become the go-to platform for deploying, scaling, and managing containerized applications. With its robust orchestration capabilities, it has also proven to be an excellent tool for implementing MLOps (Machine Learning Operations) workflows. Kubernetes provides a unified platform to manage the entire ML lifecycle from data preparation and model training to deployment and monitoring. By leveraging Kubernetes for MLOps, you can streamline your ML workflows, improve reproducibility, and ensure scalability and reliability in your production environments. With Kubernetes, you can manage containerized ML applications and microservices, scale resources on-demand, and automate rollouts and rollbacks of ML models. In short, Kubernetes can help you achieve greater agility, efficiency, and control in your ML operations.
+
+## Notices
 
 🔔 **Important!** Users external to Statistics Canada will require a cloud account granted access by the business sponsor.
 
 🔔 **Important!** Users internal to Statistics Canada can get started right away without any additional sign up procedures, just head to  [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
+
+## 🧰 Tools Offered
+
+AAW is a flexible platform for data analysis and machine learning. It offers a range of languages, including Python, R, and Julia. AAW also supports development environments such as VS Code, R Studio, and Jupyter Notebooks. Additionally, Linux virtual desktops are available for users who require additional tools such as OpenM++ and QGIS.
+
+Here's a list of tools we offer:
+
+  - 📜 Languages:
+    - 🐍 Python
+    - 📈 R
+    - 👩‍🔬 Julia
+  - 🧮 Development environments:
+    - VS Code
+    - R Studio
+    - Jupyter Notebooks
+  - 🐧 Linux virtual desktops for additional tools (🧫 OpenM++, 🌏 QGIS etc.)
+
+## 🧭 Getting Started
+
+To access AAW services, you need to log in to Kubeflow with your StatCan guest cloud account. Once logged in, select Notebook Servers and click the "New Server" button to get started.
+
+1. Login to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) with your StatCan guest cloud account. You will be prompted to authenticate the account.
+2. Select Notebook Servers.
+3. Click the "➕ New Server" button.
+
+## 🐱 Demos
+
+If you require a quick onboarding demo session, need help, or have any questions, please reach out to us through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
+
+## Frequently Asked Questions
+
+For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/daaas/blob/master/README.md).
+
+If your question does not appear in this document, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
+
+## Presentations
+
+We highly encourage you to watch our YouTube presentation given at Stratosphere:
+
+- [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
+- [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
+- [AAW Onboarding Presentation (work in progress)](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit#slide=id.g113e8bbc6e6_0_27)
 
 ## 🔗 Helpful Links
 
@@ -43,57 +85,19 @@ The AAW Portal Documentation and Kubeflow Documentation provide helpful resource
 - 🤝 Slack Support Channel
   - [https://statcan-aaw.slack.com](https://statcan-aaw.slack.com)
 
-## 🧭 Getting Started
-
-To access AAW services, you need to log in to Kubeflow with your StatCan guest cloud account. Once logged in, select Notebook Servers and click the "New Server" button to get started.
-
-1. Login to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) with your StatCan guest cloud account. You will be prompted to authenticate the account.
-2. Select Notebook Servers.
-3. Click the "➕ New Server" button.
-
-## 🧰 Tools Offered
-
-AAW is a flexible platform for data analysis and machine learning. It offers a range of languages, including Python, R, and Julia. AAW also supports development environments such as VS Code, R Studio, and Jupyter Notebooks. Additionally, Linux virtual desktops are available for users who require additional tools such as OpenM++ and QGIS.
-
-Here's a list of tools we offer:
-
-  - 📜 Languages:
-    - 🐍 Python
-    - 📈 R
-    - 👩‍🔬 Julia
-  - 🧮 Development environments:
-    - VS Code
-    - R Studio
-    - Jupyter Notebooks
-  - 🐧 Linux virtual desktops for additional tools (🧫 OpenM++, 🌏 QGIS etc.)
-
-## 🐱 Demos
-
-If you require a quick onboarding demo session, need help, or have any questions, please reach out to us through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
-
-## Frequently Asked Questions
-
-For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/daaas/blob/master/README.md).
-
-If your question does not appear in this document, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
-
-**Thank you for choosing Advanced Analytics Workspace!**
-
-## Presentations
-
-We highly encourage you to watch our YouTube presentation given at Stratosphere:
-
-- [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
-- [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
-- [AAW Onboarding Presentation (work in progress)](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit#slide=id.g113e8bbc6e6_0_27)
-
 ## Security
 
 A discussion about some of the security best practices in use by this platform:
 
 - [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)
 
-## Advanced Analytics Workspace
+**Thank you for choosing Advanced Analytics Workspace!**
+
+## Github Repositories
+
+Please take a look at the following collection of GitHub repositories that are associated with our analytics platform. These repositories contain a wealth of information and resources that can help you get started with our platform, and they also provide useful tools and libraries that you can use to build your own data science and machine learning workflows. Whether you're an experienced data scientist or just starting out, these repositories are a valuable resource for anyone looking to build and deploy advanced analytics solutions.
+
+### Advanced Analytics Workspace
 
 The following is a list of all the `general` related repositories for the Advanced Analytics Workspace project.
 
@@ -122,12 +126,12 @@ The following is a list of all the `general` related repositories for the Advanc
 | [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)                                 | Proposal for the implementation of Protected B workloads in AAW                               | Public     |
 | [aaw-toleration-injector](https://github.com/StatCan/aaw-toleration-injector)                             | Kubernetes toleration injector with support for GPUs and Node Pools                           | Public     |
 
-## Terraform
+### Terraform
 
 The following is a list of all the `terraform` related repositories for the
 Advanced Analytics Workspace project.
 
-### Install the AAW Platform and Infrastructure
+#### Install the AAW Platform and Infrastructure
 
 ```sh
 ## Installs AAW Platform and Infrastructure
@@ -157,7 +161,7 @@ Advanced Analytics Workspace project.
 | AAW       | [terraform-azure-statcan-aaw-region-environment](https://github.com/statcan/terraform-azure-statcan-aaw-region-environment)                                   | Terraform module of Advanced Analytics Workspaces (AAW) per-region configuration of Azure    |
 | AAW       | [terraform-statcan-aaw-platform](https://github.com/statcan/terraform-statcan-aaw-platform)                                                                   | Terraform module for the Advanced Analytics Workspaces (AAW) platform                        |
 
-### Install the Cloud Native Platform
+#### Install the Cloud Native Platform
 
 ```sh
 ## Statistics Canada's Cloud Native Platform (CNP)
