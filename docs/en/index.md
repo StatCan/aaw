@@ -6,7 +6,7 @@ Welcome to the world of data science and machine learning! The **[Advanced Analy
 
 ## What are you looking for?
 
-[![Analysis](images/Analysis.PNG)](#experiments)
+[![Analysis](images/Analysis.jpg)](#experiments)
 [![Publishing](images/Publishing.PNG)](#publishing)
 [![Pipelines](images/Pipelines.PNG)](#pipelines)
 [![Collaboration](images/Collaboration.PNG)](#collaboration)
