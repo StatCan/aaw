@@ -16,6 +16,8 @@ What are you looking to do? Whether you're just getting started or already knee-
 
 # Get Started with AAW
 
+Getting started with the Advanced Analytics Workspace (AAW) is easy and quick. First, you'll want to set up Kubeflow for MLOps and Jupyter Notebooks. Kubeflow makes it easy to deploy and manage end-to-end machine learning workflows, while Jupyter Notebooks provide a flexible and powerful environment for data analysis and experimentation. Once you have Kubeflow and Jupyter Notebooks set up, you can start exploring the many resources and tools available through the AAW portal. Additionally, we encourage you to join our Slack channel to connect with other data scientists and analysts, ask questions, and share your experiences with the AAW platform.
+
 [![Set up Kubeflow](images/Kubeflow.PNG)](1-Experiments/Kubeflow/) Everything
 starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
 
@@ -23,7 +25,7 @@ starts with **[Kubeflow](1-Experiments/Kubeflow/)**! Start by setting it up.
 You're going to have questions. Join our
 **[Slack channel](https://statcan-aaw.slack.com/)** so we can get you answers!
 <img src="images/SlackAAW.PNG" alt="A screenshot of the slack page. In the top right-hand corner is a link to create a new account" width="50%">
-
+Getting started with the Advanced Analytics Workspace (AAW) is easy and quick. First, you'll want to set up Kubeflow for MLOps and Jupyter Notebooks. Kubeflow makes it easy to deploy and manage end-to-end machine learning workflows, while Jupyter Notebooks provide a flexible and powerful environment for data analysis and experimentation. Once you have Kubeflow and Jupyter Notebooks set up, you can start exploring the many resources and tools available through the AAW portal. Additionally, we encourage you to join our Slack channel to connect with other data scientists and analysts, ask questions, and share your experiences with the AAW platform.
 Click on the link, then choose "Create an account" in the upper right-hand
 corner.
 <img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
