@@ -1,6 +1,6 @@
 # Advanced Analytics Workspace
 
-> "Success is a lousy teacher. It seduces smart people into thinking they can't lose."
+> "640K ought to be enough for anybody."
 > -- Bill Gates
 
 ### _Welcome to the Advanced Analytics Workspace Documentation!_
