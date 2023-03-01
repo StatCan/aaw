@@ -1,6 +1,6 @@
 <!-- markdownlint-disable no-bare-urls no-duplicate-header -->
 
-# 🧙🔮 Welcome to Advanced Analytics Workspace (AAW)
+# 🧙🔮 Advanced Analytics Workspace (AAW)
 
 > "What we want to do is make a leapfrog product that is way smarter than any mobile device has ever been, and super-easy to use. This is what iPhone is. OK? So, we're going to reinvent the phone."
 > -- Steve Jobs
