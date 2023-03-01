@@ -70,9 +70,10 @@ Another advantage of the Ubuntu Virtual Desktop is that it provides a consistent
 
 [![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/Remote-Desktop.md) You can run a full Ubuntu desktop, with typical applications, right inside your browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
 
-# Publishing
+## Publishing
 
-## R Shiny
+### R Shiny
+
 _Publish Professional Quality Graphics_
 
 R Shiny is an open-source web application framework that allows data scientists and analysts to create interactive, web-based dashboards and data visualizations using the R programming language. One of the main advantages of R Shiny is that it offers a straightforward way to create high-quality, interactive dashboards without the need for extensive web development expertise. With R Shiny, data scientists can leverage their R coding skills to create dynamic, data-driven web applications that can be shared easily with stakeholders.
@@ -83,37 +84,40 @@ R Shiny is also highly extensible and can be integrated with other open-source t
 
 [![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/) Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight from R. You can deploy your R Shiny dashboard by submitting a pull request to our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards). ![R Shiny Server](images/readme/shiny_ui.png)
 
-## Plotly Dash
+### Plotly Dash
+
+_Publish with Canadian-made software._
 
 **[Plotly Dash](/2-Publishing/Dash/)** is a popular Python library that allows you to create interactive web-based visualizations and dashboards with ease. Developed by the Montreal-based company Plotly, Dash has gained a reputation for being a powerful and flexible tool for building custom data science graphics. With Dash, you can create everything from simple line charts to complex, multi-page dashboards with interactive widgets and controls. Because it's built on open-source technologies like Flask, React, and Plotly.js, Dash is highly customizable and can be easily integrated with other data science tools and workflows. Whether you're a data scientist, analyst, or developer, Dash can help you create engaging and informative visualizations that bring your data to life.
 
-## Explore your data
+### Explore your data
 
 [![Explore your data](images/ExploreData.PNG)](/2-Publishing/Datasette/) Use **[Datasette](/2-Publishing/Datasette/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
 
-# Pipelines
+## Data Science Pipelines
 
-## Build and schedule data/analysis pipelines
+### Build and schedule data/analysis pipelines
 
-[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/) **[Kubeflow Pipelines](/3-Pipelines/Kubeflow-Pipelines/)** allows you to set up pipelines. Each pipeline encapsulates analytical workflows, and can be shared, reused, and scheduled. ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
+[![Build Piplines](images/BuildPipelines.PNG)](/3-Pipelines/Kubeflow-Pipelines/) **[Argo Workflows](/3-Pipelines/Kubeflow-Pipelines/)**  is an open-source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows. Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment. It is an excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production.
+
+![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
+
+### External Platform as a Service (PaaS) Offerings
+
+_Integration is key to success._
+
+Our open-source platform offers unparalleled optionality to our users. By allowing users to use open-source tools, we empower them to use their preferred data science and machine learning frameworks. But the real power of our platform comes from its ability to integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML. This means that our users can leverage the power of the cloud to run complex data processing and machine learning pipelines at scale. With the ability to integrate with PaaS offerings, our platform enables our users to take their work to the next level, by giving them the power to scale their workloads with ease, and take advantage of the latest innovations in the field of data science and machine learning. By providing this level of optionality, we ensure that our users can always choose the right tool for the job, and stay ahead of the curve in an ever-changing field.
 
 [![Integrate with PaaS](images/IntegratePaaS.PNG)]()
 
-## Integrate with Platform as a Service (PaaS) offerings
+We can integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML.
 
-We can integrate with many Platform as a Service (PaaS) offerings, like
-Databricks or AzureML.
+## Collaboration
 
-# Collaboration
-
-There are many ways collaborate on the platform. Which is best for your
-situation depends on what you're sharing and how many people you want to share
+There are many ways collaborate on the platform. Which is best for your situation depends on what you're sharing and how many people you want to share
 with. See the [Collaboration Overview](4-Collaboration/Overview.md) for details.
 
-Content to be shared breaks roughly into **Data**, **Code**, or **Compute
-Environments** (e.g.: sharing the same virtual machines) and who you want to
-share it with (**No one**, **My Team**, or **Everyone**). This leads to the
-following table of options
+Content to be shared breaks roughly into **Data**, **Code**, or **Compute Environments** (e.g.: sharing the same virtual machines) and who you want to share it with (**No one**, **My Team**, or **Everyone**). This leads to the following table of options
 
 |             |           **Private**            |                  **Team**                  |  **StatCan**  |
 | :---------: | :------------------------------: | :----------------------------------------: | :-----------: |
@@ -121,17 +125,11 @@ following table of options
 |  **Data**   |    Personal folder or bucket     | Team folder or bucket, or shared namespace | Shared Bucket |
 | **Compute** |        Personal namespace        |              Shared namespace              |      N/A      |
 
-<!-- prettier-ignore -->
-??? question "What is the difference between a bucket and a folder?"
-    Buckets are like Network Storage. See the [Storage section](#storage) section for more discussion of the differences between these two ideas.
+<!-- prettier-ignore --> ??? question "What is the difference between a bucket and a folder?" Buckets are like Network Storage. See the [Storage section](#storage) section for more discussion of the differences between these two ideas.
 
-Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
-machine) is described in more detail in the
-[Collaboration](4-Collaboration/Overview.md) section. Sharing data through
-buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md)**
-section.
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail in the [Collaboration](4-Collaboration/Overview.md) section. Sharing data through buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md)** section.
 
-# Cloud Storage
+## Cloud Storage
 
 Cloud storage offers numerous advantages over traditional on-premises storage solutions. One of the key benefits is the ability to easily scale up or down your storage needs with just a few clicks, without having to purchase and install additional hardware. With cloud storage, you only pay for the amount of storage you use, making it a cost-effective solution for businesses of all sizes.
 
@@ -147,17 +145,17 @@ The platform provides several types of storage:
 
 Depending on your use case, either disk or bucket may be most suitable. Our [storage overview](./5-Storage/Overview.md) will help you compare them.
 
-## Disks
+### Disks
 
 [![Disks](images/Disks.PNG)](Storage.md/) **[Disks](./5-Storage/Disks.md)** are added to your notebook server by adding Data Volumes.
 
-## Buckets
+### Buckets
 
 MinIO is an S3-API compatible object storage system that provides an open source alternative to proprietary cloud storage services. While we currently use MinIO as our cloud storage solution, we plan on replacing it with s3-proxy in the near future. S3-proxy is a lightweight, open source reverse proxy server that allows you to access Amazon S3-compatible storage services with your existing applications. By switching to s3-proxy, we will be able to improve our cloud storage performance, security, and scalability, while maintaining compatibility with the S3 API.
 
 [![MinIO](images/Buckets.PNG)](MinIO.md/) **[MinIO](./5-Storage/MinIO.md)** is a cloud-native scalable object store. We use it for buckets (blob or S3 storage).
 
-## Data Lakes
+### Data Lakes
 
 A data lake is a central repository that allows you to store all your structured and unstructured data at any scale. It's a cost-effective way to store and manage all types of data, from raw data to processed data, and it's an essential tool for data scientists.
 
