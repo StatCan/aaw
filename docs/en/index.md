@@ -27,9 +27,9 @@ You're going to have questions. Join our
 
 Click on the link, then choose "Create an account" in the upper right-hand
 corner.
-<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @canada.ca email" width="50%">
+<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @statcan.gc.ca email" width="50%">
 
-Use your @canada.ca email address so that you will be automatically approved.
+Use your @statcan.gc.ca email address so that you will be automatically approved.
 
 # Experiments
 
