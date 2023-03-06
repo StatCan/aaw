@@ -248,6 +248,4 @@ Content to be shared breaks roughly into **Data**, **Code**, or **Compute Enviro
 |  **Data**   |    Personal folder or bucket     | Team folder or bucket, or shared namespace | Shared Bucket |
 | **Compute** |        Personal namespace        |              Shared namespace              |      N/A      |
 
-<!-- prettier-ignore --> ??? question "What is the difference between a bucket and a folder?" Buckets are like Network Storage. See the [Storage section](#storage) section for more discussion of the differences between these two ideas.
-
 Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail in the [Collaboration](4-Collaboration/Overview.md) section. Sharing data through buckets is described in more detail in the **[MinIO](./5-Storage/MinIO.md)** section.
