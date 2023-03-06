@@ -39,7 +39,7 @@ So take the first step and start by setting up Kubeflow today. With its vast arr
 
 At StatCan, we understand that embarking on a new project can be overwhelming, and you're likely to have many questions along the way. That's why we've created a dedicated  **[Slack channel](https://statcan-aaw.slack.com/)** to provide you with the support you need. Our team of experts is standing by to answer your questions, address any concerns, and guide you through every step of the process.
 
-To join our  **[Slack channel](https://statcan-aaw.slack.com/)**, simply click on the link provided and follow the instructions. You'll be prompted to create an account in the upper right-hand corner of the page. We recommend using your @statcan.gc.ca email address, as this will ensure that you are automatically approved and can start engaging with our community right away.
+To join our  **[Slack channel](https://statcan-aaw.slack.com/)**, simply click on the link provided and follow the instructions. You'll be prompted to create an account in the upper right-hand corner of the page. If you have an `@statcan.gc.ca` email address, use it when signing up as this will ensure that you are automatically approved and can start engaging with our community right away.
 
 Once you've created your account, you'll have access to a wealth of resources and information, as well as the opportunity to connect with other users who are working on similar projects. Our  **[Slack channel](https://statcan-aaw.slack.com/)** is the perfect place to ask questions, share insights, and collaborate with your peers in real-time. Whether you're just getting started with a new project or you're looking for expert advice on a complex issue, our team is here to help.
 
