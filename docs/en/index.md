@@ -199,7 +199,7 @@ MinIO is an S3-API compatible object storage system that provides an open source
 
 **[MinIO](./5-Storage/MinIO.md)** is a cloud-native scalable object store. We use it for buckets (blob or S3 storage).
 
-### Data Lakes
+### Data Lakes (Coming Soon)
 
 A data lake is a central repository that allows you to store all your structured and unstructured data at any scale. It's a cost-effective way to store and manage all types of data, from raw data to processed data, and it's an essential tool for data scientists.
 
@@ -210,6 +210,12 @@ Data lakes also enable data scientists to centralize their data, making it easie
 Furthermore, cloud-based data lakes provide scalable, cost-effective storage solutions that can be easily expanded at the click of a button. As a data scientist's data storage needs grow, they can add additional storage capacity to their data lake with minimal effort, without worrying about the underlying infrastructure or maintenance.
 
 Overall, data lakes are a critical tool for data scientists, as they provide the flexibility, scalability, and ease of use needed to store and manage large volumes of data, enabling data scientists to focus on extracting insights and value from the data.
+
+### Statcan Protected B Data
+
+_The AAW is certified for hosting Protected B data!_
+
+In order to upload Protected B data to the AAW, users will need to request access through the Customer Success Unit (CSU). AAW users will also need to provide a namespace, get a sponsor and get approval from OPMIC. Once the process has been approved, our Fair Data Infrastructure (FDI) team will then create a folder on Net A which in turn will give access to user(s) through the active directory. The data will then be able to transfer from Net A to AAW Cloud
 
 ## Integration with External Platform as a Service (PaaS) Offerings
 
