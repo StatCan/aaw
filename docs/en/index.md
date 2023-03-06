@@ -41,7 +41,7 @@ To join our  **[Slack channel](https://statcan-aaw.slack.com/)**, simply click o
 
 Once you've created your account, you'll have access to a wealth of resources and information, as well as the opportunity to connect with other users who are working on similar projects. Our  **[Slack channel](https://statcan-aaw.slack.com/)** is the perfect place to ask questions, share insights, and collaborate with your peers in real-time. Whether you're just getting started with a new project or you're looking for expert advice on a complex issue, our team is here to help.
 
-So don't hesitate - join our  **[Slack channel](https://statcan-aaw.slack.com/)** today and start getting the answers you need to succeed. We look forward to welcoming you to our community!
+So don't hesitate - join our **[Slack channel](https://statcan-aaw.slack.com/)** today and start getting the answers you need to succeed. We look forward to welcoming you to our community!
 
 ## Data Analysis
 
@@ -59,11 +59,11 @@ Use **[Datasette](/2-Publishing/Datasette/)** , an instant JSON API for your SQL
 
 ## Data Science Experimentation
 
-Process data using R, Python, or Julia with Kubeflow, a machine learning platform that provides a simple, unified, and scalable infrastructure for machine learning workloads. With Kubeflow, you can process data in a scalable and efficient way using the programming language of your choice. Once you have Kubeflow set up, use Jupyter Notebooks to create and share documents that contain live code, equations, or visualizations.
+_Process data using R, Python, or Julia with Kubeflow, a machine learning platform that provides a simple, unified, and scalable infrastructure for machine learning workloads._
+
+With Kubeflow, you can process data in a scalable and efficient way using the programming language of your choice. Once you have Kubeflow set up, use Jupyter Notebooks to create and share documents that contain live code, equations, or visualizations.
 
 You can also run Ubuntu as a virtual desktop with Kubeflow, giving you access to a powerful development environment that can be customized to your needs. With R Shiny, a web application framework for R, you can easily create and publish static and interactive dashboards to communicate your analysis results to stakeholders.
-
-For data exploration and data pipelines, Kubeflow provides a range of tools and frameworks, including Apache Beam and TensorFlow Extended (TFX). Apache Beam is an open-source, unified model for defining both batch and streaming data-parallel processing pipelines. TFX is a production-scale machine learning platform that helps you build and deploy your ML models.
 
 Kubeflow also provides integration with external platforms as a service, such as Google Cloud Platform (GCP) and Amazon Web Services (AWS), allowing you to easily move data and workloads between different cloud services. Additionally, with Kubeflow's collaboration features, you can work on your projects with your team in real-time, sharing your analysis, code, and results seamlessly.
 
@@ -78,7 +78,6 @@ _Process data using R, Python, or Julia in JupyterLab_
 Processing data using R, Python, or Julia is made easy with the Advanced Analytics Workspace. Whether you're new to data analysis or an experienced data scientist, our platform supports a range of programming languages to fit your needs. You can install and run packages for R or Python to perform data processing tasks such as data cleaning, transformation, and modeling. If you prefer Julia, our platform also offers support for this programming language.
 
 Once you have your code ready, use Jupyter Notebooks on our platform to create and share documents that contain live code, equations, or visualizations. You can also run Ubuntu as a virtual desktop for data exploration and other data analysis tasks. Additionally, our platform supports publishing static and interactive dashboards with R Shiny, a popular web application framework for R.
-
 
 With our platform, you can easily create data pipelines for automating data processing and integrating with external platforms as a service. Whether you're working on a solo project or collaborating with a team, the Advanced Analytics Workspace has the tools you need to streamline your data analysis workflow.
 
@@ -112,23 +111,39 @@ Another advantage of the Ubuntu Virtual Desktop is that it provides a consistent
 
 ## Data Science Pipelines
 
-_Build and schedule data/analysis pipelines._
+_MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows._
 
 [![Build Piplines](images/pipelines.jpg)](/3-Pipelines/Kubeflow-Pipelines/)
 
-MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows. MLOps refers to the set of practices and tools used to manage the entire lifecycle of a machine learning model. This includes everything from developing and training the model to deploying it in production and maintaining it over time. MLOps ensures that machine learning models are reliable, accurate, and scalable, and that they can be updated and improved as needed. Data pipelines, on the other hand, are a series of steps that help move data from one system or application to another. This includes collecting, cleaning, transforming, and storing data, as well as retrieving it when needed. Data pipelines are important for ensuring that data is accurate, reliable, and accessible to those who need it. Together, MLOps and data pipelines help organizations manage the complex process of working with large amounts of data and developing machine learning models. By automating these processes and ensuring that data is accurate and reliable, organizations can save time and resources while making better decisions based on data-driven insights.
+MLOps refers to the set of practices and tools used to manage the entire lifecycle of a machine learning model. This includes everything from developing and training the model to deploying it in production and maintaining it over time. MLOps ensures that machine learning models are reliable, accurate, and scalable, and that they can be updated and improved as needed.
+
+Data pipelines are a series of steps that help move data from one system or application to another. This includes collecting, cleaning, transforming, and storing data, as well as retrieving it when needed. Data pipelines are important for ensuring that data is accurate, reliable, and accessible to those who need it. 
+
+Together, MLOps and data pipelines help organizations manage the complex process of working with large amounts of data and developing machine learning models. By automating these processes and ensuring that data is accurate and reliable, organizations can save time and resources while making better decisions based on data-driven insights.
 
 ### Argo Workflows
 
-**[Argo Workflows](/3-Pipelines/Kubeflow-Pipelines/)**  is an open-source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows. Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment. It is an excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production.
+_An excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production._
+
+**[Argo Workflows](/3-Pipelines/Kubeflow-Pipelines/)**  is an open-source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows.
+
+Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment.
 
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)
 
 ## Statistical Publishing
 
-Publishing is an essential aspect of data science and statistics. It allows researchers to share their findings with the broader scientific community, enabling others to build upon their work and push the field forward. By sharing their data and methods openly, researchers can receive feedback on their work and ensure that their findings are accurate and reliable. Publishing also allows researchers to establish their reputation and gain recognition for their work, which can help secure funding and future research opportunities. In addition, publishing research findings can have important implications for public policy and decision-making, as policymakers often rely on scientific evidence to make informed decisions. Overall, publishing is an integral part of the scientific process and plays a critical role in advancing knowledge and solving real-world problems.
+_Beautiful graphics is important in statistical publishing because it makes the data more accessible and understandable to a wider audience._
 
-Statistical publishing involves communicating statistical information to a broader audience using various forms of media, such as charts, graphs, and infographics. Having beautiful graphics is important in statistical publishing because it makes the data more accessible and understandable to a wider audience. Well-designed visualizations can help communicate complex statistical concepts and patterns in a clear and compelling way, allowing the audience to quickly grasp the main insights and conclusions. Moreover, beautiful graphics can enhance the overall impact of statistical publications, making them more engaging and memorable. This can be particularly important when communicating important information to decision-makers, stakeholders, or the general public, where the ability to clearly and effectively communicate data-driven insights can be critical to achieving success. In summary, data science and statistical publishing are essential for turning complex data into meaningful insights, and having beautiful graphics is a crucial aspect of effectively communicating those insights to a broader audience.  
+Publishing is an essential aspect of data science and statistics. It allows researchers to share their findings with the broader scientific community, enabling others to build upon their work and push the field forward. By sharing their data and methods openly, researchers can receive feedback on their work and ensure that their findings are accurate and reliable.
+
+Publishing allows researchers to establish their reputation and gain recognition for their work, which can help secure funding and future research opportunities. In addition, publishing research findings can have important implications for public policy and decision-making, as policymakers often rely on scientific evidence to make informed decisions. Overall, publishing is an integral part of the scientific process and plays a critical role in advancing knowledge and solving real-world problems.
+
+Statistical publishing involves communicating statistical information to a broader audience using various forms of media, such as charts, graphs, and infographics. Having beautiful graphics is important in statistical publishing because it makes the data more accessible and understandable to a wider audience. Well-designed visualizations can help communicate complex statistical concepts and patterns in a clear and compelling way, allowing the audience to quickly grasp the main insights and conclusions.
+
+Beautiful graphics can enhance the overall impact of statistical publications, making them more engaging and memorable. This can be particularly important when communicating important information to decision-makers, stakeholders, or the general public, where the ability to clearly and effectively communicate data-driven insights can be critical to achieving success.
+
+In summary, data science and statistical publishing are essential for turning complex data into meaningful insights, and having beautiful graphics is a crucial aspect of effectively communicating those insights to a broader audience.  
 
 ### R Shiny
 
@@ -154,19 +169,15 @@ _Publish with Canadian-made software._
 
 ## Cloud Storage
 
-Cloud storage offers several advantages for data science and machine learning, particularly in terms of scalability, accessibility, and cost-effectiveness. Firstly, cloud storage enables data scientists to store and process large amounts of data without having to worry about the limitations of local storage. This is particularly important in the context of machine learning, where large datasets are required for training and testing models.
+_Cloud storage offers several advantages for data science and machine learning, particularly in terms of scalability, accessibility, and cost-effectiveness._
 
-Cloud storage allows data scientists to scale up their storage capacity as needed, without having to invest in expensive hardware. Secondly, cloud storage allows data scientists to access data from anywhere, using any device with an internet connection. This enables collaboration across geographically distributed teams and allows data scientists to work remotely. Additionally, cloud storage makes it easier to share data with other stakeholders, such as business partners or customers. Finally, cloud storage is typically more cost-effective than on-premises storage, particularly for smaller organizations or those with limited IT resources.
+Firstly, cloud storage enables data scientists to store and process large amounts of data without having to worry about the limitations of local storage. This is particularly important in the context of machine learning, where large datasets are required for training and testing models. Cloud storage allows data scientists to scale up their storage capacity as needed, without having to invest in expensive hardware.
 
-In summary, cloud storage offers several advantages for data science and machine learning, including scalability, accessibility, and cost-effectiveness. These benefits enable data scientists to store and process large amounts of data, collaborate effectively, and make better use of their resources.
-
-Cloud storage offers numerous advantages over traditional on-premises storage solutions. One of the key benefits is the ability to easily scale up or down your storage needs with just a few clicks, without having to purchase and install additional hardware. With cloud storage, you only pay for the amount of storage you use, making it a cost-effective solution for businesses of all sizes.
-
-Another advantage of cloud storage is that it offers greater accessibility and flexibility. Your data can be accessed from anywhere with an internet connection, making it easier for remote workers to collaborate and share files. Additionally, cloud storage providers often offer advanced security features, such as data encryption and access controls, to help protect your data from unauthorized access or data breaches.
+Secondly, cloud storage allows data scientists to access data from anywhere, using any device with an internet connection. This enables collaboration across geographically distributed teams and allows data scientists to work remotely. Additionally, cloud storage makes it easier to share data with other stakeholders, such as business partners or customers. Finally, cloud storage is typically more cost-effective than on-premises storage, particularly for smaller organizations or those with limited IT resources.
 
 Overall, cloud storage is a reliable and convenient solution for storing and managing your data. Whether you need to store large amounts of data or just a few files, cloud storage makes it easy to manage your storage needs without the hassle of traditional storage solutions.
 
-The platform provides several types of storage:
+The AAW platform provides several types of storage:
 
 - Disks (also called Volumes on the Kubeflow Notebook Server creation screen)
 - Buckets ("Blob" or S3 storage, provided through MinIO)
