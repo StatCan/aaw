@@ -1,7 +1,7 @@
 # Overview
 
 <!-- prettier-ignore -->
-!!! warning "Kubeflow pipelines are in the process of being removed from AAW." 
+!!! warning "Kubeflow pipelines are in the process of being removed from AAW."
     No new development should use Kubeflow pipelines. If you have questions
     about this removal, please speak with the AAW maintainers.
 
@@ -627,7 +627,7 @@ pipeline parameters.
 
 Although small data can often be stringified, passing by string is not suitable
 for complex data (large parquet files, images, etc.). It is common to use blob
-storage (for example: [MinIO](../5-Storage/MinIO.md)) or other outside storage
+storage (for example: [MinIO](../5-Storage/AzureBlobStorage.md)) or other outside storage
 methods to persist data between components or even for later use. A typical
 pattern would be:
 
