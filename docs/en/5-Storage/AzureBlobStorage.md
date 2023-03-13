@@ -43,13 +43,6 @@ storage type behind them:
 - **aaw-unclassified-ro:** This classification is protected-b but read-only access. This is so users can view unclassified
 data within a protected-b pod.
 
-Generally if you aren't sure which you need, start with **Standard**. You can
-always change your mind if you see your work limited by file transfer speeds.
-
-Within each bucket type, everyone has two storage locations they can use, each
-providing different access scopes:
-
-
 <!-- prettier-ignore -->
 
 ## Accessing Internal Data
