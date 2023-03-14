@@ -30,9 +30,9 @@ donner des réponses!
 Cliquez sur le lien, puis choisissez "Créer un compte" dans le coin en haut à
 droite.
 
-![Capture d'écran de la page Slack du nouveau compte, avec une case pour utiliser votre courriel @canada.ca](images/SlackAAW2.PNG)
+![Capture d'écran de la page Slack du nouveau compte, avec une case pour utiliser votre courriel @statcan.gc.ca](images/SlackAAW2.PNG)
 
-Utilisez votre adresse électronique @canada.ca pour que votre demande soit
+Utilisez votre adresse électronique @statcan.gc.ca pour que votre demande soit
 automatiquement approuvée.
 
 # Expériences

@@ -27,6 +27,12 @@ Getting started with the Advanced Analytics Workspace (AAW) is easy and quick. F
 
 - **[Click here to setup your Kubeflow account!](https://kubeflow.aaw.cloud.statcan.ca/)**
 
+Click on the link, then choose "Create an account" in the upper right-hand
+corner.
+<img src="images/SlackAAW2.PNG" alt="A screenshot of the next page, with a box to use your @statcan.gc.ca email" width="50%">
+
+Use your @statcan.gc.ca email address so that you will be automatically approved.
+
 **[Kubeflow](1-Experiments/Kubeflow/)** is a powerful and flexible open source platform that has revolutionized the way we build, deploy, and manage machine learning workflows. With its robust set of tools and frameworks, Kubeflow is the perfect starting point for data scientists and developers who want to accelerate their projects and bring them to the next level. By using up Kubeflow, you can harness the full potential of cloud-native machine learning and unlock new opportunities for innovation and growth.
 
 So take the first step and start by setting up Kubeflow today. With its vast array of features and capabilities, Kubeflow offers an unparalleled level of flexibility and customization, empowering you to create and deploy machine learning workflows that meet your specific needs and requirements. By embracing Kubeflow, you'll be at the forefront of the machine learning revolution, and who knows what incredible insights and breakthroughs you'll discover along the way
