@@ -134,7 +134,7 @@ buffer_lyr = use_proximity.create_buffers(item1, distances=[1],
 display(item1_buffer)
 ```
 
-Some users prefer to work with Open-Source packages.  Translating from ArcGIS to Spatial Dataframes is simple.
+Some users prefer to work with open source packages.  Translating from ArcGIS to Spatial Dataframes is simple.
 ```python
 # create a Spatially Enabled DataFrame object
 sdf = pd.DataFrame.spatial.from_layer(feature_layer)

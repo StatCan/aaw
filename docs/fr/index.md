@@ -106,8 +106,8 @@ manière plus interactive !
 
 ## Créer et planifier des pipelines de données/analyse
 
-[![Construire des Piplines](images/ConstruirePipelines.png)](/3-Pipelines/Kubeflow-Pipelines/)
-**[Kubeflow Pipelines](./3-Pipelines/Kubeflow-Pipelines.md)** vous permet de
+[![Construire des Piplines](images/ConstruirePipelines.png)](/3-MLOps/Machine-Learning-Training-Pipelines/)
+**[Kubeflow Pipelines](./3-MLOps/Machine-Learning-Training-Pipelines.md)** vous permet de
 mettre en place des pipelines. Chaque pipelines encapsulent des flux de
 production analytiques et peuvent être mis en commun, réutilisés et programmés.
 ![Kubeflow Pipelines](images/readme/kubeflow_pipeline.png)

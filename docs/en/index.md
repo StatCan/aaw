@@ -1,6 +1,12 @@
+<center>
+![Statistics](images/statistics-on-the-moon.jpg)
+</center>
+
+# Welcome!
+
 Welcome to the world of data science and machine learning! The **[Advanced Analytics Workspace portal](https://analytics-platform.statcan.gc.ca/)** is your one-stop-shop for all things data. It's like a secret passage to a treasure trove of knowledge, insights, and cutting-edge tools that'll take your data skills to the next level. With just a few clicks, you can unlock a world of possibility and connect to a community of like-minded data wizards. So get ready to don your cape and wizard hat, and join us on an exciting adventure through the Advanced Analytics Workspace portal!
 
-## What are you looking for?
+# What are you looking for?
 
 - [Getting Started with AAW](#getting-started-with-aaw)
 - [Data Analysis](#data-analysis)
@@ -13,19 +19,19 @@ Welcome to the world of data science and machine learning! The **[Advanced Analy
 
 What are you looking to do? Whether you're just getting started or already knee-deep in data analysis, the Advanced Analytics Workspace has everything you need to take your work to the next level. From powerful tools for data pipelines to cloud storage for your datasets, our platform has it all. Need to collaborate with colleagues or publish your results? No problem. We offer seamless collaboration features that make it easy to work together and share your work with others. So, no matter what stage of your data science journey you're at, the Advanced Analytics Workspace has the resources you need to succeed.
 
-## Getting Started with AAW
+# Getting Started with AAW
 
 Getting started with the Advanced Analytics Workspace (AAW) is easy and quick. First, you'll want to set up Kubeflow for MLOps and Jupyter Notebooks. Kubeflow makes it easy to deploy and manage end-to-end machine learning workflows, while Jupyter Notebooks provide a flexible and powerful environment for data analysis and experimentation. Once you have Kubeflow and Jupyter Notebooks set up, you can start exploring the many resources and tools available through the AAW portal. Additionally, we encourage you to join our Slack channel to connect with other data scientists and analysts, ask questions, and share your experiences with the AAW platform.
 
-### Kubeflow Account
+## Kubeflow Account
 
 - **[Click here to setup your Kubeflow account!](https://kubeflow.aaw.cloud.statcan.ca/)**
 
-**[Kubeflow](1-Experiments/Kubeflow/)** is a powerful and flexible open-source platform that has revolutionized the way we build, deploy, and manage machine learning workflows. With its robust set of tools and frameworks, Kubeflow is the perfect starting point for data scientists and developers who want to accelerate their projects and bring them to the next level. By using up Kubeflow, you can harness the full potential of cloud-native machine learning and unlock new opportunities for innovation and growth.
+**[Kubeflow](1-Experiments/Kubeflow/)** is a powerful and flexible open source platform that has revolutionized the way we build, deploy, and manage machine learning workflows. With its robust set of tools and frameworks, Kubeflow is the perfect starting point for data scientists and developers who want to accelerate their projects and bring them to the next level. By using up Kubeflow, you can harness the full potential of cloud-native machine learning and unlock new opportunities for innovation and growth.
 
 So take the first step and start by setting up Kubeflow today. With its vast array of features and capabilities, Kubeflow offers an unparalleled level of flexibility and customization, empowering you to create and deploy machine learning workflows that meet your specific needs and requirements. By embracing Kubeflow, you'll be at the forefront of the machine learning revolution, and who knows what incredible insights and breakthroughs you'll discover along the way
 
-### Slack Channel 
+## Slack Channel 
 
 <center>
 [![Ask questions on Slack](images/SlackAAW.PNG)](https://statcan-aaw.slack.com/)
@@ -113,7 +119,7 @@ Another advantage of the Ubuntu Virtual Desktop is that it provides a consistent
 
 _MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows._
 
-[![Build Piplines](images/pipelines.jpg)](/3-Pipelines/Kubeflow-Pipelines/)
+[![Build Piplines](images/pipelines.jpg)](/3-MLOps/Machine-Learning-Training-Pipelines/)
 
 MLOps refers to the set of practices and tools used to manage the entire lifecycle of a machine learning model. This includes everything from developing and training the model to deploying it in production and maintaining it over time. MLOps ensures that machine learning models are reliable, accurate, and scalable, and that they can be updated and improved as needed.
 
@@ -125,7 +131,7 @@ Together, MLOps and data pipelines help organizations manage the complex process
 
 _An excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production._
 
-**[Argo Workflows](/3-Pipelines/Kubeflow-Pipelines/)**  is an open-source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows.
+**[Argo Workflows](/3-MLOps/Machine-Learning-Training-Pipelines/)**  is an open source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows.
 
 Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment.
 
@@ -151,13 +157,13 @@ _Publish Professional Quality Graphics_
 
 [![InteractiveDashboard](images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
 
-R Shiny is an open-source web application framework that allows data scientists and analysts to create interactive, web-based dashboards and data visualizations using the R programming language. One of the main advantages of R Shiny is that it offers a straightforward way to create high-quality, interactive dashboards without the need for extensive web development expertise. With R Shiny, data scientists can leverage their R coding skills to create dynamic, data-driven web applications that can be shared easily with stakeholders.
+R Shiny is an open source web application framework that allows data scientists and analysts to create interactive, web-based dashboards and data visualizations using the R programming language. One of the main advantages of R Shiny is that it offers a straightforward way to create high-quality, interactive dashboards without the need for extensive web development expertise. With R Shiny, data scientists can leverage their R coding skills to create dynamic, data-driven web applications that can be shared easily with stakeholders.
 
 Another advantage of R Shiny is that it supports a variety of data visualizations that can be easily customized to meet the needs of the project. Users can create a wide range of charts and graphs, from simple bar charts and scatter plots to more complex heatmaps and network graphs. Additionally, R Shiny supports a variety of interactive widgets that allow users to manipulate and explore data in real-time.
 
 ![R Shiny Server](images/readme/shiny_ui.png)
 
-R Shiny is also highly extensible and can be integrated with other open-source tools and platforms to build end-to-end data science workflows. With its powerful and flexible features, R Shiny is a popular choice for building data visualization dashboards for a wide range of applications, from scientific research to business analytics. Overall, R Shiny offers a powerful, customizable, and cost-effective solution for creating interactive dashboards and data visualizations.
+R Shiny is also highly extensible and can be integrated with other open source tools and platforms to build end-to-end data science workflows. With its powerful and flexible features, R Shiny is a popular choice for building data visualization dashboards for a wide range of applications, from scientific research to business analytics. Overall, R Shiny offers a powerful, customizable, and cost-effective solution for creating interactive dashboards and data visualizations.
 
 Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight from R. You can deploy your R Shiny dashboard by submitting a pull request to our [R-Dashboards GitHub repository](https://github.com/StatCan/R-dashboards).
 
@@ -165,7 +171,7 @@ Use **[R-Shiny](/2-Publishing/R-Shiny/)** to build interactive web apps straight
 
 _Publish with Canadian-made software._
 
-**[Plotly Dash](/2-Publishing/Dash/)** is a popular Python library that allows you to create interactive web-based visualizations and dashboards with ease. Developed by the Montreal-based company Plotly, Dash has gained a reputation for being a powerful and flexible tool for building custom data science graphics. With Dash, you can create everything from simple line charts to complex, multi-page dashboards with interactive widgets and controls. Because it's built on open-source technologies like Flask, React, and Plotly.js, Dash is highly customizable and can be easily integrated with other data science tools and workflows. Whether you're a data scientist, analyst, or developer, Dash can help you create engaging and informative visualizations that bring your data to life.
+**[Plotly Dash](/2-Publishing/Dash/)** is a popular Python library that allows you to create interactive web-based visualizations and dashboards with ease. Developed by the Montreal-based company Plotly, Dash has gained a reputation for being a powerful and flexible tool for building custom data science graphics. With Dash, you can create everything from simple line charts to complex, multi-page dashboards with interactive widgets and controls. Because it's built on open source technologies like Flask, React, and Plotly.js, Dash is highly customizable and can be easily integrated with other data science tools and workflows. Whether you're a data scientist, analyst, or developer, Dash can help you create engaging and informative visualizations that bring your data to life.
 
 ## Cloud Storage
 
@@ -223,7 +229,7 @@ _Integration is key to success._
 
 [![Integrate with PaaS](images/IntegratePaaS.PNG)]()
 
-Our open-source platform offers unparalleled optionality to our users. By allowing users to use open-source tools, we empower them to use their preferred data science and machine learning frameworks. But the real power of our platform comes from its ability to integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML. This means that our users can leverage the power of the cloud to run complex data processing and machine learning pipelines at scale. With the ability to integrate with PaaS offerings, our platform enables our users to take their work to the next level, by giving them the power to scale their workloads with ease, and take advantage of the latest innovations in the field of data science and machine learning. By providing this level of optionality, we ensure that our users can always choose the right tool for the job, and stay ahead of the curve in an ever-changing field.
+Our open source platform offers unparalleled optionality to our users. By allowing users to use open source tools, we empower them to use their preferred data science and machine learning frameworks. But the real power of our platform comes from its ability to integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML. This means that our users can leverage the power of the cloud to run complex data processing and machine learning pipelines at scale. With the ability to integrate with PaaS offerings, our platform enables our users to take their work to the next level, by giving them the power to scale their workloads with ease, and take advantage of the latest innovations in the field of data science and machine learning. By providing this level of optionality, we ensure that our users can always choose the right tool for the job, and stay ahead of the curve in an ever-changing field.
 
 We can integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML.
 

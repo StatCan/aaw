@@ -13,7 +13,7 @@
 
 ## Introduction
 
-Advanced Analytics Workspace (AAW) is an open-source platform designed for data science and machine learning (ML) practitioners. Developed by data scientists for data scientists, AAW provides an unrestricted environment that enables advanced practitioners to get their work done with ease.
+Advanced Analytics Workspace (AAW) is an open source platform designed for data science and machine learning (ML) practitioners. Developed by data scientists for data scientists, AAW provides an unrestricted environment that enables advanced practitioners to get their work done with ease.
 
 Built on the Kubeflow project, AAW is a comprehensive solution for deploying and managing end-to-end ML workflows. It simplifies the deployment of ML workflows on Kubernetes, making it simple, portable, and scalable. With AAW, you can customize your notebook deployments to suit your specific data science needs. Additionally, we have a small number of expertly crafted images made by our team of data science experts.
 
@@ -119,7 +119,7 @@ The following is a list of all the `general` related repositories for the Advanc
 | [aaw-kubeflow-controller](https://github.com/StatCan/aaw-kubeflow-controller)                             | Kubeflow controller which sets PodDefaults + Vault policies for each Profile detected         | Public     |
 | [aaw-kubeflow-mlops](https://github.com/StatCan/aaw-kubeflow-mlops)                                       | Kubeflow MLOps pipeline using GitHub Actions                                                  | Public     |
 | [aaw-kubeflow-opa-sync](https://github.com/StatCan/aaw-kubeflow-opa-sync)                                 | Synchronize profile editors into the Open Policy Agent for use in MinIO Access Control        | Public     |
-| [aaw-kubeflow-pipelines-secret-scanner](https://github.com/StatCan/aaw-kubeflow-pipelines-secret-scanner) | Scan all Kubeflow pipelines for exposed secrets                                               | Public     |
+| [aaw-Machine-Learning-Training-Pipelines-secret-scanner](https://github.com/StatCan/aaw-Machine-Learning-Training-Pipelines-secret-scanner) | Scan all Kubeflow pipelines for exposed secrets                                               | Public     |
 | [aaw-kubeflow-profiles](https://github.com/StatCan/aaw-kubeflow-profiles)                                 | Kubeflow profile manifests stored in YAML                                                     | Private    |
 | [aaw-kubeflow-profiles-controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller)           | Kubeflow profiles controller which allows for custom configuration for an individual profile  | Public     |
 | [aaw-minio-credential-injector](https://github.com/StatCan/aaw-minio-credential-injector)                 | Mutating webhook which adds minio credential annotations to notebook pods                     | Public     |
@@ -221,7 +221,7 @@ multilingual support and other UX related enhancements.
 | Repository                                                          | Description                                 | Visibility |
 |---------------------------------------------------------------------|---------------------------------------------|------------|
 | [kubeflow](https://github.com/StatCan/kubeflow)                     | Multilingual support for Kubeflow           | Public     |
-| [kubeflow-pipelines](https://github.com/StatCan/kubeflow-pipelines) | Multilingual support for Kubeflow Pipelines | Public     |
+| [Machine-Learning-Training-Pipelines](https://github.com/StatCan/Machine-Learning-Training-Pipelines) | Multilingual support for Kubeflow Pipelines | Public     |
 | [minio](https://github.com/StatCan/minio)                           | Multilingual support for MinIO              | Public     |
 | [minio-console](https://github.com/StatCan/minio-console)           | Multilingual support for MinIO Console      | Public     |
 | [rstudio](https://github.com/StatCan/rstudio)                       | Multilingual support for RStudio            | Public     |
