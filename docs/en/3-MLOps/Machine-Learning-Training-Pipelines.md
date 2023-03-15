@@ -8,6 +8,28 @@
 !!! info
     Training machine learning models involves using algorithms to learn patterns and relationships in data. This process involves identifying features or variables that are relevant to the problem at hand and using these features to make predictions or classifications. 
 
+## Data Science Pipelines
+
+_MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows._
+
+[![Build Piplines](../images/pipelines.jpg)](/3-MLOps/Machine-Learning-Training-Pipelines/)
+
+MLOps refers to the set of practices and tools used to manage the entire lifecycle of a machine learning model. This includes everything from developing and training the model to deploying it in production and maintaining it over time. MLOps ensures that machine learning models are reliable, accurate, and scalable, and that they can be updated and improved as needed.
+
+Data pipelines are a series of steps that help move data from one system or application to another. This includes collecting, cleaning, transforming, and storing data, as well as retrieving it when needed. Data pipelines are important for ensuring that data is accurate, reliable, and accessible to those who need it. 
+
+Together, MLOps and data pipelines help organizations manage the complex process of working with large amounts of data and developing machine learning models. By automating these processes and ensuring that data is accurate and reliable, organizations can save time and resources while making better decisions based on data-driven insights.
+
+### Argo Workflows
+
+_An excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production._
+
+**[Argo Workflows](/3-MLOps/Machine-Learning-Training-Pipelines/)**  is an open source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows.
+
+Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment.
+
+![Kubeflow Pipelines](../images/readme/kubeflow_pipeline.png)
+
 ## Why train with us?
 
 _Training machine learning models on the Advanced Analytics Workspace (AAW) has several advantages._

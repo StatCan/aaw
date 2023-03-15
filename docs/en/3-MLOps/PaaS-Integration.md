@@ -15,6 +15,17 @@ An example diagram depicting a possible PaaS connection strategy:
 **Setup:** If you need help integrating with a platform as a service offering, we're happy
 to help!
 
+## Integration with External Platform as a Service (PaaS) Offerings
+
+_Integration is key to success._
+
+[![Integrate with PaaS](../images/IntegratePaaS.PNG)]()
+
+Our open source platform offers unparalleled optionality to our users. By allowing users to use open source tools, we empower them to use their preferred data science and machine learning frameworks. But the real power of our platform comes from its ability to integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML. This means that our users can leverage the power of the cloud to run complex data processing and machine learning pipelines at scale. With the ability to integrate with PaaS offerings, our platform enables our users to take their work to the next level, by giving them the power to scale their workloads with ease, and take advantage of the latest innovations in the field of data science and machine learning. By providing this level of optionality, we ensure that our users can always choose the right tool for the job, and stay ahead of the curve in an ever-changing field.
+
+We can integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML.
+
+
 ## Databricks
 
 - [Databricks from Microsoft](https://azure.microsoft.com/en-ca/services/databricks/)
