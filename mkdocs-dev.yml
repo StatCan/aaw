@@ -15,6 +15,8 @@ theme:
   features:
     - content.tabs.link
     - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
   language: en
   show_sidebar: true
   #logo: images/statcan.png
@@ -39,6 +41,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+  - md_in_html
 
 extra_javascript:
   - javascripts/mathjax.js

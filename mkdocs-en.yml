@@ -16,6 +16,8 @@ theme:
   features:
     - content.tabs.link
     - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
   language: en
   show_sidebar: true
   #logo: images/statcan.png
@@ -40,6 +42,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+  - md_in_html
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -55,23 +58,37 @@ extra:
 
 # Page tree
 nav:
+  - Home:
+    - Welcome!: index.md
+    - Getting Started with AAW: index.md
+    - Data Analysis: index.md
+    - Data Science Experimentation: index.md
+    - Data Analysis: index.md
+    - Data Science Pipelines: index.md
+    - Statistical Publishing: 2-Publishing/Overview.md
+    - Cloud Storage: index.md
+    - Integration with External Platform as a Service (PaaS) Offerings: index.md
+    - Collaboration: index.md
   - Analysis:
+      - Overview: 1-Experiments/Overview.md
       - Kubeflow: 1-Experiments/Kubeflow.md
       - Jupyter: 1-Experiments/Jupyter.md
       - RStudio: 1-Experiments/RStudio.md
       - Remote Desktop: 1-Experiments/Remote-Desktop.md
   - Publishing:
+      - Overview: 2-Publishing/Overview.md
       - R Shiny: 2-Publishing/R-Shiny.md
       - Dash: 2-Publishing/Dash.md
       - Datasette: 2-Publishing/Datasette.md
       - Power BI: 2-Publishing/PowerBI.md
       - Custom: 2-Publishing/Custom.md
   - MLOps:
-      - What are Machine Learning Models: 3-MLOps/Machine-Learning.md
-      - How to train ML Models: 3-MLOps/Machine-Learning-Training-Pipelines.md
-      - How to Store ML Models: 3-MLOps/Machine-Learning-Model-Cloud-Storage.md
-      - How to Serve ML Models: 3-MLOps/Machine-Learning-Model-Serving.md
-      - How to Integrate with External PaaS: 3-MLOps/PaaS-Integration.md
+      - Overview: 3-MLOps/Overview.md
+      - Machine Learning Models: 3-MLOps/Machine-Learning.md
+      - Training ML Models: 3-MLOps/Machine-Learning-Training-Pipelines.md
+      - Storing ML Models: 3-MLOps/Machine-Learning-Model-Cloud-Storage.md
+      - Serving ML Models: 3-MLOps/Machine-Learning-Model-Serving.md
+      - Integrate with External PaaS: 3-MLOps/PaaS-Integration.md
   - Collaboration:
       - Overview: 4-Collaboration/Overview.md
       - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
@@ -81,5 +98,6 @@ nav:
       - Disks: 5-Storage/Disks.md
       - MinIO: 5-Storage/MinIO.md
   - Gitlab:
+      - Overview: 6-Gitlab/Overview.md
       - Gitlab: 6-Gitlab/Gitlab.md
   - Contact: Help.md
