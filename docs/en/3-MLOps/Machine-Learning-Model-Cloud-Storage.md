@@ -1,7 +1,23 @@
+# Statcan Protected B Data
+
+!!! info "Protected B"
+    The AAW is certified for hosting Protected B data!
+
+In order to upload Protected B data to the AAW, users will need to request access through the Customer Success Unit (CSU). AAW users will also need to provide a namespace, get a sponsor and get approval from OPMIC. Once the process has been approved, our Fair Data Infrastructure (FDI) team will then create a folder on Net A which in turn will give access to user(s) through the active directory. The data will then be able to transfer from Net A to AAW Cloud
+
+Storing machine learning models in a protected cloud storage environment is essential for ensuring the security and privacy of sensitive data. The Advanced Analytics Workspace (AAW) provides a secure and robust cloud storage environment that can be used to store machine learning models and other data assets.
+
+The AAW platform provides a protected cloud storage environment that is designed to meet the most stringent data security and privacy requirements. The storage environment is protected by industry-standard encryption and access controls, which ensures that only authorized personnel can access sensitive data. This protects against unauthorized access, data breaches, and other security threats.
+
+In addition to its robust security features, the AAW cloud storage environment is also highly scalable and flexible. This means that data scientists and machine learning engineers can easily scale their storage needs as their datasets and model sizes grow. This enables them to store and manage large volumes of data and models without having to worry about storage limitations or performance bottlenecks.
+
+Storing machine learning models in a protected cloud storage environment on the Advanced Analytics Workspace provides a secure, scalable, and flexible solution for managing and protecting sensitive data. By leveraging the cloud storage capabilities provided by the AAW platform, data scientists and machine learning engineers can focus on building and deploying their models with confidence, knowing that their data is protected and secure.
+
 
 ## Cloud Storage
 
-_Cloud storage offers several advantages for data science and machine learning, particularly in terms of scalability, accessibility, and cost-effectiveness._
+!!! info "Cloud Storage Advantages"
+    Cloud storage offers several advantages for data science and machine learning, particularly in terms of scalability, accessibility, and cost-effectiveness.
 
 Firstly, cloud storage enables data scientists to store and process large amounts of data without having to worry about the limitations of local storage. This is particularly important in the context of machine learning, where large datasets are required for training and testing models. Cloud storage allows data scientists to scale up their storage capacity as needed, without having to invest in expensive hardware.
 
@@ -43,16 +59,3 @@ Furthermore, cloud-based data lakes provide scalable, cost-effective storage sol
 
 Overall, data lakes are a critical tool for data scientists, as they provide the flexibility, scalability, and ease of use needed to store and manage large volumes of data, enabling data scientists to focus on extracting insights and value from the data.
 
-### Statcan Protected B Data
-
-_The AAW is certified for hosting Protected B data!_
-
-In order to upload Protected B data to the AAW, users will need to request access through the Customer Success Unit (CSU). AAW users will also need to provide a namespace, get a sponsor and get approval from OPMIC. Once the process has been approved, our Fair Data Infrastructure (FDI) team will then create a folder on Net A which in turn will give access to user(s) through the active directory. The data will then be able to transfer from Net A to AAW Cloud
-
-Storing machine learning models in a protected cloud storage environment is essential for ensuring the security and privacy of sensitive data. The Advanced Analytics Workspace (AAW) provides a secure and robust cloud storage environment that can be used to store machine learning models and other data assets.
-
-The AAW platform provides a protected cloud storage environment that is designed to meet the most stringent data security and privacy requirements. The storage environment is protected by industry-standard encryption and access controls, which ensures that only authorized personnel can access sensitive data. This protects against unauthorized access, data breaches, and other security threats.
-
-In addition to its robust security features, the AAW cloud storage environment is also highly scalable and flexible. This means that data scientists and machine learning engineers can easily scale their storage needs as their datasets and model sizes grow. This enables them to store and manage large volumes of data and models without having to worry about storage limitations or performance bottlenecks.
-
-Storing machine learning models in a protected cloud storage environment on the Advanced Analytics Workspace provides a secure, scalable, and flexible solution for managing and protecting sensitive data. By leveraging the cloud storage capabilities provided by the AAW platform, data scientists and machine learning engineers can focus on building and deploying their models with confidence, knowing that their data is protected and secure.

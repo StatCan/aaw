@@ -4,7 +4,6 @@
 ![MLOps](../images/mlops.jpg)
 </center>
 
-
 !!! info
     Training machine learning models involves using algorithms to learn patterns and relationships in data. This process involves identifying features or variables that are relevant to the problem at hand and using these features to make predictions or classifications. 
 
@@ -12,23 +11,29 @@
 
 _Training machine learning models on the Advanced Analytics Workspace (AAW) has several advantages._
 
-1. **Open Source:** The AAW is an open source data platform hosted by Statistics Canada that provides secure (Protected B) access to a variety of data sources, including census data, surveys, and administrative records. This data can be used to train machine learning models and generate insights that can inform policy decisions and improve business processes.
+1. **Open Source:** The AAW is an *open source data platform hosted by Statistics Canada* that provides secure (Protected B) access to a variety of data sources, including census data, surveys, and administrative records. This data can be used to train machine learning models and generate insights that can inform policy decisions and improve business processes.
 
-2. **Versatile:** The AAW is designed to handle large and complex datasets. It provides access to a range of advanced analytics tools, including Python, R, and SAS, which can be used to preprocess data, train machine learning models, and generate visualizations. The AAW also provides access to cloud computing resources, allowing users to scale up their computing power as needed.
-
-3. **Secure:** The AAW is a secure platform (Protected B) that adheres to the highest standards of data privacy and security. Data can be stored and processed on the platform without risk of unauthorized access or data breaches.
+2. **Versatile:** The AAW is *designed to handle large and complex datasets*. It provides access to a range of advanced analytics tools, in any language you like, including *Python, R, and SAS*, which can be used to preprocess data, train machine learning models, and generate visualizations. *Because the AAW leverages cloud technologies, *users can scale up their computing power as needed*.
+*
+3. **Secure:** The AAW is a *secure platform (Protected B) that adheres to the highest standards of data privacy and security*. Data can be stored and processed on the platform without risk of unauthorized access or data breaches.
 
 ## MLOps and Data Pipelines
 
-_MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows._
+!!! info "Optimize Data Workflows"
+    MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows.
+
+### MLOps
 
 MLOps refers to the set of practices and tools used to manage the entire lifecycle of a machine learning model. This includes everything from developing and training the model to deploying it in production and maintaining it over time. MLOps ensures that machine learning models are reliable, accurate, and scalable, and that they can be updated and improved as needed.
 
+### Data Pipelines
+
 Data pipelines are a series of steps that help move data from one system or application to another. This includes collecting, cleaning, transforming, and storing data, as well as retrieving it when needed. Data pipelines are important for ensuring that data is accurate, reliable, and accessible to those who need it. 
 
-Together, MLOps and data pipelines help organizations manage the complex process of working with large amounts of data and developing machine learning models. By automating these processes and ensuring that data is accurate and reliable, organizations can save time and resources while making better decisions based on data-driven insights.
+!!! info "Automation and Reliability"
+    MLOps and data pipelines help organizations manage the complex process of working with large amounts of data and developing machine learning models. By automating these processes and ensuring that data is accurate and reliable, organizations can save time and resources while making better decisions based on data-driven insights.
 
-## Why Containerized MLOps?
+### Why Containerized MLOps?
 
 The advantages of using a containerized approach for training machine learning models with Argo Workflows include:
 
@@ -44,21 +49,25 @@ Argo Workflows and containerization provide a powerful and flexible approach for
 
 ## How to Train Models
 
+There are multiple ways to train machine learning models and it is not our place to tell anyone how to do it. That being said we have provided below a couple of guides on how to train machine learning models using the tools available on the AAW. The first tutorial is about training a simple model directly in a JupyterLab notebook. The second tutorial assumes the user is more advanced and is interested in defining an MLOps pipeline for training models using Argo Workflows.
+
 ### Create a Notebook Server on the AAW
 
-First, you need to create and spin up a new notebook server. [Follow the instructions found here to get started.](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) Regardless of whether you plan on doing work in JupyterLab, R Studio or something more advanced with Argo Workflows, you'll need the appropriate notebook server.
+!!! info "Notebook Servers"
+    Regardless of whether you plan on working in JupyterLab, R Studio or something more advanced with Argo Workflows, you'll need the appropriate notebook server. [Follow the instructions found here to get started.](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) 
 
 ### Using JupyterLab
 
 ![JupyterLab](../images/jupyterlab.jpg)
 
-_Training machine learning models with JupyterLab is a popular approach among data scientists and machine learning engineers._
+!!! info "JupyterLab is Popular"
+    Training machine learning models with JupyterLab is a popular approach among data scientists and machine learning engineers.
 
-Here are the steps to train a machine learning model with JupyterLab on the AAW:
+Here you will find the steps required to train a machine learning model with JupyterLab on the AAW. Because we are a multi-lingual environment, we've done our best to provide code examples in our most popular languages, `Python`, `R` and `SAS`.
 
 #### 1. Import the required libraries
 
-Once you a JupyterLab session running, you need to import the required libraries for your machine learning model. This could include libraries such as NumPy, Pandas, Scikit-learn, Tensorflow, or PyTorch.
+Once you have a JupyterLab session running, you need to import the required libraries for your machine learning model. This could include libraries such as `NumPy`, `Pandas`, `Scikit-learn`, `Tensorflow`, or `PyTorch`. If you are using `R`, you'll want `tidyverse`, `caret` and `janitor`.
 
 === "Python"
     ``` py title="libraries.py" linenums="1"
@@ -102,12 +111,12 @@ Once you a JupyterLab session running, you need to import the required libraries
 
     ```
 
-!!! note
-    This is just an example, and depending on the specific task or project, other libraries such as `PyTorch` may also be used.
+!!! note "About the Code"
+    The code examples you see in this document and throughout the documentation are for illustrative purposes to get you started on your projects. Depending on the specific task or project, other libraries and steps may be required.
 
 #### 2. Load and preprocess the data
 
-Next, you need to load and preprocess the data you'll be using to train your machine learning model. This could include data cleaning, feature extraction, and normalization. The exact preprocessing steps you'll need to perform will depend on the specific data you're working with and the requirements of your machine learning model.
+Next, you need to load and preprocess the data you'll be using to train your machine learning model. This could include data cleaning, feature extraction, and normalization. The exact preprocessing steps you'll need to perform will depend on the specific dataset you're working with, the requirements of your machine learning model and the job to be done.
 
 === "Python"
     ``` py title="load_data.py" linenums="1"
@@ -236,7 +245,7 @@ Next, you need to load and preprocess the data you'll be using to train your mac
     ```
 
 !!! note
-    We split the data into training and testing sets using the `train_test_split` function from scikit-learn, which randomly splits the data into two sets based on the specified test size and random seed.
+    We split the data into training and testing sets using the `train_test_split` function from `scikit-learn`, which randomly splits the data into two sets based on the specified test size and random seed.
 
 #### 4. Define and train the machine learning model
 
@@ -391,6 +400,8 @@ After training the model, you need to evaluate its performance on the testing se
 
 #### 6. Deploy the model
 
+Finally, you can deploy the trained machine learning model in a production environment.
+
 === "Python"
     ``` py title="deploy.py" linenums="1"
 
@@ -408,19 +419,23 @@ After training the model, you need to evaluate its performance on the testing se
 
     ```
 
-Finally, you can deploy the trained machine learning model in a production environment. This could involve packaging the model as a REST API, deploying it as a container, or integrating it with other applications or systems.
-
-JupyterLab provides a powerful and flexible environment for training machine learning models. By following these steps, you can leverage JupyterLab's capabilities to build and train machine learning models that meet your specific needs and requirements.
-
 ### Using Argo Workflows
 
 ![Argo Workflows](../images/argo-workflows-assembly-line.jpg)
 
-_An excellent tool for anyone looking to implement MLOps practices and streamline the process of deploying machine learning models in production._
+!!! info "MLOps Best Practices"
+    Argo Workflows is an excellent tool for anyone looking to implement MLOps practices and streamline the process of training and deploying machine learning models or other data science tasks such as ETL.
 
-**[Argo Workflows](https://argoproj.github.io/argo-workflows/)** is an open source tool for running and managing workflows on Kubernetes. It provides an easy way to create, run, and manage complex workflows, and it is particularly well-suited for use in machine learning and data science workflows.
+**[Argo Workflows](https://argoproj.github.io/argo-workflows/)**  is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Argo Workflows is implemented as a Kubernetes CRD (Custom Resource Definition). It is particularly well-suited for use in machine learning and data science workflows.
 
-Argo Workflows allows you to define, execute, and monitor multi-step workflows, making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment.
+Argo Workflows allows you to
+
+- Define workflows where each step in the workflow is a container.
+- Model multi-step workflows as a sequence of tasks or capture the dependencies between tasks using a directed acyclic graph (DAG).
+- Easily run compute intensive jobs for machine learning or data processing in a fraction of the time using Argo Workflows on Kubernetes.
+- Run CI/CD pipelines natively on Kubernetes without configuring complex software development products.
+
+making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment.
 
 !!! info ""
     <center>
@@ -428,11 +443,11 @@ Argo Workflows allows you to define, execute, and monitor multi-step workflows, 
     <h3>Argo Workflows</h3>
     </center>
 
-Argo Workflows is an open source container-native workflow engine designed for orchestrating parallel jobs and complex workflows on Kubernetes. It allows you to build, deploy, and manage machine learning workflows using containerized applications, making it an ideal tool for training machine learning models. Here are the steps to train a machine learning model using Argo Workflows:
+Below are the steps to train a machine learning model using Argo Workflows on the AAW.
 
-#### 1. Define the machine learning model and its dependencies
+#### 1. Write a script to train your model
 
-First, you need to create a Docker image that includes all the necessary dependencies for your machine learning model. This could include packages like `scikit-learn`, `TensorFlow`, or `PyTorch`, as well as any custom libraries or scripts you've written. You should also include your machine learning model code in this image. Here's an example script (in both R and Python) that trains a logistic regression model on the iris dataset:
+Here's an example script that trains a logistic regression model on the iris dataset. Don't forget to view the code from each language below.
 
 === "Python"
 
@@ -485,7 +500,7 @@ First, you need to create a Docker image that includes all the necessary depende
     # Parse input arguments
     args <- commandArgs(trailingOnly = TRUE)
     input_file <- ifelse(length(args) > 0, args[1], "iris.csv")
-    output_file <- ifelse(length(args) > 1, args[2], "model.RData")
+    output_file <- ifelse(length(args) > 1, args[2], "model.rds")
 
     # Load iris dataset
     data(iris)
@@ -511,9 +526,17 @@ First, you need to create a Docker image that includes all the necessary depende
     # Save model to file
     saveRDS(clf, output_file)
     ```
-#### 2. Write a Dockerfile
+#### 2. Write a Dockerfile to run your code
 
-You'll need to write a `Dockerfile` for your workflow. It doesn't have to be anything fancy, use the following as a starting point for your `R` and `Python` projects.
+You'll need a Dockerfile that includes all necessary dependencies for training your machine learning model. This could include
+
+- packages like
+  - `scikit-learn`, `pandas` or `numpy` if you are using `Python`
+  - `caret`, `janitor` and `tidyverse` if you are using `R` 
+- your own custom libraries or scripts
+- your machine learning model code in the form of a script [as in the above example](#1-write-a-script-to-train-your-model).
+
+Use the following `Dockerfile` as a starting point for your `R` and `Python` projects.
 
 === "Python"
 
@@ -544,7 +567,7 @@ You'll need to write a `Dockerfile` for your workflow. It doesn't have to be any
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
-    RUN R -e 'install.packages(c("caret", "dplyr"))'
+    RUN R -e 'install.packages(c("caret", "janitor", "tidyverse"))'
 
     COPY train.R /app/train.R
 
@@ -553,11 +576,13 @@ You'll need to write a `Dockerfile` for your workflow. It doesn't have to be any
     ENTRYPOINT ["Rscript", "train.R"]
     ```
 
-#### 2. Write a workflow definition
+#### 3. Write your workflow in YAML
 
-Next, you need to define the steps of your machine learning pipeline in an Argo Workflows YAML file. This file should include the Docker image you created in step 1, as well as any input data and output data you'll be working with.
+YAML is Yet Another Markup Language and you'll need to write down the steps of your training pipeline in an Argo Workflows YAML file. This file should include reference to the Dockerfile you created in [Step 1](#2-write-a-dockerfile-to-run-your-code), as well as any input data and output data you'll be working with.
 
-Here are two example YAML files (one for Python users and one for R users) for a simple machine learning pipeline that trains a logistic regression model on the iris dataset:
+Here is an example YAML file for a simple machine learning pipeline that trains a logistic regression model on the iris dataset. The only real difference between the `Python` and `R` versions is the command `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` and the models are stored in different formats, `pkl` for `python` and `rds` for `R`.
+
+The YAML file defines a single step called `train` that runs  script called `train.py` or `train.R` in the Docker image `machine-learning:v1`. The script takes an input dataset file, specified by a parameter called `dataset`, and outputs a trained model file to an output artifact called `model.pkl` or `model.rds` depending on the language used.
 
 === "Python"
     ``` yaml title="workflow.yaml" linenums="1"
@@ -570,7 +595,7 @@ Here are two example YAML files (one for Python users and one for R users) for a
     templates:
     - name: train
         container:
-        image: my-ml-image:v1
+        image: machine-learning:v1
         command: ["python", "train.py"]
         args: ["--input", "{{inputs.parameters.dataset}}", "--output", "{{outputs.artifacts.model}}"]
         inputs:
@@ -593,7 +618,7 @@ Here are two example YAML files (one for Python users and one for R users) for a
     templates:
     - name: train
         container:
-        image: my-ml-image:v1
+        image: machine-learning:v1
         command: ["Rscript", "train.R"]
         args: ["--input", "{{inputs.parameters.dataset}}", "--output", "{{outputs.artifacts.model}}"]
         inputs:
@@ -603,30 +628,66 @@ Here are two example YAML files (one for Python users and one for R users) for a
         outputs:
         artifacts:
         - name: model
-            path: /output/model.pkl
+            path: /output/model.rds
     ```
 
-In this example, the YAML file defines a single step called `train` that runs a Python script called `train.py` in the Docker image `my-ml-image:v1`. The script takes an input dataset file, specified by a parameter called `dataset`, and outputs a trained model file to an output artifact called `model`.
+#### 4. Submit the workflow using the Argo Workflows CLI
 
-#### 3. Submit the workflow for execution: 
+To run the above workflow, you will first need to push the Dockerfile to our container registry and , and then submit the YAML file using the `argo submit` command. Once the pipeline has completed, you can retrieve the trained model file by downloading the output artifact from the `argo logs` command.
 
-To run this workflow, you would need to build and push the Docker image to our container registry, and then submit the YAML file using the `argo submit` command. Once the pipeline has completed, you can retrieve the trained model file by downloading the output artifact from the `argo logs` command.
-
-``` bash title="argo submit"
-    $ argo submit workflow.yaml
+``` bash title="Terminal Emulator"
+$ argo submit workflow.yaml       # submit a workflow spec to Kubernetes
 ```
 
-#### 4. Monitor the pipeline
+#### 5. Monitor the pipeline using the Argo Workflows CLI
 
-As the pipeline runs, you can monitor its progress using the Argo Workflows UI or command line interface. This will show you which steps have completed successfully and which are still running.
+As the pipeline runs, you can monitor its progress using the Argo Workflows CLI. This will show you which steps have completed successfully and which are still running. Below are some useful commands, for more information about the Argo Workflows CLI, please check out [the official Argo Workflows CLI documentation](https://argoproj.github.io/argo-workflows/walk-through/argo-cli/).
 
-#### 5. Retrieve the output
+``` bash title="Terminal Emulator"
+$ argo list                       # list current workflows
+$ argo get workflow-xxx           # get info about a specific workflow
+$ argo logs workflow-xxx          # print the logs from a workflow
+$ argo delete workflow-xxx        # delete workflow
 
-Once the pipeline has completed, you can retrieve the output data using the argo logs command or by viewing the output artifacts in the Argo Workflows UI.
+```
 
-#### Examples using SDKs
+#### 6. Retrieve the trained model
 
-We have a couple of example scripts to get you started. Please take a look!
+Once the pipeline has completed, you can retrieve the output data using the argo logs command or by viewing the output artifacts using the CLI, i.e. navigate to the directory you specified in your script and locate the file `model.pkl` or `model.rds`. The following code snippet, taken from [the above training script](#1-define-the-machine-learning-model-and-its-dependencies), tells the respective programming language where to save the trained model.
+
+=== "Python"
+
+    ``` python title="Saving Output Data" linenums="1"
+    #!/usr/bin/env python
+    #
+    parser.add_argument("--output", default="model.pkl", help="Path to output model file.")
+    #
+    # Save model to file
+    joblib.dump(clf, args.output)
+    ```
+
+=== "R"
+
+    ``` r title="Saving Output Data" linenums="1"
+    #!/usr/bin/env Rscript
+    #
+    output_file <- ifelse(length(args) > 1, args[2], "model.rds")
+    #
+    # Save model to file
+    saveRDS(clf, output_file)
+    ```
+
+### Examples using Argo Workflows-based SDKs
+
+If you prefer to use a higher level framework, then we have `Couler` and `Hera`. These frameworks make the creation and management of complex workflows more accessible to a wider audience.
+
+#### Hera
+
+Hera aims to simplify the process of building and submitting workflows by abstracting away many of the technical details through a simple application programming interface. It also uses a consistent set of terminology and concepts that align with Argo Workflows, making it easier for users to learn and use both tools together.
+
+#### Couler
+
+Couler provides a simple, unified application programming interface for defining workflows using an imperative programming style. It also automatically constructs directed acyclic graphs (DAGs) for the workflows, which can help to simplify the process of creating and managing them.
 
 === "Couler"
     ``` py title="couler.py" linenums="1"
@@ -739,4 +800,5 @@ We have a couple of example scripts to get you started. Please take a look!
 
 Example Argo Workflows workflows can be found in the following Github repositories:
 
-- [Example of using Argo for CI/CD](https://github.com/bryanpaget/argo-examples)
+- [Argo Workflows Documentation](https://argoproj.github.io/argo-workflows/)
+- [Argo CLI Reference](https://argoproj.github.io/argo-workflows/walk-through/argo-cli/)
