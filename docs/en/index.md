@@ -122,7 +122,7 @@ section.
 The platform provides several types of storage:
 
 - Disk (also called Volumes on the Notebook Server creation screen)
-- Bucket (Blob Storage)
+- Containers (Blob Storage)
 - Data Lakes (coming soon)
 
 Depending on your use case, either disk or bucket may be most suitable. Our

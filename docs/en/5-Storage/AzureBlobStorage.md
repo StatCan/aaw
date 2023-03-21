@@ -13,13 +13,24 @@ Azure Blob Storage Containers are good at three things:
 
 # Setup
 
+<!-- prettier-ignore -->
+!!! warning "Azure Blob Storage containers and buckets mount will be replacing the Minio Buckets and Minio storage mounts"
+    Users will be responsible for migrating data from Minio Buckets to the Azure Storage folders. For larger
+    files, users may contact AAW for assistance.
 ## Blob Container Mounted on a Notebook Server
 
 <!-- prettier-ignore -->
 
 The Blob CSI volumes are persisted under `/home/jovyan/buckets` when creating a Notebook Server. Files under `/buckets` are backed by Blob storage.
+All AAW notebooks will have the `/buckets` mounted to the file-system, making data accessible from everywhere.
 
-![MinIO folders mounted as Jupyter Notebook directories](../images/blob-mount.png)
+![Blob folders mounted as Jupyter Notebook directories](../images/container-mount.png)
+
+# Unclassified Notebook AAW folder mount
+![Unclassified notebook folders mounted in Jupyter Notebook directories](../images/unclassified-mount.png)
+
+# Protected-b Notebook AAW folder mount
+![Protected-b notebooks mounted as Jupyter Notebook directories](../images/protectedb-mount.png)
 
 These folders can be used like any other - you can copy files to/from using the
 file browser, write from Python/R, etc. The only difference is that the data is
@@ -41,7 +52,7 @@ storage type behind them:
 - **aaw-protected-b:** Stores sensitive data protected-b.
 
 - **aaw-unclassified-ro:** This classification is protected-b but read-only access. This is so users can view unclassified
-data within a protected-b pod.
+data within a protected-b notebook.
 
 <!-- prettier-ignore -->
 
