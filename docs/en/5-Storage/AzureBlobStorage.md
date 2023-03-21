@@ -57,6 +57,9 @@ data within a protected-b notebook.
 <!-- prettier-ignore -->
 
 ## Accessing Internal Data
+<!-- prettier-ignore -->
+!!! warning "TBA: Awaiting DAS common storage connection"
+
 
 AAW has an integration with the FAIR Data Infrastructure team that allows users
 to transfer unclassified and protected-b data to Azure Storage Accounts, thus allowing users to
