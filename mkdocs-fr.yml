@@ -21,7 +21,7 @@ theme:
     - content.code.copy
     - navigation.tabs
     - navigation.tabs.sticky
-  language: en
+  language: fr
   show_sidebar: true
   #logo: images/statcan.png
 
