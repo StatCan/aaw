@@ -27,6 +27,12 @@ This is an example of a Layout With Figure and Slider from
 
 ![dash_plot](../images/plot.png)
 
+### Plotly Dash
+
+_Publish with Canadian-made software._
+
+**[Plotly Dash](/2-Publishing/Dash/)** is a popular Python library that allows you to create interactive web-based visualizations and dashboards with ease. Developed by the Montreal-based company Plotly, Dash has gained a reputation for being a powerful and flexible tool for building custom data science graphics. With Dash, you can create everything from simple line charts to complex, multi-page dashboards with interactive widgets and controls. Because it's built on open source technologies like Flask, React, and Plotly.js, Dash is highly customizable and can be easily integrated with other data science tools and workflows. Whether you're a data scientist, analyst, or developer, Dash can help you create engaging and informative visualizations that bring your data to life.
+
 # Getting Started
 
 Open a terminal window in your Jupyter notebook and run the following commands:
