@@ -1,8 +1,9 @@
 # Overview
 
-R-Shiny is an R package that makes it easy to build interactive web apps in R.
-We handle the R-Shiny server, and it's super easy to get your dashboard onto the
-platform.
+R-Shiny is an R package that makes it easy to build interactive web apps in R. 
+
+!!! info "R Shiny App Hosting"
+    We currently do not support hosting R Shiny apps but you are able to create them. We want to enable R Shiny app hosting in the future.
 
 ![Shiny Homepage](../images/readme/shiny_ui.png)
 
