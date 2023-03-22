@@ -83,12 +83,12 @@ nav:
       - Power BI: 2-Publishing/PowerBI.md
       - Custom: 2-Publishing/Custom.md
   - MLOps:
-      - Overview: 3-MLOps/Overview.md
-      - Machine Learning Models: 3-MLOps/Machine-Learning.md
-      - Training ML Models: 3-MLOps/Machine-Learning-Training-Pipelines.md
-      - Storing ML Models: 3-MLOps/Machine-Learning-Model-Cloud-Storage.md
-      - Serving ML Models: 3-MLOps/Machine-Learning-Model-Serving.md
-      - Integrate with External PaaS: 3-MLOps/PaaS-Integration.md
+      - Overview: 3-Pipelines/Overview.md
+      - Machine Learning Models: 3-Pipelines/Machine-Learning.md
+      - Training ML Models: 3-Pipelines/Machine-Learning-Training-Pipelines.md
+      - Storing ML Models: 3-Pipelines/Machine-Learning-Model-Cloud-Storage.md
+      - Serving ML Models: 3-Pipelines/Machine-Learning-Model-Serving.md
+      - Integrate with External PaaS: 3-Pipelines/PaaS-Integration.md
   - Collaboration:
       - Overview: 4-Collaboration/Overview.md
       - Request a Namespace: 4-Collaboration/Request-a-Namespace.md

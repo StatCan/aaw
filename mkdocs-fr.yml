@@ -74,9 +74,9 @@ nav:
       - Power BI: 2-Publication/PowerBI.md
       - Sur mesure: 2-Publication/Sur-mesure.md
   - Pipelines:
-      - Kubeflow Pipelines: 3-MLOps/Machine-Learning-Training-Pipelines.md
-      - PaaS Integration: 3-MLOps/Machine-Learning-Training-Pipelines.md
-      - Model Serving: 3-MLOps/Machine-Learning-Model-Serving.md
+      - Kubeflow Pipelines: 3-Pipelines/Machine-Learning-Training-Pipelines.md
+      - PaaS Integration: 3-Pipelines/Machine-Learning-Training-Pipelines.md
+      - Model Serving: 3-Pipelines/Machine-Learning-Model-Serving.md
   - Collaboration:
       - Aperçu: 4-Collaboration/Aperçu.md
       - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
