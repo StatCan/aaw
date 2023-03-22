@@ -1,7 +1,7 @@
 site_name: Espace d'analyse avancée
 site_url: https://statcan.github.io/daaas/fr/
-site_description: User guide for the DAaaS AAW Platform
-copyright: Copyright &copy; 2020 Statistics Canada
+site_description: User guide for the AAW
+copyright: Copyright &copy; 2023 Statistics Canada
 
 docs_dir: docs/fr
 site_dir: site/fr
@@ -16,23 +16,41 @@ plugins:
 
 theme:
   name: material
-  language: fr
-  #features:
-  #  - tabs
-  palette:
-    primary: indigo
-    accent: teal
-  show_sidebar: false
+  features:
+    - content.tabs.link
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+  language: en
+  show_sidebar: true
   #logo: images/statcan.png
 
 markdown_extensions:
   - toc:
-      baselevel: 2
+      baselevel: 1
+      permalink: true
   - attr_list
   - admonition
   - codehilite
   - mdx_truly_sane_lists
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - md_in_html
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   social:
@@ -56,9 +74,9 @@ nav:
       - Power BI: 2-Publication/PowerBI.md
       - Sur mesure: 2-Publication/Sur-mesure.md
   - Pipelines:
-      - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
-      - PaaS Integration: 3-Pipelines/PaaS.md
-      - Model Serving: 3-Pipelines/Serving.md
+      - Kubeflow Pipelines: 3-Pipelines/Machine-Learning-Training-Pipelines.md
+      - PaaS Integration: 3-Pipelines/Machine-Learning-Training-Pipelines.md
+      - Model Serving: 3-Pipelines/Machine-Learning-Model-Serving.md
   - Collaboration:
       - Aperçu: 4-Collaboration/Aperçu.md
       - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
