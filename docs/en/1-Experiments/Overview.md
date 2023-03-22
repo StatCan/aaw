@@ -1,4 +1,13 @@
- 
+## Data Science Experimentation
+
+_Process data using R, Python, or Julia with Kubeflow, a machine learning platform that provides a simple, unified, and scalable infrastructure for machine learning workloads._
+
+With Kubeflow, you can process data in a scalable and efficient way using the programming language of your choice. Once you have Kubeflow set up, use Jupyter Notebooks to create and share documents that contain live code, equations, or visualizations.
+
+You can also run Ubuntu as a virtual desktop with Kubeflow, giving you access to a powerful development environment that can be customized to your needs. With R Shiny, a web application framework for R, you can easily create and publish static and interactive dashboards to communicate your analysis results to stakeholders.
+
+Kubeflow also provides integration with external platforms as a service, such as Google Cloud Platform (GCP) and Amazon Web Services (AWS), allowing you to easily move data and workloads between different cloud services. Additionally, with Kubeflow's collaboration features, you can work on your projects with your team in real-time, sharing your analysis, code, and results seamlessly.
+
 Data science experimentation refers to the process of designing, conducting, and analyzing experiments in order to test hypotheses and gain insights from data. This process typically involves several steps:
 
 1. Formulating a hypothesis: Before conducting an experiment, it is important to have a clear idea of what you are trying to test or learn. This may involve formulating a hypothesis about a relationship between variables, or trying to answer a specific research question.
