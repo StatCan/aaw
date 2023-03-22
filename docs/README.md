@@ -47,3 +47,7 @@ To support maintaining English and French versions of this documentation, we ado
 3. Translations will always be done in chronologically ordered batches (no cherry-picking of translations).
 
 To keep track of what has previously been translated, we will maintain the long-running feature branch `translated-to-french`, which will point to the most recent commit on `master` that has been translated. When doing a new translation, the translator will look at the diff of `git diff origin/translated-to-french origin/(SOME_COMMIT_ON_MASTER)` (where the commit on `master` is likely the latest commit) to see what English changes have occurred since the last translation. This will help the translator to identify which new English content requires translation to French. During translation, the translator should check out the **most recent** commit on `master` and modify the French content from there. They should not start from the `translated-to-french` branch (as this might be missing some new French content). To commit completed French translation content, the translator should cherry-pick the new French content and merge it into the most recent `master`, but not overwrite the current `master`
+
+[aaw-docs]: https://statcan.github.io/daaas/
+[node.js]: https://nodejs.org/
+[nvm-installation]: https://github.com/nvm-sh/nvm#installing-and-updating
