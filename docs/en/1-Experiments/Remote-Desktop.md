@@ -2,7 +2,7 @@
 
 ### Ubuntu Virtual Desktop
 
-_You can run a full Ubuntu desktop, with typical applications, right inside your browser, using [**ML Workspaces**](../1-Experiments/Remote-Desktop.md)_
+_You can run a full [**Ubuntu Desktop**](https://ubuntu.com/desktop), with typical applications, right inside your browser, using [**Kubeflow!**](https://kubeflow.aaw.cloud.statcan.ca/)_
 
 <center>
 [![Virtual Desktop](../images/VirtualDesktop.jpg)](../1-Experiments/Remote-Desktop.md)
