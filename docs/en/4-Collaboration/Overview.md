@@ -1,3 +1,27 @@
+## Collaboration
+
+Collaboration is essential in data science because it allows individuals with different perspectives and backgrounds to work together to solve complex problems and generate new insights. In data science, collaboration can involve working with individuals from diverse fields such as mathematics, computer science, and business, as well as subject matter experts who have deep knowledge of a particular industry or domain.
+
+Collaboration with people who have different perspectives and backgrounds is particularly important because it helps avoid blind spots and biases that can arise when working in isolation. For example, a statistician may be able to identify patterns in data, but may not have the domain expertise to understand their real-world implications. Conversely, a domain expert may have the necessary context to understand the implications of data patterns, but may not have the statistical expertise to identify them.
+
+By collaborating with people with different perspectives and backgrounds, data scientists can leverage a wider range of skills, knowledge, and expertise, leading to more innovative solutions and better outcomes. Collaboration also helps to foster a culture of continuous learning and growth, as individuals learn from each other's strengths and weaknesses.
+
+In summary, collaboration is essential in data science because it allows individuals with different perspectives and backgrounds to work together to generate new insights and solve complex problems. By working together, data scientists can leverage a wider range of skills and expertise, leading to more innovative solutions and better outcomes. 
+
+There are many ways collaborate on the platform. Which is best for your situation depends on what you're sharing and how many people you want to share
+with. See the [Collaboration Overview](../4-Collaboration/Overview.md) for details.
+
+Content to be shared breaks roughly into **Data**, **Code**, or **Compute Environments** (e.g.: sharing the same virtual machines) and who you want to share it with (**No one**, **My Team**, or **Everyone**). This leads to the following table of options
+
+|             |           **Private**            |                  **Team**                  |  **StatCan**  |
+| :---------: | :------------------------------: | :----------------------------------------: | :-----------: |
+|  **Code**   | GitLab/GitHub or personal folder |        GitLab/GitHub or team folder        | GitLab/GitHub |
+|  **Data**   |    Personal folder or bucket     | Team folder or bucket, or shared namespace | Shared Bucket |
+| **Compute** |        Personal namespace        |              Shared namespace              |      N/A      |
+
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail in the [Collaboration](../4-Collaboration/Overview.md) section. Sharing data through buckets is described in more detail in the **[MinIO](../5-Storage/MinIO.md)** section.
+
+
 There are many ways collaborate on the platform. Which is best for your
 situation depends on what you're sharing and how many people you want to share
 with. Scenarios roughly break down into what you want to share (**Data**,
