@@ -10,10 +10,6 @@ _You can run a full [**Ubuntu Desktop**](https://ubuntu.com/desktop), with typic
 
 The Ubuntu Virtual Desktop is a powerful tool for data scientists and machine learning engineers who need to run resource-intensive workloads in the cloud. Ubuntu is a popular Linux distribution that is widely used in the data science and machine learning communities due to its strong support for open source tools such as R and Python. With the Ubuntu Virtual Desktop, you can quickly spin up a virtual machine with Ubuntu pre-installed and access it from anywhere with an internet connection. This means you can perform data analysis and machine learning tasks from your laptop, tablet, or phone without having to worry about hardware limitations.
 
-One of the key advantages of using Ubuntu for data science and machine learning is its rich ecosystem of tools and packages. Ubuntu comes with a vast array of open source packages and libraries for data processing, analysis, and visualization, such as Pandas, NumPy, and Matplotlib. Additionally, Ubuntu is compatible with popular machine learning frameworks like TensorFlow, PyTorch, and Scikit-learn. This makes it easy to run your favorite data science and machine learning tools on the Ubuntu Virtual Desktop without having to worry about compatibility issues or dependencies.
-
-Another advantage of the Ubuntu Virtual Desktop is that it provides a consistent environment for your data science and machine learning workloads. This helps to ensure that your results are reproducible and that you can easily share your work with others. With the Ubuntu Virtual Desktop, you can easily create and manage multiple virtual machines, allowing you to experiment with different configurations and setups without having to worry about damaging your local machine. This makes it easy to collaborate with other data scientists and machine learning engineers and share your work with the wider community.
-
 ## What is Remote Desktop?
 
 Remote Desktop provides an in-browser GUI Ubuntu desktop experience as well as
