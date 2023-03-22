@@ -96,7 +96,7 @@ nav:
   - Storage:
       - Overview: 5-Storage/Overview.md
       - Disks: 5-Storage/Disks.md
-      - MinIO: 5-Storage/MinIO.md
+      - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
   - Gitlab:
       - Overview: 6-Gitlab/Overview.md
       - Gitlab: 6-Gitlab/Gitlab.md

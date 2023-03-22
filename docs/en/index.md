@@ -125,11 +125,18 @@ Here's a list of tools we offer:
 - 🐧 Linux virtual desktops for additional tools (🧫 OpenM++, 🌏 QGIS etc.)
 
 
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
+machine) is described in more detail in the
+[Collaboration](4-Collaboration/Overview.md) section. Sharing data through
+buckets is described in more detail in the **[Azure Blob Storage](./5-Storage/AzureBlobStorage.md)**
+section.
 
 
 ### 💡 Help
 
-The AAW Portal Documentation and Kubeflow Documentation provide helpful resources to get started with AAW. If you need further assistance, our Slack Support Channel is available for support.
+- Disk (also called Volumes on the Notebook Server creation screen)
+- Containers (Blob Storage)
+- Data Lakes (coming soon)
 
 - 📗 AAW Portal Documentation
   - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
@@ -142,8 +149,5 @@ The AAW Portal Documentation and Kubeflow Documentation provide helpful resource
 
 If you require a quick onboarding demo session, need help, or have any questions, please reach out to us through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
 
-## Frequently Asked Questions
-
-For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/daaas/blob/master/README.md).
 
 **Thank you for choosing Advanced Analytics Workspace!**
