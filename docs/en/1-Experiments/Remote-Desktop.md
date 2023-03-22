@@ -5,7 +5,7 @@
 _You can run a full [**Ubuntu Desktop**](https://ubuntu.com/desktop), with typical applications, right inside your browser, using [**Kubeflow!**](https://kubeflow.aaw.cloud.statcan.ca/)_
 
 <center>
-[![Virtual Desktop](../images/VirtualDesktop.jpg)](../1-Experiments/Remote-Desktop.md)
+[![Virtual Desktop](../images/VirtualDesktop.jpg)](https://novnc.com/info.html)
 </center>
 
 The Ubuntu Virtual Desktop is a powerful tool for data scientists and machine learning engineers who need to run resource-intensive workloads in the cloud. Ubuntu is a popular Linux distribution that is widely used in the data science and machine learning communities due to its strong support for open source tools such as R and Python. With the Ubuntu Virtual Desktop, you can quickly spin up a virtual machine with Ubuntu pre-installed and access it from anywhere with an internet connection. This means you can perform data analysis and machine learning tasks from your laptop, tablet, or phone without having to worry about hardware limitations.
