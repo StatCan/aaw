@@ -88,3 +88,43 @@ There is also a mounted `minio` folder in your home directory, which holds files
 in [MinIO](../Storage.md/#buckets-via-minio).
 
 **Refer to the [Storage](../index.md#storage) section for details.**
+
+## Data Analysis
+
+_Data analysis is an underappreciated art._
+
+Data analysis is the process of examining and interpreting large amounts of data to extract useful insights and draw meaningful conclusions. This can be done using various techniques and tools, such as statistical analysis, machine learning, and visualization. The goal of data analysis is to uncover patterns, trends, and relationships in the data, which can then be used to inform decisions and solve problems. Data analysis is used in a wide range of fields, from business and finance to healthcare and science, to help organizations make more informed decisions based on evidence and data-driven insights.
+
+### Explore Your Data with an API
+
+<center>
+[![Explore your data](../images/ExploreData.PNG)](/2-Publishing/Datasette/)
+</center>
+
+Use **[Datasette](../2-Publishing/Datasette/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
+
+## Data Science Experimentation
+
+_Process data using R, Python, or Julia with Kubeflow, a machine learning platform that provides a simple, unified, and scalable infrastructure for machine learning workloads._
+
+With Kubeflow, you can process data in a scalable and efficient way using the programming language of your choice. Once you have Kubeflow set up, use Jupyter Notebooks to create and share documents that contain live code, equations, or visualizations.
+
+You can also run Ubuntu as a virtual desktop with Kubeflow, giving you access to a powerful development environment that can be customized to your needs. With R Shiny, a web application framework for R, you can easily create and publish static and interactive dashboards to communicate your analysis results to stakeholders.
+
+Kubeflow also provides integration with external platforms as a service, such as Google Cloud Platform (GCP) and Amazon Web Services (AWS), allowing you to easily move data and workloads between different cloud services. Additionally, with Kubeflow's collaboration features, you can work on your projects with your team in real-time, sharing your analysis, code, and results seamlessly.
+
+### JupyterLab
+
+_Process data using R, Python, or Julia in JupyterLab_
+
+<center>
+[![R, Python, or Julia in JupyterLab](../images/jupyter_in_action.png)](../1-Experiments/Jupyter.md)
+</center>
+
+Processing data using R, Python, or Julia is made easy with the Advanced Analytics Workspace. Whether you're new to data analysis or an experienced data scientist, our platform supports a range of programming languages to fit your needs. You can install and run packages for R or Python to perform data processing tasks such as data cleaning, transformation, and modeling. If you prefer Julia, our platform also offers support for this programming language.
+
+Once you have your code ready, use Jupyter Notebooks on our platform to create and share documents that contain live code, equations, or visualizations. You can also run Ubuntu as a virtual desktop for data exploration and other data analysis tasks. Additionally, our platform supports publishing static and interactive dashboards with R Shiny, a popular web application framework for R.
+
+With our platform, you can easily create data pipelines for automating data processing and integrating with external platforms as a service. Whether you're working on a solo project or collaborating with a team, the Advanced Analytics Workspace has the tools you need to streamline your data analysis workflow.
+
+Once you have Kubeflow set up, use **[Jupyter Notebooks](../1-Experiments/Jupyter.md)** to create and share documents that contain live code, equations, or visualizations.
