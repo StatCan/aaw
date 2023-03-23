@@ -1,8 +1,8 @@
 ![image](https://user-images.githubusercontent.com/23174198/217059855-1ea17aba-d722-467e-96f4-0a37eda3f035.png)
 
 ## __IMPORTANT NOTES__
-1) Please do NOT store your token _anywhere_ in your workspace server file system. Contributors to a namespace will have access to them.
-2) If there is a contributor external to Statistics Canada in your namespace, you will lose access to cloud main gitlab access!
+1. Please do NOT store your token _anywhere_ in your workspace server file system. Contributors to a namespace will have access to them.
+2. If there is a contributor external to Statistics Canada in your namespace, you will lose access to cloud main Gitlab access!
 
 -------------------
 

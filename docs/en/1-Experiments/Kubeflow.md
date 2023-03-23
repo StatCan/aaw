@@ -42,7 +42,7 @@ for your team.
 ## Server Name and Namespace
 
 - You will get a template to create your notebook server. **Note:** the name of
-  your server can consist of only lowercase letters, numbers, and hyphens. **No spaces, and no
+  your server can consist of only lower-case letters, numbers, and hyphens. **No spaces, and no
   underscores.**
 
 - You will need to specify a namespace. By default you will have a default
