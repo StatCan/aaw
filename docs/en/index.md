@@ -97,9 +97,6 @@ Click on the link, then choose "Create an account" in the upper right-hand corne
     <h3>Use your @statcan.gc.ca email address so that you will be automatically approved.</h3>
     </center>
 
-
-
-
 ## 🧭 Getting Started
 
 To access AAW services, you need to log in to Kubeflow with your StatCan guest cloud account. Once logged in, select Notebook Servers and click the "New Server" button to get started.
@@ -124,13 +121,7 @@ Here's a list of tools we offer:
   - Jupyter Notebooks
 - 🐧 Linux virtual desktops for additional tools (🧫 OpenM++, 🌏 QGIS etc.)
 
-
-Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual
-machine) is described in more detail in the
-[Collaboration](4-Collaboration/Overview.md) section. Sharing data through
-buckets is described in more detail in the **[Azure Blob Storage](./5-Storage/AzureBlobStorage.md)**
-section.
-
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail in the [Collaboration](4-Collaboration/Overview.md) section. Sharing data through buckets is described in more detail in the **[Azure Blob Storage](./5-Storage/AzureBlobStorage.md)** section.
 
 ### 💡 Help
 
@@ -144,6 +135,8 @@ section.
   - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
 - 🤝 Slack Support Channel
   - [https://statcan-aaw.slack.com](https://statcan-aaw.slack.com)
+- Github Issues
+  - [https://github.com/StatCan/daaas/issues](https://github.com/StatCan/daaas/issues)
 
 ## 🐱 Demos
 
