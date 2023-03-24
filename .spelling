@@ -1,6 +1,4 @@
 .create_buffers
-.create_buffers
-.create_buffers
 .update
 @statcan.gc.ca
 **aaw-unclassified-ro:**
@@ -115,6 +113,7 @@ organizations
 PaaS
 Personalize
 Plotly
+Plotly.js
 Power
 pre-loaded
 premium-tenant
@@ -123,6 +122,7 @@ Provider
 QGIS
 R-Shiny
 r-studio-cpu
+React
 Registry
 repo
 Repo
