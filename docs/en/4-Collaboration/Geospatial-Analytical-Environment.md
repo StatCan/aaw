@@ -73,9 +73,10 @@ display(me)
 <hr>
 
 ### Search for Content
+
 Search for the content you have hosted on the DAaaS Geo Portal. Using the 'me' function we can search for all of the hosted content on the account. There are multiple ways to search for content. Two different methods are outlined below.
 
-**Search all of your hosted itmes in the DAaaS Geo Portal.**
+**Search all of your hosted items in the DAaaS Geo Portal.**
 ```python
 my_content = me.items()
 my_content
@@ -83,6 +84,7 @@ my_content
 **Search for specific content you own in the DAaaS Geo Portal.**
 
 This is similar to the example above, however if you know the title of they layer you want to use, you can save it as a function.
+
 ```python
 my_items = me.items()
 for items in my_items:
@@ -106,6 +108,7 @@ flood_item
 
 ### Get Content
 We need to get the item from the DAaaS Geo Portal in order to use it in the Jupyter Notebook. This is done by providing the unique identification number of the item you want to use. Three examples are outlined below, all accessing the identical layer.
+
 ```python
 item1 = gis.content.get(my_content[5].id) #from searching your content above
 display(item1)
@@ -123,7 +126,7 @@ display(item3)
 Once the layers are brought into the Jupyter notebook, we are able to perform similar types of analysis you would expect to find in a GIS software such as ArcGIS. There are many modules containing many sub-modules of which can perform multiple types of analyses.
 <br/>
 
-Using the arcgis.features module, import the use_proximity submodule ```from arcgis.features import use_proximity```. This submodule allows us to '.create_buffers' - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
+Using the `arcgis.features` module, import the use_proximity submodule ```from arcgis.features import use_proximity```. This submodule allows us to '.create_buffers' - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
 <br/>
 
 ```python
@@ -143,7 +146,7 @@ sdf = pd.DataFrame.spatial.from_layer(feature_layer)
 <hr>
 
 ### Update Items
-By getting the item as we did similar to the example above, we can use the '.update' function to update exisiting item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
+By getting the item as we did similar to the example above, we can use the `.update` function to update existing item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
 ```python
 item1_buffer = gis.content.get('c60c7e57bdb846dnbd7c8226c80414d2')
 item1_buffer.update(item_properties={'title': 'Enter Title'
@@ -165,15 +168,20 @@ plt.show()
 ```
 
 **Example: ipyleaflet Library**
-In this example we will use the library 'ipyleaflet' to create an interactive map. This map will be centered around Toronto, ON. The data being used will be outlined below.
-Begin by pasting ```conda install -c conda-forge ipyleaflet``` allowing you to install ipyleaflet libraries in the Python environment.
+In this example we will use the library `ipyleaflet` to create an interactive map. This map will be centered around Toronto, ON. The data being used will be outlined below.
+Begin by pasting ```conda install -c conda-forge ipyleaflet``` allowing you to install `ipyleaflet` libraries in the Python environment.
+
 <br/>
+
 Import the necessary libraries.
+
 ```python
 import ipyleaflet 
 from ipyleaflet import *
 ```
+
 Now that we have imported the ipyleaflet module, we can create a simple map by specifying the latitude and longitude of the location we want, zoom level, and basemap [(more basemaps)](https://ipyleaflet.readthedocs.io/en/latest/map_and_basemaps/basemaps.html). Extra controls have been added such as layers and scale.
+
 ```python
 toronto_map = Map(center=[43.69, -79.35], zoom=11, basemap=basemaps.Esri.WorldStreetMap)
 
