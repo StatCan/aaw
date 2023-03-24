@@ -3,7 +3,6 @@
 Accès
 arcgis
 ArcGIS
-ArcGIS
 basemaps
 bash
 Connexion
@@ -21,9 +20,11 @@ Géospatiale
 global-power-plants
 Import
 io
+ipyleaflet
 l'API
 l'EAA
 Lakes
+latest
 libraries
 Linting
 map_and_basemaps
@@ -43,6 +44,7 @@ SQLite
 start.sh
 TensorFlow
 TypeScript
+update
 Vega
 Visual
 web-app
