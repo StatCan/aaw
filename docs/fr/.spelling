@@ -6,9 +6,11 @@ ArcGIS
 arcgis.features
 basemaps
 bash
+AzureML
 Connexion
 contrôles
 Core
+CAE
 customizable
 d'ArcGIS
 DAS
@@ -45,6 +47,7 @@ multithreading
 necessary
 Open
 pip
+PaaS
 Plotly
 Portal
 PyTorch
