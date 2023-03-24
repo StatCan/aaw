@@ -10,7 +10,7 @@ There are many ways collaborate on the AAW. Which is best for your situation dep
 |  **Data**   |    Personal folder or bucket     | Team folder or bucket, or shared namespace | Shared Bucket |
 | **Compute** |        Personal namespace        |              Shared namespace              |      N/A      |
 
-Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the **[MinIO](../5-Storage/MinIO.md)** section.
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the **[MinIO](../5-Storage/AzureBlobStorage.md)** section.
 
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
