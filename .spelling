@@ -28,9 +28,12 @@ Filebrowser
 fullscreen
 GAE
 Geo
+git
+Git
 github
 Github
 GitHub
+gitlab
 GitLab
 initialized
 integrations
@@ -43,6 +46,7 @@ JupyterHub
 JupyterLab
 KFServing
 KNative
+KubeCost
 Kubeflow
 Kubernetes
 lifecycle
@@ -79,6 +83,7 @@ QGIS
 R-Shiny
 r-studio-cpu
 Registry
+repo
 Repo
 RStudio
 SAS
@@ -97,6 +102,7 @@ submodule
 torch
 torchaudio
 torchvision
+user.name
 Vault
 with
 www.kubeflow.org
