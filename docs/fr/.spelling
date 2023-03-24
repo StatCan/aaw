@@ -8,9 +8,11 @@ bash
 Connexion
 contrôles
 Core
+d'ArcGIS
 DAS
 Dash
 Databricks
+Dataframes
 EAG
 Enterprise
 Flask
@@ -33,12 +35,15 @@ ml-workspace
 multiplateforme
 multithreading
 necessary
+Open
 pip
 Portal
 PyTorch
 R-Dashboards
 R-Shiny
 readthedocs
+Source
+Spatial
 Spatial
 SQLite
 start.sh
