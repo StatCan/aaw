@@ -3,6 +3,7 @@
 Accès
 arcgis
 ArcGIS
+arcgis.features
 basemaps
 bash
 Connexion
@@ -22,11 +23,13 @@ GAE
 Geomatics
 Géospatiale
 global-power-plants
+html
 Import
 io
 ipyleaflet
 l'API
 l'EAA
+l'ID
 Lakes
 latest
 libraries
@@ -41,6 +44,7 @@ Open
 pip
 Portal
 PyTorch
+qu'ArcGIS
 R-Dashboards
 R-Shiny
 readthedocs
