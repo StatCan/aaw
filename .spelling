@@ -39,6 +39,7 @@ gitlab
 GitLab
 initialized
 integrations
+ipyleaflet
 javascript
 jupyter
 Jupyter
@@ -70,6 +71,7 @@ Notebooks
 noVNC
 npm
 OIDC
+ON
 onboarded
 onboarding
 Onboarding
@@ -106,6 +108,7 @@ submodule
 torch
 torchaudio
 torchvision
+Toronto
 use_proximity
 user.name
 Vault
