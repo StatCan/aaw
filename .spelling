@@ -1,8 +1,10 @@
 activate
 aaw
+arcgis.features 
 APIs
 AzureML
 canada.ca
+use_proxim
 conda
 Conda
 COVID-19
@@ -10,11 +12,13 @@ Customization
 customize
 customized
 Databricks
+.create_buffers
 datasette
 Datasette
 datasettes
 Dockerfile
 dropdown
+.update
 e.g.
 Filebrowser
 fullscreen
@@ -89,3 +93,9 @@ with
 data-analytics-service
 www.kubeflow.org
 www.statcan.gc.ca
+organizations
+modeling
+analyzing
+Analyzing
+analyze
+visualizing

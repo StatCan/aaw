@@ -183,7 +183,7 @@ toronto_map
 <br/>
 
 ##En savoir plus sur l'API ArcGIS pour Python
-[La documentation complète de l'API ArGIS peut être trouvée ici](https://developers.arcgis.com/python/)
+[La documentation complète de l'API ArcGIS peut être trouvée ici](https://developers.arcgis.com/python/)
 
 ##En savoir plus sur l'environnement analytique géospatial (GAE) et les services DAS
 [Guide d'aide GAE](https://statcan.github.io/daaas-dads-geo/)
