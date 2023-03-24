@@ -4,6 +4,7 @@ Accès
 arcgis
 ArcGIS
 ArcGIS
+basemaps
 bash
 Connexion
 contrôles
@@ -19,11 +20,13 @@ Geomatics
 Géospatiale
 global-power-plants
 Import
+io
 l'API
 l'EAA
 Lakes
 libraries
 Linting
+map_and_basemaps
 ml-tooling
 ml-workspace
 multiplateforme
@@ -34,6 +37,7 @@ Portal
 PyTorch
 R-Dashboards
 R-Shiny
+readthedocs
 Spatial
 SQLite
 start.sh
