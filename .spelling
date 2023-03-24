@@ -11,6 +11,7 @@ COVID-19
 Customization
 customize
 customized
+DAaaS
 DAS
 data-analytics-service
 Databricks
@@ -22,9 +23,11 @@ datasettes
 Dockerfile
 dropdown
 e.g.
+email
 Filebrowser
 fullscreen
 GAE
+Geo
 github
 Github
 GitHub
@@ -61,6 +64,7 @@ noVNC
 npm
 OIDC
 onboarded
+onboarding
 Onboarding
 OpenID
 OpenM
@@ -89,6 +93,7 @@ Slack
 sqlite
 StatCan
 subfolders
+submodule
 torch
 torchaudio
 torchvision
