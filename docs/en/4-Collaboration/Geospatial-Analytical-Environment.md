@@ -75,7 +75,7 @@ display(me)
 ### Search for Content
 Search for the content you have hosted on the DAaaS Geo Portal. Using the 'me' function we can search for all of the hosted content on the account. There are multiple ways to search for content. Two different methods are outlined below.
 
-**Search all of your hosted itmes in the DAaaS Geo Portal.**
+**Search all of your hosted items in the DAaaS Geo Portal.**
 ```python
 my_content = me.items()
 my_content
@@ -123,7 +123,7 @@ display(item3)
 Once the layers are brought into the Jupyter notebook, we are able to perform similar types of analysis you would expect to find in a GIS software such as ArcGIS. There are many modules containing many sub-modules of which can perform multiple types of analyses.
 <br/>
 
-Using the arcgis.features module, import the use_proximity submodule ```from arcgis.features import use_proximity```. This submodule allows us to '.create_buffers' - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
+Using the arcgis.features module, import the use_proximity submodule ```from arcgis.features import use_proximity```. This submodule allows us to `.create_buffers` - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
 <br/>
 
 ```python
@@ -143,7 +143,7 @@ sdf = pd.DataFrame.spatial.from_layer(feature_layer)
 <hr>
 
 ### Update Items
-By getting the item as we did similar to the example above, we can use the '.update' function to update exisiting item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
+By getting the item as we did similar to the example above, we can use the `.update` function to update exisiting item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
 ```python
 item1_buffer = gis.content.get('c60c7e57bdb846dnbd7c8226c80414d2')
 item1_buffer.update(item_properties={'title': 'Enter Title'
@@ -184,7 +184,7 @@ toronto_map
 <br/>
 
 ##Learn More about the ArcGIS API for Python
-[Full documentation for the ArGIS API can be located here](https://developers.arcgis.com/python/)
+[Full documentation for the ArcGIS API can be located here](https://developers.arcgis.com/python/)
 
 ##Learn More about DAS Geospatial Analytical Environment (GAE) and Services
 [GAE Help Guide](https://statcan.github.io/daaas-dads-geo/)

@@ -9,6 +9,7 @@ bash
 Connexion
 contrôles
 Core
+customizable
 d'ArcGIS
 DAS
 Dash
@@ -23,8 +24,10 @@ GAE
 Geomatics
 Géospatiale
 global-power-plants
+heatmaps
 html
 Import
+infographics
 io
 ipyleaflet
 l'API
@@ -42,6 +45,7 @@ multithreading
 necessary
 Open
 pip
+Plotly
 Portal
 PyTorch
 qu'ArcGIS
