@@ -11,7 +11,9 @@ Core
 d'ArcGIS
 DAS
 Dash
+Data
 Databricks
+DataFactory
 Dataframes
 EAG
 Enterprise
@@ -42,6 +44,7 @@ PyTorch
 R-Dashboards
 R-Shiny
 readthedocs
+SIG
 Source
 Spatial
 Spatial
