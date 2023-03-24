@@ -4,6 +4,7 @@ activate
 APIs
 ArcGIS
 AzureML
+basemap
 canada.ca
 conda
 Conda
@@ -17,6 +18,7 @@ data-analytics-service
 Databricks
 DataBricks
 DataFactory
+Dataframes
 datasette
 Datasette
 datasettes
@@ -50,6 +52,7 @@ KubeCost
 Kubeflow
 Kubernetes
 lifecycle
+MatplotLib
 minimal-tenant
 minimal-tenant1
 minio
@@ -97,11 +100,13 @@ Sign
 Slack
 sqlite
 StatCan
+statcan.gc.ca
 subfolders
 submodule
 torch
 torchaudio
 torchvision
+use_proximity
 user.name
 Vault
 with
