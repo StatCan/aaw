@@ -1,11 +1,17 @@
+.create_buffers
 @statcan.gc.ca
 aaw
+aaw-unclassified-ro:
 activate
 APIs
 ArcGIS
+ax
 AzureML
 basemap
+basemaps
+Blob
 canada.ca
+centered
 conda
 Conda
 COVID-19
