@@ -41,10 +41,10 @@ check-prerequisites:
 check-spelling: check-spelling-en check-spelling-fr
 
 check-spelling-en:
-	yarn run mdspell --en-gb -trax 'docs/en/*.md' 'docs/en/**/*.md' -n --ignored config
+	yarn run mdspell --en-gb -trax 'docs/en/*.md' 'docs/en/**/*.md' -n -a
 
 check-spelling-fr:
-	yarn run mdspell --fr-fr -trax 'docs/fr/*.md' 'docs/fr/**/*.md' -n --ignored Gitlab
+	yarn run mdspell --fr-fr -trax 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
 
 install: install-yarn install-venv
 
