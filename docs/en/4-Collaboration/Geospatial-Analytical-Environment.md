@@ -75,7 +75,7 @@ display(me)
 ### Search for Content
 Search for the content you have hosted on the DAaaS Geo Portal. Using the 'me' function we can search for all of the hosted content on the account. There are multiple ways to search for content. Two different methods are outlined below.
 
-**Search all of your hosted itmes in the DAaaS Geo Portal.**
+**Search all of your hosted items in the DAaaS Geo Portal.**
 ```python
 my_content = me.items()
 my_content
@@ -143,7 +143,7 @@ sdf = pd.DataFrame.spatial.from_layer(feature_layer)
 <hr>
 
 ### Update Items
-By getting the item as we did similar to the example above, we can use the '.update' function to update exisiting item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
+By getting the item as we did similar to the example above, we can use the '.update' function to update existing item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
 ```python
 item1_buffer = gis.content.get('c60c7e57bdb846dnbd7c8226c80414d2')
 item1_buffer.update(item_properties={'title': 'Enter Title'
@@ -165,7 +165,7 @@ plt.show()
 ```
 
 **Example: ipyleaflet Library**
-In this example we will use the library 'ipyleaflet' to create an interactive map. This map will be centered around Toronto, ON. The data being used will be outlined below.
+In this example we will use the library 'ipyleaflet' to create an interactive map. This map will be centred around Toronto, ON. The data being used will be outlined below.
 Begin by pasting ```conda install -c conda-forge ipyleaflet``` allowing you to install ipyleaflet libraries in the Python environment.
 <br/>
 Import the necessary libraries.

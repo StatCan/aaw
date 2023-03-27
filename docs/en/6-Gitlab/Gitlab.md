@@ -7,7 +7,7 @@
 -------------------
 
 
-Thankfully, using the cloud main gitlab on the AAW is just like how you would regularly use git. 
+Thankfully, using the cloud main Gitlab on the AAW is just like how you would regularly use git. 
 
 ### Step 1: Locate the Git repo you want to clone and copy the clone with HTTPS option
 If your repository is private, you will need to also do Step 4 (Creating a Personal Access Token) for this to go through. 
@@ -21,14 +21,14 @@ For me this was a test repo
 As seen in the above screenshot I have cloned the repo!
 
 ### Step 4: Create a Personal Access Token for pushing (also used if pulling from a private repository)
-If you try to `git push ....` you will encounter an error eventually leading you to the [gitlab help documentation](https://gitlab.k8s.cloud.statcan.ca/help/user/profile/account/two_factor_authentication.md#error-http-basic-access-denied-the-provided-password-or-token-)
+If you try to `git push ....` you will encounter an error eventually leading you to the [Gitlab help documentation](https://gitlab.k8s.cloud.statcan.ca/help/user/profile/account/two_factor_authentication.md#error-http-basic-access-denied-the-provided-password-or-token-)
 
-You will need to make a Personal Access Token for this. To achieve this go in gitlab, click your profile icon and then hit `Preferences` and then `Access Tokens`
+You will need to make a Personal Access Token for this. To achieve this go in Gitlab, click your profile icon and then hit `Preferences` and then `Access Tokens`
 ![image](https://user-images.githubusercontent.com/23174198/217061060-122dded8-dc80-46ce-a907-a85913cf5dd7.png)
 Follow the prompts entering the name, the token expiration date and granting the token permissions (I granted `write_repository`)
 
 ### Step 5: Personalize `Git` to be you
-Run `git config user.email ....` and `git config user.name ...` to match your gitlab identity.
+Run `git config user.email ....` and `git config user.name ...` to match your Gitlab identity.
 
 ### Step 6: Supply the Generated Token when asked for your password
 The token will by copy-able at the top once you hit `Create personal access token` at the bottom
@@ -38,6 +38,6 @@ Once you have prepared everything it's time
 ![image](https://user-images.githubusercontent.com/23174198/217063198-c1bd6c3a-ebc5-444d-98ba-24ef32faa20e.png)
 
 
-### Step 7: See the results of your hard work in gitlab
+### Step 7: See the results of your hard work in Gitlab
 ![image](https://user-images.githubusercontent.com/23174198/217063990-efaa8e81-a0eb-4b6d-842e-2ca3112bb4f7.png)
 
