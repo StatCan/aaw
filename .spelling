@@ -89,3 +89,52 @@ with
 data-analytics-service
 www.kubeflow.org
 www.statcan.gc.ca
+statcan.gc.ca
+s3
+PyTorch
+TensorFlow
+NVIDIA
+V100
+XFCE
+ArcGIS
+DataFactory
+MatplotLib
+standalone
+deserialize
+Elasticsearch
+onboarding
+submodule
+basemap
+basemaps
+mc
+Gitlab
+ - docs/en/2-Publishing/Dash.md
+app.py
+ - docs/en/2-Publishing/Datasette.md
+faq
+start.sh
+ - docs/en/3-Pipelines/Kubeflow-Pipelines.md
+Woohoo
+KFP-specific
+stringified
+ - docs/en/4-Collaboration/Geospatial-Analytical-Environment.md
+DAaaS
+arcgis.features
+use_proximity
+create_buffers
+Dataframes
+ipyleaflet
+Geo
+ax
+ArGIS
+ - docs/en/4-Collaboration/Overview.md
+hoc
+ - docs/en/1-Experiments/Selecting-an-Image.md
+startup
+ - docs/en/5-Storage/MinIO.md
+fdi-gateway-unclassified
+gateway-standard-ro
+gateway-premium-ro
+fdi-gateway-protected-b
+2x
+us-west-1
