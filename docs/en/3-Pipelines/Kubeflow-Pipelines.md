@@ -611,7 +611,7 @@ container_operation = dsl.ContainerOp(
     )
 ```
 
-### parametrizing pipelines
+### Parameterizing pipelines
 
 Whenever possible, create pipelines in a generic way: define parameters that
 might change as pipeline inputs instead of writing values directly in your

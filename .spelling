@@ -109,6 +109,7 @@ basemap
 basemaps
 mc
 Gitlab
+parameterizing
  - docs/en/2-Publishing/Dash.md
 app.py
  - docs/en/2-Publishing/Datasette.md
