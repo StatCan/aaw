@@ -1,91 +1,344 @@
-activate
+ - docs/en/1-Experiments/Jupyter.md
+ - docs/en/1-Experiments/Kubeflow.md
+ - docs/en/1-Experiments/Remote-Desktop.md
+ - docs/en/1-Experiments/Selecting-an-Image.md
+ - docs/en/2-Publishing/Custom.md
+ - docs/en/2-Publishing/Dash.md
+ - docs/en/2-Publishing/Datasette.md
+ - docs/en/3-Pipelines/Machine-Learning-Model-Cloud-Storage.md
+ - docs/en/3-Pipelines/Machine-Learning-Model-Serving.md
+ - docs/en/3-Pipelines/Machine-Learning-Training-Pipelines.md
+ - docs/en/3-Pipelines/Machine-Learning.md
+ - docs/en/3-Pipelines/Overview.md
+ - docs/en/3-Pipelines/PaaS-Integration.md
+ - docs/en/4-Collaboration/Geospatial-Analytical-Environment.md
+ - docs/en/4-Collaboration/Overview.md
+ - docs/en/4-Collaboration/Request-a-Namespace.md
+ - docs/en/5-Storage/AzureBlobStorage.md
+ - docs/en/5-Storage/Disks.md
+ - docs/en/index.md
+ - docs/en/welcome-message.md
+ - docs/fr/1-Experiences/Bureau-virtuel.md
+ - docs/fr/1-Experiences/Jupyter.md
+ - docs/fr/1-Experiences/Kubeflow.md
+ - docs/fr/1-Experiences/MLflow.md
+ - docs/fr/1-Experiences/Selectionner-une-Image.md
+ - docs/fr/2-Publication/Datasette.md
+ - docs/fr/2-Publication/PowerBI.md
+ - docs/fr/2-Publication/Sur-mesure.md
+ - docs/fr/3-Pipelines/Kubeflow-Pipelines.md
+ - docs/fr/3-Pipelines/Overview.md
+ - docs/fr/3-Pipelines/Serving.md
+ - docs/fr/Aide.md
+ - docs/fr/index.md
+ - docs/fr/message-de-bienvenue.md
+_0
+_1
+_i
+_L
+.create_buffers
+.update
+@statcan.gc.ca
+**aaw-unclassified-ro:**
+`Git`
+0.2cm
+15CPU
+48GB
 aaw
+aaw-unclassified-ro
+aaw-unclassified-ro:
+activate
+acyclic
+amounts
+analyze
+analyzing
+Analyzing
 APIs
+app.py
+ArcGIS
+arcgis.features 
+ArGIS
+argo
+artifact
+artifacts
+authorized
+ax
 AzureML
+B
+basemap
+basemaps
+basemaps.html
+bash
+behavior
+BI
+Blob
+boldsymbol
+cae
+CAE
 canada.ca
+centered
+centralize
+centralized
+classification
+CLI
+cloud
 conda
 Conda
+containerization
+containerized
+containerizing
+Containerizing
+Core
+Couler
 COVID-19
+CRD
+create_buffers
+CSI
+CSU
+customizable
 Customization
 customize
 customized
+d'arcgis
+DAaaS
+DAGs
+DAS
+Dash
+Data
+data-analytics-service
 Databricks
+DataBricks
+DataFactory
+Dataframes
 datasette
 Datasette
 datasettes
 Dockerfile
 dropdown
 e.g.
+EAA
+eag
+EEA
+email
+enterprise
+ETL
+f_t
+FDI
 Filebrowser
+Flask
+for
+frac
 fullscreen
+GAE
+GB
+Geo
+GEO
+geomatics
+Geomatics
+Geospatial
+gib
+GiB
+GIS
+git
+Git
 github
 Github
 GitHub
+gitlab
 GitLab
+global-power-plants
+GPU
+gpus
+GPUs
+hdd
+heatmaps
+hspace
+https
+hyperparameter
+hyperparameters
+hyperparamètres
+hyperplane
+i.e.
+infographics
 initialized
+integrable
 integrations
+ipyleaflet
+is
+Istio
 javascript
-Jupyter
+JSON
 jupyter
-JupyterHub
-JupyterLab
+Jupyter
 jupyter-notebook
 jupyter-notebooks
+JupyterHub
+JupyterLab
 KFServing
 KNative
+KubeCost
 Kubeflow
 Kubernetes
+l'EAA
+l'id
+lakes
+latest
+Learning
+libraries
 lifecycle
+Linting
+map_and_basemaps
+massive
+mathbf
+MatplotLib
+maximizes
+MD5
+microservices
 minimal-tenant
 minimal-tenant1
+minimize
+minio
 MinIO
 minio/
-minio
+ml-tooling
+ml-workspace
 mlflow
 MLflow
 MLOps
+modeling
+multiplateforme
+multithreading
+namespace
+namespaces
+natively
 NB_NOTEBOOK
+necessary
 Netdata
 Node.js
+normalization
 Notebook
 Notebooks
 noVNC
 npm
+observability
 OIDC
+ON
+onboarded
+onboarding
 Onboarding
 OpenID
 OpenM
 OpenM++
+Operations
+operatorname
+OPMIC
+optimization
+optimize
+Optimize
+optimized
+optimizing
+optionality
+or
+organizations
+organized
 PaaS
+Personalize
+pip
+Plotly
+Plotly.js
 Power
+pre-installed
 pre-loaded
+pre-processing
 premium-tenant
 premium-tenant1
+preprocess
+preprocessed
+preprocessing
+Protected
 Provider
+PyTorch
 QGIS
-Registry
-Repo
+qu'arcgis
+R-Dashboards
 R-Shiny
 r-studio-cpu
+React
+recognize
+Registry
+repo
+Repo
+reproducibility
+Reproducibility
+REST
 RStudio
+s3
+S3
+s3-proxy
+saml
+SAML
 SAS
+SASPy
 scalable
+Scikit-learn
+SDK
+sdks
+SDKs
 Seldon
-Servers
 Serverless
+Servers
 shapefiles
-Shiny
 Shiny
 Sign
 Slack
 sqlite
+SQLite
+SSD
+SSDs
+SSI
+start.sh
+Statcan
 StatCan
+statcan.gc.ca
+storage
+Storage
+storing
 subfolders
+submodule
+sum_
+SVM
+TB
+TensorFlow
+the
+This
 torch
 torchaudio
 torchvision
+Toronto
+TypeScript
+UI
+unauthorized
+underset
+update
+use_proxim
+use_proximity
+user.name
+v100
 Vault
+Vega
+visual
+visualization
+visualizations
+visualize
+visualizing
 with
-data-analytics-service
+Workflows
+workspaces
+Workspaces
 www.kubeflow.org
 www.statcan.gc.ca
+X_i
+XFCE
+xi_i
+YAML
+yarn
