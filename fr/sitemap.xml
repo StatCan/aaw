@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://statcan.github.io/daaas/fr/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/1-Experiences/Kubeflow/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/1-Experiences/Jupyter/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/1-Experiences/RStudio/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/1-Experiences/Bureau-virtuel/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/2-Publication/R-Shiny/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/2-Publication/Dash/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/2-Publication/Datasette/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/2-Publication/PowerBI/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/2-Publication/Sur-mesure/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/3-Pipelines/Kubeflow-Pipelines/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/3-Pipelines/PaaS/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/3-Pipelines/Serving/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/4-Collaboration/Aper%C3%A7u/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/4-Collaboration/Demander-EspaceDeNom/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/4-Collaboration/Environnement-Analyse-Geospatiale/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/5-Stockage/Aper%C3%A7u/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/5-Stockage/MinIo/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/5-Stockage/Disque/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://statcan.github.io/daaas/fr/Aide/</loc>
-     <lastmod>2023-03-21</lastmod>
+     <lastmod>2023-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
