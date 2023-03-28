@@ -212,3 +212,8 @@ multilingual support and other UX related enhancements.
 | [minio](https://github.com/StatCan/minio)                           | Multilingual support for MinIO              | Public     |
 | [minio-console](https://github.com/StatCan/minio-console)           | Multilingual support for MinIO Console      | Public     |
 | [rstudio](https://github.com/StatCan/rstudio)                       | Multilingual support for RStudio            | Public     |
+
+### Developer Notes:
+Fix spelling by executing `fix-spelling-en` and `fix-spelling-fr` 
+Adding to the sensitive or insensitive category
+Ignoring will simply ignore the error for this round. It will trigger again next execution. 
