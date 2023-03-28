@@ -77,6 +77,7 @@ display(me)
 Search for the content you have hosted on the DAaaS Geo Portal. Using the 'me' function we can search for all of the hosted content on the account. There are multiple ways to search for content. Two different methods are outlined below.
 
 **Search all of your hosted items in the DAaaS Geo Portal.**
+**Search all of your hosted items in the DAaaS Geo Portal.**
 ```python
 my_content = me.items()
 my_content
