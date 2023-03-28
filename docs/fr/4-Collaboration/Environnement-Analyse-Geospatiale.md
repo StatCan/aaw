@@ -13,7 +13,7 @@
 
 Le portail ArcGIS Enterprise est accessible dans AAW ou CAE à l'aide de l'API, à partir de n'importe quel service qui exploite le langage de programmation Python. 
 
-Par exemple, dans AAW et l'utilisation de [Jupyter Notebooks](https://statcan.github.io/daaas/en/1-Experiments/Jupyter/) dans l'espace, ou pour CAE l'utilisation de [Databricks](https ://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
+Par exemple, dans AAW et l'utilisation de [Jupyter Notebooks](https://statcan.github.io/daaas/en/1-Experiments/Jupyter/) dans l'espace, ou pour CAE l'utilisation de [Databricks](https://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
 
 [Le portail DAS GAE ArcGIS Enterprise est accessible directement ici](https://geoanalytics.cloud.statcan.ca/portal)
 
@@ -183,7 +183,7 @@ toronto_map
 <br/>
 
 ##En savoir plus sur l'API ArcGIS pour Python
-[La documentation complète de l'API ArGIS peut être trouvée ici](https://developers.arcgis.com/python/)
+[La documentation complète de l'API ArcGIS peut être trouvée ici](https://developers.arcgis.com/python/)
 
 ##En savoir plus sur l'environnement analytique géospatial (GAE) et les services DAS
 [Guide d'aide GAE](https://statcan.github.io/daaas-dads-geo/)
