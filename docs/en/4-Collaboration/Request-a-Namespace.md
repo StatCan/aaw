@@ -21,7 +21,7 @@ lower case letters plus dashes.
 
 <!-- prettier-ignore -->
 !!! warning "The namespace cannot have special characters other than hyphens"
-    The namespace name must only be lowercase letters `a-z` with dashes. Otherwise,
+    The namespace name must only be lower-case letters `a-z` with dashes. Otherwise,
     the namespace will not be created.
 
 **You will receive an email notification when the namespace is created.** Once

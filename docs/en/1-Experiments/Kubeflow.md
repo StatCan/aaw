@@ -42,7 +42,7 @@ for your team.
 ## Server Name and Namespace
 
 - You will get a template to create your notebook server. **Note:** the name of
-  your server can consist of only lowercase letters, numbers, and hyphens. **No spaces, and no
+  your server can consist of only lower-case letters, numbers, and hyphens. **No spaces, and no
   underscores.**
 
 - You will need to specify a namespace. By default you will have a default
@@ -73,7 +73,7 @@ the cluster
    system use).
  - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
    memory are available; 16 GiB memory reserved for system use). The available
-   GPU is the NVIDIA Tesla V100 GPU with specs
+   GPU is the NVIDIA Tesla V100 GPU with specifications
    [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
 
 When creating a notebook server, the system will limit you to the maximum

@@ -18,10 +18,12 @@ dropdown
 e.g.
 Filebrowser
 fullscreen
+Git
 github
 Github
 GitHub
 GitLab
+Gitlab
 initialized
 integrations
 javascript
@@ -44,6 +46,7 @@ minio
 mlflow
 MLflow
 MLOps
+multithreading 
 NB_NOTEBOOK
 Netdata
 Node.js
@@ -52,11 +55,13 @@ Notebooks
 noVNC
 npm
 OIDC
+onboarded
 Onboarding
 OpenID
 OpenM
 OpenM++
 PaaS
+Personalize
 Power
 pre-loaded
 premium-tenant
@@ -65,6 +70,7 @@ Provider
 QGIS
 Registry
 Repo
+repo
 R-Shiny
 r-studio-cpu
 RStudio
@@ -89,3 +95,121 @@ with
 data-analytics-service
 www.kubeflow.org
 www.statcan.gc.ca
+statcan.gc.ca
+s3
+PyTorch
+TensorFlow
+NVIDIA
+V100
+XFCE
+ArcGIS
+DataFactory
+MatplotLib
+standalone
+deserialize
+Elasticsearch
+onboarding
+submodule
+basemap
+basemaps
+mc
+Gitlab
+parameterizing
+l'EAA
+R-Dashboards
+dash
+SQLite
+Geomatics
+pip
+yarn
+Visual
+TypeScript
+ml-tooling
+ml-workspace
+Linting
+bash
+Vega
+global-power-plants
+Flask
+Core
+statcan.github.io
+cae-eac
+DataBricks
+l'ID
+DAaaS
+qu'ArcGIS
+arcgis.features
+use_proximity
+create_buffers
+d'ArcGIS
+Dataframes
+update
+ax
+ipyleaflet
+ArGIS
+Lakes
+Workspaces
+visualization
+workspaces
+https
+serialized
+namespace
+visualize
+centralized
+geomatics
+GiB
+GPUs
+Geospatial
+pre-installed
+containerized
+namespaces
+organized
+SSDs
+minimize
+programmatically
+optimized
+KubeCost
+ - docs/en/2-Publishing/Dash.md
+app.py
+ - docs/en/2-Publishing/Datasette.md
+faq
+start.sh
+ - docs/en/3-Pipelines/Kubeflow-Pipelines.md
+Woohoo
+KFP-specific
+stringified
+ - docs/en/4-Collaboration/Geospatial-Analytical-Environment.md
+DAaaS
+arcgis.features
+use_proximity
+create_buffers
+Dataframes
+ipyleaflet
+Geo
+ax
+ArGIS
+ - docs/en/4-Collaboration/Overview.md
+hoc
+ - docs/en/1-Experiments/Selecting-an-Image.md
+startup
+ - docs/en/5-Storage/MinIO.md
+fdi-gateway-unclassified
+gateway-standard-ro
+gateway-premium-ro
+fdi-gateway-protected-b
+2x
+us-west-1
+ - docs/fr/2-Publication/Datasette.md
+start.sh
+ - docs/fr/4-Collaboration/Environnement-Analyse-Geospatiale.md
+Enterprise
+the
+necessary
+libraries
+latest
+map_and_basemaps
+basemaps.html
+ - docs/en/index.md
+visualizations
+ - docs/en/5-Storage/AzureBlobStorage.md
+aaw-unclassified-ro
