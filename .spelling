@@ -115,6 +115,58 @@ basemaps
 mc
 Gitlab
 parameterizing
+l'EAA
+R-Dashboards
+dash
+SQLite
+Geomatics
+pip
+yarn
+Visual
+TypeScript
+ml-tooling
+ml-workspace
+Linting
+bash
+Vega
+global-power-plants
+Flask
+Core
+statcan.github.io
+cae-eac
+DataBricks
+l'ID
+DAaaS
+qu'ArcGIS
+arcgis.features
+use_proximity
+create_buffers
+d'ArcGIS
+Dataframes
+update
+ax
+ipyleaflet
+ArGIS
+Lakes
+Workspaces
+visualization
+workspaces
+https
+serialized
+namespace
+visualize
+centralized
+geomatics
+GiB
+GPUs
+Geospatial
+pre-installed
+containerized
+namespaces
+organized
+SSDs
+minimize
+programmatically
  - docs/en/2-Publishing/Dash.md
 app.py
  - docs/en/2-Publishing/Datasette.md
@@ -145,3 +197,15 @@ gateway-premium-ro
 fdi-gateway-protected-b
 2x
 us-west-1
+ - docs/fr/2-Publication/Datasette.md
+start.sh
+ - docs/fr/4-Collaboration/Environnement-Analyse-Geospatiale.md
+Enterprise
+the
+necessary
+libraries
+latest
+map_and_basemaps
+basemaps.html
+ - docs/en/index.md
+visualizations

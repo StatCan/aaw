@@ -46,6 +46,12 @@ check-spelling-en:
 check-spelling-fr:
 	yarn run mdspell --fr-fr -trax 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
 
+fix-spelling-en:
+	yarn run mdspell --en-gb 'docs/en/*.md' 'docs/en/**/*.md' -n -a
+
+fix-spelling-fr:
+	yarn run mdspell --fr-fr 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
+
 install: install-yarn install-venv
 
 install-venv: check-prerequisites

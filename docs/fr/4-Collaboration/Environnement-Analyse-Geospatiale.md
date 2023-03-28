@@ -1,4 +1,4 @@
-# Environnement d'Analyse Géospatiale (EAG) - Accès multiplateforme
+# Environnement d'Analyse Géospatiale (EAG) - Accès multi-plateforme
 
 <!-- prettier-ignore -->
 ??? danger "Données non protégées uniquement ; SSI bientôt disponible :"
