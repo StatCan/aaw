@@ -167,6 +167,8 @@ organized
 SSDs
 minimize
 programmatically
+optimized
+KubeCost
  - docs/en/2-Publishing/Dash.md
 app.py
  - docs/en/2-Publishing/Datasette.md
@@ -209,3 +211,5 @@ map_and_basemaps
 basemaps.html
  - docs/en/index.md
 visualizations
+ - docs/en/5-Storage/AzureBlobStorage.md
+aaw-unclassified-ro
