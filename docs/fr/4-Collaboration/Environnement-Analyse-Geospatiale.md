@@ -13,7 +13,7 @@
 
 Le portail ArcGIS Enterprise est accessible dans AAW ou CAE à l'aide de l'API, à partir de n'importe quel service qui exploite le langage de programmation Python. 
 
-Par exemple, dans AAW et l'utilisation de [Jupyter Notebooks](https://statcan.github.io/daaas/en/1-Experiments/Jupyter/) dans l'espace, ou pour CAE l'utilisation de [Databricks](https ://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
+Par exemple, dans AAW et l'utilisation de [Jupyter Notebooks](https://statcan.github.io/daaas/en/1-Experiments/Jupyter/) dans l'espace, ou pour CAE l'utilisation de [Databricks](https://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
 
 [Le portail DAS GAE ArcGIS Enterprise est accessible directement ici](https://geoanalytics.cloud.statcan.ca/portal)
 
@@ -122,7 +122,7 @@ display(item3)
 Une fois les couches importées dans le bloc-notes Jupyter, nous sommes en mesure d'effectuer des types d'analyse similaires à ceux que vous vous attendriez à trouver dans un logiciel SIG tel qu'ArcGIS. Il existe de nombreux modules contenant de nombreux sous-modules qui peuvent effectuer plusieurs types d'analyses.
 <br/>
 
-À l'aide du module arcgis.features, importez le sous-module use_proximity ```from arcgis.features import use_proximity```. Ce sous-module nous permet de '.create_buffers' - des zones à égale distance des entités. Ici, nous spécifions la couche que nous voulons utiliser, la distance, les unités et le nom de sortie (vous pouvez également spécifier d'autres caractéristiques telles que le champ, le type d'anneau, le type de fin et autres). En spécifiant un nom de sortie, après avoir exécuté la commande buffer, une nouvelle couche sera automatiquement téléchargée dans le portail DAaaS GEO contenant la nouvelle fonctionnalité que vous venez de créer.
+À l'aide du module arcgis.features, importez le sous-module use_proximity ```from arcgis.features import use_proximity```. Ce sous-module nous permet de `.create_buffers` - des zones à égale distance des entités. Ici, nous spécifions la couche que nous voulons utiliser, la distance, les unités et le nom de sortie (vous pouvez également spécifier d'autres caractéristiques telles que le champ, le type d'anneau, le type de fin et autres). En spécifiant un nom de sortie, après avoir exécuté la commande buffer, une nouvelle couche sera automatiquement téléchargée dans le portail DAaaS GEO contenant la nouvelle fonctionnalité que vous venez de créer.
 <br/>
 
 ```python
@@ -142,7 +142,7 @@ sdf = pd.DataFrame.spatial.from_layer(feature_layer)
 <hr>
 
 ### Mettre à jour les éléments
-En obtenant l'élément comme nous l'avons fait similaire à l'exemple ci-dessus, nous pouvons utiliser la fonction '.update' pour mettre à jour l'élément existant dans le portail DAaaS GEO. Nous pouvons mettre à jour les propriétés, les données, les vignettes et les métadonnées des éléments.
+En obtenant l'élément comme nous l'avons fait similaire à l'exemple ci-dessus, nous pouvons utiliser la fonction `.update` pour mettre à jour l'élément existant dans le portail DAaaS GEO. Nous pouvons mettre à jour les propriétés, les données, les vignettes et les métadonnées des éléments.
 ```python
 item1_buffer = gis.content.get('c60c7e57bdb846dnbd7c8226c80414d2')
 item1_buffer.update(item_properties={'title': 'Enter Title'
@@ -183,7 +183,7 @@ toronto_map
 <br/>
 
 ##En savoir plus sur l'API ArcGIS pour Python
-[La documentation complète de l'API ArGIS peut être trouvée ici](https://developers.arcgis.com/python/)
+[La documentation complète de l'API ArcGIS peut être trouvée ici](https://developers.arcgis.com/python/)
 
 ##En savoir plus sur l'environnement analytique géospatial (GAE) et les services DAS
 [Guide d'aide GAE](https://statcan.github.io/daaas-dads-geo/)
