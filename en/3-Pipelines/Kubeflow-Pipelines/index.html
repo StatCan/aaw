@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -8,14 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="User guide for the DAaaS AAW Platform">
+        <meta name="description" content="User guide for the Advanced Analytics Workspace">
+      
       
       
         <link rel="canonical" href="https://statcan.github.io/daaas/en/3-Pipelines/Kubeflow-Pipelines/">
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+        <link rel="prev" href="../../2-Publishing/Custom/">
+      
+      
+        <link rel="next" href="../PaaS/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
     
     
       
@@ -23,28 +27,30 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.240905d7.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
+      
+
+    
+    
+    
       
         
         
-        <meta name="theme-color" content="#3f51b5">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
+
     
-    
-    
-    
-      
     
     
   </head>
@@ -53,8 +59,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="teal">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -71,48 +80,60 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://statcan.github.io/daaas/en/" title="Advanced Analytics Workspace" class="md-header-nav__button md-logo" aria-label="Advanced Analytics Workspace">
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Advanced Analytics Workspace" class="md-header__button md-logo" aria-label="Advanced Analytics Workspace" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Advanced Analytics Workspace
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Kubeflow Pipelines
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -120,7 +141,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -128,12 +149,11 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/StatCan/daaas/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/StatCan/daaas" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     StatCan/daaas
@@ -142,11 +162,143 @@
       </div>
     
   </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Getting Started
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../1-Experiments/Kubeflow/" class="md-tabs__link">
+        Analysis
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../2-Publishing/R-Shiny/" class="md-tabs__link">
+        Publishing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Pipelines
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../4-Collaboration/Overview/" class="md-tabs__link">
+        Collaboration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../5-Storage/Overview/" class="md-tabs__link">
+        Storage
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../6-Gitlab/Gitlab/" class="md-tabs__link">
+        Gitlab
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../Help/" class="md-tabs__link">
+      Help/Contact
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
-      
-        
       
       
         
@@ -155,26 +307,31 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://statcan.github.io/daaas/en/" title="Advanced Analytics Workspace" class="md-nav__button md-logo" aria-label="Advanced Analytics Workspace">
+    <a href="../.." title="Advanced Analytics Workspace" class="md-nav__button md-logo" aria-label="Advanced Analytics Workspace" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     Advanced Analytics Workspace
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/StatCan/daaas/" title="Go to repository" class="md-source">
+      <a href="https://github.com/StatCan/daaas" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     StatCan/daaas
@@ -188,180 +345,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../.." title="Getting Started" class="md-nav__link">
-      Getting Started
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Analysis
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Analysis" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Analysis
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Experiments/Kubeflow/" title="Kubeflow" class="md-nav__link">
-      Kubeflow
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Experiments/Jupyter/" title="Jupyter" class="md-nav__link">
-      Jupyter
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Experiments/RStudio/" title="RStudio" class="md-nav__link">
-      RStudio
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../1-Experiments/Remote-Desktop/" title="Remote Desktop" class="md-nav__link">
-      Remote Desktop
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Publishing
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Publishing" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Publishing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/R-Shiny/" title="R Shiny" class="md-nav__link">
-      R Shiny
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/Dash/" title="Dash" class="md-nav__link">
-      Dash
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/Datasette/" title="Datasette" class="md-nav__link">
-      Datasette
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/PowerBI/" title="Power BI" class="md-nav__link">
-      Power BI
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../2-Publishing/Custom/" title="Custom" class="md-nav__link">
-      Custom
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
 
     
       
@@ -369,473 +361,533 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Pipelines
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Pipelines" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Pipelines
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Experiments/Kubeflow/" class="md-nav__link">
+        Kubeflow
+      </a>
+    </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Experiments/Jupyter/" class="md-nav__link">
+        Jupyter
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Experiments/RStudio/" class="md-nav__link">
+        RStudio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Experiments/Remote-Desktop/" class="md-nav__link">
+        Remote Desktop
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Publishing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Publishing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Publishing/R-Shiny/" class="md-nav__link">
+        R Shiny
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Publishing/Dash/" class="md-nav__link">
+        Dash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Publishing/Datasette/" class="md-nav__link">
+        Datasette
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Publishing/PowerBI/" class="md-nav__link">
+        Power BI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Publishing/Custom/" class="md-nav__link">
+        Custom
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Pipelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Pipelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kubeflow Pipelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Kubeflow Pipelines
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Kubeflow Pipelines" class="md-nav__link md-nav__link--active">
-      Kubeflow Pipelines
-    </a>
-    
+      </a>
       
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+    
+  
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#what-are-pipelines-and-how-do-they-work" class="md-nav__link">
     What are pipelines and how do they work?
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-and-run-your-first-pipeline-using-the-python-sdk" class="md-nav__link">
-    Define and run your first pipeline using the Python SDK
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-what-computation-occurs-when" class="md-nav__link">
-    Understanding what computation occurs when
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#once-youve-got-the-basics" class="md-nav__link">
-    Once you've got the basics ...
-  </a>
-  
-    <nav class="md-nav" aria-label="Once you've got the basics ...">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-exchange" class="md-nav__link">
-    Data Exchange
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Exchange">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passing-data-into-within-and-from-a-pipeline" class="md-nav__link">
-    Passing data into, within, and from a pipeline
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-secrets" class="md-nav__link">
-    Passing Secrets
-  </a>
-  
-    <nav class="md-nav" aria-label="Passing Secrets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-key-value-store" class="md-nav__link">
-    Create a key-value store
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-an-existing-key-value-store" class="md-nav__link">
-    Get an existing key-value store
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" class="md-nav__link">
-    Mounting Kubernetes Secrets to Environment Variables in Container Operations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameterizing-pipelines" class="md-nav__link">
-    Parameterizing pipelines
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-complexlarge-data-tofrom-a-pipeline" class="md-nav__link">
-    Passing complex/large data to/from a pipeline
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#typical-development-patterns" class="md-nav__link">
-    Typical development patterns
-  </a>
-  
-    <nav class="md-nav" aria-label="Typical development patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#end-to-end-pipeline-development" class="md-nav__link">
-    End-to-end pipeline development
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods-for-authoring-components" class="md-nav__link">
-    Methods for authoring components
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods for authoring components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-defined-container-components" class="md-nav__link">
-    User-defined container components
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lightweight-python-components" class="md-nav__link">
-    Lightweight Python components
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defining-components-directly-in-yaml" class="md-nav__link">
-    Defining components directly in YAML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reusing-existing-components" class="md-nav__link">
-    Reusing existing components
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PaaS/" class="md-nav__link">
+        PaaS Integration
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Serving/" class="md-nav__link">
+        Model Serving
+      </a>
+    </li>
+  
+
+            
           
-
-
-  <li class="md-nav__item">
-    <a href="../PaaS/" title="PaaS Integration" class="md-nav__link">
-      PaaS Integration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Serving/" title="Model Serving" class="md-nav__link">
-      Model Serving
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Collaboration
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Collaboration" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Collaboration
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Collaboration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Collaboration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Collaboration/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Collaboration/Request-a-Namespace/" class="md-nav__link">
+        Request a Namespace
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Collaboration/Geospatial-Analytical-Environment/" class="md-nav__link">
+        GEA
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../4-Collaboration/Overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../4-Collaboration/Request-a-Namespace/" title="Request a Namespace" class="md-nav__link">
-      Request a Namespace
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../4-Collaboration/Geospatial-Analytical-Environment/" title="GEA" class="md-nav__link">
-      GEA
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Storage
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Storage" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Storage
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-Storage/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-Storage/Disks/" class="md-nav__link">
+        Disks
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-Storage/AzureBlobStorage/" class="md-nav__link">
+        Azure Blob Storage
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../5-Storage/Overview/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../5-Storage/Disks/" title="Disks" class="md-nav__link">
-      Disks
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../5-Storage/AzureBlobStorage/" title="Azure Blob Storage" class="md-nav__link">
-      Azure Blob Storage
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Gitlab
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Gitlab" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Gitlab
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Gitlab
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-Gitlab/Gitlab/" class="md-nav__link">
         Gitlab
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../6-Gitlab/Gitlab/" title="Gitlab" class="md-nav__link">
-      Gitlab
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../Help/" title="Help/Contact" class="md-nav__link">
-      Help/Contact
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Help/" class="md-nav__link">
+        Help/Contact
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -845,208 +897,29 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+    
+  
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#what-are-pipelines-and-how-do-they-work" class="md-nav__link">
     What are pipelines and how do they work?
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-and-run-your-first-pipeline-using-the-python-sdk" class="md-nav__link">
-    Define and run your first pipeline using the Python SDK
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-what-computation-occurs-when" class="md-nav__link">
-    Understanding what computation occurs when
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#once-youve-got-the-basics" class="md-nav__link">
-    Once you've got the basics ...
-  </a>
-  
-    <nav class="md-nav" aria-label="Once you've got the basics ...">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-exchange" class="md-nav__link">
-    Data Exchange
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Exchange">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passing-data-into-within-and-from-a-pipeline" class="md-nav__link">
-    Passing data into, within, and from a pipeline
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-secrets" class="md-nav__link">
-    Passing Secrets
-  </a>
-  
-    <nav class="md-nav" aria-label="Passing Secrets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-key-value-store" class="md-nav__link">
-    Create a key-value store
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-an-existing-key-value-store" class="md-nav__link">
-    Get an existing key-value store
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" class="md-nav__link">
-    Mounting Kubernetes Secrets to Environment Variables in Container Operations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameterizing-pipelines" class="md-nav__link">
-    Parameterizing pipelines
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passing-complexlarge-data-tofrom-a-pipeline" class="md-nav__link">
-    Passing complex/large data to/from a pipeline
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#typical-development-patterns" class="md-nav__link">
-    Typical development patterns
-  </a>
-  
-    <nav class="md-nav" aria-label="Typical development patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#end-to-end-pipeline-development" class="md-nav__link">
-    End-to-end pipeline development
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods-for-authoring-components" class="md-nav__link">
-    Methods for authoring components
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods for authoring components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-defined-container-components" class="md-nav__link">
-    User-defined container components
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lightweight-python-components" class="md-nav__link">
-    Lightweight Python components
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#defining-components-directly-in-yaml" class="md-nav__link">
-    Defining components directly in YAML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reusing-existing-components" class="md-nav__link">
-    Reusing existing components
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1058,21 +931,17 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/StatCan/daaas/edit/master/docs/en/3-Pipelines/Kubeflow-Pipelines.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                  <h1>Kubeflow Pipelines</h1>
-                
-                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+
+  
+  
+
+
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
 <!-- prettier-ignore -->
 <div class="admonition warning">
 <p class="admonition-title">Kubeflow pipelines are in the process of being removed from AAW.</p>
@@ -1111,7 +980,7 @@ every Notebook Server at <code>/jupyter-notebooks</code>). You can also check ou
 <p>See
 <a href="https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/">the official Kubeflow docs</a>
 for a more detailed explanation of Kubeflow Pipelines.</p>
-<h3 id="what-are-pipelines-and-how-do-they-work">What are pipelines and how do they work?<a class="headerlink" href="#what-are-pipelines-and-how-do-they-work" title="Permanent link">&para;</a></h3>
+<h2 id="what-are-pipelines-and-how-do-they-work">What are pipelines and how do they work?<a class="headerlink" href="#what-are-pipelines-and-how-do-they-work" title="Permanent link">&para;</a></h2>
 <p>A
 <a href="https://www.kubeflow.org/docs/pipelines/overview/concepts/pipeline/"><em>pipeline</em></a>
 in Kubeflow Pipelines consists of one or more
@@ -1139,8 +1008,8 @@ single <code>average</code> step.</p>
   does it generate)</li>
 </ul>
 <p>Each <em>component</em> should be <strong>single purpose</strong>, <strong>modular</strong>, and <strong>reusable</strong>.</p>
-<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<h3 id="define-and-run-your-first-pipeline-using-the-python-sdk">Define and run your first pipeline using the Python SDK<a class="headerlink" href="#define-and-run-your-first-pipeline-using-the-python-sdk" title="Permanent link">&para;</a></h3>
+<h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
+<h2 id="define-and-run-your-first-pipeline-using-the-python-sdk">Define and run your first pipeline using the Python SDK<a class="headerlink" href="#define-and-run-your-first-pipeline-using-the-python-sdk" title="Permanent link">&para;</a></h2>
 <p>While <em>pipelines</em> and <em>components</em> are defined in Kubeflow Pipelines by YAML
 files that use Docker images, that does not mean we have to work directly with
 either YAML files or Docker images. The
@@ -1215,66 +1084,63 @@ with our container, specifying:</p>
 </ul>
 <p>We could use <code>ContainerOp</code> directly, but since we'll use <code>average</code> a few times
 we instead create a factory function we can reuse:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
-
-<span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Factory for average ContainerOps</span>
-
-<span class="sd">    Accepts an arbitrary number of input numbers, returning a ContainerOp that</span>
-<span class="sd">    passes those numbers to the underlying Docker image for averaging</span>
-
-<span class="sd">    Returns output collected from ./out.txt from inside the container</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Input validation</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Must specify at least one number to take the average of&quot;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">,</span>  <span class="c1"># What will show up on the pipeline viewer</span>
-        <span class="n">image</span><span class="o">=</span><span class="s2">&quot;k8scc01covidacr.azurecr.io/kfp-components/average:v1&quot;</span><span class="p">,</span>  <span class="c1"># The image that KFP runs to do the work</span>
-        <span class="n">arguments</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span>  <span class="c1"># Passes each number as a separate command line argument</span>
-                            <span class="c1"># Note that these arguments get serialized to strings</span>
-        <span class="n">file_outputs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;./out.txt&#39;</span><span class="p">},</span>  <span class="c1"># Expect an output file called out.txt to be generated</span>
-                                             <span class="c1"># KFP can read this file and bring it back automatically</span>
-    <span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span> <span class="nf">average_op</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="sd">    Factory for average ContainerOps</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sd">    Accepts an arbitrary number of input numbers, returning a ContainerOp that</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">    passes those numbers to the underlying Docker image for averaging</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">    Returns output collected from ./out.txt from inside the container</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="c1"># Input validation</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Must specify at least one number to take the average of&quot;</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">return</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;average&quot;</span><span class="p">,</span>  <span class="c1"># What will show up on the pipeline viewer</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="n">image</span><span class="o">=</span><span class="s2">&quot;k8scc01covidacr.azurecr.io/kfp-components/average:v1&quot;</span><span class="p">,</span>  <span class="c1"># The image that KFP runs to do the work</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="n">arguments</span><span class="o">=</span><span class="n">numbers</span><span class="p">,</span>  <span class="c1"># Passes each number as a separate command line argument</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>                            <span class="c1"># Note that these arguments get serialized to strings</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="n">file_outputs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;./out.txt&#39;</span><span class="p">},</span>  <span class="c1"># Expect an output file called out.txt to be generated</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                                             <span class="c1"># KFP can read this file and bring it back automatically</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="p">)</span>
+</span></code></pre></div>
 <p>To define our pipeline, we create a Python function decorated by the
 <code>@dsl.pipeline</code> decorator. We invoke our <code>average_op</code> factory to use our average
 container. We pass each <code>average</code> some inputs, and even use their outputs by
 accessing <code>avg_*.output</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
-<span class="p">)</span>
-<span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Averaging pipeline which accepts five numbers and does some averaging</span>
-<span class="sd">    operations on them</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Compute averages for two groups</span>
-    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
-    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-
-    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
-    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="sd">    Averaging pipeline which accepts five numbers and does some averaging</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="sd">    operations on them</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="c1"># Compute averages for two groups</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Finally, while we've defined our pipeline in Python, Kubeflow Pipelines itself
 needs everything defined as a YAML file. This final step uses the Kubeflow
 Pipelines Python SDK to translate our pipeline function into a YAML file that
 describes exactly how Kubeflow Pipelines can interact with our component. Unzip
 it and take a look for yourself!</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
-<span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
-<span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-    <span class="n">my_pipeline</span><span class="p">,</span>
-    <span class="n">pipeline_yaml</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exported pipeline definition to </span><span class="si">{</span><span class="n">pipeline_yaml</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">compiler</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">pipeline_yaml</span> <span class="o">=</span> <span class="s1">&#39;pipeline.yaml.zip&#39;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">my_pipeline</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">pipeline_yaml</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exported pipeline definition to </span><span class="si">{</span><span class="n">pipeline_yaml</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <!-- prettier-ignore -->
 <details class="warning">
 <summary>Kubeflow Pipelines is a lazy beast</summary>
@@ -1288,32 +1154,30 @@ available when you run this Python code. The is discussed more below in
 <em>Understanding what computation occurs when</em>.</p>
 </details>
 <p>To actually run our pipeline, we define an experiment:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
-
-<span class="kn">import</span> <span class="nn">kfp</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-<span class="n">exp</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_experiment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">experiment_name</span><span class="p">)</span>
-
-<span class="n">pl_params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
-    <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-    <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">experiment_name</span> <span class="o">=</span> <span class="s2">&quot;averaging-pipeline&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">kfp</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">client</span> <span class="o">=</span> <span class="n">kfp</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">exp</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_experiment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">experiment_name</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">pl_params</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>And then run an instance of our pipeline with the arguments we want:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-
-<span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
-    <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>  <span class="c1"># Run inside the above experiment</span>
-    <span class="n">experiment_name</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">),</span>  <span class="c1"># Give our job a name with a timestamp so its unique</span>
-    <span class="n">pipeline_yaml</span><span class="p">,</span>  <span class="c1"># Pass the .yaml.zip we created above.  This defines the pipeline</span>
-    <span class="n">params</span><span class="o">=</span><span class="n">pl_params</span>  <span class="c1"># Pass our parameters we want to run the pipeline with</span>
-<span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">time</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">run</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_pipeline</span><span class="p">(</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">exp</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>  <span class="c1"># Run inside the above experiment</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">experiment_name</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">),</span>  <span class="c1"># Give our job a name with a timestamp so its unique</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">pipeline_yaml</span><span class="p">,</span>  <span class="c1"># Pass the .yaml.zip we created above.  This defines the pipeline</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">params</span><span class="o">=</span><span class="n">pl_params</span>  <span class="c1"># Pass our parameters we want to run the pipeline with</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">)</span>
+</span></code></pre></div>
 <p>This can all be seen in the
 <a href="../../1-Experiments/Kubeflow/">Kubeflow Pipelines UI</a>:</p>
 <p><img alt="Example of an Experiment in Kubeflow Pipelines UI, highlighting how to choose runs within the experiment" src="../../images/kfp_experiment.png" /></p>
@@ -1324,7 +1188,7 @@ it all again.</p>
 <p>!!! info "We create our experiment, upload our pipeline, and run from Python in
     this example, but we could also do all this through the Kubeflow Pipelines
     UI above.</p>
-<h3 id="understanding-what-computation-occurs-when">Understanding what computation occurs when<a class="headerlink" href="#understanding-what-computation-occurs-when" title="Permanent link">&para;</a></h3>
+<h2 id="understanding-what-computation-occurs-when">Understanding what computation occurs when<a class="headerlink" href="#understanding-what-computation-occurs-when" title="Permanent link">&para;</a></h2>
 <p>The above example uses Python code to define:</p>
 <ul>
 <li>The interface between Kubeflow Pipelines and our Docker containers doing the
@@ -1344,60 +1208,57 @@ tracing where they (and any other runtime data) go, such as any output a
 now - instead it takes note that a container will be there in future and
 remembers what data it will consume/generate. This can be seen by modifying and
 recompiling our pipeline:</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
-<span class="p">)</span>
-<span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># NEW CODE</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of x is </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of a is </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Compute averages for two groups</span>
-    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
-    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-
-    <span class="c1"># NEW CODE</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of avg_1.output is </span><span class="si">{</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
-    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="c1"># NEW CODE</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of x is </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of a is </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="c1"># Compute averages for two groups</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="c1"># NEW CODE</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The value of avg_1.output is </span><span class="si">{</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
 <p>And when we <code>compile</code>, we see print statements:</p>
-<div class="codehilite"><pre><span></span><code><span class="x">The value of x is 2</span>
-<span class="x">The value of a is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">a</span><span class="cp">}}</span>
-<span class="x">The value of avg_1.output is </span><span class="cp">{{</span><span class="nv">pipelineparam</span><span class="o">:</span><span class="nv">op</span><span class="o">=</span><span class="nv">averge</span><span class="err">;</span><span class="nv">name</span><span class="o">=</span><span class="nv">data</span><span class="cp">}}</span>
-</code></pre></div>
-
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>The value of x is 2
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>The value of a is {{pipelineparam:op=;name=a}}
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>The value of avg_1.output is {{pipelineparam:op=averge;name=data}}
+</span></code></pre></div>
 <p>In the first print statement everything is normal. In the second and third print
 statements, however, we see string placeholders rather than actual output. So
 while <code>compile</code> does "execute" <code>my_pipeline</code>, the KFP-specific parts of the code
 don't actually generate results. This can also be seen in the YAML file that
 <code>compile</code> generates, for example looking at the portion defining our
 <code>average_result_overall</code> component:</p>
-<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">average-3</span>
-<span class="w">  </span><span class="nt">container</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">[</span>
-<span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-data}}&quot;</span><span class="p p-Indicator">,</span>
-<span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-2-data}}&quot;</span><span class="p p-Indicator">,</span>
-<span class="w">      </span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8scc01covidacr.azurecr.io/kfp-components/average:v1</span>
-<span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">parameters</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-2-data</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-data</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<span class="w">  </span><span class="nt">outputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">artifacts</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-3-data</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">./out.txt</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> pipelines.kubeflow.org/pipeline-sdk-type</span><span class="p">:</span><span class="w"> </span><span class="nv">kfp</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</code></pre></div>
-
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">average-3</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">container</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">args</span><span class="p">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="p p-Indicator">[</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-data}}&quot;</span><span class="p p-Indicator">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="s">&quot;{{inputs.parameters.average-2-data}}&quot;</span><span class="p p-Indicator">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="p p-Indicator">]</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8scc01covidacr.azurecr.io/kfp-components/average:v1</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="nt">inputs</span><span class="p">:</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nt">parameters</span><span class="p">:</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-2-data</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-data</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="nt">outputs</span><span class="p">:</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">artifacts</span><span class="p">:</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">average-3-data</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">./out.txt</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> pipelines.kubeflow.org/pipeline-sdk-type</span><span class="p">:</span><span class="w"> </span><span class="nv">kfp</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span></code></pre></div>
 <p>In this YAML we see the input parameters passed are placeholders for data from
 previous components rather than their actual value. This is because while KFP
 knows <strong>a</strong> result from <code>average-data</code> and <code>average-2-data</code> will be passed to
@@ -1422,44 +1283,42 @@ but loops <code>n</code> times (where <code>n</code> is a pipeline parameter):</
     parameters for functions. Pipelines can accept data (numbers, string URL's
     to large files in MinIO, etc.) as arguments, allowing a single generic
     pipeline to work in many situations."</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
-<span class="p">)</span>
-<span class="k">def</span> <span class="nf">another_pipeline</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Prints to the screen 10 times</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woohoo!&quot;</span><span class="p">)</span>
-
-    <span class="c1"># And just so we&#39;ve got some component going too...</span>
-    <span class="n">avg</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-
-<span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-    <span class="n">another_pipeline</span><span class="p">,</span>
-    <span class="s2">&quot;another.yaml.zip&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
-<span class="p">)</span>
-<span class="k">def</span> <span class="nf">another_another_pipeline</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Prints to the screen n times</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woohoo!&quot;</span><span class="p">)</span>
-
-    <span class="c1"># And just so we&#39;ve got some component going too...</span>
-    <span class="n">avg</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-
-<span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-    <span class="n">another_another_pipeline</span><span class="p">,</span>
-    <span class="s2">&quot;another.yaml.zip&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">def</span> <span class="nf">another_pipeline</span><span class="p">():</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="sd">    Prints to the screen 10 times</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woohoo!&quot;</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="c1"># And just so we&#39;ve got some component going too...</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">avg</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    <span class="n">another_pipeline</span><span class="p">,</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="s2">&quot;another.yaml.zip&quot;</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my pipeline&#39;s name&quot;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">def</span> <span class="nf">another_another_pipeline</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="sd">    Prints to the screen n times</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Woohoo!&quot;</span><span class="p">)</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="c1"># And just so we&#39;ve got some component going too...</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">avg</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="n">compiler</span><span class="o">.</span><span class="n">Compiler</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    <span class="n">another_another_pipeline</span><span class="p">,</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="s2">&quot;another.yaml.zip&quot;</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="p">)</span>
+</span></code></pre></div>
 <p>The first works as you'd expect, but the second raises the exception:</p>
 <p><code>TypeError: 'PipelineParam' object cannot be interpreted as an integer</code></p>
 <p>Why? Because when authoring the pipeline <code>n</code> is a placeholder and has no value.
@@ -1471,9 +1330,9 @@ around this, but they're left to the reader to explore through the
 <em>components</em>) are meant to be reusable definitions of logic that are defined in
 static YAML files, with all dynamic decision making done inside components. This
 can make them a little awkward to define, but also helps them be more reusable.</p>
-<h2 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h2>
-<h3 id="data-exchange">Data Exchange<a class="headerlink" href="#data-exchange" title="Permanent link">&para;</a></h3>
-<h4 id="passing-data-into-within-and-from-a-pipeline">Passing data into, within, and from a pipeline<a class="headerlink" href="#passing-data-into-within-and-from-a-pipeline" title="Permanent link">&para;</a></h4>
+<h1 id="once-youve-got-the-basics">Once you've got the basics ...<a class="headerlink" href="#once-youve-got-the-basics" title="Permanent link">&para;</a></h1>
+<h2 id="data-exchange">Data Exchange<a class="headerlink" href="#data-exchange" title="Permanent link">&para;</a></h2>
+<h3 id="passing-data-into-within-and-from-a-pipeline">Passing data into, within, and from a pipeline<a class="headerlink" href="#passing-data-into-within-and-from-a-pipeline" title="Permanent link">&para;</a></h3>
 <p>In the first example above, we pass:</p>
 <ul>
 <li>Numbers into our pipeline</li>
@@ -1496,38 +1355,36 @@ to our Docker image, it didn't really matter they were strings.</p>
 <p>You can still use non-string data types, but you need to pass them as serialized
 versions. So if we wanted our <code>avg_1</code> component to return both the numbers
 passed to it and the average returned as a dictionary, for example:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="s1">&#39;numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-    <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="s1">&#39;numbers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="s1">&#39;result&#39;</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>We could modify our <code>average.py</code> in the Docker image write our dictionary of
 numbers and result to <code>out.txt</code> as JSON. But then when we pass the result to
 make <code>average_result_overall</code>, that component needs to deserialize the above
 JSON and pull the data from it that it needs. And because these results are not
 available when authoring the pipeline, something like this does not work:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Compute averages for two groups</span>
-    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op_that_returns_json</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
-    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op_that_returns_json</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
-
-    <span class="c1"># THIS DOES NOT WORK!</span>
-    <span class="kn">import</span> <span class="nn">json</span>
-    <span class="n">avg_1_result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">)[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span>
-    <span class="n">avg_2_result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span>
-
-    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
-    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="sd">    Averaging pipeline which accepts five numbers and does some averaging operations on them</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="c1"># Compute averages for two groups</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op_that_returns_json</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op_that_returns_json</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    <span class="c1"># THIS DOES NOT WORK!</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="kn">import</span> <span class="nn">json</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="n">avg_1_result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">)[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="n">avg_2_result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)[</span><span class="s1">&#39;result&#39;</span><span class="p">]</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="c1"># Use the results from _1 and _2 to compute an overall average</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
 <p>At <code>compile</code> time, <code>avg_1.output</code> is just a placeholder and can't be treated
 like the JSON it will eventually become. To do something like this, we need to
 interpret the JSON string within a container.</p>
-<h4 id="passing-secrets">Passing Secrets<a class="headerlink" href="#passing-secrets" title="Permanent link">&para;</a></h4>
+<h3 id="passing-secrets">Passing Secrets<a class="headerlink" href="#passing-secrets" title="Permanent link">&para;</a></h3>
 <p>Pipelines often need sensitive information (passwords, API keys, etc.) to
 operate. To keep these secure, these cannot be passed to a Kubeflow Pipeline
 using a pipeline argument, environment variable, or as a hard coded value in
@@ -1544,24 +1401,21 @@ passed <em>by reference</em> to the pipeline.</p>
 If you need to use a secret in another namespace, you need to add it there
 manually.</p>
 </details>
-<h5 id="create-a-key-value-store">Create a key-value store<a class="headerlink" href="#create-a-key-value-store" title="Permanent link">&para;</a></h5>
+<h4 id="create-a-key-value-store">Create a key-value store<a class="headerlink" href="#create-a-key-value-store" title="Permanent link">&para;</a></h4>
 <p>The example below creates a key-value store called <strong>elastic-credentials</strong> which
 contains two key-value pairs:</p>
-<div class="codehilite"><pre><span></span><code>&quot;username&quot;: &quot;USERNAME&quot;,
-&quot;password&quot;: &quot;PASSWORD&quot;
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>elastic-credentials<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span>
-</code></pre></div>
-
-<h5 id="get-an-existing-key-value-store">Get an existing key-value store<a class="headerlink" href="#get-an-existing-key-value-store" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span><code><span class="c1"># The secrets will be base64 encoded.</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>elastic-credentials
-</code></pre></div>
-
-<h5 id="mounting-kubernetes-secrets-to-environment-variables-in-container-operations">Mounting Kubernetes Secrets to Environment Variables in Container Operations<a class="headerlink" href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" title="Permanent link">&para;</a></h5>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>&quot;username&quot;: &quot;USERNAME&quot;,
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>&quot;password&quot;: &quot;PASSWORD&quot;
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>elastic-credentials<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span><span class="s2">&quot;YOUR_USERNAME&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span>
+</span></code></pre></div>
+<h4 id="get-an-existing-key-value-store">Get an existing key-value store<a class="headerlink" href="#get-an-existing-key-value-store" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># The secrets will be base64 encoded.</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>elastic-credentials
+</span></code></pre></div>
+<h4 id="mounting-kubernetes-secrets-to-environment-variables-in-container-operations">Mounting Kubernetes Secrets to Environment Variables in Container Operations<a class="headerlink" href="#mounting-kubernetes-secrets-to-environment-variables-in-container-operations" title="Permanent link">&para;</a></h4>
 <p>Once the secrets are defined in the project namespace, you can mount specific
 secrets as environment variables in your container using the Kubeflow SDK.</p>
 <p><strong>Example</strong></p>
@@ -1570,58 +1424,57 @@ secrets as environment variables in your container using the Kubeflow SDK.</p>
 <p>This example shows how (1) an Elasticsearch username(2) an Elasticsearch
 password, and (3) a GitLab deploy token are passed to the container operation as
 environment variables.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Names of k8s secret key-value stores</span>
-<span class="n">ES_CREDENTIALS_STORE</span> <span class="o">=</span> <span class="s2">&quot;elastic-credentials&quot;</span>
-<span class="n">GITLAB_CREDENTIALS_STORE</span> <span class="o">=</span> <span class="s2">&quot;gitlab-credentials&quot;</span>
-<span class="c1"># k8s secrets key names</span>
-<span class="n">ES_USER_KEY</span> <span class="o">=</span> <span class="s2">&quot;username&quot;</span>
-<span class="n">ES_PASSWORD_KEY</span> <span class="o">=</span> <span class="s2">&quot;password&quot;</span>
-<span class="n">GITLAB_DEPLOY_TOKEN_KEY</span> <span class="o">=</span> <span class="s1">&#39;token&#39;</span>
-<span class="c1"># Names of environment variables that secrets should be mounted to in the</span>
-<span class="c1"># container</span>
-<span class="n">ES_USER_ENV</span> <span class="o">=</span> <span class="s2">&quot;ES_USER&quot;</span>
-<span class="n">ES_PASS_ENV</span> <span class="o">=</span> <span class="s2">&quot;ES_PASS&quot;</span>
-<span class="n">GITLAB_DEPLOY_TOKEN_ENV</span> <span class="o">=</span> <span class="s2">&quot;GITLAB_DEPLOY_TOKEN&quot;</span>
-<span class="c1"># ...</span>
-<span class="n">container_operation</span> <span class="o">=</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;some-op&#39;</span><span class="p">,</span>
-    <span class="n">image</span><span class="o">=</span><span class="s1">&#39;some-image&#39;</span><span class="p">,</span>
-<span class="p">)</span><span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
-    <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="n">ES_USER_ENV</span><span class="p">,</span>
-        <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
-            <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
-                <span class="n">name</span><span class="o">=</span><span class="n">ES_CREDENTIALS_STORE</span><span class="p">,</span>
-                <span class="n">key</span><span class="o">=</span><span class="n">ES_USER_KEY</span>
-            <span class="p">)</span>
-        <span class="p">)</span>
-    <span class="p">)</span>
-<span class="p">)</span> \
-    <span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
-        <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="n">ES_PASS_ENV</span><span class="p">,</span>
-            <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
-                <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
-                    <span class="n">name</span><span class="o">=</span><span class="n">ES_CREDENTIALS_STORE</span><span class="p">,</span>
-                    <span class="n">key</span><span class="o">=</span><span class="n">ES_PASSWORD_KEY</span>
-                <span class="p">)</span>
-            <span class="p">)</span>
-        <span class="p">)</span>
-    <span class="p">)</span> \
-    <span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
-        <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
-            <span class="n">name</span><span class="o">=</span><span class="n">GITLAB_DEPLOY_TOKEN_ENV</span><span class="p">,</span>
-            <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
-                <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
-                    <span class="n">name</span><span class="o">=</span><span class="n">GITLAB_CREDENTIALS_STORE</span><span class="p">,</span>
-                    <span class="n">key</span><span class="o">=</span><span class="n">GITLAB_DEPLOY_TOKEN_KEY</span>
-                <span class="p">)</span>
-            <span class="p">)</span>
-        <span class="p">)</span>
-    <span class="p">)</span>
-</code></pre></div>
-
-<h4 id="parameterizing-pipelines">Parameterizing pipelines<a class="headerlink" href="#parameterizing-pipelines" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Names of k8s secret key-value stores</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">ES_CREDENTIALS_STORE</span> <span class="o">=</span> <span class="s2">&quot;elastic-credentials&quot;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">GITLAB_CREDENTIALS_STORE</span> <span class="o">=</span> <span class="s2">&quot;gitlab-credentials&quot;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># k8s secrets key names</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">ES_USER_KEY</span> <span class="o">=</span> <span class="s2">&quot;username&quot;</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">ES_PASSWORD_KEY</span> <span class="o">=</span> <span class="s2">&quot;password&quot;</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">GITLAB_DEPLOY_TOKEN_KEY</span> <span class="o">=</span> <span class="s1">&#39;token&#39;</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># Names of environment variables that secrets should be mounted to in the</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="c1"># container</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">ES_USER_ENV</span> <span class="o">=</span> <span class="s2">&quot;ES_USER&quot;</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">ES_PASS_ENV</span> <span class="o">=</span> <span class="s2">&quot;ES_PASS&quot;</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">GITLAB_DEPLOY_TOKEN_ENV</span> <span class="o">=</span> <span class="s2">&quot;GITLAB_DEPLOY_TOKEN&quot;</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="c1"># ...</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="n">container_operation</span> <span class="o">=</span> <span class="n">dsl</span><span class="o">.</span><span class="n">ContainerOp</span><span class="p">(</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;some-op&#39;</span><span class="p">,</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>    <span class="n">image</span><span class="o">=</span><span class="s1">&#39;some-image&#39;</span><span class="p">,</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="p">)</span><span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>        <span class="n">name</span><span class="o">=</span><span class="n">ES_USER_ENV</span><span class="p">,</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>        <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>            <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>                <span class="n">name</span><span class="o">=</span><span class="n">ES_CREDENTIALS_STORE</span><span class="p">,</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>                <span class="n">key</span><span class="o">=</span><span class="n">ES_USER_KEY</span>
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>            <span class="p">)</span>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>        <span class="p">)</span>
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>    <span class="p">)</span>
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="p">)</span> \
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>    <span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>        <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>            <span class="n">name</span><span class="o">=</span><span class="n">ES_PASS_ENV</span><span class="p">,</span>
+</span><span id="__span-15-31"><a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>            <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
+</span><span id="__span-15-32"><a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>                <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
+</span><span id="__span-15-33"><a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>                    <span class="n">name</span><span class="o">=</span><span class="n">ES_CREDENTIALS_STORE</span><span class="p">,</span>
+</span><span id="__span-15-34"><a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>                    <span class="n">key</span><span class="o">=</span><span class="n">ES_PASSWORD_KEY</span>
+</span><span id="__span-15-35"><a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>                <span class="p">)</span>
+</span><span id="__span-15-36"><a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>            <span class="p">)</span>
+</span><span id="__span-15-37"><a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>        <span class="p">)</span>
+</span><span id="__span-15-38"><a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>    <span class="p">)</span> \
+</span><span id="__span-15-39"><a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>    <span class="o">.</span><span class="n">add_env_variable</span><span class="p">(</span>
+</span><span id="__span-15-40"><a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>        <span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVar</span><span class="p">(</span>
+</span><span id="__span-15-41"><a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>            <span class="n">name</span><span class="o">=</span><span class="n">GITLAB_DEPLOY_TOKEN_ENV</span><span class="p">,</span>
+</span><span id="__span-15-42"><a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>            <span class="n">value_from</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1EnvVarSource</span><span class="p">(</span>
+</span><span id="__span-15-43"><a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>                <span class="n">secret_key_ref</span><span class="o">=</span><span class="n">k8s_client</span><span class="o">.</span><span class="n">V1SecretKeySelector</span><span class="p">(</span>
+</span><span id="__span-15-44"><a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>                    <span class="n">name</span><span class="o">=</span><span class="n">GITLAB_CREDENTIALS_STORE</span><span class="p">,</span>
+</span><span id="__span-15-45"><a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>                    <span class="n">key</span><span class="o">=</span><span class="n">GITLAB_DEPLOY_TOKEN_KEY</span>
+</span><span id="__span-15-46"><a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>                <span class="p">)</span>
+</span><span id="__span-15-47"><a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a>            <span class="p">)</span>
+</span><span id="__span-15-48"><a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>        <span class="p">)</span>
+</span><span id="__span-15-49"><a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<h3 id="parameterizing-pipelines">Parameterizing pipelines<a class="headerlink" href="#parameterizing-pipelines" title="Permanent link">&para;</a></h3>
 <p>Whenever possible, create pipelines in a generic way: define parameters that
 might change as pipeline inputs instead of writing values directly in your
 Python code. For example, if you want a pipeline to process data from
@@ -1631,7 +1484,7 @@ repeatedly by passing it the data location as an argument. You can
 <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">see this approach in our example notebooks</a>,
 where we accept MinIO credentials and the location to store our results as
 pipeline parameters.</p>
-<h3 id="passing-complexlarge-data-tofrom-a-pipeline">Passing complex/large data to/from a pipeline<a class="headerlink" href="#passing-complexlarge-data-tofrom-a-pipeline" title="Permanent link">&para;</a></h3>
+<h2 id="passing-complexlarge-data-tofrom-a-pipeline">Passing complex/large data to/from a pipeline<a class="headerlink" href="#passing-complexlarge-data-tofrom-a-pipeline" title="Permanent link">&para;</a></h2>
 <p>Although small data can often be stringified, passing by string is not suitable
 for complex data (large parquet files, images, etc.). It is common to use blob
 storage (for example: <a href="../../5-Storage/AzureBlobStorage/">MinIO</a>) or other outside storage
@@ -1649,37 +1502,36 @@ pattern would be:</p>
   but it is a common pattern that lets you chain operations together</li>
 </ul>
 <p>Here is a schematic example of this pattern:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Averaging pipeline which accepts two groups of numbers and does some averaging operations on them</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Compute averages for two groups</span>
-    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op_that_takes_path_to_blob</span><span class="p">(</span><span class="n">path_to_numbers</span><span class="o">=</span><span class="n">path_to_numbers_1</span><span class="p">,</span>
-                                               <span class="n">output_location</span><span class="o">=</span><span class="n">path_for_output</span> <span class="o">+</span> <span class="s2">&quot;/avg_1&quot;</span>
-                                               <span class="p">)</span>
-    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op_that_takes_path_to_blob</span><span class="p">(</span><span class="n">numbers</span><span class="o">=</span><span class="n">path_to_numbers_2</span><span class="p">,</span>
-                                               <span class="n">output_location</span><span class="o">=</span><span class="n">path_for_output</span> <span class="o">+</span> <span class="s2">&quot;/avg_2&quot;</span>
-                                               <span class="p">)</span>
-
-    <span class="c1"># Note that this assumes the average_op can take multiple paths to numbers.  You could also have an</span>
-    <span class="c1"># aggregation component that combines avg_1 and avg_2 into a single file of numbers</span>
-
-    <span class="n">paths_to_numbers</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span>
-        <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span>
-    <span class="p">]</span>
-    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">path_to_numbers</span><span class="o">=</span><span class="n">paths_to_numbers</span><span class="p">,</span>
-                                        <span class="n">output_location</span><span class="o">=</span><span class="n">path_for_output</span> <span class="o">+</span> <span class="s2">&quot;/average_result_overall&quot;</span>
-                                       <span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">my_blobby_pipeline</span><span class="p">(</span><span class="n">path_to_numbers_1</span><span class="p">,</span> <span class="n">path_to_numbers_2</span><span class="p">,</span> <span class="n">path_for_output</span><span class="p">):</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="sd">    Averaging pipeline which accepts two groups of numbers and does some averaging operations on them</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="c1"># Compute averages for two groups</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="n">avg_1</span> <span class="o">=</span> <span class="n">average_op_that_takes_path_to_blob</span><span class="p">(</span><span class="n">path_to_numbers</span><span class="o">=</span><span class="n">path_to_numbers_1</span><span class="p">,</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>                                               <span class="n">output_location</span><span class="o">=</span><span class="n">path_for_output</span> <span class="o">+</span> <span class="s2">&quot;/avg_1&quot;</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>                                               <span class="p">)</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>    <span class="n">avg_2</span> <span class="o">=</span> <span class="n">average_op_that_takes_path_to_blob</span><span class="p">(</span><span class="n">numbers</span><span class="o">=</span><span class="n">path_to_numbers_2</span><span class="p">,</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>                                               <span class="n">output_location</span><span class="o">=</span><span class="n">path_for_output</span> <span class="o">+</span> <span class="s2">&quot;/avg_2&quot;</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>                                               <span class="p">)</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>    <span class="c1"># Note that this assumes the average_op can take multiple paths to numbers.  You could also have an</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>    <span class="c1"># aggregation component that combines avg_1 and avg_2 into a single file of numbers</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>    <span class="n">paths_to_numbers</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>        <span class="n">avg_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>        <span class="n">avg_2</span><span class="o">.</span><span class="n">output</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>    <span class="p">]</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>    <span class="n">average_result_overall</span> <span class="o">=</span> <span class="n">average_op</span><span class="p">(</span><span class="n">path_to_numbers</span><span class="o">=</span><span class="n">paths_to_numbers</span><span class="p">,</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>                                        <span class="n">output_location</span><span class="o">=</span><span class="n">path_for_output</span> <span class="o">+</span> <span class="s2">&quot;/average_result_overall&quot;</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>                                       <span class="p">)</span>
+</span></code></pre></div>
 <p>Within this platform, the primary method for persisting large files is through
-MinIO as described in our <a href="../..#storage"><em>Storage</em> documentation</a>.
+MinIO as described in our <a href="../../#storage"><em>Storage</em> documentation</a>.
 Examples of this are also described in our
 <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/self-serve-storage">example notebooks</a>
 (also found in <code>jupyter-notebooks/self-serve-storage/</code> on any notebook server).</p>
-<h3 id="typical-development-patterns">Typical development patterns<a class="headerlink" href="#typical-development-patterns" title="Permanent link">&para;</a></h3>
-<h4 id="end-to-end-pipeline-development">End-to-end pipeline development<a class="headerlink" href="#end-to-end-pipeline-development" title="Permanent link">&para;</a></h4>
+<h2 id="typical-development-patterns">Typical development patterns<a class="headerlink" href="#typical-development-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="end-to-end-pipeline-development">End-to-end pipeline development<a class="headerlink" href="#end-to-end-pipeline-development" title="Permanent link">&para;</a></h3>
 <p>A typical pattern for building pipelines in Kubeflow Pipelines is:</p>
 <ol>
 <li>Define components for each of your tasks</li>
@@ -1689,11 +1541,11 @@ Examples of this are also described in our
 <p>This pattern lets you define portable components that can be individually tested
 before combining them into a full pipeline. Depending on the type and complexity
 of task, there are different methods for building the components.</p>
-<h3 id="methods-for-authoring-components">Methods for authoring components<a class="headerlink" href="#methods-for-authoring-components" title="Permanent link">&para;</a></h3>
+<h2 id="methods-for-authoring-components">Methods for authoring components<a class="headerlink" href="#methods-for-authoring-components" title="Permanent link">&para;</a></h2>
 <p>Fundamentally, every component in Kubeflow Pipelines runs a container. Kubeflow
 Pipelines offers several methods to define these components with different
 levels of flexibility and complexity.</p>
-<h5 id="user-defined-container-components">User-defined container components<a class="headerlink" href="#user-defined-container-components" title="Permanent link">&para;</a></h5>
+<h4 id="user-defined-container-components">User-defined container components<a class="headerlink" href="#user-defined-container-components" title="Permanent link">&para;</a></h4>
 <p>You can define tasks through custom Docker images. The design pattern for this
 is:</p>
 <ul>
@@ -1717,7 +1569,7 @@ in Kubeflow Pipelines.</p>
     allow users to build/run custom Docker images. This is planned for the
     future, but in interim see <em>Lightweight components</em> for a way to develop
     pipelines without custom images"</p>
-<h5 id="lightweight-python-components">Lightweight Python components<a class="headerlink" href="#lightweight-python-components" title="Permanent link">&para;</a></h5>
+<h4 id="lightweight-python-components">Lightweight Python components<a class="headerlink" href="#lightweight-python-components" title="Permanent link">&para;</a></h4>
 <p>While full custom containers offer great flexibility, sometimes they're heavier
 than needed. The Kubeflow Pipelines SDK also allows for
 <a href="https://www.kubeflow.org/docs/pipelines/sdk/lightweight-python-components/">Lightweight Python Components</a>,
@@ -1727,29 +1579,28 @@ during development, as well as for simple tasks that can be written and managed
 easily.</p>
 <p>This is an example of a lightweight pipeline with a single component that
 concatenates strings:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">kfp</span>
-<span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
-<span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">func_to_container_op</span>
-
-<span class="k">def</span> <span class="nf">concat_string</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">)&quot;</span>
-
-<span class="n">concat_string_component</span> <span class="o">=</span> <span class="n">func_to_container_op</span><span class="p">(</span><span class="n">concat_string</span><span class="p">,</span>
-                                               <span class="n">base_image</span><span class="o">=</span><span class="s2">&quot;python:3.8.3-buster&quot;</span>
-                                               <span class="p">)</span>
-<span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My lightweight pipeline&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="k">def</span> <span class="nf">pipeline</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">,</span> <span class="n">str3</span><span class="p">):</span>
-    <span class="c1"># Note that we use the concat_string_component, not the</span>
-    <span class="c1"># original concat_string() function</span>
-    <span class="n">concat_result_1</span> <span class="o">=</span> <span class="n">concat_string_component</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">)</span>
-
-    <span class="c1"># By using cancat_result_1&#39;s output, we define the dependency of</span>
-    <span class="c1"># concat_result_2 on concat_result_1</span>
-    <span class="n">concat_result_2</span> <span class="o">=</span> <span class="n">concat_string_component</span><span class="p">(</span><span class="n">concat_result_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">str3</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span> <span class="nn">kfp</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kn">from</span> <span class="nn">kfp</span> <span class="kn">import</span> <span class="n">dsl</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">func_to_container_op</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">def</span> <span class="nf">concat_string</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">)&quot;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">concat_string_component</span> <span class="o">=</span> <span class="n">func_to_container_op</span><span class="p">(</span><span class="n">concat_string</span><span class="p">,</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>                                               <span class="n">base_image</span><span class="o">=</span><span class="s2">&quot;python:3.8.3-buster&quot;</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>                                               <span class="p">)</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span><span class="p">(</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;My lightweight pipeline&quot;</span><span class="p">,</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="p">)</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="k">def</span> <span class="nf">pipeline</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">,</span> <span class="n">str3</span><span class="p">):</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>    <span class="c1"># Note that we use the concat_string_component, not the</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>    <span class="c1"># original concat_string() function</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>    <span class="n">concat_result_1</span> <span class="o">=</span> <span class="n">concat_string_component</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">str2</span><span class="p">)</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>    <span class="c1"># By using cancat_result_1&#39;s output, we define the dependency of</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>    <span class="c1"># concat_result_2 on concat_result_1</span>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>    <span class="n">concat_result_2</span> <span class="o">=</span> <span class="n">concat_string_component</span><span class="p">(</span><span class="n">concat_result_1</span><span class="o">.</span><span class="n">output</span><span class="p">,</span> <span class="n">str3</span><span class="p">)</span>
+</span></code></pre></div>
 <p>We see that our <code>concat_string</code> component is defined directly in Python rather
 than from a Docker image. In the end, our function still runs in a container,
 but we don't have to built it ourselves: <code>func_to_container_op()</code> runs our
@@ -1783,57 +1634,55 @@ necessary software.  That way you reduce the startup time for each step in
 your pipeline.
 <img alt="A Kubeflow Pipeline" src="../../images/kubeflow_pipelines_notebook_server_image.png" /></p>
 </details>
-<h5 id="defining-components-directly-in-yaml">Defining components directly in YAML<a class="headerlink" href="#defining-components-directly-in-yaml" title="Permanent link">&para;</a></h5>
+<h4 id="defining-components-directly-in-yaml">Defining components directly in YAML<a class="headerlink" href="#defining-components-directly-in-yaml" title="Permanent link">&para;</a></h4>
 <p>Components can be defined directly with a YAML file, where the designer can run
 terminal commands from a given Docker image. This can be a great way to make
 non-Python pipeline components from existing containers. As with all components,
 we can pass both arguments and data files into/out of the component. For
 example:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
-<span class="nt">inputs</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
-<span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="p p-Indicator">,</span>
-<span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span>
-<span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span>
-<span class="w">    </span><span class="p p-Indicator">}</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
-<span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="p p-Indicator">,</span>
-<span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span>
-<span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span>
-<span class="w">    </span><span class="p p-Indicator">}</span>
-<span class="nt">outputs</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<span class="nt">implementation</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">container</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash:5</span>
-<span class="w">    </span><span class="nt">command</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-ex</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">        </span><span class="no">echo &quot;$0 | $1&quot; | tee $2</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="w"> </span><span class="p p-Indicator">}</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> outputPath</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="w"> </span><span class="p p-Indicator">}</span>
-</code></pre></div>
-
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concat Strings</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nt">inputs</span><span class="p">:</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="p p-Indicator">,</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="p p-Indicator">}</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="nt">      name</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="p p-Indicator">,</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="nt">      type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="p p-Indicator">,</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="nt">      description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Some</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">terminal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tee</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file&quot;</span><span class="p p-Indicator">,</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">    </span><span class="p p-Indicator">}</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="nt">outputs</span><span class="p">:</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">String</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="nt">implementation</span><span class="p">:</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">  </span><span class="nt">container</span><span class="p">:</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash:5</span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-ex</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">        </span><span class="no">echo &quot;$0 | $1&quot; | tee $2</span>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 1</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> inputValue</span><span class="p">:</span><span class="w"> </span><span class="nv">Input text 2</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> outputPath</span><span class="p">:</span><span class="w"> </span><span class="nv">Output filename</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</span></code></pre></div>
 <p>This example concatenates two strings like our lightweight example above. We
 then define a component in python from this YAML:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">load_component_from_file</span>
-<span class="n">echo_and_tee</span> <span class="o">=</span> <span class="n">load_component_from_file</span><span class="p">(</span><span class="s1">&#39;path/to/echo_and_tee.yaml&#39;</span><span class="p">)</span>
-
-<span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span>
-<span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">():</span>
-    <span class="n">echo_and_tee_task_1</span> <span class="o">=</span> <span class="n">echo_and_tee</span><span class="p">(</span><span class="s2">&quot;My text to echo&quot;</span><span class="p">)</span>
-
-    <span class="c1"># A second use that consumes the return of the first one</span>
-    <span class="n">echo_and_tee_task_2</span> <span class="o">=</span> <span class="n">echo_and_tee</span><span class="p">(</span><span class="n">echo_and_tee_task_1</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">from</span> <span class="nn">kfp.components</span> <span class="kn">import</span> <span class="n">load_component_from_file</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">echo_and_tee</span> <span class="o">=</span> <span class="n">load_component_from_file</span><span class="p">(</span><span class="s1">&#39;path/to/echo_and_tee.yaml&#39;</span><span class="p">)</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="nd">@dsl</span><span class="o">.</span><span class="n">pipeline</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">def</span> <span class="nf">my_pipeline</span><span class="p">():</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="n">echo_and_tee_task_1</span> <span class="o">=</span> <span class="n">echo_and_tee</span><span class="p">(</span><span class="s2">&quot;My text to echo&quot;</span><span class="p">)</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    <span class="c1"># A second use that consumes the return of the first one</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="n">echo_and_tee_task_2</span> <span class="o">=</span> <span class="n">echo_and_tee</span><span class="p">(</span><span class="n">echo_and_tee_task_1</span><span class="o">.</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
 <p>See
 <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">this example</a>
 for more details on using existing components.</p>
-<h5 id="reusing-existing-components">Reusing existing components<a class="headerlink" href="#reusing-existing-components" title="Permanent link">&para;</a></h5>
+<h4 id="reusing-existing-components">Reusing existing components<a class="headerlink" href="#reusing-existing-components" title="Permanent link">&para;</a></h4>
 <p>Similar to well abstracted functions, well abstracted components can reduce the
 amount of code you have to write for any given project. For example, rather than
 teaching your machine learning <code>train_model</code> component to also save the
@@ -1843,110 +1692,85 @@ component. This reuse pattern applies to components defined through any means
 (containers, lightweight, or YAML).
 <a href="https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-reusable-components-and-minio.ipynb">Take a look at our example notebook</a>,
 which reuses provided components for simple file IO tasks.</p>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../../2-Publishing/Custom/" title="Custom" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Custom
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../PaaS/" title="PaaS Integration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                PaaS Integration
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 Statistics Canada
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Statistics Canada
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
-  <div class="md-footer-social">
+        <div class="md-social">
+  
+    
+    
+    
     
       
       
-        
-        
-      
-      <a href="https://github.com/StatCan/daaas" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-      </a>
+    
+    <a href="https://github.com/StatCan/daaas" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
     
       
       
-        
-        
-      
-      <a href="https://statcan-aaw.slack.com" target="_blank" rel="noopener" title="statcan-aaw.slack.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://statcan-aaw.slack.com" target="_blank" rel="noopener" title="statcan-aaw.slack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
       
-      <script>
-        app = initialize({
-          base: "../..",
-          features: [],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
