@@ -1,4 +1,4 @@
 mdx-truly-sane-lists
-jinja2
-mkdocs-material
 mkdocs
+mkdocs-material
+jinja2
