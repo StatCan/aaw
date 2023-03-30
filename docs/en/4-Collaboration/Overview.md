@@ -1,9 +1,8 @@
-There are many ways collaborate on the platform. Which is best for your
-situation depends on what you're sharing and how many people you want to share
-with. Scenarios roughly break down into what you want to share (**Data**,
-**Code**, or **Compute Environments** (e.g.: sharing the same virtual machines))
-and who you want to share it with (**No one**, **My Team**, or **Everyone**).
-This leads to the following table of options
+## Collaboration
+
+Collaboration is essential in data science because it allows individuals with different perspectives and backgrounds to work together to solve complex problems and generate new insights. In data science, collaboration can involve working with individuals from diverse fields such as mathematics, computer science, and business, as well as subject matter experts who have deep knowledge of a particular industry or domain.
+
+There are many ways collaborate on the AAW. Which is best for your situation depends on what you're sharing and how many people you want to share with. Content to be shared breaks roughly into **Data**, **Code**, or **Compute Environments** (e.g.: sharing the same virtual machines) and who you want to share it with (**No one**, **My Team**, or **Everyone**). This leads to the following table of options
 
 |             |           **Private**            |                  **Team**                  |  **StatCan**  |
 | :---------: | :------------------------------: | :----------------------------------------: | :-----------: |
@@ -11,14 +10,14 @@ This leads to the following table of options
 |  **Data**   |    Personal folder or bucket     | Team folder or bucket, or shared namespace | Shared Bucket |
 | **Compute** |        Personal namespace        |              Shared namespace              |      N/A      |
 
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the **[MinIO](../5-Storage/AzureBlobStorage.md)** section.
+
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
     Buckets are like Network Storage. See the [Storage overview](../5-Storage/Overview.md) for more discussion of the differences between these two ideas.
 
-Choosing the best way to share code, data, and compute all involve different
-factors, but you can generally mix and match (share code with your team through
-github, but store your data privately in a personal bucket). These cases are
-described more in the below sections.
+Choosing the best way to share code, data, and compute all involve different factors, but you can generally mix and match (share code with your team through
+Github, but store your data privately in a personal bucket). These cases are described more in the below sections.
 
 ## Share code among team members
 
