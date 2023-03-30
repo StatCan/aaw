@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://statcan.github.io/daaas/en/welcome/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://statcan.github.io/daaas/en/1-Experiments/Jupyter/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
@@ -27,6 +32,11 @@
     </url>
     <url>
          <loc>https://statcan.github.io/daaas/en/1-Experiments/MLflow/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/daaas/en/1-Experiments/Overview/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -62,6 +72,11 @@
     </url>
     <url>
          <loc>https://statcan.github.io/daaas/en/2-Publishing/Datasette/</loc>
+         <lastmod>2023-03-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/daaas/en/2-Publishing/Overview/</loc>
          <lastmod>2023-03-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
