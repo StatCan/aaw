@@ -135,5 +135,4 @@ Depending on your use case, either disk or bucket may be most suitable. Our
 
 If you require a quick onboarding demo session, need help, or have any questions, please reach out to us through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
 
-
 **Thank you for choosing Advanced Analytics Workspace!**
