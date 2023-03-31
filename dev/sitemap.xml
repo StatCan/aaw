@@ -291,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://statcan.github.io/daaas/en/getting%20started/jupyterlab/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://statcan.github.io/daaas/en/getting%20started/login/</loc>
          <lastmod>2023-03-31</lastmod>
          <changefreq>daily</changefreq>

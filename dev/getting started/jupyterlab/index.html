@@ -10,27 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://statcan.github.io/daaas/en/Aaw%20Namespace%20Injector/">
+        <link rel="canonical" href="https://statcan.github.io/daaas/en/getting%20started/jupyterlab/">
       
       
-        <link rel="prev" href="../Aaw%20Minio%20Credential%20Injector/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../Aaw%20Prob%20Notebook%20Controller/">
+        <link rel="next" href="../login/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>namespace-injector - AAW Dev Docs</title>
+        <title>Jupyterlab - AAW Dev Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#namespace-injector" class="md-skip">
+        <a href="#jupyterlab" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="AAW Dev Docs" class="md-header__button md-logo" aria-label="AAW Dev Docs" data-md-component="logo">
+    <a href="../.." title="AAW Dev Docs" class="md-header__button md-logo" aria-label="AAW Dev Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              namespace-injector
+              Jupyterlab
             
           </span>
         </div>
@@ -175,7 +175,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       AAW Dev docs
     </a>
   </li>
@@ -190,7 +190,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Argocd%20Applications/" class="md-tabs__link">
+      <a href="../../Aaw%20Argocd%20Applications/" class="md-tabs__link">
         Aaw Argocd Applications
       </a>
     </li>
@@ -206,7 +206,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Argoflow%20Azure/" class="md-tabs__link">
+      <a href="../../Aaw%20Argoflow%20Azure/" class="md-tabs__link">
         Aaw Argoflow Azure
       </a>
     </li>
@@ -222,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Contrib%20Containers/" class="md-tabs__link">
+      <a href="../../Aaw%20Contrib%20Containers/" class="md-tabs__link">
         Aaw Contrib Containers
       </a>
     </li>
@@ -238,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Contrib%20Jupyter%20Notebooks/" class="md-tabs__link">
+      <a href="../../Aaw%20Contrib%20Jupyter%20Notebooks/" class="md-tabs__link">
         Aaw Contrib Jupyter Notebooks
       </a>
     </li>
@@ -254,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Contrib%20R%20Notebooks/" class="md-tabs__link">
+      <a href="../../Aaw%20Contrib%20R%20Notebooks/" class="md-tabs__link">
         Aaw Contrib R Notebooks
       </a>
     </li>
@@ -270,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Goofys%20Injector/" class="md-tabs__link">
+      <a href="../../Aaw%20Goofys%20Injector/" class="md-tabs__link">
         Aaw Goofys Injector
       </a>
     </li>
@@ -286,7 +286,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Gpu%20Toleration%20Injector/" class="md-tabs__link">
+      <a href="../../Aaw%20Gpu%20Toleration%20Injector/" class="md-tabs__link">
         Aaw Gpu Toleration Injector
       </a>
     </li>
@@ -302,7 +302,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Inferenceservices%20Controller/" class="md-tabs__link">
+      <a href="../../Aaw%20Inferenceservices%20Controller/" class="md-tabs__link">
         Aaw Inferenceservices Controller
       </a>
     </li>
@@ -318,7 +318,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Containers/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Containers/" class="md-tabs__link">
         Aaw Kubeflow Containers
       </a>
     </li>
@@ -334,7 +334,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Controller/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Controller/" class="md-tabs__link">
         Aaw Kubeflow Controller
       </a>
     </li>
@@ -350,7 +350,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Manifests/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Manifests/" class="md-tabs__link">
         Aaw Kubeflow Manifests
       </a>
     </li>
@@ -366,7 +366,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Mlops/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Mlops/" class="md-tabs__link">
         Aaw Kubeflow Mlops
       </a>
     </li>
@@ -382,7 +382,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Opa%20Sync/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Opa%20Sync/" class="md-tabs__link">
         Aaw Kubeflow Opa Sync
       </a>
     </li>
@@ -398,7 +398,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" class="md-tabs__link">
         Aaw Kubeflow Pipelines Secret Scanner
       </a>
     </li>
@@ -414,7 +414,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Profiles%20Controller/" class="md-tabs__link">
+      <a href="../../Aaw%20Kubeflow%20Profiles%20Controller/" class="md-tabs__link">
         Aaw Kubeflow Profiles Controller
       </a>
     </li>
@@ -430,8 +430,600 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Aaw%20Minio%20Credential%20Injector/" class="md-tabs__link">
+      <a href="../../Aaw%20Minio%20Credential%20Injector/" class="md-tabs__link">
         Aaw Minio Credential Injector
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Aaw%20Namespace%20Injector/" class="md-tabs__link">
+        Aaw Namespace Injector
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Aaw%20Prob%20Notebook%20Controller/" class="md-tabs__link">
+        Aaw Prob Notebook Controller
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Aaw%20Profile%20State%20Controller/" class="md-tabs__link">
+        Aaw Profile State Controller
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Aaw%20Security%20Scanning%20Containers/" class="md-tabs__link">
+        Aaw Security Scanning Containers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Aaw%20Toleration%20Injector/" class="md-tabs__link">
+        Aaw Toleration Injector
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Boathouse/" class="md-tabs__link">
+        Boathouse
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Charts/" class="md-tabs__link">
+        Charts
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Daaas/" class="md-tabs__link">
+        Daaas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Geoserver/" class="md-tabs__link">
+        Geoserver
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Goofys/" class="md-tabs__link">
+        Goofys
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Jupyter%20Apis/" class="md-tabs__link">
+        Jupyter Apis
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Jupyterlab%20Language%20Pack%20Fr_fr/" class="md-tabs__link">
+        Jupyterlab Language Pack Fr fr
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Kubecost/" class="md-tabs__link">
+        Kubecost
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Kubeflow/" class="md-tabs__link">
+        Kubeflow
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Kubeflow%20Containers%20Desktop/" class="md-tabs__link">
+        Kubeflow Containers Desktop
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Kubeflow%20Pipelines/" class="md-tabs__link">
+        Kubeflow Pipelines
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Minio%20Deploy/" class="md-tabs__link">
+        Minio Deploy
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Minio%20Operator/" class="md-tabs__link">
+        Minio Operator
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Mlflow%20Operator/" class="md-tabs__link">
+        Mlflow Operator
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Pachyderm/" class="md-tabs__link">
+        Pachyderm
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../R%20Dashboards/" class="md-tabs__link">
+        R Dashboards
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Shiny/" class="md-tabs__link">
+        Shiny
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" class="md-tabs__link">
+        Terraform Advanced Analytics Workspaces Infrastructure Example
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Azure%20Statcan%20Aaw%20Environment/" class="md-tabs__link">
+        Terraform Azure Statcan Aaw Environment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Azure%20Statcan%20Aaw%20Network/" class="md-tabs__link">
+        Terraform Azure Statcan Aaw Network
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" class="md-tabs__link">
+        Terraform Azure Statcan Aaw Region Environment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" class="md-tabs__link">
+        Terraform Azure Statcan Cloud Native Environment Infrastructure
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Azurerm%20Kubernetes%20Cluster/" class="md-tabs__link">
+        Terraform Azurerm Kubernetes Cluster
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" class="md-tabs__link">
+        Terraform Azurerm Kubernetes Cluster Nodepool
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Kubernetes%20Aks%20Daaas/" class="md-tabs__link">
+        Terraform Kubernetes Aks Daaas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" class="md-tabs__link">
+        Terraform Kubernetes Aks Platform Daaas
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" class="md-tabs__link">
+        Terraform Kubernetes Cert Manager Certificate
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" class="md-tabs__link">
+        Terraform Kubernetes Cert Manager Issuer
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" class="md-tabs__link">
+        Terraform Kubernetes Istio Operator Cr
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" class="md-tabs__link">
+        Terraform Statcan Aaw Infrastructure Example
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terraform%20Statcan%20Aaw%20Platform/" class="md-tabs__link">
+        Terraform Statcan Aaw Platform
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Vault%20Plugin%20Secrets%20Minio/" class="md-tabs__link">
+        Vault Plugin Secrets Minio
       </a>
     </li>
   
@@ -448,599 +1040,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        Aaw Namespace Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Prob%20Notebook%20Controller/" class="md-tabs__link">
-        Aaw Prob Notebook Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Profile%20State%20Controller/" class="md-tabs__link">
-        Aaw Profile State Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Security%20Scanning%20Containers/" class="md-tabs__link">
-        Aaw Security Scanning Containers
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Toleration%20Injector/" class="md-tabs__link">
-        Aaw Toleration Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Boathouse/" class="md-tabs__link">
-        Boathouse
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Charts/" class="md-tabs__link">
-        Charts
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Daaas/" class="md-tabs__link">
-        Daaas
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Geoserver/" class="md-tabs__link">
-        Geoserver
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Goofys/" class="md-tabs__link">
-        Goofys
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Jupyter%20Apis/" class="md-tabs__link">
-        Jupyter Apis
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Jupyterlab%20Language%20Pack%20Fr_fr/" class="md-tabs__link">
-        Jupyterlab Language Pack Fr fr
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubecost/" class="md-tabs__link">
-        Kubecost
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubeflow/" class="md-tabs__link">
-        Kubeflow
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubeflow%20Containers%20Desktop/" class="md-tabs__link">
-        Kubeflow Containers Desktop
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubeflow%20Pipelines/" class="md-tabs__link">
-        Kubeflow Pipelines
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Minio%20Deploy/" class="md-tabs__link">
-        Minio Deploy
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Minio%20Operator/" class="md-tabs__link">
-        Minio Operator
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Mlflow%20Operator/" class="md-tabs__link">
-        Mlflow Operator
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Pachyderm/" class="md-tabs__link">
-        Pachyderm
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../R%20Dashboards/" class="md-tabs__link">
-        R Dashboards
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Shiny/" class="md-tabs__link">
-        Shiny
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" class="md-tabs__link">
-        Terraform Advanced Analytics Workspaces Infrastructure Example
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Environment/" class="md-tabs__link">
-        Terraform Azure Statcan Aaw Environment
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Network/" class="md-tabs__link">
-        Terraform Azure Statcan Aaw Network
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" class="md-tabs__link">
-        Terraform Azure Statcan Aaw Region Environment
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" class="md-tabs__link">
-        Terraform Azure Statcan Cloud Native Environment Infrastructure
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster/" class="md-tabs__link">
-        Terraform Azurerm Kubernetes Cluster
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" class="md-tabs__link">
-        Terraform Azurerm Kubernetes Cluster Nodepool
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Daaas/" class="md-tabs__link">
-        Terraform Kubernetes Aks Daaas
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" class="md-tabs__link">
-        Terraform Kubernetes Aks Platform Daaas
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" class="md-tabs__link">
-        Terraform Kubernetes Cert Manager Certificate
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" class="md-tabs__link">
-        Terraform Kubernetes Cert Manager Issuer
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" class="md-tabs__link">
-        Terraform Kubernetes Istio Operator Cr
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" class="md-tabs__link">
-        Terraform Statcan Aaw Infrastructure Example
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Platform/" class="md-tabs__link">
-        Terraform Statcan Aaw Platform
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Vault%20Plugin%20Secrets%20Minio/" class="md-tabs__link">
-        Vault Plugin Secrets Minio
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../getting%20started/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Getting started
       </a>
     </li>
@@ -1074,7 +1074,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AAW Dev Docs" class="md-nav__button md-logo" aria-label="AAW Dev Docs" data-md-component="logo">
+    <a href="../.." title="AAW Dev Docs" class="md-nav__button md-logo" aria-label="AAW Dev Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         AAW Dev docs
       </a>
     </li>
@@ -1147,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Argocd%20Applications/" class="md-nav__link">
+      <a href="../../Aaw%20Argocd%20Applications/" class="md-nav__link">
         ArgoCD Applications
       </a>
     </li>
@@ -1196,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Argoflow%20Azure/" class="md-nav__link">
+      <a href="../../Aaw%20Argoflow%20Azure/" class="md-nav__link">
         Deploying Kubeflow with ArgoCD
       </a>
     </li>
@@ -1245,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Contrib%20Containers/" class="md-nav__link">
+      <a href="../../Aaw%20Contrib%20Containers/" class="md-nav__link">
         Containers for DAaaS
       </a>
     </li>
@@ -1294,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Contrib%20Jupyter%20Notebooks/" class="md-nav__link">
+      <a href="../../Aaw%20Contrib%20Jupyter%20Notebooks/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -1343,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Contrib%20R%20Notebooks/" class="md-nav__link">
+      <a href="../../Aaw%20Contrib%20R%20Notebooks/" class="md-nav__link">
         R-notebooks
       </a>
     </li>
@@ -1392,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Goofys%20Injector/" class="md-nav__link">
+      <a href="../../Aaw%20Goofys%20Injector/" class="md-nav__link">
         Goofys Injector
       </a>
     </li>
@@ -1441,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Gpu%20Toleration%20Injector/" class="md-nav__link">
+      <a href="../../Aaw%20Gpu%20Toleration%20Injector/" class="md-nav__link">
         GPU Toleration Injector
       </a>
     </li>
@@ -1490,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Inferenceservices%20Controller/" class="md-nav__link">
+      <a href="../../Aaw%20Inferenceservices%20Controller/" class="md-nav__link">
         inferenceservices-controller
       </a>
     </li>
@@ -1539,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Containers/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Containers/" class="md-nav__link">
         Containers for Kubeflow
       </a>
     </li>
@@ -1588,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Controller/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Controller/" class="md-nav__link">
         kubeflow-controller
       </a>
     </li>
@@ -1637,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Manifests/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Manifests/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -1686,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Mlops/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Mlops/" class="md-nav__link">
         Kubeflow MLOps
       </a>
     </li>
@@ -1735,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Opa%20Sync/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Opa%20Sync/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -1784,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" class="md-nav__link">
         kfp-secret-scanner
       </a>
     </li>
@@ -1833,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Profiles%20Controller/" class="md-nav__link">
+      <a href="../../Aaw%20Kubeflow%20Profiles%20Controller/" class="md-nav__link">
         profiles-controller
       </a>
     </li>
@@ -1882,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Minio%20Credential%20Injector/" class="md-nav__link">
+      <a href="../../Aaw%20Minio%20Credential%20Injector/" class="md-nav__link">
         minio-credential-injector
       </a>
     </li>
@@ -1902,16 +1902,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
       
       
       
@@ -1920,7 +1918,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_18">
           <span class="md-nav__icon md-icon"></span>
           Aaw Namespace Injector
@@ -1931,21 +1929,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Aaw%20Namespace%20Injector/" class="md-nav__link">
         namespace-injector
       </a>
-      
     </li>
   
 
@@ -1992,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Prob%20Notebook%20Controller/" class="md-nav__link">
+      <a href="../../Aaw%20Prob%20Notebook%20Controller/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2041,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Profile%20State%20Controller/" class="md-nav__link">
+      <a href="../../Aaw%20Profile%20State%20Controller/" class="md-nav__link">
         Profile State Controller
       </a>
     </li>
@@ -2090,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Security%20Scanning%20Containers/" class="md-nav__link">
+      <a href="../../Aaw%20Security%20Scanning%20Containers/" class="md-nav__link">
         aaw-platform-containers
       </a>
     </li>
@@ -2139,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Toleration%20Injector/" class="md-nav__link">
+      <a href="../../Aaw%20Toleration%20Injector/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2188,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Boathouse/" class="md-nav__link">
+      <a href="../../Boathouse/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2237,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Charts/" class="md-nav__link">
+      <a href="../../Charts/" class="md-nav__link">
         Helm Charts
       </a>
     </li>
@@ -2286,7 +2274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Daaas/" class="md-nav__link">
+      <a href="../../Daaas/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2300,7 +2288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Daaas/CHANGELOG/" class="md-nav__link">
+      <a href="../../Daaas/CHANGELOG/" class="md-nav__link">
         CHANGELOG
       </a>
     </li>
@@ -2349,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Geoserver/" class="md-nav__link">
+      <a href="../../Geoserver/" class="md-nav__link">
         GeoServer
       </a>
     </li>
@@ -2398,7 +2386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Goofys/" class="md-nav__link">
+      <a href="../../Goofys/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2447,7 +2435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Jupyter%20Apis/" class="md-nav__link">
+      <a href="../../Jupyter%20Apis/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2496,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Jupyterlab%20Language%20Pack%20Fr_fr/" class="md-nav__link">
+      <a href="../../Jupyterlab%20Language%20Pack%20Fr_fr/" class="md-nav__link">
         JupyterLab fr-FR Language Pack
       </a>
     </li>
@@ -2545,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kubecost/" class="md-nav__link">
+      <a href="../../Kubecost/" class="md-nav__link">
         Kubecost
       </a>
     </li>
@@ -2594,7 +2582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kubeflow/" class="md-nav__link">
+      <a href="../../Kubeflow/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2608,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kubeflow/CHANGELOG/" class="md-nav__link">
+      <a href="../../Kubeflow/CHANGELOG/" class="md-nav__link">
         Change Log
       </a>
     </li>
@@ -2657,7 +2645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kubeflow%20Containers%20Desktop/" class="md-nav__link">
+      <a href="../../Kubeflow%20Containers%20Desktop/" class="md-nav__link">
         Important
       </a>
     </li>
@@ -2706,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kubeflow%20Pipelines/" class="md-nav__link">
+      <a href="../../Kubeflow%20Pipelines/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2720,7 +2708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Kubeflow%20Pipelines/CHANGELOG/" class="md-nav__link">
+      <a href="../../Kubeflow%20Pipelines/CHANGELOG/" class="md-nav__link">
         Changelog
       </a>
     </li>
@@ -2769,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Minio%20Deploy/" class="md-nav__link">
+      <a href="../../Minio%20Deploy/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2818,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Minio%20Operator/" class="md-nav__link">
+      <a href="../../Minio%20Operator/" class="md-nav__link">
         Minio
       </a>
     </li>
@@ -2867,7 +2855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mlflow%20Operator/" class="md-nav__link">
+      <a href="../../Mlflow%20Operator/" class="md-nav__link">
         MLFlow Operator
       </a>
     </li>
@@ -2916,7 +2904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pachyderm/" class="md-nav__link">
+      <a href="../../Pachyderm/" class="md-nav__link">
         Pachyderm
       </a>
     </li>
@@ -2965,7 +2953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../R%20Dashboards/" class="md-nav__link">
+      <a href="../../R%20Dashboards/" class="md-nav__link">
         R-dashboards
       </a>
     </li>
@@ -3014,7 +3002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Shiny/" class="md-nav__link">
+      <a href="../../Shiny/" class="md-nav__link">
         Shiny Server
       </a>
     </li>
@@ -3063,7 +3051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" class="md-nav__link">
+      <a href="../../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -3112,7 +3100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Environment/" class="md-nav__link">
+      <a href="../../Terraform%20Azure%20Statcan%20Aaw%20Environment/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -3161,7 +3149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Network/" class="md-nav__link">
+      <a href="../../Terraform%20Azure%20Statcan%20Aaw%20Network/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -3210,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" class="md-nav__link">
+      <a href="../../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -3259,7 +3247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" class="md-nav__link">
+      <a href="../../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" class="md-nav__link">
         Statistics Canada: Azure Cloud Native Environment Infrastructure
       </a>
     </li>
@@ -3308,7 +3296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster/" class="md-nav__link">
+      <a href="../../Terraform%20Azurerm%20Kubernetes%20Cluster/" class="md-nav__link">
         Azure Kubernetes Service (AKS) Cluster
       </a>
     </li>
@@ -3357,7 +3345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" class="md-nav__link">
+      <a href="../../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" class="md-nav__link">
         Azure Kubernetes Service (AKS) Cluster
       </a>
     </li>
@@ -3406,7 +3394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Daaas/" class="md-nav__link">
+      <a href="../../Terraform%20Kubernetes%20Aks%20Daaas/" class="md-nav__link">
         Terraform for Azure Kubernetes Service
       </a>
     </li>
@@ -3455,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" class="md-nav__link">
+      <a href="../../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" class="md-nav__link">
         Terraform for Azure Kubernetes Service Platform
       </a>
     </li>
@@ -3504,7 +3492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" class="md-nav__link">
+      <a href="../../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" class="md-nav__link">
         Terraform Kubernetes Cert-Manager Certificate
       </a>
     </li>
@@ -3553,7 +3541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" class="md-nav__link">
+      <a href="../../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" class="md-nav__link">
         Terraform Kubernetes Cert Manager Issuer
       </a>
     </li>
@@ -3602,7 +3590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" class="md-nav__link">
+      <a href="../../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" class="md-nav__link">
         terraform-kubernetes-istio-operator-cr
       </a>
     </li>
@@ -3651,7 +3639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" class="md-nav__link">
+      <a href="../../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -3700,7 +3688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Platform/" class="md-nav__link">
+      <a href="../../Terraform%20Statcan%20Aaw%20Platform/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -3749,7 +3737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Vault%20Plugin%20Secrets%20Minio/" class="md-nav__link">
+      <a href="../../Vault%20Plugin%20Secrets%20Minio/" class="md-nav__link">
         vault-plugin-secrets-minio
       </a>
     </li>
@@ -3769,14 +3757,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_55" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_55" checked>
       
       
       
@@ -3785,7 +3775,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_55_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_55_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_55">
           <span class="md-nav__icon md-icon"></span>
           Getting started
@@ -3798,7 +3788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting%20started/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -3810,11 +3800,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../getting%20started/jupyterlab/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Jupyterlab
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Jupyterlab
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-in-jupyterlab-notebooks" class="md-nav__link">
+    Concurrency in Jupyterlab Notebooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency in Jupyterlab Notebooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-a-new-terminal-in-a-second-window" class="md-nav__link">
+    Opening a new terminal in a second window
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-terminals-upon-first-startup" class="md-nav__link">
+    "Shared" terminals upon first startup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-notebooks" class="md-nav__link">
+    Python notebooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode" class="md-nav__link">
+    VsCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-files-in-conflict" class="md-nav__link">
+    Saving files in conflict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3826,7 +3898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting%20started/login/" class="md-nav__link">
+      <a href="../login/" class="md-nav__link">
         Login
       </a>
     </li>
@@ -3840,7 +3912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting%20started/setup/" class="md-nav__link">
+      <a href="../setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -3854,7 +3926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting%20started/tms/" class="md-nav__link">
+      <a href="../tms/" class="md-nav__link">
         Time Managment System
       </a>
     </li>
@@ -3868,7 +3940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting%20started/vm/" class="md-nav__link">
+      <a href="../vm/" class="md-nav__link">
         Setting up your Cloud VM
       </a>
     </li>
@@ -3902,6 +3974,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-in-jupyterlab-notebooks" class="md-nav__link">
+    Concurrency in Jupyterlab Notebooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency in Jupyterlab Notebooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-a-new-terminal-in-a-second-window" class="md-nav__link">
+    Opening a new terminal in a second window
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-terminals-upon-first-startup" class="md-nav__link">
+    "Shared" terminals upon first startup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-notebooks" class="md-nav__link">
+    Python notebooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode" class="md-nav__link">
+    VsCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saving-files-in-conflict" class="md-nav__link">
+    Saving files in conflict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3918,10 +4046,26 @@
   
 
 
-<h1 id="namespace-injector">namespace-injector<a class="headerlink" href="#namespace-injector" title="Permanent link">&para;</a></h1>
-<p>This mutating webhook adds custom environment variables to notebook pods.</p>
-<h1 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/StatCan/aaw-namespace-injector">aaw-namespace-injector</a></p>
+<h1 id="jupyterlab">Jupyterlab<a class="headerlink" href="#jupyterlab" title="Permanent link">&para;</a></h1>
+<p>This file is to detail any extra intricacies or features our jupyterlab-xyz offerings have that are non-obvious</p>
+<h2 id="concurrency-in-jupyterlab-notebooks">Concurrency in Jupyterlab Notebooks<a class="headerlink" href="#concurrency-in-jupyterlab-notebooks" title="Permanent link">&para;</a></h2>
+<p>The same jupyterlab notebook can be open on two separate windows and can maintain a certain amount of independence from each other. Keystrokes or mouse movements are not mirrored, as in if in one window the user moves the mouse around the second window's mouse will not move. They of course share the exact same file system and when a file is created in one window, that created file will eventually appear as available in the other window. </p>
+<h3 id="opening-a-new-terminal-in-a-second-window">Opening a new terminal in a second window<a class="headerlink" href="#opening-a-new-terminal-in-a-second-window" title="Permanent link">&para;</a></h3>
+<p>Upon initially opening up a second window, the user will be shown whatever is open on the first window. They can open up their own <code>terminal</code> and perform tasks independent of whatever is happening in the first window. Note that this second terminal opened up in the second window will not be shown in the first window. If in the first window you open up a terminal the terminal number will just increment up by one and be its own session.</p>
+<h3 id="shared-terminals-upon-first-startup">"Shared" terminals upon first startup<a class="headerlink" href="#shared-terminals-upon-first-startup" title="Permanent link">&para;</a></h3>
+<p>As mentioned above if the user opens up a notebook in a second window they will be shown whatever is open in the first window. If either the first or second window closes the shared terminal that was mirrored, that terminal will close on the other window.</p>
+<h3 id="python-notebooks">Python notebooks<a class="headerlink" href="#python-notebooks" title="Permanent link">&para;</a></h3>
+<p>These interact the same way as the terminal above. User A can make changes to the .ipynb, but they wont be reflected in User B until User A saves, and then User B reopens the .ipynb</p>
+<h3 id="vscode">VsCode<a class="headerlink" href="#vscode" title="Permanent link">&para;</a></h3>
+<p>Actions taken in vscode are mirrored and matches up to the most recent state of the file. Given the following setup you will observe the following;
+User A creates a text file (either on vscode or through the terminal). 
+User B opens that text file and leaves it open
+User A makes changes to the created text file and saves
+User B will see changes to the text file reflected on their vscode session. </p>
+<h3 id="saving-files-in-conflict">Saving files in conflict<a class="headerlink" href="#saving-files-in-conflict" title="Permanent link">&para;</a></h3>
+<p>Both window instances can save to the same file, however if it is in conflict you will get the following image
+<img alt="image" src="https://user-images.githubusercontent.com/23174198/227596318-7df6e6c0-d22d-4345-ac59-d25cdc729fc8.png" />
+However, vscode behaves differently. vscode will take whatever is on that session and save over it with no prompt asking about the file difference.</p>
 
 
 
@@ -3991,12 +4135,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
