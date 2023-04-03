@@ -7,7 +7,7 @@
 
 This repository houses the source for the documentation, which provides guidance for using the platform's major services.
 
-We welcome contributions to this documentation in the official language of your choice. We provide commands to make getting started easy, but please note that our development tooling is only tested on Ubuntu Linux with a Bash shell. If you're interested in contributing, please follow the instructions below:
+We welcome contributions to this documentation in the official language of your choice. We provide commands to make getting started easy. If you're interested in contributing, please follow the instructions below:
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Ensure that you have the following software available on your system before you 
 - Python 3.x (e.g. `apt install python3`)
 - Python venv module (e.g. `apt install python3-venv`)
 
-Our scripts won't install these for you because they generally require super-user privileges, and we don't want that much responsibility.
+Our scripts won't install these for you because they generally require super-user privileges.
 
 ## Get Started
 
