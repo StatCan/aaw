@@ -46,7 +46,7 @@ For example, in AAW and the use of [Jupyter Notebooks](https://statcan.github.io
 	
 3. Access the Portal
 
-Your project group will be provided with a Client ID upon onboarding. Paste the Client ID in between the quotations `client_id='######'`. 
+	Your project group will be provided with a Client ID upon onboarding. Paste the Client ID in between the quotations `client_id='######'`. 
 	
 	```python
 	gis = GIS("https://geoanalytics.cloud.statcan.ca/portal", client_id=' ')
