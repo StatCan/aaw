@@ -38,31 +38,35 @@ For example, in AAW and the use of [Jupyter Notebooks](https://statcan.github.io
 	```
 
 2. Import the necessary libraries that you will need in the Notebook.
+
 	```python
 	from arcgis.gis import GIS
 	from arcgis.gis import Item
 	```
 	
 3. Access the Portal
-	Your project group will be provided with a Client ID upon onboarding. Paste the Client ID in between the quotations ```client_id='######'```. 
+
+Your project group will be provided with a Client ID upon onboarding. Paste the Client ID in between the quotations `client_id='######'`. 
 	
 	```python
 	gis = GIS("https://geoanalytics.cloud.statcan.ca/portal", client_id=' ')
 	print("Successfully logged in as: " + gis.properties.user.username)
 	```
 
-4. - The output will redirect you to a login Portal.
+4. The output will redirect you to a login Portal.
+
 	- Use the StatCan Azure Login option, and your Cloud ID 
 	- After successful login, you will receive a code to sign in using SAML. 
 	- Paste this code into the output. 
-
 
 	![OAuth2 Approval](../images/OAuth2Key.png)
 
 <hr>
 
 ### Display user information
+
 Using the 'me' function, we can display various information about the user logged in.
+
 ```python
 me = gis.users.me
 username = me.username
@@ -82,6 +86,7 @@ Search for the content you have hosted on the DAaaS Geo Portal. Using the 'me' f
 my_content = me.items()
 my_content
 ```
+
 **Search for specific content you own in the DAaaS Geo Portal.**
 
 This is similar to the example above, however if you know the title of they layer you want to use, you can save it as a function.
@@ -124,10 +129,11 @@ display(item3)
 <hr>
 
 ### Perform Analysis
+
 Once the layers are brought into the Jupyter notebook, we are able to perform similar types of analysis you would expect to find in a GIS software such as ArcGIS. There are many modules containing many sub-modules of which can perform multiple types of analyses.
 <br/>
 
-Using the `arcgis.features` module, import the use_proximity submodule ```from arcgis.features import use_proximity```. This submodule allows us to '.create_buffers' - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
+Using the `arcgis.features` module, import the use_proximity submodule `from arcgis.features import use_proximity`. This submodule allows us to '.create_buffers' - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
 <br/>
 
 ```python
@@ -139,6 +145,7 @@ display(item1_buffer)
 ```
 
 Some users prefer to work with open source packages.  Translating from ArcGIS to Spatial Dataframes is simple.
+
 ```python
 # create a Spatially Enabled DataFrame object
 sdf = pd.DataFrame.spatial.from_layer(feature_layer)
@@ -147,12 +154,17 @@ sdf = pd.DataFrame.spatial.from_layer(feature_layer)
 <hr>
 
 ### Update Items
+
 By getting the item as we did similar to the example above, we can use the `.update` function to update existing item within the DAaaS GEO Portal. We can update item properties, data, thumbnails, and metadata.
+
 ```python
 item1_buffer = gis.content.get('c60c7e57bdb846dnbd7c8226c80414d2')
-item1_buffer.update(item_properties={'title': 'Enter Title'
-									 'tags': 'tag1, tag2, tag3, tag4',
-                                     'description': 'Enter description of item'}
+item1_buffer.update(
+    item_properties={
+        'title': 'Enter Title'
+        'tags': 'tag1, tag2, tag3, tag4',
+        'description': 'Enter description of item'
+})
 ```
 
 <hr>
@@ -169,8 +181,10 @@ plt.show()
 ```
 
 **Example: ipyleaflet Library**
+
 In this example we will use the library `ipyleaflet` to create an interactive map. This map will be centered around Toronto, ON. The data being used will be outlined below.
-Begin by pasting ```conda install -c conda-forge ipyleaflet``` allowing you to install `ipyleaflet` libraries in the Python environment.
+
+Begin by pasting `conda install -c conda-forge ipyleaflet` allowing you to install `ipyleaflet` libraries in the Python environment.
 
 <br/>
 
@@ -192,8 +206,10 @@ toronto_map
 ```
 <br/>
 
-##Learn More about the ArcGIS API for Python
+## Learn More about the ArcGIS API for Python
+
 [Full documentation for the ArcGIS API can be located here](https://developers.arcgis.com/python/)
 
-##Learn More about DAS Geospatial Analytical Environment (GAE) and Services
+## Learn More about DAS Geospatial Analytical Environment (GAE) and Services
+
 [GAE Help Guide](https://statcan.github.io/daaas-dads-geo/)
