@@ -60,20 +60,25 @@ extra:
 nav:
   - Getting Started: index.md
   - Analysis:
+      - Overview: 1-Experiments/Overview.md
       - Kubeflow: 1-Experiments/Kubeflow.md
       - Jupyter: 1-Experiments/Jupyter.md
       - RStudio: 1-Experiments/RStudio.md
       - Remote Desktop: 1-Experiments/Remote-Desktop.md
   - Publishing:
+      - Overview: 2-Publishing/Overview.md
       - R Shiny: 2-Publishing/R-Shiny.md
       - Dash: 2-Publishing/Dash.md
       - Datasette: 2-Publishing/Datasette.md
       - Power BI: 2-Publishing/PowerBI.md
       - Custom: 2-Publishing/Custom.md
-  - Pipelines:
-      - Kubeflow Pipelines: 3-Pipelines/Kubeflow-Pipelines.md
-      - PaaS Integration: 3-Pipelines/PaaS.md
-      - Model Serving: 3-Pipelines/Serving.md
+  - MLOps:
+      - Overview: 3-Pipelines/Overview.md
+      - Machine Learning Models: 3-Pipelines/Machine-Learning.md
+      - Training ML Models: 3-Pipelines/Machine-Learning-Training-Pipelines.md
+      - Storing ML Models: 3-Pipelines/Machine-Learning-Model-Cloud-Storage.md
+      - Serving ML Models: 3-Pipelines/Machine-Learning-Model-Serving.md
+      - Integrate with External PaaS: 3-Pipelines/PaaS-Integration.md
   - Collaboration:
       - Overview: 4-Collaboration/Overview.md
       - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
@@ -83,6 +88,6 @@ nav:
       - Disks: 5-Storage/Disks.md
       - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
   - Gitlab:
+      - Overview: 6-Gitlab/Overview.md
       - Gitlab: 6-Gitlab/Gitlab.md
-  - Help/Contact: Help.md
-  
+  - Contact: Help.md
