@@ -133,7 +133,7 @@ display(item3)
 Once the layers are brought into the Jupyter notebook, we are able to perform similar types of analysis you would expect to find in a GIS software such as ArcGIS. There are many modules containing many sub-modules of which can perform multiple types of analyses.
 <br/>
 
-Using the `arcgis.features` module, import the use_proximity submodule `from arcgis.features import use_proximity`. This submodule allows us to '.create_buffers' - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
+Using the `arcgis.features` module, import the use_proximity submodule `from arcgis.features import use_proximity`. This submodule allows us to `.create_buffers` - areas of equal distance from features. Here, we specify the layer we want to use, distance, units, and output name (you may also specify other characteristics such as field, ring type, end type, and others). By specifying an output name, after running the buffer command, a new layer will be automatically uploaded into the DAaaS GEO Portal containing the new feature you just created.
 <br/>
 
 ```python
