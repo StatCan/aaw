@@ -31,7 +31,7 @@ Once the installation has finished you can access your app's code in `./my-app`
 
 Run this script from inside `rstudio`. RStudio may ask for permission to open a new window if you have a popup blocker.
 
-``` r
+``` r title="setup-shinyuieditor.R" linenums="1"
 #!/usr/bin/env Rscript
 
 #' Install necessary packages
