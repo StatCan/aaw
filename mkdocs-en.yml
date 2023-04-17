@@ -88,6 +88,5 @@ nav:
       - Disks: 5-Storage/Disks.md
       - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
   - Gitlab:
-      - Overview: 6-Gitlab/Overview.md
       - Gitlab: 6-Gitlab/Gitlab.md
   - Contact: Help.md
