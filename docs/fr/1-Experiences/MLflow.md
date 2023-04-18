@@ -1,6 +1,6 @@
 # Aperçu
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! danger "MLflow a été retiré du projet AAW.
     Si vous en avez besoin, contactez l'équipe de développement"
 

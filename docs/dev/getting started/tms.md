@@ -17,6 +17,6 @@
 5. Close Time Entry
 6. Press Yes to save
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! Important 
     Program element will be 7975. Resource Unit is 0303, unless you are a student in which case it's "Not Applicable".

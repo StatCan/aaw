@@ -2,6 +2,7 @@
 
 R-Shiny is an R package that makes it easy to build interactive web apps in R. 
 
+<!--prettier-ignore-->
 !!! info "R Shiny App Hosting"
     We currently do not support hosting R Shiny apps but you are able to create them. We want to enable R Shiny app hosting in the future.
 
@@ -106,7 +107,7 @@ If you need extra R libraries to be installed, send your list to [the R-Shiny re
 
 ![Example Dashboard](../images/example_shiny_dashboard.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! example "See the above dashboard here"
     The above dashboard is in GitHub. Take a look at [the source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard), and [see the dashboard live](https://shiny.covid.cloud.statcan.ca/bus-dashboard).
 
@@ -114,6 +115,6 @@ If you need extra R libraries to be installed, send your list to [the R-Shiny re
 
 ### Embedding dashboards into your websites
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! failure "Embedding dashboards in other sites"
     We have not had a chance to look at this or prototype it yet, but if you have a use-case, feel free to reach out to engineering. We will work with you to figure something out.

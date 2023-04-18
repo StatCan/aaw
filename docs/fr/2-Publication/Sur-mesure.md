@@ -6,7 +6,7 @@ Flask, Dash).
 
 ![Exemple d'une application Node.js](../images/readme/covid_ui.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! info "Voir le code de source de cette application"
     Nous intégrons ces types d'applications au serveur au moyen de GitHub. La
     source de l'application ci-dessus est ici :

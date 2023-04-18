@@ -4,6 +4,7 @@
 ![MLOps](../images/mlops.jpg)
 </center>
 
+<!--prettier-ignore-->
 !!! info
     Training machine learning models involves using algorithms to learn patterns and relationships in data. This process involves identifying features or variables that are relevant to the problem at hand and using these features to make predictions or classifications. 
 
@@ -19,6 +20,7 @@ _Training machine learning models on the Advanced Analytics Workspace (AAW) has 
 
 ## MLOps and Data Pipelines
 
+<!--prettier-ignore-->
 !!! info "Optimize Data Workflows"
     MLOps and data pipelines are important tools used in the field of data science to manage and optimize data workflows.
 
@@ -30,6 +32,7 @@ MLOps refers to the set of practices and tools used to manage the entire lifecyc
 
 Data pipelines are a series of steps that help move data from one system or application to another. This includes collecting, cleaning, transforming, and storing data, as well as retrieving it when needed. Data pipelines are important for ensuring that data is accurate, reliable, and accessible to those who need it. 
 
+<!--prettier-ignore-->
 !!! info "Automation and Reliability"
     MLOps and data pipelines help organizations manage the complex process of working with large amounts of data and developing machine learning models. By automating these processes and ensuring that data is accurate and reliable, organizations can save time and resources while making better decisions based on data-driven insights.
 
@@ -53,6 +56,7 @@ There are multiple ways to train machine learning models and it is not our place
 
 ### Create a Notebook Server on the AAW
 
+<!--prettier-ignore-->
 !!! info "Notebook Servers"
     Regardless of whether you plan on working in JupyterLab, R Studio or something more advanced with Argo Workflows, you'll need the appropriate notebook server. [Follow the instructions found here to get started.](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) 
 
@@ -60,6 +64,7 @@ There are multiple ways to train machine learning models and it is not our place
 
 ![JupyterLab](../images/jupyterlab.jpg)
 
+<!--prettier-ignore-->
 !!! info "JupyterLab is Popular"
     Training machine learning models with JupyterLab is a popular approach among data scientists and machine learning engineers.
 
@@ -111,6 +116,7 @@ Once you have a JupyterLab session running, you need to import the required libr
 
     ```
 
+<!--prettier-ignore-->
 !!! note "About the Code"
     The code examples you see in this document and throughout the documentation are for illustrative purposes to get you started on your projects. Depending on the specific task or project, other libraries and steps may be required.
 
@@ -244,6 +250,7 @@ Next, you need to load and preprocess the data you'll be using to train your mac
 
     ```
 
+<!--prettier-ignore-->
 !!! note
     We split the data into training and testing sets using the `train_test_split` function from `scikit-learn`, which randomly splits the data into two sets based on the specified test size and random seed.
 
@@ -423,6 +430,7 @@ Finally, you can deploy the trained machine learning model in a production envir
 
 ![Argo Workflows](../images/argo-workflows-assembly-line.jpg)
 
+<!--prettier-ignore-->
 !!! info "MLOps Best Practices"
     Argo Workflows is an excellent tool for anyone looking to implement MLOps practices and streamline the process of training and deploying machine learning models or other data science tasks such as ETL.
 
@@ -437,6 +445,7 @@ Argo Workflows allows you to
 
 making it easy to manage the entire end-to-end machine learning pipeline. With Argo Workflows, you can easily build workflows that incorporate tasks such as data preprocessing, model training, and model deployment, all within a Kubernetes environment.
 
+<!--prettier-ignore-->
 !!! info ""
     <center>
     [![Argo Workflows](../images/argo-workflows.jpg)](https://argoproj.github.io/argo-workflows/)

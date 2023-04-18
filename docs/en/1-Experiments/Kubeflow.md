@@ -13,7 +13,7 @@ for your team.
 
 # Video Tutorial
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! note ""
     This video is not up to date, some things have changed since.
 
@@ -23,7 +23,7 @@ for your team.
 
 ## Log into Kubeflow
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 ??? warning "Log into the Azure Portal using your Cloud Credentials"
     You have to login to the Azure Portal **using your StatCan cloud credentials**.
     `first.lastname@cloud.statcan.ca` or **StatCan credentials**
@@ -108,7 +108,7 @@ you would like a multi-GPU server.
 As mentioned before, if you select a GPU server you will automatically get 6 CPU
 cores and 112 GiB of memory.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! note "Use GPU machines responsibly"
     GPU machines are significantly more expensive than CPU machines,
     so use them responsibly.
@@ -124,7 +124,7 @@ are various configuration options available:
 
 ![Create a Workspace Volume](../images/workspace-volume.PNG)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! tip "Check for old volumes by looking at the Existing option"
     When you create your server you have the option of reusing an old volume
     or creating a new one. You probably want to reuse your old volume.
@@ -185,7 +185,7 @@ The following can be customized here:
   take a few minutes to spin up depending on the resources you asked for. GPUs
   take longer.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! success "Your server is running"
     If all goes well, your server should be running!!! You will now have the
     option to connect, and [try out Jupyter!](/daaas/en/1-Experiments/Jupyter)

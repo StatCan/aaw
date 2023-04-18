@@ -1,6 +1,6 @@
 # Service de modèle avec Seldon Core et KFServing
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! warning "⚒ Cette page est en construction ⚒" 
     La personne qui écrit cette entrée n'en sait pas assez sur cette fonctionnalité pour écrire à son sujet, mais vous pouvez demander sur notre canal en Slack.
 
@@ -13,6 +13,6 @@ l'équilibrage de charge ou la montée en puissance. La plateforme peut gérer
 toute votre mise à l'échelle pour vous, afin que vous puissiez vous concentrer
 sur la logique du programme.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! warning "⚒ Cette page est en construction ⚒" 
     La personne qui rédige cette entrée ne connaît pas suffisamment cette fonctionnalité pour écrire à son sujet, mais vous pouvez demander sur notre canal en Slack.

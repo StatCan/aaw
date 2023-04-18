@@ -25,7 +25,7 @@ understanding everything is alright as long as you have some idea.
 - [Kubeflow Manifest](https://github.com/StatCan/aaw-kubeflow-manifest)
 - [Kubeflow Containers](https://github.com/StatCan/aaw-kubeflow-containers)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! Attention
     Everything below will require your work laptop; if you don't have your work laptop yet, keep training
 
@@ -43,7 +43,7 @@ understanding everything is alright as long as you have some idea.
 - [ ] You should be part of the Slack!
 - [ ] You should be part of the Discord Servers
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! Missing
     If you are missing any of the above, let your supervisor know
 
@@ -77,6 +77,6 @@ help.
 
 [Glossary](https://confluence.statcan.ca/display/DAaaS/Glossary)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! Hint
     You will need your work laptop to open the links.

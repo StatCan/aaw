@@ -19,7 +19,7 @@ Entrez le nom que vous demandez et soumettez la demande. Veillez à n'utiliser
 que lettres minuscules plus tirets.
 ![Soumettez votre demande d'espace de noms partagé](../images/KubeflowNamespace2.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! avertissement "L'espace de noms ne peut pas avoir de caractères spéciaux autres que    
     des traits d'union"
     Le nom de l'espace de noms ne doit être composé que de lettres minuscules « a-z » avec des tirets. Sinon,l'espace de noms ne sera pas créé.

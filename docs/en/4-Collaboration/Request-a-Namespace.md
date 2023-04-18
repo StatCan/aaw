@@ -19,7 +19,7 @@ Enter the name you are requesting and submit the request. Be sure to use only
 lower case letters plus dashes.
 ![Submit your request for a shared namespace](../images/KubeflowNamespace2.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! warning "The namespace cannot have special characters other than hyphens"
     The namespace name must only be lower-case letters `a-z` with dashes. Otherwise,
     the namespace will not be created.

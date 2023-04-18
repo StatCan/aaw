@@ -13,7 +13,7 @@ répartir l'ensemble des groupes avec lesquels vous partagez des éléments en
 |  **Code**   | GitLab/GitHub ou dossier personnel | GitLab/GitHub ou dossier d'équipe |    GitLab/GitHub     |
 | **Données** | Dossier ou compartiment personnel  | Dossier ou compartiment d'équipe  | Compartiment partagé |
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 ??? question "Quelle est la différence entre un compartiment et un dossier?"
     Les compartiments s'apparentent au stockage réseau. Voir la
     [section sur le stockage](./Stockage.md) pour obtenir des précisions
@@ -50,7 +50,7 @@ Par défaut, chaque personne obtient son _propre_ espace de nommage,
 présentez la demande dans le portail : **Cliquez sur le &#8942; de
 [la section Kubeflow du portail](https://kubeflow.aaw.cloud.statcan.ca/#kubeflow)**.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! avertissement "L'espace de nommage ne doit comprendre aucun caractère spécial autre que le trait d'union."
     Le nom doit seulement comprendre des lettres minuscules (de « a » à « z »)
     et des traits d'union. Sinon, il sera impossible de créer l'espace de
@@ -93,7 +93,7 @@ avec des utilisateurs de tous les espaces de nommage. De plus, le fait de
 conserver le code dans Git est un excellent moyen de gérer les grands projets de
 logiciels.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! remarque "N'oubliez pas d'obtenir une licence d'utilisation!"
     Si votre code est public, suivez les directives de l'équipe de l'innovation
     et utilisez une licence appropriée si vous réalisez des tâches pour le

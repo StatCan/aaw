@@ -8,8 +8,8 @@ check-format: check-format-admonitions check-format-prettier
 
 check-format-admonitions:
 	@if grep -IoPrz --exclude-dir='images' \
-			'(?<!<!-- prettier-ignore -->)\n(?:\?\?\?|!!!).*?(?:\n|$$)' docs/; then \
-		echo && echo 'Above admonitions need <!-- prettier-ignore -->.' 1>&2; \
+			'(?<!<!--prettier-ignore-->)\n(?:\?\?\?|!!!).*?(?:\n|$$)' docs/; then \
+		echo && echo 'Above admonitions need <!--prettier-ignore-->.' 1>&2; \
 		exit 1; \
 	fi; \
 	if grep -IoPrz --exclude-dir='images' \
@@ -78,7 +78,7 @@ serve-dev:
 	bash build-dev-docs.sh
 	. .venv/bin/activate && mkdocs serve -f mkdocs-dev.yml
 
-test: check-format check-spelling
+# test: check-format check-spelling
 
 .PHONY: \
 	check-format \

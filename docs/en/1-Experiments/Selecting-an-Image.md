@@ -18,7 +18,7 @@ These can be written in `Python`, `Julia`, or `R`.
 
 ![Jupyter Notebooks](../images/jupyter_in_action.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 ??? info "Common uses include:"
     data transformation, numerical simulation, statistical
     modelling, machine learning and more.

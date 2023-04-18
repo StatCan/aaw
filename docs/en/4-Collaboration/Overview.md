@@ -12,7 +12,7 @@ There are many ways collaborate on the AAW. Which is best for your situation dep
 
 Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the **[MinIO](../5-Storage/AzureBlobStorage.md)** section.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 ??? question "What is the difference between a bucket and a folder?"
     Buckets are like Network Storage. See the [Storage overview](../5-Storage/Overview.md) for more discussion of the differences between these two ideas.
 
@@ -26,7 +26,7 @@ The advantage of sharing with GitHub or GitLab is that it works with users
 across namespaces, and keeping code in git is a great way to manage large
 software projects.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 ??? note "Don't forget to include a License!"
     If your code is public, do not forget to keep with the Innovation Team's guidelines and use a proper License if your work is done for Statistics Canada.
 
@@ -35,7 +35,7 @@ If you need to share code without publishing it on a repository,
 
 ## Share compute (namespace) in Kubeflow
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! danger "Sharing a namespace means you share **everything** in the namespace"
     Kubeflow does not support granular sharing of one resource (one notebook, one MinIO bucket, etc.), but instead sharing of **all** resources. If you want to share a Jupyter Notebook server with someone, you must share your entire namespace and **they will have access to all other resources (MinIO buckets, etc.)**.
 
@@ -52,7 +52,7 @@ namespace. This makes it a very easy and free-form way to share.
 
 To share your namespace, see [managing contributors](#managing-contributors)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 ??? tip "Ask for help in production"
     The Advanced Analytics Workspace support staff are happy to help with production oriented use cases, and we can probably save you lots of time. Don't be shy about [asking us for help](../Help.md)!
 
@@ -99,6 +99,6 @@ You can add or remove people from a namespace you already own through the
 
 ![Contributors Menu](../images/kubeflow_contributors.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! info "Now you and your colleagues can share access to a server!"
     Try it out!

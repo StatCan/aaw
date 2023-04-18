@@ -1,5 +1,6 @@
 # Statcan Protected B Data
 
+<!--prettier-ignore-->
 !!! info "Protected B"
     The AAW is certified for hosting Protected B data!
 
@@ -16,6 +17,7 @@ Storing machine learning models in a protected cloud storage environment on the 
 
 ## Cloud Storage
 
+<!--prettier-ignore-->
 !!! info "Cloud Storage Advantages"
     Cloud storage offers several advantages for data science and machine learning, particularly in terms of scalability, accessibility, and cost-effectiveness.
 

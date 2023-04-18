@@ -1,14 +1,15 @@
 # Environnement d'Analyse Géospatiale (EAG) - Accès multi-plateforme
 
-<!-- prettier-ignore -->
-??? danger "Données non protégées uniquement ; SSI bientôt disponible :"
-	À l'heure actuelle, notre serveur géospatial ne peut héberger et donner accès qu'à des informations statistiques non sensibles.  
+<!--prettier-ignore-->
+??? danger "Données non protégées uniquement, SSI bientôt disponible!"
+    À l'heure actuelle, notre serveur géospatial ne peut héberger et donner accès qu'à des informations statistiques non sensibles.  
 	
 ## Démarrage
 
-<!-- prettier-ignore -->
-??? success "Conditions préalables"
-	1. Un projet intégré avec accès au portail DAS EAG ArcGIS
+<!--prettier-ignore-->
+!!! success "Conditions préalables"
+    
+    1. Un projet intégré avec accès au portail DAS EAG ArcGIS
     2. Un identifiant client ArcGIS Portal (clé API)
 
 Le portail ArcGIS Enterprise est accessible dans AAW ou CAE à l'aide de l'API, à partir de n'importe quel service qui exploite le langage de programmation Python. 

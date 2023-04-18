@@ -22,7 +22,7 @@ GitHub, et nous ajouterons les dépendances.
 
 ![Modèle de tableau de bord](../images/example_shiny_dashboard.png)
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! example "Voir le tableau de bord ci-dessus"
     Le tableau de bord ci-dessus se trouve dans GitHub. Jetez un coup d'œil à
     [la source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard)
@@ -32,7 +32,7 @@ GitHub, et nous ajouterons les dépendances.
 
 ## Intégration de tableaux de bord sur vos sites Web
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! failure "Intégration de tableaux de bord sur d'autres sites"
     Nous n'avons pas encore eu l'occasion de l'examiner ni d'en faire un
     prototype. Toutefois, si vous avez un cas d'utilisation, n'hésitez pas à

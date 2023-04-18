@@ -8,7 +8,7 @@ instruments et la création de rapports.
 L'exemple suivant démontre une application Dash hautement réactive et
 personnalisée avec peu de code.
 
-<!-- prettier-ignore -->
+<!--prettier-ignore-->
 !!! danger "Exécution de votre serveur de bloc-notes et accès au port"
     Lors de l'exécution de tout outil à partir de votre bloc-notes Jupyter qui affiche un site web sur un port, vous ne serez pas en mesure d'y accéder simplement à partir de `http://localhost:5000/` comme normalement suggéré dans la sortie lors de l'exécution de l'application web.
 
