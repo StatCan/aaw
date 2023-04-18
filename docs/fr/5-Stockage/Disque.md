@@ -13,7 +13,7 @@ fiable de conserver les données attachées à un serveur de bloc-notes .
 
 ![Ajout d'un volume existant à un nouveau serveur de bloc-notes](../images/kubeflow_existing_volume.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? avertissement "Vous payez pour tous les disques que vous possédez, qu'ils soient connectés à un serveur bloc-note ou non"
     Dès que vous créez un disque, vous le [payez](#prix) jusqu'à ce qu'il soit [supprimé](#suppression-du-stockage-sur-disque), même si le Serveur de blocs-note  d'origine est supprimé. Voir [Suppression du stockage sur disque](#suppression-du-stockage-sur-disque) pour plus d'informations
 
@@ -36,7 +36,7 @@ connecté (icône orange à gauche) en cliquant sur l'icône de la corbeille.
 
 ## Prix
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Les modèles de tarification sont provisoires et peuvent changer"
     Au moment de la rédaction, la tarification est couverte par la plate-forme pour les utilisateurs initiaux. Ce guide explique comment les choses devraient être tarifées à l'avenir, mais cela peut changer.
 
@@ -46,7 +46,7 @@ La tarification **Disques gérés SSD Premium** indique le coût par disque en
 fonction de la taille. Notez que vous payez pour la taille de disque demandée,
 et non pour la quantité d'espace que vous utilisent actuellement.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Conseils pour minimiser les coûts"
     Comme les disques peuvent être attachés à un Serveur blocs-note  et réutilisés, un modèle d'utilisation typique pourrait être :
 

@@ -1,6 +1,6 @@
 # Overview
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! warning "Kubeflow pipelines are in the process of being removed from AAW."
     No new development should use Kubeflow pipelines. If you have questions
     about this removal, please speak with the AAW maintainers.
@@ -28,7 +28,7 @@ interacted with through:
   where you can define your components and pipelines, submit them to run now, or
   even save them for later.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? example "More examples in the notebooks"
     More comprehensive pipeline examples specifically made for this platform are
     available on [GitHub](https://github.com/StatCan/aaw-contrib-jupyter-notebooks) (and in
@@ -108,7 +108,7 @@ here: `k8scc01covidacr.azurecr.io/kfp-components/average:v1`. Don't worry if you
 don't know Docker - since the image is built already, we only have to tell
 Kubeflow Pipelines where it is.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Full details of the `average` component's Docker image are in
     [GitHub](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/tree/master/kfp-basics/containers/average)"
     This image effectively runs the following code (slightly cleaned up for
@@ -217,7 +217,7 @@ compiler.Compiler().compile(
 print(f"Exported pipeline definition to {pipeline_yaml}")
 ```
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? warning "Kubeflow Pipelines is a lazy beast"
     It is useful to keep in mind what computation is happening when you run this
     python code versus what happens when you submit the pipeline to Kubeflow
@@ -269,7 +269,7 @@ This can all be seen in the
 Later when we want to reuse the pipeline, we can pass different arguments and do
 it all again.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "We create our experiment, upload our pipeline, and run from Python in
     this example, but we could also do all this through the Kubeflow Pipelines
     UI above.
@@ -362,7 +362,7 @@ knows **a** result from `average-data` and `average-2-data` will be passed to
 average, but the **value** of that result is not available until the pipeline is
 actually run.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Component naming within the YAML file"
     Because we made an `average_op` factory function with `name='average'` above,
     our YAML file has component names that automatically increment to avoid
@@ -376,7 +376,7 @@ As one more example, let's try two more pipelines. One has a for loop inside
 which prints "Woohoo!" a fixed number of times. whereas the other does the same
 but loops `n` times (where `n` is a pipeline parameter):
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Pipeline parameters are described more below, but they work like
     parameters for functions. Pipelines can accept data (numbers, string URL's
     to large files in MinIO, etc.) as arguments, allowing a single generic
@@ -516,7 +516,7 @@ as a way to securely store and pass sensitive information. Each **secret** is a
 key-value store containing some number of key-value pairs. The secrets can be
 passed _by reference_ to the pipeline.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? note "Secrets are only accessible within their own namespace"
     Secrets can only be accessed within the namespace they are created in.
     If you need to use a secret in another namespace, you need to add it there
@@ -715,7 +715,7 @@ with – running the containers is effectively like running them locally using a
 terminal. Anything you can make into a container with that interface can be run
 in Kubeflow Pipelines.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "...however, for security reasons the platform currently does not
     allow users to build/run custom Docker images. This is planned for the
     future, but in interim see _Lightweight components_ for a way to develop
@@ -768,11 +768,11 @@ Registry and any
 [whitelisted images](https://github.com/StatCan/gatekeeper-policies/blob/master/general/container-allowed-images/constraint.yaml)
 from Docker hub.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? danger "Lightweight components have a number of advantages but also some drawbacks"
     See [this description](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb) of their basic characteristics, as well as [this example](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb) which uses them in a more complex pipeline
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "A convenient base image to use is the the image your notebook server is running"
     By using the same image as your notebook server, you ensure Kubeflow
     Pipelines has the same packages available to it as the notebook where you

@@ -6,7 +6,7 @@ explore the DB and run SQL queries in a more interactive way.
 You can find a list of example datasettes
 [here](https://github.com/simonw/datasette/wiki/Datasettes).
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! faq "The Datasette Ecosystem"
     There are all sorts of tools for converting data to and from sqlite
     [here](https://docs.datasette.io/en/stable/ecosystem.html). For example,
@@ -64,11 +64,11 @@ echo "Base url: ${BASE_URL}"
 datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_limit_ms:5500 --config base_url:${BASE_URL}
 ```
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! example "Check out this video tutorial"
     One user of the platform used Datasette along with a javascript dashboard. See this [video](https://www.youtube.com/watch?v=OPVfBKouBT8&feature=emb_logo) for a demo.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "Running your Notebook Server and accessing the port"
     When running any tool from your Jupyter Notebook that posts a website to a port,
     you will not be able to simply access it from `http://localhost:5000/` as

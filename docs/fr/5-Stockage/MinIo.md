@@ -18,7 +18,7 @@ plus approprié:
 |       Disque |                                         Une machine/serveur bloc-notes à la fois |                                       Plus rapide (débit et latence) | <=512GB total par disque                       | Non                                     |
 | Compartiment | Accès simultané à partir de plusieurs machines/serveurs bloc-notes en même temps | Assez rapide (téléchargement rapide, envoi modeste, latence modeste) | Quantité infinie (dans une limite raisonnable) | [Oui](#partager)                        |
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Si vous n'êtes pas sûr de votre choix, ne vous inquiétez pas".
     Il s'agit de lignes directrices, pas d'une science exacte - choisissez ce qui vous semble le mieux maintenant et faites-le.  Le meilleur choix pour une utilisation compliquée n'est pas évident et nécessite souvent une expérience pratique, donc le simple fait d'essayer quelque chose vous aidera.  Dans la plupart des situations, les deux options fonctionnent bien, même si elles ne sont pas parfaites, et n'oubliez pas que les données peuvent toujours être copiées ultérieurement si vous changez d'avis.
 
@@ -93,7 +93,7 @@ selon le format `prenom-nom`.
 
 ![Navigateur MinIO avec compartiment personnel utilisant le format prénom, nom de famille (avec trait d'union)](images/minio_self_serve_bucket.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "Impossible de partager des fichiers avec votre OpenID"
     À cause d'un [bogue dans MinIO](https://github.com/minio/minio/issues/8935),
     vous ne pouvez pas encore partager des fichiers. Nous espérons que cela sera
@@ -118,7 +118,7 @@ mais en attendant, vous pouvez y accéder par programme en utilisant l'outil de
 ligne de commande `mc`, ou par l'intermédiaire des appels d'API S3 dans R ou
 Python.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! tip "Voir les exemples de blocs-notes!"
     Un modèle est fourni pour se connecter dans `R`, `python`, ou par la ligne
     de commande fournie dans `jupyter-notebooks/self-serve-storage`. Vous pouvez
@@ -158,7 +158,7 @@ Cette opération est très rapide. Vous pouvez également utiliser `mc --help` p
 voir les autres options qui s'offrent à vous, comme `mc ls standard/PRÉNOM-NOM/`
 pour afficher le contenu de votre compartiment.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? tip "Autres options de stockage"
     Pour utiliser une de nos autres options de stockage,
     `premium`, remplacez simplement  la valeur `standard` dans le programme

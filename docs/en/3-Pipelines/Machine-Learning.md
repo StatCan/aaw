@@ -16,7 +16,7 @@ There are several different types of machine learning models, each of which is d
 
 5. **Neural Networks:** Neural networks are a type of machine learning model that is designed to mimic the structure and function of the human brain. They are commonly used in image recognition, speech recognition, and natural language processing applications.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Machine Learning Models Can be Biased"
     Machine learning models are a powerful tool for analyzing and making predictions about data, and they have a wide range of applications in fields such as finance, healthcare, marketing, and more. However, it is important to note that machine learning models are not perfect and can sometimes make errors or produce biased results. Therefore, it is important to carefully evaluate and test machine learning models before using them in real-world applications.
 
@@ -26,7 +26,7 @@ There are several different types of machine learning models, each of which is d
 
 ![Linear Regression](../images/linear-regression.jpg)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Linear Regression"
     $$
     \hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i + \hat{\epsilon}_i
@@ -100,7 +100,7 @@ As the complexity of the problem increases, more sophisticated algorithms are ne
 
 ![Support Vector Machine](../images/svm.jpg)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note "SVM"
     $$
     \underset{\mathbf{w},b,\boldsymbol{\xi}}{\operatorname{minimize}} \hspace{0.2cm} \frac{1}{2} ||\mathbf{w}||^2 + C \sum_{i=1}^{N} \xi_i
@@ -176,7 +176,7 @@ The basic idea behind SVM is to find a hyperplane that best separates the input 
 
 ![Random Forest](../images/random-forest.jpg)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note "Random Forest"
     $$
     \hat{y} = \frac{1}{T} \sum_{t=1}^{T} f_t(\mathbf{x}),
@@ -251,7 +251,7 @@ Each tree is trained on a bootstrapped subset of the original training data, and
 
 ![Deep Learning](../images/deep-learning.jpg)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note "Deep Learning"
     $$
     \hat{y} = f(\mathbf{W}_L f(\mathbf{W}_{L-1} f(\dots f(\mathbf{W}_1\mathbf{x}+\mathbf{b}_1)\dots)+\mathbf{b}_{L-1})+\mathbf{b}_L)

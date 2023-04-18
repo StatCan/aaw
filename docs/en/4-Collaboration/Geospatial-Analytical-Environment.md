@@ -1,12 +1,12 @@
 # Geospatial Analytical Environment (GAE) - Cross Platform Access
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "Unprotected data only, SSI Coming Soon!"
     At this time, our Geospatial server can only host and provide access to non-sensitive statistical information.  
 
 ## Getting Started
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Prerequisites"
     1. An onboarded project with access to DAS GAE ArcGIS Portal 	
     2. An ArcGIS Portal Client Id (API Key)

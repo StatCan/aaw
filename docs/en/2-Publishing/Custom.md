@@ -7,7 +7,7 @@ container. For instance, Node.js apps, Flask or Dash apps. Etc.
 
 ![Example of a Node.js App](../images/readme/covid_ui.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "See the source code for this app"
     We just push these kinds of applications through GitHub into the server. The
     source for the above app is

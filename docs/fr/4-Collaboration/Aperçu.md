@@ -12,7 +12,7 @@ d'options suivant:
 | **Données** |   Dossier personnel ou compartiment   | Dossier d'équipe ou compartiment , ou espace de noms partagé | Compartiment partagé |
 | **Calcul**  |        Espace de nom personnel        |                    Espace de noms partagé                    |         N/A          |
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? question "Quelle est la différence entre un compartiment et un dossier?"
     Les compartiments sont comme le stockage sur réseau. Consulter [ présentation du stockage](../Stockage.md) pour plus de détails sur les différences entre ces deux options.
 
@@ -29,7 +29,7 @@ GitHub ou GitLab. L'avantage du partage avec GitHub ou GitLab est que cela
 fonctionne avec les utilisateurs à travers les espaces de noms, et conserver le
 code dans github est un excellent moyen de gérer de grands projets logiciels.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? note "N'oubliez pas d'inclure une licence !"
     Si votre code est public, n'oubliez pas de respecter les directives de l'équipe d'innovation et d'utiliser une licence appropriée si votre travail est effectué pour Statistique Canada.
 
@@ -39,7 +39,7 @@ pourrait aussi fonctionner.
 
 ## Partager le calcul (espace de nom) dans Kubeflow
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "Partager un espace de nom signifie que vous partagez **toutes les choses**  
     dans l'espace de nom".
     Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un compartiment MinIO, etc.), mais plutôt le partage de **tous** ressources. Si vous souhaitez partager un serveur Jupyter Carnet note avec quelqu'un, vous devez partager l'intégralité de votre espace de nom et **ils auront accès à toutes les autres ressources (compartiment MinIO, etc.)**.
@@ -57,7 +57,7 @@ qu'à vos collègues partagent l'environnement de calcul et les compartiments
 MinIO associés au espace de nom. Cela en fait un moyen très simple et libre de
 partager.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? conseil "Demander de l'aide en production"
     Le personnel d'assistance d'Espace de travail d'analyse avancée se fera un plaisir de vous aider avec les cas d'utilisation orientés vers la production, et nous pouvons probablement vous faire gagner beaucoup de temps. Ne soyez pas timide [Demander pour l'aide](../Aide.md)!
 
@@ -108,6 +108,6 @@ possédez déjà via le Menu **Gérer les contributeurs** dans Kubeflow.
 
 ![Contributors Menu](../images/kubeflow_contributors.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Maintenant, vous et vos collègues pouvez partager l'accès à un serveur!"
     Essayer le!

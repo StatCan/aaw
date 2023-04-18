@@ -13,13 +13,13 @@ Azure Blob Storage Containers are good at three things:
 
 # Setup
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! warning "Azure Blob Storage containers and buckets mount will be replacing the Minio Buckets and Minio storage mounts"
     Users will be responsible for migrating data from Minio Buckets to the Azure Storage folders. For larger
     files, users may contact AAW for assistance.
 ## Blob Container Mounted on a Notebook Server
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 
 The Blob CSI volumes are persisted under `/home/jovyan/buckets` when creating a Notebook Server. Files under `/buckets` are backed by Blob storage.
 All AAW notebooks will have the `/buckets` mounted to the file-system, making data accessible from everywhere.
@@ -37,7 +37,7 @@ file browser, write from Python/R, etc. The only difference is that the data is
 being stored in the Blob storage container rather than on a local disk (and is thus
 accessible wherever you can access your Kubeflow notebook).
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 
 ## Container Types
 
@@ -54,11 +54,11 @@ storage type behind them:
 - **aaw-unclassified-ro:** This classification is protected-b but read-only access. This is so users can view unclassified
 data within a protected-b notebook.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 
 ## Accessing Internal Data
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! warning "TBA: Awaiting DAS common storage connection"
     
     
@@ -71,7 +71,7 @@ this data.
 
 ## Pricing
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Pricing models are based on CPU and Memory usage"
     Pricing is covered by KubeCost for user namespaces (In Kubeflow at the bottom of the Notebooks tab).
 

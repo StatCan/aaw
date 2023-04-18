@@ -1,12 +1,12 @@
 # Environnement d'Analyse Géospatiale (EAG) - Accès multi-plateforme
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? danger "Données non protégées uniquement, SSI bientôt disponible!"
     À l'heure actuelle, notre serveur géospatial ne peut héberger et donner accès qu'à des informations statistiques non sensibles.  
 	
 ## Démarrage
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! success "Conditions préalables"
     
     1. Un projet intégré avec accès au portail DAS EAG ArcGIS

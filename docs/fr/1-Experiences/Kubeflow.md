@@ -18,7 +18,7 @@ votre équipe.
 
 # Didacticiel vidéo
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note "" 
     Cette vidéo n'est pas à jour, certaines choses pourraient avoir changé depuis.
 
@@ -28,7 +28,7 @@ votre équipe.
 
 ## Connectez-vous à Kubeflow
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! avertissement "Connectez-vous au portail Azure à l'aide de vos identifiants cloud"
     Vous devez vous connecter au portail Azure ** en utilisant vos informations d'identification StatCan **.`first.lastname@cloud.statcan.ca` ou ** en utilisant vos informations d'identification StatCan ** `first.lastname@statcan.gc.ca`. Vous pouvez le faire en utilisant
     [Portail Azure](https://portal.azure.com).
@@ -77,12 +77,12 @@ coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur comple
 À l'avenir, il se peut que des machines plus grandes soient disponibles, vous
 pourriez donc avoir des restrictions plus souples.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note "Bogue de création de nœud lent."
     En raison d'un bug avec le pare-feu, la création d'un nouveau nœud peut être très
     lente dans certains cas (jusqu'à quelques heures). Un correctif pour ce problème est en cours.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note "Utilisez les machines GPU de manière responsable"
     Il y a moins de machines GPU que de machines CPU, alors utilisez-les de manière responsable.
 
@@ -95,7 +95,7 @@ important que vous vous souveniez du nom du volume.**
 
 ![Créer un volume de données](../images/kubeflow_volumes.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! conseil "Vérifiez les anciens volumes en regardant l'option Existant"
     Lorsque vous créez votre serveur vous avez la possibilité de réutiliser un ancien volume
     ou en créer un nouveau. Vous souhaitez probablement réutiliser votre ancien volume.
@@ -106,7 +106,7 @@ important que vous vous souveniez du nom du volume.**
   ! Cela pourrait prenez quelques minutes pour démarrer en fonction des
   ressources que vous avez demandées. (GPU prendre plus de temps.)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! Succès "Votre serveur est en cours d'exécution"
     Si tout se passe bien, votre serveur devrait fonctionner !!! Vous aurez maintenant le
     possibilité de se connecter, et [essayer Jupyter!](/daaas/en/1-Experiments/Jupyter)

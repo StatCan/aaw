@@ -12,7 +12,7 @@ reliable way to preserve data attached to a Notebook Server.
 
 ![Adding an existing volume to a new notebook server](../images/kubeflow_existing_volume.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? warning "You pay for all disks you own, whether they're attached to a Notebook Server or not"
     As soon as you create a disk, you're [paying](#pricing) for it until it is [deleted](#deleting-disk-storage), even if it's original Notebook Server is deleted.  See [Deleting Disk Storage](#deleting-disk-storage) for more info
 
@@ -34,7 +34,7 @@ by clicking the trash can icon.
 
 ## Pricing
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Pricing models are tentative and may change"
     As of writing, pricing is covered by the platform for initial users.  This guidance explains how things are expected to be priced priced in future, but this may change.
 
@@ -44,7 +44,7 @@ The **Premium SSD Managed Disks** pricing shows the cost per disk based on size.
 Note that you pay for the size of disk requested, not the amount of space you
 are currently using.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "Tips to minimize costs"
     As disks can be attached to a Notebook Server and reused, a typical usage pattern could be:
 

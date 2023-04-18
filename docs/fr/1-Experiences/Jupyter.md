@@ -43,7 +43,7 @@ bloc-notes. Parmi les bons blocs-notes pour commencer, il y a
 `pytorch` et `tensorflow` sont excellents si vous connaissez l'apprentissage
 automatique. `mapreduce-pipeline` et `ai-pipeline` sont plus avancés.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? danger "Certains bloc-notes ne fonctionnent que dans certaines versions de serveur"
     Par exemple, `gdal` ne fonctionne que dans l'image géomatique. Donc, si vous
     utilisez une autre image, un bloc-notes utilisant `gdal` pourrait ne pas
@@ -66,12 +66,12 @@ pip install --user your_package_name
 **N'oubliez pas de redémarrer votre noyau Jupyter par la suite, pour accéder à
 de nouvelles trousses.**
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? warning "Assurez-vous de redémarrer le noyau Jupyter après l'installation d'un nouveau logiciel"
     Si vous installez un logiciel dans un terminal, mais que votre noyau Jupyter
     était déjà en cours d'exécution, il ne sera pas mis à jour.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? warning "Y a-t-il quelque chose que vous ne pouvez pas installer?"
     Si vous avez besoin d'installer quelque chose, communiquez avec nous
     ou [ouvrir une question GitHub](https://github.com/StatCan/aaw-kubeflow-containers).

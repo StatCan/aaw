@@ -41,7 +41,7 @@ Create for exploring, and also great for writing code
 
 When you started your server, it got loaded with a bunch of example notebooks. Double click to open the jupyter-notebooks folder. Great notebooks to start with are `R/01-R-Notebook-Demo.ipynb`, or the notebooks in `scikitlearn`. `pytorch` and `tensorflow` are great if you are familiar with machine learning. The `mapreduce-pipeline` and `ai-pipeline` are more advanced.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "Some notebooks only work in certain server versions"
     For instance, `gdal` is only in the geomatics image. So if you use another image then a notebook using `gdal` might not work.
 
@@ -62,11 +62,11 @@ pip install --user your_package_name
 **Don't forget to restart your Jupyter kernel afterwards, to make new packages
 available.**
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? tip "Make sure to restart the Jupyter kernel after installing new software"
     If you install software in a terminal, but your Jupyter kernel was already running, then it will not be updated.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? tip "Is there something that you can't install?"
     If you need something installed, reach us or [open a GitHub issue](https://github.com/StatCan/aaw-kubeflow-containers). We can add it to the default software.
 

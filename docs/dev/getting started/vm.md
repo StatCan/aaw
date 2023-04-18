@@ -9,7 +9,7 @@ need your work laptop for the following steps.**
 You will need to create a Jira issue to get your VM created. Use
 [this issue](https://jirab.statcan.ca/browse/CLOUD-9807)(open link on work laptop) as a template. Note that the WID Number in the JIRA issue stands for the Workload ID which you need to provide for billing of your project.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! Caution
     Double-check with your supervisor on the size of the VM
 
@@ -18,7 +18,7 @@ You will need to create a Jira issue to get your VM created. Use
 Once your VM is created, you will receive an email on how to connect to it;
 follow those steps.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! Tip
     Consider saving your Remote Desktop Connection to your Desktop, using the Connection Settings > Save As...
 
@@ -80,6 +80,6 @@ selectedmonitors:s:7,6
   - Get
     [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! Tip
     Set your default formatter to Prettier, and consider turning on the setting for **format on save**

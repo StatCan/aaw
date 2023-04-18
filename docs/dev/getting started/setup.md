@@ -24,6 +24,6 @@
     firstname.lastname@statcan.gc.ca email and PRI
 - After creating an account, do the training on your personal laptop
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! Hint 
     The Klick Training will have to be done through Net A, just navigate to [The Admin System Portal](http://adminsystemportal) on Internet Explorer in Net A

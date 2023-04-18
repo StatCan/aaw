@@ -127,7 +127,7 @@ Service (PaaS), telles que Databricks ou AzureML.
 ou GitLab pour partager votre code avec les membres de votre équipe, ou demander
 pour un **[espace de travail partagé](./Collaboration.md)** .
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Demander de l'aide pour la production"
     Le personnel de soutien de l'espace de travail d'analyse avancée est heureux
     de vous aider pour les cas d'utilisation orientés vers la production,
@@ -144,7 +144,7 @@ pour un **[espace de travail partagé](./Collaboration.md)** .
 Nous donnerons un aperçu des technologies ici. Des renseignements plus précis
 sur chacune d'entre elles seront fournis dans les sections suivantes.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! example "Parcourir quelques ensembles de données"
     Parcourez quelques [ensembles de données](https://datasets.covid.cloud.statcan.ca)
     ici. Ces ensembles de données ont été conçus pour stocker des données

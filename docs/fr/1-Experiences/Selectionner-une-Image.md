@@ -21,7 +21,7 @@ ou `R`.
 
 ![Bloc-notes Jupyter](../images/jupyter_in_action.png)
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? info "La plupart des utilisations comprennent:"
     la transformation de données, la simulation numérique, la modélisation statistique, l'apprentissage automatique et autres.
 

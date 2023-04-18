@@ -8,13 +8,13 @@
 
 _Welcome to the world of data science and machine learning!_
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "What is the AAW?"
     **[Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/)** is an open source platform designed for data scientists, data stewards, analysts and researchers familiar with open source tools and coding. Developed by data scientists for data scientists, AAW provides a flexible environment that enables advanced practitioners to get their work done with ease.
 
 The AAW is a comprehensive solution for data science and data analytics.  With the AAW, you can customize notebook server deployments to suit your specific data science needs. We have a small number of custom Docker images made by our team.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "What is Kubeflow?"
     The AAW is based on [Kubeflow](https://www.kubeflow.org/), an open source comprehensive solution for deploying and managing end-to-end ML workflows.
 
@@ -32,22 +32,22 @@ No matter what stage of your data science journey you're at, the Advanced Analyt
 
 The AAW portal homepage is available for internal users only. However, external users with a cloud account granted access by the business sponsor can access the platform through the analytics-platform URL.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info annotate "AAW Portal Homepage"
     - [**Portal Homepage for Statistics Canada Employees**](https://www.statcan.gc.ca/data-analytics-service/aaw)
     - [**Portal Homepage for External Users**](https://analytics-platform.statcan.gc.ca/covid19)
 
 ### Kubeflow Account
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! important "Attention External Users!"
     Users external to Statistics Canada will require a cloud account granted access by the business sponsor.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! important "Attention Statistics Canada Employees!"
     Users internal to Statistics Canada can get started right away without any additional sign up procedures, just head to  [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note ""
     <center>
     [![Kubeflow is the Heart of the AAW!](./images/Kubeflow.PNG)](https://kubeflow.aaw.cloud.statcan.ca/)
@@ -61,7 +61,7 @@ Kubeflow simplifies the following tasks:
 - Creating customizable environments to work with data with user-controlled resource provisioning (custom CPU, GPU, RAM and storage).
 - Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS for Statistics Canada employees.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! info "Kubeflow Dashboard"
     - [**Kubeflow Dashboard**](https://kubeflow.aaw.cloud.statcan.ca/) Use this link once you have your cloud account!
 
@@ -87,7 +87,7 @@ So don't hesitate - join our **[Slack channel](https://statcan-aaw.slack.com/)**
 
 Click on the link, then choose "Create an account" in the upper right-hand corner.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! note ""
     <center>
     ![Use your @statcan.gc.ca email!](images/SlackAAW2.png)

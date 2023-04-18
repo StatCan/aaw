@@ -1,6 +1,6 @@
 # Overview
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! danger "MLflow has been removed from the AAW.
     If you need it, contact the development team"
 

@@ -20,7 +20,7 @@ interagir avec les pipelines Kubeflow par l'entremise :
   Jupyter, où vous pouvez définir vos composants et pipelines, les soumettre
   pour les exécuter immédiatement, ou même les enregistrer pour plus tard.
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? exemple "Des exemples supplémentaires dans les bloc-notes"
     Des exemples plus exhaustifs de pipelines produits expressément pour cette
     plateforme sont accessibles dans
@@ -64,7 +64,7 @@ exemple :
 2. transmettre le résultat du `ComposantA` au `ComposantB` et au `ComposantC`
 3. ...
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 !!! example "Exemple d'un pipeline"
     Voici un exemple :
 
@@ -194,7 +194,7 @@ compiler.Compiler().compile(
 ) print(f"Définition de pipeline exportée vers {pipeline_yaml}")
 ```
 
-<!--prettier-ignore-->
+<!-- prettier-ignore -->
 ??? avertissement "Kubeflow Pipelines est une bête paresseuse".
     Il est utile de garder à l'esprit le calcul qui se produit lorsque vous
     exécutez ce code Python par rapport à ce qui se passe lorsque vous soumettez
