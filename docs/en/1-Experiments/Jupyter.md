@@ -39,11 +39,10 @@ Create for exploring, and also great for writing code
 
 ## Get started with the examples
 
-When you started your server, it got loaded with a bunch of example notebooks. Double click to open the jupyter-notebooks folder. Great notebooks to start with
-are `R/01-R-Notebook-Demo.ipynb`, or the notebooks in `scikitlearn`. `pytorch` and `tensorflow` are great if you are familiar with machine learning. The `mapreduce-pipeline` and `ai-pipeline` are more advanced.
+When you started your server, it got loaded with a bunch of example notebooks. Double click to open the jupyter-notebooks folder. Great notebooks to start with are `R/01-R-Notebook-Demo.ipynb`, or the notebooks in `scikitlearn`. `pytorch` and `tensorflow` are great if you are familiar with machine learning. The `mapreduce-pipeline` and `ai-pipeline` are more advanced.
 
 <!-- prettier-ignore -->
-??? danger "Some notebooks only work in certain server versions"
+!!! danger "Some notebooks only work in certain server versions"
     For instance, `gdal` is only in the geomatics image. So if you use another image then a notebook using `gdal` might not work.
 
 ## Adding software

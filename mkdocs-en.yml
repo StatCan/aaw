@@ -89,4 +89,4 @@ nav:
       - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
   - Gitlab:
       - Gitlab: 6-Gitlab/Gitlab.md
-  - Contact: Help.md
+  - Help/Contact: Help.md

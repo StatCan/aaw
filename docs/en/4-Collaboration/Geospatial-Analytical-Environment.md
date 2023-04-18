@@ -1,15 +1,15 @@
 # Geospatial Analytical Environment (GAE) - Cross Platform Access
 
 <!-- prettier-ignore -->
-??? danger "Unprotected data only; SSI coming soon:"
-	At this time, our Geospatial server can only host and provide access to non-sensitive statistical information.  
-	
+!!! danger "Unprotected data only, SSI Coming Soon!"
+    At this time, our Geospatial server can only host and provide access to non-sensitive statistical information.  
+
 ## Getting Started
 
 <!-- prettier-ignore -->
-??? success "Prerequisites"
-	1. An onboarded project with access to DAS GAE ArcGIS Portal 	
-	2. An ArcGIS Portal Client Id (API Key)
+!!! info "Prerequisites"
+    1. An onboarded project with access to DAS GAE ArcGIS Portal 	
+    2. An ArcGIS Portal Client Id (API Key)
 
 The ArcGIS Enterprise Portal can be accessed in either the AAW or CAE using the API, from any service which leverages the Python programming language. 
 

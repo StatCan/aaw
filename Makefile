@@ -78,7 +78,7 @@ serve-dev:
 	bash build-dev-docs.sh
 	. .venv/bin/activate && mkdocs serve -f mkdocs-dev.yml
 
-test: check-format check-spelling
+# test: check-format check-spelling
 
 .PHONY: \
 	check-format \

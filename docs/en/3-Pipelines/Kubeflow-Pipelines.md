@@ -770,10 +770,7 @@ from Docker hub.
 
 <!-- prettier-ignore -->
 ??? danger "Lightweight components have a number of advantages but also some drawbacks"
-    See [this description](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb)
-    of their basic characteristics, as well as
-    [this example](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb)
-    which uses them in a more complex pipeline
+    See [this description](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/kfp-basics/demo_kfp_lightweight_components.ipynb) of their basic characteristics, as well as [this example](https://github.com/StatCan/aaw-contrib-jupyter-notebooks/blob/master/mapreduce-pipeline/Compute-Pi-with-lightweight-components-and-minio.ipynb) which uses them in a more complex pipeline
 
 <!-- prettier-ignore -->
 ??? info "A convenient base image to use is the the image your notebook server is running"

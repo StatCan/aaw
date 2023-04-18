@@ -57,10 +57,11 @@ data within a protected-b notebook.
 <!-- prettier-ignore -->
 
 ## Accessing Internal Data
+
 <!-- prettier-ignore -->
 !!! warning "TBA: Awaiting DAS common storage connection"
-
-
+    
+    
 AAW has an integration with the FAIR Data Infrastructure team that allows users
 to transfer unclassified and protected-b data to Azure Storage Accounts, thus allowing users to
 access this data from Notebook Servers.
@@ -68,12 +69,10 @@ access this data from Notebook Servers.
 Please reach out to the FAIR Data Infrastructure team if you have a use case for
 this data.
 
-
 ## Pricing
 
 <!-- prettier-ignore -->
-??? info "Pricing models are based on CPU and Memory usage"
+!!! info "Pricing models are based on CPU and Memory usage"
     Pricing is covered by KubeCost for user namespaces (In Kubeflow at the bottom of the Notebooks tab).
 
-In general, Blob Storage is much cheaper than [Azure Manage Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/)
-and has better I/O than managed SSD.
+In general, Blob Storage is much cheaper than [Azure Manage Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/) and has better I/O than managed SSD.
