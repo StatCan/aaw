@@ -6,13 +6,13 @@
 
 ## What are you looking for?
 
-[![Getting Started](images/GettingStarted.PNG)](#get-started-with-aaw)
+[Getting Started](#get-started-with-aaw)
 
-[![Analysis](images/Analysis.PNG)](#experiments)
-[![Publishing](images/Publishing.PNG)](#publishing)
-[![Pipelines](images/Pipelines.PNG)](#pipelines)
-[![Collaboration](images/Collaboration.PNG)](#collaboration)
-[![Storage](images/Storage.PNG)](#storage)
+[Analysis](#experiments)
+[Publishing](#publishing)
+[Pipelines](#pipelines)
+[Collaboration](#collaboration)
+[Storage](#storage)
 
 # Get Started with AAW
 
@@ -49,7 +49,7 @@ environment.
 
 ## Run a virtual desktop
 
-[![Virtual Desktop](images/VirtualDesktop.PNG)](1-Experiments/Remote-Desktop.md)
+[Virtual Desktop](1-Experiments/Remote-Desktop.md)
 You can run a full Ubuntu desktop, with typical applications, right inside your
 browser, using [**ML Workspaces**](1-Experiments/Remote-Desktop.md)
 
