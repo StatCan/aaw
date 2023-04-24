@@ -59,9 +59,10 @@ data within a protected-b notebook.
 ## Accessing Internal Data
 
 <!-- prettier-ignore -->
-!!! warning "TBA: Awaiting DAS common storage connection"
-    
-    
+Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to
+unclassified or protected-b data.
+
+
 AAW has an integration with the FAIR Data Infrastructure team that allows users
 to transfer unclassified and protected-b data to Azure Storage Accounts, thus allowing users to
 access this data from Notebook Servers.
