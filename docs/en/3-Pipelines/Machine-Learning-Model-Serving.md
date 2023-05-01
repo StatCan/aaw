@@ -1,4 +1,4 @@
-# Model Serving
+# Introduction to Model Serving
 
 In the context of governments, serving machine learning models means making trained models available for use by other applications and systems. This could include making predictions or classifications based on input data, or providing insights and recommendations based on the results of data analysis.
 
