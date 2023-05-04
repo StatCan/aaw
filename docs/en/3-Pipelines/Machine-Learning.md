@@ -145,7 +145,9 @@ The basic idea behind SVM is to find a hyperplane that best separates the input 
     accuracy = accuracy_score(y_test, y_pred)
     print('Accuracy:', accuracy)
     ```
+
 === "R"
+
     ``` r title="svm.r" linenums="1"
     #!/usr/bin/env Rscript
 
@@ -309,6 +311,7 @@ Deep learning is a subset of machine learning that involves training neural netw
     ```
 
 === "R"
+
     ``` r title="deep_learning.r" linenums="1"
     #!/usr/bin/env Rscript
         
@@ -319,7 +322,7 @@ Deep learning is a subset of machine learning that involves training neural netw
     # Load the dataset
     data <- iris
     x <- as.matrix(data[, 1:4])
-    y <- to_categorical(as.numeric(data[, 5])-1)
+    y <- to_categorical(as.numeric(data[, 5]) - 1)
 
     # Split the data into training and testing sets
     set.seed(123)
