@@ -644,7 +644,7 @@ The YAML file defines a single step called `train` that runs  script called `tra
 
 To run the above workflow, you will first need to push the Dockerfile to our container registry and , and then submit the YAML file using the `argo submit` command. Once the pipeline has completed, you can retrieve the trained model file by downloading the output artifact from the `argo logs` command.
 
-``` bash title="Terminal Emulator"
+``` bash title="Terminal"
 $ argo submit workflow.yaml       # submit a workflow spec to Kubernetes
 ```
 
@@ -652,7 +652,7 @@ $ argo submit workflow.yaml       # submit a workflow spec to Kubernetes
 
 As the pipeline runs, you can monitor its progress using the Argo Workflows CLI. This will show you which steps have completed successfully and which are still running. Below are some useful commands, for more information about the Argo Workflows CLI, please check out [the official Argo Workflows CLI documentation](https://argoproj.github.io/argo-workflows/walk-through/argo-cli/).
 
-``` bash title="Terminal Emulator"
+``` bash title="Terminal"
 $ argo list                       # list current workflows
 $ argo get workflow-xxx           # get info about a specific workflow
 $ argo logs workflow-xxx          # print the logs from a workflow
@@ -668,9 +668,9 @@ Once the pipeline has completed, you can retrieve the output data using the argo
 
     ``` python title="Saving Output Data" linenums="1"
     #!/usr/bin/env python
-    #
+    
     parser.add_argument("--output", default="model.pkl", help="Path to output model file.")
-    #
+    
     # Save model to file
     joblib.dump(clf, args.output)
     ```
@@ -679,9 +679,9 @@ Once the pipeline has completed, you can retrieve the output data using the argo
 
     ``` r title="Saving Output Data" linenums="1"
     #!/usr/bin/env Rscript
-    #
+    
     output_file <- ifelse(length(args) > 1, args[2], "model.rds")
-    #
+    
     # Save model to file
     saveRDS(clf, output_file)
     ```
@@ -700,6 +700,7 @@ Couler provides a simple, unified application programming interface for defining
 
 === "Couler"
     ``` py title="couler.py" linenums="1"
+    #!/usr/bin/env python
 
     # Prepare your system
     !pip config --user set global.index-url https://jfrog.aaw.cloud.statcan.ca/artifactory/api/pypi/pypi-remote/simple
@@ -756,6 +757,8 @@ Couler provides a simple, unified application programming interface for defining
     ```
 === "Hera"
     ``` py title="hera.py" linenums="1"
+    #!/usr/bin/env python
+
     # Prepare your system
     !pip config --user set global.index-url https://jfrog.aaw.cloud.statcan.ca/artifactory/api/pypi/pypi-remote/simple
     !pip install hera-workflows
