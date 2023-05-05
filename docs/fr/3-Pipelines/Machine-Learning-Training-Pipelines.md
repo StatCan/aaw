@@ -110,7 +110,7 @@ Une fois qu'une session JupyterLab est en cours d'exécution, vous devez importe
 
     # la seule bibliothèque dont vous aurez besoin pour accéder à SAS depuis Python
     import saspy
-     ```
+    ```
 === "SAS"
     ``` sas title="libraries.sas" linenums="1"
 
@@ -139,13 +139,13 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     data = data.dropna()  # Drop rows with missing values
     data = data.drop_duplicates()  # Drop duplicate rows
 
-     # Extraction de caractéristiques
-     X = data[['feature1', 'feature2', 'feature3']] # Sélectionnez les fonctionnalités pertinentes
+    # Extraction de caractéristiques
+    X = data[['feature1', 'feature2', 'feature3']] # Sélectionnez les fonctionnalités pertinentes
 
-     # Normalisation
-     scaler = StandardScaler() # Crée un objet scaler
-     X_norm = scaler.fit_transform(X) # Normaliser les valeurs des caractéristiques
-     ```
+    # Normalisation
+    scaler = StandardScaler() # Crée un objet scaler
+    X_norm = scaler.fit_transform(X) # Normaliser les valeurs des caractéristiques
+    ```
 === "R"
     ``` r title="load_data.R" linenums="1"
     #!/usr/bin/env Rscript
@@ -279,7 +279,7 @@ Avec la division des données, vous pouvez désormais définir et entraîner vot
 
     # Imprimer le score de précision sur les données de test
     print("Accuracy on test set: {:.3f}".format(model.score(X_test, y_test)))
-     ```
+    ```
 === "R"
     ``` r title="train.R" linenums="1"
     #!/usr/bin/env Rscript
@@ -288,10 +288,10 @@ Avec la division des données, vous pouvez désormais définir et entraîner vot
     library(caret)
 
     # Charger le jeu de données
-     data <- read.csv("my-dataset.csv")
+    data <- read.csv("my-dataset.csv")
 
-     # Définir la graine pour la reproductibilité
-     set.seed(123)
+    # Définir la graine pour la reproductibilité
+    set.seed(123)
 
     # Diviser l'ensemble de données en train et tester à l'aide de la fonction createDataPartition de caret
     train_index <- createDataPartition(data$target_variable, p = 0.7, list = FALSE)
@@ -326,24 +326,24 @@ Avec la division des données, vous pouvez désormais définir et entraîner vot
 
     # Diviser l'ensemble de données en train et tester
     train, test = sas.surveyselect(data=sas_df,
-                                method="SRS",
-                                seed=123,
-                                samprate=0.7,
-                                outall=True,
-                                strata="target_variable",
-                                partind=True)
+                                   method="SRS",
+                                   seed=123,
+                                   samprate=0.7,
+                                   outall=True,
+                                   strata="target_variable",
+                                   partind=True)
 
     # Former le modèle en utilisant la procédure HPFOREST
     model = sas.hpforest(data=train,
-                        target="target_variable",
-                        input="input_variable_1-input_variable_n",
-                        partition="rolevar",
-                        rolevars={"test": "0", "train": "1"},
-                        nominals=["input_variable_1-input_variable_n"],
-                        forestopts={"ntree": 100, "seed": 123})
+                         target="target_variable",
+                         input="input_variable_1-input_variable_n",
+                         partition="rolevar",
+                         rolevars={"test": "0", "train": "1"},
+                         nominals=["input_variable_1-input_variable_n"],
+                         forestopts={"ntree": 100, "seed": 123})
 
-     # Noter le modèle sur les données de test
-     prédictions = model.predict(newdata=test, out=pred_out)
+    # Noter le modèle sur les données de test
+    predictions = model.predict(newdata=test, out=pred_out)
 
     # Calculer le score de précision sur les données de test
     accuracy = sas.freq(data=predictions, tables="target_variable*p_target_variable", nocum=True, nocol=True)
@@ -411,21 +411,21 @@ Après avoir entraîné le modèle, vous devez évaluer ses performances sur l'e
 Enfin, vous pouvez déployer le modèle d'apprentissage automatique formé dans un environnement de production.
 
 === "Python"
-     ``` py title="deploy.py" linenums="1"
+    ``` py title="deploy.py" linenums="1"
 
-     ```
+    ```
 === "R"
-     ``` r title="deploy.R" linenums="1"
+    ``` r title="deploy.R" linenums="1"
 
-     ```
+    ```
 === "SASPy"
-     ``` py title="deploy.py" linenums="1"
+    ``` py title="deploy.py" linenums="1"
 
-     ```
+    ```
 === "SAS"
-     ``` sas title="deploy.sas" linenums="1"
+    ``` sas title="deploy.sas" linenums="1"
 
-     ```
+    ```
 
 ### Utilisation des workflows Argo
 
@@ -433,7 +433,7 @@ Enfin, vous pouvez déployer le modèle d'apprentissage automatique formé dans 
 
 <!-- prettier-ignore -->
 !!! info "Bonnes pratiques MLOps"
-     Argo Workflows est un excellent outil pour tous ceux qui cherchent à mettre en œuvre des pratiques MLOps et à rationaliser le processus de formation et de déploiement de modèles d'apprentissage automatique ou d'autres tâches de science des données telles que ETL.
+    Argo Workflows est un excellent outil pour tous ceux qui cherchent à mettre en œuvre des pratiques MLOps et à rationaliser le processus de formation et de déploiement de modèles d'apprentissage automatique ou d'autres tâches de science des données telles que ETL.
 
 **[Argo Workflows](https://argoproj.github.io/argo-workflows/)** est un moteur de workflow open source natif de conteneur pour orchestrer des tâches parallèles sur Kubernetes. Argo Workflows est implémenté en tant que Kubernetes CRD (Custom Resource Definition). Il est particulièrement bien adapté pour une utilisation dans les flux de travail d'apprentissage automatique et de science des données.
 
@@ -670,7 +670,7 @@ Une fois le pipeline terminé, vous pouvez récupérer les données de sortie à
 === "Python"
 
     ``` python title="Enregistrement des données de sortie" linenums="1"
-     #!/usr/bin/env python
+    #!/usr/bin/env python
      
     parser.add_argument("--output", default="model.pkl", help="Path to output model file.")
      
