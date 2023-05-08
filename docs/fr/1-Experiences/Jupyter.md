@@ -104,8 +104,4 @@ L'analyse des données est le processus d'examen et d'interprétation de grandes
 
 _Traiter les données à l'aide de R, Python ou Julia dans JupyterLab_
 
-<center>
-[![R, Python ou Julia dans JupyterLab](../images/jupyter_in_action.png)](../1-Experiments/Jupyter.md)
-</center>
-
 Le traitement des données à l'aide de R, Python ou Julia est simplifié grâce à l'espace de travail Advanced Analytics. Que vous débutiez dans l'analyse de données ou que vous soyez un data scientist expérimenté, notre plateforme prend en charge une gamme de langages de programmation pour répondre à vos besoins. Vous pouvez installer et exécuter des packages pour R ou Python pour effectuer des tâches de traitement de données telles que le nettoyage, la transformation et la modélisation des données. Si vous préférez Julia, notre plateforme offre également un support pour ce langage de programmation.
