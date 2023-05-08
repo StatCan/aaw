@@ -65,7 +65,7 @@ The AAW includes tools that allow data science users to open almost any file. Th
 
 ### How do I add other people to my namespace (for collaboration)?
 
-1. Do we need to stop any running instances in our notebooks when we’re not using it? If so, how do we do this? I checked the documentation and there is no guidelines on how to stop any running notebooks as a cost-saving measure.
+1. As the workspace owner you can add and remove contributors, this will allow them to access your workspaces.
 
 ### Are there any pre-loaded data (datasets) in AAW that we can access and use for both R and Python notebooks?
 
