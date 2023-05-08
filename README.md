@@ -65,7 +65,7 @@ The AAW includes tools that allow data science users to open almost any file. Th
 
 ### How do I add other people to my namespace (for collaboration)?
 
-1. As the workspace owner you can add and remove contributors, this will allow them to access your workspaces.
+- As the workspace owner you can add and remove contributors, this will allow them to access your workspaces.
 
 ### Are there any pre-loaded data (datasets) in AAW that we can access and use for both R and Python notebooks?
 
