@@ -1,6 +1,6 @@
 # Bienvenue dans l'espace de travail Advanced Analytics
 
-<centre>
+<center>
 ![Statistiques](images/statistiques-sur-la-lune.jpg)
 </center>
 
@@ -8,13 +8,13 @@
 
 _Bienvenue dans le monde de la science des données et de l'apprentissage automatique !_
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! info "Qu'est-ce que l'AAW?"
      **[Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/)** est une plateforme open source conçue pour les data scientists, les data stewards, les analystes et les chercheurs familiarisés avec les outils open source et le codage. Développé par des scientifiques de données pour des scientifiques de données, AAW fournit un environnement flexible qui permet aux praticiens avancés de faire leur travail en toute simplicité.
 
 L'AAW est une solution complète pour la science des données et l'analyse des données. Avec l'AAW, vous pouvez personnaliser les déploiements de serveurs de bloc-notes en fonction de vos besoins spécifiques en science des données. Nous avons un petit nombre d'images Docker personnalisées réalisées par notre équipe.
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! info "Qu'est-ce que Kubeflow ?"
      L'AAW est basé sur [Kubeflow](https://www.kubeflow.org/), une solution complète open source pour le déploiement et la gestion de flux de travail ML de bout en bout.
 
@@ -24,7 +24,7 @@ Quelle que soit l'étape à laquelle vous vous trouvez dans votre parcours en sc
 
 ## Premiers pas avec l'AAW
 
-<centre>
+<center>
 ![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 </center>
 
@@ -32,24 +32,24 @@ Quelle que soit l'étape à laquelle vous vous trouvez dans votre parcours en sc
 
 La page d'accueil du portail AAW est disponible uniquement pour les utilisateurs internes. Cependant, les utilisateurs externes disposant d'un compte cloud auquel le sponsor commercial a accordé l'accès peuvent accéder à la plate-forme via l'URL de la plate-forme d'analyse.
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! info annoter "Page d'accueil du portail AAW"
      - [**Page d'accueil du portail pour les employés de Statistique Canada**](https://www.statcan.gc.ca/data-analytics-service/aaw)
      - [**Page d'accueil du portail pour les utilisateurs externes**](https://analytics-platform.statcan.gc.ca/covid19)
 
 ### Compte Kubeflow
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! important "Attention Utilisateurs Externes!"
      Les utilisateurs externes à Statistique Canada auront besoin d'un compte infonuagique auquel l'entreprise commanditaire aura accès.
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! important "A l'attention des employés de Statistique Canada!"
      Les utilisateurs internes de Statistique Canada peuvent commencer immédiatement sans aucune procédure d'inscription supplémentaire, il suffit de se rendre sur [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca /).
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! note ""
-     <centre>
+     <center>
      [![Kubeflow est le cœur de l'AAW !](./images/Kubeflow.PNG)](https://kubeflow.aaw.cloud.statcan.ca/)
      <h3>**[👉 Cliquez ici pour configurer votre compte Kubeflow ! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**</h3>
      </center>
@@ -61,7 +61,7 @@ Kubeflow simplifie les tâches suivantes :
 - Création d'environnements personnalisables pour travailler avec des données avec un provisionnement de ressources contrôlé par l'utilisateur (CPU, GPU, RAM et stockage personnalisés).
 - Gestion des serveurs d'ordinateurs portables, y compris Ubuntu Desktop (via noVNC), R Studio, JupyterLab avec Python, R, Julia et SAS pour les employés de Statistique Canada.
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! info "Tableau de bord Kubeflow"
      - [**Kubeflow Dashboard**](https://kubeflow.aaw.cloud.statcan.ca/) Utilisez ce lien une fois que vous avez votre compte cloud !
 
@@ -69,7 +69,7 @@ La prise en main de l'Advanced Analytics Workspace (AAW) est simple et rapide. T
 
 ### Slack
 
-<centre>
+<center>
 [![Posez des questions relatives à la plate-forme sur Slack !](images/SlackAAW.PNG)](https://statcan-aaw.slack.com/)
 </center>
 
@@ -87,9 +87,9 @@ Alors n'hésitez pas : rejoignez notre **[canal Slack](https://statcan-aaw.slac
 
 Cliquez sur le lien, puis choisissez "Créer un compte" dans le coin supérieur droit.
 
-<!-- plus jolie-ignore -->
+<!-- prettier-ignore -->
 !!! note ""
-     <centre>
+     <center>
      ![Utilisez votre courriel @statcan.gc.ca!](images/SlackAAW2.png)
      <h3>Utilisez votre adresse de courriel @statcan.gc.ca afin que vous soyez automatiquement approuvé.</h3>
      </center>
