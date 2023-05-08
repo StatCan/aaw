@@ -92,8 +92,4 @@ Data analysis is the process of examining and interpreting large amounts of data
 
 _Process data using R, Python, or Julia in JupyterLab_
 
-<center>
-[![R, Python, or Julia in JupyterLab](../images/jupyter_in_action.png)](../1-Experiments/Jupyter.md)
-</center>
-
 Processing data using R, Python, or Julia is made easy with the Advanced Analytics Workspace. Whether you're new to data analysis or an experienced data scientist, our platform supports a range of programming languages to fit your needs. You can install and run packages for R or Python to perform data processing tasks such as data cleaning, transformation, and modeling. If you prefer Julia, our platform also offers support for this programming language.
