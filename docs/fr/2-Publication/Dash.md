@@ -27,7 +27,7 @@ Ceci est un exemple de mise en page avec figure et curseur de
 
 ![dash_plot](../images/plot.png)
 
-### Complot Dash
+### Plotly Dash
 
 _Publier avec des logiciels fabriqués au Canada._
 
