@@ -37,7 +37,7 @@ The AAW portal homepage is available for internal users only. However, external 
 The AAW Portal Documentation and Kubeflow Documentation provide helpful resources to get started with AAW. If you need further assistance, our Slack Support Channel is available for support.
 
 - 📗 AAW Portal Documentation
-  - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
+  - [https://statcan.github.io/aaw/](https://statcan.github.io/aaw/)
 - 📘 Kubeflow Documentation
   - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
 - 🤝 Slack Support Channel

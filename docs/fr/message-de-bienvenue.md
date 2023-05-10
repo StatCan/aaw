@@ -27,7 +27,7 @@ EAA est basé sur le projet Kubeflow qui est une solution complète open source 
 ### 💡 Aide
 
 - 📗 Documentation du portail EAA
-  - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
+  - [https://statcan.github.io/aaw/](https://statcan.github.io/aaw/)
 - 📘 Documentation sur Kubeflow
   - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)
 - 🤝 Canal de support Slack

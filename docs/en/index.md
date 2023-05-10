@@ -128,7 +128,7 @@ section.
 - Data Lakes (coming soon)
 
 - 📗 AAW Portal Documentation
-  - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
+  - [https://statcan.github.io/aaw/](https://statcan.github.io/aaw/)
 - 📘 Kubeflow Documentation
   - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
 - 🤝 Slack Support Channel

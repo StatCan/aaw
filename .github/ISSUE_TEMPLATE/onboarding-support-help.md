@@ -9,7 +9,7 @@ assignees: ''
 
 Before submitting your ticket did you first try the following?
 
-- [ ] Checked our wiki? https://statcan.github.io/daaas/
+- [ ] Checked our wiki? https://statcan.github.io/aaw/
 - [ ] Asked your questions in our Slack support channel?
       https://statcan-aaw.slack.com
 
