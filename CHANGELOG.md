@@ -117,4 +117,4 @@ Features / Updates:
 - Update for MinIO Server [RELEASE.2020-12-10T01-54-29Z](https://github.com/minio/minio/tree/RELEASE.2020-12-10T01-54-29Z)
   - Updated to RELEASE.2020-12-10T01-54-29Z of the MinIO Server image
 
-> **Note**: This was unfortunately a breaking change as we were initially using a very early alpha release. Please see the following issue for more information at [daaas-300](https://github.com/StatCan/daaas/issues/300)
+> **Note**: This was unfortunately a breaking change as we were initially using a very early alpha release. Please see the following issue for more information at [daaas-300](https://github.com/StatCan/aaw/issues/300)

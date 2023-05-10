@@ -8,7 +8,7 @@ docs_dir: docs/en
 site_dir: site/en
 
 repo_name: StatCan/daaas
-repo_url: https://github.com/StatCan/daaas
+repo_url: https://github.com/StatCan/aaw
 edit_uri: edit/master/docs/en
 
 theme:
@@ -58,7 +58,7 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/StatCan/daaas
+      link: https://github.com/StatCan/aaw
     - icon: fontawesome/brands/slack
       link: https://statcan-aaw.slack.com
 

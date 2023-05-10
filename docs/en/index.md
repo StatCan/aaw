@@ -140,4 +140,4 @@ If you require a quick onboarding demo session, need help, or have any questions
 
 ## Contributing
 
-If you have any bugs to report or features to request please do so via https://github.com/Statcan/daaas.
+If you have any bugs to report or features to request please do so via https://github.com/StatCan/aaw.

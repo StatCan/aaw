@@ -73,6 +73,6 @@ If you require a quick onboarding demo session, need help, or have any questions
 
 ## Frequently Asked Questions
 
-For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/daaas/blob/master/README.md).
+For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/aaw/blob/master/README.md).
 
 **Thank you for choosing Advanced Analytics Workspace!**
