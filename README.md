@@ -1,8 +1,8 @@
 <!-- markdownlint-disable no-bare-urls no-duplicate-header -->
 
-# Data Analytics as a Service
+# Advanced Analytics Workspace
 
-Data Analytics as a Service for the Government of Canada and external collaborators.
+Advanced Analytics Workspace for the Government of Canada and external collaborators.
 
 ## Frequently Asked Questions (FAQ)
 
