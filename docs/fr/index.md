@@ -113,7 +113,7 @@ Voici une liste d'outils que nous proposons :
    - 📈 R
    - 👩‍🔬 Julia
 - 🧮 Environnements de développement :
-   -Code VS
+   - Code VS
    - Studio R
    - Cahiers Jupyter
 - 🐧 Bureaux virtuels Linux pour des outils supplémentaires (🧫 OpenM++, 🌏 QGIS etc.)
