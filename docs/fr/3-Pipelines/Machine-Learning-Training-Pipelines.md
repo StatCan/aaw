@@ -1,4 +1,4 @@
-# Former des modèles d'apprentissage automatique sur l'AAW
+# Former des modèles d'apprentissage automatique sur l'ETAA
 
 <center>
 ![MLOps](../images/mlops.jpg)
@@ -10,13 +10,13 @@
 
 ## Pourquoi s'entraîner avec nous ?
 
-_L'entraînement des modèles d'apprentissage automatique sur l'Advanced Analytics Workspace (AAW) présente plusieurs avantages._
+_L'entraînement des modèles d'apprentissage automatique sur l'espace de travail d'analyse avancée (ETAA) présente plusieurs avantages._
 
-1. **Open Source :** L'AAW est une *plate-forme de données open source hébergée par Statistique Canada* qui fournit un accès sécurisé (Protégé B) à une variété de sources de données, y compris des données de recensement, des enquêtes et des dossiers administratifs. Ces données peuvent être utilisées pour former des modèles d'apprentissage automatique et générer des informations qui peuvent éclairer les décisions politiques et améliorer les processus métier.
+1. **Open Source :** L'ETAA est une *plate-forme de données open source hébergée par Statistique Canada* qui fournit un accès sécurisé (protégé B) à une variété de sources de données, y compris des données de recensement, des enquêtes et des dossiers administratifs. Ces données peuvent être utilisées pour former des modèles d'apprentissage automatique et générer des informations qui peuvent éclairer les décisions politiques et améliorer les processus métier.
 
-2. **Polyvalent :** L'AAW est *conçu pour gérer des ensembles de données volumineux et complexes*. Il donne accès à une gamme d'outils d'analyse avancés, dans le langage de votre choix, y compris *Python, R et SAS*, qui peuvent être utilisés pour prétraiter les données, former des modèles d'apprentissage automatique et générer des visualisations. *Parce que l'AAW exploite les technologies cloud, *les utilisateurs peuvent augmenter leur puissance de calcul selon leurs besoins*.
+2. **Polyvalent :** L'ETAA est *conçu pour gérer des ensembles de données volumineux et complexes*. Il donne accès à une gamme d'outils d'analyse avancés, dans le langage de votre choix, y compris *Python, R et SAS*, qui peuvent être utilisés pour prétraiter les données, former des modèles d'apprentissage automatique et générer des visualisations. *Parce que l'ETAA exploite les technologies cloud, *les utilisateurs peuvent augmenter leur puissance de calcul selon leurs besoins*.
 *
-3. **Sécurisé :** AAW est une *plate-forme sécurisée (Protégé B) qui respecte les normes les plus élevées en matière de confidentialité et de sécurité des données*. Les données peuvent être stockées et traitées sur la plateforme sans risque d'accès non autorisé ou de violation de données.
+3. **Sécurisé :** L'ETAA est une *plate-forme sécurisée (protégé B) qui respecte les normes les plus élevées en matière de confidentialité et de sécurité des données*. Les données peuvent être stockées et traitées sur la plateforme sans risque d'accès non autorisé ou de violation de données.
 
 ## MLOps et pipelines de données
 
@@ -40,21 +40,21 @@ Les pipelines de données sont une série d'étapes qui permettent de déplacer 
 
 Les avantages de l'utilisation d'une approche conteneurisée pour la formation de modèles d'apprentissage automatique avec Argo Workflows incluent :
 
-1. **Reproductibilité :** La conteneurisation du modèle de machine learning et de ses dépendances garantit que l'environnement reste cohérent d'une exécution à l'autre, ce qui facilite la reproduction des résultats.
+1. **Reproductibilité :** La conteneurisation du modèle de l'apprentissage automatique et de ses dépendances garantit que l'environnement reste cohérent d'une exécution à l'autre, ce qui facilite la reproduction des résultats.
 
 2. **Évolutivité :** Argo Workflows peut orchestrer des tâches parallèles et des flux de travail complexes, ce qui facilite l'évolution du processus de formation selon les besoins.
 
 3. **Portabilité :** Les conteneurs peuvent être exécutés sur n'importe quelle plate-forme prenant en charge la conteneurisation, ce qui facilite le déplacement du processus de formation vers différents environnements ou fournisseurs de cloud.
 
-4. **Collaboration :** En transférant le conteneur vers un registre de conteneurs, les autres utilisateurs peuvent facilement télécharger et utiliser le conteneur à leurs propres fins, ce qui facilite la collaboration sur des projets de machine learning.
+4. **Collaboration :** En transférant le conteneur vers un registre de conteneurs, les autres utilisateurs peuvent facilement télécharger et utiliser le conteneur à leurs propres fins, ce qui facilite la collaboration sur des projets de l'apprentissage automatique.
 
-Les flux de travail Argo et la conteneurisation offrent une approche puissante et flexible pour la formation de modèles d'apprentissage automatique. En tirant parti de ces outils, les scientifiques des données et les ingénieurs en apprentissage automatique peuvent créer, déployer et gérer des workflows d'apprentissage automatique avec facilité et reproductibilité.
+Les flux de travail Argo et la conteneurisation offrent une approche puissante et flexible pour la formation de modèles d'apprentissage automatique. En tirant parti de ces outils, les data scientists et les ingénieurs en apprentissage automatique peuvent créer, déployer et gérer des workflows d'apprentissage automatique avec facilité et reproductibilité.
 
 ## Comment former des modèles
 
-Il existe plusieurs façons de former des modèles d'apprentissage automatique et ce n'est pas à nous de dire à qui que ce soit comment le faire. Cela étant dit, nous avons fourni ci-dessous quelques guides sur la façon de former des modèles d'apprentissage automatique à l'aide des outils disponibles sur l'AAW. Le premier tutoriel concerne la formation d'un modèle simple directement dans un notebook JupyterLab. Le deuxième tutoriel suppose que l'utilisateur est plus avancé et souhaite définir un pipeline MLOps pour former des modèles à l'aide d'Argo Workflows.
+Il existe plusieurs façons de former des modèles d'apprentissage automatique et ce n'est pas à nous de dire à qui que ce soit comment le faire. Cela étant dit, nous avons fourni ci-dessous quelques guides sur la façon de former des modèles d'apprentissage automatique à l'aide des outils disponibles sur l'ETAA. Le premier tutoriel concerne la formation d'un modèle simple directement dans un notebook JupyterLab. Le deuxième tutoriel suppose que l'utilisateur est plus avancé et souhaite définir un pipeline MLOps pour former des modèles à l'aide d'Argo Workflows.
 
-### Créer un serveur de bloc-notes sur l'AAW
+### Créer un serveur de bloc-notes sur l'ETAA
 
 <!-- prettier-ignore -->
 !!! info "Serveurs portables"
@@ -66,9 +66,9 @@ Il existe plusieurs façons de former des modèles d'apprentissage automatique e
 
 <!-- prettier-ignore -->
 !!! info "JupyterLab est populaire"
-    La formation de modèles d'apprentissage automatique avec JupyterLab est une approche populaire parmi les scientifiques des données et les ingénieurs en apprentissage automatique.
+    La formation de modèles d'apprentissage automatique avec JupyterLab est une approche populaire parmi les data scientists et les ingénieurs en apprentissage automatique.
 
-Vous trouverez ici les étapes nécessaires pour former un modèle d'apprentissage automatique avec JupyterLab sur l'AAW. Parce que nous sommes un environnement multilingue, nous avons fait de notre mieux pour fournir des exemples de code dans nos langages les plus populaires, `Python`, `R` et `SAS`.
+Vous trouverez ici les étapes nécessaires pour former un modèle d'apprentissage automatique avec JupyterLab sur l'ETAA. Parce que nous sommes un environnement multilingue, nous avons fait de notre mieux pour fournir des exemples de code dans nos langages les plus populaires, `Python`, `R` et `SAS`.
 
 #### 1. Importez les bibliothèques requises
 
@@ -128,14 +128,14 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     ``` py title="load_data.py" linenums="1"
     #!/usr/bin/env python
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     import pandas as pd
     from sklearn.preprocessing import StandardScaler
 
     # Charger des données à partir d'un fichier CSV
     data = pd.read_csv('data.csv')
 
-    # Nettoyage des données ! Beaucoup plus peut être fait, c'est basique
+    # Nettoyage des données ! Beaucoup plus peut être fait, c'est un principe de base
     data = data.dropna()  # Drop rows with missing values
     data = data.drop_duplicates()  # Drop duplicate rows
 
@@ -150,7 +150,7 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     ``` r title="load_data.R" linenums="1"
     #!/usr/bin/env Rscript
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     library(tidyverse)
     library(janitor)
     
@@ -174,7 +174,7 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     ``` py title="load_data.py" linenums="1"
     #!/usr/bin/env python
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     import saspy
 
     # Démarrez une session SAS et vérifiez les informations de configuration
@@ -188,21 +188,21 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     /* Lecture d'un fichier délimité par des virgules avec une extension .csv */
     /* */
     /* Puisque la valeur DBMS= est CSV, vous n'avez pas besoin d'utiliser le DELIMITER= */
-    /* déclaration. Par défaut, il est supposé que les noms de variables sont sur le premier */
+    /* déclaration.Par défaut, il est supposé que les noms de variables sont sur la première */
     /* ligne, l'instruction GETNAMES= n'est donc pas requise. */
     /* */
     /* Créer un fichier de test délimité par des virgules à lire en utilisant PROC IMPORT ci-dessous. */
 
     /* Charger les données d'un fichier CSV */
-    proc importation
-        fichier de données='données.csv'
-        sortie=données
+    proc import
+        datafile='data.csv'
+        out=data
         dbms=csv
-        remplacer;
-    courir;
+        replace; 
+    run;
 
     /* Afficher les données */
-    proc impression ;
+    proc print ;
     courir;
     ```
 
@@ -214,7 +214,7 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     ``` py title="train_test.py" linenums="1"
     #!/usr/bin/env python
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     import pandas as pd
     from sklearn.model_selection import train_test_split
 
@@ -226,7 +226,7 @@ Ensuite, vous devez charger et prétraiter les données que vous utiliserez pour
     ``` r title="train_test.R" linenums="1"
     #!/usr/bin/env Rscript
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     library(caret)
 
     # Charger le jeu de données
@@ -263,11 +263,11 @@ Avec la division des données, vous pouvez désormais définir et entraîner vot
     ``` py title="train.py" linenums="1"
     #!/usr/bin/env python
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.model_selection import train_test_split
 
-    # Charger le jeu de données
+    # Charger les ensembles de données
     data = pd.read_csv("my-dataset.csv")
 
     # Diviser l'ensemble de données en train et tester
@@ -284,10 +284,10 @@ Avec la division des données, vous pouvez désormais définir et entraîner vot
     ``` r title="train.R" linenums="1"
     #!/usr/bin/env Rscript
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     library(caret)
 
-    # Charger le jeu de données
+    # Charger l'ensembles de données
     data <- read.csv("my-dataset.csv")
 
     # Définir la graine pour la reproductibilité
@@ -311,17 +311,17 @@ Avec la division des données, vous pouvez désormais définir et entraîner vot
     ``` py title="train.py" linenums="1"
     #!/usr/bin/env python
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     import saspy
     import pandas as pd
 
     # Établir une connexion à une session SAS
     sas = saspy.SASsession()
 
-    # Charger le jeu de données
+    # Charger l'ensembles de données
     data = pd.read_csv("my-dataset.csv")
 
-    # Télécharger le jeu de données sur SAS
+    # Télécharger l'ensemble de données sur SAS
     sas_df = sas.df2sd(data, "mydata")
 
     # Diviser l'ensemble de données en train et tester
@@ -435,7 +435,7 @@ Enfin, vous pouvez déployer le modèle d'apprentissage automatique formé dans 
 !!! info "Bonnes pratiques MLOps"
     Argo Workflows est un excellent outil pour tous ceux qui cherchent à mettre en œuvre des pratiques MLOps et à rationaliser le processus de formation et de déploiement de modèles d'apprentissage automatique ou d'autres tâches de science des données telles que ETL.
 
-**[Argo Workflows](https://argoproj.github.io/argo-workflows/)** est un moteur de workflow open source natif de conteneur pour orchestrer des tâches parallèles sur Kubernetes. Argo Workflows est implémenté en tant que Kubernetes CRD (Custom Resource Definition). Il est particulièrement bien adapté pour une utilisation dans les flux de travail d'apprentissage automatique et de science des données.
+**[Argo Workflows](https://argoproj.github.io/argo-workflows/)** est un engin de workflow open source natif de conteneur pour orchestrer des tâches parallèles sur Kubernetes. Argo Workflows est implémenté en tant que Kubernetes CRD (Custom Resource Definition). Il est particulièrement bien adapté pour une utilisation dans les flux de travail d'apprentissage automatique et de science des données.
 
 Argo Workflows vous permet de
 
@@ -453,7 +453,7 @@ ce qui facilite la gestion de l'ensemble du pipeline d'apprentissage automatique
      <h3>Flux de travail Argo</h3>
      </center>
 
-Vous trouverez ci-dessous les étapes pour former un modèle d'apprentissage automatique à l'aide d'Argo Workflows sur l'AAW.
+Vous trouverez ci-dessous les étapes pour former un modèle d'apprentissage automatique à l'aide d'Argo Workflows sur l'ETAA.
 
 #### 1. Écrivez un script pour entraîner votre modèle
 
@@ -545,7 +545,7 @@ Vous aurez besoin d'un Dockerfile qui inclut toutes les dépendances nécessaire
    - `scikit-learn`, `pandas` ou `numpy` si vous utilisez `Python`
    - `caret`, `janitor` et `tidyverse` si vous utilisez `R`
 - vos propres bibliothèques ou scripts personnalisés
-- le code de votre modèle de machine learning sous la forme d'un script [comme dans l'exemple ci-dessus](#1-write-a-script-to-train-your-model).
+- le code de votre modèle de l'apprentissage automatique sous la forme d'un script [comme dans l'exemple ci-dessus](#1-write-a-script-to-train-your-model).
 
 Utilisez le `Dockerfile` suivant comme point de départ pour vos projets `R` et `Python`.
 
@@ -691,7 +691,7 @@ Une fois le pipeline terminé, vous pouvez récupérer les données de sortie à
 
 ### Exemples d'utilisation de SDK basés sur Argo Workflows
 
-Si vous préférez utiliser un framework de niveau supérieur, nous avons `Couler` et `Hera`. Ces frameworks rendent la création et la gestion de flux de travail complexes plus accessibles à un public plus large.
+Si vous préférez utiliser un cadre de niveau supérieur, nous avons `Couler` et `Hera`. Ces cadres rendent la création et la gestion de flux de travail complexes plus accessibles à un public plus large.
 
 #### Hera
 
@@ -706,14 +706,14 @@ Couler fournit une interface de programmation d'application simple et unifiée p
     #!/usr/bin/env python
 
     # Préparez votre système
-    !pip config --user set global.index-url https://jfrog.aaw.cloud.statcan.ca/artifactory/api/pypi/pypi-remote/simple
+    !pip config --user set global.index-url https://jfrog.ETAA.cloud.statcan.ca/artifactory/api/pypi/pypi-remote/simple
     !python3 -m pip install git+https://github.com/couler-proj/couler --ignore-installed
 
     # Définir la variable globale pour plus de commodité
 
     NAMESPACE = "<your-namespace>"
 
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     import json
     import random
 
@@ -764,16 +764,16 @@ Couler fournit une interface de programmation d'application simple et unifiée p
     #!/usr/bin/env python
 
     # Préparez votre système
-    !pip config --user set global.index-url https://jfrog.aaw.cloud.statcan.ca/artifactory/api/pypi/pypi-remote/simple
+    !pip config --user set global.index-url https://jfrog.ETAA.cloud.statcan.ca/artifactory/api/pypi/pypi-remote/simple
     !pip install hera-workflows
     
-    # Importer les packages nécessaires
+    # Importer les paquets nécessaires
     import hera
     from hera import Task, Workflow
 
      # Configurer Hera
     hera.global_config.GlobalConfig.token = "<your-token>"
-    hera.global_config.GlobalConfig.host = "https://argo-workflows.aaw-dev.cloud.statcan.ca:443"
+    hera.global_config.GlobalConfig.host = "https://argo-workflows.ETAA-dev.cloud.statcan.ca:443"
     hera.global_config.GlobalConfig.namespace = "<your-namespace>"
     hera.global_config.GlobalConfig.service_account_name = "<your-account-name>"
 
@@ -790,6 +790,7 @@ Couler fournit une interface de programmation d'application simple et unifiée p
 
     def tails():
         print("it was tails")
+
 
     # Définir le flux de travail
     with Workflow("coin-flip") as w:
@@ -814,7 +815,7 @@ Couler fournit une interface de programmation d'application simple et unifiée p
 
 ### Ressources supplémentaires pour les workflows Argo
 
-Des exemples de workflows Argo Workflows peuvent être trouvés dans les référentiels Github suivants :
+Des exemples de workflows Argo Workflows peuvent être trouvés dans les répos Github suivants :
 
 - [Documentation Argo Workflows](https://argoproj.github.io/argo-workflows/)
 - [Référence Argo CLI] (https://argoproj.github.io/argo-workflows/walk-through/argo-cli/)
