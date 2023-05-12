@@ -1,13 +1,13 @@
 # Aperçu
 
-Dash est un excellent outil utilisé par beaucoup pour l'analyse de données, l'exploration de données,
-visualisation, modélisation, contrôle des instruments et création de rapports.
+Dash est un excellent outil utilisé par beaucoup pour l'analyse et l'exploration de données,
+la visualisation, la modélisation, le contrôle des instruments et la création de rapports.
 
 L'exemple suivant illustre une application Dash hautement réactive et personnalisée
 avec peu de code.
 
 <!-- prettier-ignore -->
-!!! danger "Exécution de votre serveur Notebook et accès au port"
+!!! note "Exécution de votre serveur bloc-note et accès au port"
      Lorsque vous exécutez un outil de votre Jupyter Notebook qui publie un site Web sur un port,
      vous ne pourrez pas simplement y accéder depuis `http://localhost:5000/` car
      normalement suggéré dans la sortie lors de l'exécution de l'application Web.

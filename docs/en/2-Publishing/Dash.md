@@ -7,7 +7,7 @@ The following example demonstrates a highly reactive and customised Dash app
 with little code.
 
 <!-- prettier-ignore -->
-!!! danger "Running your Notebook Server and accessing the port"
+!!! note "Running your Notebook Server and accessing the port"
     When running any tool from your Jupyter Notebook that posts a website to a port,
     you will not be able to simply access it from `http://localhost:5000/` as
     normally suggested in the output upon running the web-app.
