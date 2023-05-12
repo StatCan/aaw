@@ -14,7 +14,7 @@ _Publier des graphismes de qualité professionnelle_
 
 [![InteractiveDashboard](../images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
 
-R Shiny est un framework d'application Web open source qui permet aux data scientists et aux analystes de créer des tableaux de bord et des visualisations de données interactifs basés sur le Web à l'aide du langage de programmation R. L'un des principaux avantages de R Shiny est qu'il offre un moyen simple de créer des tableaux de bord interactifs de haute qualité sans avoir besoin d'une expertise approfondie en développement Web. Avec R Shiny, les scientifiques des données peuvent tirer parti de leurs compétences en codage R pour créer des applications Web dynamiques, basées sur les données, qui peuvent être facilement partagées avec les parties prenantes.
+R Shiny est un framework d'application Web open source qui permet aux data scientists et aux analystes de créer des tableaux de bord et des visualisations de données interactifs basés sur le Web à l'aide du langage de programmation R. L'un des principaux avantages de R Shiny est qu'il offre un moyen simple de créer des tableaux de bord interactifs de haute qualité sans avoir besoin d'une expertise approfondie en développement Web. Avec R Shiny, les data scientists peuvent tirer parti de leurs compétences en codage R pour créer des applications Web dynamiques, basées sur les données, qui peuvent être facilement partagées avec les acteurs.
 
 Un autre avantage de R Shiny est qu'il prend en charge une variété de visualisations de données qui peuvent être facilement personnalisées pour répondre aux besoins du projet. Les utilisateurs peuvent créer une large gamme de diagrammes et de graphiques, allant de simples diagrammes à barres et nuages de points à des cartes thermiques et des graphiques de réseau plus complexes. De plus, R Shiny prend en charge une variété de widgets interactifs qui permettent aux utilisateurs de manipuler et d'explorer des données en temps réel.
 
@@ -26,7 +26,7 @@ Utilisez **[R-Shiny](/2-Publishing/R-Shiny/)** pour créer des applications Web 
 
 # R Éditeur d'interface utilisateur brillant
 
-Le script Rscript suivant installe les packages requis pour exécuter "shinyuieditor" sur l'AAW. Il commence par installer les packages R nécessaires et utilise `conda` pour installer `yarn`.
+Le script Rscript suivant installe les packages requis pour exécuter "shinyuieditor" sur l'ETAA. Il commence par installer les packages R nécessaires et utilise `conda` pour installer `yarn`.
 
 Une fois l'installation terminée, vous pouvez accéder au code de votre application dans `./my-app`
 
@@ -97,7 +97,7 @@ Toute modification que vous apportez au code apparaîtra immédiatement dans le 
 
 ![image](https://user-images.githubusercontent.com/8212170/229637972-b4a263f5-27f0-4160-8b43-9250ace72999.png)
 
-## Publication sur l'AAW
+## Publication sur l'ETAA
 
 ### Envoyez simplement une pull request !
 
