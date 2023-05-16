@@ -1,5 +1,5 @@
 site_name: Espace d'analyse avancée
-site_url: https://statcan.github.io/daaas/fr/
+site_url: https://statcan.github.io/aaw/fr/
 site_description: User guide for the AAW
 copyright: Copyright &copy; 2023 Statistics Canada
 
@@ -7,7 +7,7 @@ docs_dir: docs/fr
 site_dir: site/fr
 
 repo_name: StatCan/daaas
-repo_url: https://github.com/StatCan/daaas
+repo_url: https://github.com/StatCan/aaw
 edit_uri: edit/master/docs/fr
 
 plugins:
@@ -55,7 +55,7 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/StatCan/daaas
+      link: https://github.com/StatCan/aaw
     - icon: fontawesome/brands/slack
       link: https://statcan-eaa.slack.com
 
