@@ -13,7 +13,7 @@
 
 The ArcGIS Enterprise Portal can be accessed in either the AAW or CAE using the API, from any service which leverages the Python programming language. 
 
-For example, in AAW and the use of [Jupyter Notebooks](https://statcan.github.io/daaas/en/1-Experiments/Jupyter/) within the space, or in CAE the use of [Databricks](https://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
+For example, in AAW and the use of [Jupyter Notebooks](https://statcan.github.io/aaw/en/1-Experiments/Jupyter/) within the space, or in CAE the use of [Databricks](https://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
 
 [The DAS GAE ArcGIS Enterprise Portal can be accessed directly here](https://geoanalytics.cloud.statcan.ca/portal)
 

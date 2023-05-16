@@ -37,7 +37,7 @@ The AAW portal homepage is available for internal users only. However, external 
 The AAW Portal Documentation and Kubeflow Documentation provide helpful resources to get started with AAW. If you need further assistance, our Slack Support Channel is available for support.
 
 - 📗 AAW Portal Documentation
-  - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
+  - [https://statcan.github.io/aaw/](https://statcan.github.io/aaw/)
 - 📘 Kubeflow Documentation
   - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
 - 🤝 Slack Support Channel
@@ -73,6 +73,6 @@ If you require a quick onboarding demo session, need help, or have any questions
 
 ## Frequently Asked Questions
 
-For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/daaas/blob/master/README.md).
+For frequently asked questions, please refer to the FAQ section in our Github repository, located [here](https://github.com/StatCan/aaw/blob/master/README.md).
 
 **Thank you for choosing Advanced Analytics Workspace!**

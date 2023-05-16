@@ -26,7 +26,7 @@ AAW is based on the Kubeflow project which is an open source comprehensive solut
 ### 💡 Help
 
 - 📗 AAW Portal Documentation
-  - [https://statcan.github.io/daaas/](https://statcan.github.io/daaas/)
+  - [https://statcan.github.io/aaw/](https://statcan.github.io/aaw/)
 - 📘 Kubeflow Documentation
   - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
 - 🤝 Slack Support Channel
@@ -60,6 +60,6 @@ If you would like a quick Onboarding Demo session or require any help or have an
 
 ## FAQ
 
-- Frequently Asked Questions are located [here](https://github.com/StatCan/daaas/blob/master/README.md).
+- Frequently Asked Questions are located [here](https://github.com/StatCan/aaw/blob/master/README.md).
 
 Thank you!
