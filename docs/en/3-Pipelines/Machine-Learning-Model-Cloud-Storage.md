@@ -14,7 +14,6 @@ In addition to its robust security features, the AAW cloud storage environment i
 
 Storing machine learning models in a protected cloud storage environment on the Advanced Analytics Workspace provides a secure, scalable, and flexible solution for managing and protecting sensitive data. By leveraging the cloud storage capabilities provided by the AAW platform, data scientists and machine learning engineers can focus on building and deploying their models with confidence, knowing that their data is protected and secure.
 
-
 ## Cloud Storage
 
 <!-- prettier-ignore -->
