@@ -10,20 +10,20 @@
       
       
       
-        <link rel="canonical" href="https://statcan.github.io/aaw/fr/4-Collaboration/Demander-EspaceDeNom/">
+        <link rel="canonical" href="https://statcan.github.io/aaw/fr/3-Pipelines/Machine-Learning-Model-Serving/">
       
       
-        <link rel="prev" href="../Aper%C3%A7u/">
+        <link rel="prev" href="../Machine-Learning-Training-Pipelines/">
       
       
-        <link rel="next" href="../Environnement-Analyse-Geospatiale/">
+        <link rel="next" href="../../4-Collaboration/Aper%C3%A7u/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
-        <title>Demander un espace de nom - Espace d'analyse avancée</title>
+        <title>Model Serving - Espace d'analyse avancée</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apercu" class="md-skip">
+        <a href="#introduction-au-modele-de-service" class="md-skip">
           Aller au contenu
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Demander un espace de nom
+              Model Serving
             
           </span>
         </div>
@@ -210,13 +210,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../3-Pipelines/Machine-Learning-Training-Pipelines/" class="md-tabs__link">
+      <a href="../Machine-Learning-Training-Pipelines/" class="md-tabs__link md-tabs__link--active">
         Pipelines
       </a>
     </li>
@@ -226,15 +228,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Aper%C3%A7u/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../4-Collaboration/Aper%C3%A7u/" class="md-tabs__link">
         Collaboration
       </a>
     </li>
@@ -536,14 +536,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -552,7 +554,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Pipelines
@@ -565,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-Pipelines/Machine-Learning-Training-Pipelines/" class="md-nav__link">
+      <a href="../Machine-Learning-Training-Pipelines/" class="md-nav__link">
         Kubeflow Pipelines
       </a>
     </li>
@@ -579,73 +581,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3-Pipelines/Machine-Learning-Training-Pipelines/" class="md-nav__link">
+      <a href="../Machine-Learning-Training-Pipelines/" class="md-nav__link">
         PaaS Integration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../3-Pipelines/Machine-Learning-Model-Serving/" class="md-nav__link">
-        Model Serving
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          Collaboration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Collaboration
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aper%C3%A7u/" class="md-nav__link">
-        Aperçu
       </a>
     </li>
   
@@ -667,10 +604,97 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Model Serving
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Demander un espace de nom
+        Model Serving
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-servir-avec-nous" class="md-nav__link">
+    Pourquoi servir avec nous ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noyau-de-seldon" class="md-nav__link">
+    Noyau de Seldon
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Collaboration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Collaboration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Collaboration/Aper%C3%A7u/" class="md-nav__link">
+        Aperçu
+      </a>
     </li>
   
 
@@ -682,7 +706,21 @@
   
   
     <li class="md-nav__item">
-      <a href="../Environnement-Analyse-Geospatiale/" class="md-nav__link">
+      <a href="../../4-Collaboration/Demander-EspaceDeNom/" class="md-nav__link">
+        Demander un espace de nom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Collaboration/Environnement-Analyse-Geospatiale/" class="md-nav__link">
         EAG
       </a>
     </li>
@@ -808,6 +846,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pourquoi-servir-avec-nous" class="md-nav__link">
+    Pourquoi servir avec nous ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noyau-de-seldon" class="md-nav__link">
+    Noyau de Seldon
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -824,33 +884,36 @@
   
 
 
-<h1 id="apercu">Aperçu<a class="headerlink" href="#apercu" title="Permanent link">&para;</a></h1>
-<p>Par défaut, tout le monde obtient son propre espace de nom personnel,
-<code>prénom-nom</code>. Si vous souhaitez collaborer avec votre équipe, vous pouvez
-<a href="./">demander un Espace de nom</a> à
-<a href="../Aper%C3%A7u/#share-a-namespace-in-kubeflow">partager</a>.</p>
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<h2 id="demander-un-espace-de-nom">Demander un espace de nom<a class="headerlink" href="#demander-un-espace-de-nom" title="Permanent link">&para;</a></h2>
-<p>Pour créer un espace de noms pour une équipe, accédez au portail AAW. <strong>Cliquez
-sur le &#8942; menu sur
-<a href="https://analytics-platform.statcan.gc.ca/">la section Kubeflow du portail</a></strong>.</p>
-<p><img alt="Le menu hamburger à droite de Kubeflow sur le portail" src="../images/KubeflowNamespace.PNG" /></p>
-<p>Entrez le nom que vous demandez et soumettez la demande. Veillez à n'utiliser
-que lettres minuscules plus tirets.
-<img alt="Soumettez votre demande d'espace de noms partagé" src="../images/KubeflowNamespace2.png" /></p>
-<!-- prettier-ignore -->
-<p>!!! avertissement "L'espace de noms ne peut pas avoir de caractères spéciaux autres que  <br />
-    des traits d'union"
-    Le nom de l'espace de noms ne doit être composé que de lettres minuscules « a-z » avec des tirets. Sinon,l'espace de noms ne sera pas créé.</p>
-<p><strong>Vous recevrez une notification par e-mail lorsque l'espace de noms sera
-créé.</strong> Une fois l'espace de noms partagé est créé, vous pouvez y accéder comme
-n'importe quel autre l'espace de noms que vous avez via l'interface utilisateur
-de Kubeflow, comme illustré ci-dessous. Vous serez alors capable de
-<a href="../Aper%C3%A7u/#share-a-namespace-in-kubeflow">partager et gérer</a> à votre espace de
-nom.</p>
-<p>Pour changer d'espace de noms, jetez un œil en haut de votre fenêtre, juste à
-droite du logo Kubeflow.</p>
-<p><img alt="Select your Namespace" src="../../images/kubeflow_manage_contributors.png" /></p>
+<h1 id="introduction-au-modele-de-service">Introduction au modèle de service<a class="headerlink" href="#introduction-au-modele-de-service" title="Permanent link">&para;</a></h1>
+<p>Dans le contexte des gouvernements, servir des modèles d'apprentissage automatique signifie rendre les modèles formés disponibles pour être utilisés par d'autres applications et systèmes. Cela peut inclure la réalisation de prédictions ou de classifications basées sur les données d'entrée, ou la fourniture d'informations et de recommandations basées sur les résultats de l'analyse des données.</p>
+<p>Servir des modèles d'apprentissage automatique dans un contexte gouvernemental soulève des questions importantes liées à la confidentialité des données. Les agences gouvernementales sont souvent responsables de la collecte et de la gestion des données personnelles sensibles, telles que les dossiers médicaux, les données financières et les casiers judiciaires. Lors de la diffusion de modèles d'apprentissage automatique, il est essentiel de s'assurer que ces données sont protégées et que leur accès est strictement contrôlé.</p>
+<p>Pour répondre à ces préoccupations, les agences gouvernementales doivent mettre en œuvre des mesures solides de confidentialité et de sécurité des données lorsqu'elles servent des modèles d'apprentissage automatique. Cela pourrait inclure le chiffrement des données au repos et en transit, la mise en œuvre de contrôles d'accès et d'authentification des utilisateurs, et la surveillance régulière des violations de données et des vulnérabilités.</p>
+<p>En plus de la confidentialité et de la sécurité des données, il est également important de prendre en compte les implications éthiques de servir des modèles d'apprentissage automatique dans un contexte gouvernemental. Les modèles d'apprentissage automatique peuvent être biaisés ou discriminatoires, entraînant un traitement injuste de certains groupes de personnes. Pour atténuer ces risques, les agences gouvernementales doivent soigneusement évaluer et surveiller leurs modèles d'apprentissage automatique, et prendre des mesures pour lutter contre les préjugés ou la discrimination qui pourraient survenir.</p>
+<p>Dans l'ensemble, servir des modèles d'apprentissage automatique dans un contexte gouvernemental nécessite un examen attentif de la confidentialité des données, de la sécurité et des préoccupations éthiques. En mettant en œuvre des mesures solides pour protéger les données personnelles et prévenir les préjugés, les agences gouvernementales peuvent tirer parti de la puissance de l'apprentissage automatique pour prendre de meilleures décisions et améliorer les résultats pour les citoyens tout en maintenant la confiance et la transparence.</p>
+<h2 id="pourquoi-servir-avec-nous">Pourquoi servir avec nous ?<a class="headerlink" href="#pourquoi-servir-avec-nous" title="Permanent link">&para;</a></h2>
+<p>Servir des modèles d'apprentissage automatique avec l'espace de travail d'analyse avancée (l'ETAA) présente plusieurs avantages. Premièrement, l'ETAA est une plate-forme d'analyse de données open source qui donne accès à une variété d'outils d'analyse avancés, notamment Python, R et SAS. Cela facilite le déploiement de modèles d'apprentissage automatique et leur intégration dans les flux de travail existants.</p>
+<p>Deuxièmement, l'ETAA prend en charge plusieurs frameworks MLOps, notamment Couler, Seldon et Argo Workflows. Ces frameworks fournissent une gamme de fonctionnalités, notamment la gestion des versions de modèle, le service de modèle et la surveillance de modèle, qui simplifient le processus de déploiement et de gestion des modèles d'apprentissage automatique en production.</p>
+<p>Troisièmement, l'ETAA fournit une plate-forme sécurisée et évolutive pour servir les modèles d'apprentissage automatique avec le statut protégé B. Les modèles peuvent être servis à l'aide d'environnements conteneurisés, tels que Docker, qui offrent un niveau élevé d'isolement et de sécurité. L'ETAA fournit également un accès aux ressources de cloud computing, permettant aux utilisateurs d'augmenter leur puissance de calcul selon les besoins pour gérer des volumes élevés de demandes.</p>
+<p>Enfin, l'ETAA est une plateforme collaborative qui permet aux utilisateurs de partager du code et des données avec d'autres chercheurs et analystes. Cela favorise une communauté d'utilisateurs qui peuvent apprendre du travail des autres et collaborer sur des projets qui nécessitent des capacités d'analyse avancées.</p>
+<p>En résumé, servir des modèles d'apprentissage automatique avec l'espace de travail d'analyse avancée donne accès à des outils d'analyse avancés, à plusieurs cadres MLOps, à une plate-forme protégé B sécurisée et évolutive et à une communauté collaborative d'utilisateurs, ce qui en fait une plate-forme idéale pour les scientifiques et les analystes de données qui veulent pour déployer et gérer des modèles d'apprentissage automatique en production.</p>
+<h2 id="noyau-de-seldon">Noyau de Seldon<a class="headerlink" href="#noyau-de-seldon" title="Permanent link">&para;</a></h2>
+<p>Seldon Core est une plate-forme open source pour le déploiement, la mise à l'échelle et la surveillance des modèles d'apprentissage automatique sur Kubernetes. Il fournit un moyen simple et efficace de déployer des modèles d'apprentissage automatique en tant que microservices dans un environnement de production.</p>
+<p>Servir des modèles d'apprentissage automatique à l'aide de Seldon Core implique les étapes suivantes :</p>
+<ol>
+<li>
+<p>Conditionnement du modèle : la première étape consiste à conditionner le modèle d'apprentissage automatique formé dans une image de conteneur avec toutes les dépendances requises. Seldon Core prend en charge divers frameworks d'apprentissage automatique, notamment TensorFlow, PyTorch et Scikit-learn.</p>
+</li>
+<li>
+<p>Déploiement du modèle : une fois l'image du conteneur créée, l'étape suivante consiste à déployer le modèle sur Kubernetes à l'aide de Seldon Core. Cela implique de définir le fichier de configuration de déploiement, qui spécifie les ressources requises pour le déploiement, telles que le nombre de répliques et les ressources de calcul.</p>
+</li>
+<li>
+<p>Service de modèle : une fois le modèle déployé, Seldon Core expose un point de terminaison d'API REST qui peut être utilisé pour effectuer des prédictions. Les clients peuvent envoyer des requêtes au point de terminaison avec des données d'entrée, et le modèle renverra la sortie correspondante. Seldon Core prend également en charge divers modèles de déploiement, tels que le déploiement Canary et les tests A/B, pour permettre une expérimentation et des tests faciles de différents modèles.</p>
+</li>
+<li>
+<p>Surveillance des modèles : Seldon Core fournit diverses fonctionnalités de surveillance pour suivre les performances des modèles déployés. Cela inclut la surveillance en temps réel des métriques du modèle, telles que la latence et le débit, ainsi que la journalisation des données de demande et de réponse à des fins de débogage.</p>
+</li>
+</ol>
+<p>Seldon Core facilite la mise à disposition de modèles d'apprentissage automatique à grande échelle, avec une prise en charge de la haute disponibilité, de l'évolutivité et de la tolérance aux pannes. Il fournit également une intégration avec divers outils natifs de Kubernetes, tels qu'Istio et Prometheus, pour permettre une surveillance et une observabilité avancées.</p>
 
 
 
