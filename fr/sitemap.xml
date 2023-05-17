@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Overview/</loc>
+         <lastmod>2023-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://statcan.github.io/aaw/fr/3-Pipelines/PaaS-Integration/</loc>
          <lastmod>2023-05-17</lastmod>
          <changefreq>daily</changefreq>
