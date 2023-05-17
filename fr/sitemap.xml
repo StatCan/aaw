@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://statcan.github.io/aaw/fr/2-Publication/Overview/</loc>
+         <lastmod>2023-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/PowerBI/</loc>
          <lastmod>2023-05-17</lastmod>
          <changefreq>daily</changefreq>
