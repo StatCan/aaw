@@ -782,8 +782,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-das" class="md-nav__link">
-    En savoir plus sur l'environnement analytique géospatial (GAE) et les services DAS
+  <a href="#en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-sad" class="md-nav__link">
+    En savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
   </a>
   
 </li>
@@ -998,8 +998,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-das" class="md-nav__link">
-    En savoir plus sur l'environnement analytique géospatial (GAE) et les services DAS
+  <a href="#en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-sad" class="md-nav__link">
+    En savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
   </a>
   
 </li>
@@ -1030,17 +1030,17 @@
 </details>
 <h2 id="demarrage">Démarrage<a class="headerlink" href="#demarrage" title="Permanent link">&para;</a></h2>
 <!-- prettier-ignore -->
-<div class="admonition success">
+<div class="admonition succès">
 <p class="admonition-title">Conditions préalables</p>
 <ol>
-<li>Un projet intégré avec accès au portail DAS EAG ArcGIS</li>
+<li>Un projet intégré avec accès au portail SAD EAG ArcGIS</li>
 <li>Un identifiant client ArcGIS Portal (clé API)</li>
 </ol>
 </div>
-<p>Le portail ArcGIS Enterprise est accessible dans AAW ou CAE à l'aide de l'API, à partir de n'importe quel service qui exploite le langage de programmation Python. </p>
-<p>Par exemple, dans AAW et l'utilisation de <a href="https://statcan.github.io/aaw/en/1-Experiments/Jupyter/">Jupyter Notebooks</a> dans l'espace, ou pour CAE l'utilisation de <a href="https://statcan.github.io/cae-eac/en/DataBricks/">Databricks</a>, DataFactory, etc.</p>
+<p>Le portail ArcGIS Enterprise est accessible dans ETAA ou EAC à l'aide de l'API, à partir de n'importe quel service qui exploite le langage de programmation Python. </p>
+<p>Par exemple, dans ETAA et l'utilisation de <a href="https://statcan.github.io/aaw/en/1-Experiments/Jupyter/">Jupyter Notebooks</a> dans l'espace, ou pour EAC l'utilisation de <a href="https://statcan.github.io/cae-eac/en/DataBricks/">Databricks</a>, DataFactory, etc.</p>
 <p><a href="https://geoanalytics.cloud.statcan.ca/portal">Le portail DAS GAE ArcGIS Enterprise est accessible directement ici</a></p>
-<p><a href="https://statcan.github.io/daaas-dads-geo/english/portal/">Pour obtenir de l'aide sur l'auto-inscription en tant qu'utilisateur du portail géospatial DAS</a></p>
+<p><a href="https://statcan.github.io/daaas-dads-geo/english/portal/">Pour obtenir de l'aide sur l'auto-inscription en tant qu'utilisateur du portail géospatial SAD</a></p>
 <hr>
 
 <h2 id="utilisation-de-lapi-arcgis-pour-python">Utilisation de l'API ArcGIS pour Python<a class="headerlink" href="#utilisation-de-lapi-arcgis-pour-python" title="Permanent link">&para;</a></h2>
@@ -1055,7 +1055,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Importez les librairies nécessaires dont vous aurez besoin dans le Notebook.
+<p>Importez les librairies nécessaires dont vous aurez besoin dans le bloc-note.
     <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">Item</span>
 </span></code></pre></div></p>
@@ -1064,7 +1064,7 @@
 <p>Accéder au portail
    Votre groupe de projet recevra un identifiant client lors de l'intégration. Collez l'ID client entre les guillemets<code>client_id='######'</code>. </p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">gis</span> <span class="o">=</span> <span class="n">GIS</span><span class="p">(</span><span class="s2">&quot;https://geoanalytics.cloud.statcan.ca/portal&quot;</span><span class="p">,</span> <span class="n">client_id</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Successfully logged in as: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connexion réussie sous le nom de: &quot;</span> <span class="o">+</span> <span class="n">gis</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
 </span></code></pre></div>
 </li>
 <li>
@@ -1091,17 +1091,17 @@
 <hr>
 
 <h3 id="rechercher-du-contenu">Rechercher du contenu<a class="headerlink" href="#rechercher-du-contenu" title="Permanent link">&para;</a></h3>
-<p>Recherchez le contenu que vous avez hébergé sur le portail géo DAaaS. En utilisant la fonction "me", nous pouvons rechercher tout le contenu hébergé sur le compte. Il existe plusieurs façons de rechercher du contenu. Deux méthodes différentes sont décrites ci-dessous.</p>
-<p><strong>Recherchez tous vos éléments hébergés dans le portail géographique DAaaS.</strong>
+<p>Recherchez le contenu que vous avez hébergé sur le portail SAD EAG. En utilisant la fonction "me", nous pouvons rechercher tout le contenu hébergé sur le compte. Il existe plusieurs façons de rechercher du contenu. Deux méthodes différentes sont décrites ci-dessous.</p>
+<p><strong>Recherchez tous vos éléments hébergés dans le portail géographique SAD.</strong>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">my_content</span> <span class="o">=</span> <span class="n">me</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">my_content</span>
 </span></code></pre></div>
-<strong>Recherchez du contenu spécifique que vous possédez dans le portail géographique DAaaS.</strong></p>
+<strong>Recherchez du contenu spécifique que vous possédez dans le portail géographique SAD.</strong></p>
 <p>Ceci est similaire à l'exemple ci-dessus, mais si vous connaissez le titre de la couche que vous souhaitez utiliser, vous pouvez l'enregistrer en tant que fonction.
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">my_items</span> <span class="o">=</span> <span class="n">me</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">my_items</span><span class="p">:</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="s2">&quot; | &quot;</span><span class="p">,</span> <span class="n">items</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">if</span> <span class="n">items</span><span class="o">.</span><span class="n">title</span> <span class="o">==</span> <span class="s2">&quot;Flood in Sorel-Tracy&quot;</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">if</span> <span class="n">items</span><span class="o">.</span><span class="n">title</span> <span class="o">==</span> <span class="s2">&quot;Inondation à Sorel-Tracy&quot;</span><span class="p">:</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="n">flood_item</span> <span class="o">=</span> <span class="n">items</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">else</span><span class="p">:</span>
@@ -1109,47 +1109,47 @@
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">flood_item</span><span class="p">)</span>
 </span></code></pre></div></p>
 <p><strong>Recherchez tout le contenu auquel vous avez accès, pas seulement le vôtre.</strong></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">flood_item</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;tags: flood&quot;</span><span class="p">,</span> <span class="n">item_type</span> <span class="o">=</span><span class="s2">&quot;Feature Service&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">flood_item</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;tags: flood&quot;</span><span class="p">,</span> <span class="n">item_type</span> <span class="o">=</span><span class="s2">&quot;Service des caractéristiques&quot;</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">flood_item</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="obtenir-du-contenu">Obtenir du contenu<a class="headerlink" href="#obtenir-du-contenu" title="Permanent link">&para;</a></h3>
-<p>Nous devons obtenir l'élément du portail géographique DAaaS afin de l'utiliser dans le bloc-notes Jupyter. Cela se fait en fournissant le numéro d'identification unique de l'article que vous souhaitez utiliser. Trois exemples sont décrits ci-dessous, tous accédant à la même couche.
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">my_content</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="c1">#from searching your content above</span>
+<p>Nous devons obtenir l'élément du portail géographique SAD afin de l'utiliser dans le bloc-notes Jupyter. Cela se fait en fournissant le numéro d'identification unique de l'article que vous souhaitez utiliser. Trois exemples sont décrits ci-dessous, tous accédant à la même couche.
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">item1</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">my_content</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="c1">#de la recherche de votre contenu ci-dessus</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">display</span><span class="p">(</span><span class="n">item1</span><span class="p">)</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">item2</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">flood_item</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="c1">#from example above -searching for specific content</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">item2</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">flood_item</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="c1">#de la recherche de votre contenu ci-dessus</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">display</span><span class="p">(</span><span class="n">item2</span><span class="p">)</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">item3</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;edebfe03764b497f90cda5f0bfe727e2&#39;</span><span class="p">)</span> <span class="c1">#the actual content id number</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">item3</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;edebfe03764b497f90cda5f0bfe727e2&#39;</span><span class="p">)</span> <span class="c1">#le numéro d&#39;identification du contenu</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">display</span><span class="p">(</span><span class="n">item3</span><span class="p">)</span>
 </span></code></pre></div></p>
 <hr>
 
 <h3 id="effectuer-une-analyse">Effectuer une analyse<a class="headerlink" href="#effectuer-une-analyse" title="Permanent link">&para;</a></h3>
-<p>Une fois les couches importées dans le bloc-notes Jupyter, nous sommes en mesure d'effectuer des types d'analyse similaires à ceux que vous vous attendriez à trouver dans un logiciel SIG tel qu'ArcGIS. Il existe de nombreux modules contenant de nombreux sous-modules qui peuvent effectuer plusieurs types d'analyses.
+<p>Une fois les couches importées dans le bloc-note Jupyter, nous sommes en mesure d'effectuer des types d'analyse similaires à ceux que vous vous attendriez à trouver dans un logiciel SIG tel qu'ArcGIS. Il existe de nombreux modules contenant de nombreux sous-modules qui peuvent effectuer plusieurs types d'analyses.
 <br/></p>
-<p>À l'aide du module arcgis.features, importez le sous-module use_proximity <code>from arcgis.features import use_proximity</code>. Ce sous-module nous permet de <code>.create_buffers</code> - des zones à égale distance des entités. Ici, nous spécifions la couche que nous voulons utiliser, la distance, les unités et le nom de sortie (vous pouvez également spécifier d'autres caractéristiques telles que le champ, le type d'anneau, le type de fin et autres). En spécifiant un nom de sortie, après avoir exécuté la commande buffer, une nouvelle couche sera automatiquement téléchargée dans le portail DAaaS GEO contenant la nouvelle fonctionnalité que vous venez de créer.
+<p>À l'aide du module arcgis.features, importez le sous-module use_proximity <code>from arcgis.features import use_proximity</code>. Ce sous-module nous permet de <code>.create_buffers</code> - des zones à égale distance des entités. Ici, nous spécifions la couche que nous voulons utiliser, la distance, les unités et le nom de sortie (vous pouvez également spécifier d'autres caractéristiques telles que le champ, le type d'anneau, le type de fin et autres). En spécifiant un nom de sortie, après avoir exécuté la commande buffer, une nouvelle couche sera automatiquement téléchargée dans le portail SAD EAG contenant la nouvelle fonctionnalité que vous venez de créer.
 <br/></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">buffer_lyr</span> <span class="o">=</span> <span class="n">use_proximity</span><span class="o">.</span><span class="n">create_buffers</span><span class="p">(</span><span class="n">item1</span><span class="p">,</span> <span class="n">distances</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> 
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>                                          <span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;Kilometers&quot;</span><span class="p">,</span> 
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>                                          <span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;Kilomètres&quot;</span><span class="p">,</span> 
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>                                          <span class="n">output_name</span><span class="o">=</span><span class="s1">&#39;item1_buffer&#39;</span><span class="p">)</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">display</span><span class="p">(</span><span class="n">item1_buffer</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Certains utilisateurs préfèrent travailler avec des packages Open Source. La traduction d'ArcGIS vers Spatial Dataframes est simple.
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># create a Spatially Enabled DataFrame object</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># créer un objet DataFrame spatialisé</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">sdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">from_layer</span><span class="p">(</span><span class="n">feature_layer</span><span class="p">)</span>
 </span></code></pre></div></p>
 <hr>
 
 <h3 id="mettre-a-jour-les-elements">Mettre à jour les éléments<a class="headerlink" href="#mettre-a-jour-les-elements" title="Permanent link">&para;</a></h3>
-<p>En obtenant l'élément comme nous l'avons fait similaire à l'exemple ci-dessus, nous pouvons utiliser la fonction <code>.update</code> pour mettre à jour l'élément existant dans le portail DAaaS GEO. Nous pouvons mettre à jour les propriétés, les données, les vignettes et les métadonnées des éléments.
+<p>En obtenant l'élément comme nous l'avons fait similaire à l'exemple ci-dessus, nous pouvons utiliser la fonction <code>.update</code> pour mettre à jour l'élément existant dans le portail SAD EAG. Nous pouvons mettre à jour les propriétés, les données, les vignettes et les métadonnées des éléments.
 <div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">item1_buffer</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;c60c7e57bdb846dnbd7c8226c80414d2&#39;</span><span class="p">)</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">item1_buffer</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">item_properties</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Enter Title&#39;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">item1_buffer</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">item_properties</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Saisir le titre&#39;</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>                                     <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="s1">&#39;tag1, tag2, tag3, tag4&#39;</span><span class="p">,</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>                                     <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Enter description of item&#39;</span><span class="p">}</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>                                     <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Saisir la description de l&#39;</span><span class="n">article</span><span class="s1">&#39;}</span>
 </span></code></pre></div></p>
 <hr>
 
@@ -1165,7 +1165,7 @@ Dans le code ci-dessous, nous créons un objet ax, qui est un tracé de style ca
 Dans cet exemple, nous utiliserons la librairie 'ipyleaflet' pour créer une carte interactive. Cette carte sera centrée autour de Toronto, ON. Les données utilisées seront décrites ci-dessous.
 Commencez par coller <code>conda install -c conda-forge ipyleaflet</code> vous permettant d'installer les librairies ipyleaflet dans l'environnement Python.
 <br/>
-Import the necessary libraries.
+Importer les bibliothèques nécessaires.
 <div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">ipyleaflet</span> 
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="o">*</span>
 </span></code></pre></div>
@@ -1179,7 +1179,7 @@ Maintenant que nous avons importé le module ipyleaflet, nous pouvons créer une
 <br/></p>
 <h2 id="en-savoir-plus-sur-lapi-arcgis-pour-python">En savoir plus sur l'API ArcGIS pour Python<a class="headerlink" href="#en-savoir-plus-sur-lapi-arcgis-pour-python" title="Permanent link">&para;</a></h2>
 <p><a href="https://developers.arcgis.com/python/">La documentation complète de l'API ArcGIS peut être trouvée ici</a></p>
-<h2 id="en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-das">En savoir plus sur l'environnement analytique géospatial (GAE) et les services DAS<a class="headerlink" href="#en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-das" title="Permanent link">&para;</a></h2>
+<h2 id="en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-sad">En savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD<a class="headerlink" href="#en-savoir-plus-sur-lenvironnement-analytique-geospatial-gae-et-les-services-sad" title="Permanent link">&para;</a></h2>
 <p><a href="https://statcan.github.io/daaas-dads-geo/">Guide d'aide GAE</a></p>
 
 
