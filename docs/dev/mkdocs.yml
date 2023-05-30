@@ -1,0 +1,22 @@
+site_name: AAW Developer Docs
+site_description: Developer documentation for the AAW Platform
+
+theme:
+  name: material
+  palette:
+    primary: yellow
+    accent: blue
+nav:
+  - Features:
+    - Overview: features/index.md
+    - Object Storage:
+      - S3Proxy and S3 Explorer: features/object-storage/s3proxy.md
+      - Blob CSI: features/object-storage/blobcsi.md
+    - Cloud Main Connectivity: features/cloud-main-connectivity/cloud-main-connectivity.md
+    - Data Virtualization: features/data-virtualization/trino.md
+    - RBAC:
+      - Non-Employee RBAC: features/rbac/non-employee-rbac.md
+    - Source Control: features/source-control/gitea.md
+  - Resources:
+    - Overview: resources/index.md
+    - Developer Tools: developer-tools.md
