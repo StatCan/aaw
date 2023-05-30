@@ -155,4 +155,9 @@
          <lastmod>2023-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/6-Gitlab/Gitlab/</loc>
+         <lastmod>2023-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
