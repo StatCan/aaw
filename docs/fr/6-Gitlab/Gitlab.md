@@ -1,5 +1,3 @@
-![image](https://user-images.githubusercontent.com/23174198/217059855-1ea17aba-d722-467e-96f4-0a37eda3f035.png)
-
 ## __NOTES IMPORTANTES__
 1) Veuillez NE PAS stocker votre jeton _n'importe où_ dans le système de fichiers de votre serveur d'espace de travail. Les contributeurs d'un espace de noms y auront accès.
 2) S'il y a un contributeur externe à Statistique Canada dans votre espace de noms, vous perdrez l'accès au nuage principal de GitLab !
