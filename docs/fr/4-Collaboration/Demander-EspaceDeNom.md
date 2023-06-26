@@ -9,7 +9,7 @@ Par défaut, tout le monde obtient son propre espace de nom personnel,
 
 ## Demander un espace de nom
 
-Pour créer un espace de noms pour une équipe, accédez au portail AAW. **Cliquez
+Pour créer un espace de noms pour une équipe, accédez au portail ETAA. **Cliquez
 sur le &#8942; menu sur
 [la section Kubeflow du portail](https://analytics-platform.statcan.gc.ca/)**.
 
