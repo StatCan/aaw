@@ -28,21 +28,24 @@ theme:
     accent: blue
 nav:
   - Features:
-    - Get Started: dev/getting-started/index.md
-    - Overview: dev/features/index.md
+    - Getting Started: getting-started/index.md
+    - Overview: features/index.md
     - Object Storage:
-      - S3Proxy and S3 Explorer: dev/features/object-storage/s3proxy.md
-      - Blob CSI: dev/features/object-storage/blobcsi.md
-    - Cloud Main Connectivity: dev/features/cloud-main-connectivity/cloud-main-connectivity.md
-    - Data Virtualization: dev/features/data-virtualization/trino.md
+      - S3Proxy and S3 Explorer: features/object-storage/s3proxy.md
+      - Blob CSI: features/object-storage/blobcsi.md
+    - Cloud Main Connectivity: features/cloud-main-connectivity/cloud-main-connectivity.md
+    - Data Virtualization: features/data-virtualization/trino.md
     - RBAC:
-      - Non-Employee RBAC: dev/features/rbac/non-employee-rbac.md
-    - Source Control: dev/features/source-control/gitea.md
+      - Non-Employee RBAC: features/rbac/non-employee-rbac.md
+    - Source Control: features/source-control/gitea.md
   - Resources:
-    - Overview: dev/resources/index.md
-    - Developer Tools: dev/developer-tools.md
+    - Overview: resources/index.md
+    - Developer Tools: developer-tools.md
 
 markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       baselevel: 1
       permalink: true
