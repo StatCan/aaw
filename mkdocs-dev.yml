@@ -6,22 +6,46 @@ copyright: Copyright &copy; 2020 Statistics Canada
 docs_dir: docs/dev
 site_dir: site/dev
 
-repo_name: StatCan/daaas
+repo_name: StatCan/aaw
 repo_url: https://github.com/StatCan/aaw
 edit_uri: edit/master/docs/dev
 
-theme:
-  name: material
-  features:
-    - content.tabs.link
-    - content.code.copy
-    - navigation.tabs
-    - navigation.tabs.sticky
-  language: en
-  show_sidebar: true
+#theme:
+#  name: material
+#  features:
+#    - content.tabs.link
+#    - content.code.copy
+#    - navigation.tabs
+#    - navigation.tabs.sticky
+#  language: en
+#  show_sidebar: true
   #logo: images/statcan.png
 
+theme:
+  name: material
+  palette:
+    primary: yellow
+    accent: blue
+nav:
+  - Features:
+    - Getting Started: getting-started/index.md
+    - Overview: features/index.md
+    - Object Storage:
+      - S3Proxy and S3 Explorer: features/object-storage/s3proxy.md
+      - Blob CSI: features/object-storage/blobcsi.md
+    - Cloud Main Connectivity: features/cloud-main-connectivity/cloud-main-connectivity.md
+    - Data Virtualization: features/data-virtualization/trino.md
+    - RBAC:
+      - Non-Employee RBAC: features/rbac/non-employee-rbac.md
+    - Source Control: features/source-control/gitea.md
+  - Resources:
+    - Overview: resources/index.md
+    - Developer Tools: developer-tools.md
+
 markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       baselevel: 1
       permalink: true
