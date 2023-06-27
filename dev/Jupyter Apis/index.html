@@ -13,13 +13,9 @@
         <link rel="canonical" href="https://statcan.github.io/aaw/en/Jupyter%20Apis/">
       
       
-        <link rel="prev" href="../Goofys/">
-      
-      
-        <link rel="next" href="../Jupyterlab%20Language%20Pack%20Fr_fr/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -28,6 +24,9 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -53,11 +52,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="blue">
   
     
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -79,7 +81,7 @@
 
   
 
-<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="AAW Dev Docs" class="md-header__button md-logo" aria-label="AAW Dev Docs" data-md-component="logo">
       
@@ -106,6 +108,8 @@
         </div>
       </div>
     </div>
+    
+      
     
     
     
@@ -150,914 +154,20 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    StatCan/daaas
+    StatCan/aaw
   </div>
 </a>
       </div>
     
   </nav>
   
-    
-      
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
-      AAW Dev docs
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Argocd%20Applications/" class="md-tabs__link">
-        Aaw Argocd Applications
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Argoflow%20Azure/" class="md-tabs__link">
-        Aaw Argoflow Azure
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Contrib%20Containers/" class="md-tabs__link">
-        Aaw Contrib Containers
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Contrib%20Jupyter%20Notebooks/" class="md-tabs__link">
-        Aaw Contrib Jupyter Notebooks
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Contrib%20R%20Notebooks/" class="md-tabs__link">
-        Aaw Contrib R Notebooks
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Goofys%20Injector/" class="md-tabs__link">
-        Aaw Goofys Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Gpu%20Toleration%20Injector/" class="md-tabs__link">
-        Aaw Gpu Toleration Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Inferenceservices%20Controller/" class="md-tabs__link">
-        Aaw Inferenceservices Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Containers/" class="md-tabs__link">
-        Aaw Kubeflow Containers
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Controller/" class="md-tabs__link">
-        Aaw Kubeflow Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Manifests/" class="md-tabs__link">
-        Aaw Kubeflow Manifests
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Mlops/" class="md-tabs__link">
-        Aaw Kubeflow Mlops
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Opa%20Sync/" class="md-tabs__link">
-        Aaw Kubeflow Opa Sync
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" class="md-tabs__link">
-        Aaw Kubeflow Pipelines Secret Scanner
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Kubeflow%20Profiles%20Controller/" class="md-tabs__link">
-        Aaw Kubeflow Profiles Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Minio%20Credential%20Injector/" class="md-tabs__link">
-        Aaw Minio Credential Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Namespace%20Injector/" class="md-tabs__link">
-        Aaw Namespace Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Prob%20Notebook%20Controller/" class="md-tabs__link">
-        Aaw Prob Notebook Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Profile%20State%20Controller/" class="md-tabs__link">
-        Aaw Profile State Controller
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Security%20Scanning%20Containers/" class="md-tabs__link">
-        Aaw Security Scanning Containers
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Aaw%20Toleration%20Injector/" class="md-tabs__link">
-        Aaw Toleration Injector
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Boathouse/" class="md-tabs__link">
-        Boathouse
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Charts/" class="md-tabs__link">
-        Charts
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Geoserver/" class="md-tabs__link">
-        Geoserver
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Goofys/" class="md-tabs__link">
-        Goofys
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        Jupyter Apis
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Jupyterlab%20Language%20Pack%20Fr_fr/" class="md-tabs__link">
-        Jupyterlab Language Pack Fr fr
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubecost/" class="md-tabs__link">
-        Kubecost
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubeflow/" class="md-tabs__link">
-        Kubeflow
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubeflow%20Containers%20Desktop/" class="md-tabs__link">
-        Kubeflow Containers Desktop
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Kubeflow%20Pipelines/" class="md-tabs__link">
-        Kubeflow Pipelines
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Minio%20Deploy/" class="md-tabs__link">
-        Minio Deploy
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Minio%20Operator/" class="md-tabs__link">
-        Minio Operator
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Mlflow%20Operator/" class="md-tabs__link">
-        Mlflow Operator
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Pachyderm/" class="md-tabs__link">
-        Pachyderm
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../R%20Dashboards/" class="md-tabs__link">
-        R Dashboards
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Shiny/" class="md-tabs__link">
-        Shiny
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" class="md-tabs__link">
-        Terraform Advanced Analytics Workspaces Infrastructure Example
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Environment/" class="md-tabs__link">
-        Terraform Azure Statcan Aaw Environment
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Network/" class="md-tabs__link">
-        Terraform Azure Statcan Aaw Network
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" class="md-tabs__link">
-        Terraform Azure Statcan Aaw Region Environment
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" class="md-tabs__link">
-        Terraform Azure Statcan Cloud Native Environment Infrastructure
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster/" class="md-tabs__link">
-        Terraform Azurerm Kubernetes Cluster
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" class="md-tabs__link">
-        Terraform Azurerm Kubernetes Cluster Nodepool
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Daaas/" class="md-tabs__link">
-        Terraform Kubernetes Aks Daaas
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" class="md-tabs__link">
-        Terraform Kubernetes Aks Platform Daaas
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" class="md-tabs__link">
-        Terraform Kubernetes Cert Manager Certificate
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" class="md-tabs__link">
-        Terraform Kubernetes Cert Manager Issuer
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" class="md-tabs__link">
-        Terraform Kubernetes Istio Operator Cr
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" class="md-tabs__link">
-        Terraform Statcan Aaw Infrastructure Example
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Platform/" class="md-tabs__link">
-        Terraform Statcan Aaw Platform
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Vault%20Plugin%20Secrets%20Minio/" class="md-tabs__link">
-        Vault Plugin Secrets Minio
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../features/cloud-main-connectivity/cloud-main-connectivity/" class="md-tabs__link">
-        Features
-      </a>
-    </li>
-  
-
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../getting%20started/" class="md-tabs__link">
-        Getting started
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -1070,10 +180,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="AAW Dev Docs" class="md-nav__button md-logo" aria-label="AAW Dev Docs" data-md-component="logo">
       
@@ -1091,7 +199,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    StatCan/daaas
+    StatCan/aaw
   </div>
 </a>
     </div>
@@ -1105,10 +213,210 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        AAW Dev docs
+      <a href="../getting-started/" class="md-nav__link">
+        Getting Started
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Object Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Object Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/object-storage/s3proxy/" class="md-nav__link">
+        S3Proxy and S3 Explorer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/object-storage/blobcsi/" class="md-nav__link">
+        Blob CSI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/cloud-main-connectivity/cloud-main-connectivity/" class="md-nav__link">
+        Cloud Main Connectivity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/data-virtualization/trino/" class="md-nav__link">
+        Data Virtualization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+          RBAC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          RBAC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/rbac/non-employee-rbac/" class="md-nav__link">
+        Non-Employee RBAC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/source-control/gitea/" class="md-nav__link">
+        Source Control
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1131,14 +439,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Aaw Argocd Applications
+          Resources
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Aaw Argocd Applications
+          Resources
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1148,2789 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Aaw%20Argocd%20Applications/" class="md-nav__link">
-        ArgoCD Applications
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          Aaw Argoflow Azure
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Argoflow Azure
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Argoflow%20Azure/" class="md-nav__link">
-        Deploying Kubeflow with ArgoCD
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Aaw Contrib Containers
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Contrib Containers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Contrib%20Containers/" class="md-nav__link">
-        Containers for DAaaS
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          Aaw Contrib Jupyter Notebooks
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Contrib Jupyter Notebooks
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Contrib%20Jupyter%20Notebooks/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          Aaw Contrib R Notebooks
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Contrib R Notebooks
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Contrib%20R%20Notebooks/" class="md-nav__link">
-        R-notebooks
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          Aaw Goofys Injector
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Goofys Injector
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Goofys%20Injector/" class="md-nav__link">
-        Goofys Injector
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-          Aaw Gpu Toleration Injector
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Gpu Toleration Injector
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Gpu%20Toleration%20Injector/" class="md-nav__link">
-        GPU Toleration Injector
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-          Aaw Inferenceservices Controller
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Inferenceservices Controller
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Inferenceservices%20Controller/" class="md-nav__link">
-        inferenceservices-controller
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-          Aaw Kubeflow Containers
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Containers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Containers/" class="md-nav__link">
-        Containers for Kubeflow
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
-          Aaw Kubeflow Controller
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_11">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Controller
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Controller/" class="md-nav__link">
-        kubeflow-controller
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
-          Aaw Kubeflow Manifests
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_12">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Manifests
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Manifests/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
-          Aaw Kubeflow Mlops
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_13">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Mlops
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Mlops/" class="md-nav__link">
-        Kubeflow MLOps
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
-          Aaw Kubeflow Opa Sync
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Opa Sync
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Opa%20Sync/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
-          Aaw Kubeflow Pipelines Secret Scanner
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_15">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Pipelines Secret Scanner
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/" class="md-nav__link">
-        kfp-secret-scanner
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
-          Aaw Kubeflow Profiles Controller
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_16">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Kubeflow Profiles Controller
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Kubeflow%20Profiles%20Controller/" class="md-nav__link">
-        profiles-controller
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
-          Aaw Minio Credential Injector
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_17">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Minio Credential Injector
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Minio%20Credential%20Injector/" class="md-nav__link">
-        minio-credential-injector
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
-          Aaw Namespace Injector
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_18">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Namespace Injector
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Namespace%20Injector/" class="md-nav__link">
-        namespace-injector
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
-          Aaw Prob Notebook Controller
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_19">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Prob Notebook Controller
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Prob%20Notebook%20Controller/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
-          Aaw Profile State Controller
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_20">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Profile State Controller
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Profile%20State%20Controller/" class="md-nav__link">
-        Profile State Controller
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
-          Aaw Security Scanning Containers
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_21">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Security Scanning Containers
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Security%20Scanning%20Containers/" class="md-nav__link">
-        aaw-platform-containers
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
-          Aaw Toleration Injector
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_22">
-          <span class="md-nav__icon md-icon"></span>
-          Aaw Toleration Injector
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Aaw%20Toleration%20Injector/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
-          Boathouse
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_23">
-          <span class="md-nav__icon md-icon"></span>
-          Boathouse
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Boathouse/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
-          Charts
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_24">
-          <span class="md-nav__icon md-icon"></span>
-          Charts
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Charts/" class="md-nav__link">
-        Helm Charts
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_25" id="__nav_25_label" tabindex="0">
-          Geoserver
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_25">
-          <span class="md-nav__icon md-icon"></span>
-          Geoserver
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Geoserver/" class="md-nav__link">
-        GeoServer
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_26" id="__nav_26_label" tabindex="0">
-          Goofys
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_26_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_26">
-          <span class="md-nav__icon md-icon"></span>
-          Goofys
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Goofys/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
-          Jupyter Apis
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_27">
-          <span class="md-nav__icon md-icon"></span>
-          Jupyter Apis
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Index
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Index
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-contribute" class="md-nav__link">
-    How to Contribute
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#developement-environment" class="md-nav__link">
-    Developement Environment
-  </a>
-  
-    <nav class="md-nav" aria-label="Developement Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run-api-server" class="md-nav__link">
-    Run API Server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#run-front-end" class="md-nav__link">
-    Run Front-End
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#connecting-a-kubeflow-cluster" class="md-nav__link">
-    Connecting a Kubeflow Cluster
-  </a>
-  
-    <nav class="md-nav" aria-label="Connecting a Kubeflow Cluster">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-minikf-cluster-preferred" class="md-nav__link">
-    Local miniKF Cluster (Preferred)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-aks-cluster" class="md-nav__link">
-    Remote AKS Cluster
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interface-de-programmation-dapplications-jupyter" class="md-nav__link">
-    Interface de programmation d'applications Jupyter
-  </a>
-  
-    <nav class="md-nav" aria-label="Interface de programmation d'applications Jupyter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#comment-contribuer" class="md-nav__link">
-    Comment contribuer
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#licence" class="md-nav__link">
-    Licence
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_28" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_28" id="__nav_28_label" tabindex="0">
-          Jupyterlab Language Pack Fr fr
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_28_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_28">
-          <span class="md-nav__icon md-icon"></span>
-          Jupyterlab Language Pack Fr fr
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Jupyterlab%20Language%20Pack%20Fr_fr/" class="md-nav__link">
-        JupyterLab fr-FR Language Pack
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_29" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_29" id="__nav_29_label" tabindex="0">
-          Kubecost
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_29_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_29">
-          <span class="md-nav__icon md-icon"></span>
-          Kubecost
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Kubecost/" class="md-nav__link">
-        Kubecost
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_30" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_30" id="__nav_30_label" tabindex="0">
-          Kubeflow
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_30_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_30">
-          <span class="md-nav__icon md-icon"></span>
-          Kubeflow
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Kubeflow/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Kubeflow/CHANGELOG/" class="md-nav__link">
-        Change Log
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_31" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_31" id="__nav_31_label" tabindex="0">
-          Kubeflow Containers Desktop
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_31_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_31">
-          <span class="md-nav__icon md-icon"></span>
-          Kubeflow Containers Desktop
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Kubeflow%20Containers%20Desktop/" class="md-nav__link">
-        Important
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_32" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_32" id="__nav_32_label" tabindex="0">
-          Kubeflow Pipelines
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_32_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_32">
-          <span class="md-nav__icon md-icon"></span>
-          Kubeflow Pipelines
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Kubeflow%20Pipelines/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Kubeflow%20Pipelines/CHANGELOG/" class="md-nav__link">
-        Changelog
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_33" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_33" id="__nav_33_label" tabindex="0">
-          Minio Deploy
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_33_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_33">
-          <span class="md-nav__icon md-icon"></span>
-          Minio Deploy
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Minio%20Deploy/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_34" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_34" id="__nav_34_label" tabindex="0">
-          Minio Operator
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_34_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_34">
-          <span class="md-nav__icon md-icon"></span>
-          Minio Operator
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Minio%20Operator/" class="md-nav__link">
-        Minio
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_35" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_35" id="__nav_35_label" tabindex="0">
-          Mlflow Operator
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_35_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_35">
-          <span class="md-nav__icon md-icon"></span>
-          Mlflow Operator
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Mlflow%20Operator/" class="md-nav__link">
-        MLFlow Operator
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_36" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_36" id="__nav_36_label" tabindex="0">
-          Pachyderm
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_36_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_36">
-          <span class="md-nav__icon md-icon"></span>
-          Pachyderm
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Pachyderm/" class="md-nav__link">
-        Pachyderm
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_37" id="__nav_37_label" tabindex="0">
-          R Dashboards
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_37_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_37">
-          <span class="md-nav__icon md-icon"></span>
-          R Dashboards
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../R%20Dashboards/" class="md-nav__link">
-        R-dashboards
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_38" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_38" id="__nav_38_label" tabindex="0">
-          Shiny
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_38_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_38">
-          <span class="md-nav__icon md-icon"></span>
-          Shiny
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Shiny/" class="md-nav__link">
-        Shiny Server
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_39" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_39" id="__nav_39_label" tabindex="0">
-          Terraform Advanced Analytics Workspaces Infrastructure Example
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_39_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_39">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Advanced Analytics Workspaces Infrastructure Example
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_40" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_40" id="__nav_40_label" tabindex="0">
-          Terraform Azure Statcan Aaw Environment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_40_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_40">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Azure Statcan Aaw Environment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Environment/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_41" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_41" id="__nav_41_label" tabindex="0">
-          Terraform Azure Statcan Aaw Network
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_41_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_41">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Azure Statcan Aaw Network
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Network/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_42" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_42" id="__nav_42_label" tabindex="0">
-          Terraform Azure Statcan Aaw Region Environment
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_42_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_42">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Azure Statcan Aaw Region Environment
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_43" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_43" id="__nav_43_label" tabindex="0">
-          Terraform Azure Statcan Cloud Native Environment Infrastructure
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_43_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_43">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Azure Statcan Cloud Native Environment Infrastructure
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/" class="md-nav__link">
-        Statistics Canada: Azure Cloud Native Environment Infrastructure
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_44" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_44" id="__nav_44_label" tabindex="0">
-          Terraform Azurerm Kubernetes Cluster
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_44_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_44">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Azurerm Kubernetes Cluster
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster/" class="md-nav__link">
-        Azure Kubernetes Service (AKS) Cluster
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_45" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_45" id="__nav_45_label" tabindex="0">
-          Terraform Azurerm Kubernetes Cluster Nodepool
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_45_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_45">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Azurerm Kubernetes Cluster Nodepool
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/" class="md-nav__link">
-        Azure Kubernetes Service (AKS) Cluster
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_46" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_46" id="__nav_46_label" tabindex="0">
-          Terraform Kubernetes Aks Daaas
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_46_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_46">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Kubernetes Aks Daaas
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Daaas/" class="md-nav__link">
-        Terraform for Azure Kubernetes Service
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_47" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_47" id="__nav_47_label" tabindex="0">
-          Terraform Kubernetes Aks Platform Daaas
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_47_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_47">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Kubernetes Aks Platform Daaas
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Aks%20Platform%20Daaas/" class="md-nav__link">
-        Terraform for Azure Kubernetes Service Platform
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_48" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_48" id="__nav_48_label" tabindex="0">
-          Terraform Kubernetes Cert Manager Certificate
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_48_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_48">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Kubernetes Cert Manager Certificate
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Certificate/" class="md-nav__link">
-        Terraform Kubernetes Cert-Manager Certificate
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_49" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_49" id="__nav_49_label" tabindex="0">
-          Terraform Kubernetes Cert Manager Issuer
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_49_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_49">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Kubernetes Cert Manager Issuer
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Cert%20Manager%20Issuer/" class="md-nav__link">
-        Terraform Kubernetes Cert Manager Issuer
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_50" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_50" id="__nav_50_label" tabindex="0">
-          Terraform Kubernetes Istio Operator Cr
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_50_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_50">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Kubernetes Istio Operator Cr
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Kubernetes%20Istio%20Operator%20Cr/" class="md-nav__link">
-        terraform-kubernetes-istio-operator-cr
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_51" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_51" id="__nav_51_label" tabindex="0">
-          Terraform Statcan Aaw Infrastructure Example
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_51_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_51">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Statcan Aaw Infrastructure Example
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Infrastructure%20Example/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_52" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_52" id="__nav_52_label" tabindex="0">
-          Terraform Statcan Aaw Platform
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_52_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_52">
-          <span class="md-nav__icon md-icon"></span>
-          Terraform Statcan Aaw Platform
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Terraform%20Statcan%20Aaw%20Platform/" class="md-nav__link">
-        Index
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_53" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_53" id="__nav_53_label" tabindex="0">
-          Vault Plugin Secrets Minio
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_53_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_53">
-          <span class="md-nav__icon md-icon"></span>
-          Vault Plugin Secrets Minio
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Vault%20Plugin%20Secrets%20Minio/" class="md-nav__link">
-        vault-plugin-secrets-minio
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_54" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_54" id="__nav_54_label" tabindex="0">
-          Features
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_54_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_54">
-          <span class="md-nav__icon md-icon"></span>
-          Features
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_54_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_54_1" id="__nav_54_1_label" tabindex="0">
-          Cloud main connectivity
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_54_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_54_1">
-          <span class="md-nav__icon md-icon"></span>
-          Cloud main connectivity
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../features/cloud-main-connectivity/cloud-main-connectivity/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_54_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_54_2" id="__nav_54_2_label" tabindex="0">
-          Object storage
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_54_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_54_2">
-          <span class="md-nav__icon md-icon"></span>
-          Object storage
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../features/object-storage/blobcsi/" class="md-nav__link">
+      <a href="../resources/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -3944,230 +470,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../features/object-storage/s3proxy/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_54_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_54_3" id="__nav_54_3_label" tabindex="0">
-          Rbac
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_54_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_54_3">
-          <span class="md-nav__icon md-icon"></span>
-          Rbac
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../features/rbac/non-employee-rbac/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_54_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_54_4" id="__nav_54_4_label" tabindex="0">
-          Source control
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_54_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_54_4">
-          <span class="md-nav__icon md-icon"></span>
-          Source control
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../features/source-control/gitea/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_55" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_55" id="__nav_55_label" tabindex="0">
-          Getting started
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_55_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_55">
-          <span class="md-nav__icon md-icon"></span>
-          Getting started
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting%20started/" class="md-nav__link">
-        Getting Started
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting%20started/jupyterlab/" class="md-nav__link">
-        Jupyterlab
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting%20started/login/" class="md-nav__link">
-        Login
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting%20started/setup/" class="md-nav__link">
-        Setup
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting%20started/tms/" class="md-nav__link">
-        Time Managment System
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting%20started/vm/" class="md-nav__link">
-        Setting up your Cloud VM
+      <a href="../developer-tools/" class="md-nav__link">
+        Developer Tools
       </a>
     </li>
   
@@ -4214,11 +518,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#developement-environment" class="md-nav__link">
-    Developement Environment
+  <a href="#development-environment" class="md-nav__link">
+    Development Environment
   </a>
   
-    <nav class="md-nav" aria-label="Developement Environment">
+    <nav class="md-nav" aria-label="Development Environment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4236,6 +540,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#running-intergration-tests" class="md-nav__link">
+    Running intergration tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#connecting-a-kubeflow-cluster" class="md-nav__link">
     Connecting a Kubeflow Cluster
   </a>
@@ -4244,8 +555,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#local-minikf-cluster-preferred" class="md-nav__link">
-    Local miniKF Cluster (Preferred)
+  <a href="#local-minikf-cluster" class="md-nav__link">
+    Local MiniKF Cluster
   </a>
   
 </li>
@@ -4262,42 +573,22 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interface-de-programmation-dapplications-jupyter" class="md-nav__link">
-    Interface de programmation d'applications Jupyter
-  </a>
-  
-    <nav class="md-nav" aria-label="Interface de programmation d'applications Jupyter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#comment-contribuer" class="md-nav__link">
-    Comment contribuer
+  <a href="#on-platform-testing" class="md-nav__link">
+    On platform testing
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#licence" class="md-nav__link">
-    Licence
+      
+        <li class="md-nav__item">
+  <a href="#whats-different" class="md-nav__link">
+    Whats Different?
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4321,35 +612,72 @@
 
 <p><a href="#interface-de-programmation-dapplications-jupyter">(Français)</a></p>
 <h1 id="jupyter-application-programming-interfaces">Jupyter Application Programming Interfaces<a class="headerlink" href="#jupyter-application-programming-interfaces" title="Permanent link">&para;</a></h1>
-<p>A Golang replacement for the <a href="https://github.com/kubeflow/kubeflow">Kubeflow</a> Jupyter Web APIs.</p>
+<p>A Golang replacement for the <strong><a href="https://github.com/kubeflow/kubeflow">Kubeflow</a></strong> Jupyter Web APIs.</p>
 <h2 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h2>
-<p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
-<h2 id="developement-environment">Developement Environment<a class="headerlink" href="#developement-environment" title="Permanent link">&para;</a></h2>
+<p>See <strong><a href="CONTRIBUTING.md">CONTRIBUTING.md</a></strong></p>
+<h2 id="development-environment">Development Environment<a class="headerlink" href="#development-environment" title="Permanent link">&para;</a></h2>
+<p><strong><em>Note that the frontend will report errors when calling <code>/api/namespaces</code> when run locally. This</em></strong>
+<strong><em>issue does not arise in production, as the <code>/api/namespaces</code> endpoint is unused.</em></strong></p>
+<p>To initialize the <code>.env</code> file for the development environment, use <code>task env</code>.
+You will need to fill out your kubeflow cloud account and kubeflow namespace information manually.
+The <code>thunder-tests</code> folder contains configuration for testing requests against the backend. Use the <code>vscode</code>
+<code>THUNDER CLIENT</code> extension to load the tests.</p>
 <h3 id="run-api-server">Run API Server<a class="headerlink" href="#run-api-server" title="Permanent link">&para;</a></h3>
 <p>The API server will connect to the Kubeflow cluster from your current <code>kubectl</code>
 context. See <em>Connecting a Kubeflow cluster</em> below for options.</p>
 <ol>
-<li><a href="https://golang.org/dl/">Install Go</a></li>
+<li>Install <strong><a href="https://golang.org/dl/">Go</a></strong></li>
 <li>Change directory to project root: <code>cd jupyter-apis</code></li>
-<li>Run <code>go run . -spawner-config samples/spawner_ui_config.yaml</code> (or use an
-   alternative YAML config)</li>
+<li>Run <code>go run . -spawner-config samples/spawner_ui_config.yaml</code></li>
 </ol>
+<p>Alternatively,</p>
+<ol>
+<li><code>task go:dev -w -- -spawner-config samples/spawner_ui_config.yaml</code> will live-reload the Go server upon changes.</li>
+</ol>
+<p><em>Recommended</em></p>
+<p>You can use the vscode debugger to run the backend, just copy the below contents to a file at path <code>.vscode/launch.json</code>.
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug jupyter-api backend&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;debug&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                </span><span class="s2">&quot;-spawner-config&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                </span><span class="s2">&quot;samples/spawner_ui_config.yaml&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="nt">&quot;envFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/.env&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span>
+</span></code></pre></div></p>
 <h3 id="run-front-end">Run Front-End<a class="headerlink" href="#run-front-end" title="Permanent link">&para;</a></h3>
 <p>The front-end is configured to proxy requests to the local API server. It
 requires an environment variable (<code>KF_USER_ID</code>) to specify the current user –
 this is passed to the API server as an HTTP header.</p>
-<ol>
-<li>Change directory to front-end folder: <code>cd frontend</code></li>
-<li>Install dependencies: <code>npm install</code></li>
-<li>Run the front-end <code>KF_USER_ID=&lt;cloud_email&gt; npm start</code></li>
-</ol>
-<p>The front-end is now available at <code>http://localhost:4200/jupyter/</code>. Since it is
-disconnected from the <code>centraldashboard</code> component, you need to type your
-desired namespace in the UI rather than selecting it from a dropdown.</p>
+<p>The following can be pasted in a script and executed. This uses the latest node lts version(v16.16.0).
+<strong>NOTE</strong>: <code>user</code> is when using vagrant. Use the email adress if it is the dev cluser (please never connect to prod directly)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd frontend/common/kubeflow-common-lib
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm i
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>npm run build
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>npm link ./dist/kubeflow
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>cd ../../jupyter
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>npm i
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>npm link kubeflow --legacy-peer-deps
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>KF_USER_ID=user npm start
+</span></code></pre></div>
+<p>For the kubecost data to be retrievable, the following will need to be executed <code>kubectl port-forward -n kubecost-system deployment/kubecost-cost-analyzer 9090</code></p>
+<h3 id="running-intergration-tests">Running intergration tests<a class="headerlink" href="#running-intergration-tests" title="Permanent link">&para;</a></h3>
+<p>We use <a href="https://www.cypress.io/">Cypress</a> to make our end-to-end tests.
+To run integration tests locally, first make sure that the jupyter-apis app is up and running. Then, from the <code>jupyter-apis/frontend/jupyter</code> directory, run either <code>npm run ui-test</code> to open the Cypress UI, or <code>npm run ui-test-ci</code> to run the cypress tests just in the terminal.</p>
 <h3 id="connecting-a-kubeflow-cluster">Connecting a Kubeflow Cluster<a class="headerlink" href="#connecting-a-kubeflow-cluster" title="Permanent link">&para;</a></h3>
 <p>The API server will connect to the Kubeflow cluster from your current <code>kubectl</code>
 context. Here are a couple options for setting that up.</p>
-<h4 id="local-minikf-cluster-preferred">Local miniKF Cluster (Preferred)<a class="headerlink" href="#local-minikf-cluster-preferred" title="Permanent link">&para;</a></h4>
+<h4 id="local-minikf-cluster">Local MiniKF Cluster<a class="headerlink" href="#local-minikf-cluster" title="Permanent link">&para;</a></h4>
 <p>This deploys a Kubeflow cluster on your local machine and requires at least 50GB
 of disk space and the recommanded RAM is 12 Gb. First, create the miniKF cluster:</p>
 <ol>
@@ -4357,8 +685,7 @@ of disk space and the recommanded RAM is 12 Gb. First, create the miniKF cluster
 <li>Create a new directory and run <code>vagrant init arrikto/minikf</code> and then
    <code>vagrant up</code> (takes about 20 minutes to boot).</li>
 <li>Navigate to <code>http://10.10.10.10</code>.</li>
-<li>Follow on-screen steps to start Kubeflow and Rok (takes about another 20
-   minutes).</li>
+<li>Follow on-screen steps to start Kubeflow and Rok (takes about another 20 minutes).</li>
 <li>From here, you can use Kubeflow and Rok.</li>
 </ol>
 <p>Then configure <code>kubectl</code> to connect to your new cluster:</p>
@@ -4372,46 +699,130 @@ of disk space and the recommanded RAM is 12 Gb. First, create the miniKF cluster
 cluster (typically <code>user</code>).</p>
 <p>Each time you need to start the cluster, navigate to the directory you created
 and run <code>vagrant up</code>.</p>
-<p><strong>Note</strong>: after some experimentation, it was found that the vagrant file could be modified on line 57 to use 8gb instead of the default 12.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  config.vm.provider &quot;virtualbox&quot; do |vb|
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    # Display the VirtualBox GUI when booting the machine
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    #vb.gui = true
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    # Customize the amount of memory on the VM:
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    vb.memory = &quot;8192&quot;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  end
-</span></code></pre></div></p>
+<blockquote>
+<p><strong>Note</strong>: after some experimentation, it was found that the vagrant file could be modified on line 57 to use 8gb instead of the default 12.</p>
+</blockquote>
+<div class="language-rb highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provider</span><span class="w"> </span><span class="s2">&quot;virtualbox&quot;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">vb</span><span class="o">|</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="c1"># Display the VirtualBox GUI when booting the machine</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">#vb.gui = true</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="c1"># Customize the amount of memory on the VM:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">vb</span><span class="o">.</span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;8192&quot;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="k">end</span>
+</span></code></pre></div>
 <h4 id="remote-aks-cluster">Remote AKS Cluster<a class="headerlink" href="#remote-aks-cluster" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Install Azure CLI <code>az</code> and <code>kubectl</code></li>
 <li>Login with <code>az</code> and set your subscription</li>
 <li>Run <code>az aks get-credentials</code> for the desired remote cluster</li>
-<li>Ensure <code>kubectl config current-context</code> is pointing to the correct AKS
-   cluster</li>
+<li>Ensure <code>kubectl config current-context</code> is pointing to correct cluster</li>
 </ol>
-<h3 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h3>
-<p>Unless otherwise noted, the source code of this project is covered under Crown
-Copyright, Government of Canada, and is distributed under the
-<a href="LICENSE">MIT License</a>.</p>
-<p>The Canada wordmark and related graphics associated with this distribution are
-protected under trademark law and copyright law. No permission is granted to use
-them outside the parameters of the Government of Canada's corporate identity
-program. For more information, see <a href="https://www.canada.ca/en/treasury-board-secretariat/topics/government-communications/federal-identity-requirements.html">Federal identity requirements</a>.</p>
-<hr />
-<h2 id="interface-de-programmation-dapplications-jupyter">Interface de programmation d'applications Jupyter<a class="headerlink" href="#interface-de-programmation-dapplications-jupyter" title="Permanent link">&para;</a></h2>
-<p>Un remplacement Golang pour les API de Web de Jupyter, partie de <a href="https://github.com/kubeflow/kubeflow">Kubeflow</a>.</p>
-<h3 id="comment-contribuer">Comment contribuer<a class="headerlink" href="#comment-contribuer" title="Permanent link">&para;</a></h3>
-<p>Voir <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></p>
-<h3 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h3>
-<p>Sauf indication contraire, le code source de ce projet est protégé par le droit
-d'auteur de la Couronne du gouvernement du Canada et distribué sous la
-<a href="LICENSE">licence MIT</a>.</p>
-<p>Le mot-symbole « Canada » et les éléments graphiques connexes liés à cette
-distribution sont protégés en vertu des lois portant sur les marques de commerce
-et le droit d'auteur. Aucune autorisation n'est accordée pour leur utilisation à
-l'extérieur des paramètres du programme de coordination de l'image de marque du
-gouvernement du Canada. Pour obtenir davantage de renseignements à ce sujet,
-veuillez consulter les <a href="https://www.canada.ca/fr/secretariat-conseil-tresor/sujets/communications-gouvernementales/exigences-image-marque.html">Exigences pour l'image de marque</a>.</p>
+<h2 id="on-platform-testing">On platform testing<a class="headerlink" href="#on-platform-testing" title="Permanent link">&para;</a></h2>
+<p>Any push to an open PR that has the auto-deploy label on it allows developers to opt-in to on-platform testing. For example, when you need to build in github and test on platform (or want someone else to be able to pull your image):
+1. open a PR and add the auto-deploy label
+2. push to your PR and watch the GitHub Action CI
+3. access your image in Kubeflow DEV via a custom image from any of:
+    - k8scc01covidacrdev.azurecr.io/IMAGENAME:SHA
+    - k8scc01covidacrdev.azurecr.io/IMAGENAME:SHORT_SHA</p>
+<h2 id="whats-different">Whats Different?<a class="headerlink" href="#whats-different" title="Permanent link">&para;</a></h2>
+<p>Routes are defined in this repository <a href="./main.go">here</a>.</p>
+<p><a href="https://github.com/kubeflow/kubeflow/tree/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes">Upstream</a>, the endpoints are structures via request type (e.g. <code>GET</code>, <code>PUT</code>, <code>DELETE</code>).</p>
+<p><em>Note</em></p>
+<ul>
+<li><em>that not all endpoints are included in the golang implementation</em></li>
+<li><em>to find the upstream endpoint, load the <a href="https://github.com/kubeflow/kubeflow/tree/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes">Upstream</a>
+  and use search with the endpoint text!</em></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Request Type</th>
+<th>Golang Endpoint</th>
+<th>Upstream Python Endpoint</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/api/config</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L9">/api/config</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/gpus</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L52">/api/gpus</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/storageclasses/default</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L26">/api/storageclasses/default</a></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/cost/allocation</td>
+<td>Not found</td>
+<td>Get the kubecost Allocation API</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L10">/api/namespaces</a></td>
+<td>Get the list of namespaces</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}</td>
+<td>Not found</td>
+<td>Get namespace metadata</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/notebooks</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L44">/api/namespaces/\&lt;namespace>/notebooks</a></td>
+<td>Get the list of notebooks</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/namespaces/{namespace}/notebooks</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/default/routes/post.py#L11">/api/namespaces/\&lt;namespace>/notebooks</a></td>
+<td>Create a notebook</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/namespaces/{namespace}/notebooks/{notebook}</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/delete.py#L9">/api/namespaces/\&lt;namespace>/notebooks/<notebook></a></td>
+<td>Update a notebook</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/api/namespaces/{namespace}/notebooks/{notebook}</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/patch.py#L19">/api/namespaces/\&lt;namespace>/notebooks/&lt;notebook</a></td>
+<td>Delete a notebook</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/pvcs</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L15">/api/namespaces/\&lt;namespace>/pvc</a></td>
+<td>List <code>PVC</code>s</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/namespaces/{namespace}/pvcs/{pvc}</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/volumes/backend/apps/default/routes/delete.py#L11">/api/namespaces/\&lt;namespace>/pvcs/<pvc></a></td>
+<td>Delete a <code>PVC</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/poddefaults</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L25">/api/namespaces/\&lt;namespace>/poddefaults</a></td>
+<td>Get <code>PodDefault</code>s for a given namespace</td>
+</tr>
+</tbody>
+</table>
 <h1 id="link">Link<a class="headerlink" href="#link" title="Permanent link">&para;</a></h1>
 <p><a href="https://github.com/StatCan/jupyter-apis">jupyter-apis</a></p>
 
@@ -4424,8 +835,6 @@ veuillez consulter les <a href="https://www.canada.ca/fr/secretariat-conseil-tre
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
         </div>
         
       </main>
@@ -4483,16 +892,22 @@ veuillez consulter les <a href="https://www.canada.ca/fr/secretariat-conseil-tre
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        
+          <script src="../javascripts/mathjax.js"></script>
+        
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
       
     
   </body>
