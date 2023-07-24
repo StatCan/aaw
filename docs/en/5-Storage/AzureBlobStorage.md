@@ -49,7 +49,7 @@ storage type behind them:
 - **aaw-unclassified:** By default,
   use this one. Stores unclassified data.
 
-- **aaw-protected-b:** Stores sensitive data protected-b.
+- **aaw-protected-b:** Stores sensitive protected-b data.
 
 - **aaw-unclassified-ro:** This classification is protected-b but read-only access. This is so users can view unclassified
 data within a protected-b notebook.
@@ -59,9 +59,14 @@ data within a protected-b notebook.
 ## Accessing Internal Data
 
 <!-- prettier-ignore -->
-Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to
-unclassified or protected-b data.
+Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to unclassified or protected-b data. The following containers can be provisoned:
 
+- **external-unclassified**
+- **external-protected-b**
+- **internal-unclassified**
+- **internal-protected-b**
+
+They follow the same convention as the AAW containers above in terms of data, however there is a layer of isolation between StatCan employees and non-StatCan employees. Non-Statcan employees are only allowed in **external** containers, while StatCan employees can have access to any container. 
 
 AAW has an integration with the FAIR Data Infrastructure team that allows users
 to transfer unclassified and protected-b data to Azure Storage Accounts, thus allowing users to
