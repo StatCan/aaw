@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
@@ -540,6 +540,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#testing-backend-rest-api" class="md-nav__link">
+    Testing backend Rest API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#running-intergration-tests" class="md-nav__link">
     Running intergration tests
   </a>
@@ -637,28 +644,28 @@ context. See <em>Connecting a Kubeflow cluster</em> below for options.</p>
 <p><em>Recommended</em></p>
 <p>You can use the vscode debugger to run the backend, just copy the below contents to a file at path <code>.vscode/launch.json</code>.
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug jupyter-api backend&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;debug&quot;</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                </span><span class="s2">&quot;-spawner-config&quot;</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                </span><span class="s2">&quot;samples/spawner_ui_config.yaml&quot;</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="p">],</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="nt">&quot;envFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/.env&quot;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">          </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug jupyter-api backend&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">          </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">          </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;debug&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">          </span><span class="nt">&quot;program&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">          </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">              </span><span class="s2">&quot;-spawner-config&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">              </span><span class="s2">&quot;samples/spawner_ui_config.yaml&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">          </span><span class="p">],</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">          </span><span class="nt">&quot;envFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workspaceFolder}/.env&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <h3 id="run-front-end">Run Front-End<a class="headerlink" href="#run-front-end" title="Permanent link">&para;</a></h3>
 <p>The front-end is configured to proxy requests to the local API server. It
 requires an environment variable (<code>KF_USER_ID</code>) to specify the current user –
 this is passed to the API server as an HTTP header.</p>
-<p>The following can be pasted in a script and executed. This uses the latest node lts version(v16.16.0).
+<p>The following can be pasted in a script and executed. This uses the latest node lts/gallium version(v16.20.0) with npm v8(8.19.4).
 <strong>NOTE</strong>: <code>user</code> is when using vagrant. Use the email adress if it is the dev cluser (please never connect to prod directly)</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd frontend/common/kubeflow-common-lib
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>npm i
@@ -667,10 +674,14 @@ this is passed to the API server as an HTTP header.</p>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>cd ../../jupyter
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>npm i
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>npm link kubeflow --legacy-peer-deps
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>npm link kubeflow
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>KF_USER_ID=user npm start
 </span></code></pre></div>
 <p>For the kubecost data to be retrievable, the following will need to be executed <code>kubectl port-forward -n kubecost-system deployment/kubecost-cost-analyzer 9090</code></p>
+<h3 id="testing-backend-rest-api">Testing backend Rest API<a class="headerlink" href="#testing-backend-rest-api" title="Permanent link">&para;</a></h3>
+<p>To test the backend, install the <a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client extension</a>. After being installed, it should appear in the vs code sidebar (it might require a restart first). 
+First thing is to make sure that the backend is running. Then, open Thunder Client from the vs code sidebar. You should be able to see multiple requests that can be made against the backend under the "Collections" tab, in the "Golang kubeflow" dropdown. From there, just select a request and hit "Send". 
+Some requests require certain parameters to have values. Those can be filled up under the "Env" tab.</p>
 <h3 id="running-intergration-tests">Running intergration tests<a class="headerlink" href="#running-intergration-tests" title="Permanent link">&para;</a></h3>
 <p>We use <a href="https://www.cypress.io/">Cypress</a> to make our end-to-end tests.
 To run integration tests locally, first make sure that the jupyter-apis app is up and running. Then, from the <code>jupyter-apis/frontend/jupyter</code> directory, run either <code>npm run ui-test</code> to open the Cypress UI, or <code>npm run ui-test-ci</code> to run the cypress tests just in the terminal.</p>
@@ -726,11 +737,11 @@ and run <code>vagrant up</code>.</p>
     - k8scc01covidacrdev.azurecr.io/IMAGENAME:SHORT_SHA</p>
 <h2 id="whats-different">Whats Different?<a class="headerlink" href="#whats-different" title="Permanent link">&para;</a></h2>
 <p>Routes are defined in this repository <a href="./main.go">here</a>.</p>
-<p><a href="https://github.com/kubeflow/kubeflow/tree/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes">Upstream</a>, the endpoints are structures via request type (e.g. <code>GET</code>, <code>PUT</code>, <code>DELETE</code>).</p>
+<p><a href="https://github.com/kubeflow/kubeflow/tree/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes">Upstream</a>, the endpoints are structures via request type (e.g. <code>GET</code>, <code>PUT</code>, <code>DELETE</code>).</p>
 <p><em>Note</em></p>
 <ul>
 <li><em>that not all endpoints are included in the golang implementation</em></li>
-<li><em>to find the upstream endpoint, load the <a href="https://github.com/kubeflow/kubeflow/tree/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes">Upstream</a>
+<li><em>to find the upstream endpoint, load the <a href="https://github.com/kubeflow/kubeflow/tree/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes">Upstream</a>
   and use search with the endpoint text!</em></li>
 </ul>
 <table>
@@ -746,20 +757,26 @@ and run <code>vagrant up</code>.</p>
 <tr>
 <td>GET</td>
 <td>/api/config</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L9">/api/config</a></td>
-<td></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L13">/api/config</a></td>
+<td>Gets the spawner_ui_config.yaml</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/api/gpus</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L52">/api/gpus</a></td>
-<td></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L101">/api/gpus</a></td>
+<td>Reads the GPU vendors from the spawner config</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/storageclasses</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L18">/api/storageclasses</a></td>
+<td>list all storageclasses</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/api/storageclasses/default</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L26">/api/storageclasses/default</a></td>
-<td></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L26">/api/storageclasses/default</a></td>
+<td>gets the storage class with the <code>is-default-class</code> annotation</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -770,7 +787,7 @@ and run <code>vagrant up</code>.</p>
 <tr>
 <td>GET</td>
 <td>/api/namespaces</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L10">/api/namespaces</a></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/common/backend/kubeflow/kubeflow/crud_backend/routes/get.py#L10">/api/namespaces</a></td>
 <td>Get the list of namespaces</td>
 </tr>
 <tr>
@@ -782,43 +799,85 @@ and run <code>vagrant up</code>.</p>
 <tr>
 <td>GET</td>
 <td>/api/namespaces/{namespace}/notebooks</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L44">/api/namespaces/\&lt;namespace>/notebooks</a></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L52">/api/namespaces/\&lt;namespace>/notebooks</a></td>
 <td>Get the list of notebooks</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>/api/namespaces/{namespace}/notebooks</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/default/routes/post.py#L11">/api/namespaces/\&lt;namespace>/notebooks</a></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/default/routes/post.py#L11">/api/namespaces/\&lt;namespace>/notebooks</a></td>
 <td>Create a notebook</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/notebooks/{notebook}</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L59">/api/namespaces/\&lt;namespace>/notebooks/\&lt;name></a></td>
+<td>Get a notebook</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/notebooks/{notebook}/pod</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L64">/api/namespaces/\&lt;namespace>/notebooks/\&lt;notebook_name>/pod</a></td>
+<td>Gets pod of notebook</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/notebooks/{notebook}/pod/{pod_name}/logs</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L81">/api/namespaces/\&lt;namespace>/notebooks/\&lt;notebook_name>/pod/\&lt;pod_name>/logs</a></td>
+<td>Gets logs of pod of notebook</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/notebooks/{notebook}/events</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L90">/api/namespaces/\&lt;namespace>/notebooks/\&lt;notebook_name>/events</a></td>
+<td>Gets events of notebook</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td>/api/namespaces/{namespace}/notebooks/{notebook}</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/delete.py#L9">/api/namespaces/\&lt;namespace>/notebooks/<notebook></a></td>
-<td>Update a notebook</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/delete.py#L9">/api/namespaces/\&lt;namespace>/notebooks/\&lt;notebook></a></td>
+<td>Delete a notebook</td>
 </tr>
 <tr>
 <td>PATCH</td>
 <td>/api/namespaces/{namespace}/notebooks/{notebook}</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/patch.py#L19">/api/namespaces/\&lt;namespace>/notebooks/&lt;notebook</a></td>
-<td>Delete a notebook</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/patch.py#L19">/api/namespaces/\&lt;namespace>/notebooks/\&lt;notebook></a></td>
+<td>Update a notebook</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/api/namespaces/{namespace}/pvcs</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L15">/api/namespaces/\&lt;namespace>/pvc</a></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/volumes/backend/apps/default/routes/get.py#L9">/api/namespaces/\&lt;namespace>/pvcs</a></td>
 <td>List <code>PVC</code>s</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/pvcs/{pvc}</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/volumes/backend/apps/default/routes/get.py#L19">/api/namespaces/\&lt;namespace>/pvcs/\&lt;pvc_name></a></td>
+<td>Gets a <code>PVC</code></td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td>/api/namespaces/{namespace}/pvcs/{pvc}</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/volumes/backend/apps/default/routes/delete.py#L11">/api/namespaces/\&lt;namespace>/pvcs/<pvc></a></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/volumes/backend/apps/default/routes/delete.py#L11">/api/namespaces/\&lt;namespace>/pvcs/\&lt;pvc></a></td>
 <td>Delete a <code>PVC</code></td>
 </tr>
 <tr>
 <td>GET</td>
+<td>/api/namespaces/{namespace}/pvcs/{pvc}/pods</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/volumes/backend/apps/default/routes/get.py#L25">/api/namespaces/\&lt;namespace>/pvcs/\&lt;pvc_name>/pods</a></td>
+<td>Gets pods of a <code>PVC</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/api/namespaces/{namespace}/pvcs/{pvc}/events</td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/volumes/backend/apps/default/routes/get.py#L32">/api/namespaces/\&lt;namespace>/pvcs/\&lt;pvc_name>/events</a></td>
+<td>Gets events of a <code>PVC</code></td>
+</tr>
+<tr>
+<td>GET</td>
 <td>/api/namespaces/{namespace}/poddefaults</td>
-<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.6.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L25">/api/namespaces/\&lt;namespace>/poddefaults</a></td>
+<td><a href="https://github.com/kubeflow/kubeflow/blob/v1.7.0/components/crud-web-apps/jupyter/backend/apps/common/routes/get.py#L29">/api/namespaces/\&lt;namespace>/poddefaults</a></td>
 <td>Get <code>PodDefault</code>s for a given namespace</td>
 </tr>
 </tbody>
@@ -892,10 +951,10 @@ and run <code>vagrant up</code>.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../javascripts/mathjax.js"></script>

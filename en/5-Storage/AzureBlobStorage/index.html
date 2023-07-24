@@ -19,7 +19,7 @@
         <link rel="next" href="../../6-Gitlab/Gitlab/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
       
 
@@ -1055,7 +1055,7 @@ storage type behind them:</p>
   use this one. Stores unclassified data.</li>
 </ul>
 <ul>
-<li><strong>aaw-protected-b:</strong> Stores sensitive data protected-b.</li>
+<li><strong>aaw-protected-b:</strong> Stores sensitive protected-b data.</li>
 </ul>
 <ul>
 <li><strong>aaw-unclassified-ro:</strong> This classification is protected-b but read-only access. This is so users can view unclassified
@@ -1065,8 +1065,14 @@ data within a protected-b notebook.</li>
 
 <h2 id="accessing-internal-data">Accessing Internal Data<a class="headerlink" href="#accessing-internal-data" title="Permanent link">&para;</a></h2>
 <!-- prettier-ignore -->
-<p>Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to
-unclassified or protected-b data.</p>
+<p>Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to unclassified or protected-b data. The following containers can be provisoned:</p>
+<ul>
+<li><strong>external-unclassified</strong></li>
+<li><strong>external-protected-b</strong></li>
+<li><strong>internal-unclassified</strong></li>
+<li><strong>internal-protected-b</strong></li>
+</ul>
+<p>They follow the same convention as the AAW containers above in terms of data, however there is a layer of isolation between StatCan employees and non-StatCan employees. Non-Statcan employees are only allowed in <strong>external</strong> containers, while StatCan employees can have access to any container. </p>
 <p>AAW has an integration with the FAIR Data Infrastructure team that allows users
 to transfer unclassified and protected-b data to Azure Storage Accounts, thus allowing users to
 access this data from Notebook Servers.</p>
@@ -1149,10 +1155,10 @@ this data.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="../../javascripts/mathjax.js"></script>

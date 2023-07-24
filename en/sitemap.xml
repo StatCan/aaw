@@ -2,177 +2,177 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://statcan.github.io/aaw/en/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Help/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/welcome-message/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/welcome/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Jupyter/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Kubeflow/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/MLflow/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Overview/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/RStudio/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Remote-Desktop/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Selecting-an-Image/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Accessing-Published-Content/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Custom/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Dash/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Datasette/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Overview/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/PowerBI/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/R-Shiny/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Kubeflow-Pipelines/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Machine-Learning-Model-Cloud-Storage/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Machine-Learning-Model-Serving/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Machine-Learning-Training-Pipelines/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Machine-Learning/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Overview/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/PaaS-Integration/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/PaaS/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Serving/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/sklearn_iris_jsondata/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/4-Collaboration/Geospatial-Analytical-Environment/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/4-Collaboration/Overview/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/4-Collaboration/Request-a-Namespace/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/5-Storage/AzureBlobStorage/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/5-Storage/Disks/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/5-Storage/Overview/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/6-Gitlab/Gitlab/</loc>
-         <lastmod>2023-06-27</lastmod>
+         <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
