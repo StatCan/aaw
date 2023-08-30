@@ -33,9 +33,6 @@ These folders can be used like any other - you can copy files to/from using the 
 ## How to Migrate from MinIO to Azure Blob Storage
 
 ```
-#!/bin/sh
-FULLNAME=<your-name-goes-here>
-
 # Obtain credentials
 source /vault/secrets/minio-standard-tenant-1
 
