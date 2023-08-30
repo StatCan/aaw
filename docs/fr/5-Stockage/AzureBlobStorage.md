@@ -33,9 +33,6 @@ Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez co
 ## Comment migrer de MinIO vers Azure Blob Storage
 
 ```
-#!/bin/sh
-FULLNAME=<votre-nom-va-ici>
-
 # Obtenir les informations d'identification
 source /vault/secrets/minio-standard-tenant-1
 
