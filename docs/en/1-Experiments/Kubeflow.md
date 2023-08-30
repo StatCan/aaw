@@ -42,8 +42,8 @@ for your team.
 ## Server Name and Namespace
 
 - You will get a template to create your notebook server. **Note:** the name of
-  your server can consist of only lower-case letters, numbers, and hyphens. **No spaces, and no
-  underscores.**
+  your server can consist of only lower-case letters, numbers, and hyphens. **No
+  spaces, and no underscores.**
 
 - You will need to specify a namespace. By default you will have a default
   namespace for your account, but for projects you may need to select the
@@ -58,8 +58,9 @@ employees (due to license limitations), the others are available for everyone.
 Select the drop down menu to select additional options within these (for
 instance, CPU, PyTorch, and TensorFlow images for JupyterLab).
 
-Check the name of the images and choose one that matches what you want to do. Don't know
-which one to choose? Check out your options [here](./Selecting-an-Image.md).
+Check the name of the images and choose one that matches what you want to do.
+Don't know which one to choose? Check out your options
+[here](./Selecting-an-Image.md).
 
 ![Choose an Image](../images/select-image-screenshot.PNG)
 
@@ -68,40 +69,41 @@ which one to choose? Check out your options [here](./Selecting-an-Image.md).
 At the time of writing (December 23, 2021) there are two types of computers in
 the cluster
 
- - **CPU:** `D16s v3` (16 CPU cores, 64 GiB memory; for user use 15 CPU cores
-   and 48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for
-   system use).
- - **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
-   memory are available; 16 GiB memory reserved for system use). The available
-   GPU is the NVIDIA Tesla V100 GPU with specifications
-   [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
+- **CPU:** `D16s v3` (16 CPU cores, 64 GiB memory; for user use 15 CPU cores and
+  48 GiB memory are available; 1 CPU core and 16 GiB memory reserved for system
+  use).
+- **GPU:** `NC6s_v3` (6 CPU cores, 112 GiB memory, 1 GPU; for user use 96 GiB
+  memory are available; 16 GiB memory reserved for system use). The available
+  GPU is the NVIDIA Tesla V100 GPU with specifications
+  [here](https://images.nvidia.com/content/technologies/volta/pdf/volta-v100-datasheet-update-us-1165301-r5.pdf).
 
 When creating a notebook server, the system will limit you to the maximum
-specifications above. For CPU notebook servers, you can specify the exact
-amount of CPU and memory that you require. This allows you to meet your
-compute needs while minimising cost. For a GPU notebook server, you will
-always get the full server (6 CPU cores, 96 GiB accessible memory, and 1 GPU).
-See below section on GPUs for information on how to select a GPU server.
+specifications above. For CPU notebook servers, you can specify the exact amount
+of CPU and memory that you require. This allows you to meet your compute needs
+while minimising cost. For a GPU notebook server, you will always get the full
+server (6 CPU cores, 96 GiB accessible memory, and 1 GPU). See below section on
+GPUs for information on how to select a GPU server.
 
-In the advanced options, you can select a higher limit than the number of CPU cores and
-RAM requested. The amount requested is the amount guaranteed to be available for your
-notebook server and you will always pay for at least this much. If the limit is higher
-than the amount requested, if additional RAM and CPU cores are available on that shared
-server in the cluster your notebook server can use them as needed. One use case for this
-is jobs that usually need only one CPU core but can benefit from multithreading to speed
-up certain operations. By requesting one CPU core but a higher limit, you can pay much
-less for the notebook server while allowing it to use spare unused CPU cores as needed
-to speed up computations.
+In the advanced options, you can select a higher limit than the number of CPU
+cores and RAM requested. The amount requested is the amount guaranteed to be
+available for your notebook server and you will always pay for at least this
+much. If the limit is higher than the amount requested, if additional RAM and
+CPU cores are available on that shared server in the cluster your notebook
+server can use them as needed. One use case for this is jobs that usually need
+only one CPU core but can benefit from multithreading to speed up certain
+operations. By requesting one CPU core but a higher limit, you can pay much less
+for the notebook server while allowing it to use spare unused CPU cores as
+needed to speed up computations.
 
 ![Select CPU and RAM](../images/cpu-ram-select.png)
 
 ## GPUs
 
-If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the GPU
-vendor (the create button will be greyed out until the GPU vendor is selected if
-you have a GPU specified). Multi-GPU servers are currently supported on the AAW
-system only on a special on-request basis, please contact the AAW maintainers if
-you would like a multi-GPU server.
+If you want a GPU server, select `1` as the number of GPUs and `NVIDIA` as the
+GPU vendor (the create button will be greyed out until the GPU vendor is
+selected if you have a GPU specified). Multi-GPU servers are currently supported
+on the AAW system only on a special on-request basis, please contact the AAW
+maintainers if you would like a multi-GPU server.
 
 ![GPU Configuration](../images/kubeflow_gpu_selection.jpg)
 
@@ -115,10 +117,11 @@ cores and 112 GiB of memory.
 
 ## Workspace Volume
 
-You will need a workspace volume, which is where the home folder will be mounted. There
-are various configuration options available:
+You will need a workspace volume, which is where the home folder will be
+mounted. There are various configuration options available:
 
-- You can either reuse an existing workspace volume from before, or create a new one.
+- You can either reuse an existing workspace volume from before, or create a new
+  one.
 
 - You can specify the size of the workspace volume, from 4 GiB to 32 GiB.
 
@@ -131,27 +134,27 @@ are various configuration options available:
 
 ## Data Volumes
 
-You can also create data volumes that can be used to store additional data. Multiple
-data volumes can be created. Click the add new volume button to create a new volume and
-specify its configuration. Click the attach existing volume button to mount an existing
-data volume to the notebook server. There are the following configuration parameters for
-data volumes:
+You can also create data volumes that can be used to store additional data.
+Multiple data volumes can be created. Click the add new volume button to create
+a new volume and specify its configuration. Click the attach existing volume
+button to mount an existing data volume to the notebook server. There are the
+following configuration parameters for data volumes:
 
 - **Name**: Name of the volume.
 
 - **Size in GiB**: From 4 GiB to 512 GiB.
 
-- **Mount path**: Path where the data volume can be accessed on the notebook server, by
-  default `/home/jovyan/vol-1`, `/home/jovyan/vol-2`, etc. (incrementing counter per data
-  volume mounted).
+- **Mount path**: Path where the data volume can be accessed on the notebook
+  server, by default `/home/jovyan/vol-1`, `/home/jovyan/vol-2`, etc.
+  (incrementing counter per data volume mounted).
 
-When mounting an existing data volume, the name option becomes a drop-down list of the
-existing data volumes. Only a volume not currently mounted to an existing notebook server
-can be used. The mount path option remains user-configurable with the same defaults as
-creating a new volume.
+When mounting an existing data volume, the name option becomes a drop-down list
+of the existing data volumes. Only a volume not currently mounted to an existing
+notebook server can be used. The mount path option remains user-configurable
+with the same defaults as creating a new volume.
 
-The garbage can icon on the right can be used to delete an existing or accidentally created
-data volume.
+The garbage can icon on the right can be used to delete an existing or
+accidentally created data volume.
 
 ![Create a Data Volume](../images/kubeflow_volumes.png)
 
@@ -163,18 +166,18 @@ There are currently three checkbox options available here:
   repositories accessible as subfolders / files of the `minio/` folder. This is
   still experimental and may not work properly currently.
 - **Run a Protected B notebook**: Enable this if the server you create needs
-  access to any Protected B resources. Protected B notebook servers run with many
-  security restrictions and have access to separate MinIO instances specifically
-  designed for Protected B data.
+  access to any Protected B resources. Protected B notebook servers run with
+  many security restrictions and have access to separate MinIO instances
+  specifically designed for Protected B data.
 
 ## Miscellaneous Settings
 
 The following can be customized here:
 
-- **Enable Shared Memory**: This is required if you use PyTorch with multiple data
-  loaders, which otherwise will generate an error. If using PyTorch make sure this
-  is enabled, otherwise it does not matter unless you have another application
-  that requires shared memory.
+- **Enable Shared Memory**: This is required if you use PyTorch with multiple
+  data loaders, which otherwise will generate an error. If using PyTorch make
+  sure this is enabled, otherwise it does not matter unless you have another
+  application that requires shared memory.
 - **System Language**: Can specify English or French here.
 
 ![Miscellaneous Settings](../images/misc-settings.PNG)

@@ -1,20 +1,46 @@
 # Modèles d'apprentissage automatique
 
-Les modèles d'apprentissage automatique sont des algorithmes de calcul conçus pour apprendre automatiquement des modèles et des relations à partir de données. Ces modèles sont entraînés sur un ensemble de données, qui est généralement une collection d'exemples ou d'instances, chacun d'entre eux se composant d'un ensemble de fonctionnalités ou de variables, ainsi que d'une variable cible ou d'une sortie.
+Les modèles d'apprentissage automatique sont des algorithmes de calcul conçus
+pour apprendre automatiquement des modèles et des relations à partir de données.
+Ces modèles sont entraînés sur un ensemble de données, qui est généralement une
+collection d'exemples ou d'instances, chacun d'entre eux se composant d'un
+ensemble de fonctionnalités ou de variables, ainsi que d'une variable cible ou
+d'une sortie.
 
-L'objectif d'un modèle d'apprentissage automatique est d'identifier des modèles et des relations au sein des données qui peuvent être utilisés pour faire des prédictions ou des décisions concernant de nouvelles données invisibles. Cela implique de développer une représentation mathématique de la relation entre les caractéristiques d'entrée et la variable de sortie, sur la base des modèles observés dans les données d'apprentissage. Une fois le modèle entraîné, il peut être utilisé pour faire des prédictions ou prendre des décisions concernant de nouvelles données inédites.
+L'objectif d'un modèle d'apprentissage automatique est d'identifier des modèles
+et des relations au sein des données qui peuvent être utilisés pour faire des
+prédictions ou des décisions concernant de nouvelles données invisibles. Cela
+implique de développer une représentation mathématique de la relation entre les
+caractéristiques d'entrée et la variable de sortie, sur la base des modèles
+observés dans les données d'apprentissage. Une fois le modèle entraîné, il peut
+être utilisé pour faire des prédictions ou prendre des décisions concernant de
+nouvelles données inédites.
 
-Il existe plusieurs types de modèles d'apprentissage automatique, chacun étant conçu pour traiter différents types de problèmes ou de données. Certains des types les plus courants de modèles d'apprentissage automatique incluent :
+Il existe plusieurs types de modèles d'apprentissage automatique, chacun étant
+conçu pour traiter différents types de problèmes ou de données. Certains des
+types les plus courants de modèles d'apprentissage automatique incluent :
 
-1. **Modèles de régression :** Les modèles de régression sont utilisés pour prédire des valeurs numériques continues, telles que les cours des actions ou les prix des logements.
+1. **Modèles de régression :** Les modèles de régression sont utilisés pour
+   prédire des valeurs numériques continues, telles que les cours des actions ou
+   les prix des logements.
 
-2. **Modèles de classification :** Les modèles de classification sont utilisés pour prédire des valeurs catégorielles discrètes, par exemple si un client achètera ou non un produit.
+2. **Modèles de classification :** Les modèles de classification sont utilisés
+   pour prédire des valeurs catégorielles discrètes, par exemple si un client
+   achètera ou non un produit.
 
-3. **Modèles de clustering :** Les modèles de clustering sont utilisés pour identifier des groupes ou des clusters au sein d'un ensemble de données en fonction des similitudes entre les instances.
+3. **Modèles de clustering :** Les modèles de clustering sont utilisés pour
+   identifier des groupes ou des clusters au sein d'un ensemble de données en
+   fonction des similitudes entre les instances.
 
-4. **Modèles de recommandation :** Les modèles de recommandation sont utilisés pour recommander des produits ou des services aux utilisateurs en fonction de leur comportement ou de leurs préférences passés.
+4. **Modèles de recommandation :** Les modèles de recommandation sont utilisés
+   pour recommander des produits ou des services aux utilisateurs en fonction de
+   leur comportement ou de leurs préférences passés.
 
-5. **Réseaux de neurones :** Les réseaux de neurones sont un type de modèle d'apprentissage automatique conçu pour imiter la structure et la fonction du cerveau humain. Ils sont couramment utilisés dans les applications de reconnaissance d'images, de reconnaissance vocale et de traitement du langage naturel.
+5. **Réseaux de neurones :** Les réseaux de neurones sont un type de modèle
+   d'apprentissage automatique conçu pour imiter la structure et la fonction du
+   cerveau humain. Ils sont couramment utilisés dans les applications de
+   reconnaissance d'images, de reconnaissance vocale et de traitement du langage
+   naturel.
 
 <!-- prettier-ignore -->
 !!! info "Les modèles d'apprentissage automatique peuvent être biaisés"
@@ -34,15 +60,20 @@ Il existe plusieurs types de modèles d'apprentissage automatique, chacun étant
 
      _Où $\hat{Y}_i$ désigne le $i$ième estimateur de la vraie valeur $Y$ en fonction de la $i$ième période d'apprentissage. Chaque $\hat{\beta}$ est un paramètre à apprendre. $\hat{\epsilon}_i$ est la quantité de bruit autorisée dans le modèle et peut varier en fonction du nombre d'époques d'entraînement indiqué par $i$. Chaque $X_i$ représente le $i$ième lot de données d'apprentissage._
 
-Dans les modèles statistiques classiques comme la régression linéaire, l'objectif est de trouver une ligne qui correspond le mieux aux données, nous permettant de faire des prédictions sur de nouveaux points de données.
+Dans les modèles statistiques classiques comme la régression linéaire,
+l'objectif est de trouver une ligne qui correspond le mieux aux données, nous
+permettant de faire des prédictions sur de nouveaux points de données.
 
-À mesure que la complexité du problème augmente, des algorithmes plus sophistiqués sont nécessaires, tels que des arbres de décision, des machines à vecteurs de support et des forêts aléatoires. Cependant, ces méthodes ont des limites et peuvent ne pas être en mesure de capturer des modèles complexes dans de grands ensembles de données.
+À mesure que la complexité du problème augmente, des algorithmes plus
+sophistiqués sont nécessaires, tels que des arbres de décision, des machines à
+vecteurs de support et des forêts aléatoires. Cependant, ces méthodes ont des
+limites et peuvent ne pas être en mesure de capturer des modèles complexes dans
+de grands ensembles de données.
 
 #### Exemple de code
 
-=== "Python"
-    ``` py title="linear_regression.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="linear_regression.py" linenums="1" #!/usr/bin/env
+python
 
     # Charger les bibliothèques requises
     import pandas as pd
@@ -69,10 +100,8 @@ Dans les modèles statistiques classiques comme la régression linéaire, l'obje
     print('Root Mean Squared Error:', rmse)
     ```
 
-=== "R"
-    ``` r title="linear_regression.r" linenums="1"
-    #!/usr/bin/env Rscript
-    
+=== "R" ``` r title="linear_regression.r" linenums="1" #!/usr/bin/env Rscript
+
     # Définir une graine aléatoire pour la reproductibilité
     set.seed(123)
 
@@ -112,15 +141,23 @@ Dans les modèles statistiques classiques comme la régression linéaire, l'obje
 
      _Dans cette formule, nous utilisons la formulation SVM standard où $\mathbf{w}$ est le vecteur de poids, $b$ est le terme de biais et $\boldsymbol{\xi}$ est le vecteur variable d'écart. L'objectif est de minimiser la norme L2 du vecteur de poids $\mathbf{w}$, sous la contrainte que tous les exemples d'apprentissage sont classés correctement avec une marge d'au moins 1, plus une tolérance pour certaines violations de marge contrôlées par le paramètre de régularisation $C$. La variable cible $y_i$ prend les valeurs 1 ou -1, représentant les deux classes du problème de classification binaire, et $\mathbf{x}_i$ est le vecteur de caractéristiques pour le $i$ième exemple d'entraînement._
 
-Une machine à vecteurs de support (SVM) est un algorithme d'apprentissage automatique supervisé qui peut être utilisé pour la classification, la régression et la détection des valeurs aberrantes. C'est un algorithme populaire dans le domaine de l'apprentissage automatique, en particulier pour résoudre les problèmes de classification.
+Une machine à vecteurs de support (SVM) est un algorithme d'apprentissage
+automatique supervisé qui peut être utilisé pour la classification, la
+régression et la détection des valeurs aberrantes. C'est un algorithme populaire
+dans le domaine de l'apprentissage automatique, en particulier pour résoudre les
+problèmes de classification.
 
-L'idée de base derrière SVM est de trouver un hyperplan qui sépare au mieux les données d'entrée en différentes classes. Dans un problème de classification à deux classes, l'hyperplan est une ligne qui sépare les points de données d'une classe des points de données de l'autre classe. SVM essaie de trouver l'hyperplan qui maximise la marge entre les deux classes, où la marge est la distance entre l'hyperplan et les points de données les plus proches de chaque classe.
+L'idée de base derrière SVM est de trouver un hyperplan qui sépare au mieux les
+données d'entrée en différentes classes. Dans un problème de classification à
+deux classes, l'hyperplan est une ligne qui sépare les points de données d'une
+classe des points de données de l'autre classe. SVM essaie de trouver
+l'hyperplan qui maximise la marge entre les deux classes, où la marge est la
+distance entre l'hyperplan et les points de données les plus proches de chaque
+classe.
 
 #### Exemple de code
 
-=== "Python"
-    ``` py title="svm.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="svm.py" linenums="1" #!/usr/bin/env python
 
     # Charger les bibliothèques requises
     import pandas as pd
@@ -186,14 +223,20 @@ L'idée de base derrière SVM est de trouver un hyperplan qui sépare au mieux l
 
      _où $\hat{y}$ est la sortie prédite, $f_t(\mathbf{x})$ est la prédiction du $t$ième arbre de la forêt pour l'entrée $\mathbf{x}$, et $T $ est le nombre d'arbres dans la forêt._
 
-Les forêts aléatoires sont une méthode d'apprentissage d'ensemble qui peut être utilisée pour les problèmes de classification et de régression. Ils sont souvent utilisés pour leur capacité à gérer des ensembles de données dimensionnelles à haute variation et des relations non linéaires entre les entités et les cibles.
+Les forêts aléatoires sont une méthode d'apprentissage d'ensemble qui peut être
+utilisée pour les problèmes de classification et de régression. Ils sont souvent
+utilisés pour leur capacité à gérer des ensembles de données dimensionnelles à
+haute variation et des relations non linéaires entre les entités et les cibles.
 
-Chaque arbre est entraîné sur un sous-ensemble amorcé des données d'entraînement d'origine, et à chaque division, un sous-ensemble aléatoire de caractéristiques est pris en compte pour déterminer la division. La prédiction finale est obtenue en faisant la moyenne des prédictions de tous les arbres de la forêt.
+Chaque arbre est entraîné sur un sous-ensemble amorcé des données d'entraînement
+d'origine, et à chaque division, un sous-ensemble aléatoire de caractéristiques
+est pris en compte pour déterminer la division. La prédiction finale est obtenue
+en faisant la moyenne des prédictions de tous les arbres de la forêt.
 
 #### Exemple de code
 
 === "Python"
-     
+
     ``` py title="random_forest.py" linenums="1"
     #!/usr/bin/env python
 
@@ -265,13 +308,21 @@ Chaque arbre est entraîné sur un sous-ensemble amorcé des données d'entraîn
 
      _Cette formule représente un réseau de neurones à anticipation avec des couches $L$, où chaque couche applique une transformation linéaire à la sortie de la couche précédente, suivie d'une fonction d'activation non linéaire. La sortie de la couche finale, $\hat{y}$, représente la sortie prédite du réseau de neurones pour l'entrée donnée $\mathbf{x}$._
 
-L'apprentissage en profondeur est un sous-ensemble de l'apprentissage automatique qui implique la formation de réseaux de neurones avec de nombreuses couches de nœuds interconnectés. Cette approche peut gérer des ensembles de données volumineux et complexes et est utilisée dans un large éventail d'applications, notamment la reconnaissance d'images, le traitement du langage naturel et la reconnaissance vocale. Le processus de formation consiste à alimenter le réseau de neurones avec un grand ensemble de données et à ajuster les poids des connexions entre les nœuds pour minimiser l'erreur entre les sorties prédites et les sorties réelles. Grâce à des itérations répétées, le réseau de neurones peut apprendre à reconnaître des modèles dans les données et à faire des prédictions précises sur de nouvelles données.
+L'apprentissage en profondeur est un sous-ensemble de l'apprentissage
+automatique qui implique la formation de réseaux de neurones avec de nombreuses
+couches de nœuds interconnectés. Cette approche peut gérer des ensembles de
+données volumineux et complexes et est utilisée dans un large éventail
+d'applications, notamment la reconnaissance d'images, le traitement du langage
+naturel et la reconnaissance vocale. Le processus de formation consiste à
+alimenter le réseau de neurones avec un grand ensemble de données et à ajuster
+les poids des connexions entre les nœuds pour minimiser l'erreur entre les
+sorties prédites et les sorties réelles. Grâce à des itérations répétées, le
+réseau de neurones peut apprendre à reconnaître des modèles dans les données et
+à faire des prédictions précises sur de nouvelles données.
 
 #### Exemple de code
 
-=== "Python"
-    ``` py title="deep_learning.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="deep_learning.py" linenums="1" #!/usr/bin/env python
 
     # Charger les bibliothèques requises
     import pandas as pd
@@ -316,7 +367,7 @@ L'apprentissage en profondeur est un sous-ensemble de l'apprentissage automatiqu
 
     ``` r title="deep_learning.r" linenums="1"
     #!/usr/bin/env Rscript
-        
+
     # Charger les bibliothèques requises
     library(keras)
     library(tensorflow)

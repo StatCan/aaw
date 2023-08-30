@@ -98,10 +98,27 @@ de détails**
 
 _L'analyse des données est un art sous-estimé._
 
-L'analyse des données est le processus d'examen et d'interprétation de grandes quantités de données pour extraire des informations utiles et tirer des conclusions significatives. Cela peut être fait à l'aide de diverses techniques et outils, tels que l'analyse statistique, l'apprentissage automatique et la visualisation. L'objectif de l'analyse des données est de découvrir des modèles, des tendances et des relations dans les données, qui peuvent ensuite être utilisés pour éclairer les décisions et résoudre les problèmes. L'analyse de données est utilisée dans un large éventail de domaines, des affaires et de la finance aux soins de santé et à la science, pour aider les organisations à prendre des décisions plus éclairées sur la base de preuves et d'informations basées sur des données.
+L'analyse des données est le processus d'examen et d'interprétation de grandes
+quantités de données pour extraire des informations utiles et tirer des
+conclusions significatives. Cela peut être fait à l'aide de diverses techniques
+et outils, tels que l'analyse statistique, l'apprentissage automatique et la
+visualisation. L'objectif de l'analyse des données est de découvrir des modèles,
+des tendances et des relations dans les données, qui peuvent ensuite être
+utilisés pour éclairer les décisions et résoudre les problèmes. L'analyse de
+données est utilisée dans un large éventail de domaines, des affaires et de la
+finance aux soins de santé et à la science, pour aider les organisations à
+prendre des décisions plus éclairées sur la base de preuves et d'informations
+basées sur des données.
 
 ### JupyterLab
 
 _Traiter les données à l'aide de R, Python ou Julia dans JupyterLab_
 
-Le traitement des données à l'aide de R, Python ou Julia est simplifié grâce à l'espace de travail d'analyse avancée. Que vous débutiez dans l'analyse de données ou que vous soyez un data scientist expérimenté, notre plateforme prend en charge une gamme de langages de programmation pour répondre à vos besoins. Vous pouvez installer et exécuter des packages pour R ou Python pour effectuer des tâches de traitement de données telles que le nettoyage, la transformation et la modélisation des données. Si vous préférez Julia, notre plateforme offre également un support pour ce langage de programmation.
+Le traitement des données à l'aide de R, Python ou Julia est simplifié grâce à
+l'espace de travail d'analyse avancée. Que vous débutiez dans l'analyse de
+données ou que vous soyez un data scientist expérimenté, notre plateforme prend
+en charge une gamme de langages de programmation pour répondre à vos besoins.
+Vous pouvez installer et exécuter des packages pour R ou Python pour effectuer
+des tâches de traitement de données telles que le nettoyage, la transformation
+et la modélisation des données. Si vous préférez Julia, notre plateforme offre
+également un support pour ce langage de programmation.

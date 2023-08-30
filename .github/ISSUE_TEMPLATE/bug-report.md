@@ -3,8 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: "<app name>: <description>"
 labels: kind/bug, triage/support
-assignees: ''
-
+assignees: ""
 ---
 
 #### Describe the bug

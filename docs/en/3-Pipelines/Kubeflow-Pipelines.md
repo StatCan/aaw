@@ -627,9 +627,9 @@ pipeline parameters.
 
 Although small data can often be stringified, passing by string is not suitable
 for complex data (large parquet files, images, etc.). It is common to use blob
-storage (for example: [MinIO](../5-Storage/AzureBlobStorage.md)) or other outside storage
-methods to persist data between components or even for later use. A typical
-pattern would be:
+storage (for example: [MinIO](../5-Storage/AzureBlobStorage.md)) or other
+outside storage methods to persist data between components or even for later
+use. A typical pattern would be:
 
 - Upload large/complex input data to blob storage (e.g. training data, a saved
   model, etc.)

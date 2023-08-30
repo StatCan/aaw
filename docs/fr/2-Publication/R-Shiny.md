@@ -1,6 +1,7 @@
 # Aperçu
 
-R-Shiny est un package R qui facilite la création d'applications Web interactives dans R.
+R-Shiny est un package R qui facilite la création d'applications Web
+interactives dans R.
 
 <!-- prettier-ignore -->
 !!! info "Hébergement d'applications R Shiny"
@@ -14,25 +15,53 @@ _Publier des graphismes de qualité professionnelle_
 
 [![InteractiveDashboard](../images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
 
-R Shiny est un framework d'application Web open source qui permet aux data scientists et aux analystes de créer des tableaux de bord et des visualisations de données interactifs basés sur le Web à l'aide du langage de programmation R. L'un des principaux avantages de R Shiny est qu'il offre un moyen simple de créer des tableaux de bord interactifs de haute qualité sans avoir besoin d'une expertise approfondie en développement Web. Avec R Shiny, les data scientists peuvent tirer parti de leurs compétences en codage R pour créer des applications Web dynamiques, basées sur les données, qui peuvent être facilement partagées avec les acteurs.
+R Shiny est un framework d'application Web open source qui permet aux data
+scientists et aux analystes de créer des tableaux de bord et des visualisations
+de données interactifs basés sur le Web à l'aide du langage de programmation R.
+L'un des principaux avantages de R Shiny est qu'il offre un moyen simple de
+créer des tableaux de bord interactifs de haute qualité sans avoir besoin d'une
+expertise approfondie en développement Web. Avec R Shiny, les data scientists
+peuvent tirer parti de leurs compétences en codage R pour créer des applications
+Web dynamiques, basées sur les données, qui peuvent être facilement partagées
+avec les acteurs.
 
-Un autre avantage de R Shiny est qu'il prend en charge une variété de visualisations de données qui peuvent être facilement personnalisées pour répondre aux besoins du projet. Les utilisateurs peuvent créer une large gamme de diagrammes et de graphiques, allant de simples diagrammes à barres et nuages de points à des cartes thermiques et des graphiques de réseau plus complexes. De plus, R Shiny prend en charge une variété de widgets interactifs qui permettent aux utilisateurs de manipuler et d'explorer des données en temps réel.
+Un autre avantage de R Shiny est qu'il prend en charge une variété de
+visualisations de données qui peuvent être facilement personnalisées pour
+répondre aux besoins du projet. Les utilisateurs peuvent créer une large gamme
+de diagrammes et de graphiques, allant de simples diagrammes à barres et nuages
+de points à des cartes thermiques et des graphiques de réseau plus complexes. De
+plus, R Shiny prend en charge une variété de widgets interactifs qui permettent
+aux utilisateurs de manipuler et d'explorer des données en temps réel.
 
 ![R Shiny Server](../images/readme/shiny_ui.png)
 
-R Shiny est également hautement extensible et peut être intégré à d'autres outils et plates-formes open source pour créer des workflows de science des données de bout en bout. Avec ses fonctionnalités puissantes et flexibles, R Shiny est un choix populaire pour créer des tableaux de bord de visualisation de données pour un large éventail d'applications, de la recherche scientifique à l'analyse commerciale. Dans l'ensemble, R Shiny offre une solution puissante, personnalisable et rentable pour créer des tableaux de bord interactifs et des visualisations de données.
+R Shiny est également hautement extensible et peut être intégré à d'autres
+outils et plates-formes open source pour créer des workflows de science des
+données de bout en bout. Avec ses fonctionnalités puissantes et flexibles, R
+Shiny est un choix populaire pour créer des tableaux de bord de visualisation de
+données pour un large éventail d'applications, de la recherche scientifique à
+l'analyse commerciale. Dans l'ensemble, R Shiny offre une solution puissante,
+personnalisable et rentable pour créer des tableaux de bord interactifs et des
+visualisations de données.
 
-Utilisez **[R-Shiny](/2-Publishing/R-Shiny/)** pour créer des applications Web interactives directement à partir de R. Vous pouvez déployer votre tableau de bord R Shiny en soumettant une demande d'extraction à notre [référentiel R-Dashboards GitHub ](https://github.com/StatCan/R-dashboards).
+Utilisez **[R-Shiny](/2-Publishing/R-Shiny/)** pour créer des applications Web
+interactives directement à partir de R. Vous pouvez déployer votre tableau de
+bord R Shiny en soumettant une demande d'extraction à notre
+[référentiel R-Dashboards GitHub ](https://github.com/StatCan/R-dashboards).
 
 # R Éditeur d'interface utilisateur brillant
 
-Le script Rscript suivant installe les packages requis pour exécuter "shinyuieditor" sur l'ETAA. Il commence par installer les packages R nécessaires et utilise `conda` pour installer `yarn`.
+Le script Rscript suivant installe les packages requis pour exécuter
+"shinyuieditor" sur l'ETAA. Il commence par installer les packages R nécessaires
+et utilise `conda` pour installer `yarn`.
 
-Une fois l'installation terminée, vous pouvez accéder au code de votre application dans `./my-app`
+Une fois l'installation terminée, vous pouvez accéder au code de votre
+application dans `./my-app`
 
-Exécutez ce script depuis `rstudio`. RStudio peut demander la permission d'ouvrir une nouvelle fenêtre si vous avez un bloqueur de popup.
+Exécutez ce script depuis `rstudio`. RStudio peut demander la permission
+d'ouvrir une nouvelle fenêtre si vous avez un bloqueur de popup.
 
-``` r title="setup-shinyuieditor.R" linenums="1"
+```r title="setup-shinyuieditor.R" linenums="1"
 #!/usr/bin/env Rscript
 
 #' Installer les packages nécessaires
@@ -73,27 +102,34 @@ shinyuieditor::launch_editor(app_loc = "./")
 
 ### Choisissez un modèle d'application
 
-La première chose que vous verrez est le sélecteur de modèle. Il existe trois options au moment d'écrire ces lignes (`shinyuieditor` est actuellement en alpha).
+La première chose que vous verrez est le sélecteur de modèle. Il existe trois
+options au moment d'écrire ces lignes (`shinyuieditor` est actuellement en
+alpha).
 
 ![image](https://user-images.githubusercontent.com/8212170/229583104-9404ad01-26cd-4260-bce6-6fe32ffab7d8.png)
 
 ### Mode fichier unique ou multi
 
-Je recommande le **mode multi-fichiers**, cela mettra le code back-end dans un fichier appelé `server.R` et le front-end dans un fichier appelé `ui.R`.
+Je recommande le **mode multi-fichiers**, cela mettra le code back-end dans un
+fichier appelé `server.R` et le front-end dans un fichier appelé `ui.R`.
 
 ![image](https://user-images.githubusercontent.com/8212170/229584803-452bcdb9-4aa6-4902-805e-845d0b939016.png)
 
 ### Concevez votre application
 
-Vous pouvez concevoir votre application avec du code ou l'interface utilisateur graphique. Essayez de concevoir la mise en page avec l'interface graphique et de concevoir les tracés avec du code.
+Vous pouvez concevoir votre application avec du code ou l'interface utilisateur
+graphique. Essayez de concevoir la mise en page avec l'interface graphique et de
+concevoir les tracés avec du code.
 
 ![image](https://user-images.githubusercontent.com/8212170/229589867-19bf334c-4789-4228-99ec-44583b119e29.png)
 
-Toutes les modifications que vous apportez dans `shinyuieditor` apparaîtront immédiatement dans le code.
+Toutes les modifications que vous apportez dans `shinyuieditor` apparaîtront
+immédiatement dans le code.
 
 ![image](https://user-images.githubusercontent.com/8212170/229637808-38dc0ed3-902a-44db-bfa0-193ef25af6ca.png)
 
-Toute modification que vous apportez au code apparaîtra immédiatement dans le `shinyuieditor`.
+Toute modification que vous apportez au code apparaîtra immédiatement dans le
+`shinyuieditor`.
 
 ![image](https://user-images.githubusercontent.com/8212170/229637972-b4a263f5-27f0-4160-8b43-9250ace72999.png)
 
@@ -101,9 +137,15 @@ Toute modification que vous apportez au code apparaîtra immédiatement dans le 
 
 ### Envoyez simplement une pull request !
 
-Tout ce que vous avez à faire est d'envoyer une demande d'extraction à [notre référentiel R-Dashboards](https://github.com/StatCan/R-dashboards). Incluez votre référentiel dans un dossier avec le nom que vous voulez (par exemple, "air-quality-dashboard"). Ensuite, nous l'approuverons et il sera mis en ligne.
+Tout ce que vous avez à faire est d'envoyer une demande d'extraction à
+[notre référentiel R-Dashboards](https://github.com/StatCan/R-dashboards).
+Incluez votre référentiel dans un dossier avec le nom que vous voulez (par
+exemple, "air-quality-dashboard"). Ensuite, nous l'approuverons et il sera mis
+en ligne.
 
-Si vous avez besoin d'installer des bibliothèques R supplémentaires, envoyez votre liste au [dépôt R-Shiny](https://github.com/StatCan/shiny) en créant un problème GitHub et nous ajouterons les dépendances.
+Si vous avez besoin d'installer des bibliothèques R supplémentaires, envoyez
+votre liste au [dépôt R-Shiny](https://github.com/StatCan/shiny) en créant un
+problème GitHub et nous ajouterons les dépendances.
 
 ![Exemple de tableau de bord](../images/example_shiny_dashboard.png)
 

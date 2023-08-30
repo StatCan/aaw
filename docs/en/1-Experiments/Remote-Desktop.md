@@ -2,13 +2,23 @@
 
 ### Ubuntu Virtual Desktop
 
-_You can run a full [**Ubuntu Desktop**](https://ubuntu.com/desktop), with typical applications, right inside your browser, using [**Kubeflow!**](https://kubeflow.aaw.cloud.statcan.ca/)_
+_You can run a full [**Ubuntu Desktop**](https://ubuntu.com/desktop), with
+typical applications, right inside your browser, using
+[**Kubeflow!**](https://kubeflow.aaw.cloud.statcan.ca/)_
 
 <center>
 [![Virtual Desktop](../images/VirtualDesktop.jpg)](https://novnc.com/info.html)
 </center>
 
-The Ubuntu Virtual Desktop is a powerful tool for data scientists and machine learning engineers who need to run resource-intensive workloads in the cloud. Ubuntu is a popular Linux distribution that is widely used in the data science and machine learning communities due to its strong support for open source tools such as R and Python. With the Ubuntu Virtual Desktop, you can quickly spin up a virtual machine with Ubuntu pre-installed and access it from anywhere with an internet connection. This means you can perform data analysis and machine learning tasks from your laptop, tablet, or phone without having to worry about hardware limitations.
+The Ubuntu Virtual Desktop is a powerful tool for data scientists and machine
+learning engineers who need to run resource-intensive workloads in the cloud.
+Ubuntu is a popular Linux distribution that is widely used in the data science
+and machine learning communities due to its strong support for open source tools
+such as R and Python. With the Ubuntu Virtual Desktop, you can quickly spin up a
+virtual machine with Ubuntu pre-installed and access it from anywhere with an
+internet connection. This means you can perform data analysis and machine
+learning tasks from your laptop, tablet, or phone without having to worry about
+hardware limitations.
 
 ## What is Remote Desktop?
 
@@ -47,37 +57,37 @@ fullscreen and clipboard access.
 
 ## Accessing the Clipboard
 
-This is done via the second button from the top of the panel on the left.
-It brings up a text box which we can modify to change the contents of the clipboard
+This is done via the second button from the top of the panel on the left. It
+brings up a text box which we can modify to change the contents of the clipboard
 or copy stuff from the clipboard of the remote desktop.
 
-For example, suppose we want to execute the command `head -c 20 /dev/urandom | md5sum`
-and copy-paste the result into a text file on our computer used to connect to the
-remote desktop.
+For example, suppose we want to execute the command
+`head -c 20 /dev/urandom | md5sum` and copy-paste the result into a text file on
+our computer used to connect to the remote desktop.
 
-We first open the clipboard from the panel on the left and paste in that command into
-the text box:
+We first open the clipboard from the panel on the left and paste in that command
+into the text box:
 
 ![Clipboard Paste Command from Computer](../images/rd-clipboard-send-to-rd.png)
 
-To close the clipboard window over the remote desktop, simply click the clipboard
-button again.
+To close the clipboard window over the remote desktop, simply click the
+clipboard button again.
 
-We then right click on a terminal window to paste in that command and press enter to
-execute the command. At that point we select the MD5 result, right click, and click
-copy:
-
-![Copy to Clipboard from Remote Desktop](../images/rd-clipboard-copy-from-rd.png)
-
-If we open the clipboard from the panel on the left again, it will now have the new
-contents:
+We then right click on a terminal window to paste in that command and press
+enter to execute the command. At that point we select the MD5 result, right
+click, and click copy:
 
 ![Copy to Clipboard from Remote Desktop](../images/rd-clipboard-copy-from-rd.png)
 
-The clipboard window will even update in-place if we leave it open the whole time
-and we simply select new material on the remote desktop and press copy again. We can
-simply copy what we have in that text box and paste it into any other software running
-on the computer used to connect.
+If we open the clipboard from the panel on the left again, it will now have the
+new contents:
+
+![Copy to Clipboard from Remote Desktop](../images/rd-clipboard-copy-from-rd.png)
+
+The clipboard window will even update in-place if we leave it open the whole
+time and we simply select new material on the remote desktop and press copy
+again. We can simply copy what we have in that text box and paste it into any
+other software running on the computer used to connect.
 
 ## In-browser Tools
 

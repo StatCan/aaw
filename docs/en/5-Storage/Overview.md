@@ -8,10 +8,10 @@ The platform provides several types of storage:
 
 Depending on your use case, either disk or bucket may be most suitable:
 
-|                               Type |                                                       Simultaneous Users |                                                   Speed | Total size               | Shareable with Other Users |
-| ---------------------------------: | -----------------------------------------------------------------------: | ------------------------------------------------------: | ------------------------ | ------------------------- |
-|               **[Disk](Disks.md)** |                                    One machine/notebook server at a time |                        Fastest (throughput and latency) | <=512GB total per drive  | No                        |
-| **[Container (via Azure Blob Storage)](AzureBlobStorage.md)** | Simultaneous access from many machines/notebook servers at the same time | Fast-ish (Fast download, modest upload, modest latency) | Infinite (within reason) | [Yes]                     |
+|                                                          Type |                                                       Simultaneous Users |                                                   Speed | Total size               | Shareable with Other Users |
+| ------------------------------------------------------------: | -----------------------------------------------------------------------: | ------------------------------------------------------: | ------------------------ | -------------------------- |
+|                                          **[Disk](Disks.md)** |                                    One machine/notebook server at a time |                        Fastest (throughput and latency) | <=512GB total per drive  | No                         |
+| **[Container (via Azure Blob Storage)](AzureBlobStorage.md)** | Simultaneous access from many machines/notebook servers at the same time | Fast-ish (Fast download, modest upload, modest latency) | Infinite (within reason) | [Yes]                      |
 
 <!-- prettier-ignore -->
 ??? info "If you're unsure which to choose, don't sweat it"

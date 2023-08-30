@@ -32,9 +32,19 @@ vous êtes intéressé spécifiquement par **_TensorFlow_** ou **_PyTorch_**, no
 avons également les images `jupyterlab-tensorflow` et` jupyterlab-pytorch` qui
 viennent avec ces outils pré-installés.
 
-Pour l'image `jupyterlab-pytorch`, les packages PyTorch (torch, torchvision et torchaudio) sont installés dans l'environnement conda `torch`. Vous devez activer cet environnement pour utiliser PyTorch.
+Pour l'image `jupyterlab-pytorch`, les packages PyTorch (torch, torchvision et
+torchaudio) sont installés dans l'environnement conda `torch`. Vous devez
+activer cet environnement pour utiliser PyTorch.
 
-Pour les images `jupyterlab-cpu`, `jupyterlab-tensorflow` et `jupyterlab-pytorch`, dans le shell par défaut, la commande `conda activate` peut ne pas fonctionner. Cela est dû au fait que l'environnement n'est pas correctement initialisé. Dans ce cas, exécutez « bash », vous devriez voir le logo AAW et quelques instructions apparaissent. Après cela, "conda activate" devrait fonctionner correctement. Si vous voyez le logo AAW au démarrage, cela signifie que l'environnement est correctement initialisé et que « conda activate » devrait fonctionner correctement. Un correctif pour ce bogue est en préparation, une fois cela corrigé, ce paragraphe sera supprimé.
+Pour les images `jupyterlab-cpu`, `jupyterlab-tensorflow` et
+`jupyterlab-pytorch`, dans le shell par défaut, la commande `conda activate`
+peut ne pas fonctionner. Cela est dû au fait que l'environnement n'est pas
+correctement initialisé. Dans ce cas, exécutez « bash », vous devriez voir le
+logo AAW et quelques instructions apparaissent. Après cela, "conda activate"
+devrait fonctionner correctement. Si vous voyez le logo AAW au démarrage, cela
+signifie que l'environnement est correctement initialisé et que « conda
+activate » devrait fonctionner correctement. Un correctif pour ce bogue est en
+préparation, une fois cela corrigé, ce paragraphe sera supprimé.
 
 Chaque image est préchargée avec VS Code dans le navigateur si vous préférez une
 expérience IDE complète.

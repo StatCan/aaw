@@ -1,20 +1,38 @@
 # Machine Learning Models
 
-Machine learning models are computational algorithms that are designed to automatically learn patterns and relationships from data. These models are trained on a dataset, which is typically a collection of examples or instances, each of which consists of a set of features or variables, as well as a target variable or output.
+Machine learning models are computational algorithms that are designed to
+automatically learn patterns and relationships from data. These models are
+trained on a dataset, which is typically a collection of examples or instances,
+each of which consists of a set of features or variables, as well as a target
+variable or output.
 
-The goal of a machine learning model is to identify patterns and relationships within the data that can be used to make predictions or decisions about new, unseen data. This involves developing a mathematical representation of the relationship between the input features and the output variable, based on the patterns observed in the training data. Once the model is trained, it can be used to make predictions or decisions about new, unseen data.
+The goal of a machine learning model is to identify patterns and relationships
+within the data that can be used to make predictions or decisions about new,
+unseen data. This involves developing a mathematical representation of the
+relationship between the input features and the output variable, based on the
+patterns observed in the training data. Once the model is trained, it can be
+used to make predictions or decisions about new, unseen data.
 
-There are several different types of machine learning models, each of which is designed to address different types of problems or data. Some of the most common types of machine learning models include:
+There are several different types of machine learning models, each of which is
+designed to address different types of problems or data. Some of the most common
+types of machine learning models include:
 
-1. **Regression Models:** Regression models are used to predict continuous numerical values, such as stock prices or housing prices.
+1. **Regression Models:** Regression models are used to predict continuous
+   numerical values, such as stock prices or housing prices.
 
-2. **Classification Models:** Classification models are used to predict discrete categorical values, such as whether a customer will buy a product or not.
+2. **Classification Models:** Classification models are used to predict discrete
+   categorical values, such as whether a customer will buy a product or not.
 
-3. **Clustering Models:** Clustering models are used to identify groups or clusters within a dataset based on similarities between instances.
+3. **Clustering Models:** Clustering models are used to identify groups or
+   clusters within a dataset based on similarities between instances.
 
-4. **Recommendation Models:** Recommendation models are used to recommend products or services to users based on their past behavior or preferences.
+4. **Recommendation Models:** Recommendation models are used to recommend
+   products or services to users based on their past behavior or preferences.
 
-5. **Neural Networks:** Neural networks are a type of machine learning model that is designed to mimic the structure and function of the human brain. They are commonly used in image recognition, speech recognition, and natural language processing applications.
+5. **Neural Networks:** Neural networks are a type of machine learning model
+   that is designed to mimic the structure and function of the human brain. They
+   are commonly used in image recognition, speech recognition, and natural
+   language processing applications.
 
 <!-- prettier-ignore -->
 !!! info "Machine Learning Models Can be Biased"
@@ -34,15 +52,19 @@ There are several different types of machine learning models, each of which is d
 
     _Where $\hat{Y}_i$ denotes the $i$th estimator of the true value $Y$ based on the $i$th training epoch. Each $\hat{\beta}$ is a parameter to be learned. $\hat{\epsilon}_i$ is the amount of noise permitted in the model and may vary depending on the training epoch number denoted by $i$. Each $X_i$ represents the $i$th batch of training data._
 
-In classical statistical models like linear regression, the goal is to find a line that best fits the data, allowing us to make predictions about new data points.
+In classical statistical models like linear regression, the goal is to find a
+line that best fits the data, allowing us to make predictions about new data
+points.
 
-As the complexity of the problem increases, more sophisticated algorithms are needed, such as decision trees, support vector machines, and random forests. However, these methods have limitations, and they may not be able to capture complex patterns in large datasets.
+As the complexity of the problem increases, more sophisticated algorithms are
+needed, such as decision trees, support vector machines, and random forests.
+However, these methods have limitations, and they may not be able to capture
+complex patterns in large datasets.
 
 #### Example Code
 
-=== "Python"
-    ``` py title="linear_regression.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="linear_regression.py" linenums="1" #!/usr/bin/env
+python
 
     # Load the required libraries
     import pandas as pd
@@ -69,10 +91,8 @@ As the complexity of the problem increases, more sophisticated algorithms are ne
     print('Root Mean Squared Error:', rmse)
     ```
 
-=== "R"
-    ``` r title="linear_regression.r" linenums="1"
-    #!/usr/bin/env Rscript
-    
+=== "R" ``` r title="linear_regression.r" linenums="1" #!/usr/bin/env Rscript
+
     # Set random seed for reproducibility
     set.seed(123)
 
@@ -112,15 +132,21 @@ As the complexity of the problem increases, more sophisticated algorithms are ne
 
     _In this formula, we use the standard SVM formulation where $\mathbf{w}$ is the weight vector, $b$ is the bias term, and $\boldsymbol{\xi}$ is the slack variable vector. The objective is to minimize the L2-norm of the weight vector $\mathbf{w}$, subject to the constraint that all training examples are classified correctly with a margin of at least 1, plus an allowance for some margin violations controlled by the regularization parameter $C$. The target variable $y_i$ takes values of either 1 or -1, representing the two classes in the binary classification problem, and $\mathbf{x}_i$ is the feature vector for the $i$th training example._
 
-A support vector machine (SVM) is a supervised machine learning algorithm that can be used for classification, regression, and outlier detection. It is a popular algorithm in the field of machine learning, especially for solving classification problems.
+A support vector machine (SVM) is a supervised machine learning algorithm that
+can be used for classification, regression, and outlier detection. It is a
+popular algorithm in the field of machine learning, especially for solving
+classification problems.
 
-The basic idea behind SVM is to find a hyperplane that best separates the input data into different classes. In a two-class classification problem, the hyperplane is a line that divides the data points of one class from the data points of the other class. SVM tries to find the hyperplane that maximizes the margin between the two classes, where the margin is the distance between the hyperplane and the nearest data points from each class.
+The basic idea behind SVM is to find a hyperplane that best separates the input
+data into different classes. In a two-class classification problem, the
+hyperplane is a line that divides the data points of one class from the data
+points of the other class. SVM tries to find the hyperplane that maximizes the
+margin between the two classes, where the margin is the distance between the
+hyperplane and the nearest data points from each class.
 
 #### Example Code
 
-=== "Python"
-    ``` py title="svm.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="svm.py" linenums="1" #!/usr/bin/env python
 
     # Load the required libraries
     import pandas as pd
@@ -186,15 +212,19 @@ The basic idea behind SVM is to find a hyperplane that best separates the input 
 
     _where $\hat{y}$ is the predicted output, $f_t(\mathbf{x})$ is the prediction of the $t$th tree in the forest for the input $\mathbf{x}$, and $T$ is the number of trees in the forest._
 
-Random Forests are an ensemble learning method that can be used for classification and regression problems. They are often used for their ability to handle high-dimContinuous Improvement:ensional datasets and nonlinear relationships between features and targets.
+Random Forests are an ensemble learning method that can be used for
+classification and regression problems. They are often used for their ability to
+handle high-dimContinuous Improvement:ensional datasets and nonlinear
+relationships between features and targets.
 
-Each tree is trained on a bootstrapped subset of the original training data, and at each split, a random subset of features is considered for determining the split. The final prediction is obtained by averaging the predictions of all the trees in the forest.
+Each tree is trained on a bootstrapped subset of the original training data, and
+at each split, a random subset of features is considered for determining the
+split. The final prediction is obtained by averaging the predictions of all the
+trees in the forest.
 
 #### Example Code
 
-=== "Python"
-    ``` py title="random_forest.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="random_forest.py" linenums="1" #!/usr/bin/env python
 
     # Load the required libraries
     import pandas as pd
@@ -221,11 +251,9 @@ Each tree is trained on a bootstrapped subset of the original training data, and
     print('Root Mean Squared Error:', rmse)
     ```
 
-=== "R"
-    ``` r title="random_forest.r" linenums="1"
-    #!/usr/bin/env Rscript
+=== "R" ``` r title="random_forest.r" linenums="1" #!/usr/bin/env Rscript
 
-    # Load the required libraries   
+    # Load the required libraries
     library(randomForest)
 
     # Load the dataset
@@ -263,13 +291,19 @@ Each tree is trained on a bootstrapped subset of the original training data, and
 
     _This formula represents a feedforward neural network with $L$ layers, where each layer applies a linear transformation to the output of the previous layer, followed by a non-linear activation function. The output of the final layer, $\hat{y}$, represents the predicted output of the neural network for the given input $\mathbf{x}$._
 
-Deep learning is a subset of machine learning that involves training neural networks with many layers of interconnected nodes. This approach can handle large and complex datasets and is used in a wide range of applications, including image recognition, natural language processing, and speech recognition. The training process involves feeding the neural network a large dataset and adjusting the weights of the connections between the nodes to minimize the error between the predicted outputs and the actual outputs. Through repeated iterations, the neural network can learn to recognize patterns in the data and make accurate predictions on new data.
+Deep learning is a subset of machine learning that involves training neural
+networks with many layers of interconnected nodes. This approach can handle
+large and complex datasets and is used in a wide range of applications,
+including image recognition, natural language processing, and speech
+recognition. The training process involves feeding the neural network a large
+dataset and adjusting the weights of the connections between the nodes to
+minimize the error between the predicted outputs and the actual outputs. Through
+repeated iterations, the neural network can learn to recognize patterns in the
+data and make accurate predictions on new data.
 
 #### Example Code
 
-=== "Python"
-    ``` py title="deep_learning.py" linenums="1"
-    #!/usr/bin/env python
+=== "Python" ``` py title="deep_learning.py" linenums="1" #!/usr/bin/env python
 
     # Load the required libraries
     import pandas as pd
@@ -314,7 +348,7 @@ Deep learning is a subset of machine learning that involves training neural netw
 
     ``` r title="deep_learning.r" linenums="1"
     #!/usr/bin/env Rscript
-        
+
     # Load the required libraries
     library(keras)
     library(tensorflow)
