@@ -62,6 +62,7 @@ install-yarn: check-prerequisites
 	yarn install
 	make install-prettier
 
+
 install-prettier: check-prerequisites
 	yarn add --dev --exact prettier
 
