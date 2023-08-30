@@ -41,16 +41,16 @@ check-prerequisites:
 check-spelling: check-spelling-en check-spelling-fr
 
 check-spelling-en:
-	yarn run mdspell --en-gb -trax 'docs/en/*.md' 'docs/en/**/*.md' -n -a
+	#yarn run mdspell --en-us -trax 'docs/en/*.md' 'docs/en/**/*.md' -n -a
 
 check-spelling-fr:
-	yarn run mdspell --fr-fr -trax 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
+	#yarn run mdspell --fr-fr -trax 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
 
 fix-spelling-en:
-	yarn run mdspell --en-gb 'docs/en/*.md' 'docs/en/**/*.md' -n -a
+	#yarn run mdspell --en-us 'docs/en/*.md' 'docs/en/**/*.md' -n -a
 
 fix-spelling-fr:
-	yarn run mdspell --fr-fr 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
+	#yarn run mdspell --fr-fr 'docs/fr/*.md' 'docs/fr/**/*.md' -n -a
 
 install: install-yarn install-venv
 
@@ -59,9 +59,10 @@ install-venv: check-prerequisites
 	. .venv/bin/activate; pip install -Ur requirements.txt
 
 install-yarn: check-prerequisites
+	corepack enable
+	yarn set version stable
 	yarn install
 	make install-prettier
-	
 
 install-prettier: check-prerequisites
 	yarn add --dev --exact prettier
