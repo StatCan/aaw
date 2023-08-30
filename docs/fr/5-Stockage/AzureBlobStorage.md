@@ -44,9 +44,9 @@ L'hôte de configuration mc ajoute le standard $MINIO_URL $MINIO_ACCESS_KEY $MIN
 
 # Si vous souhaitez migrer votre bucket MinIO vers le stockage Blob.
 # Se déplacer
-mv --recursive <minio_path> <blob_path_on_local_system>
+mc mv --recursive <minio_path> <blob_path_on_local_system>
 # Copie
-cp --recursive <minio_path> <blob_path_on_local_system>
+mc cp --recursive <minio_path> <blob_path_on_local_system>
 ```
 
 <!-- plus joli-ignorer -->
