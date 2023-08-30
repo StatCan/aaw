@@ -59,6 +59,7 @@ install-venv: check-prerequisites
 	. .venv/bin/activate; pip install -Ur requirements.txt
 
 install-yarn: check-prerequisites
+	yarn set version stable
 	yarn install
 	make install-prettier
 	
