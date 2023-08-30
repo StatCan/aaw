@@ -83,6 +83,6 @@ nav:
       - EAG: 4-Collaboration/Environnement-Analyse-Geospatiale.md
   - Stockage:
       - Aperçu: 5-Stockage/Aperçu.md
-      - MinIo: 5-Stockage/MinIo.md
+      - MinIo: 5-Stockage/AzureBlobStorage.md
       - Disque: 5-Stockage/Disque.md
   - Aide/Contactez-nous: Aide.md
