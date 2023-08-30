@@ -18,7 +18,7 @@ Azure Blob Storage Containers are good at three things:
 
 <!-- prettier-ignore -->
 
-The Blob CSI volumes are persisted under `/home/jovyan/buckets` when creating a Notebook Server. Files under `/buckets` are backed by Blob storage. All AAW notebooks will have the `/buckets` mounted to the file-system, making data accessible from everywhere.
+The Blob CSI volumes are persisted under `/home/jovyan/buckets` when creating a Notebook Server. Files under `~/buckets` are backed by Blob storage. All AAW notebooks will have the `~/buckets` mounted to the file-system, making data accessible from everywhere.
 
 ![Blob folders mounted as Jupyter Notebook directories](../images/container-mount.png)
 
@@ -32,18 +32,28 @@ These folders can be used like any other - you can copy files to/from using the 
 
 ## How to Migrate from MinIO to Azure Blob Storage
 
+First, import the environmental variables stored in your secrets vault. You will either import from `minio-gateway` or `fdi-gateway` depending on where your data was ingested.
+
 ```
-# Obtain credentials
-source /vault/secrets/minio-standard-tenant-1
+jovyan@rstudio-0:~$ source /vault/secrets/fdi-gateway-protected-b
+```
 
-# Add storage under nickname "standard"
-mc config host add standard $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+Then you create an alias to access your data.
 
-# If you want to migrate your MinIO Bucket to Blob Storage.
-# Move
-mc mv --recursive <minio_path> <blob_path_on_local_system>
-# Copy
-mc cp --recursive <minio_path> <blob_path_on_local_system>
+```
+jovyan@rstudio-0:~$ mc alias set minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+```
+
+List the contents of your data folder with `mc ls`.
+
+```
+jovyan@rstudio-0:~$ mc ls minio
+```
+
+Finally, copy your MinIO data into your Azure Blob Storage directory with `mc cp --recursive`.
+
+```
+jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets
 ```
 
 <!-- prettier-ignore -->
