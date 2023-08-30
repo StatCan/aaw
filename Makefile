@@ -59,6 +59,9 @@ install-venv: check-prerequisites
 	. .venv/bin/activate; pip install -Ur requirements.txt
 
 install-yarn: check-prerequisites
+    nvm install 14
+	nvm use 14
+	corepack enable
 	yarn set version stable
 	yarn install
 	make install-prettier
