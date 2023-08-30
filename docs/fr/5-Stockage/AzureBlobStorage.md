@@ -10,13 +10,13 @@ Les conteneurs de stockage Azure Blob sont efficaces dans trois domaines :
 
 # Installation
 
-<!-- plus joli-ignorer -->
+<!-- prettier-ignore -->
 !!! avertissement "Les conteneurs de stockage Azure Blob et le support de buckets remplaceront les supports de stockage Minio Buckets et Minio"
      Les utilisateurs seront responsables de la migration des données des Minio Buckets vers les dossiers Azure Storage. Pour les fichiers plus volumineux, les utilisateurs peuvent contacter AAW pour obtenir de l'aide.
 
 ## Conteneur Blob monté sur un serveur de notebook
 
-<!-- plus joli-ignorer -->
+<!-- prettier-ignore -->
 
 Les volumes Blob CSI sont conservés sous « /home/jovyan/buckets » lors de la création d'un serveur Notebook. Les fichiers sous « /buckets » sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le « /buckets » monté sur le système de fichiers, rendant les données accessibles de partout.
 
@@ -49,7 +49,7 @@ mc mv --recursive <minio_path> <blob_path_on_local_system>
 mc cp --recursive <minio_path> <blob_path_on_local_system>
 ```
 
-<!-- plus joli-ignorer -->
+<!-- prettier-ignore -->
 
 ## Types de conteneurs
 
@@ -63,11 +63,11 @@ L’accès à tous les conteneurs Blob est le même. La différence entre les co
 
 - **aaw-unclassified-ro :** Cette classification est protégée-b mais en accès en lecture seule. Cela permet aux utilisateurs de visualiser les données non classifiées dans un bloc-notes protégé-b.
 
-<!-- plus joli-ignorer -->
+<!-- prettier-ignore -->
 
 ## Accès aux données internes
 
-<!-- plus joli-ignorer -->
+<!-- prettier-ignore -->
 L'accès aux données internes utilise la connexion de stockage commune DAS qui est utilisée par les utilisateurs internes et externes qui ont besoin d'accéder à des données non classifiées ou protégées-b. Les conteneurs suivants peuvent être mis à disposition :
 
 - **externe-non classé**
@@ -83,7 +83,7 @@ Veuillez contacter l'équipe FAIR Data Infrastructure si vous avez un cas d'util
 
 ## Tarifs
 
-<!-- plus joli-ignorer -->
+<!-- prettier-ignore -->
 !!! info "Les modèles de tarification sont basés sur l'utilisation du processeur et de la mémoire"
      Le prix est couvert par KubeCost pour les espaces de noms utilisateur (dans Kubeflow en bas de l'onglet Notebooks).
 
