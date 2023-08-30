@@ -3,7 +3,8 @@ name: Onboarding support/help
 about: Just got your account setup and need help getting started?
 title: "[Help] <my goal>"
 labels: triage/support
-assignees: ""
+assignees: ''
+
 ---
 
 Before submitting your ticket did you first try the following?

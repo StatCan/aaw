@@ -1,11 +1,10 @@
 # Aperçu
 
-Dash est un excellent outil utilisé par beaucoup pour l'analyse et l'exploration
-de données, la visualisation, la modélisation, le contrôle des instruments et la
-création de rapports.
+Dash est un excellent outil utilisé par beaucoup pour l'analyse et l'exploration de données,
+la visualisation, la modélisation, le contrôle des instruments et la création de rapports.
 
-L'exemple suivant illustre une application Dash hautement réactive et
-personnalisée avec peu de code.
+L'exemple suivant illustre une application Dash hautement réactive et personnalisée
+avec peu de code.
 
 <!-- prettier-ignore -->
 !!! note "Exécution de votre serveur bloc-note et accès au port"
@@ -22,9 +21,9 @@ personnalisée avec peu de code.
 
 ## Visualisation des données avec Dash
 
-Dash simplifie la création d'une interface graphique interactive autour de votre
-code d'analyse de données. Ceci est un exemple de mise en page avec figure et
-curseur de [Dash](https://dash.plotly.com/basic-callbacks).
+Dash simplifie la création d'une interface graphique interactive autour de votre code d'analyse de données.
+Ceci est un exemple de mise en page avec figure et curseur de
+[Dash](https://dash.plotly.com/basic-callbacks).
 
 ![dash_plot](../images/plot.png)
 
@@ -32,23 +31,11 @@ curseur de [Dash](https://dash.plotly.com/basic-callbacks).
 
 _Publier avec des logiciels fabriqués au Canada._
 
-**[Plotly Dash](/2-Publishing/Dash/)** est une bibliothèque Python populaire qui
-vous permet de créer facilement des visualisations et des tableaux de bord Web
-interactifs. Développé par la société montréalaise Plotly, Dash a acquis la
-réputation d'être un outil puissant et flexible pour créer des graphiques de
-science des données personnalisés. Avec Dash, vous pouvez tout créer, des
-simples graphiques linéaires aux tableaux de bord complexes de plusieurs pages
-avec des widgets et des commandes interactifs. Parce qu'il repose sur des
-technologies open source telles que Flask, React et Plotly.js, Dash est
-hautement personnalisable et peut être facilement intégré à d'autres outils et
-workflows de science des données. Que vous soyez data scientist, analyste ou
-développeur, Dash peut vous aider à créer des visualisations attrayantes et
-informatives qui donnent vie à vos données.
+**[Plotly Dash](/2-Publishing/Dash/)** est une bibliothèque Python populaire qui vous permet de créer facilement des visualisations et des tableaux de bord Web interactifs. Développé par la société montréalaise Plotly, Dash a acquis la réputation d'être un outil puissant et flexible pour créer des graphiques de science des données personnalisés. Avec Dash, vous pouvez tout créer, des simples graphiques linéaires aux tableaux de bord complexes de plusieurs pages avec des widgets et des commandes interactifs. Parce qu'il repose sur des technologies open source telles que Flask, React et Plotly.js, Dash est hautement personnalisable et peut être facilement intégré à d'autres outils et workflows de science des données. Que vous soyez data scientist, analyste ou développeur, Dash peut vous aider à créer des visualisations attrayantes et informatives qui donnent vie à vos données.
 
 # Commencer
 
-Ouvrez une fenêtre de terminal dans votre notebook Jupyter et exécutez les
-commandes suivantes :
+Ouvrez une fenêtre de terminal dans votre notebook Jupyter et exécutez les commandes suivantes :
 
 ```python
 # installations requises si elles ne sont pas déjà installées

@@ -23,6 +23,7 @@ theme:
   #logo: images/statcan.png
   custom_dir: overrides
 
+
 markdown_extensions:
   - toc:
       baselevel: 1
@@ -42,12 +43,12 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true
+      alternate_style: true 
   - md_in_html
 
 plugins:
-  - mkdocs-jupyter:
-      include_source: True
+- mkdocs-jupyter:
+    include_source: True
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -82,10 +83,10 @@ nav:
       - Machine Learning Models: 3-Pipelines/Machine-Learning.md
       - Training ML Models: 3-Pipelines/Machine-Learning-Training-Pipelines.md
       - Storing ML Models: 3-Pipelines/Machine-Learning-Model-Cloud-Storage.md
-      - Serving ML Models:
-          - Introduction: 3-Pipelines/Machine-Learning-Model-Serving.md
-          - Example Notebooks:
-              - Seldon Iris Classifier: 3-Pipelines/sklearn_iris_jsondata.ipynb
+      - Serving ML Models: 
+        - Introduction: 3-Pipelines/Machine-Learning-Model-Serving.md
+        - Example Notebooks:
+          - Seldon Iris Classifier: 3-Pipelines/sklearn_iris_jsondata.ipynb
       - Integrate with External PaaS: 3-Pipelines/PaaS-Integration.md
   - Collaboration:
       - Overview: 4-Collaboration/Overview.md
