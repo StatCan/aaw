@@ -32,18 +32,28 @@ Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez co
 
 ## Comment migrer de MinIO vers Azure Blob Storage
 
+Tout d’abord, importez les variables d’environnement stockées dans votre coffre-fort de secrets. Vous importerez soit depuis « minio-gateway » soit depuis « fdi-gateway » selon l'endroit où vos données ont été ingérées.
+
 ```
-# Obtenir les informations d'identification
-source /vault/secrets/minio-standard-tenant-1
+jovyan@rstudio-0 :~$ source /vault/secrets/fdi-gateway-protected-b
+```
 
-# Ajouter du stockage sous le pseudo "standard"
-L'hôte de configuration mc ajoute le standard $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+Ensuite, vous créez un alias pour accéder à vos données.
 
-# Si vous souhaitez migrer votre bucket MinIO vers le stockage Blob.
-# Se déplacer
-mc mv --recursive <minio_path> <blob_path_on_local_system>
-# Copie
-mc cp --recursive <minio_path> <blob_path_on_local_system>
+```
+jovyan@rstudio-0 : ~$ mc alias défini minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+```
+
+Répertoriez le contenu de votre dossier de données avec `mc ls`.
+
+```
+jovyan@rstudio-0:~$ mc ls minio
+```
+
+Enfin, copiez vos données MinIO dans votre répertoire Azure Blob Storage avec `mc cp --recursive`.
+
+```
+jovyan@rstudio-0:~$ mc cp --recursive minio ~/buckets
 ```
 
 <!-- prettier-ignore -->
