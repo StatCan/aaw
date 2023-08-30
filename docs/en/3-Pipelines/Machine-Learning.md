@@ -214,7 +214,7 @@ hyperplane and the nearest data points from each class.
 
 Random Forests are an ensemble learning method that can be used for
 classification and regression problems. They are often used for their ability to
-handle high-dimContinuous Improvement:ensional datasets and nonlinear
+handle high-dimensional datasets and nonlinear
 relationships between features and targets.
 
 Each tree is trained on a bootstrapped subset of the original training data, and

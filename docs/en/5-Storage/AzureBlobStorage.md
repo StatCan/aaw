@@ -81,7 +81,7 @@ the storage type behind them:
 ## Accessing Internal Data
 
 <!-- prettier-ignore -->
-Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to unclassified or protected-b data. The following containers can be provisoned:
+Accessing internal data uses the DAS common storage connection which has use for internal and external users that require access to unclassified or protected-b data. The following containers can be provisioned:
 
 - **external-unclassified**
 - **external-protected-b**

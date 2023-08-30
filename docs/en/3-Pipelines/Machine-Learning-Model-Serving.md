@@ -59,7 +59,7 @@ advanced analytics capabilities.
 
 In summary, serving machine learning models with the Advanced Analytics
 Workspace provides access to advanced analytics tools, multiple MLOps
-frameworks, a secure and scalable Proteced B platform, and a collaborative
+frameworks, a secure and scalable protected B platform, and a collaborative
 community of users, making it an ideal platform for data scientists and analysts
 who want to deploy and manage machine learning models in production.
 
