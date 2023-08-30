@@ -44,9 +44,9 @@ mc config host add standard $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
 
 # If you want to migrate your MinIO Bucket to Blob Storage.
 # Move
-<mv/cp> --recursive <minio_path> <blob_path_on_local_system>
+mc mv --recursive <minio_path> <blob_path_on_local_system>
 # Copy
-<mv/cp> --recursive <minio_path> <blob_path_on_local_system>
+mc cp --recursive <minio_path> <blob_path_on_local_system>
 ```
 
 <!-- prettier-ignore -->
