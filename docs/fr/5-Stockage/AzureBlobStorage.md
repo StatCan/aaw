@@ -53,7 +53,13 @@ jovyan@rstudio-0:~$ mc ls minio
 Enfin, copiez vos données MinIO dans votre répertoire Azure Blob Storage avec `mc cp --recursive`.
 
 ```
-jovyan@rstudio-0:~$ mc cp --recursive minio ~/buckets
+jovyan@rstudio-0:~$ mc cp --recursive minio ~/buckets/
+```
+
+Si vous disposez de données protégées-b, vous pouvez copier vos données dans le compartiment protégé-b.
+
+```
+jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets/aaw-protected-b
 ```
 
 <!-- prettier-ignore -->
