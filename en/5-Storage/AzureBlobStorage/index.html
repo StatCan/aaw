@@ -1284,7 +1284,10 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>jovyan@rstudio-0:~$ mc ls minio
 </span></code></pre></div>
 <p>Finally, copy your MinIO data into your Azure Blob Storage directory with <code>mc cp --recursive</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets/aaw-unclassified
+</span></code></pre></div>
+<p>If you have protected-b data, you can copy your data into the protected-b bucket.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets/aaw-protected-b
 </span></code></pre></div>
 <!-- prettier-ignore -->
 
