@@ -41,6 +41,7 @@ nav:
   - Resources:
     - Overview: resources/index.md
     - Developer Tools: developer-tools.md
+    - Networking: resources/networking.md
 
 markdown_extensions:
   - def_list
