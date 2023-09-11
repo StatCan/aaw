@@ -17,6 +17,9 @@ Something that isn't immediately obvious is that the `priority` should be unique
 
 ### Allow Connection to internal application in an already peered network
 An example of this can be seen in https://github.com/StatCan/aaw-private/issues/127 
+
+- __Important!__: This solution does not work fully just yet, because of the [DNS pitfall](#dns-pitfalls-to-internal-application-connecting) that we encountered so this will need to be updated.
+
 Like above, this also requires a [firewall_policy_rule_collection_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall_policy_rule_collection_group) in our terraform files. Additionally, it will require an [azurem_route](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/route) to manage the [routing (azure docs)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined). 
 The `address_prefix`is the destination to which the route applies (in this case the subnet that the database resides in).
 Then for the `next_hop_type` we chose `VirtualAppliance` as we have to get to the cloud main firewall first. 
