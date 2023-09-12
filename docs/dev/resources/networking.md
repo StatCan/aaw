@@ -1,8 +1,4 @@
-# Networking Common Tasks
-
-I have no idea what a good name for this document would be.
-
-This document deals with requests that we may get that have to do with Networking.
+# Networking Common Tasks and Information
 
 ## Quick Access
 [Allow Connection to Sites on the Internet from a ProB workload](#allowing-connection-to-sites-on-the-internet)
