@@ -2,7 +2,9 @@
 
 ## Quick Access
 [Allow Connection to Sites on the Internet from a ProB workload](#allowing-connection-to-sites-on-the-internet)
+
 [Allow Connection to internal application](#allow-connection-to-internal-application)
+
 [DNS pitfalls](#dns-pitfalls-to-internal-application-connecting)
 
 ### Allowing Connection to sites on the Internet
