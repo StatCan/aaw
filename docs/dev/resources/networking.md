@@ -10,7 +10,7 @@
 ### Allowing Connection to sites on the Internet
 This is a bit more niche, as our unclassified notebooks already have connection to the internet, but this can come up when we have a Protected B certified application like seen in https://github.com/StatCan/aaw-private/issues/125 where it's accessible to the internet, but unaccecssible from our Protected B workloads.
 
-To handle this we want to declare a [firewall_policy_rule_collection_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall_policy_rule_collection_group) in our terraform files. The source address is the address associated with protected-b workloads. In the issue above we created it in our specific environment files as the `firewall.tf` file in our `terraform-azure-statcan-aaw-network` is mirrored and publically accessible.
+To handle this we want to declare a [firewall_policy_rule_collection_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall_policy_rule_collection_group) in our terraform files. The source address is the subnet address of our protected-b node pool. In the issue above we created it in our specific environment files as the `firewall.tf` file in our `terraform-azure-statcan-aaw-network` is mirrored and publically accessible.
 Something that isn't immediately obvious is that the `priority` should be unique, this is easier to see if you have access to the firewall resource in azure.
 
 ### Allow Connection to internal application in an already peered network
@@ -18,7 +18,9 @@ An example of this can be seen in https://github.com/StatCan/aaw-private/issues/
 
 - __Important!__: This solution does not work fully just yet, because of the [DNS pitfall](#dns-pitfalls-to-internal-application-connecting) that we encountered so this will need to be updated.
 
-Like above, this also requires a [firewall_policy_rule_collection_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall_policy_rule_collection_group) in our terraform files. Additionally, it will require an [azurem_route](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/route) to manage the [routing (azure docs)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined). 
+Like above, this also requires a [firewall_policy_rule_collection_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/firewall_policy_rule_collection_group) in our terraform files. 
+In the example, we chose the `source_addresses` to be two entries, one is our unclassified node pool subnet and the other is our protected b node pool subnet.
+Additionally, it will require an [azurem_route](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/route) to manage the [routing (azure docs)](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#user-defined). 
 The `address_prefix`is the destination to which the route applies (in this case the subnet that the database resides in).
 Then for the `next_hop_type` we chose `VirtualAppliance` as we have to get to the cloud main firewall first. 
 The `next_hop_in_ip_address` is the cloud main firewall ip.
