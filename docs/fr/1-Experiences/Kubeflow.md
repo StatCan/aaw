@@ -38,7 +38,7 @@ votre équipe.
 
 - Accédez à l'onglet Serveurs bloc-notes
 
-![Kubeflow gère les serveurs Jupyter](../images/readme/kubeflow_ui.png)
+![Kubeflow gère les serveurs Jupyter](../images//kubeflow-main-ui.PNG)
 
 - Puis clique **+ Nouveau serveur**
 
@@ -52,9 +52,21 @@ votre équipe.
   qui correspond à ce que tu veux faire. (Vous ne savez pas lequel choisir ?
   Vérifiez vos options [ici](./Selecting-an-Image.md).)
 
-![Choisissez une image](../images/kubeflow_choose_an_image.png)
+![Choisissez une image](../images/select-image-screenshot.PNG)
 
 - Si vous souhaitez utiliser un GPU, vérifiez si l'image indique `cpu` ou `gpu`.
+
+### Image personnalisée
+
+Un utilisateur peut utiliser une image personnalisée, auquel cas il doit connaître la forme exacte de l'image et son nom.
+
+Les images personnalisées de l'utilisateur sont fournies via le dépôt aaw-contrib-containers qui, une fois poussées vers la branche principale, poussera également l'image vers notre ACR. Une fois cette action terminée avec succès, vous pouvez utiliser l'image personnalisée.
+
+Lors de la création d'un bloc-notes, cliquez sur « Options avancées », cochez la case pour l'image personnalisée et saisissez l'image en saisissant `k8scc01covidacr.azurecr.io/[your-image-name-here]:[sha]`.
+
+![Choisir une image](../images/customNotebook.PNG)
+
+Une fois le notebook créé, si le statut n'est pas prêt au bout de quelques minutes, cliquez sur son nom pour voir la page de détails. Ensuite l'onglet « Événements » vous permet de savoir exactement ce qui se passe. Si nécessaire, contactez le canal d’aide sur Slack si le problème persiste.
 
 ## CPU et mémoire
 
@@ -86,6 +98,8 @@ pourriez donc avoir des restrictions plus souples.
 !!! note "Utilisez les machines GPU de manière responsable"
     Il y a moins de machines GPU que de machines CPU, alors utilisez-les de manière responsable.
 
+![Choisir CPU et RAM](../images/cpu-ram.PNG)
+
 ## Stockage de vos données
 
 -Vous aurez envie de créer un volume de données ! Vous pourrez enregistrer votre
@@ -99,6 +113,17 @@ important que vous vous souveniez du nom du volume.**
 !!! conseil "Vérifiez les anciens volumes en regardant l'option Existant"
     Lorsque vous créez votre serveur vous avez la possibilité de réutiliser un ancien volume
     ou en créer un nouveau. Vous souhaitez probablement réutiliser votre ancien volume.
+
+
+## Paramètres divers
+
+Les éléments suivants peuvent être personnalisés ici :
+
+- **Activer la mémoire partagée** : ceci est requis si vous utilisez PyTorch avec plusieurs données
+   chargeurs, qui autrement généreront une erreur. Si vous utilisez PyTorch, assurez-vous de ceci
+   est activé, sinon cela n'a pas d'importance sauf si vous avez une autre application
+   cela nécessite une mémoire partagée.
+- **Langue du système** : Vous pouvez spécifier ici l'anglais ou le français.
 
 ## Et... Créer!!!
 

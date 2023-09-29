@@ -35,7 +35,7 @@ for your team.
 
 - Navigate to the Notebook Servers tab
 
-![Kubeflow Manages the Jupyter Servers](../images/readme/kubeflow_ui.png)
+![Kubeflow Manages the Jupyter Servers](../images/kubeflow-main-ui.PNG)
 
 - Then click **+ New Server**
 
@@ -63,6 +63,16 @@ which one to choose? Check out your options [here](./Selecting-an-Image.md).
 
 ![Choose an Image](../images/select-image-screenshot.PNG)
 
+### Custom images
+A user can use a custom image, in which case they need to know the exact sha of the image and its name.
+
+The user custom images are provided via the aaw-contrib-containers repo which upon pushes to the main branch, will also push the image to our ACR. After that action has successfully completed, you may use the custom image.
+
+Upon the creation of a notebook click 'Advanced options', check the checkbox for custom image and enter the image by entering `k8scc01covidacr.azurecr.io/[your-image-name-here]:[sha]`.
+
+![Choose an Image](../images/customNotebook.PNG)
+
+Once the notebook is created, if the status is not ready in a few minutes, click on it's name to see the details page. Then the 'Events' tab allows you to know exactly what is happening. If necessary, reach out to the help channel on slack if the problem persists.
 ## CPU and Memory
 
 At the time of writing (December 23, 2021) there are two types of computers in
@@ -93,7 +103,7 @@ up certain operations. By requesting one CPU core but a higher limit, you can pa
 less for the notebook server while allowing it to use spare unused CPU cores as needed
 to speed up computations.
 
-![Select CPU and RAM](../images/cpu-ram-select.png)
+![Select CPU and RAM](../images/cpu-ram.PNG)
 
 ## GPUs
 
@@ -103,7 +113,7 @@ you have a GPU specified). Multi-GPU servers are currently supported on the AAW
 system only on a special on-request basis, please contact the AAW maintainers if
 you would like a multi-GPU server.
 
-![GPU Configuration](../images/kubeflow_gpu_selection.jpg)
+![GPU Configuration](../images/kubeflow_gpu_selection.PNG)
 
 As mentioned before, if you select a GPU server you will automatically get 6 CPU
 cores and 112 GiB of memory.
@@ -157,15 +167,7 @@ data volume.
 
 ## Configurations
 
-There are currently three checkbox options available here:
-
-- **Mount MinIO storage to ~/minio (experimental)**: This should make MinIO
-  repositories accessible as subfolders / files of the `minio/` folder. This is
-  still experimental and may not work properly currently.
-- **Run a Protected B notebook**: Enable this if the server you create needs
-  access to any Protected B resources. Protected B notebook servers run with many
-  security restrictions and have access to separate MinIO instances specifically
-  designed for Protected B data.
+If configurations are available, they are presented here as checkboxes. Currently no configuration exist.
 
 ## Miscellaneous Settings
 
