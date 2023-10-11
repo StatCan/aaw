@@ -78,16 +78,8 @@ nav:
       - Datasette: 2-Publishing/Datasette.md
       - Power BI: 2-Publishing/PowerBI.md
       - Custom: 2-Publishing/Custom.md
-  - MLOps:
-      - Overview: 3-Pipelines/Overview.md
-      - Machine Learning Models: 3-Pipelines/Machine-Learning.md
-      - Training ML Models: 3-Pipelines/Machine-Learning-Training-Pipelines.md
-      - Storing ML Models: 3-Pipelines/Machine-Learning-Model-Cloud-Storage.md
-      - Serving ML Models: 
-        - Introduction: 3-Pipelines/Machine-Learning-Model-Serving.md
-        - Example Notebooks:
-          - Seldon Iris Classifier: 3-Pipelines/sklearn_iris_jsondata.ipynb
-      - Integrate with External PaaS: 3-Pipelines/PaaS-Integration.md
+  - Pipelines:
+      - Argo: 3-Pipelines/Argo.md
   - Collaboration:
       - Overview: 4-Collaboration/Overview.md
       - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
@@ -98,4 +90,14 @@ nav:
       - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
   - Gitlab:
       - Gitlab: 6-Gitlab/Gitlab.md
+  - MLOps:
+      - Overview: 7-Pipelines/Overview.md
+      - Machine Learning Models: 7-Pipelines/Machine-Learning.md
+      - Training ML Models: 7-Pipelines/Machine-Learning-Training-Pipelines.md
+      - Storing ML Models: 7-Pipelines/Machine-Learning-Model-Cloud-Storage.md
+      - Serving ML Models: 
+        - Introduction: 7-Pipelines/Machine-Learning-Model-Serving.md
+        - Example Notebooks:
+          - Seldon Iris Classifier: 7-Pipelines/sklearn_iris_jsondata.ipynb
+      - Integrate with External PaaS: 7-Pipelines/PaaS-Integration.md
   - Help/Contact: Help.md
