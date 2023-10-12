@@ -1,7 +1,7 @@
 
 ## Argo Workflows
 
-![Argo Workflows](../../../docs/img/argo.png)
+![Argo Workflows](../images/argo.png)
 
 **[Argo Workflows](https://argoproj.github.io/argo-workflows/)**  is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Argo Workflows is implemented as a Kubernetes CRD (Custom Resource Definition). It is particularly well-suited for use in data science workflows and machine learning workflows.
 
