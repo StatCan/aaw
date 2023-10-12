@@ -17,10 +17,10 @@ Jupyter comes with a number of features (and we can add more)
 ### Explore Your Data with an API
 
 <center>
-[![Explore your data](../images/ExploreData.PNG)](/2-Publishing/Datasette/)
+[![Explore your data](../images/ExploreData.PNG)](../../2-Publishing/Datasette/)
 </center>
 
-Use **[Datasette](../2-Publishing/Datasette/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
+Use **[Datasette](~../2-Publishing/Datasette.md/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
 
 ### IDE in the browser
 
