@@ -11,13 +11,14 @@ for your team.
 
 **Let's get started!**
 
+<!-- Video is removed until weget the green light to activate it again
+
 # Video Tutorial
 
-<!-- prettier-ignore -->
 !!! note ""
     This video is not up to date, some things have changed since.
 
-[![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Advanced Analytics Workspace - Kubeflow Getting Started")
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://www.youtube.com/watch?v=xaI6ExYdxc4&list=PL1zlA2D7AHugkDdiyeUHWOKGKUd3MB_nD&index=1 "Advanced Analytics Workspace - Kubeflow Getting Started") -->
 
 # Setup
 
