@@ -8,7 +8,7 @@ When selecting an image, you have 3 main options:
 
 - Jupyter Notebook (CPU, TensorFlow, PyTorch)
 - RStudio
-- Remote Desktop (r, geomatics)
+- Remote Desktop
 
 ## Jupyter Notebooks
 
@@ -48,7 +48,7 @@ experience.
 
 ## RStudio
 
-**[RStudio](RStudio/)** gives you an integrated development environment
+**[RStudio](../RStudio/)** gives you an integrated development environment
 specifically for `R`. If you're coding in `R`, this is typically the Notebook
 Server to use. Use the `rstudio` image to get an RStudio environment.
 
@@ -59,7 +59,7 @@ Server to use. Use the `rstudio` image to get an RStudio environment.
 For a full Ubuntu desktop experience, use the remote desktop image. It comes
 pre-loaded with Python, R and Geomatics tooling, but are delivered in a typical
 desktop experience that also comes with Firefox, VS Code, and open office tools.
-The operating system is **[Ubuntu](https://ubuntu.com/about)** 18.04 with the
+The operating system is **[Ubuntu](https://ubuntu.com/about)** 22.04 with the
 **[XFCE](https://www.xfce.org/about)** desktop environment.
 
 ![Screenshot of the Virtual Desktop](../images/rd_desktop.png)
