@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
       
 
@@ -863,13 +863,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sharing-with-statcan" class="md-nav__link">
-    Sharing with StatCan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sharing-with-the-world" class="md-nav__link">
     Sharing with the world
   </a>
@@ -878,13 +871,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendation-combine-them-all" class="md-nav__link">
-    Recommendation: Combine them all
-  </a>
   
 </li>
       
@@ -1470,13 +1456,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sharing-with-statcan" class="md-nav__link">
-    Sharing with StatCan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#sharing-with-the-world" class="md-nav__link">
     Sharing with the world
   </a>
@@ -1485,13 +1464,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendation-combine-them-all" class="md-nav__link">
-    Recommendation: Combine them all
-  </a>
   
 </li>
       
@@ -1558,7 +1530,7 @@
 </tr>
 </tbody>
 </table>
-<p>Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the <strong><a href="../../5-Storage/AzureBlobStorage/">MinIO</a></strong> section.</p>
+<p>Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the <strong><a href="../../5-Storage/AzureBlobStorage/">Azure Blob Storage</a></strong> section.</p>
 <!-- prettier-ignore -->
 <details class="question">
 <summary>What is the difference between a bucket and a folder?</summary>
@@ -1582,7 +1554,7 @@ software projects.</p>
 <!-- prettier-ignore -->
 <div class="admonition danger">
 <p class="admonition-title">Sharing a namespace means you share <strong>everything</strong> in the namespace</p>
-<p>Kubeflow does not support granular sharing of one resource (one notebook, one MinIO bucket, etc.), but instead sharing of <strong>all</strong> resources. If you want to share a Jupyter Notebook server with someone, you must share your entire namespace and <strong>they will have access to all other resources (MinIO buckets, etc.)</strong>.</p>
+<p>Kubeflow does not support granular sharing of one resource (one notebook, one volume, etc.), but instead sharing of <strong>all</strong> resources. If you want to share a Jupyter Notebook server with someone, you must share your entire namespace and <strong>they will have access to all other resources (Azure Blob Storage, etc.)</strong>.</p>
 </div>
 <p>In Kubeflow every user has a <strong>namespace</strong> that contains their work (their
 notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but
@@ -1591,7 +1563,7 @@ can be shared if you want to collaborate with others. You can also
 share with a team). One option for collaboration is to share namespaces with
 others.</p>
 <p>The advantage of sharing a Kubeflow namespace is that it lets you and your
-colleagues share the compute environment and MinIO buckets associated with the
+colleagues share the compute environment and  volumes associated with the
 namespace. This makes it a very easy and free-form way to share.</p>
 <p>To share your namespace, see <a href="#managing-contributors">managing contributors</a></p>
 <!-- prettier-ignore -->
@@ -1621,24 +1593,11 @@ namespace. This makes it a very easy and free-form way to share.</p>
 </table>
 <p>To learn more about the technology behind these, check out the
 <a href="../../5-Storage/Overview/">Storage overview</a>.</p>
-<h3 id="sharing-with-statcan">Sharing with StatCan<a class="headerlink" href="#sharing-with-statcan" title="Permanent link">&para;</a></h3>
-<p>In addition to private buckets, or team-shared private buckets, you can also
-place your files in <em>shared storage</em>. Within all bucket storage options
-(<code>minimal</code>, <code>premium</code>, <code>pachyderm</code>), you have a private bucket, <strong>and</strong> a folder
-inside of the <code>shared</code> bucket. Take a look, for instance, at the link below:</p>
-<ul>
-<li><a href="https://minimal-tenant1-minio.covid.cloud.statcan.ca/minio/shared/blair-drummond/"><code>shared/blair-drummond/</code></a></li>
-</ul>
-<p>Any <strong>logged in</strong> user can see these files and read them freely.</p>
 <h3 id="sharing-with-the-world">Sharing with the world<a class="headerlink" href="#sharing-with-the-world" title="Permanent link">&para;</a></h3>
 <p>Ask about that one in our <a href="https://statcan-aaw.slack.com">Slack channel</a>. There
 are many ways to do this from the IT side, but it's important for it to go
 through proper processes, so this is not done in a "self-serve" way that the
 others are. That said, it is totally possible.</p>
-<h2 id="recommendation-combine-them-all">Recommendation: Combine them all<a class="headerlink" href="#recommendation-combine-them-all" title="Permanent link">&para;</a></h2>
-<p>It's a great idea to always use git, and using git along with shared workspaces
-is a great way to combine ad hoc sharing (through files) while also keeping your
-code organized and tracked.</p>
 <h2 id="managing-contributors">Managing contributors<a class="headerlink" href="#managing-contributors" title="Permanent link">&para;</a></h2>
 <p>You can add or remove people from a namespace you already own through the
 <strong>Manage Contributors</strong> menu in Kubeflow.</p>

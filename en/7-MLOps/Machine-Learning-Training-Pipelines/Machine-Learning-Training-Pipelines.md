@@ -388,43 +388,9 @@ With the data split, you can now define and train your machine learning model us
 
 After training the model, you need to evaluate its performance on the testing set. This will give you an idea of how well the model will perform on new, unseen data.
 
-=== "Python"
-    ``` py title="evaluate.py" linenums="1"
-
-    ```
-=== "R"
-    ``` r title="evaluate.R" linenums="1"
-
-    ```
-=== "SASPy"
-    ``` py title="evaluate.py" linenums="1"
-
-    ```
-=== "SAS"
-    ``` sas title="evaluate.sas" linenums="1"
-
-    ```
-
 #### 6. Deploy the model
 
 Finally, you can deploy the trained machine learning model in a production environment.
-
-=== "Python"
-    ``` py title="deploy.py" linenums="1"
-
-    ```
-=== "R"
-    ``` r title="deploy.R" linenums="1"
-
-    ```
-=== "SASPy"
-    ``` py title="deploy.py" linenums="1"
-
-    ```
-=== "SAS"
-    ``` sas title="deploy.sas" linenums="1"
-
-    ```
 
 ### Using Argo Workflows
 

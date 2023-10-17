@@ -29,24 +29,15 @@ Overall, cloud storage is a reliable and convenient solution for storing and man
 The AAW platform provides several types of storage:
 
 - Disks (also called Volumes on the Kubeflow Notebook Server creation screen)
-- Buckets ("Blob" or S3 storage, provided through MinIO)
 - Data Lakes (coming soon)
 
 Depending on your use case, either disk or bucket may be most suitable. Our [storage overview](../5-Storage/Overview.md) will help you compare them.
 
 ### Disks
 
-[![Disks](../images/Disks.PNG)](Storage.md/)
+[![Disks](../images/Disks.PNG)](../5-Storage/Disks.md)
 
 **[Disks](../5-Storage/Disks.md)** are added to your notebook server by adding Data Volumes.
-
-### Buckets
-
-MinIO is an S3-API compatible object storage system that provides an open source alternative to proprietary cloud storage services. While we currently use MinIO as our cloud storage solution, we plan on replacing it with s3-proxy in the near future. S3-proxy is a lightweight, open source reverse proxy server that allows you to access Amazon S3-compatible storage services with your existing applications. By switching to s3-proxy, we will be able to improve our cloud storage performance, security, and scalability, while maintaining compatibility with the S3 API.
-
-[![MinIO](../images/Buckets.PNG)](AzureBlobStorage.md/)
-
-**[MinIO](../5-Storage/AzureBlobStorage.md)** is a cloud-native scalable object store. We use it for buckets (blob or S3 storage).
 
 ### Data Lakes (Coming Soon)
 

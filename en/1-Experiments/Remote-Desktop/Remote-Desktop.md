@@ -14,7 +14,7 @@ The Ubuntu Virtual Desktop is a powerful tool for data scientists and machine le
 
 Remote Desktop provides an in-browser GUI Ubuntu desktop experience as well as
 quick access to supporting tools. The operating system is
-[**Ubuntu**](https://ubuntu.com/about) **18.04** with the
+[**Ubuntu**](https://ubuntu.com/about) **22.04** with the
 [**XFCE**](https://www.xfce.org/about) desktop environment.
 
 ![Remote Desktop](../images/rd_desktop.png)
@@ -32,7 +32,7 @@ _pip_, _conda_, _npm_ and _yarn_ are available to install various packages.
 ## Accessing the Remote Desktop
 
 To launch the Remote Desktop or any of its supporting tools, create a Notebook
-Server in [Kubeflow](./Kubeflow.md) and select the remote desktop option.
+Server in [Kubeflow](./Kubeflow.md) and select the remote desktop option, which is the Ubuntu image.
 
 ![Remote Desktop](../images/RemoteDesktop.PNG)
 

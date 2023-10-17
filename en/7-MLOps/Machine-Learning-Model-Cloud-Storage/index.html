@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
       
 
@@ -1191,13 +1191,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buckets" class="md-nav__link">
-    Buckets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#data-lakes-coming-soon" class="md-nav__link">
     Data Lakes (Coming Soon)
   </a>
@@ -1434,13 +1427,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buckets" class="md-nav__link">
-    Buckets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#data-lakes-coming-soon" class="md-nav__link">
     Data Lakes (Coming Soon)
   </a>
@@ -1496,17 +1482,12 @@
 <p>The AAW platform provides several types of storage:</p>
 <ul>
 <li>Disks (also called Volumes on the Kubeflow Notebook Server creation screen)</li>
-<li>Buckets ("Blob" or S3 storage, provided through MinIO)</li>
 <li>Data Lakes (coming soon)</li>
 </ul>
 <p>Depending on your use case, either disk or bucket may be most suitable. Our <a href="../../5-Storage/Overview/">storage overview</a> will help you compare them.</p>
 <h3 id="disks">Disks<a class="headerlink" href="#disks" title="Permanent link">&para;</a></h3>
-<p><a href="Storage.md/"><img alt="Disks" src="../../images/Disks.PNG" /></a></p>
+<p><a href="../../5-Storage/Disks/"><img alt="Disks" src="../../images/Disks.PNG" /></a></p>
 <p><strong><a href="../../5-Storage/Disks/">Disks</a></strong> are added to your notebook server by adding Data Volumes.</p>
-<h3 id="buckets">Buckets<a class="headerlink" href="#buckets" title="Permanent link">&para;</a></h3>
-<p>MinIO is an S3-API compatible object storage system that provides an open source alternative to proprietary cloud storage services. While we currently use MinIO as our cloud storage solution, we plan on replacing it with s3-proxy in the near future. S3-proxy is a lightweight, open source reverse proxy server that allows you to access Amazon S3-compatible storage services with your existing applications. By switching to s3-proxy, we will be able to improve our cloud storage performance, security, and scalability, while maintaining compatibility with the S3 API.</p>
-<p><a href="AzureBlobStorage.md/"><img alt="MinIO" src="../../images/Buckets.PNG" /></a></p>
-<p><strong><a href="../../5-Storage/AzureBlobStorage/">MinIO</a></strong> is a cloud-native scalable object store. We use it for buckets (blob or S3 storage).</p>
 <h3 id="data-lakes-coming-soon">Data Lakes (Coming Soon)<a class="headerlink" href="#data-lakes-coming-soon" title="Permanent link">&para;</a></h3>
 <p>A data lake is a central repository that allows you to store all your structured and unstructured data at any scale. It's a cost-effective way to store and manage all types of data, from raw data to processed data, and it's an essential tool for data scientists.</p>
 <p>One of the primary advantages of a data lake is its flexibility. It allows you to store all types of data without the need to define a schema in advance, which is especially useful when dealing with unstructured data. This flexibility allows data scientists to easily explore, experiment, and extract insights from their data without being constrained by the limitations of a traditional relational database.</p>
