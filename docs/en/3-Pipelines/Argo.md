@@ -374,14 +374,6 @@ Couler provides a simple, unified application programming interface for defining
     # Run the workflow
     w.create()
     ```
-=== "YAML"
-    ``` py title="workflow.yaml" linenums="1"
-
-    ```
-=== "Seldon?"
-    ``` py
-
-    ```
 
 ### Additional Resources for Argo Workflows
 

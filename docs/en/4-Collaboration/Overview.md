@@ -10,7 +10,7 @@ There are many ways collaborate on the AAW. Which is best for your situation dep
 |  **Data**   |    Personal folder or bucket     | Team folder or bucket, or shared namespace | Shared Bucket |
 | **Compute** |        Personal namespace        |              Shared namespace              |      N/A      |
 
-Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the **[MinIO](../5-Storage/AzureBlobStorage.md)** section.
+Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail below. Sharing data through buckets is described in more detail in the **[Azure Blob Storage](../5-Storage/AzureBlobStorage.md)** section.
 
 <!-- prettier-ignore -->
 ??? question "What is the difference between a bucket and a folder?"
@@ -37,7 +37,7 @@ If you need to share code without publishing it on a repository,
 
 <!-- prettier-ignore -->
 !!! danger "Sharing a namespace means you share **everything** in the namespace"
-    Kubeflow does not support granular sharing of one resource (one notebook, one MinIO bucket, etc.), but instead sharing of **all** resources. If you want to share a Jupyter Notebook server with someone, you must share your entire namespace and **they will have access to all other resources (MinIO buckets, etc.)**.
+    Kubeflow does not support granular sharing of one resource (one notebook, one volume, etc.), but instead sharing of **all** resources. If you want to share a Jupyter Notebook server with someone, you must share your entire namespace and **they will have access to all other resources (Azure Blob Storage, etc.)**.
 
 In Kubeflow every user has a **namespace** that contains their work (their
 notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but
@@ -47,7 +47,7 @@ share with a team). One option for collaboration is to share namespaces with
 others.
 
 The advantage of sharing a Kubeflow namespace is that it lets you and your
-colleagues share the compute environment and MinIO buckets associated with the
+colleagues share the compute environment and  volumes associated with the
 namespace. This makes it a very easy and free-form way to share.
 
 To share your namespace, see [managing contributors](#managing-contributors)
@@ -68,29 +68,12 @@ Once you have a shared namespace, you have two shared storage approaches
 To learn more about the technology behind these, check out the
 [Storage overview](../5-Storage/Overview.md).
 
-### Sharing with StatCan
-
-In addition to private buckets, or team-shared private buckets, you can also
-place your files in _shared storage_. Within all bucket storage options
-(`minimal`, `premium`, `pachyderm`), you have a private bucket, **and** a folder
-inside of the `shared` bucket. Take a look, for instance, at the link below:
-
-- [`shared/blair-drummond/`](https://minimal-tenant1-minio.covid.cloud.statcan.ca/minio/shared/blair-drummond/)
-
-Any **logged in** user can see these files and read them freely.
-
 ### Sharing with the world
 
 Ask about that one in our [Slack channel](https://statcan-aaw.slack.com). There
 are many ways to do this from the IT side, but it's important for it to go
 through proper processes, so this is not done in a "self-serve" way that the
 others are. That said, it is totally possible.
-
-## Recommendation: Combine them all
-
-It's a great idea to always use git, and using git along with shared workspaces
-is a great way to combine ad hoc sharing (through files) while also keeping your
-code organized and tracked.
 
 ## Managing contributors
 

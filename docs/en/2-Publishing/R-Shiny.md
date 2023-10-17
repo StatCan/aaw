@@ -12,7 +12,7 @@ R-Shiny is an R package that makes it easy to build interactive web apps in R.
 
 _Publish Professional Quality Graphics_
 
-[![InteractiveDashboard](../images/InteractiveDashboard.PNG)](/2-Publishing/R-Shiny/)
+[![InteractiveDashboard](../images/InteractiveDashboard.PNG)](../R-Shiny/)
 
 R Shiny is an open source web application framework that allows data scientists and analysts to create interactive, web-based dashboards and data visualizations using the R programming language. One of the main advantages of R Shiny is that it offers a straightforward way to create high-quality, interactive dashboards without the need for extensive web development expertise. With R Shiny, data scientists can leverage their R coding skills to create dynamic, data-driven web applications that can be shared easily with stakeholders.
 
@@ -109,7 +109,7 @@ If you need extra R libraries to be installed, send your list to [the R-Shiny re
 
 <!-- prettier-ignore -->
 !!! example "See the above dashboard here"
-    The above dashboard is in GitHub. Take a look at [the source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard), and [see the dashboard live](https://shiny.covid.cloud.statcan.ca/bus-dashboard).
+    The above dashboard is in GitHub. Take a look at [the source](https://github.com/StatCan/R-dashboards/tree/master/bus-dashboard)).
 
 ## Once you've got the basics ...
 

@@ -20,7 +20,7 @@ Jupyter comes with a number of features (and we can add more)
 [![Explore your data](../images/ExploreData.PNG)](../../2-Publishing/Datasette/)
 </center>
 
-Use **[Datasette](~../2-Publishing/Datasette.md/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
+Use **[Datasette](../../2-Publishing/Datasette.md/)** , an instant JSON API for your SQLite databases. Run SQL queries in a more interactive way!
 
 ### IDE in the browser
 
@@ -78,9 +78,9 @@ You can upload and download data to/from JupyterHub directly in the menu. There 
 
 ### Shareable "Bucket" storage
 
-There is also a mounted `buckets` folder in your home directory, which holds files in [MinIO](../Storage.md/#buckets-via-minio).
+There is also a mounted `buckets` folder in your home directory, which holds files in [Azure Blob Storage](../../5-Storage/AzureBlobStorage).
 
-**Refer to the [Storage](../index.md#storage) section for details.**
+**Refer to the [Storage](../../5-Storage/Overview) section for details.**
 
 ## Data Analysis
 

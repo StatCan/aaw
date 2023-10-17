@@ -6,7 +6,7 @@ you from fast solid state drives (SSDs)!
 # Setup
 
 When creating your notebook server, you request disks by adding Data Volumes to
-your notebook server (pictured below, with `Type = New`). They are automatically
+your notebook server (pictured below, with go to `Advanced Options`). They are automatically
 mounted at the directory (`Mount Point`) you choose, and serve as a simple and
 reliable way to preserve data attached to a Notebook Server.
 
@@ -27,7 +27,7 @@ to reuse). If you're done with the disk and it's contents,
 ## Deleting Disk Storage
 
 To see your disks, check the Notebook Volumes section of the Notebook Server
-page (shown below). You can delete any unattached disk (orange icon on the left)
+page (shown below). You can delete any unattached disk (icon on the left)
 by clicking the trash can icon.
 
 ![Delete an unattached volume from the Notebook Server screen](../images/kubeflow_delete_disk.png)

@@ -26,9 +26,10 @@ You can even explore maps within the tool!
 
 ![Run SQL Queries](../images/datasette-sql.png)
 
+<!-- Removing until video is approved
 # Video Tutorial
 
-[![Click here for the video](../images/KubeflowVideo.PNG)](https://youtu.be/OPVfBKouBT8?t=214 "Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks")
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://youtu.be/OPVfBKouBT8?t=214 "Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks") -->
 
 # Getting Started
 
