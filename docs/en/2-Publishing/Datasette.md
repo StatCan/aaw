@@ -36,7 +36,10 @@ You can even explore maps within the tool!
 ## Installing Datasette
 
 In your Jupyter Notebook, open a terminal window and run the command
-`pip3 install datasette`. ![Install Datasette](../images/InstallDatasette.PNG)
+`pip3 install datasette`. 
+<center>
+    ![Install Datasette](../images/InstallDatasette.PNG)
+</center>
 
 ## Starting Datasette
 

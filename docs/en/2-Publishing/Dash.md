@@ -25,7 +25,7 @@ Dash makes it simple to build an interactive GUI around your data analysis code.
 This is an example of a Layout With Figure and Slider from
 [Dash](https://dash.plotly.com/basic-callbacks).
 
-![dash_plot](../images/plot.png)
+![Dash Plot example](../images/plot.png)
 
 ### Plotly Dash
 

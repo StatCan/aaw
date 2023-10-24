@@ -1,7 +1,7 @@
 # Training Machine Learning Models on the AAW
 
 <center>
-![MLOps](../images/mlops.jpg)
+![Robots in work](../images/mlops.jpg)
 </center>
 
 <!-- prettier-ignore -->
@@ -394,7 +394,7 @@ Finally, you can deploy the trained machine learning model in a production envir
 
 ### Using Argo Workflows
 
-![Argo Workflows](../images/argo-workflows-assembly-line.jpg)
+![Workflow Production Art](../images/argo-workflows-assembly-line.jpg)
 
 <!-- prettier-ignore -->
 !!! info "MLOps Best Practices"

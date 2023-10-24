@@ -75,27 +75,27 @@ shinyuieditor::launch_editor(app_loc = "./")
 
 The first thing you'll see is the template chooser. There are three options as of this writing (`shinyuieditor` is currently in alpha).
 
-![image](https://user-images.githubusercontent.com/8212170/229583104-9404ad01-26cd-4260-bce6-6fe32ffab7d8.png)
+![Shiny ui Editor Template](https://user-images.githubusercontent.com/8212170/229583104-9404ad01-26cd-4260-bce6-6fe32ffab7d8.png)
 
 ### Single or Multi File Mode
 
 I recommend **Multi file mode**, this will put the back-end code in a file called `server.R` and front-end in a file called `ui.R`.
 
-![image](https://user-images.githubusercontent.com/8212170/229584803-452bcdb9-4aa6-4902-805e-845d0b939016.png)
+![Generate app multi file mode](https://user-images.githubusercontent.com/8212170/229584803-452bcdb9-4aa6-4902-805e-845d0b939016.png)
 
 ### Design Your App
 
 You can design your app with either code or the graphical user interface. Try designing the layout with the GUI and designing the plots with code.
 
-![image](https://user-images.githubusercontent.com/8212170/229589867-19bf334c-4789-4228-99ec-44583b119e29.png)
+![App design example](https://user-images.githubusercontent.com/8212170/229589867-19bf334c-4789-4228-99ec-44583b119e29.png)
 
 Any changes you make in `shinyuieditor` will appear immediately in the code. 
 
-![image](https://user-images.githubusercontent.com/8212170/229637808-38dc0ed3-902a-44db-bfa0-193ef25af6ca.png)
+![Panel text example](https://user-images.githubusercontent.com/8212170/229637808-38dc0ed3-902a-44db-bfa0-193ef25af6ca.png)
 
 Any change you make in the code will immediately appear in the `shinyuieditor`.
 
-![image](https://user-images.githubusercontent.com/8212170/229637972-b4a263f5-27f0-4160-8b43-9250ace72999.png)
+![ShinyUiEditor](https://user-images.githubusercontent.com/8212170/229637972-b4a263f5-27f0-4160-8b43-9250ace72999.png)
 
 ## Publishing on the AAW
 

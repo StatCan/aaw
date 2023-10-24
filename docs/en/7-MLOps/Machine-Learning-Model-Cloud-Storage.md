@@ -34,9 +34,9 @@ The AAW platform provides several types of storage:
 Depending on your use case, either disk or bucket may be most suitable. Our [storage overview](../5-Storage/Overview.md) will help you compare them.
 
 ### Disks
-
-[![Disks](../images/Disks.PNG)](../5-Storage/Disks.md)
-
+<center>
+    [![Disks](../images/Disks.PNG)](../5-Storage/Disks.md)
+</center>
 **[Disks](../5-Storage/Disks.md)** are added to your notebook server by adding Data Volumes.
 
 ### Data Lakes (Coming Soon)
