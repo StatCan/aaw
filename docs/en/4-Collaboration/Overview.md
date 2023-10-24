@@ -80,7 +80,7 @@ others are. That said, it is totally possible.
 You can add or remove people from a namespace you already own through the
 **Manage Contributors** menu in Kubeflow.
 
-![Contributors Menu](../images/kubeflow_contributors.png)
+![ Manage Contributors Menu](../images/kubeflow_contributors.png)
 
 <!-- prettier-ignore -->
 !!! info "Now you and your colleagues can share access to a server!"

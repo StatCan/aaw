@@ -25,7 +25,7 @@ No matter what stage of your data science journey you're at, the Advanced Analyt
 ## Getting Started with the AAW
 
 <center>
-![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
+![AAW icon](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 </center>
 
 ### The AAW Portal
