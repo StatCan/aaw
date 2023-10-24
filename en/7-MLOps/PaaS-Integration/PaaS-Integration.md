@@ -19,7 +19,9 @@ to help!
 
 _Integration is key to success._
 
+<center>
 [![Integrate with PaaS](../images/IntegratePaaS.PNG)]()
+</center>
 
 Our open source platform offers unparalleled optionality to our users. By allowing users to use open source tools, we empower them to use their preferred data science and machine learning frameworks. But the real power of our platform comes from its ability to integrate with many Platform as a Service (PaaS) offerings, like Databricks or AzureML. This means that our users can leverage the power of the cloud to run complex data processing and machine learning pipelines at scale. With the ability to integrate with PaaS offerings, our platform enables our users to take their work to the next level, by giving them the power to scale their workloads with ease, and take advantage of the latest innovations in the field of data science and machine learning. By providing this level of optionality, we ensure that our users can always choose the right tool for the job, and stay ahead of the curve in an ever-changing field.
 
