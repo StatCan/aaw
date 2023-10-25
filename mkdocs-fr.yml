@@ -85,4 +85,16 @@ nav:
       - Aperçu: 5-Stockage/Aperçu.md
       - MinIo: 5-Stockage/AzureBlobStorage.md
       - Disque: 5-Stockage/Disque.md
+  - Gitlab:
+      - Gitlab: 6-Gitlab/Gitlab.md
+  - MLOps:
+      - Overview: 7-MLOps/Overview.md
+      - Machine Learning Models: 7-MLOps/Machine-Learning.md
+      - Training ML Models: 7-MLOps/Machine-Learning-Training-Pipelines.md
+      - Storing ML Models: 7-MLOps/Machine-Learning-Model-Cloud-Storage.md
+      - Serving ML Models: 
+        - Introduction: 7-MLOps/Machine-Learning-Model-Serving.md
+        - Example Notebooks:
+          - Seldon Iris Classifier: 7-MLOps/sklearn_iris_jsondata.ipynb
+      - Integrate with External PaaS: 7-MLOps/PaaS-Integration.md
   - Aide/Contactez-nous: Aide.md

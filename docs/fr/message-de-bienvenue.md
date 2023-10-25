@@ -1,4 +1,5 @@
-![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
+![# 🧙🔮 Bienvenue à l’Espace d'analyse avancé (EAA)
+](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 
 
 # 🧙🔮 Bienvenue à l’Espace d'analyse avancé (EAA)
@@ -18,8 +19,8 @@ EAA est basé sur le projet Kubeflow qui est une solution complète open source 
 ### 🛎️ Services EAA
 
 - 🌀 Page d'accueil du portail EEA
-  - **Interne seulement** [https://www.statcan.gc.ca/data-analytics-service/aaw](https://www.statcan.gc.ca/data-analytics-service/aaw)
-  - **Interne/externe** [https://analytics-platform.statcan.gc.ca/covid19](https://analytics-platform.statcan.gc.ca/covid19)
+  - **Interne seulement** [https://www.statcan.gc.ca/services-analyse-donnees/etaa](https://www.statcan.gc.ca/services-analyse-donnees/etaa)
+  - **Interne/externe** [https://www.statcan.gc.ca/services-analyse-donnees/etaa](https://www.statcan.gc.ca/services-analyse-donnees/etaa)
 
 - 🤖 Tableau de bord Kubeflow
   - [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/)
