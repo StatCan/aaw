@@ -63,6 +63,7 @@ extra:
 nav:
   - Démarrage: index.md
   - Analyse:
+      - Aperçu: 1-Experiences/Apercu.md
       - Kubeflow: 1-Experiences/Kubeflow.md
       - Jupyter: 1-Experiences/Jupyter.md
       - RStudio: 1-Experiences/RStudio.md
