@@ -1,8 +1,6 @@
 # Aperçu
 
-Datasette est une API JSON instantanée pour vos bases de données SQLite qui
-permet d'explorer la BD et d'exécuter des requêtes SQL de manière plus
-interactive.
+Datasette est une API JSON instantanée pour vos bases de données SQLite qui permet d'explorer la BD et d'exécuter des requêtes SQL de manière plus interactive.
 
 Vous pouvez trouver une liste d'exemples de datasettes
 [ici](https://github.com/simonw/datasette/wiki/Datasettes).
@@ -13,30 +11,32 @@ Vous pouvez trouver une liste d'exemples de datasettes
 
 ## Exemple Datasette
 
-Voici quelques captures d'écran du Datasette
-[global-power-plants](https://global-power-plants.datasettes.com), vous pouvez
-prévisualiser et explorer les données dans le navigateur, que ce soit par des
+Voici quelques captures d'écran du Datasette [global-power-plants](https://global-power-plants.datasettes.com), vous pouvez prévisualiser et explorer les données dans le navigateur, que ce soit par des
 clics ou des requêtes SQL.
 
 ![Prévisualisation des données](../images/datasette-preview.png)
 
 Vous pouvez même explorer des cartes au sein de l'outil!
 
-[Exécuter des requêtes SQL](../images/datasette-sql.png)
+![Exécuter des requêtes SQL](../images/datasette-sql.png)
 
-# Didacticiel vidéo
+<!-- # Didacticiel vidéo
 
-[![Click here for the video](../images/KubeflowVideo.PNG)](https://youtu.be/OPVfBKouBT8?t=214 "Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks")
+[![Click here for the video](../images/KubeflowVideo.PNG)](https://youtu.be/OPVfBKouBT8?t=214 "Advanced Analytics Workspace Kubeflow collaboration demo + tips and tricks") -->
 
 # Commencer
 
-## Installation des Datasettes
+## Installation de l'ensemble de données
 
-Pour visualiser votre base de données dans votre bloc-notes Jupyter, créez le
-fichier _bash_ suivant dans votre répertoire de projet, rendre le fichier
-exécutable en utilisant `chmod +x start.sh` puis exécutez-le avec la commande
-`./start.sh`. Accédez au serveur web en utilisant le **URL de base** avec le
-numéro de port que vous utilisez dans le fichier ci-dessous.
+Dans votre Jupyter Notebook, ouvrez une fenêtre de terminal et exécutez la commande `pip3 install datasette`.
+
+<center>
+    ![Installer l'ensemble de données](../images/InstallDatasette.PNG)
+</center>
+
+## Démarrage de l'ensemble de données
+
+Pour afficher votre propre base de données dans votre bloc-notes Jupyter, créez un fichier appelé `start.sh` dans le répertoire de votre projet et copiez-y le code ci-dessous. Rendez le fichier exécutable en utilisant `chmod +x start.sh`. Exécutez le fichier avec `./start.sh`. Accédez au serveur Web à l'aide de l'**URL de base** avec le numéro de port que vous utilisez dans le fichier ci-dessous.
 
 **start.sh**
 
