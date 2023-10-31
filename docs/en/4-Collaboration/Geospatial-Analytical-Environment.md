@@ -212,4 +212,4 @@ toronto_map
 
 ## Learn More about DAS Geospatial Analytical Environment (GAE) and Services
 
-[GAE Help Guide](https://statcan.github.io/daaas-dads-geo/)
+[GAE Help Guide](https://statcan.github.io/gae-eag/)

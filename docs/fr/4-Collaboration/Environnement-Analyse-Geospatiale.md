@@ -192,4 +192,4 @@ toronto_map
 [La documentation complète de l'API ArcGIS peut être trouvée ici](https://developers.arcgis.com/python/)
 
 ##E n savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
-[Guide d'aide GAE](https://statcan.github.io/daaas-dads-geo/)
+[Guide d'aide GAE](https://statcan.github.io/gae-eag/)

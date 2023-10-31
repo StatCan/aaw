@@ -6,11 +6,9 @@ Par défaut, chaque personne a son  espace de nom personnel, `prénom-nom`. Si v
 
 ## Demander un espace de nom
 
-Pour créer un espace de noms pour une équipe, accédez au portail ETAA. **Cliquez sur le &#8942; menu sur [la section Kubeflow du portail](https://www.statcan.gc.ca/services-analyse-donnees/etaa)**.
+Pour créer un espace de noms pour une équipe, accédez au portail ETAA. **Cliquez [Commencer](https://www.statcan.gc.ca/services-analyse-donnees/etaa)**.
 
-![Le menu hamburger à droite de Kubeflow sur le portail](../images/KubeflowNamespace.PNG)
-
-Entrez le nom que vous demandez et soumettez la demande. Veillez à n'utiliser que lettres minuscules plus tirets. ![Soumettez votre demande d'espace de noms partagé](../images/KubeflowNamespace2.png)
+![Commencer](../images/CommencerKubeflow.PNG)
 
 <!-- prettier-ignore -->
 !!! avertissement "L'espace de noms ne peut pas avoir de caractères spéciaux autres que des traits d'union"

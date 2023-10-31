@@ -6,11 +6,9 @@ By default, everyone gets their own personal namespace, `firstname-lastname`. If
 
 ## Requesting a namespace
 
-To create a namespace for a team, go to the AAW portal. **Click the &#8942; menu on [the Kubeflow section of the portal](https://www.statcan.gc.ca/data-analytics-services/aaw)**.
+To create a namespace for a team, **Click the [Getting Started](https://www.statcan.gc.ca/data-analytics-services/overview)**.
 
-![The hamburger menu to the right of Kubeflow on the portal](../images/KubeflowNamespace.PNG)
-
-Enter the name you are requesting and submit the request. Be sure to use only lower case letters plus dashes. ![Submit your request for a shared namespace](../images/KubeflowNamespace2.png)
+![Getting Started](../images/DasGettingStarted.PNG)
 
 <!-- prettier-ignore -->
 !!! warning "The namespace cannot have special characters other than hyphens"
