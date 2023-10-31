@@ -1,8 +1,8 @@
 # Aperçu
 
-[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) est la solution de stockage d'objets de Microsoft pour le cloud. Blob Storage est optimisé pour stocker des quantités massives de données non structurées. Les données non structurées sont des données qui n'adhèrent pas à un modèle de données ou à une définition particulière, comme du texte ou des données binaires.
+[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) est la solution de stockage d'objets de Microsoft pour le nuage informatique. Le stockage blob est optimisé pour stocker des quantités massives de données non structurées. Les données non structurées sont des données qui n'adhèrent pas à un modèle de données ou à une définition particulière, comme du texte ou des données binaires.
 
-Les conteneurs de stockage Azure Blob sont efficaces dans trois domaines :
+Les conteneurs de stockage blob Azure sont efficaces dans trois domaines :
 
 - De grandes quantités de données - Les conteneurs peuvent être énormes : bien plus gros que les disques durs. Et ils sont toujours rapides.
 - Accessible par plusieurs consommateurs à la fois - Vous pouvez accéder à la même source de données à partir de plusieurs serveurs Notebook et pipelines en même temps sans avoir besoin de dupliquer les données.
@@ -11,14 +11,14 @@ Les conteneurs de stockage Azure Blob sont efficaces dans trois domaines :
 # Installation
 
 <!-- prettier-ignore -->
-!!! avertissement "Les conteneurs de stockage Azure Blob et le support de buckets remplaceront les supports de stockage Minio Buckets et Minio"
+!!! warning "Les conteneurs de stockage Azure Blob et le support de buckets remplaceront les supports de stockage Minio Buckets et Minio"
      Les utilisateurs seront responsables de la migration des données des Minio Buckets vers les dossiers Azure Storage. Pour les fichiers plus volumineux, les utilisateurs peuvent contacter AAW pour obtenir de l'aide.
 
 ## Conteneur Blob monté sur un serveur de notebook
 
 <!-- prettier-ignore -->
 
-Les volumes Blob CSI sont conservés sous « /home/jovyan/buckets » lors de la création d'un serveur Notebook. Les fichiers sous « /buckets » sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le « /buckets » monté sur le système de fichiers, rendant les données accessibles de partout.
+Les volumes Blob CSI sont conservés sous `/home/jovyan/buckets` lors de la création d'un serveur bloc-notes. Les fichiers sous `/buckets` sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le `/buckets` monté sur le système de fichiers, rendant les données accessibles de partout.
 
 ![Dossiers Blob montés en tant que répertoires Jupyter Notebook](../images/container-mount.png)
 
@@ -32,7 +32,7 @@ Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez co
 
 ## Comment migrer de MinIO vers Azure Blob Storage
 
-Tout d’abord, importez les variables d’environnement stockées dans votre coffre-fort de secrets. Vous importerez soit depuis « minio-gateway » soit depuis « fdi-gateway » selon l'endroit où vos données ont été ingérées.
+Tout d’abord, importez les variables d’environnement stockées dans votre coffre-fort de secrets. Vous importerez soit depuis `minio-gateway` soit depuis `fdi-gateway` selon l'endroit où vos données ont été ingérées.
 
 ```
 jovyan@rstudio-0 :~$ source /vault/secrets/fdi-gateway-protected-b
