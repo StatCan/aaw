@@ -1,18 +1,18 @@
-# Model Serving with Seldon Core and KFServing
+# Service de modèles avec Seldon Core et KFServing
 
 <!-- prettier-ignore -->
-!!! warning "⚒ This page is under construction ⚒" 
-    The person writing this entry does not know enough about 
-    this feature to write about it, but you can ask on our Slack channel.
+!!! warning "⚒ Cette page est en construction ⚒"
+     La personne qui écrit cet article n'en sait pas assez sur
+     cette fonctionnalité pour en parler, mais vous pouvez demander sur notre chaîne Slack.
 
-## Serverless with KNative
+## Sans serveur avec KNative
 
-Kubernetes and [KNative](https://knative.dev/) let your services scale up and
-down on demand. This lets you create APIs to serve Machine Learning models,
-without the need to manage load balancing or scale-up. The platform can handle
-all of your scaling for you, so that you can focus on the program logic.
+Kubernetes et [KNative](https://knative.dev/) permettent à vos services d'évoluer et
+vers le bas sur demande. Cela vous permet de créer des API pour servir des modèles de Machine Learning,
+sans avoir besoin de gérer l’équilibrage de charge ou la mise à l’échelle. La plateforme peut gérer
+toute votre mise à l'échelle pour vous, afin que vous puissiez vous concentrer sur la logique du programme.
 
 <!-- prettier-ignore -->
-!!! warning "⚒ This page is under construction ⚒" 
-    The person writing this entry does not know enough about this 
-    feature to write about it, but you can ask on our Slack channel.
+!!! warning "⚒ Cette page est en construction ⚒"
+     La personne qui écrit cet article n'en sait pas assez à ce sujet
+     fonctionnalité pour écrire à ce sujet, mais vous pouvez demander sur notre chaîne Slack.

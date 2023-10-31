@@ -87,13 +87,13 @@ nav:
   - Gitlab:
       - Gitlab: 6-Gitlab/Gitlab.md
   - MLOps:
-      - Overview: 7-MLOps/Overview.md
-      - Machine Learning Models: 7-MLOps/Machine-Learning.md
-      - Training ML Models: 7-MLOps/Machine-Learning-Training-Pipelines.md
-      - Storing ML Models: 7-MLOps/Machine-Learning-Model-Cloud-Storage.md
-      - Serving ML Models: 
-        - Introduction: 7-MLOps/Machine-Learning-Model-Serving.md
-        - Example Notebooks:
-          - Seldon Iris Classifier: 7-MLOps/sklearn_iris_jsondata.ipynb
-      - Integrate with External PaaS: 7-MLOps/PaaS-Integration.md
+      - Aperçu: 7-MLOps/Aperçu.md
+      - Modèles d'apprentissage automatique: 7-MLOps/Modèles-d'apprentissage-automatique.md
+      - Modèles ML d'entraînement: 7-MLOps/Modele-Ml-entrainement.md
+      - Modèles ML de stockage: 7-MLOps/Modele-ML-stockage.md
+      - Modèles de service ML: 
+        - Introduction: 7-MLOps/Modele-Service-ML.md
+        - Bloc-note d'exemple:
+          - Classificateur Seldon Iris : 7-MLOps/sklearn_iris_jsondata.ipynb
+      - Intégration avec PaaS externe: 7-MLOps/Integration-PaaS.md
   - Aide/Contactez-nous: Aide.md
