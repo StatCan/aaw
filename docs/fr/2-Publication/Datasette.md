@@ -26,15 +26,15 @@ Vous pouvez même explorer des cartes au sein de l'outil!
 
 # Commencer
 
-## Installation de l'ensemble de données
+## Installation de Datasette
 
-Dans votre Jupyter Notebook, ouvrez une fenêtre de terminal et exécutez la commande `pip3 install datasette`.
+Dans votre bloc-notes Jupyter, ouvrez une fenêtre de terminal et exécutez la commande `pip3 install datasette`.
 
 <center>
-    ![Installer l'ensemble de données](../images/InstallDatasette.PNG)
+    ![Installer Datasette](../images/InstallDatasette.PNG)
 </center>
 
-## Démarrage de l'ensemble de données
+## Démarrage de Datasette
 
 Pour afficher votre propre base de données dans votre bloc-notes Jupyter, créez un fichier appelé `start.sh` dans le répertoire de votre projet et copiez-y le code ci-dessous. Rendez le fichier exécutable en utilisant `chmod +x start.sh`. Exécutez le fichier avec `./start.sh`. Accédez au serveur Web à l'aide de l'**URL de base** avec le numéro de port que vous utilisez dans le fichier ci-dessous.
 

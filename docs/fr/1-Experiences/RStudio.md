@@ -18,10 +18,9 @@ Vous pouvez installer les packages `R` ou `python` avec `conda` ou `install.pack
 
 # Une fois que vous avez les bases...
 
-## R-Brillant
+## R-Shiny
 
-Vous pouvez aussi utiliser « Shiny » ! Shiny est un package R open source qui fournit un web
-cadre pour créer des applications Web à l'aide de R. Shiny vous aide à transformer votre
+Vous pouvez aussi utiliser « Shiny » ! Shiny est un package R open source qui fournit un cadre web pour créer des applications Web à l'aide de R. Shiny vous aide à transformer votre
 analyses en applications Web interactives.
 
 ![RStudio avec R-Shiny](../images/rstudio_rshiny_visual.png)

@@ -38,7 +38,7 @@ Par exemple, dans ETAA et l'utilisation de [Bloc-notes Jupyter](../../1-Experien
 	conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/api/conda/esri-remote arcgis
 	```
 
-2. Importez les librairies nécessaires dont vous aurez besoin dans le bloc-note.
+2. Importez les bibliothèques nécessaires dont vous aurez besoin dans le bloc-note.
 	```python
 	from arcgis.gis import GIS
 	from arcgis.gis import Item
@@ -157,7 +157,7 @@ item1_buffer.update(item_properties={'title': 'Saisir le titre'
 
 ### Visualisez vos données sur une carte interactive
 
-**Exemple : Librairie MatplotLib**
+**Exemple : bibliothèque MatplotLib**
 Dans le code ci-dessous, nous créons un objet ax, qui est un tracé de style carte. Nous traçons ensuite notre colonne de changement de données ("Population Change") sur les axes
 ```python
 import matplotlib.pyplot as plt
@@ -166,9 +166,9 @@ shape.plot(ax=ax, column='Population Change', legend=True)
 plt.show()
 ```
 
-**Exemple : librairie ipyleaflet**
-Dans cet exemple, nous utiliserons la librairie `ipyleaflet` pour créer une carte interactive. Cette carte sera centrée autour de Toronto, ON. Les données utilisées seront décrites ci-dessous.
-Commencez par coller ```conda install -c conda-forge ipyleaflet``` vous permettant d'installer les librairies ipyleaflet dans l'environnement Python.
+**Exemple : bibliothèque ipyleaflet**
+Dans cet exemple, nous utiliserons la bibliothèque `ipyleaflet` pour créer une carte interactive. Cette carte sera centrée autour de Toronto, ON. Les données utilisées seront décrites ci-dessous.
+Commencez par coller ```conda install -c conda-forge ipyleaflet``` vous permettant d'installer les bibliothèques ipyleaflet dans l'environnement Python.
 
 <br/>
 
@@ -191,5 +191,5 @@ toronto_map
 ## En savoir plus sur l'API ArcGIS pour Python
 [La documentation complète de l'API ArcGIS peut être trouvée ici](https://developers.arcgis.com/python/)
 
-##E n savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
+##En savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
 [Guide d'aide GAE](https://statcan.github.io/gae-eag/)

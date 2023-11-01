@@ -3,7 +3,7 @@
 
 ![Logo calmar Argo Workflows](../images/argo.png)
 
-**[Flux de travail Argo](https://argoproj.github.io/argo-workflows/)** est un moteur de flux de travail open source natif de conteneur pour orchestrer des tâches parallèles sur Kubernetes. Les flux de travails Argo sont implémentés en tant que Kubernetes CRD (Custom Resource Definition). Il est particulièrement adapté aux flux de travail de science des données et aux flux de travail d’apprentissage automatique.
+**[Flux de travail Argo](https://argoproj.github.io/argo-workflows/)** est un moteur de flux de travail à logiciel libre natif de conteneur pour orchestrer des tâches parallèles sur Kubernetes. Les flux de travails Argo sont implémentés en tant que Kubernetes CRD (Custom Resource Definition). Il est particulièrement adapté aux flux de travail de science des données et aux flux de travail d’apprentissage automatique.
 
 La documentation complète peut être trouvée [ici](https://argoproj.github.io/argo-workflows/walk-through/).
 
@@ -158,7 +158,7 @@ Utilisez le `Dockerfile` suivant comme point de départ pour vos projets `R` et 
 
 #### 3. Écrivez votre flux de travail en YAML
 
-YAML est encore un autre langage de balisage et vous devrez écrire les étapes de votre pipeline de formation dans un fichier YAML Argo Workflows. Ce fichier doit inclure une référence au Dockerfile que vous avez créé à l'[Étape 1](#2-ecrivez-un-dockerfile-pour-executer-votre-code), ainsi que toutes les données d'entrée et de sortie avec lesquelles vous travaillerez.
+YAML est encore un autre langage de balisage et vous devrez écrire les étapes de votre pipeline de formation dans un fichier YAML de flux de travails Argo. Ce fichier doit inclure une référence au Dockerfile que vous avez créé à l'[Étape 1](#2-ecrivez-un-dockerfile-pour-executer-votre-code), ainsi que toutes les données d'entrée et de sortie avec lesquelles vous travaillerez.
 
 Voici un exemple de fichier YAML pour un pipeline d'apprentissage automatique simple qui entraîne un modèle de régression logistique sur l'ensemble de données iris. La seule vraie différence entre les versions `Python` et `R` est la commande `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` et le les modèles sont stockés dans différents formats, `pkl` pour `python` et `rds` pour `R`.
 
@@ -219,11 +219,11 @@ Pour exécuter le flux de travail ci-dessus, vous devrez d'abord envoyer le Dock
 $ argo submit workflow.yaml # soumettre une spécification de flux de travail à Kubernetes
 ```
 
-Il est également possible de soumettre des workflows argo à partir des workflows à l'aide de SDK et d'appels API (c'est juste un autre service Web !). Voir cette [section](#exemples-utilisant-des-sdk-bases-sur-flux-de-travail-argo).
+Il est également possible de soumettre des flox de travail argo à partir des flox de travail à l'aide de SDK et d'appels API (c'est juste un autre service Web !). Voir cette [section](#exemples-utilisant-des-sdk-bases-sur-flux-de-travail-argo).
 
 #### 5. Surveillez le pipeline à l'aide de la CLI du flux de travail Argo
 
-Pendant l'exécution du pipeline, vous pouvez surveiller sa progression à l'aide de la CLI Argo Workflows. Cela vous montrera quelles étapes se sont terminées avec succès et lesquelles sont toujours en cours. Vous trouverez ci-dessous quelques commandes utiles. Pour plus d'informations sur la CLI Argo Workflows, veuillez consulter [la documentation officielle de la CLI Argo Workflows](https://argoproj.github.io/argo-workflows/walk-through/argo-cli/) .
+Pendant l'exécution du pipeline, vous pouvez surveiller sa progression à l'aide de la CLI de flux de travail Argo. Cela vous montrera quelles étapes se sont terminées avec succès et lesquelles sont toujours en cours. Vous trouverez ci-dessous quelques commandes utiles. Pour plus d'informations sur la CLI des flux de travail Argo, veuillez consulter [la documentation officielle de la CLI de flux de travail Argo](https://argoproj.github.io/argo-workflows/walk-through/argo-cli/) .
 
 ``` bash title="Terminal"
 $ argo list                       # lister les flux de travail actuels
@@ -379,5 +379,5 @@ Couler fournit une interface de programmation d'applications simple et unifiée 
 
 Des exemples de flux de travail Argo peuvent être trouvés dans les référentiels Github suivants :
 
-- [Documentation des workflows Argo](https://argoproj.github.io/argo-workflows/)
+- [Documentation des flux de travail Argo](https://argoproj.github.io/argo-workflows/)
 - [Référence Argo CLI](https://argoproj.github.io/argo-workflows/walk-through/argo-cli/)

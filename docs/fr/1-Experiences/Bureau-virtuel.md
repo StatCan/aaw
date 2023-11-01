@@ -2,13 +2,13 @@
 
 ### Bureau virtuel Ubuntu
 
-_Vous pouvez exécuter un [**Bureau Ubuntu**](https://ubuntu.com/desktop) complet, avec des applications typiques, directement dans votre navigateur, en utilisant [**Kubeflow!**](https://kubeflow. aaw.cloud.statcan.ca/)_
+_Vous pouvez exécuter un [**Bureau Ubuntu**](https://ubuntu.com/desktop) complet, avec des applications typiques, directement dans votre navigateur, en utilisant [**Kubeflow!**](https://kubeflow.aaw.cloud.statcan.ca/)_
 
 <center>
 [![Bureau Virtuel](../images/VirtualDesktop.jpg)](https://novnc.com/info.html)
 </center>
 
-Le bureau virtuel Ubuntu est un outil puissant pour les scientifiques de données et les ingénieurs en apprentissage automatique qui doivent exécuter des charges de travail gourmandes en ressources dans le nuage informatique. Ubuntu est une distribution Linux populaire largement utilisée dans les communautés de science des données et d'apprentissage automatique en raison de sa forte prise en charge des outils open source tels que R et Python. Avec Ubuntu Virtual Desktop, vous pouvez rapidement démarrer une machine virtuelle avec Ubuntu préinstallé et y accéder depuis n'importe où avec une connexion Internet. Cela signifie que vous pouvez effectuer des tâches d'analyse de données et d'apprentissage automatique depuis votre ordinateur portable, votre tablette ou votre téléphone sans avoir à vous soucier des limitations matérielles.
+Le bureau virtuel Ubuntu est un outil puissant pour les scientifiques de données et les ingénieurs en apprentissage automatique qui doivent exécuter des charges de travail gourmandes en ressources dans le nuage informatique. Ubuntu est une distribution Linux populaire largement utilisée dans les communautés de science des données et d'apprentissage automatique en raison de sa forte prise en charge des outils de logiciels libres tels que R et Python. Avec Ubuntu Virtual Desktop, vous pouvez rapidement démarrer une machine virtuelle avec Ubuntu préinstallé et y accéder depuis n'importe où avec une connexion Internet. Cela signifie que vous pouvez effectuer des tâches d'analyse de données et d'apprentissage automatique depuis votre ordinateur portable, votre tablette ou votre téléphone sans avoir à vous soucier des limitations matérielles.
 
 ## Qu'est-ce que le Bureau à distance ?
 
@@ -26,7 +26,7 @@ Notre version de bureau à distance est construite sur une image R Geospatiale.
 
 ## Personnalisation
 
-_pip_, _conda_, _npm_ et _yarn_ sont disponibles pour installer divers packages.
+_pip_, _conda_, _npm_ et _yarn_ sont disponibles pour installer divers paquets.
 
 # Installation
 

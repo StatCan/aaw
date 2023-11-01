@@ -6,9 +6,9 @@ Nous ne proposons pas de serveur Power BI, mais vous pouvez extraire vos donnée
 
 ![Tableau de bord sur Power BI](../images/powerbi_dashboard.png)
 
-## Installation
+# Installation
 
-### Ce dont vous aurez besoin
+## Ce dont vous aurez besoin
 
 1. Un ordinateur avec Power BI et Python 3.6
 2. Vos `ACCESS_KEY` et `SECRET_KEY` MinIO (voir [Stockage](../5-Stockage/Aperçu.md))
@@ -23,7 +23,7 @@ Assurez-vous que `pandas`, `boto3` et `numpy` sont installés et que vous utilis
 
 Ensuite, assurez-vous que Power BI utilise le bon environnement Python. Vous pouvez modifier cet élément à partir du menu des options. Le chemin d'accès exact est indiqué dans le guide de démarrage rapide.
 
-### Modifiez votre script Python
+## Modifiez votre script Python
 
 Ensuite, modifiez votre script Python pour utiliser vos `ACCESS_KEY` et `SECRET_KEY` MinIO, puis cliquez sur « Obtenir des données » et copiez-le en tant que script Python.
 

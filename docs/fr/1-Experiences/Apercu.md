@@ -4,7 +4,7 @@ _Traitez les données à l'aide de R, Python ou Julia avec Kubeflow, une platefo
 
 Avec Kubeflow, vous pouvez traiter les données de manière évolutive et efficace en utilisant le langage de programmation de votre choix. Une fois Kubeflow configuré, utilisez Jupyter Notebooks pour créer et partager des documents contenant du code en direct, des équations ou des visualisations.
 
-Vous pouvez également exécuter Ubuntu en tant que bureau virtuel avec Kubeflow, vous donnant accès à un environnement de développement puissant qui peut être personnalisé selon vos besoins. Avec R Shiny, un framework d'application Web pour R, vous pouvez facilement créer et publier des tableaux de bord statiques et interactifs pour communiquer les résultats de votre analyse aux parties prenantes.
+Vous pouvez également exécuter Ubuntu en tant que bureau virtuel avec Kubeflow, vous donnant accès à un environnement de développement puissant qui peut être personnalisé selon vos besoins. Avec R Shiny, un cadre d'application Web pour R, vous pouvez facilement créer et publier des tableaux de bord statiques et interactifs pour communiquer les résultats de votre analyse aux parties prenantes.
 
 Kubeflow fournit également une intégration avec des plates-formes externes en tant que service, telles que Google Cloud Platform (GCP) et Amazon Web Services (AWS), vous permettant de déplacer facilement des données et des charges de travail entre différents services cloud. De plus, grâce aux fonctionnalités de collaboration de Kubeflow, vous pouvez travailler sur vos projets avec votre équipe en temps réel, en partageant votre analyse, votre code et vos résultats de manière transparente.
 
@@ -18,7 +18,7 @@ L'expérimentation en science des données fait référence au processus de conc
 
 4. Analyser les données : Une fois les données propres, vous pouvez commencer à les analyser pour tester votre hypothèse. Cela peut impliquer l'exécution de tests statistiques ou d'algorithmes d'apprentissage automatique, la visualisation des données pour identifier des modèles ou des tendances, ou l'utilisation d'autres techniques analytiques pour obtenir des informations.
 
-5. Tirer des conclusions : sur la base des résultats de votre analyse, vous pouvez tirer des conclusions quant à savoir si votre hypothèse est étayée ou non. Vous pourrez peut-être également identifier des domaines nécessitant des recherches ou des expérimentations plus approfondies.
+5. Tirer des conclusions : sur la base des résultats de votre analyse, vous pouvez tirer des conclusions quant à savoir si votre hypothèse est supportée ou non. Vous pourrez peut-être également identifier des domaines nécessitant des recherches ou des expérimentations plus approfondies.
 
 L'analyse des données est un élément clé de l'expérimentation en science des données et implique l'utilisation de diverses techniques et outils pour donner un sens à de grandes quantités de données. Cela peut impliquer une analyse exploratoire des données, dans laquelle vous utilisez des visualisations et des statistiques récapitulatives pour acquérir une première compréhension des données, ou des techniques plus avancées telles que l'apprentissage automatique ou la modélisation statistique. L'analyse des données peut être utilisée pour répondre à un large éventail de questions, depuis de simples questions descriptives sur les données jusqu'à des questions prédictives ou prescriptives plus complexes.
 

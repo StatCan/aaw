@@ -2,7 +2,7 @@
 
 ## Jupyter: Expérience conviviale de R et Python
 
-Jupyter vous propose des **bloc-notes** pour écrire votre code et réaliser des visualisations. Vous pouvez rapidement itérer, visualiser et partager vos analyses. Parce qu'il fonctionne sur un serveur (que vous avez configuré dans la section Kubeflow), vous pouvez effectuer de très grandes analyses sur du matériel centralisé, en ajoutant autant de puissance que nécessaire ! Et comme il est sur le cloud, vous pouvez également le partager avec vos collègues.
+Jupyter vous propose des **bloc-notes** pour écrire votre code et réaliser des visualisations. Vous pouvez rapidement itérer, visualiser et partager vos analyses. Parce qu'il fonctionne sur un serveur (que vous avez configuré dans la section Kubeflow), vous pouvez effectuer de très grandes analyses sur du matériel centralisé, en ajoutant autant de puissance que nécessaire! Et comme il est sur le nuage, vous pouvez également le partager avec vos collègues.
 
 ### Explorez vos données
 

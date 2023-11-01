@@ -36,6 +36,8 @@ votre équipe.
 
 - Accédez à l'onglet Serveurs bloc-notes
 
+- Assurez-vous que l'espace de noms de votre projet est sélectionné dans le menu déroulant des espaces de noms et que l'exemple dans la capture d'écran est "aaw-team".
+
 ![Kubeflow gère les serveurs Jupyter](../images//kubeflow-main-ui.PNG)
 
 - Puis clique **+ Nouveau serveur**
@@ -46,18 +48,11 @@ votre équipe.
   :** le nom de votre serveur doit être en lettres minuscules avec des tirets.
   **Pas d'espaces, et non souligne.**
 
-- Vous devrez spécifier un espace de noms. Par défaut, vous disposerez d'un espace de noms par défaut pour votre compte, mais pour les projets, vous devrez peut-être sélectionner l'espace de noms créé spécifiquement pour ce projet. Sinon, le serveur de notebooks que vous créez risque de ne pas disposer des droits d'accès aux ressources requises pour le projet.
-
 ## Image
 
-Vous devrez choisir une image. Il existe JupyterLab, RStudio, Ubuntu distant
-images de bureau et SAS disponibles. L'image SAS est disponible uniquement pour StatCan
-employés (en raison des limitations de licence), les autres sont disponibles pour tout le monde.
-Sélectionnez le menu déroulant pour sélectionner des options supplémentaires parmi celles-ci (par exemple
-instance, images CPU, PyTorch et TensorFlow pour JupyterLab).
+Vous devrez choisir une image. Il existe JupyterLab, RStudio, Ubureau à distance ubuntu et SAS disponibles. L'image SAS est disponible uniquement pour  les employés de StatCan (en raison des limitations de licence), les autres sont disponibles pour tout le monde. Sélectionnez le menu déroulant pour sélectionner des options supplémentaires parmi celles-ci (par exemple les images CPU, PyTorch et TensorFlow pour JupyterLab).
 
-Vérifiez le nom des images et choisissez-en une qui correspond à ce que vous souhaitez faire. Je ne sais pas
-lequel choisir ? Découvrez vos options [ici](../Selectionner-une-image).
+Vérifiez le nom des images et choisissez-en une qui correspond à ce que vous souhaitez faire. Je ne sais pas lequel choisir ? Découvrez vos options [ici](../Selectionner-une-image).
 
 ![Choisir une image](../images/select-image-screenshot.PNG)
 
@@ -71,7 +66,7 @@ Lors de la création d'un bloc-notes, cliquez sur « Options avancées », coche
 
 ![Choisir une image](../images/customNotebook.PNG)
 
-Une fois le notebook créé, si le statut n'est pas prêt au bout de quelques minutes, cliquez sur son nom pour voir la page de détails. Ensuite l'onglet « Événements » vous permet de savoir exactement ce qui se passe. Si nécessaire, contactez le canal d’aide sur Slack si le problème persiste.
+Une fois le bloc-note créé, si le statut n'est pas prêt au bout de quelques minutes, cliquez sur son nom pour voir la page de détails. Ensuite l'onglet « Événements » vous permet de savoir exactement ce qui se passe. Si nécessaire, contactez le canal d’aide sur Slack si le problème persiste.
 
 ## CPU et mémoire
 
@@ -91,7 +86,7 @@ Cela vous permet de répondre à vos besoins de calcul tout en minimisant les
 coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur complet
 (6 cœurs CPU, 96 Gio de mémoire accessible et 1 GPU).
 
-Dans les options avancées, vous pouvez sélectionner une limite supérieure au nombre de cœurs de processeur et de RAM demandés. Le montant demandé est le montant garanti disponible pour votre serveur notebook et vous paierez toujours au moins ce montant. Si la limite est supérieure à la quantité demandée, si des cœurs de RAM et de processeur supplémentaires sont disponibles sur ce serveur partagé dans le cluster, votre serveur de notebook peut les utiliser selon vos besoins. Un cas d’utilisation est celui des tâches qui ne nécessitent généralement qu’un seul cœur de processeur mais qui peuvent bénéficier du multithreading pour accélérer certaines opérations. En demandant un cœur de processeur mais une limite plus élevée, vous pouvez payer beaucoup moins pour le serveur d'ordinateurs portables tout en lui permettant d'utiliser des cœurs de processeur de rechange inutilisés si nécessaire pour accélérer les calculs.
+Dans les options avancées, vous pouvez sélectionner une limite supérieure au nombre de cœurs de processeur et de RAM demandés. Le montant demandé est le montant garanti disponible pour votre serveur bloc-notes et vous paierez toujours au moins ce montant. Si la limite est supérieure à la quantité demandée, si des cœurs de RAM et de processeur supplémentaires sont disponibles sur ce serveur partagé dans le cluster, votre serveur de bloc-notes peut les utiliser selon vos besoins. Un cas d’utilisation est celui des tâches qui ne nécessitent généralement qu’un seul cœur de processeur mais qui peuvent bénéficier du multithreading pour accélérer certaines opérations. En demandant un cœur de processeur mais une limite plus élevée, vous pouvez payer beaucoup moins pour le serveur boc-notes tout en lui permettant d'utiliser des cœurs de processeur de rechange inutilisés si nécessaire pour accélérer les calculs.
 
 ![Choisir CPU et RAM](../images/cpu-ram.PNG)
 
@@ -100,8 +95,8 @@ Dans les options avancées, vous pouvez sélectionner une limite supérieure au 
 
 Si vous voulez un serveur GPU, sélectionnez « 1 » comme nombre de GPU et « NVIDIA » comme GPU
 fournisseur (le bouton de création sera grisé jusqu'à ce que le fournisseur de GPU soit sélectionné si
-vous avez un GPU spécifié). Les serveurs multi-GPU sont actuellement pris en charge sur l'AAW
-système uniquement sur une base spéciale sur demande, veuillez contacter les mainteneurs d'AAW si
+vous avez un GPU spécifié). Les serveurs multi-GPU sont actuellement pris en charge sur le
+système ETAA uniquement sur une base spéciale sur demande, veuillez contacter les mainteneurs d'ETAA si
 vous souhaitez un serveur multi-GPU.
 
 ![Configuration GPU](../images/kubeflow_gpu_selection.PNG)
@@ -116,8 +111,7 @@ cœurs et 112 Go de mémoire.
 
 ## Volume d'espace de travail
 
-Vous aurez besoin d'un volume d'espace de travail, sur lequel le dossier personnel sera monté. Là
-différentes options de configuration sont disponibles :
+Vous aurez besoin d'un volume d'espace de travail, sur lequel le dossier personnel sera monté. Ces différentes options de configuration sont disponibles :
 
 - Vous pouvez soit réutiliser un volume d'espace de travail existant auparavant, soit en créer un nouveau.
 
@@ -132,27 +126,22 @@ différentes options de configuration sont disponibles :
 
 ## Volumes de données
 
-Vous pouvez également créer des volumes de données pouvant être utilisés pour stocker des données supplémentaires. Plusieurs
-des volumes de données peuvent être créés. Cliquez sur le bouton Ajouter un nouveau volume pour créer un nouveau volume et
-préciser sa configuration. Cliquez sur le bouton Attacher un volume existant pour monter un volume existant.
-volume de données vers le serveur de notebook. Il existe les paramètres de configuration suivants pour
-volumes de données :
+Vous pouvez également créer des volumes de données pouvant être utilisés pour stocker des données supplémentaires. Plusieurs volumes de données peuvent être créés. Cliquez sur le bouton Ajouter un nouveau volume pour créer un nouveau volume et préciser sa configuration. Cliquez sur le bouton Attacher un volume existant pour monter un volume existant vers le serveur de bloc-notes. Il existe les paramètres de configuration suivants pour les volumes de données :
 
 - **Nom** : Nom du volume.
 
 - **Taille en GiB** : De 4 Gio à 512 Gio.
 
-- **Chemin de montage** : Chemin où le volume de données est accessible sur le serveur notebook, par
+- **Chemin de montage** : Chemin où le volume de données est accessible sur le serveur bloc-notes, par
    par défaut `/home/jovyan/vol-1`, `/home/jovyan/vol-2`, etc. (compteur incrémentiel par données
    volume monté).
 
 Lors du montage d'un volume de données existant, l'option de nom devient une liste déroulante du
-volumes de données existants. Uniquement un volume non actuellement monté sur un serveur de notebook existant
+volumes de données existants. Uniquement un volume non actuellement monté sur un serveur de bloc-notes existant
 peut être utilisé. L'option du chemin de montage reste configurable par l'utilisateur avec les mêmes valeurs par défaut que
 créer un nouveau volume.
 
-L'icône de la poubelle à droite peut être utilisée pour supprimer un fichier existant ou créé accidentellement.
-volume de données.
+L'icône de la poubelle à droite peut être utilisée pour supprimer un volume de données existant ou créé accidentellement.
 
 ![Créer un volume de données](../images/kubeflow_volumes.png)
 
@@ -187,5 +176,5 @@ Les éléments suivants peuvent être personnalisés ici :
 
 ## Partagez votre espace de travail
 
-Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient son travail (son serveurs de blocs-note, pipelines, disques, etc.). Votre espace de nom vous appartient, mais peut être partagé si vous souhaitez collaborer avec d'autres. **Pour plus de détails sur collaboration sur la plateforme, voir
+Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient son travail (son serveurs blocs-note, pipelines, disques, etc.). Votre espace de nom vous appartient, mais peut être partagé si vous souhaitez collaborer avec d'autres. **Pour plus de détails sur collaboration sur la plateforme, voir
 [Collaboration](../4-Collaboration/Aperçu.md).**

@@ -16,6 +16,6 @@ Pour créer un espace de noms pour une équipe, accédez au portail ETAA. **Cliq
 
 **Vous recevrez une notification par e-mail lorsque l'espace de noms sera créé.** Une fois l'espace de noms partagé créé, vous pouvez y accéder de la même manière que n'importe quel autre espace de noms dont vous disposez via l'interface utilisateur de Kubeflow, comme illustré ci-dessous. Vous serez alors capable de [partager et gérer](Aperçu.md#partager-le-calcul-espace-de-nom-dans-kubeflow)) à votre espace de nom.
 
-Pour changer d'espace de noms, jetez un œil en haut de votre fenêtre, juste à droite du logo Kubeflow.
+Pour changer d'espace de noms, regardez en haut de votre fenêtre, juste à droite du logo Kubeflow.
 
 ![Select your Namespace](../images/kubeflow_manage_contributors.png)
