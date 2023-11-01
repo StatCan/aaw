@@ -34,7 +34,7 @@ for your team.
 
 - Log into [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca)
 
-- Insure that your project's namespace is selected from the namespaces drop down menu, and example in the screenshot is "aaw-team"
+- Ensure that your project's namespace is selected from the namespaces drop down menu, and example in the screenshot is "aaw-team"
   
 - Navigate to the Notebook Servers tab
 
