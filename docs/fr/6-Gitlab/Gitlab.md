@@ -22,7 +22,7 @@ Comme le montre la capture d'écran ci-dessus, j'ai cloné le repo !
 Si vous essayez de `git push ....` vous rencontrerez une erreur qui vous mènera à la [documentation d'aide de GitLab](https://gitlab.k8s.cloud.statcan.ca/help/user/profile/account/two_factor_authentication.md#error-http-basic-access-denied-the-provided-password-or-token-)
 
 Vous devrez créer un jeton d'accès personnel pour cela. Pour cela, allez dans GitLab, cliquez sur l'icône de votre profil, puis sur `Préférences` et ensuite sur `Tokens d'accès`
-![Personal Access Token](https://user-images.githubusercontent.com/23174198/217061060-122dded8-dc80-46ce-a907-a85913cf5dd7.png)
+![Jeton d'accès personnel](https://user-images.githubusercontent.com/23174198/217061060-122dded8-dc80-46ce-a907-a85913cf5dd7.png)
 Suivez les instructions en entrant le nom, la date d'expiration du token et en accordant les permissions au token (j'ai accordé `write_repository`).
 
 ### Étape 5 : Personnaliser `Git` pour qu'il soit à votre image
