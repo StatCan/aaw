@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
       
 
@@ -1583,7 +1583,7 @@
 <p><img alt="Argo Workflows Squid Logo" src="../../images/argo.png" /></p>
 <p><strong><a href="https://argoproj.github.io/argo-workflows/">Argo Workflows</a></strong>  is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Argo Workflows is implemented as a Kubernetes CRD (Custom Resource Definition). It is particularly well-suited for use in data science workflows and machine learning workflows.</p>
 <p>Full documentation can be found <a href="https://argoproj.github.io/argo-workflows/walk-through/">here</a>. </p>
-<p>Argo Workflows allows you to</p>
+<p>Argo Workflows have these advantages:</p>
 <ul>
 <li>Workflow tasks can be defined as scripts (ex. python) or be containerized (ex. docker).</li>
 <li>Complex workflows can be modeled using Directed Acyclic graphs (DAGs) to capture dependency chains.</li>
@@ -1824,7 +1824,7 @@
 </div>
 </div>
 <h4 id="3-write-your-workflow-in-yaml">3. Write your workflow in YAML<a class="headerlink" href="#3-write-your-workflow-in-yaml" title="Permanent link">&para;</a></h4>
-<p>YAML is Yet Another Markup Language and you'll need to write down the steps of your training pipeline in an Argo Workflows YAML file. This file should include reference to the Dockerfile you created in <a href="#2-write-a-dockerfile-to-run-your-code">Step 1</a>, as well as any input data and output data you'll be working with.</p>
+<p>YAML is Yet Another Markup Language and you'll need to write down the steps of your training pipeline in an Argo Workflows YAML file. This file should include reference to the Dockerfile you created in <a href="#2-write-a-dockerfile-to-run-your-code">Step 2</a>, as well as any input data and output data you'll be working with.</p>
 <p>Here is an example YAML file for a simple machine learning pipeline that trains a logistic regression model on the iris dataset. The only real difference between the <code>Python</code> and <code>R</code> versions is the command <code>command: ["python", "train.py"]</code> vs <code>command: ["Rscript", "train.R"]</code> and the models are stored in different formats, <code>pkl</code> for <code>python</code> and <code>rds</code> for <code>R</code>.</p>
 <p>The YAML file defines a single step called <code>train</code> that runs a script called <code>train.py</code> or <code>train.R</code> in the Docker image <code>machine-learning:v1</code>. The script takes an input dataset file, specified by a parameter called <code>dataset</code>, and outputs a trained model file to an output artifact called <code>model.pkl</code> or <code>model.rds</code> depending on the language used.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label><label for="__tabbed_3_2">R</label></div>

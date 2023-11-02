@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
+![Welcome](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 
 # 🧙🔮 Welcome to Advanced Analytics Workspace (AAW)
 
@@ -18,7 +18,7 @@ AAW is based on the Kubeflow project which is an open source comprehensive solut
 
 - 🌀 AAW Portal Homepage
   - **Internal Only** [https://www.statcan.gc.ca/data-analytics-service/aaw](https://www.statcan.gc.ca/data-analytics-service/aaw)
-  - **Internal/External** [https://analytics-platform.statcan.gc.ca/covid19](https://analytics-platform.statcan.gc.ca/covid19)
+  - **Internal/External** [https://www.statcan.gc.ca/data-analytics-service/aaw](https://www.statcan.gc.ca/data-analytics-service/aaw)
 
 - 🤖 Kubeflow Dashboard
   - [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/) 

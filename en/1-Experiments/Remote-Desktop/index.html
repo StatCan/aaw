@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
       
 
@@ -1473,52 +1473,45 @@
 quick access to supporting tools. The operating system is
 <a href="https://ubuntu.com/about"><strong>Ubuntu</strong></a> <strong>22.04</strong> with the
 <a href="https://www.xfce.org/about"><strong>XFCE</strong></a> desktop environment.</p>
-<p><img alt="Remote Desktop" src="../../images/rd_desktop.png" /></p>
+<p><center>
+<img alt="Remote Desktop" src="../../images/rd_desktop.png" />
+</center></p>
 <h2 id="geomatics">Geomatics<a class="headerlink" href="#geomatics" title="Permanent link">&para;</a></h2>
 <p>Our version of Remote Desktop is built on an R Geospatial image.</p>
 <h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
 <p><em>pip</em>, <em>conda</em>, <em>npm</em> and <em>yarn</em> are available to install various packages.</p>
 <h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
 <h2 id="accessing-the-remote-desktop">Accessing the Remote Desktop<a class="headerlink" href="#accessing-the-remote-desktop" title="Permanent link">&para;</a></h2>
-<p>To launch the Remote Desktop or any of its supporting tools, create a Notebook
-Server in <a href="../Kubeflow/">Kubeflow</a> and select the remote desktop option, which is the Ubuntu image.</p>
+<p>To launch the Remote Desktop or any of its supporting tools, create a Notebook Server in <a href="../Kubeflow/">Kubeflow</a> and select the remote desktop option, which is the Ubuntu image.</p>
 <p><img alt="Remote Desktop" src="../../images/RemoteDesktop.PNG" /></p>
-<p>Once it has been created, click <code>Connect</code> to be redirected to the Remote
-Desktop.</p>
-<p><em>Remote Desktop</em> brings you to the Desktop GUI through a noVNC session. Click on
-the &gt; on the left side of the screen to expand a panel with options such as
-fullscreen and clipboard access.</p>
-<p><img alt="NoVNC Panel" src="../../images/rd_novnc_panel.png" /></p>
+<p>Once it has been created, click <code>Connect</code> to be redirected to the Remote Desktop.</p>
+<p><em>Remote Desktop</em> brings you to the Desktop GUI through a noVNC session. Click on the &gt; on the left side of the screen to expand a panel with options such as fullscreen and clipboard access.</p>
+<p><center>
+<img alt="NoVNC Panel" src="../../images/rd_novnc_panel.png" />
+</center></p>
 <h2 id="accessing-the-clipboard">Accessing the Clipboard<a class="headerlink" href="#accessing-the-clipboard" title="Permanent link">&para;</a></h2>
-<p>This is done via the second button from the top of the panel on the left.
-It brings up a text box which we can modify to change the contents of the clipboard
-or copy stuff from the clipboard of the remote desktop.</p>
-<p>For example, suppose we want to execute the command <code>head -c 20 /dev/urandom | md5sum</code>
-and copy-paste the result into a text file on our computer used to connect to the
-remote desktop.</p>
-<p>We first open the clipboard from the panel on the left and paste in that command into
-the text box:</p>
-<p><img alt="Clipboard Paste Command from Computer" src="../../images/rd-clipboard-send-to-rd.png" /></p>
-<p>To close the clipboard window over the remote desktop, simply click the clipboard
-button again.</p>
-<p>We then right click on a terminal window to paste in that command and press enter to
-execute the command. At that point we select the MD5 result, right click, and click
-copy:</p>
-<p><img alt="Copy to Clipboard from Remote Desktop" src="../../images/rd-clipboard-copy-from-rd.png" /></p>
-<p>If we open the clipboard from the panel on the left again, it will now have the new
-contents:</p>
-<p><img alt="Copy to Clipboard from Remote Desktop" src="../../images/rd-clipboard-copy-from-rd.png" /></p>
-<p>The clipboard window will even update in-place if we leave it open the whole time
-and we simply select new material on the remote desktop and press copy again. We can
-simply copy what we have in that text box and paste it into any other software running
-on the computer used to connect.</p>
+<p>This is done via the second button from the top of the panel on the left. It brings up a text box which we can modify to change the contents of the clipboard or copy stuff from the clipboard of the remote desktop.</p>
+<p>For example, suppose we want to execute the command <code>head -c 20 /dev/urandom | md5sum</code> and copy-paste the result into a text file on our computer used to connect to the remote desktop.</p>
+<p>We first open the clipboard from the panel on the left and paste in that command into the text box:</p>
+<p><center>
+<img alt="Clipboard Paste Command from Computer" src="../../images/rd-clipboard-send-to-rd.png" />
+</center></p>
+<p>To close the clipboard window over the remote desktop, simply click the clipboard button again.</p>
+<p>We then right click on a terminal window to paste in that command and press enter to execute the command. At that point we select the MD5 result, right click, and click copy:</p>
+<p><center>
+<img alt="Copy to Clipboard from Remote Desktop" src="../../images/rd-clipboard-copy-from-rd.png" />
+</center></p>
+<p>If we open the clipboard from the panel on the left again, it will now have the new contents:</p>
+<p><center>
+<img alt="Copy to Clipboard from Remote Desktop" src="../../images/rd-clipboard-copy-from-rd.png" />
+</center></p>
+<p>The clipboard window will even update in-place if we leave it open the whole time and we simply select new material on the remote desktop and press copy again. We can simply copy what we have in that text box and paste it into any other software running on the computer used to connect.</p>
 <h2 id="in-browser-tools">In-browser Tools<a class="headerlink" href="#in-browser-tools" title="Permanent link">&para;</a></h2>
 <h3 id="vs-code">VS Code<a class="headerlink" href="#vs-code" title="Permanent link">&para;</a></h3>
-<p>Visual Studio Code is a lightweight but powerful source code editor. It comes
-with built-in support for JavaScript, TypeScript and Node.js and has a rich
-ecosystem of extensions for several languages (such as C++, C#, Java, Python,
-PHP, Go).</p>
-<p><img alt="VS Code" src="../../images/rd_vs_code.png" /></p>
+<p>Visual Studio Code is a lightweight but powerful source code editor. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for several languages (such as C++, C#, Java, Python, PHP, Go).</p>
+<p><center>
+<img alt="VS Code" src="../../images/rd_vs_code.png" />
+</center></p>
 <h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
 <p>Remote Desktop is based on
 <a href="https://github.com/ml-tooling/ml-workspace">ml-tooling/ml-workspace</a>.</p>

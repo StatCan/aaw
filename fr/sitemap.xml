@@ -2,162 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://statcan.github.io/aaw/fr/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/Aide/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/Collaboration/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/message-de-bienvenue/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/1-Experiences/Apercu/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/1-Experiences/Bureau-virtuel/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/1-Experiences/Jupyter/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/1-Experiences/Kubeflow/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/1-Experiences/MLflow/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/1-Experiences/RStudio/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://statcan.github.io/aaw/fr/1-Experiences/Selectionner-une-Image/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <loc>https://statcan.github.io/aaw/fr/1-Experiences/Selectionner-une-image/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/Dash/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/Datasette/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/Overview/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/PowerBI/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/R-Shiny/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/2-Publication/Sur-mesure/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Kubeflow-Pipelines/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Machine-Learning-Model-Cloud-Storage/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Machine-Learning-Model-Serving/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Machine-Learning-Training-Pipelines/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Machine-Learning/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Overview/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/PaaS-Integration/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/PaaS/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Serving/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <loc>https://statcan.github.io/aaw/fr/3-Pipelines/Argo/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/4-Collaboration/Aper%C3%A7u/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/4-Collaboration/Demander-EspaceDeNom/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/4-Collaboration/Environnement-Analyse-Geospatiale/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/5-Stockage/Aper%C3%A7u/</loc>
-         <lastmod>2023-10-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://statcan.github.io/aaw/fr/5-Stockage/AzureBlobStorage/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/5-Stockage/Disque/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/5-Stockage/StockageBlobAzure/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/fr/6-Gitlab/Gitlab/</loc>
-         <lastmod>2023-10-24</lastmod>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Aper%C3%A7u/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Integration-PaaS/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Modele-ML-stockage/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Modele-Ml-entrainement/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Modele-Service-ML/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Mod%C3%A8les-d%27apprentissage-automatique/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://statcan.github.io/aaw/fr/7-MLOps/Serving/</loc>
+         <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

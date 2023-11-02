@@ -191,7 +191,7 @@ The following can be customized here:
 <!-- prettier-ignore -->
 !!! success "Your server is running"
     If all goes well, your server should be running!!! You will now have the
-    option to connect, and [try out Jupyter!](/daaas/en/1-Experiments/Jupyter)
+    option to connect, and [try out Jupyter!](../Jupyter)
 
 # Once you've got the basics ...
 

@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
       
 
@@ -1379,9 +1379,7 @@
 
 
 <h1 id="selecting-an-image-for-your-notebook-server">Selecting an Image for your Notebook Server<a class="headerlink" href="#selecting-an-image-for-your-notebook-server" title="Permanent link">&para;</a></h1>
-<p>Depending on your project or use case of the Notebook Server, some images may be
-more suitable than others. The following will go through the main features of
-each to help you pick the most appropriate image for you.</p>
+<p>Depending on your project or use case of the Notebook Server, some images may be more suitable than others. The following will go through the main features of each to help you pick the most appropriate image for you.</p>
 <p>When selecting an image, you have 3 main options:</p>
 <ul>
 <li>Jupyter Notebook (CPU, TensorFlow, PyTorch)</li>
@@ -1389,46 +1387,25 @@ each to help you pick the most appropriate image for you.</p>
 <li>Remote Desktop</li>
 </ul>
 <h2 id="jupyter-notebooks">Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permanent link">&para;</a></h2>
-<p><a href="https://jupyter.org/">Jupyter Notebooks</a> are used to create and share
-interactive documents that contain a mix of live code, visualizations, and text.
-These can be written in <code>Python</code>, <code>Julia</code>, or <code>R</code>.</p>
-<p><img alt="Jupyter Notebooks" src="../../images/jupyter_in_action.png" /></p>
+<p><a href="https://jupyter.org/">Jupyter Notebooks</a> are used to create and share interactive documents that contain a mix of live code, visualizations, and text. These can be written in <code>Python</code>, <code>Julia</code>, or <code>R</code>.</p>
+<p><center>
+<img alt="Jupyter Notebooks" src="../../images/jupyter_in_action.png" />
+</center></p>
 <!-- prettier-ignore -->
 <details class="info">
 <summary>Common uses include:</summary>
 <p>data transformation, numerical simulation, statistical
 modelling, machine learning and more.</p>
 </details>
-<p>The jupyter notebooks are great launchpads for analytics including machine
-learning. The <code>jupyterlab-cpu</code> image gives a good core experience for python,
-including common packages such as <code>numpy</code>, <code>pandas</code> and <code>scikit-learn</code>. If
-you're interested specifically in using <strong><em>TensorFlow</em></strong> or <strong><em>PyTorch</em></strong>, we
-also have <code>jupyterlab-tensorflow</code> and <code>jupyterlab-pytorch</code> which come with those
-tools pre-installed.</p>
-<p>For the <code>jupyterlab-pytorch</code> image, the PyTorch packages (torch, torchvision,
-and torchaudio) are installed in the <code>torch</code> conda environment. You must
-activate this environment to use PyTorch.</p>
-<p>For the <code>jupyterlab-cpu</code>, <code>jupyterlab-tensorflow</code>, and <code>jupyterlab-pytorch</code>
-images, in the default shell the <code>conda activate</code> command may not work. This is
-due to the environment not being initialized properly. In this case run <code>bash</code>,
-you should see the AAW logo and a few instructions appear. After this
-<code>conda activate</code> should work properly. If you see the AAW logo on startup it
-means the environment is correctly initialized and <code>conda activate</code> should work
-properly. A fix for this bug is in the works, once this is fixed this paragraph
-will be removed.</p>
-<p>Each image comes pre-loaded with VS Code in the browser if you prefer a full IDE
-experience.</p>
+<p>The jupyter notebooks are great launchpads for analytics including machine learning. The <code>jupyterlab-cpu</code> image gives a good core experience for python, including common packages such as <code>numpy</code>, <code>pandas</code> and <code>scikit-learn</code>. If you're interested specifically in using <strong><em>TensorFlow</em></strong> or <strong><em>PyTorch</em></strong>, we also have <code>jupyterlab-tensorflow</code> and <code>jupyterlab-pytorch</code> which come with those tools pre-installed.</p>
+<p>For the <code>jupyterlab-pytorch</code> image, the PyTorch packages (torch, torchvision, and torchaudio) are installed in the <code>torch</code> conda environment. You must activate this environment to use PyTorch.</p>
+<p>For the <code>jupyterlab-cpu</code>, <code>jupyterlab-tensorflow</code>, and <code>jupyterlab-pytorch</code> images, in the default shell the <code>conda activate</code> command may not work. This is due to the environment not being initialized properly. In this case run <code>bash</code>, you should see the AAW logo and a few instructions appear. After this <code>conda activate</code> should work properly. If you see the AAW logo on startup it means the environment is correctly initialized and <code>conda activate</code> should work properly. A fix for this bug is in the works, once this is fixed this paragraph will be removed.</p>
+<p>Each image comes pre-loaded with VS Code in the browser if you prefer a full IDE experience.</p>
 <h2 id="rstudio">RStudio<a class="headerlink" href="#rstudio" title="Permanent link">&para;</a></h2>
-<p><strong><a href="../RStudio/">RStudio</a></strong> gives you an integrated development environment
-specifically for <code>R</code>. If you're coding in <code>R</code>, this is typically the Notebook
-Server to use. Use the <code>rstudio</code> image to get an RStudio environment.</p>
+<p><strong><a href="../RStudio/">RStudio</a></strong> gives you an integrated development environment specifically for <code>R</code>. If you're coding in <code>R</code>, this is typically the Notebook Server to use. Use the <code>rstudio</code> image to get an RStudio environment.</p>
 <p><img alt="RStudio" src="../../images/rstudio_visual.png" /></p>
 <h2 id="remote-desktop">Remote-Desktop<a class="headerlink" href="#remote-desktop" title="Permanent link">&para;</a></h2>
-<p>For a full Ubuntu desktop experience, use the remote desktop image. It comes
-pre-loaded with Python, R and Geomatics tooling, but are delivered in a typical
-desktop experience that also comes with Firefox, VS Code, and open office tools.
-The operating system is <strong><a href="https://ubuntu.com/about">Ubuntu</a></strong> 22.04 with the
-<strong><a href="https://www.xfce.org/about">XFCE</a></strong> desktop environment.</p>
+<p>For a full Ubuntu desktop experience, use the remote desktop image. It comes pre-loaded with Python, R and Geomatics tooling, but are delivered in a typical desktop experience that also comes with Firefox, VS Code, and open office tools. The operating system is <strong><a href="https://ubuntu.com/about">Ubuntu</a></strong> 22.04 with the <strong><a href="https://www.xfce.org/about">XFCE</a></strong> desktop environment.</p>
 <p><img alt="Screenshot of the Virtual Desktop" src="../../images/rd_desktop.png" /></p>
 
 

@@ -1,8 +1,6 @@
 # Overview
 
-RStudio is an integrated development environment (IDE) for R. It includes a
-console, editor, and tools for plotting, history, debugging and workspace
-management.
+RStudio is an integrated development environment (IDE) for R. It includes a console, editor, and tools for plotting, history, debugging and workspace management.
 
 # Video Tutorial
 
@@ -10,8 +8,7 @@ management.
 
 # Setup
 
-You can use the `rstudio` image to get an RStudio environment! When you create
-your notebook, choose RStudio from the list of available images.
+You can use the `rstudio` image to get an RStudio environment! When you create your notebook, choose RStudio from the list of available images.
 ![RStudio menu](../images/RStudioOption.PNG)
 
 ![RStudio](../images/rstudio_visual.png)

@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
       
 
@@ -1536,35 +1536,23 @@
 <summary>What is the difference between a bucket and a folder?</summary>
 <p>Buckets are like Network Storage. See the <a href="../../5-Storage/Overview/">Storage overview</a> for more discussion of the differences between these two ideas.</p>
 </details>
-<p>Choosing the best way to share code, data, and compute all involve different factors, but you can generally mix and match (share code with your team through
-Github, but store your data privately in a personal bucket). These cases are described more in the below sections.</p>
+<p>Choosing the best way to share code, data, and compute all involve different factors, but you can generally mix and match (share code with your team through Github, but store your data privately in a personal bucket). These cases are described more in the below sections.</p>
 <h2 id="share-code-among-team-members">Share code among team members<a class="headerlink" href="#share-code-among-team-members" title="Permanent link">&para;</a></h2>
-<p>In most cases, it is easiest to share code using GitHub or GitLab to share code.
-The advantage of sharing with GitHub or GitLab is that it works with users
-across namespaces, and keeping code in git is a great way to manage large
-software projects.</p>
+<p>In most cases, it is easiest to share code using GitHub or GitLab to share code. The advantage of sharing with GitHub or GitLab is that it works with users across namespaces, and keeping code in git is a great way to manage large software projects.</p>
 <!-- prettier-ignore -->
 <details class="note">
 <summary>Don't forget to include a License!</summary>
 <p>If your code is public, do not forget to keep with the Innovation Team's guidelines and use a proper License if your work is done for Statistics Canada.</p>
 </details>
-<p>If you need to share code without publishing it on a repository,
-<a href="#share-compute-namespace-in-kubeflow">sharing a namespace</a> might work as well.</p>
+<p>If you need to share code without publishing it on a repository, <a href="#share-compute-namespace-in-kubeflow">sharing a namespace</a> might work as well.</p>
 <h2 id="share-compute-namespace-in-kubeflow">Share compute (namespace) in Kubeflow<a class="headerlink" href="#share-compute-namespace-in-kubeflow" title="Permanent link">&para;</a></h2>
 <!-- prettier-ignore -->
 <div class="admonition danger">
 <p class="admonition-title">Sharing a namespace means you share <strong>everything</strong> in the namespace</p>
 <p>Kubeflow does not support granular sharing of one resource (one notebook, one volume, etc.), but instead sharing of <strong>all</strong> resources. If you want to share a Jupyter Notebook server with someone, you must share your entire namespace and <strong>they will have access to all other resources (Azure Blob Storage, etc.)</strong>.</p>
 </div>
-<p>In Kubeflow every user has a <strong>namespace</strong> that contains their work (their
-notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but
-can be shared if you want to collaborate with others. You can also
-<a href="../Request-a-Namespace/">request a new namespace</a> (either for yourself or to
-share with a team). One option for collaboration is to share namespaces with
-others.</p>
-<p>The advantage of sharing a Kubeflow namespace is that it lets you and your
-colleagues share the compute environment and  volumes associated with the
-namespace. This makes it a very easy and free-form way to share.</p>
+<p>In Kubeflow every user has a <strong>namespace</strong> that contains their work (their notebook servers, pipelines, disks, etc.). Your namespace belongs to you, but can be shared if you want to collaborate with others. You can also <a href="../Request-a-Namespace/">request a new namespace</a> (either for yourself or to share with a team). One option for collaboration is to share namespaces with others.</p>
+<p>The advantage of sharing a Kubeflow namespace is that it lets you and your colleagues share the compute environment and  volumes associated with the namespace. This makes it a very easy and free-form way to share.</p>
 <p>To share your namespace, see <a href="#managing-contributors">managing contributors</a></p>
 <!-- prettier-ignore -->
 <details class="tip">
@@ -1594,13 +1582,9 @@ namespace. This makes it a very easy and free-form way to share.</p>
 <p>To learn more about the technology behind these, check out the
 <a href="../../5-Storage/Overview/">Storage overview</a>.</p>
 <h3 id="sharing-with-the-world">Sharing with the world<a class="headerlink" href="#sharing-with-the-world" title="Permanent link">&para;</a></h3>
-<p>Ask about that one in our <a href="https://statcan-aaw.slack.com">Slack channel</a>. There
-are many ways to do this from the IT side, but it's important for it to go
-through proper processes, so this is not done in a "self-serve" way that the
-others are. That said, it is totally possible.</p>
+<p>Ask about that one in our <a href="https://statcan-aaw.slack.com">Slack channel</a>. There are many ways to do this from the IT side, but it's important for it to go through proper processes, so this is not done in a "self-serve" way that the others are. That said, it is totally possible.</p>
 <h2 id="managing-contributors">Managing contributors<a class="headerlink" href="#managing-contributors" title="Permanent link">&para;</a></h2>
-<p>You can add or remove people from a namespace you already own through the
-<strong>Manage Contributors</strong> menu in Kubeflow.</p>
+<p>You can add or remove people from a namespace you already own through the <strong>Manage Contributors</strong> menu in Kubeflow.</p>
 <p><img alt=" Manage Contributors Menu" src="../../images/kubeflow_contributors.png" /></p>
 <!-- prettier-ignore -->
 <div class="admonition info">
