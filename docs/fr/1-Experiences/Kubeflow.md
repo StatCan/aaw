@@ -93,8 +93,7 @@ Dans les options avancées, vous pouvez sélectionner une limite supérieure au 
 
 ## GPUs
 
-Si vous voulez un serveur GPU, sélectionnez « 1 » comme nombre de GPU et « NVIDIA » comme GPU
-fournisseur (le bouton de création sera grisé jusqu'à ce que le fournisseur de GPU soit sélectionné si
+Si vous voulez un serveur GPU, sélectionnez « 1 » comme nombre de GPU et « NVIDIA » comme fournisseur de GPU (le bouton de création sera grisé jusqu'à ce que le fournisseur de GPU soit sélectionné si
 vous avez un GPU spécifié). Les serveurs multi-GPU sont actuellement pris en charge sur le
 système ETAA uniquement sur une base spéciale sur demande, veuillez contacter les mainteneurs d'ETAA si
 vous souhaitez un serveur multi-GPU.

@@ -1,7 +1,7 @@
 
 ## Flux de travail Argo
 
-![Logo calmar Argo Workflows](../images/argo.png)
+![Logo calmar de flux de travail Argo](../images/argo.png)
 
 **[Flux de travail Argo](https://argoproj.github.io/argo-workflows/)** est un moteur de flux de travail à logiciel libre natif de conteneur pour orchestrer des tâches parallèles sur Kubernetes. Les flux de travails Argo sont implémentés en tant que Kubernetes CRD (Custom Resource Definition). Il est particulièrement adapté aux flux de travail de science des données et aux flux de travail d’apprentissage automatique.
 
@@ -9,7 +9,7 @@ La documentation complète peut être trouvée [ici](https://argoproj.github.io/
 
 Les flux de travails Argo ont les avantages suivants:
 
-- Les tâches de workflow peuvent être définies sous forme de scripts (ex. Python) ou être conteneurisées (ex. Docker).
+- Les tâches des flux de travail peuvent être définies sous forme de scripts (ex. Python) ou être conteneurisées (ex. Docker).
 - Des flux de travail complexes peuvent être modélisés à l'aide de graphes acycliques dirigés (DAG) pour capturer les chaînes de dépendance.
 - Les tâches indépendantes peuvent être exécutées en parallèle avec une granularité jusqu'au niveau de mise en œuvre, réduisant ainsi les charges de tâches chronophages.
 - Agnositique de la plateforme Kubernetes, ce qui signifie que votre travail est très portable.
@@ -160,7 +160,7 @@ Utilisez le `Dockerfile` suivant comme point de départ pour vos projets `R` et 
 
 YAML est encore un autre langage de balisage et vous devrez écrire les étapes de votre pipeline de formation dans un fichier YAML de flux de travails Argo. Ce fichier doit inclure une référence au Dockerfile que vous avez créé à l'[Étape 1](#2-ecrivez-un-dockerfile-pour-executer-votre-code), ainsi que toutes les données d'entrée et de sortie avec lesquelles vous travaillerez.
 
-Voici un exemple de fichier YAML pour un pipeline d'apprentissage automatique simple qui entraîne un modèle de régression logistique sur l'ensemble de données iris. La seule vraie différence entre les versions `Python` et `R` est la commande `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` et le les modèles sont stockés dans différents formats, `pkl` pour `python` et `rds` pour `R`.
+Voici un exemple de fichier YAML pour une pipeline d'apprentissage automatique simple qui entraîne un modèle de régression logistique sur l'ensemble de données iris. La seule vraie différence entre les versions `Python` et `R` est la commande `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` et le les modèles sont stockés dans différents formats, `pkl` pour `python` et `rds` pour `R`.
 
 Le fichier YAML définit une seule étape appelée `train` qui exécute un script appelé `train.py` ou `train.R` dans l'image Docker `machine-learning:v1`. Le script prend un fichier d'ensemble de données d'entrée, spécifié par un paramètre appelé `dataset`, et génère un fichier de modèle entraîné vers un artefact de sortie appelé `model.pkl` ou `model.rds` selon le langage utilisé.
 
@@ -292,7 +292,7 @@ Couler fournit une interface de programmation d'applications simple et unifiée 
     from couler.argo_submitter import ArgoSubmitter
 
 
-    # Définir les étapes (fonctions) utilisées dans le workflow
+    # Définir les étapes (fonctions) utilisées dans le flux de travail
     def random_code():
         import random
         res = "heads" if random.randint(0, 1) == 0 else "tails"
