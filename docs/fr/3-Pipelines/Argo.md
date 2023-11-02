@@ -160,7 +160,7 @@ Utilisez le `Dockerfile` suivant comme point de départ pour vos projets `R` et 
 
 YAML est encore un autre langage de balisage et vous devrez écrire les étapes de votre pipeline de formation dans un fichier YAML de flux de travails Argo. Ce fichier doit inclure une référence au Dockerfile que vous avez créé à l'[Étape 1](#2-ecrivez-un-dockerfile-pour-executer-votre-code), ainsi que toutes les données d'entrée et de sortie avec lesquelles vous travaillerez.
 
-Voici un exemple de fichier YAML pour une pipeline d'apprentissage automatique simple qui entraîne un modèle de régression logistique sur l'ensemble de données iris. La seule vraie différence entre les versions `Python` et `R` est la commande `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` et le les modèles sont stockés dans différents formats, `pkl` pour `python` et `rds` pour `R`.
+Voici un exemple de fichier YAML pour un pipeline d'apprentissage automatique simple qui entraîne un modèle de régression logistique sur l'ensemble de données iris. La seule vraie différence entre les versions `Python` et `R` est la commande `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` et le les modèles sont stockés dans différents formats, `pkl` pour `python` et `rds` pour `R`.
 
 Le fichier YAML définit une seule étape appelée `train` qui exécute un script appelé `train.py` ou `train.R` dans l'image Docker `machine-learning:v1`. Le script prend un fichier d'ensemble de données d'entrée, spécifié par un paramètre appelé `dataset`, et génère un fichier de modèle entraîné vers un artefact de sortie appelé `model.pkl` ou `model.rds` selon le langage utilisé.
 
@@ -235,7 +235,7 @@ $ argo delete workflow-xxx        # suprimer un flux de travail
 
 #### 6. Récupérer le modèle entraîné
 
-Une fois la pipeline terminé, vous pouvez récupérer les données de sortie à l'aide de la commande argo logs ou en affichant les artefacts de sortie à l'aide de la CLI, c'est-à-dire accéder au répertoire que vous avez spécifié dans votre script et localiser le fichier `model.pkl` ou `model.rds`. L'extrait de code suivant, extrait du [script de formation ci-dessus](#1-ecrivez-un-script-pour-entrainer-votre-modele), indique au langage de programmation respectif où enregistrer le modèle entraîné.
+Une fois le pipeline terminé, vous pouvez récupérer les données de sortie à l'aide de la commande argo logs ou en affichant les artefacts de sortie à l'aide de la CLI, c'est-à-dire accéder au répertoire que vous avez spécifié dans votre script et localiser le fichier `model.pkl` ou `model.rds`. L'extrait de code suivant, extrait du [script de formation ci-dessus](#1-ecrivez-un-script-pour-entrainer-votre-modele), indique au langage de programmation respectif où enregistrer le modèle entraîné.
 
 === "Python"
 
