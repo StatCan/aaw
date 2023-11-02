@@ -219,7 +219,7 @@ Pour exécuter le flux de travail ci-dessus, vous devrez d'abord envoyer le Dock
 $ argo submit workflow.yaml # soumettre une spécification de flux de travail à Kubernetes
 ```
 
-Il est également possible de soumettre des flox de travail argo à partir des flox de travail à l'aide de SDK et d'appels API (c'est juste un autre service Web !). Voir cette [section](#exemples-utilisant-des-sdk-bases-sur-flux-de-travail-argo).
+Il est également possible de soumettre des flux de travail argo à partir des flux de travail à l'aide de SDK et d'appels API (c'est juste un autre service Web !). Voir cette [section](#exemples-utilisant-des-sdk-bases-sur-flux-de-travail-argo).
 
 #### 5. Surveillez le pipeline à l'aide de la CLI du flux de travail Argo
 

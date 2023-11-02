@@ -50,7 +50,7 @@ votre équipe.
 
 ## Image
 
-Vous devrez choisir une image. Il existe JupyterLab, RStudio, Ubureau à distance ubuntu et SAS disponibles. L'image SAS est disponible uniquement pour  les employés de StatCan (en raison des limitations de licence), les autres sont disponibles pour tout le monde. Sélectionnez le menu déroulant pour sélectionner des options supplémentaires parmi celles-ci (par exemple les images CPU, PyTorch et TensorFlow pour JupyterLab).
+Vous devrez choisir une image. Il existe JupyterLab, RStudio, bureau à distance Ubuntu et SAS disponibles. L'image SAS est disponible uniquement pour les employés de StatCan (en raison des limitations de licence), les autres sont disponibles pour tout le monde. Sélectionnez le menu déroulant pour sélectionner des options supplémentaires parmi celles-ci (par exemple les images CPU, PyTorch et TensorFlow pour JupyterLab).
 
 Vérifiez le nom des images et choisissez-en une qui correspond à ce que vous souhaitez faire. Je ne sais pas lequel choisir ? Découvrez vos options [ici](../Selectionner-une-image).
 
@@ -176,5 +176,5 @@ Les éléments suivants peuvent être personnalisés ici :
 
 ## Partagez votre espace de travail
 
-Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient son travail (son serveurs blocs-note, pipelines, disques, etc.). Votre espace de nom vous appartient, mais peut être partagé si vous souhaitez collaborer avec d'autres. **Pour plus de détails sur collaboration sur la plateforme, voir
+Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient son travail (ses serveurs blocs-note, pipelines, disques, etc.). Votre espace de nom vous appartient, mais peut être partagé si vous souhaitez collaborer avec d'autres. **Pour plus de détails sur collaboration sur la plateforme, voir
 [Collaboration](../4-Collaboration/Aperçu.md).**
