@@ -2,23 +2,25 @@
 
 ## Jupyter: Expérience conviviale de R et Python
 
-Jupyter vous permet d'obtenir des **bloc-notes** pour écrire votre code et faire
-des visualisations. Vous pouvez rapidement itérer, visualiser et partager vos
-analyses. Puisque Jupyter est exécuté sur un serveur (que vous avez mis en place
-dans la dernière section), il vous permet d'effectuer de très grandes analyses
-sur un matériel centralisé! Ajoutez autant de puissance qu'il vous faut! Et
-puisque c'est dans le nuage, vous pouvez aussi le partager avec vos collègues.
+Jupyter vous propose des **bloc-notes** pour écrire votre code et réaliser des visualisations. Vous pouvez rapidement itérer, visualiser et partager vos analyses. Parce qu'il fonctionne sur un serveur (que vous avez configuré dans la section Kubeflow), vous pouvez effectuer de très grandes analyses sur du matériel centralisé, en ajoutant autant de puissance que nécessaire! Et comme il est sur le nuage, vous pouvez également le partager avec vos collègues.
 
 ### Explorez vos données
 
-Jupyter offre un certain nombre de fonctionnalités (et nous pouvons en ajouter
-d'autres)
+Jupyter offre un certain nombre de fonctionnalités (et nous pouvons en ajouter d'autres)
 
 - Éléments visuels intégrés dans votre bloc-notes
 - Volume de données pour le stockage de vos données
 - Possibilité de partager votre espace de travail avec vos collègues
 
 ![gadgets logiciels interactifs](../images/jupyter_visual.png)
+
+### Explorez vos données avec une API
+
+<center>
+[![Explorez vos données](../images/ExplorerDonnees.PNG)](../../2-Publication/Datasette)
+</center>
+
+Utilisez **[Datasette](../../2-Publication/Datasette)** , une interface de programmation (API) JSON instantanée pour vos bases de données SQLite. Exécutez des requêtes SQL de manière plus interactive !
 
 ### Environnement de développement dans le navigateur
 
@@ -35,7 +37,7 @@ Créez pour explorer, et aussi pour écrire du code
 
 # Installation
 
-## Commencez par les exemples
+## Commencez avec les exemples
 
 Lorsque vous avez démarré votre serveur, il a été chargé de modèles de
 bloc-notes. Parmi les bons blocs-notes pour commencer, il y a
@@ -67,32 +69,26 @@ pip install --user your_package_name
 de nouvelles trousses.**
 
 <!-- prettier-ignore -->
-??? warning "Assurez-vous de redémarrer le noyau Jupyter après l'installation d'un nouveau logiciel"
-    Si vous installez un logiciel dans un terminal, mais que votre noyau Jupyter
-    était déjà en cours d'exécution, il ne sera pas mis à jour.
+??? tip "Assurez-vous de redémarrer le noyau Jupyter après l'installation d'un nouveau logiciel"
+    Si vous installez un logiciel dans un terminal, mais que votre noyau Jupyter était déjà en cours d'exécution, il ne sera pas mis à jour.
 
 <!-- prettier-ignore -->
-??? warning "Y a-t-il quelque chose que vous ne pouvez pas installer?"
+??? tip "Y a-t-il quelque chose que vous ne pouvez pas installer?"
     Si vous avez besoin d'installer quelque chose, communiquez avec nous
-    ou [ouvrir une question GitHub](https://github.com/StatCan/aaw-kubeflow-containers).
-    Nous pouvons l'ajouter au logiciel par défaut.
+    ou [ouvrir une question GitHub](https://github.com/StatCan/aaw-kubeflow-containers). Nous pouvons l'ajouter au logiciel par défaut.
 
 # Une fois que vous avez les bases ...
 
 ## Entrer et sortir des données de Jupyter
 
 Vous pouvez télécharger et charger des données vers ou depuis JupyterHub
-directement dans le menu. Il y a un bouton de chargement en haut, et vous pouvez
-cliquer avec le bouton droit de la souris sur la plupart des fichiers ou
-dossiers pour les télécharger.
+directement dans le menu. Il y a un bouton de chargement en haut, et vous pouvez cliquer avec le bouton droit de la souris sur la plupart des fichiers ou dossiers pour les télécharger.
 
 ### Stockage partagé en compartiment
 
-Il y a aussi un dossier `minio` monté dans votre répertoire personnel qui
-contient les fichiers dans [MinIO](../Stockage.md).
+Il existe également un dossier `buckets` monté dans votre répertoire personnel, qui contient les fichiers dans [Stockage Blob Azure](../../5-Stockage/StockageBlobAzure).
 
-**Consultez la [section sur le stockage](../index.md#storage) rubrique pour plus
-de détails**
+**Reportez-vous à la section [Stockage](../../5-Stockage/Aperçu) pour plus de détails.**
 
 ## L'analyse des données
 
@@ -103,5 +99,9 @@ L'analyse des données est le processus d'examen et d'interprétation de grandes
 ### JupyterLab
 
 _Traiter les données à l'aide de R, Python ou Julia dans JupyterLab_
+
+<center>
+[![R, Python, ou Julia dans JupyterLab](../images/jupyter_in_action.png)](../1-Experiences/Jupyter.md)
+</center>
 
 Le traitement des données à l'aide de R, Python ou Julia est simplifié grâce à l'espace de travail d'analyse avancée. Que vous débutiez dans l'analyse de données ou que vous soyez un data scientist expérimenté, notre plateforme prend en charge une gamme de langages de programmation pour répondre à vos besoins. Vous pouvez installer et exécuter des packages pour R ou Python pour effectuer des tâches de traitement de données telles que le nettoyage, la transformation et la modélisation des données. Si vous préférez Julia, notre plateforme offre également un support pour ce langage de programmation.

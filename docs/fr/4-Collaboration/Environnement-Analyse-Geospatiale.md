@@ -14,7 +14,7 @@
 
 Le portail ArcGIS Enterprise est accessible dans ETAA ou EAC à l'aide de l'API, à partir de n'importe quel service qui exploite le langage de programmation Python. 
 
-Par exemple, dans ETAA et l'utilisation de [Jupyter Notebooks](https://statcan.github.io/aaw/en/1-Experiments/Jupyter/) dans l'espace, ou pour EAC l'utilisation de [Databricks](https://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
+Par exemple, dans ETAA et l'utilisation de [Bloc-notes Jupyter](../../1-Experiences/Jupyter/) dans l'espace, ou pour EAC l'utilisation de [Databricks](https://statcan.github.io/cae-eac/en/DataBricks/), DataFactory, etc.
 
 [Le portail DAS GAE ArcGIS Enterprise est accessible directement ici](https://geoanalytics.cloud.statcan.ca/portal)
 
@@ -38,7 +38,7 @@ Par exemple, dans ETAA et l'utilisation de [Jupyter Notebooks](https://statcan.g
 	conda install -c https://jfrog.aaw.cloud.statcan.ca/artifactory/api/conda/esri-remote arcgis
 	```
 
-2. Importez les librairies nécessaires dont vous aurez besoin dans le bloc-note.
+2. Importez les bibliothèques nécessaires dont vous aurez besoin dans le bloc-note.
 	```python
 	from arcgis.gis import GIS
 	from arcgis.gis import Item
@@ -52,7 +52,7 @@ Par exemple, dans ETAA et l'utilisation de [Jupyter Notebooks](https://statcan.g
 	print("Connexion réussie sous le nom de: " + gis.properties.user.username)
 	```
 
-4. - La sortie vous redirigera vers un portail de connexion.
+4. La sortie vous redirigera vers un portail de connexion.
    - Utilisez l'option de connexion Azure de StatCan et votre identifiant Cloud
    - Après une connexion réussie, vous recevrez un code pour vous connecter en utilisant SAML.
    - Collez ce code dans la sortie.
@@ -62,7 +62,7 @@ Par exemple, dans ETAA et l'utilisation de [Jupyter Notebooks](https://statcan.g
 <hr>
 
 ### Afficher les informations utilisateur
-En utilisant la fonction "me", nous pouvons afficher diverses informations sur l'utilisateur connecté.
+En utilisant la fonction « me », nous pouvons afficher diverses informations sur l'utilisateur connecté.
 ```python
 me = gis.users.me
 username = me.username
@@ -73,7 +73,7 @@ display(me)
 <hr>
 
 ### Rechercher du contenu
-Recherchez le contenu que vous avez hébergé sur le portail SAD EAG. En utilisant la fonction "me", nous pouvons rechercher tout le contenu hébergé sur le compte. Il existe plusieurs façons de rechercher du contenu. Deux méthodes différentes sont décrites ci-dessous.
+Recherchez le contenu que vous avez hébergé sur le portail SAD EAG. En utilisant la fonction « me », nous pouvons rechercher tout le contenu hébergé sur le compte. Il existe plusieurs façons de rechercher du contenu. Deux méthodes différentes sont décrites ci-dessous.
 
 **Recherchez tous vos éléments hébergés dans le portail géographique SAD.**
 ```python
@@ -106,6 +106,7 @@ flood_item
 
 ### Obtenir du contenu
 Nous devons obtenir l'élément du portail géographique SAD afin de l'utiliser dans le bloc-notes Jupyter. Cela se fait en fournissant le numéro d'identification unique de l'article que vous souhaitez utiliser. Trois exemples sont décrits ci-dessous, tous accédant à la même couche.
+
 ```python
 item1 = gis.content.get(my_content[5].id) #de la recherche de votre contenu ci-dessus
 display(item1)
@@ -120,10 +121,11 @@ display(item3)
 <hr>
 
 ### Effectuer une analyse
+
 Une fois les couches importées dans le bloc-note Jupyter, nous sommes en mesure d'effectuer des types d'analyse similaires à ceux que vous vous attendriez à trouver dans un logiciel SIG tel qu'ArcGIS. Il existe de nombreux modules contenant de nombreux sous-modules qui peuvent effectuer plusieurs types d'analyses.
 <br/>
 
-À l'aide du module arcgis.features, importez le sous-module use_proximity ```from arcgis.features import use_proximity```. Ce sous-module nous permet de `.create_buffers` - des zones à égale distance des entités. Ici, nous spécifions la couche que nous voulons utiliser, la distance, les unités et le nom de sortie (vous pouvez également spécifier d'autres caractéristiques telles que le champ, le type d'anneau, le type de fin et autres). En spécifiant un nom de sortie, après avoir exécuté la commande buffer, une nouvelle couche sera automatiquement téléchargée dans le portail SAD EAG contenant la nouvelle fonctionnalité que vous venez de créer.
+À l'aide du module `arcgis.features`, importez le sous-module use_proximity ```from arcgis.features import use_proximity```. Ce sous-module nous permet de `.create_buffers` - des zones à égale distance des entités. Ici, nous spécifions la couche que nous voulons utiliser, la distance, les unités et le nom de sortie (vous pouvez également spécifier d'autres caractéristiques telles que le champ, le type d'anneau, le type de fin et autres). En spécifiant un nom de sortie, après avoir exécuté la commande buffer, une nouvelle couche sera automatiquement téléchargée dans le portail SAD EAG contenant la nouvelle fonctionnalité que vous venez de créer.
 <br/>
 
 ```python
@@ -155,7 +157,7 @@ item1_buffer.update(item_properties={'title': 'Saisir le titre'
 
 ### Visualisez vos données sur une carte interactive
 
-**Exemple : Librairie MatplotLib**
+**Exemple : bibliothèque MatplotLib**
 Dans le code ci-dessous, nous créons un objet ax, qui est un tracé de style carte. Nous traçons ensuite notre colonne de changement de données ("Population Change") sur les axes
 ```python
 import matplotlib.pyplot as plt
@@ -164,11 +166,14 @@ shape.plot(ax=ax, column='Population Change', legend=True)
 plt.show()
 ```
 
-**Exemple : librairie ipyleaflet**
-Dans cet exemple, nous utiliserons la librairie 'ipyleaflet' pour créer une carte interactive. Cette carte sera centrée autour de Toronto, ON. Les données utilisées seront décrites ci-dessous.
-Commencez par coller ```conda install -c conda-forge ipyleaflet``` vous permettant d'installer les librairies ipyleaflet dans l'environnement Python.
+**Exemple : bibliothèque ipyleaflet**
+Dans cet exemple, nous utiliserons la bibliothèque `ipyleaflet` pour créer une carte interactive. Cette carte sera centrée autour de Toronto, ON. Les données utilisées seront décrites ci-dessous.
+Commencez par coller ```conda install -c conda-forge ipyleaflet``` vous permettant d'installer les bibliothèques ipyleaflet dans l'environnement Python.
+
 <br/>
+
 Importer les bibliothèques nécessaires.
+
 ```python
 import ipyleaflet 
 from ipyleaflet import *
@@ -183,8 +188,8 @@ toronto_map
 ```
 <br/>
 
-##En savoir plus sur l'API ArcGIS pour Python
+## En savoir plus sur l'API ArcGIS pour Python
 [La documentation complète de l'API ArcGIS peut être trouvée ici](https://developers.arcgis.com/python/)
 
-##En savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
-[Guide d'aide GAE](https://statcan.github.io/daaas-dads-geo/)
+## En savoir plus sur l'environnement analytique géospatial (GAE) et les services SAD
+[Guide d'aide GAE](https://statcan.github.io/gae-eag/)

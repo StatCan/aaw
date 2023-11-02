@@ -10,7 +10,7 @@ _Bienvenue dans le monde de la science des données et de l'apprentissage automa
 
 <!-- prettier-ignore -->
 !!! info "Qu'est-ce que l'ETAA?"
-     **[Espace de travail d'analyse avancée](https://analytics-platform.statcan.gc.ca/)** est une plateforme open source conçue pour les data scientists, les intendants des données, les analystes et les chercheurs familiarisés avec les outils open source et le codage. Développé par des data scientists pour des data scientists, ETAA fournit un environnement flexible qui permet aux praticiens avancés de faire leur travail en toute simplicité.
+     **[Espace de travail d'analyse avancée](https://www.statcan.gc.ca/services-analyse-donnees/etaa)** est une plateforme open source conçue pour les data scientists, les intendants des données, les analystes et les chercheurs familiarisés avec les outils open source et le codage. Développé par des data scientists pour des data scientists, ETAA fournit un environnement flexible qui permet aux praticiens avancés de faire leur travail en toute simplicité.
 
 L'ETAA est une solution complète pour la science des données et l'analyse des données. Avec l'ETAA, vous pouvez personnaliser les déploiements de serveurs de bloc-notes en fonction de vos besoins spécifiques en science des données. Nous avons un petit nombre d'images Docker personnalisées réalisées par notre équipe.
 
@@ -25,7 +25,7 @@ Quelle que soit l'étape à laquelle vous vous trouvez dans votre parcours en sc
 ## Premiers pas avec l'ETAA
 
 <center>
-![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
+![Icone EAA](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 </center>
 
 ### Le portail ETAA
@@ -35,7 +35,7 @@ La page d'accueil du portail ETAA est disponible uniquement pour les utilisateur
 <!-- prettier-ignore -->
 !!! info annoter "Page d'accueil du portail ETAA"
      - [**Page d'accueil du portail pour les employés de Statistique Canada**](https://www.statcan.gc.ca/services-analyse-donnees/etaa)
-     - [**Page d'accueil du portail pour les utilisateurs externes**](https://analytics-platform.statcan.gc.ca/covid19)
+     - [**Page d'accueil du portail pour les utilisateurs externes**](https://www.statcan.gc.ca/services-analyse-donnees/apercu)
 
 ### Compte Kubeflow
 
@@ -51,7 +51,7 @@ La page d'accueil du portail ETAA est disponible uniquement pour les utilisateur
 !!! note ""
      <center>
      [![Kubeflow est le cœur de l'ETAA !](./images/Kubeflow.PNG)](https://kubeflow.aaw.cloud.statcan.ca/)
-     <h3>**[👉 Cliquez ici pour configurer votre compte Kubeflow ! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**</h3>
+    <h3>**[👉 Cliquez ici pour configurer votre compte Kubeflow! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**</h3>
      </center>
 
 **[Kubeflow](1-Experiments/Kubeflow/)** est une plate-forme open source puissante et flexible qui permet une exploitation dynamique du calcul dans le cloud, les utilisateurs ayant la possibilité de contrôler les ressources de calcul, de mémoire et de stockage utilisées.
@@ -70,7 +70,7 @@ La prise en main de l'espace de travail d'analyse avancée (ETAA) est simple et 
 ### Slack
 
 <center>
-[![Posez des questions relatives à la plate-forme sur Slack !](images/Slackaaw.PNG)](https://statcan-aaw.slack.com/)
+[![Posez des questions relatives à la plate-forme sur Slack !](images/SlackAAW.PNG)](https://statcan-aaw.slack.com/)
 </center>
 
 - **[Cliquez ici pour vous connecter à notre espace de travail d'assistance Slack](https://statcan-aaw.slack.com/)**
@@ -90,7 +90,7 @@ Cliquez sur le lien, puis choisissez "Créer un compte" dans le coin supérieur 
 <!-- prettier-ignore -->
 !!! note ""
      <center>
-     ![Utilisez votre courriel @statcan.gc.ca!](images/Slackaaw2.png)
+     ![Utilisez votre courriel @statcan.gc.ca!](images/SlackAAW2.png)
      <h3>Utilisez votre adresse de courriel @statcan.gc.ca afin que vous soyez automatiquement approuvé.</h3>
      </center>
 
@@ -118,7 +118,7 @@ Voici une liste d'outils que nous proposons :
    - Cahiers Jupyter
 - 🐧 Bureaux virtuels Linux pour des outils supplémentaires (🧫 OpenM++, 🌏 QGIS etc.)
 
-Le partage de code, de disques et d'espaces de travail (ex : deux personnes partageant la même machine virtuelle) est décrit plus en détail dans la section [Collaboration](4-Collaboration/Overview.md). Le partage de données via des buckets est décrit plus en détail dans **[Azure Blob Storage](./5-Storage/AzureBlobStorage.md)**
+Le partage de code, de disques et d'espaces de travail (ex : deux personnes partageant la même machine virtuelle) est décrit plus en détail dans la section [Collaboration](4-Collaboration/Aperçu.md). Le partage de données via des buckets est décrit plus en détail dans **[Azure Blob Storage](./5-Stockage/AzureBlobStorage.md)**
 section.
 
 ### 💡 Aide

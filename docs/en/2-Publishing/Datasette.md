@@ -1,23 +1,17 @@
 # Overview
 
-Datasette is an instant JSON API for your SQLite databases allowing you to
-explore the DB and run SQL queries in a more interactive way.
+Datasette is an instant JSON API for your SQLite databases allowing you to explore the DB and run SQL queries in a more interactive way.
 
 You can find a list of example datasettes
 [here](https://github.com/simonw/datasette/wiki/Datasettes).
 
 <!-- prettier-ignore -->
 !!! faq "The Datasette Ecosystem"
-    There are all sorts of tools for converting data to and from sqlite
-    [here](https://docs.datasette.io/en/stable/ecosystem.html). For example,
-    you can load shapefiles into sqlite, or create [Vega](https://vega.github.io/vega/)
-    plots from a sqlite database. SQLite works well with `R`, `Python`, and many other tools.
+    There are all sorts of tools for converting data to and from sqlite [here](https://docs.datasette.io/en/stable/ecosystem.html). For example, you can load shapefiles into sqlite, or create [Vega](https://vega.github.io/vega/) plots from a sqlite database. SQLite works well with `R`, `Python`, and many other tools.
 
 ## Example Datasette
 
-Below are some screenshots from the
-[global-power-plants](https://global-power-plants.datasettes.com) Datasette, you
-can preview and explore the data in the browser, either with clicks or SQL
+Below are some screenshots from the [global-power-plants](https://global-power-plants.datasettes.com) Datasette, you can preview and explore the data in the browser, either with clicks or SQL
 queries.
 
 ![Preview Data](../images/datasette-preview.png)
@@ -35,19 +29,15 @@ You can even explore maps within the tool!
 
 ## Installing Datasette
 
-In your Jupyter Notebook, open a terminal window and run the command
-`pip3 install datasette`. 
+In your Jupyter Notebook, open a terminal window and run the command `pip3 install datasette`. 
+
 <center>
     ![Install Datasette](../images/InstallDatasette.PNG)
 </center>
 
 ## Starting Datasette
 
-To view your own database in your Jupyter Notebook, create a file called
-start.sh in your project directory and copy the below code into it. Make the
-file executable using `chmod +x start.sh`. Run the file with `./start.sh`.
-Access the web server using the **base URL** with the port number you are using
-in the below file.
+To view your own database in your Jupyter Notebook, create a file called start.sh in your project directory and copy the below code into it. Make the file executable using `chmod +x start.sh`. Run the file with `./start.sh`. Access the web server using the **base URL** with the port number you are using in the below file.
 
 **start.sh**
 
@@ -78,8 +68,7 @@ datasette $DATABASE --cors --config max_returned_rows:100000 --config sql_time_l
     you will not be able to simply access it from `http://localhost:5000/` as
     normally suggested in the output upon running the web-app.
 
-    To access the web server you will need to use the base URL. In your notebook
-    terminal, run:
+    To access the web server you will need to use the base URL. In your notebook terminal, run:
 
     ```python
     echo https://kubeflow.covid.cloud.statcan.ca${JUPYTER_SERVER_URL:19}proxy/5000/

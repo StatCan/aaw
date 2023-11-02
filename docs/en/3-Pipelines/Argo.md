@@ -7,7 +7,7 @@
 
 Full documentation can be found [here](https://argoproj.github.io/argo-workflows/walk-through/). 
 
-Argo Workflows allows you to
+Argo Workflows have these advantages:
 
 - Workflow tasks can be defined as scripts (ex. python) or be containerized (ex. docker).
 - Complex workflows can be modeled using Directed Acyclic graphs (DAGs) to capture dependency chains.
@@ -158,7 +158,7 @@ Use the following `Dockerfile` as a starting point for your `R` and `Python` pro
 
 #### 3. Write your workflow in YAML
 
-YAML is Yet Another Markup Language and you'll need to write down the steps of your training pipeline in an Argo Workflows YAML file. This file should include reference to the Dockerfile you created in [Step 1](#2-write-a-dockerfile-to-run-your-code), as well as any input data and output data you'll be working with.
+YAML is Yet Another Markup Language and you'll need to write down the steps of your training pipeline in an Argo Workflows YAML file. This file should include reference to the Dockerfile you created in [Step 2](#2-write-a-dockerfile-to-run-your-code), as well as any input data and output data you'll be working with.
 
 Here is an example YAML file for a simple machine learning pipeline that trains a logistic regression model on the iris dataset. The only real difference between the `Python` and `R` versions is the command `command: ["python", "train.py"]` vs `command: ["Rscript", "train.R"]` and the models are stored in different formats, `pkl` for `python` and `rds` for `R`.
 

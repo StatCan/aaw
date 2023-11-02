@@ -2,18 +2,16 @@
 
 La plateforme propose plusieurs types de stockage :
 
-- Disque (également appelé Volumes sur l'écran de création de serveur de
-  blocs-note)
-- Compartiment (stockage "Blob" ou S3, fourni via MinIO)
+- Disque (également appelé Volumes sur l'écran de création de serveur de   blocs-note)
+- Compartiment (Stockage Azure Blob)
 - Data Lakes (à venir)
 
-Selon votre cas d'utilisation, le disque ou le compartiment peut être le plus
-approprié :
+Selon votre cas d'utilisation, le disque ou le compartiment peut être le plus approprié :
 
 |                                     Type |                                                                  Utilisateurs simultanés |                                                                    Vitesse | Taille totale                          | Partageable avec d'autres utilisateurs |
 | ---------------------------------------: | ---------------------------------------------------------------------------------------: | -------------------------------------------------------------------------: | -------------------------------------- | -------------------------------------- |
 |                  **[Disque](Disque.md)** |                                              Une machine/serveur de bloc-notes à la fois |                                          Le plus rapide (débit et latence) | <=512GB total par stockage             | Non                                    |
-| **[Compartiment (via MinIO)](MinIO.md)** | Accès simultané depuis plusieurs machines/serveurs d'ordinateurs portables en même temps | Fast-ish ((Téléchargement rapide, téléchargement modeste, latence modeste) | Infini (dans la limite du raisonnable) | [Oui]                                  |
+| **[Compartiment (via Stockage Blob Azure)](StockageBlobAzure.md)** | Accès simultané depuis plusieurs machines/serveurs d'ordinateurs portables en même temps | Fast-ish (téléchargement rapide, téléchargement modeste, latence modeste) | Infini (dans la limite du raisonnable) | [Oui]                                  |
 
 <!-- prettier-ignore -->
 ??? info "Si vous ne savez pas lequel choisir, ne vous en faites pas"

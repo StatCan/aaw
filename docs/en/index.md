@@ -10,7 +10,7 @@ _Welcome to the world of data science and machine learning!_
 
 <!-- prettier-ignore -->
 !!! info "What is the AAW?"
-    **[Advanced Analytics Workspace](https://analytics-platform.statcan.gc.ca/)** is an open source platform designed for data scientists, data stewards, analysts and researchers familiar with open source tools and coding. Developed by data scientists for data scientists, AAW provides a flexible environment that enables advanced practitioners to get their work done with ease.
+    **[Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-services/aaw)** is an open source platform designed for data scientists, data stewards, analysts and researchers familiar with open source tools and coding. Developed by data scientists for data scientists, AAW provides a flexible environment that enables advanced practitioners to get their work done with ease.
 
 The AAW is a comprehensive solution for data science and data analytics.  With the AAW, you can customize notebook server deployments to suit your specific data science needs. We have a small number of custom Docker images made by our team.
 
@@ -35,7 +35,7 @@ The AAW portal homepage is available for internal users only. However, external 
 <!-- prettier-ignore -->
 !!! info annotate "AAW Portal Homepage"
     - [**Portal Homepage for Statistics Canada Employees**](https://www.statcan.gc.ca/data-analytics-service/aaw)
-    - [**Portal Homepage for External Users**](https://analytics-platform.statcan.gc.ca/covid19)
+    - [**Portal Homepage for External Users**](https://www.statcan.gc.ca/data-analytics-services/overview)
 
 ### Kubeflow Account
 

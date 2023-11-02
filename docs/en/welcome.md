@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
+message-de-bienvenue/![image](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
 
 # 🧙🔮 Welcome to Advanced Analytics Workspace (AAW)
 

@@ -63,6 +63,7 @@ extra:
 nav:
   - Démarrage: index.md
   - Analyse:
+      - Aperçu: 1-Experiences/Apercu.md
       - Kubeflow: 1-Experiences/Kubeflow.md
       - Jupyter: 1-Experiences/Jupyter.md
       - RStudio: 1-Experiences/RStudio.md
@@ -74,15 +75,25 @@ nav:
       - Power BI: 2-Publication/PowerBI.md
       - Sur mesure: 2-Publication/Sur-mesure.md
   - Pipelines:
-      - Kubeflow Pipelines: 3-Pipelines/Machine-Learning-Training-Pipelines.md
-      - PaaS Integration: 3-Pipelines/Machine-Learning-Training-Pipelines.md
-      - Model Serving: 3-Pipelines/Machine-Learning-Model-Serving.md
+      - Argo: 3-Pipelines/Argo.md
   - Collaboration:
       - Aperçu: 4-Collaboration/Aperçu.md
       - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
       - EAG: 4-Collaboration/Environnement-Analyse-Geospatiale.md
   - Stockage:
       - Aperçu: 5-Stockage/Aperçu.md
-      - MinIo: 5-Stockage/AzureBlobStorage.md
       - Disque: 5-Stockage/Disque.md
+      - Azure Blob Storage: 5-Stockage/StockageBlobAzure.md
+  - Gitlab:
+      - Gitlab: 6-Gitlab/Gitlab.md
+  - MLOps:
+      - Aperçu: 7-MLOps/Aperçu.md
+      - Modèles d'apprentissage automatique: 7-MLOps/Modèles-d'apprentissage-automatique.md
+      - Modèles ML d'entraînement: 7-MLOps/Modele-Ml-entrainement.md
+      - Modèles ML de stockage: 7-MLOps/Modele-ML-stockage.md
+      - Modèles de service ML: 
+        - Introduction: 7-MLOps/Modele-Service-ML.md
+        - Bloc-note d'exemple:
+          - Classificateur Seldon Iris : 7-MLOps/sklearn_iris_jsondata.ipynb
+      - Intégration avec PaaS externe: 7-MLOps/Integration-PaaS.md
   - Aide/Contactez-nous: Aide.md
