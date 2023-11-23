@@ -30,8 +30,8 @@ This brings up the new Notebook screen.
 
 To create a new Notebook, three things must be set:
 - Ensure the correct Namespace is selected.
-- A unique name in the name field. A unique name is automatically generated in the Name field when you click in it,
-- then click on the Notebook type you want.
+- A unique name.
+- Then click on the Notebook type you want.
   - For OpenM++, select the JupyterLab option.
 - If you are working with Protected B Data, select the **Run in Protected B notebook** checkbox
 
