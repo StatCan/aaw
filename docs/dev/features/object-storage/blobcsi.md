@@ -125,6 +125,133 @@ ACL.
 `subfolder` if a project requires sub-folder mounting then this folder must be created before provisioning the volumes. If sub-folder is not required, leave the name as empty string
 5. AAW will add the SP to the appropriate AD Group. Depending on the container created and environment the SP will be added to either: `AAW-PROD-External-Unclassified-SPs`, `AAW-PROD-Internal-Unclassified-SPs`, `AAW-PROD-External-Protected-B-SPs`, `AAW-PROD-Internal-Unclassified-SPs`
 Note: For debugging there are test containers created in all Prod and Dev storage accounts for future development and testing.
+
+## Step by Step Instructions
+
+To create an FDI bucket/container, edit `azure-blob-csi-system.tf` found in:
+
+- https://gitlab.k8s.cloud.statcan.ca/cloudnative/aaw/daaas-infrastructure/aaw-prod-cc-00/-/blob/main/azure-blob-csi-system.tf
+
+You'll need to add variables to `variables.tf`:
+
+- https://gitlab.k8s.cloud.statcan.ca/cloudnative/aaw/daaas-infrastructure/aaw-prod-cc-00/-/blob/main/variables.tf
+
+### 1. Update `azure-blob-csi-system.tf`
+
+#### a. Define client id variable:
+
+_`<acronym>` means your project's acronym, typically just one of the French or English acronyms is used._
+ 
+Add the following to either `resource "kubernetes_secret" "azure_blob_csi_fdi_protected_b"` or `resource "kubernetes_secret" "azure_blob_csi_fdi_unclassified"`:
+
+`AAW_<ACRONYM>_PROD_SP_AZURE_STORAGE_SPN_CLIENTID = var.aaw_<acronym>_prod_sp_clientid`
+
+#### b. Add secrets clause:
+
+Add the following to the section below `## Start`, ~Line 200):
+
+```
+resource "kubernetes_secret" "aaw-<acronym>-prod-sp-secret" {
+  metadata {
+    name      = "aaw-<acronym>-prod-sp-secret"
+    namespace = kubernetes_namespace.azure_blob_csi_system.id
+  }
+  
+  data = {
+    azurestoragespnclientsecret = var.aaw_<acronym>_prod_sp_secret
+  }
+}
+```
+
+#### c. Add bucket info:
+
+
+Add the following to `resource "kubectl_manifest" "fdi-aaw-configuration-data"`, in one of:
+
+1. `fdi-protected-b-external.json: |` or 
+2. `fdi-unclassified-external.json: |` or
+3. `fdi-protected-b-internal.json: |` or
+4. `fdi-unclassified-internal.json: |`
+
+depending on the classification of the bucket.
+
+```   
+      {
+              "bucketName": "<should-be-provided-for-you>",
+              "pvName":     "<acronym>-eprotb",
+              "subfolder":  "",
+              "readers":    ["<name-of-kuebeflow-profile>"],
+              "writers":    ["<name-of-kuebeflow-profile>"],
+              "spn": "aaw-<acronym>-prod-sp"
+      },
+      {
+              "bucketName": "<should-be-provided-for-you>-transit",
+              "pvName":     "<acronym>-inbox-eprotb",
+              "subfolder":  "from-de",
+              "readers":    ["<name-of-kuebeflow-profile>"],
+              "writers":    ["<name-of-kuebeflow-profile>"],
+              "spn": "aaw-<acronym>-prod-sp"
+      },
+      {
+              "bucketName": "<should-be-provided-for-you>-transit",
+              "pvName":     "<acronym>-outbox-eprotb",
+              "subfolder":  "to-vers",
+              "readers":    ["<name-of-kuebeflow-profile>"],
+              "writers":    ["<name-of-kuebeflow-profile>"],
+              "spn": "aaw-<acronym>-prod-sp"
+      }
+```
+
+##### Info
+
+> `bucketName:` should be given to you by the person requesting the bucket.
+> `pvName:` just use the template, filling in <acronym> with whatever is appropriate.
+> `subfolder:` use the example below unless otherwise specified.
+> `readers:` use the kubeflow profile name for this
+> `writers:` use the kubeflow profile name for this
+> `spn:` this has to be created by YOU. Send a JIRA ticket to the Cloud Team.
+
+##### Example Cloud Ticket
+
+> Hi,
+>
+> Can I get a service principle named aaw-\<acronym\>-prod-sp created please?
+>
+> The owners should be:
+>
+> relevant.person.one@cloud.statcan.ca
+> relevant.person.two@cloud.statcan.ca
+> More info: https://jirab.statcan.ca/browse/?????-????
+>
+> Thanks!
+
+### 2. Add variables to `variables.tf`:
+
+```
+variable "aaw_<acronym>_prod_sp_secret" {
+  description = "Protected-b <acronym> service principal client secret."
+  sensitive   = true
+}
+
+variable "aaw_<acronym>_prod_sp_clientid" {
+  description = "Protected-b <acronym> service principal client id."
+  sensitive   = true
+}
+```
+### 3. How to create necessary secrets
+
+Follow the steps below to create the necessary secrets in the Azure Portal, then add the secrets variable to the internal Gitlab CI/CD runner.
+
+1. Login to Azure Portal
+2. Go to Microsoft Entra ID
+3. Go to App registrations 
+4. Go to All Applications
+5.  Search for the "App" you are looking for, usually "aaw-\<acronym\>-prod-sp".
+6. Take note of the "Application (client) ID" found on the Overview page for that particular App registration.
+7. With the App selected, go to Certificates & secrets, create the secret, give it the name "key".
+8. Send the Application (client) ID to the appropriate JIRA page.
+9. Add the secret to the Gitlab CI/CD settings.
+
 # Architecture Design
 
 For more context on the blob-csi system as a whole (from deployment of infrastructure to azure containers), see the attached diagram below.
