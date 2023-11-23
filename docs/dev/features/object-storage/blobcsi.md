@@ -205,11 +205,17 @@ depending on the classification of the bucket.
 ##### Info
 
 > `bucketName:` should be given to you by the person requesting the bucket.
+> 
 > `pvName:` just use the template, filling in <acronym> with whatever is appropriate.
+> 
 > `subfolder:` use the example below unless otherwise specified.
+> 
 > `readers:` use the kubeflow profile name for this
+> 
 > `writers:` use the kubeflow profile name for this
+> 
 > `spn:` this has to be created by YOU. Send a JIRA ticket to the Cloud Team.
+> 
 
 ##### Example Cloud Ticket
 
