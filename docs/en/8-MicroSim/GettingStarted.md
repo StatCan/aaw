@@ -8,7 +8,7 @@ This document is intended to act as an introduction to The AAWs Kubeflow Noteboo
 
 To access the AAW Kubeflow portal, navigate to the following website.
 
-[https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/) 
+[https://kubeflow.aaw-dev.cloud.statcan.ca/](https://kubeflow.aaw-dev.cloud.statcan.ca/) 
 
 This will redirect you to a Microsoft log-in page.
 
