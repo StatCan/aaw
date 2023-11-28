@@ -798,6 +798,111 @@ ACL.</li>
 <li>AAW will add the SP to the appropriate AD Group. Depending on the container created and environment the SP will be added to either: <code>AAW-PROD-External-Unclassified-SPs</code>, <code>AAW-PROD-Internal-Unclassified-SPs</code>, <code>AAW-PROD-External-Protected-B-SPs</code>, <code>AAW-PROD-Internal-Unclassified-SPs</code>
 Note: For debugging there are test containers created in all Prod and Dev storage accounts for future development and testing.</li>
 </ol>
+<h2 id="step-by-step-instructions">Step by Step Instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">&para;</a></h2>
+<p>To create an FDI bucket/container, edit <code>azure-blob-csi-system.tf</code> found in:</p>
+<ul>
+<li>https://gitlab.k8s.cloud.statcan.ca/cloudnative/aaw/daaas-infrastructure/aaw-prod-cc-00/-/blob/main/azure-blob-csi-system.tf</li>
+</ul>
+<p>You'll need to add variables to <code>variables.tf</code>:</p>
+<ul>
+<li>https://gitlab.k8s.cloud.statcan.ca/cloudnative/aaw/daaas-infrastructure/aaw-prod-cc-00/-/blob/main/variables.tf</li>
+</ul>
+<h3 id="1-update-azure-blob-csi-systemtf">1. Update <code>azure-blob-csi-system.tf</code><a class="headerlink" href="#1-update-azure-blob-csi-systemtf" title="Permanent link">&para;</a></h3>
+<h4 id="a-define-client-id-variable">a. Define client id variable:<a class="headerlink" href="#a-define-client-id-variable" title="Permanent link">&para;</a></h4>
+<p><em><code>&lt;acronym&gt;</code> means your project's acronym, typically just one of the French or English acronyms is used.</em></p>
+<p>Add the following to either <code>resource "kubernetes_secret" "azure_blob_csi_fdi_protected_b"</code> or <code>resource "kubernetes_secret" "azure_blob_csi_fdi_unclassified"</code>:</p>
+<p><code>AAW_&lt;ACRONYM&gt;_PROD_SP_AZURE_STORAGE_SPN_CLIENTID = var.aaw_&lt;acronym&gt;_prod_sp_clientid</code></p>
+<h4 id="b-add-secrets-clause">b. Add secrets clause:<a class="headerlink" href="#b-add-secrets-clause" title="Permanent link">&para;</a></h4>
+<p>Add the following to the section below <code>## Start</code>, ~Line 200):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>resource &quot;kubernetes_secret&quot; &quot;aaw-&lt;acronym&gt;-prod-sp-secret&quot; {
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  metadata {
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    name      = &quot;aaw-&lt;acronym&gt;-prod-sp-secret&quot;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    namespace = kubernetes_namespace.azure_blob_csi_system.id
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  }
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  data = {
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    azurestoragespnclientsecret = var.aaw_&lt;acronym&gt;_prod_sp_secret
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  }
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
+</span></code></pre></div>
+<h4 id="c-add-bucket-info">c. Add bucket info:<a class="headerlink" href="#c-add-bucket-info" title="Permanent link">&para;</a></h4>
+<p>Add the following to <code>resource "kubectl_manifest" "fdi-aaw-configuration-data"</code>, in one of:</p>
+<ol>
+<li><code>fdi-protected-b-external.json: |</code> or </li>
+<li><code>fdi-unclassified-external.json: |</code> or</li>
+<li><code>fdi-protected-b-internal.json: |</code> or</li>
+<li><code>fdi-unclassified-internal.json: |</code></li>
+</ol>
+<p>depending on the classification of the bucket.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>      {
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>              &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              &quot;pvName&quot;:     &quot;&lt;acronym&gt;-eprotb&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>              &quot;subfolder&quot;:  &quot;&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>              &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>              &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>              &quot;spn&quot;: &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>      },
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      {
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>              &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;-transit&quot;,
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>              &quot;pvName&quot;:     &quot;&lt;acronym&gt;-inbox-eprotb&quot;,
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>              &quot;subfolder&quot;:  &quot;from-de&quot;,
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>              &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>              &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>              &quot;spn&quot;: &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      },
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>      {
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>              &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;-transit&quot;,
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>              &quot;pvName&quot;:     &quot;&lt;acronym&gt;-outbox-eprotb&quot;,
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>              &quot;subfolder&quot;:  &quot;to-vers&quot;,
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>              &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>              &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>              &quot;spn&quot;: &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>      }
+</span></code></pre></div>
+<h5 id="info">Info<a class="headerlink" href="#info" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p><code>bucketName:</code> should be given to you by the person requesting the bucket.</p>
+<p><code>pvName:</code> just use the template, filling in <acronym> with whatever is appropriate.</p>
+<p><code>subfolder:</code> use the example below unless otherwise specified.</p>
+<p><code>readers:</code> use the kubeflow profile name for this</p>
+<p><code>writers:</code> use the kubeflow profile name for this</p>
+<p><code>spn:</code> this has to be created by YOU. Send a JIRA ticket to the Cloud Team.
+</p>
+</blockquote>
+<h5 id="example-cloud-ticket">Example Cloud Ticket<a class="headerlink" href="#example-cloud-ticket" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>Hi,</p>
+<p>Can I get a service principle named aaw-\&lt;acronym&gt;-prod-sp created please?</p>
+<p>The owners should be:</p>
+<p>relevant.person.one@cloud.statcan.ca
+relevant.person.two@cloud.statcan.ca
+More info: https://jirab.statcan.ca/browse/?????-????</p>
+<p>Thanks!</p>
+</blockquote>
+<h3 id="2-add-variables-to-variablestf">2. Add variables to <code>variables.tf</code>:<a class="headerlink" href="#2-add-variables-to-variablestf" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>variable &quot;aaw_&lt;acronym&gt;_prod_sp_secret&quot; {
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  description = &quot;Protected-b &lt;acronym&gt; service principal client secret.&quot;
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  sensitive   = true
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>}
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>variable &quot;aaw_&lt;acronym&gt;_prod_sp_clientid&quot; {
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  description = &quot;Protected-b &lt;acronym&gt; service principal client id.&quot;
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  sensitive   = true
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>}
+</span></code></pre></div>
+<h3 id="3-how-to-create-necessary-secrets">3. How to create necessary secrets<a class="headerlink" href="#3-how-to-create-necessary-secrets" title="Permanent link">&para;</a></h3>
+<p>Follow the steps below to create the necessary secrets in the Azure Portal, then add the secrets variable to the internal Gitlab CI/CD runner.</p>
+<ol>
+<li>Login to Azure Portal</li>
+<li>Go to Microsoft Entra ID</li>
+<li>Go to App registrations </li>
+<li>Go to All Applications</li>
+<li>Search for the "App" you are looking for, usually "aaw-\&lt;acronym&gt;-prod-sp".</li>
+<li>Take note of the "Application (client) ID" found on the Overview page for that particular App registration.</li>
+<li>With the App selected, go to Certificates &amp; secrets, create the secret, give it the name "key".</li>
+<li>Send the Application (client) ID to the appropriate JIRA page.</li>
+<li>Add the secret to the Gitlab CI/CD settings.</li>
+</ol>
 <h1 id="architecture-design">Architecture Design<a class="headerlink" href="#architecture-design" title="Permanent link">&para;</a></h1>
 <p>For more context on the blob-csi system as a whole (from deployment of infrastructure to azure containers), see the attached diagram below.
 In addition, refer to the below legend for line types and colours.</p>
