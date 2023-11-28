@@ -4,7 +4,7 @@ Les disques sont les systèmes de fichiers familiers de type disque dur auxquels
 
 # Installation
 
-Lors de la création de votre serveur bloc-notes, vous demandez des disques en ajoutant des volumes de données à votre serveur de notebook (illustré ci-dessous, en allant dans `Options avancées`). Ils sont automatiquement montés dans le répertoire (`Point de montage`) que vous choisissez et constituent un moyen simple et fiable de conserver les données attachées à un serveur Notebook.
+Lors de la création de votre serveur bloc-notes, vous demandez des disques en ajoutant des volumes de données à votre serveur de bloc-note (illustré ci-dessous, en allant dans `Options avancées`). Ils sont automatiquement montés dans le répertoire (`Point de montage`) que vous choisissez et constituent un moyen simple et fiable de conserver les données attachées à un serveur bloc-note.
 
 ![Ajout d'un volume existant à un nouveau serveur de bloc-notes](../images/kubeflow_existing_volume.png)
 

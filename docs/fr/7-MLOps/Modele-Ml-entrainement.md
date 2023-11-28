@@ -52,9 +52,9 @@ Lesflux de travail Argo et la conteneurisation offrent une approche puissante et
 
 ## Comment former des modèles
 
-Il existe de nombreuses façons de former des modèles d’apprentissage automatique et ce n’est pas à nous de dire à qui que ce soit comment procéder. Cela étant dit, nous avons fourni ci-dessous quelques guides sur la façon de former des modèles d'apprentissage automatique à l'aide des outils disponibles sur l'ETAA. Le premier tutoriel concerne la formation d'un modèle simple directement dans un notebook JupyterLab. Le deuxième didacticiel suppose que l'utilisateur est plus avancé et souhaite définir un pipeline MLOps pour la formation de modèles à l'aide des flux de travail Argo.
+Il existe de nombreuses façons de former des modèles d’apprentissage automatique et ce n’est pas à nous de dire à qui que ce soit comment procéder. Cela étant dit, nous avons fourni ci-dessous quelques guides sur la façon de former des modèles d'apprentissage automatique à l'aide des outils disponibles sur l'ETAA. Le premier tutoriel concerne la formation d'un modèle simple directement dans un bloc-note JupyterLab. Le deuxième didacticiel suppose que l'utilisateur est plus avancé et souhaite définir un pipeline MLOps pour la formation de modèles à l'aide des flux de travail Argo.
 
-### Créer un serveur de notebook sur l'ETAA
+### Créer un serveur de bloc-note sur l'ETAA
 
 <!-- prettier-ignore -->
 !!! info "Serveurs bloc-notes"

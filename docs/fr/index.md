@@ -96,7 +96,7 @@ Cliquez sur le lien, puis choisissez "Créer un compte" dans le coin supérieur 
 
 ## 🧭 Mise en route
 
-Pour accéder aux services ETAA, vous devez vous connecter à Kubeflow avec votre compte cloud invité de Statistique Canada. Une fois connecté, sélectionnez Notebook Servers et cliquez sur le bouton "Nouveau serveur" pour commencer.
+Pour accéder aux services ETAA, vous devez vous connecter à Kubeflow avec votre compte cloud invité de Statistique Canada. Une fois connecté, sélectionnez Serveurs de bloc-notes et cliquez sur le bouton "Nouveau serveur" pour commencer.
 
 1. Connectez-vous à [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) avec votre compte cloud invité de Statistique Canada. Vous serez invité à authentifier le compte.
 2. Sélectionnez Serveurs de bloc-notes.
@@ -104,7 +104,7 @@ Pour accéder aux services ETAA, vous devez vous connecter à Kubeflow avec votr
 
 ## 🧰 Outils Offerts
 
-ETAA est une plate-forme flexible pour l'analyse de données et l'apprentissage automatique. Il propose une gamme de langages, notamment Python, R et Julia. ETAA prend également en charge les environnements de développement tels que VS Code, R Studio et Jupyter Notebooks. De plus, des bureaux virtuels Linux sont disponibles pour les utilisateurs qui ont besoin d'outils supplémentaires tels que OpenM++ et QGIS.
+ETAA est une plate-forme flexible pour l'analyse de données et l'apprentissage automatique. Il propose une gamme de langages, notamment Python, R et Julia. ETAA prend également en charge les environnements de développement tels que VS Code, R Studio et bloc-notesJupyter. De plus, des bureaux virtuels Linux sont disponibles pour les utilisateurs qui ont besoin d'outils supplémentaires tels que OpenM++ et QGIS.
 
 Voici une liste d'outils que nous proposons :
 

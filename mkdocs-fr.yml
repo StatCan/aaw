@@ -72,14 +72,14 @@ nav:
       - Jupyter: 1-Experiences/Jupyter.md
       - RStudio: 1-Experiences/RStudio.md
       - Bureau-Virtuel: 1-Experiences/Bureau-virtuel.md
-      - Exemples de cahiers:
-           - Draw Data: 1-Experiences/Cahiers/DrawData_FR.ipynb
-           - DTale: 1-Experiences/Cahiers/DTale_FR.ipynb
-           - Mito Sheet: 1-Experiences/Cahiers/MitoSheet_FR.ipynb
-           - PyGWalker: 1-Experiences/Cahiers/PyGWalker_FR.ipynb
-           - SweetViz: 1-Experiences/Cahiers/SweetViz_FR.ipynb
-           - VisualPython: 1-Experiences/Cahiers/VisualPython_FR.ipynb
-           - YData Profiling: 1-Experiences/Cahiers/YData-Profiling_FR.ipynb
+      - Exemples de bloc-notes:
+           - Draw Data: 1-Experiences/bloc-notes/DrawData_FR.ipynb
+           - DTale: 1-Experiences/bloc-notes/DTale_FR.ipynb
+           - Mito Sheet: 1-Experiences/bloc-notes/MitoSheet_FR.ipynb
+           - PyGWalker: 1-Experiences/bloc-notes/PyGWalker_FR.ipynb
+           - SweetViz: 1-Experiences/bloc-notes/SweetViz_FR.ipynb
+           - VisualPython: 1-Experiences/bloc-notes/VisualPython_FR.ipynb
+           - YData Profiling: 1-Experiences/bloc-notes/YData-Profiling_FR.ipynb
   - Publication:
       - R Shiny: 2-Publication/R-Shiny.md
       - Dash: 2-Publication/Dash.md

@@ -39,7 +39,7 @@ EAA est basé sur le projet Kubeflow qui est une solution complète open source 
 Afin d'accéder aux services de l'EAA, vous devrez:
 
 1. Vous connecter à Kubeflow avec votre compte cloud invité StatCan. Vous serez invité à authentifier le compte.
-2. Sélectionnez Notebook Servers.
+2. Sélectionnez Serveurs de bloc-notes.
 3. Cliquez sur le bouton " ➕ Nouveau serveur ".
 
 ## 🧰 Outils offerts
