@@ -5,7 +5,7 @@
 Les conteneurs de stockage blob Azure sont efficaces dans trois domaines :
 
 - De grandes quantités de données - Les conteneurs peuvent être énormes : bien plus gros que les disques durs. Et ils sont toujours rapides.
-- Accessible par plusieurs consommateurs à la fois - Vous pouvez accéder à la même source de données à partir de plusieurs serveurs Notebook et pipelines en même temps sans avoir besoin de dupliquer les données.
+- Accessible par plusieurs consommateurs à la fois - Vous pouvez accéder à la même source de données à partir de plusieurs serveurs bloc-note et pipelines en même temps sans avoir besoin de dupliquer les données.
 - Partage - Les espaces de noms de projet peuvent partager un conteneur. C'est idéal pour partager des données avec des personnes extérieures à votre espace de travail.
 
 # Installation
@@ -14,21 +14,21 @@ Les conteneurs de stockage blob Azure sont efficaces dans trois domaines :
 !!! warning "Les conteneurs de stockage Azure Blob et le support de buckets remplaceront les supports de stockage Minio Buckets et Minio"
      Les utilisateurs seront responsables de la migration des données des Minio Buckets vers les dossiers Azure Storage. Pour les fichiers plus volumineux, les utilisateurs peuvent contacter AAW pour obtenir de l'aide.
 
-## Conteneur Blob monté sur un serveur de notebook
+## Conteneur Blob monté sur un serveur de bloc-note
 
 <!-- prettier-ignore -->
 
 Les volumes Blob CSI sont conservés sous `/home/jovyan/buckets` lors de la création d'un serveur bloc-notes. Les fichiers sous `/buckets` sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le `/buckets` monté sur le système de fichiers, rendant les données accessibles de partout.
 
-![Dossiers Blob montés en tant que répertoires Jupyter Notebook](../images/container-mount.png)
+![Dossiers Blob montés en tant que répertoires bloc-note Jupyter](../images/container-mount.png)
 
 # Support de dossier AAW pour ordinateur portable non classé
-![Dossiers de notebook non classifiés montés dans les répertoires Jupyter Notebook](../images/unclassified-mount.png)
+![Dossiers de bloc-note non classifiés montés dans les répertoires bloc-note Jupyter](../images/unclassified-mount.png)
 
 # Support de dossier AAW pour ordinateur portable protégé-b
-![Carnets protégés-b montés en tant que répertoires Jupyter Notebook](../images/protectedb-mount.png)
+![Carnets protégés-b montés en tant que répertoires bloc-note Jupyter](../images/protectedb-mount.png)
 
-Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire à partir de Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre notebook Kubeflow).
+Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire à partir de Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre bloc-note Kubeflow).
 
 ## Comment migrer de MinIO vers Azure Blob Storage
 
@@ -90,7 +90,7 @@ L'accès aux données internes utilise la connexion de stockage commune DAS qui 
 
 Ils suivent la même convention que les conteneurs AAW ci-dessus en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs **externes**, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.
 
-AAW dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs Notebook.
+AAW dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.
 
 Veuillez contacter l'équipe FAIR Data Infrastructure si vous avez un cas d'utilisation de ces données.
 
@@ -98,6 +98,6 @@ Veuillez contacter l'équipe FAIR Data Infrastructure si vous avez un cas d'util
 
 <!-- prettier-ignore -->
 !!! info "Les modèles de tarification sont basés sur l'utilisation du processeur et de la mémoire"
-     Le prix est couvert par KubeCost pour les espaces de noms utilisateur (dans Kubeflow en bas de l'onglet Notebooks).
+     Le prix est couvert par KubeCost pour les espaces de noms utilisateur (dans Kubeflow en bas de l'onglet bloc-notes).
 
 En général, le stockage Blob est beaucoup moins cher que [Azure Manage Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/) et offre de meilleures E/S que les SSD gérés.

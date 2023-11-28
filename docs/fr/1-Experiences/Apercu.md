@@ -2,7 +2,7 @@
 
 _Traitez les données à l'aide de R, Python ou Julia avec Kubeflow, une plateforme d'apprentissage automatique qui fournit une infrastructure simple, unifiée et évolutive pour les charges de travail d'apprentissage automatique._
 
-Avec Kubeflow, vous pouvez traiter les données de manière évolutive et efficace en utilisant le langage de programmation de votre choix. Une fois Kubeflow configuré, utilisez Jupyter Notebooks pour créer et partager des documents contenant du code en direct, des équations ou des visualisations.
+Avec Kubeflow, vous pouvez traiter les données de manière évolutive et efficace en utilisant le langage de programmation de votre choix. Une fois Kubeflow configuré, utilisez bloc-notes Jupyter pour créer et partager des documents contenant du code en direct, des équations ou des visualisations.
 
 Vous pouvez également exécuter Ubuntu en tant que bureau virtuel avec Kubeflow, vous donnant accès à un environnement de développement puissant qui peut être personnalisé selon vos besoins. Avec R Shiny, un cadre d'application Web pour R, vous pouvez facilement créer et publier des tableaux de bord statiques et interactifs pour communiquer les résultats de votre analyse aux parties prenantes.
 

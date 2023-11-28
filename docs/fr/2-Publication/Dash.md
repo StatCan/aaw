@@ -8,7 +8,7 @@ avec peu de code.
 
 <!-- prettier-ignore -->
 !!! note "Exécution de votre serveur bloc-note et accès au port"
-     Lorsque vous exécutez un outil de votre Jupyter Notebook qui publie un site Web sur un port,
+     Lorsque vous exécutez un outil de votre bloc-note Jupyter qui publie un site Web sur un port,
      vous ne pourrez pas simplement y accéder depuis `http://localhost:5000/` car
      normalement suggéré dans la sortie lors de l'exécution de l'application Web.
 
@@ -35,7 +35,7 @@ _Publier avec des logiciels fabriqués au Canada._
 
 # Commencer
 
-Ouvrez une fenêtre de terminal dans votre notebook Jupyter et exécutez les commandes suivantes :
+Ouvrez une fenêtre de terminal dans votre bloc-note Jupyter et exécutez les commandes suivantes :
 
 ```python
 # installations requises si elles ne sont pas déjà installées
