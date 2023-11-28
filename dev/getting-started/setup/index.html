@@ -661,6 +661,138 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#setting-up-your-linux-workstation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up your Linux Workstation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up your Linux Workstation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instructions-for-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions for Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-the-kubernetes-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to the Kubernetes Cluster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect to the Kubernetes Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-dev-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      For dev execute:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-prod-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      For prod execute:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-between-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Switch Between Clusters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Switch Between Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dev-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dev Cluster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prod-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prod Cluster
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-kibana-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to Kibana (DEV)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-to-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      New to Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-cloud-main-dev-kubernetes-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to Cloud Main DEV kubernetes cluster
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#explore-statistics-canadas-internal-communications-network" class="md-nav__link">
     <span class="md-ellipsis">
       Explore Statistics Canada’s Internal Communications Network
@@ -676,12 +808,27 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Complete the Mandatory Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#accessing-the-mandatory-training" class="md-nav__link">
     <span class="md-ellipsis">
       Accessing the Mandatory Training
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Links
     </span>
   </a>
   
@@ -707,13 +854,146 @@
 
 <h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
 <h2 id="if-you-just-recieved-your-work-laptop">If you just recieved your work laptop<a class="headerlink" href="#if-you-just-recieved-your-work-laptop" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Set up your laptop using the Onboarding Manual on your laptop<ul>
-<li>Ask your supervisor for all the passwords you will need</li>
-</ul>
+<ol>
+<li>Set up your laptop using the Onboarding Manual on your laptop.</li>
+<li>Ask your supervisor for all the passwords you will need.</li>
+<li>Once you have set up, be sure to change your passwords.</li>
+</ol>
+<p>Below are some more tips and getting-started guides.</p>
+<h2 id="setting-up-your-linux-workstation">Setting up your Linux Workstation<a class="headerlink" href="#setting-up-your-linux-workstation" title="Permanent link">&para;</a></h2>
+<p>Once you have a virtual Linux workstation, you'll want to install a few tools to interact with k8s clusters. Use this script to get started.</p>
+<h3 id="instructions-for-script">Instructions for Script<a class="headerlink" href="#instructions-for-script" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Copy and paste the script below into a text file named <code>install-tools.sh</code>:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/usr/bin/env bash</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">KUBECTL_VERSION</span><span class="o">=</span>latest<span class="w"> </span><span class="c1"># vX.XX.XX should be atleast +/- 1 version of your kubernetes version</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">KUBECTL_URL</span><span class="o">=</span>https://dl.k8s.io/release/<span class="si">${</span><span class="nv">KUBECTL_VERSION</span><span class="si">}</span>/bin/linux/amd64/kubectl
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nv">KUBECTL_CHECKSUM</span><span class="o">=</span>https://dl.k8s.io/release/<span class="k">$(</span>KUBECTL_VERSION<span class="k">)</span>/bin/linux/amd64/kubectl.sha256
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nv">AZCLI_URL</span><span class="o">=</span>https://aka.ms/InstallAzureCLIDeb
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nv">ARGO_CLI_VERSION</span><span class="o">=</span>latest<span class="w"> </span><span class="c1"># v3.4.5</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nv">ARGO_CLI_URL</span><span class="o">=</span>https://github.com/argoproj/argo-workflows/releases/download/<span class="si">${</span><span class="nv">ARGO_CLI_VERSION</span><span class="si">}</span>/argo-linux-amd64.gz
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># kubectl</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span>curl<span class="w"> </span>-LO<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KUBECTL_URL</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>curl<span class="w"> </span>-LO<span class="w"> </span><span class="s2">&quot;https://dl.k8s.io/release/KUBECTL_URL/bin/linux/amd64/kubectl.sha256&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KUBECTL_SHA</span><span class="si">}</span><span class="s2"> kubectl&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha256sum<span class="w"> </span>-c<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>./kubectl<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>mv<span class="w"> </span>./kubectl<span class="w"> </span>/usr/local/bin/kubectl<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># AzureCLI - installation script from Azure</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span>curl<span class="w"> </span>-sLO<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">AZCLI_URL</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>bash<span class="w"> </span>InstallAzureCLIDeb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>InstallAzureCLIDeb<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;azcli: ok&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># argo cli</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span>curl<span class="w"> </span>-sLO<span class="w">  </span><span class="si">${</span><span class="nv">ARGO_CLI_URL</span><span class="si">}</span><span class="se">\</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ARGO_CLI_SHA</span><span class="si">}</span><span class="s2">  argo-linux-amd64.gz&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>sha256sum<span class="w"> </span>-c<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>gunzip<span class="w"> </span>argo-linux-amd64.gz<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>argo-linux-amd64<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>mv<span class="w"> </span>./argo-linux-amd64<span class="w"> </span>/usr/local/bin/argo<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="o">&amp;&amp;</span><span class="w"> </span>argo<span class="w"> </span>version
+</span></code></pre></div>
+<ol>
+<li>Make the script executable</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>install-tools.sh
+</span></code></pre></div>
+<ol>
+<li>Run the script</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./install-tools.sh
+</span></code></pre></div>
+<h2 id="connect-to-the-kubernetes-cluster">Connect to the Kubernetes Cluster<a class="headerlink" href="#connect-to-the-kubernetes-cluster" title="Permanent link">&para;</a></h2>
+<p>There are two Kubernetes clusters you'll want to interact with, <code>dev</code> and <code>prod</code>. To connect to either cluster, follow the instructions below, replacing <code>dev</code> with <code>prod</code> as necessary.</p>
+<ol>
+<li>In a new Terminal window, execute <code>az login</code>.</li>
+</ol>
+<p>You should be prompt to login using your cloud account</p>
+<ol>
+<li>
+<p>Execute <code>az account set --subscription aaw</code></p>
 </li>
-<li>Once you have set up, be sure to change your passwords</li>
+<li>
+<p>Get credentials for either <code>dev</code> or `prod``:</p>
+</li>
+</ol>
+<h4 id="for-dev-execute">For <code>dev</code> execute:<a class="headerlink" href="#for-dev-execute" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>az<span class="w"> </span>aks<span class="w"> </span>get-credentials<span class="w"> </span>--resource-group<span class="w"> </span>aaw-dev-cc-00-rg-aks<span class="w"> </span>--name<span class="w"> </span>aaw-dev-cc-00-aks
+</span></code></pre></div>
+<h4 id="for-prod-execute">For <code>prod</code> execute:<a class="headerlink" href="#for-prod-execute" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>az<span class="w"> </span>aks<span class="w"> </span>get-credentials<span class="w"> </span>--resource-group<span class="w"> </span>aaw-prod-cc-00-rg-aks<span class="w"> </span>--name<span class="w"> </span>aaw-prod-cc-00-aks
+</span></code></pre></div>
+<p>That should generate a file under <code>~/.kube/config</code>.</p>
+<ol>
+<li>Then execute <code>kubectl get po -n org-ces-system</code>. If you are getting a forbidden error, try executing the following command:  <code>export KUBECONFIG="~/.kube/config"</code>. You should now see a list of all containers under <code>org-ces-system</code> namespace.</li>
+<li>Welcome to the cluster. :-)</li>
+</ol>
+<h2 id="switch-between-clusters">Switch Between Clusters<a class="headerlink" href="#switch-between-clusters" title="Permanent link">&para;</a></h2>
+<p>Let's say you are connected to <code>prod</code> and you'd like ot connect to <code>dev</code>, or vice-versa, you'll need these commands:</p>
+<h4 id="dev-cluster">Dev Cluster<a class="headerlink" href="#dev-cluster" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>aaw-dev-cc-00-aks
+</span></code></pre></div>
+<h4 id="prod-cluster">Prod Cluster<a class="headerlink" href="#prod-cluster" title="Permanent link">&para;</a></h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>aaw-prod-cc-00-aks
+</span></code></pre></div>
+<h2 id="connect-to-kibana-dev">Connect to Kibana (DEV)<a class="headerlink" href="#connect-to-kibana-dev" title="Permanent link">&para;</a></h2>
+<p>Once you are authenticated (see section above), execute the following:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>kubectl<span class="w"> </span>-n<span class="w"> </span>org-ces-system<span class="w"> </span>get<span class="w"> </span>secrets<span class="w"> </span>vetting-es-elastic-user<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.elastic}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode
+</span></code></pre></div>
+<p>Returned data is the password to authenticate to Kibana.
+Once you have done that, go to https://org-ces-system-vetting-kb.aaw-dev.cloud.statcan.ca/. The username is <code>elastic</code> and the password is the string you got from the above command.</p>
+<h2 id="useful-commands">Useful commands<a class="headerlink" href="#useful-commands" title="Permanent link">&para;</a></h2>
+<p>Get all pods inside our namespace:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>org-ces-system
+</span></code></pre></div></p>
+<p>Get all secrets inside our namespace:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>secrets<span class="w"> </span>-n<span class="w"> </span>org-ces-system
+</span></code></pre></div></p>
+<p>Get yaml content of secret vetting-es-elastic-user:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>secrets<span class="w"> </span>-n<span class="w"> </span>org-ces-system<span class="w"> </span>vetting-es-elastic-user<span class="w"> </span>-o<span class="w"> </span>yaml
+</span></code></pre></div></p>
+<p>Print a file to the console (useful to open error.log files on the pod):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>cat<span class="w"> </span>FILETOOPEN
+</span></code></pre></div></p>
+<p>Copy a file/folder from a container to local hard drive
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>kubectl<span class="w"> </span>cp<span class="w"> </span>CONTAINER_ID:SOURCE_PATH<span class="w"> </span>DESTINATION_PATH<span class="w"> </span>-n<span class="w"> </span>org-ces-system
+</span></code></pre></div></p>
+<p>Map the DEV kubecost API to port 9090 locally:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>-n<span class="w"> </span>kubecost-system<span class="w"> </span>svc/kubecost-cost-analyzer<span class="w"> </span><span class="m">9090</span>:9090
+</span></code></pre></div></p>
+<h3 id="new-to-linux">New to Linux<a class="headerlink" href="#new-to-linux" title="Permanent link">&para;</a></h3>
+<p>If you are new to Linux then this link may be useful:</p>
+<ul>
+<li><a href="https://linuxjourney.com/">Linux Journey</a></li>
 </ul>
+<h2 id="connect-to-cloud-main-dev-kubernetes-cluster">Connect to Cloud Main DEV kubernetes cluster<a class="headerlink" href="#connect-to-cloud-main-dev-kubernetes-cluster" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open a Terminal on your cloud Linux VM and execute the following command (you have to change the path so it matches where the kubeconfig.canadacentral.json" is located): </li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">KUBECONFIG</span><span class="o">=</span><span class="s2">&quot;~/Documents/git/k8s-cancentral-01-dev-shared/kubeconfig.canadacentral.json&quot;</span>
+</span></code></pre></div>
+<ol>
+<li>Run the following command: </li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>kubectl<span class="w"> </span>cluster-info
+</span></code></pre></div>
+<ol>
+<li>
+<p>You will see a message on-screen to open https://microsoft.com/devicelogin and enter a code. Do it.</p>
+</li>
+<li>
+<p>You should be now authenticated. To connect to our pods, first list all pods by running:</p>
+</li>
+</ol>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>vdl
+</span></code></pre></div>
+5. You should see pod name starting by "vetting-" followed by numbers. That is our web application container.
+6. The other pod name starting by "vetting-posgresql-" is the database container.</p>
 <h2 id="explore-statistics-canadas-internal-communications-network">Explore Statistics Canada’s Internal Communications Network<a class="headerlink" href="#explore-statistics-canadas-internal-communications-network" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://icn-rci.statcan.ca">Home</a></li>
@@ -721,10 +1001,8 @@
 <li><a href="https://icn-rci.statcan.ca/07/0706/0706_070-eng.html">StatCan and the Cloud</a></li>
 </ul>
 <h2 id="complete-the-mandatory-training">Complete the Mandatory Training<a class="headerlink" href="#complete-the-mandatory-training" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Complete the training for New Employees and All Employees</li>
-</ul>
-<h2 id="accessing-the-mandatory-training">Accessing the Mandatory Training<a class="headerlink" href="#accessing-the-mandatory-training" title="Permanent link">&para;</a></h2>
+<p>You should complete the training for New Employees and All Employees as soon as possible.</p>
+<h3 id="accessing-the-mandatory-training">Accessing the Mandatory Training<a class="headerlink" href="#accessing-the-mandatory-training" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://icn-rci.statcan.ca/07/07m/07m08/07m08_007-eng.html">All Training Courses</a></li>
 <li><a href="https://idp.csps-efpc.gc.ca/idp/RegistrationUtilities">Registration</a><ul>
@@ -739,6 +1017,12 @@
 <p class="admonition-title">Hint</p>
 <p>The Klick Training will have to be done through Net A, just navigate to <a href="http://adminsystemportal">The Admin System Portal</a> on Internet Explorer in Net A</p>
 </div>
+<h2 id="additional-links">Additional Links<a class="headerlink" href="#additional-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">Kubernetes Cheatsheet</a></li>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/overview/">Kubernetes Overview</a></li>
+<li><a href="https://confluenceb.statcan.ca/display/CSC/Onboarding+to+Kubernetes">Onboarding to Kubernetes</a></li>
+</ul>
 
 
 
