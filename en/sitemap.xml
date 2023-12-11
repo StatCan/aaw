@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://statcan.github.io/aaw/en/1-Experiments/Virtual-Environments.html</loc>
+         <lastmod>2023-12-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DTale_EN.html</loc>
          <lastmod>2023-12-11</lastmod>
          <changefreq>daily</changefreq>
