@@ -68,6 +68,7 @@ nav:
   - Getting Started: index.md
   - Analysis:
       - Overview: 1-Experiments/Overview.md
+      - Virtual Environments: 1-Experiments/Virtual-Environments.md
       - Kubeflow: 1-Experiments/Kubeflow.md
       - Jupyter: 1-Experiments/Jupyter.md
       - RStudio: 1-Experiments/RStudio.md
