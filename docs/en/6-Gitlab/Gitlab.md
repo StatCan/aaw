@@ -1,41 +1,78 @@
-## __IMPORTANT NOTES__
-1) Please do NOT store your token _anywhere_ in your workspace server file system. Contributors to a namespace will have access to them.
-2) If there is a contributor external to Statistics Canada in your namespace, you will lose access to cloud main GitLab access!
+# GitLab Setup Guide
 
--------------------
+Welcome to GitLab! GitLab is a powerful platform that facilitates collaborative development using Git. Before diving into the world of repositories, let's ensure your Git configuration aligns with your GitLab identity. Below are instructions on personalizing `git` and creating a Personal Access Token (PAT) for seamless interaction with GitLab repositories.
 
+## Personalizing Git
 
-Thankfully, using the cloud main GitLab on the AAW is just like how you would regularly use git. 
+When using `git`, it's essential to set up your identity. Open a new terminal session and run the following commands to configure your name and email associated with GitLab:
 
-### Step 1: Locate the Git repo you want to clone and copy the clone with HTTPS option
-If your repository is private, you will need to also do Step 4 (Creating a Personal Access Token) for this to go through. 
-For me this was a test repo 
-![Clone with SSH image](https://user-images.githubusercontent.com/23174198/217060353-ba229ced-b5c1-4eae-8878-9608835cc65f.png)
+### User Name
 
-### Step 2: Paste the copied link into one of your workspace servers
-![Git clone example](https://user-images.githubusercontent.com/23174198/217060697-535df6c1-d9bb-4bc3-a42b-9f085a5386d5.png)
+```bash
+git config --global user.name "Your Name"
+```
 
-### Step 3: Success! 
-As seen in the above screenshot I have cloned the repo!
+### Email
 
-### Step 4: Create a Personal Access Token for pushing (also used if pulling from a private repository)
-If you try to `git push ....` you will encounter an error eventually leading you to the [GitLab help documentation](https://gitlab.k8s.cloud.statcan.ca/help/user/profile/account/two_factor_authentication.md#error-http-basic-access-denied-the-provided-password-or-token-)
+```bash
+git config --global user.email "youremail@yourdomain.com"
+```
 
-You will need to make a Personal Access Token for this. To achieve this go in GitLab, click your profile icon and then hit `Preferences` and then `Access Tokens`
-![Personal Access Tokens](https://user-images.githubusercontent.com/23174198/217061060-122dded8-dc80-46ce-a907-a85913cf5dd7.png)
-Follow the prompts entering the name, the token expiration date and granting the token permissions (I granted `write_repository`)
+Now, whenever you interact with GitLab, `git` will use this information to identify you.
 
-### Step 5: Personalize `Git` to be you
-Run `git config user.email ....` and `git config user.name ...` to match your GitLab identity.
+## Create a Personal Access Token (PAT)
 
-### Step 6: Supply the Generated Token when asked for your password
-The token will by copy-able at the top once you hit `Create personal access token` at the bottom
-![Supply Personal Access Token](https://user-images.githubusercontent.com/23174198/217062846-03a715f1-ded5-4d80-ad4b-c647ae5e30fd.png)
+To interact (push, pull) with any Statistics Canada GitLab repository, you need to create a Personal Access Token. Follow these steps:
 
-Once you have prepared everything it's time
-![Final steps](https://user-images.githubusercontent.com/23174198/217063198-c1bd6c3a-ebc5-444d-98ba-24ef32faa20e.png)
+1. [Go to GitLab](https://gitlab.k8s.cloud.statcan.ca/).
+2. Click your **Profile Icon** in the upper left corner.
+3. Select **Preferences** and then **Access Tokens**.
 
+### Profile Icon
 
-### Step 7: See the results of your hard work in GitLab
-![GitLab menu](https://user-images.githubusercontent.com/23174198/217063990-efaa8e81-a0eb-4b6d-842e-2ca3112bb4f7.png)
+![Profile Icon](../images/gitlab-1.png)
 
+### Access Tokens
+
+![Access Tokens](../images/gitlab-2.png)
+
+### Personal Access Token Form
+
+![Personal Access Token Form](../images/gitlab-3.png)
+
+- Complete the form by providing a name for the token (for easy identification), setting the token expiration date, and granting permissions (e.g., `read_repository` and `write_repository`).
+- The token expires on that date at midnight UTC.
+- If you do not enter an expiry date, the expiry date is automatically set to 365 days later than the current date.
+- By default, this date can be a maximum of 365 days later than the current date.
+
+### The Token
+
+<!-- prettier-ignore -->
+!!! warning "Keep your secrets to yourself!"
+    1. Please do NOT store your personal access token _anywhere_ in your workspace server file system. Contributors to a namespace will have access to them!
+    2. If there is a contributor external to Statistics Canada in your namespace, you will lose access to cloud main GitLab access!
+
+![Token](../images/gitlab-4.png)
+
+The generated token will be copy-able at the top after clicking **Create personal access token**. Copy and securely save this token as it won't be retrievable later.
+
+## Supply the Generated Token as Your GitLab Password
+
+Use the generated token as your GitLab password when prompted. Here's an example of how to incorporate the token into your commands:
+
+![Example Commands](../images/gitlab-5.png)
+
+We can use git-credential-cache to cache our username and password for a time period. Simply enter the following in your CLI (terminal or command prompt):
+
+``` bash
+git config --global credential.helper cache
+```
+
+You can also set the timeout period (in seconds) as such:
+
+``` bash
+git config --global credential.helper 'cache --timeout=3600'
+
+```
+
+For more information on Gitlab Personal Access Tokens, please visit: [the official documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). With these steps, you're now set to collaborate seamlessly on GitLab! Happy coding!
