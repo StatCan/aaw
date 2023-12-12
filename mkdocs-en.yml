@@ -77,6 +77,7 @@ nav:
            - DTale: 1-Experiments/Notebooks/DTale_EN.ipynb
            - Mito Sheet: 1-Experiments/Notebooks/MitoSheet_EN.ipynb
            - PyGWalker: 1-Experiments/Notebooks/PyGWalker_EN.ipynb
+           - ReRun: 1-Experiments/Notebooks/ReRun_EN.ipynb
            - SweetViz: 1-Experiments/Notebooks/SweetViz_EN.ipynb
            - VisualPython: 1-Experiments/Notebooks/VisualPython_EN.ipynb
            - YData Profiling: 1-Experiments/Notebooks/YData-Profiling_EN.ipynb
