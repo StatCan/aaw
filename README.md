@@ -4,11 +4,11 @@
 
 ![AAW](https://github.com/StatCan/aaw/assets/8212170/ed9d44d9-3606-4097-b9a8-2ee715f13ebf)
 
-This is the repository for the documentation for the Advanced Analytics Workspace (AAW), brought to you by Data Analytics Services (DAS) at Statistics Canada. The documentation found in this repository is for users and developers of the AAW working in the Government of Canada and Government of Canada external collaborators.
+Welcome to the documentation repository for the Advanced Analytics Workspace (AAW), brought to you by Data Analytics Services (DAS) at Statistics Canada. This documentation is tailored for users and developers of the AAW within the Government of Canada and external collaborators.
 
-If you have any  questions about the project, reach out to us on our [**Slack Support Channel**](https://statcan-aaw.slack.com/).
+If you have any questions about the project, feel free to connect with us on our [**Slack Support Channel**](https://statcan-aaw.slack.com/).
 
-## Repositories for the AAW
+## AAW Repositories
 
 1. [General](#advanced-analytics-workspace)
 1. [Terraform](#terraform)
@@ -16,15 +16,15 @@ If you have any  questions about the project, reach out to us on our [**Slack Su
 1. [Community Engagement](#community-engagement)
 1. [Developer Notes](#developer-notes)
 
-## What can the AAW do?
+## What AAW Can Do
 
-- Our JupyterLab images come with some example notebooks and data, theyq  can be found in `/aaw-contrib-jupyter-notebooks/`.
-- Our R Studio image also has some example notebooks and data, they can be found in `/aaw-contrib-r-notebooks/`.
-- More examples can be found in the [Example Notebooks](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DrawData_EN.html).
+- Explore our JupyterLab images featuring example notebooks and data, located in `/aaw-contrib-jupyter-notebooks/`.
+- The R Studio image also includes example notebooks and data, available in `/aaw-contrib-r-notebooks/`.
+- Find more examples in the [Example Notebooks](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DrawData_EN.html) section.
 
 ## Presentations
 
-We highly encourage you to watch our YouTube presentation given at Stratosphere:
+We highly recommend watching our YouTube presentation delivered at Stratosphere:
 
 - [YouTube](https://www.youtube.com/watch?v=quYuuEAqNm0)
 - [SlideDeck](https://govcloud.blob.core.windows.net/docs/daaas-cncf.pdf)
@@ -32,7 +32,7 @@ We highly encourage you to watch our YouTube presentation given at Stratosphere:
 
 ## Security
 
-A discussion about some of the security best practices in use by this platform:
+Explore discussions about some of the security best practices employed by this platform:
 
 - [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)
 
