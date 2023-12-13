@@ -16,14 +16,20 @@ The [Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-serv
 
 **[👉 Click here to set up your Kubeflow account! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**
 
+### Videos
+
+- [Kubeflow 101](https://www.youtube.com/playlist?list=PLIivdWyY5sqLS4lN75RPDEyBgTro_YX7x) by Google Cloud Tech, a series dedicated to helping you get started with Kubeflow! Learn more about what Kubeflow is, the different parts of Kubeflow, and how to get started with simple, portable, and scalable machine learning.
+
+### Documentation
+
+- [Official](https://www.kubeflow.org/)
+- [Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
+- [R Data Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
 The AAW is based on [Kubeflow](1-Experiments/Kubeflow/), an open source comprehensive solution for deploying and managing end-to-end ML workflows. [Kubeflow](1-Experiments/Kubeflow/) is a powerful and flexible open source platform that allows for dynamic leverage of cloud compute, with users having the ability to control compute, memory, and storage resources used. Kubeflow simplifies the following tasks:
 
 - Creating customizable environments to work with data with user-controlled resource provisioning (custom CPU, GPU, RAM and storage).
 - Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS for Statistics Canada employees.
     
-
-
-
 ## Getting Started
 
 ### AAW Portal
@@ -63,6 +69,28 @@ List of sources of examples:
 
 1. one
 2. two
+
+## Learning Resources
+
+- https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/
+
+### Data Preparation
+
+- https://machinelearningmastery.com/start-here/#dataprep
+
+
+### Machine Learning 
+
+- https://machinelearningmastery.com/start-here/#imbalanced
+
+### Python
+
+- https://machinelearningmastery.com/start-here/#pythonskills
+- https://www.youtube.com/watch?v=t8pPdKYpowI
+
+### R
+
+- https://www.youtube.com/playlist?list=PLLOxZwkBK52C6_Nkmp0nFCreLfnfJgUL7
 
 ## Need Help?
 
