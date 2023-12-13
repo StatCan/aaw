@@ -1,76 +1,24 @@
 <!-- markdownlint-disable no-bare-urls no-duplicate-header -->
 
-# Data Analytics as a Service
+# Advanced Analytics Workspace (AAW)
 
-Data Analytics as a Service for the Government of Canada and external collaborators.
+This is the repository for the documentation for the Advanced Analytics Workspace (AAW), brought to you by Data Analytics Services (DAS) at Statistics Canada. The documentation found in this repository is for users and developers of the AAW working in the Government of Canada and Government of Canada external collaborators.
 
-## Frequently Asked Questions (FAQ)
+If you have any  questions about the project, reach out to us on our [**Slack Support Channel**](https://statcan-aaw.slack.com/).
 
-If your question does not appear in this document, please reach out to us on our [Slack Support Channel](https://statcan-aaw.slack.com/).
+## Repositories for the AAW
 
-### Who can access the AAW?
+1. [General](#advanced-analytics-workspace)
+1. [Terraform](#terraform)
+1. [Installation](#install-the-aaw-platform-and-infrastructure)
+1. [Community Engagement](#community-engagement)
+1. [Developer Notes](#developer-notes)
 
-- Anyone with a Statistics Canada (`@statcan.gc.ca`) email address can access the AAW.
+## What can the AAW do?
 
-### What data formats are supported in the AAW?
-
-The AAW includes tools that allow data science users to open almost any file. The AAW supports many commonly used file formats, including (but not limited to):
-
-- csv
-- xlsx
-- json
-- xml
-- sas7bdat
-- sqlite
-- many others... just ask :-)
-
-### How much does the AAW cost?
-
-#### CPU Only
-
-| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
-|----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
-|                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| CPU: Occasional Use        | 2                     | 8          | 0     | 8                     | 1.1367   | 4.88781   | 59.1084    |
-| CPU: During Business Hours | 2                     | 8          | 0     | 40                    | 5.6835   | 24.43905  | 295.542    |
-| CPU: 24/7                  | 2                     | 8          | 0     | 168                   | 23.8707  | 102.64401 | 1241.2764  |
-
-#### Add a GPU
-
-| **Use Case**               | **Compute Resources** |            |       | **Time (Hours/Week)** | **Cost** |           |            |
-|----------------------------|-----------------------|------------|-------|-----------------------|----------|-----------|------------|
-|                            | _CPU_                 | _RAM (GB)_ | _GPU_ |                       | _Weekly_ | _Monthly_ | _Annually_ |
-| GPU: Occaisonal Use        | 0                     | 0          | 1     | 8                     | 34.468   | 148.2124  | 1792.336   |
-| GPU: During Business Hours | 0                     | 0          | 1     | 40                    | 172.34   | 741.062   | 8961.68    |
-| GPU: 24/7                  | 0                     | 0          | 1     | 168                   | 723.828  | 3112.4604 | 37639.056  |
-
-### What are the steps for getting Protected B data into MinIO?
-
-- One must consult with FDI (F.A.I.R. Data Infrastructure) before Protected B Data can be loaded into MinIO. The FDI team owns an Azure Data Factory pipeline for moving data, typically from on premise, to an Azure Storage Account and MinIO is our S3 gateway to that storage account.
-
-### Can we use Power BI on the AAW?
-
-- At the moment, no. We are currently looking into solutions for sharing data between the AAW and CAE (which supports Power BI).
-
-### Does using SAS entail different costs than the others? Are there a limited number of licenses or instances that can be run?
-
-- SAS support is currently experimental and will rely on existing Statistics Canada SAS software licenses.
-
-### How do you suspend your server (to save costs)?
-
-- Press the suspend server button (square to the left of the garbage can icon to delete a server). This will suspend the workspace to save on costs.
-- Please keep in mind all data that is not stored on persistent disks (persistent workspace volume or persistent data volumes) is deleted when a workspace is suspended. In particular data on non-persistent disks and data on the filesystem outside the workspace or data volume (for instance the `/tmp` folder) will be permanently lost.
-- When suspended the workspace and data volumes remain locked and cannot be deleted or attached to another server.
-- To resume a suspended server, press the resume button (triangle icon to the left of the garbage can). When resumed the server will have the same workspace and data volumes as before (with all data kept as-is if the volumes were persistent) and has the exact same specification (CPU, RAM, GPU, and other settings). Things stored outside the home directory and persistent data volumes (like conda virtual environments) will be gone and will need to be recreated if necessary.
-
-### How do I add other people to my namespace (for collaboration)?
-
-- As the workspace owner you can add and remove contributors, this will allow them to access your workspaces.
-
-### Are there any pre-loaded data (datasets) in AAW that we can access and use for both R and Python notebooks?
-
-- Our JupyterLab images come with some example notebooks and data, they can be found in `/aaw-contrib-jupyter-notebooks/`.
+- Our JupyterLab images come with some example notebooks and data, theyq  can be found in `/aaw-contrib-jupyter-notebooks/`.
 - Our R Studio image also has some example notebooks and data, they can be found in `/aaw-contrib-r-notebooks/`.
+- More examples can be found in the [Example Notebooks](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DrawData_EN.html).
 
 ## Presentations
 
@@ -86,7 +34,9 @@ A discussion about some of the security best practices in use by this platform:
 
 - [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)
 
-## Advanced Analytics Workspace
+## Repositories
+
+### General Advanced Analytics Workspace
 
 The following is a list of all the `general` related repositories for the Advanced Analytics Workspace project.
 
@@ -115,12 +65,12 @@ The following is a list of all the `general` related repositories for the Advanc
 | [aaw-security-proposal](https://github.com/StatCan/aaw-security-proposal)                                 | Proposal for the implementation of Protected B workloads in AAW                               | Public     |
 | [aaw-toleration-injector](https://github.com/StatCan/aaw-toleration-injector)                             | Kubernetes toleration injector with support for GPUs and Node Pools                           | Public     |
 
-## Terraform
+### Terraform
 
 The following is a list of all the `terraform` related repositories for the
 Advanced Analytics Workspace project.
 
-### Install the AAW Platform and Infrastructure
+#### Install the AAW Platform and Infrastructure
 
 ```sh
 ## Installs AAW Platform and Infrastructure
@@ -150,7 +100,7 @@ Advanced Analytics Workspace project.
 | AAW       | [terraform-azure-statcan-aaw-region-environment](https://github.com/statcan/terraform-azure-statcan-aaw-region-environment)                                   | Terraform module of Advanced Analytics Workspaces (AAW) per-region configuration of Azure    |
 | AAW       | [terraform-statcan-aaw-platform](https://github.com/statcan/terraform-statcan-aaw-platform)                                                                   | Terraform module for the Advanced Analytics Workspaces (AAW) platform                        |
 
-### Install the Cloud Native Platform
+#### Install the Cloud Native Platform
 
 ```sh
 ## Statistics Canada's Cloud Native Platform (CNP)
@@ -183,7 +133,7 @@ Advanced Analytics Workspace project.
 | CNS       | [terraform-statcan-kubernetes-core-platform](https://github.com/statcan/terraform-statcan-kubernetes-core-platform)                                     | Terraform module for Statistics Canada Core Kubernetes Platform                   |
 | CNS       | [terraform-statcan-kubernetes-app-platform](https://github.com/statcan/terraform-statcan-kubernetes-app-platform)                                       | Terraform module for Statistics Canada Kubernetes Application Platform            |
 
-### Misc
+#### Misc
 
 | Repository                                                                                    | Description                                                | Visibility |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------|------------|
@@ -213,7 +163,8 @@ multilingual support and other UX related enhancements.
 | [minio-console](https://github.com/StatCan/minio-console)           | Multilingual support for MinIO Console      | Public     |
 | [rstudio](https://github.com/StatCan/rstudio)                       | Multilingual support for RStudio            | Public     |
 
-### Developer Notes:
-Fix spelling by executing `fix-spelling-en` and `fix-spelling-fr` 
-Adding to the sensitive or insensitive category
-Ignoring will simply ignore the error for this round. It will trigger again next execution. 
+## Developer Notes
+
+- Fix spelling by executing `fix-spelling-en` and `fix-spelling-fr` 
+- Adding to the sensitive or insensitive category
+- Ignoring will simply ignore the error for this round. It will trigger again next execution. 
