@@ -1,143 +1,77 @@
 # Welcome to the Advanced Analytics Workspace
 
-<center>
-![Statistics](images/statistics-on-the-moon.jpg)
-</center>
+![Statistics](images/statistics-on-the-moon-small.jpg)
 
-## The Advanced Analytics Workspace Documentation
+## Introduction
 
-_Welcome to the world of data science and machine learning!_
+Embark on an exciting journey into the realm of data science and machine learning with the Advanced Analytics Workspace (AAW). Developed by Data Analytics Services (DAS) at Statistics Canada, AAW is an open-source platform specifically crafted for data scientists, analysts, and researchers proficient in open-source tools and coding.
 
-<!-- prettier-ignore -->
-!!! info "What is the AAW?"
-    **[Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-services/aaw)** is an open source platform designed for data scientists, data stewards, analysts and researchers familiar with open source tools and coding. Developed by data scientists for data scientists, AAW provides a flexible environment that enables advanced practitioners to get their work done with ease.
+## What is the AAW?
 
-The AAW is a comprehensive solution for data science and data analytics.  With the AAW, you can customize notebook server deployments to suit your specific data science needs. We have a small number of custom Docker images made by our team.
+The [Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-services/aaw) (AAW) stands as a comprehensive and open-source solution designed to cater to the diverse needs of data scientists. It offers a flexible environment that empowers advanced practitioners to seamlessly conduct their work. AAW is a versatile platform, providing solutions for data science and analytics across various domains.
 
-<!-- prettier-ignore -->
-!!! info "What is Kubeflow?"
-    The AAW is based on [Kubeflow](https://www.kubeflow.org/), an open source comprehensive solution for deploying and managing end-to-end ML workflows.
+## What is Kubeflow?
 
-Whether you're just getting started or already knee-deep in data analysis, the Advanced Analytics Workspace has everything you need to take your work to the next level. From powerful tools for data pipelines to cloud storage for your datasets, our platform has it all. Need to collaborate with colleagues or publish your results? No problem. We offer seamless collaboration features that make it easy to work together and share your work with others.
+[![Kubeflow is the Heart of the AAW!](./images/Kubeflow-small.png)](https://kubeflow.aaw.cloud.statcan.ca/)
 
-No matter what stage of your data science journey you're at, the Advanced Analytics Workspace has the resources you need to succeed.
+**[👉 Click here to set up your Kubeflow account! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**
 
-## Getting Started with the AAW
-
-<center>
-![AAW icon](https://user-images.githubusercontent.com/8212170/158243976-0ee25082-f3dc-4724-b8c3-1430c7f2a461.png)
-</center>
-
-### The AAW Portal
-
-The AAW portal homepage is available for internal users only. However, external users with a cloud account granted access by the business sponsor can access the platform through the analytics-platform URL.
-
-<!-- prettier-ignore -->
-!!! info annotate "AAW Portal Homepage"
-    - [**Portal Homepage for Statistics Canada Employees**](https://www.statcan.gc.ca/data-analytics-service/aaw)
-    - [**Portal Homepage for External Users**](https://www.statcan.gc.ca/data-analytics-services/overview)
-
-### Kubeflow Account
-
-<!-- prettier-ignore -->
-!!! important "Attention External Users!"
-    Users external to Statistics Canada will require a cloud account granted access by the business sponsor.
-
-<!-- prettier-ignore -->
-!!! important "Attention Statistics Canada Employees!"
-    Users internal to Statistics Canada can get started right away without any additional sign up procedures, just head to  [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
-
-<!-- prettier-ignore -->
-!!! note ""
-    <center>
-    [![Kubeflow is the Heart of the AAW!](./images/Kubeflow.PNG)](https://kubeflow.aaw.cloud.statcan.ca/)
-    <h3>**[👉 Click here to setup your Kubeflow account! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**</h3>
-    </center>
-
-**[Kubeflow](1-Experiments/Kubeflow/)** is a powerful and flexible open source platform that allows for dynamic leverage of cloud compute, with users having the ability to control compute, memory, and storage resources used. 
-
-Kubeflow simplifies the following tasks:
+The AAW is based on [Kubeflow](1-Experiments/Kubeflow/), an open source comprehensive solution for deploying and managing end-to-end ML workflows. [Kubeflow](1-Experiments/Kubeflow/) is a powerful and flexible open source platform that allows for dynamic leverage of cloud compute, with users having the ability to control compute, memory, and storage resources used. Kubeflow simplifies the following tasks:
 
 - Creating customizable environments to work with data with user-controlled resource provisioning (custom CPU, GPU, RAM and storage).
 - Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS for Statistics Canada employees.
+    
 
-<!-- prettier-ignore -->
-!!! info "Kubeflow Dashboard"
-    - [**Kubeflow Dashboard**](https://kubeflow.aaw.cloud.statcan.ca/) Use this link once you have your cloud account!
 
-Getting started with the Advanced Analytics Workspace (AAW) is easy and quick. First, you'll want to login to Kubeflow to create your first notebook server running JupyterLab, RStudio or Ubuntu Desktop. We encourage you to join our Slack channel to connect with other data scientists and analysts, ask questions, and share your experiences with the AAW platform.
 
-### Slack
+## Getting Started
 
-<center>
-[![Ask Platform Related Questions on Slack!](images/SlackAAW.PNG)](https://statcan-aaw.slack.com/)
-</center>
+### AAW Portal
 
-- **[Click here sign in to our Slack Support Workspace](https://statcan-aaw.slack.com/)**
+Whether you're an internal user from Statistics Canada or an external collaborator, the AAW Portal is your gateway to a world of possibilities.
 
-- **Use the _General_ Channel!**
+- **Internal Users**: Access the [Portal Homepage for Statistics Canada Employees](https://www.statcan.gc.ca/data-analytics-service/aaw).
+- **External Users**: Explore the [Portal Homepage for External Users](https://www.statcan.gc.ca/data-analytics-services/overview).
 
-At StatCan, we understand that embarking on a new project can be overwhelming, and you're likely to have many platform-related questions along the way. That's why we've created a dedicated  **[Slack channel](https://statcan-aaw.slack.com/)** to provide you with the support you need. Our team of experts is standing by to answer your questions, address any concerns, and guide you through every step of the process.
+### Kubeflow Account
 
-To join our  **[Slack channel](https://statcan-aaw.slack.com/)**, simply click on the link provided and follow the instructions. You'll be prompted to create an account in the upper right-hand corner of the page. If you have an `@statcan.gc.ca` email address, use it when signing up as this will ensure that you are automatically approved and can start engaging with our community right away.
+#### External Users
 
-Once you've created your account, you'll have access to a wealth of resources and information, as well as the opportunity to connect with other users who are working on similar projects. Our  **[Slack channel](https://statcan-aaw.slack.com/)** is the perfect place to ask questions, share insights, and collaborate with your peers in real-time. Whether you're just getting started with a new project or you're looking for expert advice on a complex issue, our team is here to help.
+1. External users need a cloud account granted access by the business sponsor.
+2. Visit [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/).
 
-So don't hesitate - join our **[Slack channel](https://statcan-aaw.slack.com/)** today and start getting the answers you need to succeed. We look forward to welcoming you to our community!
+#### Statistics Canada Employees
 
-Click on the link, then choose "Create an account" in the upper right-hand corner.
+1. Internal users at Statistics Canada can directly access [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
 
-<!-- prettier-ignore -->
-!!! note ""
-    <center>
-    ![Use your @statcan.gc.ca email!](images/SlackAAW2.png)
-    <h3>Use your @statcan.gc.ca email address so that you will be automatically approved.</h3>
-    </center>
+## Creating a Kubeflow Notebook Server
 
-## 🧭 Getting Started
-
-To access AAW services, you need to log in to Kubeflow with your StatCan guest cloud account. Once logged in, select Notebook Servers and click the "New Server" button to get started.
-
-1. Login to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) with your StatCan guest cloud account. You will be prompted to authenticate the account.
+1. Log in to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) with your StatCan guest cloud account.
 2. Select Notebook Servers.
 3. Click the "➕ New Server" button.
+4. Follow the intructions here: ...
 
-## 🧰 Tools Offered
+## Importing/Accessing Your Data
 
-AAW is a flexible platform for data analysis and machine learning. It offers a range of languages, including Python, R, and Julia. AAW also supports development environments such as VS Code, R Studio, and Jupyter Notebooks. Additionally, Linux virtual desktops are available for users who require additional tools such as OpenM++ and QGIS.
+Dive into the world of data with our [Example Notebooks](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DrawData_EN.html). Explore different data sets and learn how to interact with them using AAW.
 
-Here's a list of tools we offer:
+## Examples in JupyterLab
 
-- 📜 Languages:
-  - 🐍 Python
-  - 📈 R
-  - 👩‍🔬 Julia
-- 🧮 Development environments:
-  - VS Code
-  - R Studio
-  - Jupyter Notebooks
-- 🐧 Linux virtual desktops for additional tools (🧫 OpenM++, 🌏 QGIS etc.)
+Unlock the potential of AAW in JupyterLab, offering support for Python, R, Julia, and more. 
 
-Sharing code, disks, and workspaces (e.g.: two people sharing the same virtual machine) is described in more detail in the [Collaboration](4-Collaboration/Overview.md) section. Sharing data through buckets is described in more detail in the **[Azure Blob Storage](./5-Storage/AzureBlobStorage.md)**
-section.
+List of sources of examples:
 
-### 💡 Help
+1. one
+2. two
 
-- Disk (also called Volumes on the Notebook Server creation screen)
-- Containers (Blob Storage)
-- Data Lakes (coming soon)
+## Need Help?
 
-- 📗 AAW Portal Documentation
-  - [https://statcan.github.io/aaw/](https://statcan.github.io/aaw/)
-- 📘 Kubeflow Documentation
-  - [https://www.kubeflow.org/docs/](https://www.kubeflow.org/docs/)  
-- 🤝 Slack Support Channel
-  - [https://statcan-aaw.slack.com](https://statcan-aaw.slack.com)
+Join our vibrant community on the [Slack channel](https://statcan-aaw.slack.com/) to connect with fellow users, ask questions, and share experiences.
 
-## 🐱 Demos
+For comprehensive documentation and guidance, refer to the [AAW Portal Documentation](https://statcan.github.io/aaw/) and the [Kubeflow Documentation](https://www.kubeflow.org/docs/). Need real-time assistance? Join our [Slack Support Channel](https://statcan-aaw.slack.com).
 
-If you require a quick onboarding demo session, need help, or have any questions, please reach out to us through our [🤝 Slack Support Channel](https://statcan-aaw.slack.com).
+## Demos and Contributions
 
-## Contributing
+For in-depth demos, personalized assistance, or to contribute to the AAW community, reach out to us on [Slack](https://statcan-aaw.slack.com). Contribute to the platform's development and report issues or feature requests on [GitHub](https://github.com/StatCan/aaw).
 
-If you have any bugs to report or features to request please do so via https://github.com/StatCan/aaw.
+Embark on your data science journey with AAW — where possibilities are limitless, and innovation knows no bounds.
