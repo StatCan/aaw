@@ -2,6 +2,8 @@
 
 # Advanced Analytics Workspace (AAW)
 
+![AAW](https://github.com/StatCan/aaw/assets/8212170/ed9d44d9-3606-4097-b9a8-2ee715f13ebf)
+
 This is the repository for the documentation for the Advanced Analytics Workspace (AAW), brought to you by Data Analytics Services (DAS) at Statistics Canada. The documentation found in this repository is for users and developers of the AAW working in the Government of Canada and Government of Canada external collaborators.
 
 If you have any  questions about the project, reach out to us on our [**Slack Support Channel**](https://statcan-aaw.slack.com/).
