@@ -12,9 +12,21 @@ The [Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-serv
 
 ## What is Kubeflow?
 
-[![Kubeflow is the Heart of the AAW!](./images/Kubeflow-small.png)](https://kubeflow.aaw.cloud.statcan.ca/)
+**[Click here to set up your Kubeflow account!](https://kubeflow.aaw.cloud.statcan.ca/)**
 
-**[👉 Click here to set up your Kubeflow account! 👈](https://kubeflow.aaw.cloud.statcan.ca/)**
+Kubeflow is an advanced, container-based data science and machine learning workflow system that runs on Kubernetes.
+
+Kubeflow simplifies the following tasks:
+
+- Creating customizable environments to work with data
+- Managing and tracking, experiments, machine learning jobs and analytical workloads over time
+
+![AAW Architecture](images/kubeflow-stack.png){: style="height:150px;width:150px"}
+
+The AAW is based on [Kubeflow](1-Experiments/Kubeflow/), an open source comprehensive solution for deploying and managing end-to-end ML workflows. [Kubeflow](1-Experiments/Kubeflow/) is a powerful and flexible open source platform that allows for dynamic leverage of cloud compute, with users having the ability to control compute, memory, and storage resources used. Kubeflow simplifies the following tasks:
+
+- Creating customizable environments to work with data with user-controlled resource provisioning (custom CPU, GPU, RAM and storage).
+- Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS for Statistics Canada employees.
 
 ### Videos
 
@@ -25,10 +37,6 @@ The [Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-serv
 - [Official](https://www.kubeflow.org/)
 - [Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
 - [R Data Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
-The AAW is based on [Kubeflow](1-Experiments/Kubeflow/), an open source comprehensive solution for deploying and managing end-to-end ML workflows. [Kubeflow](1-Experiments/Kubeflow/) is a powerful and flexible open source platform that allows for dynamic leverage of cloud compute, with users having the ability to control compute, memory, and storage resources used. Kubeflow simplifies the following tasks:
-
-- Creating customizable environments to work with data with user-controlled resource provisioning (custom CPU, GPU, RAM and storage).
-- Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS for Statistics Canada employees.
     
 ## Getting Started
 
