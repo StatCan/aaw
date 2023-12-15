@@ -1,113 +1,122 @@
-# Welcome to the Advanced Analytics Workspace
+# The Advanced Analytics Workspace
+
+_The AAW is an open-source platform specifically crafted for data scientists, analysts, and researchers proficient in open-source tools and coding._
 
 <center>
 ![Statistics](images/statistics-on-the-moon-small.jpg)
 </center>
 
-_Embark on an exciting journey into the realm of data science and machine learning with the Advanced Analytics Workspace (AAW). Developed by Data Analytics Services (DAS) at Statistics Canada, AAW is an open-source platform specifically crafted for data scientists, analysts, and researchers proficient in open-source tools and coding._
-
 ## What is the AAW?
 
-<center>
-![AAW Architecture](images/kubeflow-stack.png)
-</center>
+The [Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-services/aaw) (AAW) stands as a comprehensive and open-source solution designed to cater to the diverse needs of data scientists. It offers a flexible environment that empowers advanced practitioners to seamlessly conduct their work. AAW is a versatile platform, providing solutions for data science and analytics across various domains. More information about the AAW and Data Analytics Services (DAS) can be found on [the DAS Portal](https://www.statcan.gc.ca/data-analytics-services/aaw).
 
-The [Advanced Analytics Workspace](https://www.statcan.gc.ca/data-analytics-services/aaw) (AAW) stands as a comprehensive and open-source solution designed to cater to the diverse needs of data scientists. It offers a flexible environment that empowers advanced practitioners to seamlessly conduct their work. AAW is a versatile platform, providing solutions for data science and analytics across various domains.
-
-More information about the AAW can be found on [the DAS Portal](https://www.statcan.gc.ca/data-analytics-services/aaw).
-
-TODO: Many of the links on https://www.statcan.gc.ca/data-analytics-services/aaw are broken.
+**TODO:** Many of the links on https://www.statcan.gc.ca/data-analytics-services/aaw are broken.
 
 ## Getting Started
 
-### AAW Portal
-
-Whether you're an internal user from Statistics Canada or an external collaborator, the AAW Portal is your gateway to a world of possibilities.
-
-- **Internal Users**: Access the [Portal Homepage for Statistics Canada Employees](https://www.statcan.gc.ca/data-analytics-service/aaw) and click Kubeflow to enter your Kubeflow dashboard.
-- **External Users**: Explore the [Portal Homepage for External Users](https://www.statcan.gc.ca/data-analytics-services/overview) and click getting started to open the onboarding form.
+- **StatCan Users**: Access the [Kubeflow Dashboard](https://kubeflow.aaw.cloud.statcan.ca/) to get started
+- **External Users and Collaborators**: Fill out [the DAS Onboarding Form](https://forms.office.com/r/RPrgDDkU9T) to tell us about your project needs. Once completed, a DAS representative will contact you to discuss the next steps and begin the onboarding process. Note: External users need a StatCan Cloud account granted by the business sponsor
 
 ### Kubeflow
 
-[Click here to set up your Kubeflow account!](https://kubeflow.aaw.cloud.statcan.ca/)
+The AAW is based on [Kubeflow](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html), an open source comprehensive solution for deploying and managing end-to-end ML workflows. Kubeflow simplifies the following tasks:
 
-<center>
-![Your Favourite Software](images/kubeflow-favourite.png)
-</center>
+- Creating customizable compute environments with user-controlled resource provisioning (custom CPU, GPU, RAM and storage)
+- Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS
 
-The AAW is based on [Kubeflow](1-Experiments/Kubeflow/), an open source comprehensive solution for deploying and managing end-to-end ML workflows. [Kubeflow](1-Experiments/Kubeflow/) is a powerful and flexible open source platform that allows for dynamic leverage of cloud compute, with users having the ability to control compute, memory, and storage resources used. Kubeflow simplifies the following tasks:
+#### Creating Kubeflow Notebook Servers
 
-- Creating customizable environments to work with data with user-controlled resource provisioning (custom CPU, GPU, RAM and storage).
-- Managing notebook servers including Ubuntu Desktop (via noVNC), R Studio, JupyterLab with Python, R, Julia and SAS for Statistics Canada employees.
+Follow these steps to create your first notebook server:
 
-### Kubeflow Account
-
-To create a namespace, go to [the DAS Portal](https://www.statcan.gc.ca/data-analytics-services/overview) where you'll find a link to [the onboarding form](https://forms.office.com/pages/responsepage.aspx?id=mR-PJT3ux0K_xXrxsjQ-ApbSRgATuERFkV3XLiwQ8xFUQ1NHRzBVWEFYUktZRzBJRDIwUDZFSDQ0USQlQCN0PWcu).
-
-#### External Users
-
-1. External users need a StatCan Cloud account granted by the business sponsor.
-2. Visit [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) once the StatCan Cloud account has been created.
-
-#### Statistics Canada Employees
-
-1. Internal users at Statistics Canada can directly access [https://kubeflow.aaw.cloud.statcan.ca/](https://kubeflow.aaw.cloud.statcan.ca/).
-
-### Creating a Kubeflow Notebook Server. 
-
-1. Log in to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/) with your StatCan guest cloud account.
-2. Select Notebook Servers.
-3. Click the "➕ New Server" button.
-4. Follow [the instructions here](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html#setup).
+1. Log in to [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca/)
+2. Click "Notebooks" from the sidebar on the left (you may need to select a namespace from the "Select namespace" dropdown menu in the upper left-hand corner)
+3. Click the "+ New Notebook" button (upper right-hand corder)
+4. Follow [the instructions here](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html#setup) to configure the notebook server
 
 #### Kubeflow Documentation
 
 - [Official Kubeflow Documentation](https://www.kubeflow.org/docs/started/introduction/)
+- [AAW Kubeflow Documentation](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html)
     
 #### Kubeflow Videos
 
-- [Kubeflow 101](https://www.youtube.com/playlist?list=PLIivdWyY5sqLS4lN75RPDEyBgTro_YX7x) by Google Cloud Tech.
+- [Kubeflow 101](https://www.youtube.com/playlist?list=PLIivdWyY5sqLS4lN75RPDEyBgTro_YX7x) by Google Cloud Tech
 
-## Your Data
+## Working with Your Data
 
-Instructions on how to add storage to your notebook server can be found here on [the documentation page for storage](https://statcan.github.io/aaw/en/5-Storage/Disks.html).
+Once your notebook server has been created, you may want to import data or access shared data from cloud storage. Instructions on how to add storage to your notebook server can be found on [the documentation page for storage](https://statcan.github.io/aaw/en/5-Storage/Disks.html).
 
-If your project requires protected data, cloud storage buckets will be created for you at the time of your projects onboarding. Access protected data by opening the buckets folder, see [the documentation](https://statcan.github.io/aaw/en/5-Storage/AzureBlobStorage.html).
+### Protected Data
 
-Uploading data into JupyterLab is simple, [the official JupyterLab documentation](https://jupyterlab.readthedocs.io/en/stable/user/files.html#uploading-and-downloading) has a section on uploading and downloading files from the JupyterLab web interface.
+If your project requires protected data:
+
+- Cloud storage buckets will be created for you at the time of your projects onboarding.
+- Accessing protected data is done by opening the buckets folder, see [the documentation on Azure Blob Storage](https://statcan.github.io/aaw/en/5-Storage/AzureBlobStorage.html).
+
+### Unprotected Data
+
+If you want to upload data into your notebook server ([on a Data Volume](https://statcan.github.io/aaw/en/5-Storage/Disks.html#setup), for instance), you can upload data into JupyterLab by following [the official JupyterLab documentation](https://jupyterlab.readthedocs.io/en/stable/user/files.html#uploading-and-downloading), which has a section on uploading and downloading files from the JupyterLab web interface.
 
 ## JupyterLab
 
-Unlock the potential of AAW in JupyterLab, offering support for Python, R, Julia, and more. 
+Kubeflow creates and manages notebook servers running JupyterLab, which is the main interface in which you'll be doing your data science work.
+
+### Virtual Environments
 
 When conducting data science experiments, it's a best practice to utilize Python and/or conda virtual environments to manage your project dependencies. It is common to create a dedicated environment for each project or, in some cases, separate environments for different features or aspects of your work (for instance, one environment for general projects and an additional environment tailored for GPU-accelerated deep learning tasks).
 
-### JupyterLab Documentation
-
-- [Official Getting Started with JupyterLab Docs.](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html)
+#### Virtual Environments and the Launcher
 
 If you find yourself frequently switching between environments and desire a more convenient way to access them within JupyterLab, you can follow [these instructions](https://statcan.github.io/aaw/en/1-Experiments/Virtual-Environments.html#creating-and-adding-environments-to-the-jupyterlab-launcher).
 
-List of sources of examples:
+### JupyterLab Documentation
+
+- [Official Getting Started with JupyterLab Docs](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html)
+
+### Example IPython Notebooks
+
+You can download these notebooks and upload them to your notebook server. These notebooks can also be run from Visual Studio Code if you prefer.
 
 1. [Visual Python: Simplifying Data Analysis for Python Learners](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/VisualPython_EN.html)
 2. [YData Profiling: Streamlining Data Analysis](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/YData-Profiling_EN.html)
+3. [](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DrawData_EN.html)
+4. [](https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DTale_EN.html)
+
+## Need Help?
+
+Join our vibrant community! Connect with AAW developers and fellow users, ask questions, and share experiences all on the [Slack Support Channel](https://statcan-aaw.slack.com/).
+
+For comprehensive documentation and guidance, refer to the:
+
+- [AAW Documentation](https://statcan.github.io/aaw/)
+- [Official Kubeflow Documentation](https://www.kubeflow.org/docs/)
+- [Official JupyterLab Documentation](https://jupyterlab.readthedocs.io/en/stable/user/index.html)
+
+**Need real-time assistance?** Join our [Slack Support Channel](https://statcan-aaw.slack.com).
+
+### Demos and Contributions
+
+For in-depth demos, personalized assistance, or to contribute to the AAW community, reach out to us on [Slack Support Channel](https://statcan-aaw.slack.com). You can contribute to the platform's development and report issues or feature requests on [GitHub](https://github.com/StatCan/aaw).
 
 ## External Learning Resources
 
-- [A Gentle Introduction to SciKit Learn (Python)](https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/)
-- [Official SciKit Learn Tutorials](https://scikit-learn.org/stable/tutorial/index.html)
+Some of the AAW Developers are also data scientists! So we have a lot of material to share on data science tooling and best practices. Below are some useful and interested data science learning resources:
 
-### Data Preparation
+### Data Science Resources (R and Python)
 
 - [Machine Learning Mastery's Data Preparation Course](https://machinelearningmastery.com/start-here/#dataprep)
-
-
-### Machine Learning 
-
+- [A Gentle Introduction to SciKit Learn (Python)](https://machinelearningmastery.com/a-gentle-introduction-to-scikit-learn-a-python-machine-learning-library/)
+- [Official SciKit Learn Tutorials](https://scikit-learn.org/stable/tutorial/index.html)
 - [How to Handle Imbalanced Datasets](https://machinelearningmastery.com/start-here/#imbalanced)
+- [Quarto Themes](https://quarto.org/docs/output-formats/html-themes.html)
+- [Tidy Models Resampling Techniques](https://www.tidymodels.org/start/resampling/
+- [EasyStats for R](https://github.com/easystats)
+- [EasyStats Model Performance Evaluation Package](https://easystats.github.io/performance/)
+- [Tidy Modelling with R](https://www.tmwr.org/)
+- [](https://modeva.r-forge.r-project.org/modEvA-tutorial.html)
+- [](https://scikit-learn.org/stable/modules/model_evaluation.html)
 
-### Python
+### Python Language Resources
 
 - [Real Python's Introduction to Python](https://realpython.com/learning-paths/python3-introduction/)
 - [W3School's Introduction to Python](https://www.w3schools.com/python/python_intro.asp)
@@ -115,20 +124,8 @@ List of sources of examples:
 - [Machine Learning Mastery's Python Skills](https://machinelearningmastery.com/start-here/#pythonskills)
 - [TechWorld with Nana's Python Tutorial for Beginners](https://www.youtube.com/watch?v=t8pPdKYpowI)
 
-### R
+### R Language Resources
 
 - [Videos on R](https://www.youtube.com/playlist?list=PLLOxZwkBK52C6_Nkmp0nFCreLfnfJgUL7)
 - [Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
-- [R Data Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
-
-## Need Help?
-
-Join our vibrant community on the [Slack channel](https://statcan-aaw.slack.com/) to connect with fellow users, ask questions, and share experiences.
-
-For comprehensive documentation and guidance, refer to the [AAW Portal Documentation](https://statcan.github.io/aaw/) and the [Kubeflow Documentation](https://www.kubeflow.org/docs/). Need real-time assistance? Join our [Slack Support Channel](https://statcan-aaw.slack.com).
-
-## Demos and Contributions
-
-For in-depth demos, personalized assistance, or to contribute to the AAW community, reach out to us on [Slack](https://statcan-aaw.slack.com). Contribute to the platform's development and report issues or feature requests on [GitHub](https://github.com/StatCan/aaw).
-
-Embark on your data science journey with AAW — where possibilities are limitless, and innovation knows no bounds.
+- [R Data Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.pdf
