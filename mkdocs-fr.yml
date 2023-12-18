@@ -66,6 +66,10 @@ extra:
 # Page tree
 nav:
   - Démarrage: index.md
+  - Stockage:
+      - Aperçu: 5-Stockage/Aperçu.md
+      - Disque: 5-Stockage/Disque.md
+      - Azure Blob Storage: 5-Stockage/StockageBlobAzure.md
   - Analyse:
       - Aperçu: 1-Experiences/Apercu.md
       - Environnements virtuels: 1-Experiences/Environnements-virtuels.md
@@ -82,24 +86,18 @@ nav:
            - SweetViz: 1-Experiences/bloc-notes/SweetViz_FR.ipynb
            - VisualPython: 1-Experiences/bloc-notes/VisualPython_FR.ipynb
            - YData Profiling: 1-Experiences/bloc-notes/YData-Profiling_FR.ipynb
+  - Collaboration:
+      - Aperçu: 4-Collaboration/Aperçu.md
+      - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
+      - EAG: 4-Collaboration/Environnement-Analyse-Geospatiale.md
+  - Gitlab:
+      - Gitlab: 6-Gitlab/Gitlab.md
   - Publication:
       - R Shiny: 2-Publication/R-Shiny.md
       - Dash: 2-Publication/Dash.md
       - Datasette: 2-Publication/Datasette.md
       - Power BI: 2-Publication/PowerBI.md
       - Sur mesure: 2-Publication/Sur-mesure.md
-  - Pipelines:
-      - Argo: 3-Pipelines/Argo.md
-  - Collaboration:
-      - Aperçu: 4-Collaboration/Aperçu.md
-      - Demander un espace de nom: 4-Collaboration/Demander-EspaceDeNom.md
-      - EAG: 4-Collaboration/Environnement-Analyse-Geospatiale.md
-  - Stockage:
-      - Aperçu: 5-Stockage/Aperçu.md
-      - Disque: 5-Stockage/Disque.md
-      - Azure Blob Storage: 5-Stockage/StockageBlobAzure.md
-  - Gitlab:
-      - Gitlab: 6-Gitlab/Gitlab.md
   - MLOps:
       - Aperçu: 7-MLOps/Aperçu.md
       - Modèles d'apprentissage automatique: 7-MLOps/Modèles-d'apprentissage-automatique.md
@@ -110,4 +108,8 @@ nav:
         - Bloc-note d'exemple:
           - Classificateur Seldon Iris : 7-MLOps/sklearn_iris_jsondata.ipynb
       - Intégration avec PaaS externe: 7-MLOps/Integration-PaaS.md
+  - Pipelines:
+      - Argo: 3-Pipelines/Argo.md
+  - MicroSim:
+      - Démarrage: 8-MicroSim/demarrage.md
   - Aide/Contactez-nous: Aide.md
