@@ -110,4 +110,6 @@ nav:
         - Bloc-note d'exemple:
           - Classificateur Seldon Iris : 7-MLOps/sklearn_iris_jsondata.ipynb
       - Intégration avec PaaS externe: 7-MLOps/Integration-PaaS.md
+  - MicroSim:
+      - Démarrage: 8-MicroSim/demarrage.md
   - Aide/Contactez-nous: Aide.md
