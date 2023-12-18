@@ -1,8 +1,5 @@
 # Advanced Analytics Workspace Documentation!
 
-> "640K ought to be enough for anybody."
-> -- Bill Gates
-
 ## Introduction
 
 This repository houses the source for the documentation, which provides guidance for using the platform's major services.

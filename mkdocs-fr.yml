@@ -10,10 +10,6 @@ repo_name: StatCan/aaw
 repo_url: https://github.com/StatCan/aaw
 edit_uri: edit/master/docs/fr
 
-plugins:
-  - search:
-      lang: fr
-
 theme:
   name: material
   features:
@@ -47,6 +43,14 @@ markdown_extensions:
       alternate_style: true 
   - md_in_html
 
+plugins:
+  - mkdocs-jupyter:
+      include_source: true
+  - search:
+      lang: fr
+
+use_directory_urls: false
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -57,17 +61,27 @@ extra:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/StatCan/aaw
     - icon: fontawesome/brands/slack
-      link: https://statcan-eaa.slack.com
+      link: https://statcan-aaw.slack.com
 
 # Page tree
 nav:
   - Démarrage: index.md
   - Analyse:
       - Aperçu: 1-Experiences/Apercu.md
+      - Environnements virtuels: 1-Experiences/Environnements-virtuels.md
       - Kubeflow: 1-Experiences/Kubeflow.md
       - Jupyter: 1-Experiences/Jupyter.md
       - RStudio: 1-Experiences/RStudio.md
       - Bureau-Virtuel: 1-Experiences/Bureau-virtuel.md
+      - Exemples de bloc-notes:
+           - Draw Data: 1-Experiences/bloc-notes/DrawData_FR.ipynb
+           - DTale: 1-Experiences/bloc-notes/DTale_FR.ipynb
+           - Mito Sheet: 1-Experiences/bloc-notes/MitoSheet_FR.ipynb
+           - PyGWalker: 1-Experiences/bloc-notes/PyGWalker_FR.ipynb
+           - ReRun: 1-Experiences/bloc-notes/ReRun_FR.ipynb
+           - SweetViz: 1-Experiences/bloc-notes/SweetViz_FR.ipynb
+           - VisualPython: 1-Experiences/bloc-notes/VisualPython_FR.ipynb
+           - YData Profiling: 1-Experiences/bloc-notes/YData-Profiling_FR.ipynb
   - Publication:
       - R Shiny: 2-Publication/R-Shiny.md
       - Dash: 2-Publication/Dash.md

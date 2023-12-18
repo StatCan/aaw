@@ -23,7 +23,6 @@ theme:
   #logo: images/statcan.png
   custom_dir: overrides
 
-
 markdown_extensions:
   - toc:
       baselevel: 1
@@ -48,7 +47,9 @@ markdown_extensions:
 
 plugins:
 - mkdocs-jupyter:
-    include_source: True
+    include_source: true
+
+use_directory_urls: false
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -67,10 +68,20 @@ nav:
   - Getting Started: index.md
   - Analysis:
       - Overview: 1-Experiments/Overview.md
+      - Virtual Environments: 1-Experiments/Virtual-Environments.md
       - Kubeflow: 1-Experiments/Kubeflow.md
       - Jupyter: 1-Experiments/Jupyter.md
       - RStudio: 1-Experiments/RStudio.md
       - Remote Desktop: 1-Experiments/Remote-Desktop.md
+      - Example Notebooks:
+           - Draw Data: 1-Experiments/Notebooks/DrawData_EN.ipynb
+           - DTale: 1-Experiments/Notebooks/DTale_EN.ipynb
+           - Mito Sheet: 1-Experiments/Notebooks/MitoSheet_EN.ipynb
+           - PyGWalker: 1-Experiments/Notebooks/PyGWalker_EN.ipynb
+           - ReRun: 1-Experiments/Notebooks/ReRun_EN.ipynb
+           - SweetViz: 1-Experiments/Notebooks/SweetViz_EN.ipynb
+           - VisualPython: 1-Experiments/Notebooks/VisualPython_EN.ipynb
+           - YData Profiling: 1-Experiments/Notebooks/YData-Profiling_EN.ipynb
   - Publishing:
       - Overview: 2-Publishing/Overview.md
       - R Shiny: 2-Publishing/R-Shiny.md
