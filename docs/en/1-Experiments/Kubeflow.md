@@ -34,6 +34,8 @@ for your team.
 
 - Log into [Kubeflow](https://kubeflow.aaw.cloud.statcan.ca)
 
+- Ensure that your project's namespace is selected from the namespaces drop down menu, and example in the screenshot is "aaw-team"
+  
 - Navigate to the Notebook Servers tab
 
 ![Kubeflow Manages the Jupyter Servers](../images/kubeflow-main-ui.PNG)
@@ -45,11 +47,6 @@ for your team.
 - You will get a template to create your notebook server. **Note:** the name of
   your server can consist of only lower-case letters, numbers, and hyphens. **No spaces, and no
   underscores.**
-
-- You will need to specify a namespace. By default you will have a default
-  namespace for your account, but for projects you may need to select the
-  namespace created specifically for that project. Otherwise the notebook server
-  you create may not have access rights to resources required for the project.
 
 ## Image
 
