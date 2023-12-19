@@ -1,18 +1,18 @@
-# Overview
+# Kubeflow Volumes (Disks)
 
-Disks are the familiar hard drive style file systems you're used to, provided to you from fast solid state drives (SSDs)!
+Kubeflow Volumes are similar in concept to the hard disk drives you are used to on your Windows, Mac or Linux Desktop. Kubeflow Volumes are sometimes just called disks and are backed by fast solid state drives (SSDs) under the hood!
 
-# Setup
+## Setup
 
 When creating your notebook server, you request disks by adding Data Volumes to your notebook server (pictured below, with go to `Advanced Options`). They are automatically mounted at the directory (`Mount Point`) you choose, and serve as a simple and reliable way to preserve data attached to a Notebook Server.
 
 ![Adding an existing volume to a new notebook server](../images/kubeflow_existing_volume.png)
 
 <!-- prettier-ignore -->
-??? warning "You pay for all disks you own, whether they're attached to a Notebook Server or not"
-    As soon as you create a disk, you're [paying](#pricing) for it until it is [deleted](#deleting-disk-storage), even if it's original Notebook Server is deleted.  See [Deleting Disk Storage](#deleting-disk-storage) for more info
+!!! Warning "You pay for all disks you own, whether they're attached to a Notebook Server or not."
+    As soon as you create a disk, you're [paying](#pricing) for it until it is [deleted](#deleting-disk-storage), even if it's original Notebook Server is deleted.  See [Deleting Disk Storage](#deleting-disk-storage) for more info.
 
-# Once you've got the basics ...
+## Once you've got the basics...
 
 When you delete your Notebook Server, your disks **are not deleted**. This let's you reuse that same disk (with all its contents) on a new Notebook Server later (as shown above with `Type = Existing` and the `Name` set to the volume you want to reuse). If you're done with the disk and it's contents, [delete it](#deleting-disk-storage).
 
