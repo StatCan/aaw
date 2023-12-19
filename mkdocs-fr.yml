@@ -96,8 +96,8 @@ nav:
       - EAG: 4-Collaboration/Environnement-Analyse-Geospatiale.md
   - Stockage:
       - Aperçu: 5-Stockage/Aperçu.md
-      - Disque: 5-Stockage/Disque.md
-      - Azure Blob Storage: 5-Stockage/StockageBlobAzure.md
+      - Azure Blob Storage (Conteneurs): 5-Stockage/StockageBlobAzure.md
+      - Kubeflow Volumes (Disques): 5-Stockage/KubeflowVolumes.md
   - Gitlab:
       - Gitlab: 6-Gitlab/Gitlab.md
   - MLOps:

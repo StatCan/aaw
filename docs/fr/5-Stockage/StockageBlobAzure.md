@@ -1,103 +1,102 @@
-# Aperçu
+# Stockage Blob Azure (Conteneurs)
 
-[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) est la solution de stockage d'objets de Microsoft pour le nuage informatique. Le stockage blob est optimisé pour stocker des quantités massives de données non structurées. Les données non structurées sont des données qui n'adhèrent pas à un modèle de données ou à une définition particulière, comme du texte ou des données binaires.
+[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) est la solution de stockage d'objets de Microsoft pour le cloud. Blob Storage est optimisé pour stocker des quantités massives de données non structurées. Les données non structurées sont des données qui n'adhèrent pas à un modèle de données ou à une définition particulière, comme du texte ou des données binaires.
 
-Les conteneurs de stockage blob Azure sont efficaces dans trois domaines :
+Les conteneurs de stockage Azure Blob présentent les avantages suivants par rapport aux volumes Kubeflow (disques) :
 
-- De grandes quantités de données - Les conteneurs peuvent être énormes : bien plus gros que les disques durs. Et ils sont toujours rapides.
-- Accessible par plusieurs consommateurs à la fois - Vous pouvez accéder à la même source de données à partir de plusieurs serveurs bloc-note et pipelines en même temps sans avoir besoin de dupliquer les données.
-- Partage - Les espaces de noms de projet peuvent partager un conteneur. C'est idéal pour partager des données avec des personnes extérieures à votre espace de travail.
+1. **Capacité :** Les conteneurs peuvent être énormes : bien plus gros que les disques durs. Et ils sont toujours rapides.
+2. **Simultanéité :** Vous pouvez accéder simultanément à la même source de données à partir de plusieurs serveurs de bloc-note et pipelines sans avoir besoin de dupliquer les données.
+3. **Partage :** les espaces de noms de projet peuvent partager un conteneur. C'est idéal pour partager des données avec des personnes extérieures à votre espace de travail.
+  
+<!-- plus joli-ignorer -->
+!!! avertissement "Les conteneurs et les compartiments Azure Blob Storage ont remplacé le stockage et les compartiments MinIO."
+     Les utilisateurs seront responsables de la migration des données des compartiments MinIO vers les dossiers Azure Storage. [Cliquez ici pour obtenir des instructions sur la façon de migrer !](#how-to-migrate-from-minio-to-azure-blob-storage). Pour les fichiers plus volumineux, les utilisateurs peuvent [contacter AAW pour obtenir de l'aide](https://statcan-aaw.slack.com).
 
-# Installation
+## Installation
 
-<!-- prettier-ignore -->
-!!! warning "Les conteneurs de stockage Azure Blob et le support de buckets remplaceront les supports de stockage Minio Buckets et Minio"
-     Les utilisateurs seront responsables de la migration des données des Minio Buckets vers les dossiers Azure Storage. Pour les fichiers plus volumineux, les utilisateurs peuvent contacter AAW pour obtenir de l'aide.
+### Accès au conteneur Blob depuis JupyterLab
 
-## Conteneur Blob monté sur un serveur de bloc-note
+Les volumes Blob CSI sont conservés sous « ~/buckets » lors de la création d'un serveur bloc-note. Les fichiers sous « ~/buckets » sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le « ~/buckets » monté sur le système de fichiers, rendant les données accessibles de partout.
 
-<!-- prettier-ignore -->
+Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire depuis Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre bloc-note Kubeflow).
 
-Les volumes Blob CSI sont conservés sous `/home/jovyan/buckets` lors de la création d'un serveur bloc-notes. Les fichiers sous `/buckets` sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le `/buckets` monté sur le système de fichiers, rendant les données accessibles de partout.
+![Dossiers Blob montés en tant que répertoires](../images/container-mount.png)
 
-![Dossiers Blob montés en tant que répertoires bloc-note Jupyter](../images/container-mount.png)
+#### Conteneurs non classés
 
-# Support de dossier AAW pour ordinateur portable non classé
-![Dossiers de bloc-note non classifiés montés dans les répertoires bloc-note Jupyter](../images/unclassified-mount.png)
+Les conteneurs de stockage d'objets blob non classés apparaîtront comme suit dans le dossier « ~/buckets ».
 
-# Support de dossier AAW pour ordinateur portable protégé-b
-![Carnets protégés-b montés en tant que répertoires bloc-note Jupyter](../images/protectedb-mount.png)
+![Dossiers de bloc-note non classifiés montés en tant que répertoires dans JupyterLab](../images/unclassified-mount.png)
 
-Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire à partir de Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre bloc-note Kubeflow).
+#### Conteneurs B protégés
 
-## Comment migrer de MinIO vers Azure Blob Storage
+Les conteneurs de stockage de blob B protégés apparaîtront comme suit dans le dossier « ~/buckets ».
 
-Tout d’abord, importez les variables d’environnement stockées dans votre coffre-fort de secrets. Vous importerez soit depuis `minio-gateway` soit depuis `fdi-gateway` selon l'endroit où vos données ont été ingérées.
+![Carnets B protégés montés en tant que répertoires dans JupyterLab](../images/protectedb-mount.png)
 
-```
-jovyan@rstudio-0 :~$ source /vault/secrets/fdi-gateway-protected-b
-```
+### Types de conteneurs
 
-Ensuite, vous créez un alias pour accéder à vos données.
+Les conteneurs Blob suivants sont disponibles. L’accès à tous les conteneurs Blob est le même. La différence entre les conteneurs réside dans le type de stockage qui les sous-tend :
 
-```
-jovyan@rstudio-0 : ~$ mc alias défini minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
-```
+- **aaw-unclassified :** Par défaut, utilisez celui-ci pour stocker des données non classifiées.
+- **aaw-protected-b :** Utilisez celui-ci pour stocker des données sensibles protégées B.
+- **aaw-unclassified-ro :** Cette classification est Protégé B mais accès en lecture seule. Cela permet aux utilisateurs de visualiser les données non classifiées dans un bloc-notes Protégé B.
 
-Répertoriez le contenu de votre dossier de données avec `mc ls`.
+### Accès aux données internes
 
-```
-jovyan@rstudio-0:~$ mc ls minio
-```
+L'accès aux données internes utilise la connexion de stockage commune DAS qui est utilisée par les utilisateurs internes et externes qui ont besoin d'accéder à des données non classifiées ou protégées B. Les conteneurs suivants peuvent être provisionnés :
 
-Enfin, copiez vos données MinIO dans votre répertoire Azure Blob Storage avec `mc cp --recursive`.
+- **externe-non classifié :** Non classifié et accessible aux employés de StatCan et non-Statcan.
+- **external-protected-b :** Protégé B et accessible aux employés de StatCan et aux non-employés de StatCan.
+- **interne-non classifié :** Non classifié et accessible uniquement aux employés de Statcan.
+- **interne-protected-b :** Protégé B et accessible uniquement aux employés de StatCan.
 
-```
-jovyan@rstudio-0:~$ mc cp --recursive minio ~/buckets/
-```
+Les conteneurs ci-dessus suivent la même convention que les conteneurs AAW en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs **externes**, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.
 
-Si vous disposez de données protégées-b, vous pouvez copier vos données dans le compartiment protégé-b.
-
-```
-jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets/aaw-protected-b
-```
-
-<!-- prettier-ignore -->
-
-## Types de conteneurs
-
-Les conteneurs Blob suivants sont disponibles :
-
-L’accès à tous les conteneurs Blob est le même. La différence entre les conteneurs réside dans le type de stockage qui les sous-tend :
-
-- **aaw-unclassified :** Par défaut, utilisez celui-ci. Stocke les données non classifiées.
-
-- **aaw-protected-b :** Stocke les données sensibles protégées-b.
-
-- **aaw-unclassified-ro :** Cette classification est protégée-b mais en accès en lecture seule. Cela permet aux utilisateurs de visualiser les données non classifiées dans un bloc-notes protégé-b.
-
-<!-- prettier-ignore -->
-
-## Accès aux données internes
-
-<!-- prettier-ignore -->
-L'accès aux données internes utilise la connexion de stockage commune DAS qui est utilisée par les utilisateurs internes et externes qui ont besoin d'accéder à des données non classifiées ou protégées-b. Les conteneurs suivants peuvent être mis à disposition :
-
-- **externe-non classé**
-- **externe-protégé-b**
-- **interne-non classé**
-- **interne-protégé-b**
-
-Ils suivent la même convention que les conteneurs AAW ci-dessus en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs **externes**, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.
-
-AAW dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.
+AAW dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées B vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.
 
 Veuillez contacter l'équipe FAIR Data Infrastructure si vous avez un cas d'utilisation de ces données.
 
 ## Tarifs
 
-<!-- prettier-ignore -->
+<!-- plus joli-ignorer -->
 !!! info "Les modèles de tarification sont basés sur l'utilisation du processeur et de la mémoire"
      Le prix est couvert par KubeCost pour les espaces de noms utilisateur (dans Kubeflow en bas de l'onglet bloc-notes).
 
 En général, le stockage Blob est beaucoup moins cher que [Azure Manage Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/) et offre de meilleures E/S que les SSD gérés.
+
+## L'explorateur de stockage Azure
+
+Nos amis de Collaborative Analytics Environment (CAE) disposent de documentation sur l'accès à votre stockage Azure Blob à partir de votre AVD à l'aide de [Azure Storage Explorer](https://statcan.github.io/cae-eac/en/AzureStorageExplorer/). .
+
+## Comment migrer de MinIO vers Azure Blob Storage
+
+Tout d'abord, `source` les variables d'environnement stockées dans votre coffre-fort de secrets. Vous `source` soit à partir de **minio-gateway**, soit de **fdi-gateway** selon l'endroit où vos données ont été ingérées :
+
+```
+source /vault/secrets/fdi-gateway-protected-b
+```
+
+Ensuite vous créez un alias pour accéder à vos données :
+
+```
+mc alias set minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+```
+
+Listez le contenu de votre dossier de données avec `mc ls` :
+
+```
+mc ls minio
+```
+
+Enfin, copiez vos données MinIO dans votre répertoire Azure Blob Storage avec `mc cp --recursive` :
+
+```
+mc cp --recursive minio ~/buckets/aaw-unclassified
+```
+
+Si vous disposez de données Protégé B, vous pouvez copier vos données dans le compartiment Protégé B :
+
+```
+mc cp --recursive minio ~/buckets/aaw-protected-b
+```

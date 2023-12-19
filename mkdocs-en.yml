@@ -97,7 +97,7 @@ nav:
       - GEA: 4-Collaboration/Geospatial-Analytical-Environment.md
   - Storage:
       - Overview: 5-Storage/Overview.md
-      - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
+      - Azure Blob Storage (Containers): 5-Storage/AzureBlobStorage.md
       - Kubeflow Volumes (Disks): 5-Storage/KubeflowVolumes.md
   - Gitlab:
       - Gitlab: 6-Gitlab/Gitlab.md

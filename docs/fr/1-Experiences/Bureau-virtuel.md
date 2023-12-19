@@ -32,7 +32,7 @@ _pip_, _conda_, _npm_ et _yarn_ sont disponibles pour installer divers paquets.
 
 ## Accéder au bureau à distance
 
-Pour lancer le Bureau à distance ou l'un de ses outils de support, créez un serveur bloc-notes dans [Kubeflow](./Kubeflow.md) et sélectionnez l'option de bureau à distance, qui est l'image Ubuntu.
+Pour lancer le Bureau à distance ou l'un de ses outils de support, créez un serveur de bloc-notes dans [Kubeflow](./Kubeflow.md) et sélectionnez l'option de bureau à distance, qui est l'image Ubuntu.
 
 <center>
 ![Bureau à distance](../images/RemoteDesktop.PNG)
