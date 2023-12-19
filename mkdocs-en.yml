@@ -113,4 +113,5 @@ nav:
       - Integrate with External PaaS: 7-MLOps/PaaS-Integration.md
   - MicroSim:
       - Getting Started: 8-MicroSim/GettingStarted.md
+      - Adding new models: 8-MicroSim/Additions.md
   - Help/Contact: Help.md
