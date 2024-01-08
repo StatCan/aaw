@@ -2,357 +2,357 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://statcan.github.io/aaw/en/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/developer-tools/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Argocd%20Applications/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Argoflow%20Azure/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Contrib%20Containers/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Contrib%20Jupyter%20Notebooks/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Contrib%20R%20Notebooks/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Goofys%20Injector/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Gpu%20Toleration%20Injector/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Inferenceservices%20Controller/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Containers/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Controller/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Manifests/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Mlops/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Opa%20Sync/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Pipelines%20Secret%20Scanner/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Kubeflow%20Profiles%20Controller/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Minio%20Credential%20Injector/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Namespace%20Injector/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Prob%20Notebook%20Controller/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Profile%20State%20Controller/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Security%20Scanning%20Containers/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Aaw%20Toleration%20Injector/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Boathouse/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Charts/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Geoserver/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Goofys/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Jupyter%20Apis/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Jupyterlab%20Language%20Pack%20Fr_fr/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Kubecost/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Kubeflow/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Kubeflow/CHANGELOG/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Kubeflow%20Containers%20Desktop/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Kubeflow%20Pipelines/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Kubeflow%20Pipelines/CHANGELOG/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Minio%20Deploy/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Minio%20Operator/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Mlflow%20Operator/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Pachyderm/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/R%20Dashboards/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Shiny/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Advanced%20Analytics%20Workspaces%20Infrastructure%20Example/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Azure%20Statcan%20Aaw%20Environment/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Azure%20Statcan%20Aaw%20Network/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Azure%20Statcan%20Aaw%20Region%20Environment/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Azure%20Statcan%20Cloud%20Native%20Environment%20Infrastructure/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Azurerm%20Kubernetes%20Cluster/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Azurerm%20Kubernetes%20Cluster%20Nodepool/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Kubernetes%20Aks%20Daaas/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Kubernetes%20Aks%20Platform%20Daaas/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Kubernetes%20Cert%20Manager%20Certificate/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Kubernetes%20Cert%20Manager%20Issuer/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Kubernetes%20Istio%20Operator%20Cr/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Statcan%20Aaw%20Infrastructure%20Example/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Terraform%20Statcan%20Aaw%20Platform/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Vault%20Plugin%20Secrets%20Minio/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/cloud-main-connectivity/cloud-main-connectivity/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/data-virtualization/trino/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/object-storage/blobcsi/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/object-storage/s3proxy/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/rbac/non-employee-rbac/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/features/source-control/gitea/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/getting-started/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/getting-started/jupyterlab/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/getting-started/login/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/getting-started/setup/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/getting-started/tms/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/getting-started/vm/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/resources/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/resources/networking/</loc>
-         <lastmod>2023-12-19</lastmod>
+         <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
