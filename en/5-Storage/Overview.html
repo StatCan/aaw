@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apercu-du-stockage" class="md-skip">
+        <a href="#storage-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -481,28 +481,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#volumes-kubeflow-disques" class="md-nav__link">
+  <a href="#kubeflow-volumes-disks" class="md-nav__link">
     <span class="md-ellipsis">
-      Volumes Kubeflow (Disques)
+      Kubeflow Volumes (Disks)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Volumes Kubeflow (Disques)">
+    <nav class="md-nav" aria-label="Kubeflow Volumes (Disks)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#volumes-de-lespace-de-travail" class="md-nav__link">
+  <a href="#workspace-volumes" class="md-nav__link">
     <span class="md-ellipsis">
-      Volumes de l'espace de travail
+      Workspace volumes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#volumes-de-donnees" class="md-nav__link">
+  <a href="#data-volumes" class="md-nav__link">
     <span class="md-ellipsis">
-      Volumes de données
+      Data volumes
     </span>
   </a>
   
@@ -514,18 +514,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stockage-blob-azure-conteneurs" class="md-nav__link">
+  <a href="#azure-blob-storage-containers" class="md-nav__link">
     <span class="md-ellipsis">
-      Stockage Blob Azure (Conteneurs)
+      Azure Blob Storage (Containers)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#choisir-votre-stockage" class="md-nav__link">
+  <a href="#choose-your-storage" class="md-nav__link">
     <span class="md-ellipsis">
-      Choisir votre stockage
+      Choose your storage
     </span>
   </a>
   
@@ -1814,28 +1814,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#volumes-kubeflow-disques" class="md-nav__link">
+  <a href="#kubeflow-volumes-disks" class="md-nav__link">
     <span class="md-ellipsis">
-      Volumes Kubeflow (Disques)
+      Kubeflow Volumes (Disks)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Volumes Kubeflow (Disques)">
+    <nav class="md-nav" aria-label="Kubeflow Volumes (Disks)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#volumes-de-lespace-de-travail" class="md-nav__link">
+  <a href="#workspace-volumes" class="md-nav__link">
     <span class="md-ellipsis">
-      Volumes de l'espace de travail
+      Workspace volumes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#volumes-de-donnees" class="md-nav__link">
+  <a href="#data-volumes" class="md-nav__link">
     <span class="md-ellipsis">
-      Volumes de données
+      Data volumes
     </span>
   </a>
   
@@ -1847,18 +1847,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stockage-blob-azure-conteneurs" class="md-nav__link">
+  <a href="#azure-blob-storage-containers" class="md-nav__link">
     <span class="md-ellipsis">
-      Stockage Blob Azure (Conteneurs)
+      Azure Blob Storage (Containers)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#choisir-votre-stockage" class="md-nav__link">
+  <a href="#choose-your-storage" class="md-nav__link">
     <span class="md-ellipsis">
-      Choisir votre stockage
+      Choose your storage
     </span>
   </a>
   
@@ -1885,50 +1885,48 @@
   
 
 
-<h1 id="apercu-du-stockage">Aperçu du stockage<a class="headerlink" href="#apercu-du-stockage" title="Permanent link">&para;</a></h1>
-<p>Plusieurs options de stockage sont disponibles pour les utilisateurs de l'EAA pour accéder et importer leurs données. Vous trouverez ci-dessous une description de chaque type. Il existe des pages de documentation distinctes pour la connexion à chaque type de stockage.</p>
-<h2 id="volumes-kubeflow-disques">Volumes Kubeflow (Disques)<a class="headerlink" href="#volumes-kubeflow-disques" title="Permanent link">&para;</a></h2>
-<p>Kubeflow utilise des disques virtuels appelés Volumes. Vous les rencontrerez sur l’écran de création de bloc-note server. Ces disques sont disponibles en deux variétés, appelées Workspace Volumes et Data Volumes. Les volumes de données et d'espace de travail peuvent être réutilisés et montés sur différents serveurs de bloc-note, mais pas en même temps.</p>
-<h3 id="volumes-de-lespace-de-travail">Volumes de l'espace de travail<a class="headerlink" href="#volumes-de-lespace-de-travail" title="Permanent link">&para;</a></h3>
-<p>Les volumes d'espace de travail sont similaires dans leur concept et leur fonction au disque dur de votre ordinateur portable, c'est là que tous les logiciels sont stockés et c'est le périphérique de stockage par défaut pour toutes vos affaires.</p>
-<h3 id="volumes-de-donnees">Volumes de données<a class="headerlink" href="#volumes-de-donnees" title="Permanent link">&para;</a></h3>
-<p>Si vous avez besoin de plus de stockage, un volume de données peut être nécessaire. Ceci est conceptuellement similaire à la connexion d'un disque dur USB haute capacité à votre PC.</p>
-<h2 id="stockage-blob-azure-conteneurs">Stockage Blob Azure (Conteneurs)<a class="headerlink" href="#stockage-blob-azure-conteneurs" title="Permanent link">&para;</a></h2>
-<p>Si vous avez besoin de collaborer avec d’autres, Azure Blob Storage (tel que fourni par FDI) peut être la meilleure option pour vous et vos données. Voir <a href="#choosing-your-storage">Choisir votre stockage</a> pour plus d'informations.</p>
-<h2 id="choisir-votre-stockage">Choisir votre stockage<a class="headerlink" href="#choisir-votre-stockage" title="Permanent link">&para;</a></h2>
-<p>En fonction de vos besoins et exigences uniques et de ceux de votre projet, Kubeflow Volumes ou Azure Blob Storage (ou les deux) peuvent être les plus adaptés :</p>
+<h1 id="storage-overview">Storage overview<a class="headerlink" href="#storage-overview" title="Permanent link">&para;</a></h1>
+<p>Several storage options are available for AAW users to access and import their data. Below is a description of each type. There are separate documentation pages for connecting to each storage type.</p>
+<h2 id="kubeflow-volumes-disks">Kubeflow Volumes (Disks)<a class="headerlink" href="#kubeflow-volumes-disks" title="Permanent link">&para;</a></h2>
+<p>Kubeflow uses virtual disks called Volumes. You will encounter them on the server notebook creation screen. These drives come in two varieties, called Workspace Volumes and Data Volumes. Data and workspace volumes can be reused and mounted on different notebook servers, but not at the same time.</p>
+<h3 id="workspace-volumes">Workspace volumes<a class="headerlink" href="#workspace-volumes" title="Permanent link">&para;</a></h3>
+<p>Workspace volumes are similar in concept and function to your laptop's hard drive, it's where all software is stored and it's the default storage device for all your stuff.</p>
+<h3 id="data-volumes">Data volumes<a class="headerlink" href="#data-volumes" title="Permanent link">&para;</a></h3>
+<p>If you need more storage, a data volume may be required. This is conceptually similar to connecting a high-capacity USB hard drive to your PC.</p>
+<h2 id="azure-blob-storage-containers">Azure Blob Storage (Containers)<a class="headerlink" href="#azure-blob-storage-containers" title="Permanent link">&para;</a></h2>
+<p>If you need to collaborate with others, Azure Blob Storage (as provided by FDI) may be the best option for you and your data. See #choosing-your-storage for more information.</p>
+<h2 id="choose-your-storage">Choose your storage<a class="headerlink" href="#choose-your-storage" title="Permanent link">&para;</a></h2>
+<p>Depending on your and your project's unique needs and requirements, Kubeflow Volumes or Azure Blob Storage (or both) may be best suited:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Tapez</th>
-<th style="text-align: left;">Simultanéité</th>
-<th style="text-align: left;">Vitesse</th>
-<th>Capacité</th>
-<th>Partageabilité</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Simultaneity</th>
+<th style="text-align: left;">Speed</th>
+<th>Capacity</th>
+<th>Shareability</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong><a href="AzureBlobStorage.html">Stockage Blob Azure (Conteneurs)</a></strong></td>
-<td style="text-align: left;">Accès simultané depuis plusieurs serveurs d'ordinateurs portables en même temps</td>
-<td style="text-align: left;">Fast-ish (téléchargement rapide, téléchargement modeste, latence modeste)</td>
-<td>Infini (dans la limite du raisonnable)</td>
-<td>Partageable</td>
+<td style="text-align: left;"><strong><a href="AzureBlobStorage.html">Azure Blob Storage (Containers)</a></strong></td>
+<td style="text-align: left;">Simultaneous access from multiple laptop servers at the same time</td>
+<td style="text-align: left;">Fast-ish (fast download, modest upload, modest latency)</td>
+<td>Infinite (within reason)</td>
+<td>Shareable</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><a href="KubeflowVolumes.html">Volumes Kubeflow (Disques)</a></strong></td>
-<td style="text-align: left;">Un serveur de bloc-note à la fois</td>
-<td style="text-align: left;">Le plus rapide (débit et latence)</td>
-<td>&lt;=512 Go au total par disque</td>
-<td>Non partageable</td>
+<td style="text-align: left;"><strong><a href="KubeflowVolumes.html">Kubeflow Volumes (Disks)</a></strong></td>
+<td style="text-align: left;">One Notebook Server at a Time</td>
+<td style="text-align: left;">Fastest (throughput and latency)</td>
+<td>&lt;=512 GB total per disk</td>
+<td>Not shareable</td>
 </tr>
 </tbody>
 </table>
-<!-- plus joli-ignorer -->
-<div class="admonition info">
-<p class="admonition-title">Si vous ne savez pas lequel choisir, ne vous inquiétez pas !</p>
-<p>Ce sont des lignes directrices, pas une science exacte : choisissez ce qui sonne le mieux maintenant et appliquez-le. Le meilleur choix pour une utilisation compliquée n’est pas évident et nécessite souvent une expérience pratique, il suffit donc d’essayer quelque chose. Dans la plupart des situations, les deux options fonctionnent bien même si elles ne sont pas parfaites, et rappelez-vous que les données peuvent toujours être copiées plus tard si vous changez d'avis.</p>
-</div>
+<!-- prettier-ignore -->
+<p>!!! Info “If you don’t know which one to choose, don’t worry!”
+      These are guidelines, not an exact science: choose what sounds best now and apply it. The best choice for complicated use is not obvious and often requires hands-on experience, so just try something. In most situations, both options work well even if they aren't perfect, and remember that the data can always be copied later if you change your mind.</p>
 
 
 
