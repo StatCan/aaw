@@ -10,7 +10,7 @@ Kubeflow utilise des disques virtuels appelés Volumes. Vous les rencontrerez su
 
 Les volumes d'espace de travail sont similaires dans leur concept et leur fonction au disque dur de votre ordinateur portable, c'est là que tous les logiciels sont stockés et c'est le périphérique de stockage par défaut pour toutes vos affaires.
 
-###Volumes de données
+### Volumes de données
 
 Si vous avez besoin de plus de stockage, un volume de données peut être nécessaire. Ceci est conceptuellement similaire à la connexion d'un disque dur USB haute capacité à votre PC.
 
