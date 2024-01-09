@@ -66,6 +66,10 @@ extra:
 # Page tree
 nav:
   - Getting Started: index.md
+  - Storage:
+      - Overview: 5-Storage/Overview.md
+      - Azure Blob Storage (Containers): 5-Storage/AzureBlobStorage.md
+      - Kubeflow Volumes (Disks): 5-Storage/KubeflowVolumes.md
   - Analysis:
       - Overview: 1-Experiments/Overview.md
       - Virtual Environments: 1-Experiments/Virtual-Environments.md
@@ -82,6 +86,12 @@ nav:
            - SweetViz: 1-Experiments/Notebooks/SweetViz_EN.ipynb
            - VisualPython: 1-Experiments/Notebooks/VisualPython_EN.ipynb
            - YData Profiling: 1-Experiments/Notebooks/YData-Profiling_EN.ipynb
+  - Collaboration:
+      - Overview: 4-Collaboration/Overview.md
+      - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
+      - GEA: 4-Collaboration/Geospatial-Analytical-Environment.md
+  - Gitlab:
+      - Gitlab: 6-Gitlab/Gitlab.md
   - Publishing:
       - Overview: 2-Publishing/Overview.md
       - R Shiny: 2-Publishing/R-Shiny.md
@@ -89,18 +99,6 @@ nav:
       - Datasette: 2-Publishing/Datasette.md
       - Power BI: 2-Publishing/PowerBI.md
       - Custom: 2-Publishing/Custom.md
-  - Pipelines:
-      - Argo: 3-Pipelines/Argo.md
-  - Collaboration:
-      - Overview: 4-Collaboration/Overview.md
-      - Request a Namespace: 4-Collaboration/Request-a-Namespace.md
-      - GEA: 4-Collaboration/Geospatial-Analytical-Environment.md
-  - Storage:
-      - Overview: 5-Storage/Overview.md
-      - Azure Blob Storage (Containers): 5-Storage/AzureBlobStorage.md
-      - Kubeflow Volumes (Disks): 5-Storage/KubeflowVolumes.md
-  - Gitlab:
-      - Gitlab: 6-Gitlab/Gitlab.md
   - MLOps:
       - Overview: 7-MLOps/Overview.md
       - Machine Learning Models: 7-MLOps/Machine-Learning.md
@@ -111,6 +109,8 @@ nav:
         - Example Notebooks:
           - Seldon Iris Classifier: 7-MLOps/sklearn_iris_jsondata.ipynb
       - Integrate with External PaaS: 7-MLOps/PaaS-Integration.md
+  - Pipelines:
+      - Argo: 3-Pipelines/Argo.md
   - MicroSim:
       - Getting Started: 8-MicroSim/GettingStarted.md
       - Adding new models: 8-MicroSim/Additions.md
