@@ -1,10 +1,10 @@
 # Premiers pas avec Kubeflow et OpenM++.
 
-Ce document est destiné à servir d'introduction aux serveurs AAW Kubeflow Bloc-note et à leur utilisation pour le projet OpenM++.
+Ce document est destiné à servir d'introduction aux Bloc-note de Kubeflow sur la plateforme EAA et à leur utilisation pour le projet OpenM++.
 
 ## Démarrage
 
-Pour accéder au portail AAW Kubeflow, accédez au site Web suivant.
+Pour accéder au portail Kubeflow de l'EAA, accédez au site Web suivant.
 
 [https://kubeflow.aaw-dev.cloud.statcan.ca/](https://kubeflow.aaw-dev.cloud.statcan.ca/)
 
@@ -14,7 +14,7 @@ Cela vous redirigera vers une page de connexion Microsoft.
 
 Sélectionnez le compte que vous souhaitez utiliser et procédez à l'authentification.
 
-Une fois vos informations d'identification authentifiées, vous serez redirigé vers le panneau de gestion AAW Kubeflow.
+Une fois vos informations d'identification authentifiées, vous serez redirigé vers le panneau de gestion Kubeflow de l'EAA.
 
 ![Panneau de gestion Kubeflow](../images/KFMP01.png)
 
@@ -39,7 +39,7 @@ Faites défiler vers le bas pour voir le **Bouton de lancement.** Le bouton de l
 
 Appuyez sur le bouton Lancer pour lancer votre nouveau bloc-notes.
 
-[Pour plus d'informations sur Statcan AAW Kubeflow, cliquez ici.](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow/)
+[Pour plus d'informations sur Kubeflow de l'EAA, cliquez ici.](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow/)
 
 ### Carnets existants
 
