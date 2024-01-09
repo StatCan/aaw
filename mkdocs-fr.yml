@@ -68,8 +68,8 @@ nav:
   - Démarrage: index.md
   - Stockage:
       - Aperçu: 5-Stockage/Aperçu.md
-      - Disque: 5-Stockage/Disque.md
-      - Azure Blob Storage: 5-Stockage/StockageBlobAzure.md
+      - Azure Blob Storage (Conteneurs): 5-Stockage/StockageBlobAzure.md
+      - Kubeflow Volumes (Disques): 5-Stockage/KubeflowVolumes.md
   - Analyse:
       - Aperçu: 1-Experiences/Apercu.md
       - Environnements virtuels: 1-Experiences/Environnements-virtuels.md

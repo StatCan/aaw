@@ -68,8 +68,8 @@ nav:
   - Getting Started: index.md
   - Storage:
       - Overview: 5-Storage/Overview.md
-      - Disks: 5-Storage/Disks.md
-      - Azure Blob Storage: 5-Storage/AzureBlobStorage.md
+      - Azure Blob Storage (Containers): 5-Storage/AzureBlobStorage.md
+      - Kubeflow Volumes (Disks): 5-Storage/KubeflowVolumes.md
   - Analysis:
       - Overview: 1-Experiments/Overview.md
       - Virtual Environments: 1-Experiments/Virtual-Environments.md
