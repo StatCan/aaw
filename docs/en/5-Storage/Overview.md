@@ -1,6 +1,6 @@
 # Aperçu du stockage
 
-Plusieurs options de stockage sont disponibles pour les utilisateurs d'AAW pour accéder et importer leurs données. Vous trouverez ci-dessous une description de chaque type. Il existe des pages de documentation distinctes pour la connexion à chaque type de stockage.
+Plusieurs options de stockage sont disponibles pour les utilisateurs de l'EAA pour accéder et importer leurs données. Vous trouverez ci-dessous une description de chaque type. Il existe des pages de documentation distinctes pour la connexion à chaque type de stockage.
 
 ## Volumes Kubeflow (Disques)
 

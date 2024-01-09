@@ -10,13 +10,13 @@ Les conteneurs de stockage Azure Blob présentent les avantages suivants par rap
   
 <!-- plus joli-ignorer -->
 !!! avertissement "Les conteneurs et les compartiments Azure Blob Storage ont remplacé le stockage et les compartiments MinIO."
-     Les utilisateurs seront responsables de la migration des données des compartiments MinIO vers les dossiers Azure Storage. [Cliquez ici pour obtenir des instructions sur la façon de migrer !](#how-to-migrate-from-minio-to-azure-blob-storage). Pour les fichiers plus volumineux, les utilisateurs peuvent [contacter AAW pour obtenir de l'aide](https://statcan-aaw.slack.com).
+     Les utilisateurs seront responsables de la migration des données des compartiments MinIO vers les dossiers Azure Storage. [Cliquez ici pour obtenir des instructions sur la façon de migrer !](#how-to-migrate-from-minio-to-azure-blob-storage). Pour les fichiers plus volumineux, les utilisateurs peuvent [contacter l'EAA pour obtenir de l'aide](https://statcan-aaw.slack.com).
 
 ## Installation
 
 ### Accès au conteneur Blob depuis JupyterLab
 
-Les volumes Blob CSI sont conservés sous « ~/buckets » lors de la création d'un serveur bloc-note. Les fichiers sous « ~/buckets » sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le « ~/buckets » monté sur le système de fichiers, rendant les données accessibles de partout.
+Les volumes Blob CSI sont conservés sous « ~/buckets » lors de la création d'un serveur bloc-note. Les fichiers sous « ~/buckets » sont sauvegardés par le stockage Blob. Tous les ordinateurs portables l'EAA auront le « ~/buckets » monté sur le système de fichiers, rendant les données accessibles de partout.
 
 Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire depuis Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre bloc-note Kubeflow).
 
@@ -51,9 +51,9 @@ L'accès aux données internes utilise la connexion de stockage commune DAS qui 
 - **interne-non classifié :** Non classifié et accessible uniquement aux employés de Statcan.
 - **interne-protected-b :** Protégé B et accessible uniquement aux employés de StatCan.
 
-Les conteneurs ci-dessus suivent la même convention que les conteneurs AAW en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs **externes**, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.
+Les conteneurs ci-dessus suivent la même convention que les conteneurs l'EAA en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs **externes**, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.
 
-AAW dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées B vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.
+L'EAA dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées B vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.
 
 Veuillez contacter l'équipe FAIR Data Infrastructure si vous avez un cas d'utilisation de ces données.
 
