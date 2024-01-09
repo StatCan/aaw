@@ -1,8 +1,7 @@
 
-# Getting started with Kubeflow Notebooks and OpenM++.
+# Getting started with Kubeflow and OpenM++.
 
-This document is intended to act as an introduction to The AAWs Kubeflow Notebook servers and their use for the OpenM++ project.
-
+This document is intended to act as an introduction to The AAW's Kubeflow Notebook servers and their use for the OpenM++ project.
 
 ## Starting
 
@@ -18,7 +17,7 @@ Select the account you wish to use and proceed with the authentication.
 
 After your credentials are authenticated, you will be redirected to the AAW Kubeflow management panel. 
 
-![Kube Flow Management Panel](../images/KFMP01.png)
+![Kubeflow Management Panel](../images/KFMP01.png)
 
 ## Create a notebook.
 
@@ -61,11 +60,11 @@ If the **Connect button** is disabled, click on the triangle (Start image) butto
 
 ## Your Kubeflow notebook.
 
-![Kube Flow screen](../images/KFNotebook01.png)
+![Kubeflow screen](../images/KFNotebook01.png)
 
 To start the OpenM++ UI, click on the OpenM++ icon on the Notebooks page.
 
-![Kube Flow screen](../images/KFNotebook09.png)
+![Kubeflow screen](../images/KFNotebook09.png)
 
 This will open a new window with the OpenM++ UI running.
 
@@ -77,8 +76,6 @@ This will open a new window with the OpenM++ UI running.
 Click on the Ellipses symbol on the upper Left corner to change language.
 
 ![OpenM UI screen](../images/OpenMUI02.png)
-
-
 
 Click on the Hamburger Menu on the top right to open the sidebar.
 
@@ -122,4 +119,3 @@ You can then click the **Run the Model** to run the job.
 This will run the Model and brings up the Model Run Results Panel which shows the results of the run.
 
 ![OpenM UI screen](../images/OpenMUI07.png)
-
