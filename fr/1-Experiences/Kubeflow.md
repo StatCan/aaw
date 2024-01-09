@@ -86,7 +86,7 @@ Cela vous permet de répondre à vos besoins de calcul tout en minimisant les
 coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur complet
 (6 cœurs CPU, 96 Gio de mémoire accessible et 1 GPU).
 
-Dans les options avancées, vous pouvez sélectionner une limite supérieure au nombre de cœurs de processeur et de RAM demandés. Le montant demandé est le montant garanti disponible pour votre serveur bloc-notes et vous paierez toujours au moins ce montant. Si la limite est supérieure à la quantité demandée, si des cœurs de RAM et de processeur supplémentaires sont disponibles sur ce serveur partagé dans le cluster, votre serveur de bloc-notes peut les utiliser selon vos besoins. Un cas d’utilisation est celui des tâches qui ne nécessitent généralement qu’un seul cœur de processeur mais qui peuvent bénéficier du multithreading pour accélérer certaines opérations. En demandant un cœur de processeur mais une limite plus élevée, vous pouvez payer beaucoup moins pour le serveur boc-notes tout en lui permettant d'utiliser des cœurs de processeur de rechange inutilisés si nécessaire pour accélérer les calculs.
+Dans les options avancées, vous pouvez sélectionner une limite supérieure au nombre de cœurs de processeur et de RAM demandés. Le montant demandé est le montant garanti disponible pour votre serveur de bloc-notes et vous paierez toujours au moins ce montant. Si la limite est supérieure à la quantité demandée, si des cœurs de RAM et de processeur supplémentaires sont disponibles sur ce serveur partagé dans le cluster, votre serveur de bloc-notes peut les utiliser selon vos besoins. Un cas d’utilisation est celui des tâches qui ne nécessitent généralement qu’un seul cœur de processeur mais qui peuvent bénéficier du multithreading pour accélérer certaines opérations. En demandant un cœur de processeur mais une limite plus élevée, vous pouvez payer beaucoup moins pour le serveur boc-notes tout en lui permettant d'utiliser des cœurs de processeur de rechange inutilisés si nécessaire pour accélérer les calculs.
 
 ![Choisir CPU et RAM](../images/cpu-ram.PNG)
 
@@ -131,7 +131,7 @@ Vous pouvez également créer des volumes de données pouvant être utilisés po
 
 - **Taille en GiB** : De 4 Gio à 512 Gio.
 
-- **Chemin de montage** : Chemin où le volume de données est accessible sur le serveur bloc-notes, par
+- **Chemin de montage** : Chemin où le volume de données est accessible sur le serveur de bloc-notes, par
    par défaut `/home/jovyan/vol-1`, `/home/jovyan/vol-2`, etc. (compteur incrémentiel par données
    volume monté).
 

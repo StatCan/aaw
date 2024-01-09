@@ -1,6 +1,6 @@
-# Sélection d'une image pour votre serveur bloc-notes
+# Sélection d'une image pour votre serveur de bloc-notes
 
-En fonction de votre projet ou du cas d'utilisation du serveur bloc-notes, certaines images peuvent être plus adapté que d'autres. Ce qui suit passera en revue les caractéristiques principales de chacun pour vous aider à choisir l’image la plus appropriée pour vous.
+En fonction de votre projet ou du cas d'utilisation du serveur de bloc-notes, certaines images peuvent être plus adapté que d'autres. Ce qui suit passera en revue les caractéristiques principales de chacun pour vous aider à choisir l’image la plus appropriée pour vous.
 
 Lors de la sélection d'une image, vous disposez de 3 options principales :
 

@@ -491,11 +491,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Stockage/Disque.html" class="md-nav__link">
+      <a href="../5-Stockage/StockageBlobAzure.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Disque
+    Azure Blob Storage (Conteneurs)
   </span>
   
 
@@ -512,11 +512,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Stockage/StockageBlobAzure.html" class="md-nav__link">
+      <a href="../5-Stockage/KubeflowVolumes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Azure Blob Storage
+    Kubeflow Volumes (Disques)
   </span>
   
 
@@ -1870,7 +1870,7 @@ pouvez spécifier la quantité exacte de CPU et de mémoire dont vous avez besoi
 Cela vous permet de répondre à vos besoins de calcul tout en minimisant les
 coûts. Pour un serveur portable GPU, vous obtiendrez toujours le serveur complet
 (6 cœurs CPU, 96 Gio de mémoire accessible et 1 GPU).</p>
-<p>Dans les options avancées, vous pouvez sélectionner une limite supérieure au nombre de cœurs de processeur et de RAM demandés. Le montant demandé est le montant garanti disponible pour votre serveur bloc-notes et vous paierez toujours au moins ce montant. Si la limite est supérieure à la quantité demandée, si des cœurs de RAM et de processeur supplémentaires sont disponibles sur ce serveur partagé dans le cluster, votre serveur de bloc-notes peut les utiliser selon vos besoins. Un cas d’utilisation est celui des tâches qui ne nécessitent généralement qu’un seul cœur de processeur mais qui peuvent bénéficier du multithreading pour accélérer certaines opérations. En demandant un cœur de processeur mais une limite plus élevée, vous pouvez payer beaucoup moins pour le serveur boc-notes tout en lui permettant d'utiliser des cœurs de processeur de rechange inutilisés si nécessaire pour accélérer les calculs.</p>
+<p>Dans les options avancées, vous pouvez sélectionner une limite supérieure au nombre de cœurs de processeur et de RAM demandés. Le montant demandé est le montant garanti disponible pour votre serveur de bloc-notes et vous paierez toujours au moins ce montant. Si la limite est supérieure à la quantité demandée, si des cœurs de RAM et de processeur supplémentaires sont disponibles sur ce serveur partagé dans le cluster, votre serveur de bloc-notes peut les utiliser selon vos besoins. Un cas d’utilisation est celui des tâches qui ne nécessitent généralement qu’un seul cœur de processeur mais qui peuvent bénéficier du multithreading pour accélérer certaines opérations. En demandant un cœur de processeur mais une limite plus élevée, vous pouvez payer beaucoup moins pour le serveur boc-notes tout en lui permettant d'utiliser des cœurs de processeur de rechange inutilisés si nécessaire pour accélérer les calculs.</p>
 <p><img alt="Choisir CPU et RAM" src="../images/cpu-ram.PNG" /></p>
 <h2 id="gpus">GPUs<a class="headerlink" href="#gpus" title="Permanent link">&para;</a></h2>
 <p>Si vous voulez un serveur GPU, sélectionnez « 1 » comme nombre de GPU et « NVIDIA » comme fournisseur de GPU (le bouton de création sera grisé jusqu'à ce que le fournisseur de GPU soit sélectionné si
@@ -1910,7 +1910,7 @@ cœurs et 112 Go de mémoire.</p>
 <li><strong>Taille en GiB</strong> : De 4 Gio à 512 Gio.</li>
 </ul>
 <ul>
-<li><strong>Chemin de montage</strong> : Chemin où le volume de données est accessible sur le serveur bloc-notes, par
+<li><strong>Chemin de montage</strong> : Chemin où le volume de données est accessible sur le serveur de bloc-notes, par
    par défaut <code>/home/jovyan/vol-1</code>, <code>/home/jovyan/vol-2</code>, etc. (compteur incrémentiel par données
    volume monté).</li>
 </ul>

@@ -58,7 +58,7 @@ Il existe de nombreuses façons de former des modèles d’apprentissage automat
 
 <!-- prettier-ignore -->
 !!! info "Serveurs bloc-notes"
-    Que vous envisagiez de travailler dans JupyterLab, R Studio ou quelque chose de plus avancé avec les flux de travail Argo, vous aurez besoin du serveur bloc-notes approprié. [Suivez les instructions trouvées ici pour commencer.](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) 
+    Que vous envisagiez de travailler dans JupyterLab, R Studio ou quelque chose de plus avancé avec les flux de travail Argo, vous aurez besoin du serveur de bloc-notes approprié. [Suivez les instructions trouvées ici pour commencer.](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) 
 
 ### Utiliser JupyterLab
 

@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://statcan.github.io/aaw/fr/5-Stockage/StockageBlobAzure.html">
       
       
-        <link rel="prev" href="Disque.html">
+        <link rel="prev" href="Aper%C3%A7u.html">
       
       
-        <link rel="next" href="../1-Experiences/Apercu.html">
+        <link rel="next" href="KubeflowVolumes.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Azure Blob Storage - Espace d'analyse avancée</title>
+        <title>Azure Blob Storage (Conteneurs) - Espace d'analyse avancée</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apercu" class="md-skip">
+        <a href="#stockage-blob-azure-conteneurs" class="md-skip">
           Aller au contenu
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure Blob Storage
+              Azure Blob Storage (Conteneurs)
             
           </span>
         </div>
@@ -490,27 +490,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="Disque.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Disque
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -523,16 +502,160 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Azure Blob Storage (Conteneurs)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="StockageBlobAzure.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Azure Blob Storage
+    Azure Blob Storage (Conteneurs)
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acces-au-conteneur-blob-depuis-jupyterlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accès au conteneur Blob depuis JupyterLab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accès au conteneur Blob depuis JupyterLab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conteneurs-non-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteneurs non classés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteneurs-b-proteges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteneurs B protégés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-de-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de conteneurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-aux-donnees-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accès aux données internes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lexplorateur-de-stockage-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'explorateur de stockage Azure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-migrer-de-minio-vers-azure-blob-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment migrer de MinIO vers Azure Blob Storage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="KubeflowVolumes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubeflow Volumes (Disques)
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1721,6 +1844,107 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acces-au-conteneur-blob-depuis-jupyterlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accès au conteneur Blob depuis JupyterLab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accès au conteneur Blob depuis JupyterLab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conteneurs-non-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteneurs non classés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conteneurs-b-proteges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteneurs B protégés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-de-conteneurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de conteneurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acces-aux-donnees-internes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accès aux données internes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarifs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lexplorateur-de-stockage-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'explorateur de stockage Azure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-migrer-de-minio-vers-azure-blob-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comment migrer de MinIO vers Azure Blob Storage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1737,81 +1961,73 @@
   
 
 
-<h1 id="apercu">Aperçu<a class="headerlink" href="#apercu" title="Permanent link">&para;</a></h1>
-<p><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction">Azure Blob Storage</a> est la solution de stockage d'objets de Microsoft pour le nuage informatique. Le stockage blob est optimisé pour stocker des quantités massives de données non structurées. Les données non structurées sont des données qui n'adhèrent pas à un modèle de données ou à une définition particulière, comme du texte ou des données binaires.</p>
-<p>Les conteneurs de stockage blob Azure sont efficaces dans trois domaines :</p>
-<ul>
-<li>De grandes quantités de données - Les conteneurs peuvent être énormes : bien plus gros que les disques durs. Et ils sont toujours rapides.</li>
-<li>Accessible par plusieurs consommateurs à la fois - Vous pouvez accéder à la même source de données à partir de plusieurs serveurs bloc-note et pipelines en même temps sans avoir besoin de dupliquer les données.</li>
-<li>Partage - Les espaces de noms de projet peuvent partager un conteneur. C'est idéal pour partager des données avec des personnes extérieures à votre espace de travail.</li>
-</ul>
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Les conteneurs de stockage Azure Blob et le support de buckets remplaceront les supports de stockage Minio Buckets et Minio</p>
-<p>Les utilisateurs seront responsables de la migration des données des Minio Buckets vers les dossiers Azure Storage. Pour les fichiers plus volumineux, les utilisateurs peuvent contacter AAW pour obtenir de l'aide.</p>
+<h1 id="stockage-blob-azure-conteneurs">Stockage Blob Azure (Conteneurs)<a class="headerlink" href="#stockage-blob-azure-conteneurs" title="Permanent link">&para;</a></h1>
+<p><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction">Azure Blob Storage</a> est la solution de stockage d'objets de Microsoft pour le cloud. Blob Storage est optimisé pour stocker des quantités massives de données non structurées. Les données non structurées sont des données qui n'adhèrent pas à un modèle de données ou à une définition particulière, comme du texte ou des données binaires.</p>
+<p>Les conteneurs de stockage Azure Blob présentent les avantages suivants par rapport aux volumes Kubeflow (disques) :</p>
+<ol>
+<li><strong>Capacité :</strong> Les conteneurs peuvent être énormes : bien plus gros que les disques durs. Et ils sont toujours rapides.</li>
+<li><strong>Simultanéité :</strong> Vous pouvez accéder simultanément à la même source de données à partir de plusieurs serveurs de bloc-note et pipelines sans avoir besoin de dupliquer les données.</li>
+<li><strong>Partage :</strong> les espaces de noms de projet peuvent partager un conteneur. C'est idéal pour partager des données avec des personnes extérieures à votre espace de travail.</li>
+</ol>
+<!-- plus joli-ignorer -->
+<div class="admonition avertissement">
+<p class="admonition-title">Les conteneurs et les compartiments Azure Blob Storage ont remplacé le stockage et les compartiments MinIO.</p>
+<p>Les utilisateurs seront responsables de la migration des données des compartiments MinIO vers les dossiers Azure Storage. <a href="#how-to-migrate-from-minio-to-azure-blob-storage">Cliquez ici pour obtenir des instructions sur la façon de migrer !</a>. Pour les fichiers plus volumineux, les utilisateurs peuvent <a href="https://statcan-aaw.slack.com">contacter l'EAA pour obtenir de l'aide</a>.</p>
 </div>
-<h2 id="conteneur-blob-monte-sur-un-serveur-de-bloc-note">Conteneur Blob monté sur un serveur de bloc-note<a class="headerlink" href="#conteneur-blob-monte-sur-un-serveur-de-bloc-note" title="Permanent link">&para;</a></h2>
-<!-- prettier-ignore -->
-
-<p>Les volumes Blob CSI sont conservés sous <code>/home/jovyan/buckets</code> lors de la création d'un serveur bloc-notes. Les fichiers sous <code>/buckets</code> sont sauvegardés par le stockage Blob. Tous les ordinateurs portables AAW auront le <code>/buckets</code> monté sur le système de fichiers, rendant les données accessibles de partout.</p>
-<p><img alt="Dossiers Blob montés en tant que répertoires bloc-note Jupyter" src="../images/container-mount.png" /></p>
-<h1 id="support-de-dossier-aaw-pour-ordinateur-portable-non-classe">Support de dossier AAW pour ordinateur portable non classé<a class="headerlink" href="#support-de-dossier-aaw-pour-ordinateur-portable-non-classe" title="Permanent link">&para;</a></h1>
-<p><img alt="Dossiers de bloc-note non classifiés montés dans les répertoires bloc-note Jupyter" src="../images/unclassified-mount.png" /></p>
-<h1 id="support-de-dossier-aaw-pour-ordinateur-portable-protege-b">Support de dossier AAW pour ordinateur portable protégé-b<a class="headerlink" href="#support-de-dossier-aaw-pour-ordinateur-portable-protege-b" title="Permanent link">&para;</a></h1>
-<p><img alt="Carnets protégés-b montés en tant que répertoires bloc-note Jupyter" src="../images/protectedb-mount.png" /></p>
-<p>Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire à partir de Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre bloc-note Kubeflow).</p>
-<h2 id="comment-migrer-de-minio-vers-azure-blob-storage">Comment migrer de MinIO vers Azure Blob Storage<a class="headerlink" href="#comment-migrer-de-minio-vers-azure-blob-storage" title="Permanent link">&para;</a></h2>
-<p>Tout d’abord, importez les variables d’environnement stockées dans votre coffre-fort de secrets. Vous importerez soit depuis <code>minio-gateway</code> soit depuis <code>fdi-gateway</code> selon l'endroit où vos données ont été ingérées.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>jovyan@rstudio-0 :~$ source /vault/secrets/fdi-gateway-protected-b
-</span></code></pre></div>
-<p>Ensuite, vous créez un alias pour accéder à vos données.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>jovyan@rstudio-0 : ~$ mc alias défini minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
-</span></code></pre></div>
-<p>Répertoriez le contenu de votre dossier de données avec <code>mc ls</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>jovyan@rstudio-0:~$ mc ls minio
-</span></code></pre></div>
-<p>Enfin, copiez vos données MinIO dans votre répertoire Azure Blob Storage avec <code>mc cp --recursive</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>jovyan@rstudio-0:~$ mc cp --recursive minio ~/buckets/
-</span></code></pre></div>
-<p>Si vous disposez de données protégées-b, vous pouvez copier vos données dans le compartiment protégé-b.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>jovyan@rstudio-0:~$ mc cp —-recursive minio ~/buckets/aaw-protected-b
-</span></code></pre></div>
-<!-- prettier-ignore -->
-
-<h2 id="types-de-conteneurs">Types de conteneurs<a class="headerlink" href="#types-de-conteneurs" title="Permanent link">&para;</a></h2>
-<p>Les conteneurs Blob suivants sont disponibles :</p>
-<p>L’accès à tous les conteneurs Blob est le même. La différence entre les conteneurs réside dans le type de stockage qui les sous-tend :</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="acces-au-conteneur-blob-depuis-jupyterlab">Accès au conteneur Blob depuis JupyterLab<a class="headerlink" href="#acces-au-conteneur-blob-depuis-jupyterlab" title="Permanent link">&para;</a></h3>
+<p>Les volumes Blob CSI sont conservés sous « ~/buckets » lors de la création d'un serveur bloc-note. Les fichiers sous « ~/buckets » sont sauvegardés par le stockage Blob. Tous les ordinateurs portables l'EAA auront le « ~/buckets » monté sur le système de fichiers, rendant les données accessibles de partout.</p>
+<p>Ces dossiers peuvent être utilisés comme n'importe quel autre : vous pouvez copier des fichiers vers/depuis l'explorateur de fichiers, écrire depuis Python/R, etc. La seule différence est que les données sont stockées dans le conteneur de stockage Blob plutôt que sur un disque local. (et est donc accessible partout où vous pouvez accéder à votre bloc-note Kubeflow).</p>
+<p><img alt="Dossiers Blob montés en tant que répertoires" src="../images/container-mount.png" /></p>
+<h4 id="conteneurs-non-classes">Conteneurs non classés<a class="headerlink" href="#conteneurs-non-classes" title="Permanent link">&para;</a></h4>
+<p>Les conteneurs de stockage d'objets blob non classés apparaîtront comme suit dans le dossier « ~/buckets ».</p>
+<p><img alt="Dossiers de bloc-note non classifiés montés en tant que répertoires dans JupyterLab" src="../images/unclassified-mount.png" /></p>
+<h4 id="conteneurs-b-proteges">Conteneurs B protégés<a class="headerlink" href="#conteneurs-b-proteges" title="Permanent link">&para;</a></h4>
+<p>Les conteneurs de stockage de blob B protégés apparaîtront comme suit dans le dossier « ~/buckets ».</p>
+<p><img alt="Carnets B protégés montés en tant que répertoires dans JupyterLab" src="../images/protectedb-mount.png" /></p>
+<h3 id="types-de-conteneurs">Types de conteneurs<a class="headerlink" href="#types-de-conteneurs" title="Permanent link">&para;</a></h3>
+<p>Les conteneurs Blob suivants sont disponibles. L’accès à tous les conteneurs Blob est le même. La différence entre les conteneurs réside dans le type de stockage qui les sous-tend :</p>
 <ul>
-<li><strong>aaw-unclassified :</strong> Par défaut, utilisez celui-ci. Stocke les données non classifiées.</li>
+<li><strong>aaw-unclassified :</strong> Par défaut, utilisez celui-ci pour stocker des données non classifiées.</li>
+<li><strong>aaw-protected-b :</strong> Utilisez celui-ci pour stocker des données sensibles protégées B.</li>
+<li><strong>aaw-unclassified-ro :</strong> Cette classification est Protégé B mais accès en lecture seule. Cela permet aux utilisateurs de visualiser les données non classifiées dans un bloc-notes Protégé B.</li>
 </ul>
+<h3 id="acces-aux-donnees-internes">Accès aux données internes<a class="headerlink" href="#acces-aux-donnees-internes" title="Permanent link">&para;</a></h3>
+<p>L'accès aux données internes utilise la connexion de stockage commune DAS qui est utilisée par les utilisateurs internes et externes qui ont besoin d'accéder à des données non classifiées ou protégées B. Les conteneurs suivants peuvent être provisionnés :</p>
 <ul>
-<li><strong>aaw-protected-b :</strong> Stocke les données sensibles protégées-b.</li>
+<li><strong>externe-non classifié :</strong> Non classifié et accessible aux employés de StatCan et non-Statcan.</li>
+<li><strong>external-protected-b :</strong> Protégé B et accessible aux employés de StatCan et aux non-employés de StatCan.</li>
+<li><strong>interne-non classifié :</strong> Non classifié et accessible uniquement aux employés de Statcan.</li>
+<li><strong>interne-protected-b :</strong> Protégé B et accessible uniquement aux employés de StatCan.</li>
 </ul>
-<ul>
-<li><strong>aaw-unclassified-ro :</strong> Cette classification est protégée-b mais en accès en lecture seule. Cela permet aux utilisateurs de visualiser les données non classifiées dans un bloc-notes protégé-b.</li>
-</ul>
-<!-- prettier-ignore -->
-
-<h2 id="acces-aux-donnees-internes">Accès aux données internes<a class="headerlink" href="#acces-aux-donnees-internes" title="Permanent link">&para;</a></h2>
-<!-- prettier-ignore -->
-<p>L'accès aux données internes utilise la connexion de stockage commune DAS qui est utilisée par les utilisateurs internes et externes qui ont besoin d'accéder à des données non classifiées ou protégées-b. Les conteneurs suivants peuvent être mis à disposition :</p>
-<ul>
-<li><strong>externe-non classé</strong></li>
-<li><strong>externe-protégé-b</strong></li>
-<li><strong>interne-non classé</strong></li>
-<li><strong>interne-protégé-b</strong></li>
-</ul>
-<p>Ils suivent la même convention que les conteneurs AAW ci-dessus en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs <strong>externes</strong>, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.</p>
-<p>AAW dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.</p>
+<p>Les conteneurs ci-dessus suivent la même convention que les conteneurs l'EAA en termes de données, mais il existe une couche d'isolement entre les employés de StatCan et les non-employés de StatCan. Les employés non-Statcan ne sont autorisés que dans les conteneurs <strong>externes</strong>, tandis que les employés de StatCan peuvent avoir accès à n'importe quel conteneur.</p>
+<p>L'EAA dispose d'une intégration avec l'équipe FAIR Data Infrastructure qui permet aux utilisateurs de transférer des données non classifiées et protégées B vers des comptes de stockage Azure, permettant ainsi aux utilisateurs d'accéder à ces données à partir de serveurs bloc-note.</p>
 <p>Veuillez contacter l'équipe FAIR Data Infrastructure si vous avez un cas d'utilisation de ces données.</p>
 <h2 id="tarifs">Tarifs<a class="headerlink" href="#tarifs" title="Permanent link">&para;</a></h2>
-<!-- prettier-ignore -->
+<!-- plus joli-ignorer -->
 <div class="admonition info">
 <p class="admonition-title">Les modèles de tarification sont basés sur l'utilisation du processeur et de la mémoire</p>
 <p>Le prix est couvert par KubeCost pour les espaces de noms utilisateur (dans Kubeflow en bas de l'onglet bloc-notes).</p>
 </div>
 <p>En général, le stockage Blob est beaucoup moins cher que <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure Manage Disks</a> et offre de meilleures E/S que les SSD gérés.</p>
+<h2 id="lexplorateur-de-stockage-azure">L'explorateur de stockage Azure<a class="headerlink" href="#lexplorateur-de-stockage-azure" title="Permanent link">&para;</a></h2>
+<p>Nos amis de Collaborative Analytics Environment (CAE) disposent de documentation sur l'accès à votre stockage Azure Blob à partir de votre AVD à l'aide de <a href="https://statcan.github.io/cae-eac/en/AzureStorageExplorer/">Azure Storage Explorer</a>. .</p>
+<h2 id="comment-migrer-de-minio-vers-azure-blob-storage">Comment migrer de MinIO vers Azure Blob Storage<a class="headerlink" href="#comment-migrer-de-minio-vers-azure-blob-storage" title="Permanent link">&para;</a></h2>
+<p>Tout d'abord, <code>source</code> les variables d'environnement stockées dans votre coffre-fort de secrets. Vous <code>source</code> soit à partir de <strong>minio-gateway</strong>, soit de <strong>fdi-gateway</strong> selon l'endroit où vos données ont été ingérées :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>source /vault/secrets/fdi-gateway-protected-b
+</span></code></pre></div>
+<p>Ensuite vous créez un alias pour accéder à vos données :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mc alias set minio $MINIO_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+</span></code></pre></div>
+<p>Listez le contenu de votre dossier de données avec <code>mc ls</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mc ls minio
+</span></code></pre></div>
+<p>Enfin, copiez vos données MinIO dans votre répertoire Azure Blob Storage avec <code>mc cp --recursive</code> :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mc cp --recursive minio ~/buckets/aaw-unclassified
+</span></code></pre></div>
+<p>Si vous disposez de données Protégé B, vous pouvez copier vos données dans le compartiment Protégé B :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mc cp --recursive minio ~/buckets/aaw-protected-b
+</span></code></pre></div>
 
 
 

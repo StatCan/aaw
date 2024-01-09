@@ -491,11 +491,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Stockage/Disque.html" class="md-nav__link">
+      <a href="../5-Stockage/StockageBlobAzure.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Disque
+    Azure Blob Storage (Conteneurs)
   </span>
   
 
@@ -512,11 +512,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../5-Stockage/StockageBlobAzure.html" class="md-nav__link">
+      <a href="../5-Stockage/KubeflowVolumes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Azure Blob Storage
+    Kubeflow Volumes (Disques)
   </span>
   
 
@@ -1924,7 +1924,7 @@
 <!-- prettier-ignore -->
 <div class="admonition danger">
 <p class="admonition-title">Partager un espace de nom signifie que vous partagez <strong>toutes les choses</strong>  dans l'espace de nom</p>
-<p>Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un volume, etc.), mais plutôt le partage de <strong>toutes</strong> ressources. Si vous souhaitez partager un serveur bloc-notes Jupyter  avec quelqu'un, vous devez partager l'intégralité de votre espace de nom et <strong>ils auront accès à toutes les autres ressources (Storage Blob Azure, etc.)</strong>.</p>
+<p>Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un volume, etc.), mais plutôt le partage de <strong>toutes</strong> ressources. Si vous souhaitez partager un serveur de bloc-notes Jupyter  avec quelqu'un, vous devez partager l'intégralité de votre espace de nom et <strong>ils auront accès à toutes les autres ressources (Storage Blob Azure, etc.)</strong>.</p>
 </div>
 <p>Dans Kubeflow, chaque utilisateur dispose d'un <strong>espace de noms</strong> qui contient son travail (ses serveurs bloc-notes, pipelines, disques, etc.). Votre espace de noms vous appartient, mais peut être partagé si vous souhaitez collaborer avec d'autres. Vous pouvez également <a href="Demander-EspaceDeNom.html">demander un nouvel espace de noms</a> (soit pour vous-même, soit pour le partager avec une équipe). Une option de collaboration consiste à partager des espaces de noms avec d’autres.</p>
 <p>L'avantage du partage d'un espace de noms Kubeflow est qu'il vous permet, à vous et à vos collègues, de partager l'environnement de calcul et les volumes associés à l'espace de noms. Cela en fait un moyen de partage très simple et libre.</p>

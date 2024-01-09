@@ -35,9 +35,9 @@ Depending on your use case, either disk or bucket may be most suitable. Our [sto
 
 ### Disks
 <center>
-    [![Disks](../images/Disks.PNG)](../5-Storage/Disks.md)
+    [![Disks](../images/Disks.PNG)](../5-Storage/KubeflowVolumes.md)
 </center>
-**[Disks](../5-Storage/Disks.md)** are added to your notebook server by adding Data Volumes.
+**[Disks](../5-Storage/KubeflowVolumes.md)** are added to your notebook server by adding Data Volumes.
 
 ### Data Lakes (Coming Soon)
 

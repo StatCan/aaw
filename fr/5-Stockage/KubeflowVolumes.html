@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://statcan.github.io/aaw/fr/5-Stockage/Disque.html">
+        <link rel="canonical" href="https://statcan.github.io/aaw/fr/5-Stockage/KubeflowVolumes.html">
       
       
-        <link rel="prev" href="Aper%C3%A7u.html">
+        <link rel="prev" href="StockageBlobAzure.html">
       
       
-        <link rel="next" href="StockageBlobAzure.html">
+        <link rel="next" href="../1-Experiences/Apercu.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Disque - Espace d'analyse avancée</title>
+        <title>Kubeflow Volumes (Disques) - Espace d'analyse avancée</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#apercu" class="md-skip">
+        <a href="#volumes-kubeflow-disques" class="md-skip">
           Aller au contenu
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Disque
+              Kubeflow Volumes (Disques)
             
           </span>
         </div>
@@ -490,6 +490,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="StockageBlobAzure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Blob Storage (Conteneurs)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -502,37 +523,82 @@
         
       
       
-      <a href="Disque.html" class="md-nav__link md-nav__link--active">
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kubeflow Volumes (Disques)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="KubeflowVolumes.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Disque
+    Kubeflow Volumes (Disques)
   </span>
   
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="StockageBlobAzure.html" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Azure Blob Storage
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#une-fois-que-vous-avez-les-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Une fois que vous avez les bases...
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-du-stockage-sur-disque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suppression du stockage sur disque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarifs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1721,6 +1787,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#une-fois-que-vous-avez-les-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Une fois que vous avez les bases...
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suppression-du-stockage-sur-disque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suppression du stockage sur disque
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarifs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1737,42 +1847,39 @@
   
 
 
-<h1 id="apercu">Aperçu<a class="headerlink" href="#apercu" title="Permanent link">&para;</a></h1>
-<p>Les disques sont les systèmes de fichiers familiers de type disque dur auxquels vous êtes habitué, fournis à vous des disques SSD rapides !</p>
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<p>Lors de la création de votre serveur bloc-notes, vous demandez des disques en ajoutant des volumes de données à votre serveur de bloc-note (illustré ci-dessous, en allant dans <code>Options avancées</code>). Ils sont automatiquement montés dans le répertoire (<code>Point de montage</code>) que vous choisissez et constituent un moyen simple et fiable de conserver les données attachées à un serveur bloc-note.</p>
-<p><img alt="Ajout d'un volume existant à un nouveau serveur de bloc-notes" src="../images/kubeflow_existing_volume.png" /></p>
-<!-- prettier-ignore -->
-<details class="avertissement">
-<summary>Vous payez pour tous les disques que vous possédez, qu'ils soient connectés à un serveur bloc-note ou non</summary>
-<p>Dès que vous créez un disque, vous le <a href="#prix">payez</a> jusqu'à ce qu'il soit <a href="#suppression-du-stockage-sur-disque">supprimé</a>, même si le Serveur de blocs-note  d'origine est supprimé. Voir <a href="#suppression-du-stockage-sur-disque">Suppression du stockage sur disque</a> pour plus d'informations</p>
-</details>
-<h1 id="une-fois-que-vous-avez-les-bases">Une fois que vous avez les bases...<a class="headerlink" href="#une-fois-que-vous-avez-les-bases" title="Permanent link">&para;</a></h1>
-<p>Lorsque vous supprimez votre serveur bloc-notes, vos disques <strong>ne sont pas supprimés</strong>. Cela vous permet de réutiliser ultérieurement ce même disque (avec tout son contenu) sur un nouveau serveur bloc-notes (comme indiqué ci-dessus avec <code>Type = Existant</code> et le <code>Nom</code> défini sur le volume que vous souhaitez réutiliser). Si vous en avez terminé avec le disque et son contenu, <a href="#suppression-du-stockage-sur-disque">supprimez-le</a>.</p>
+<h1 id="volumes-kubeflow-disques">Volumes Kubeflow (Disques)<a class="headerlink" href="#volumes-kubeflow-disques" title="Permanent link">&para;</a></h1>
+<p>Les volumes Kubeflow ont un concept similaire aux disques durs auxquels vous êtes habitué sur votre bureau Windows, Mac ou Linux. Les volumes Kubeflow sont parfois simplement appelés disques et sont soutenus par des disques SSD (Solid State Drives) rapides sous le capot !</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>Lors de la création de votre serveur de bloc-note, vous demandez des disques en ajoutant des volumes de données à votre serveur de bloc-note (illustré ci-dessous, en allant dans « Options avancées »). Ils sont automatiquement montés dans le répertoire (« Mount Point ») que vous choisissez et constituent un moyen simple et fiable de conserver les données attachées à un serveur de bloc-note.</p>
+<p><img alt="Ajout d'un volume existant à un nouveau serveur de bloc-note" src="../images/kubeflow_existing_volume.png" /></p>
+<!-- plus joli-ignorer -->
+<div class="admonition avertissement">
+<p class="admonition-title">Vous payez pour tous les disques que vous possédez, qu'ils soient connectés ou non à un serveur de bloc-note.</p>
+<p>Dès que vous créez un disque, vous le <a href="#pricing">payez</a> jusqu'à ce qu'il soit <a href="#deleting-disk-storage">supprimé</a>, même si son serveur de bloc-note d'origine est supprimé. Voir <a href="#deleting-disk-storage">Suppression du stockage sur disque</a> pour plus d'informations.</p>
+</div>
+<h2 id="une-fois-que-vous-avez-les-bases">Une fois que vous avez les bases...<a class="headerlink" href="#une-fois-que-vous-avez-les-bases" title="Permanent link">&para;</a></h2>
+<p>Lorsque vous supprimez votre serveur de bloc-note, vos disques <strong>ne sont pas supprimés</strong>. Cela vous permet de réutiliser ultérieurement ce même disque (avec tout son contenu) sur un nouveau serveur de bloc-note (comme indiqué ci-dessus avec « Type = Existing » et le « Nom » défini sur le volume que vous souhaitez réutiliser). Si vous en avez terminé avec le disque et son contenu, <a href="#deleting-disk-storage">supprimez-le</a>.</p>
 <h2 id="suppression-du-stockage-sur-disque">Suppression du stockage sur disque<a class="headerlink" href="#suppression-du-stockage-sur-disque" title="Permanent link">&para;</a></h2>
-<p>Pour voir vos disques, consultez la section Volumes de la page Serveur bloc-notes (illustré ci-dessous). Vous pouvez supprimer n'importe quel disque non connecté (icône à gauche) en cliquant sur l'icône de la corbeille.</p>
-<p><img alt="Supprimer un volume non connecté de l'écran Serveur blocs-note " src="../images/kubeflow_delete_disk.png" /></p>
-<h2 id="prix">Prix<a class="headerlink" href="#prix" title="Permanent link">&para;</a></h2>
-<!-- prettier-ignore -->
+<p>Pour voir vos disques, consultez la section bloc-note Volumes de la page serveur de bloc-note (illustré ci-dessous). Vous pouvez supprimer n'importe quel disque non connecté (icône à gauche) en cliquant sur l'icône de la corbeille.</p>
+<p><img alt="Supprimer un volume non connecté de l'écran serveur de bloc-note" src="../images/kubeflow_delete_disk.png" /></p>
+<h2 id="tarifs">Tarifs<a class="headerlink" href="#tarifs" title="Permanent link">&para;</a></h2>
+<!-- plus joli-ignorer -->
 <details class="info">
-<summary>Les modèles de tarification sont provisoires et peuvent changer</summary>
-<p>Au moment de la rédaction, la tarification est couverte par la plate-forme pour les utilisateurs initiaux. Ce guide explique comment les choses devraient être tarifées à l'avenir, mais cela peut changer.</p>
+<summary>Les modèles de tarification sont provisoires et peuvent changer.</summary>
+<p>Au moment de la rédaction, les prix sont couverts par la plateforme pour les utilisateurs initiaux. Ces orientations expliquent comment les choses devraient être fixées à l'avenir, mais cela peut changer.</p>
 </details>
 <p>Lors du montage d'un disque, vous obtenez un <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Disque managé Azure</a>. La tarification des <strong>Disques gérés SSD Premium</strong> indique le coût par disque en fonction de la taille. Notez que vous payez pour la taille du disque demandée, et non pour la quantité d'espace que vous utilisez actuellement.</p>
-<!-- prettier-ignore -->
+<!-- plus joli-ignorer -->
 <details class="info">
-<summary>Conseils pour minimiser les coûts</summary>
-<p>Comme les disques peuvent être attachés à un Serveur blocs-note  et réutilisés, un modèle d'utilisation typique pourrait être :</p>
+<summary>Conseils pour minimiser les coûts.</summary>
+<p>Vous pouvez minimiser les coûts en suspendant vos serveurs de bloc-notes lorsqu'ils ne sont pas utilisés. Un flux de travail typique peut ressembler à :</p>
 <ul>
-<li>À 9h, créez un Serveur blocs-note  (demandez 2CPU/8GB RAM et un 32GB attaché
-  disque)</li>
-<li>Travaillez tout au long de la journée, en enregistrant les résultats sur le disque attaché</li>
-<li>À 17h, éteignez votre Serveur blocs-note  pour éviter de le payer du jour au lendemain</li>
-<li>REMARQUE : Le disque attaché ** n'est pas détruit ** par cette action</li>
-<li>À 9 heures du matin le lendemain, créez un nouveau serveur blocs-note et ** joignez votre disque**</li>
-<li>Continuez votre travail...</li>
+<li>Créez un serveur de bloc-notes avec la quantité de stockage appropriée allouée à l'espace de travail et aux volumes de données.</li>
+<li>Travaillez tout au long de la journée, en enregistrant les résultats dans le volume de données ou d'espace de travail, en fonction de vos besoins.</li>
+<li>À la fin de la journée de travail, suspendez votre serveur de bloc-note pour éviter de le payer du jour au lendemain.</li>
+<li>Le lendemain à 9h, reprenez votre serveur de bloc-note et poursuivez votre travail.</li>
+<li><strong>Conseil :</strong> Vous pouvez migrer votre espace de travail ou votre volume de données vers un nouveau serveur de bloc-notes sans perdre de données, car la destruction du serveur de bloc-notes n'affecte aucun espace de travail ou volume de données connecté.</li>
 </ul>
-<p>Cela protège tout votre travail sans payer pour l'ordinateur lorsque vous ne l'utilisez pas</p>
 </details>
 
 

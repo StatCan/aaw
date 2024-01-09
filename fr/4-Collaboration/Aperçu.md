@@ -30,7 +30,7 @@ Si vous devez partager du code sans le publier sur un référentiel,[ partager u
 
 <!-- prettier-ignore -->
 !!! danger "Partager un espace de nom signifie que vous partagez **toutes les choses**  dans l'espace de nom"
-    Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un volume, etc.), mais plutôt le partage de **toutes** ressources. Si vous souhaitez partager un serveur bloc-notes Jupyter  avec quelqu'un, vous devez partager l'intégralité de votre espace de nom et **ils auront accès à toutes les autres ressources (Storage Blob Azure, etc.)**.
+    Kubeflow ne prend pas en charge le partage granulaire d'une ressource (un bloc-notes, un volume, etc.), mais plutôt le partage de **toutes** ressources. Si vous souhaitez partager un serveur de bloc-notes Jupyter  avec quelqu'un, vous devez partager l'intégralité de votre espace de nom et **ils auront accès à toutes les autres ressources (Storage Blob Azure, etc.)**.
 
 Dans Kubeflow, chaque utilisateur dispose d'un **espace de noms** qui contient son travail (ses serveurs bloc-notes, pipelines, disques, etc.). Votre espace de noms vous appartient, mais peut être partagé si vous souhaitez collaborer avec d'autres. Vous pouvez également [demander un nouvel espace de noms](Demander-EspaceDeNom.md) (soit pour vous-même, soit pour le partager avec une équipe). Une option de collaboration consiste à partager des espaces de noms avec d’autres.
 
