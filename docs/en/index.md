@@ -52,20 +52,27 @@ The sidebar on the left has
 
 ![Kubeflow Central Dashboard Sidebar](./images/kubeflow-sidebar.png)
 
+### Namespace Selection
 
-### Make sure you are on the Kubeflow Main Page (we call it the Central Dashboard)
+When you are on the Kubeflow Central Dashboard, in the upper left corner you will find the **Select Namespace** dropdown menu. If the menu says "Select namespace" then you need to select a namespace before you can view, edit or launch any of your notebook servers. 
 
 ![Selecting a Namespace](./images/select-a-namespace-1.png)
 
-### Then select the namespace from the namespace dropdown menu.
+### Select the namespace from the namespace dropdown menu.
+
+When you select the menu, a dropdown list will appear with all the namespaces you belong to. Please select the appropriate namespace before moving forward.
 
 ![Selecting a Namespace](./images/select-a-namespace-2.png)
 
 ### You will now see the name of the namespace and you are ready to go.
 
+Once a namespace has been selected, the name of the namespace will replace "Select namespace". If no namespaces appear in the menu, please contact us on the **#general** channel on [Slack](https://statcan-aaw.slack.com).
+
 ![Selecting a Namespace](./images/select-a-namespace-3.png)
 
 ### Click **Notebooks** from the sidebar on the left.
+
+Once you click **Notebooks** from the Central Dashboard Sidebar, you will be 
 
 ![Kubeflow Notebook Servers](./images/kubeflow-sidebar-notebooks-selected.png)
 
