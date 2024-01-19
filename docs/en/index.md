@@ -14,11 +14,11 @@ Access the [Kubeflow Dashboard](https://kubeflow.aaw.cloud.statcan.ca/) to get s
 
  Fill out [the DAS Onboarding Form](https://forms.office.com/r/RPrgDDkU9T) to tell us about your project needs. Once completed, a DAS representative will contact you to discuss the next steps and begin the onboarding process. Note: External users need a StatCan Cloud account granted by the business sponsor.
 
-## Creating Kubeflow Notebook Servers
+## Accessing the AAW
 
 ### AVD
 
-The Advanced Analytics Workspace (AAW) runs in the cloud. In order to access the AAW, please launch your AVD using the **Remote Desktop** icon on your personal computer.
+The Advanced Analytics Workspace (AAW) runs in the cloud and it's main interface is called Kubeflow. In order to access the AAW, please launch your AVD using the **Remote Desktop** icon on your personal computer.
 
 ![AVD Icon](./images/avd-icon.png)
 
@@ -28,7 +28,7 @@ Once your AVD has started, you can launch the AAW by opening the icon on your de
 
 #### Login with Your Cloud Account
 
-You'll need to login using your cloud account or whichever credentials have been given to you.
+You'll need to login using your cloud account.
 
 ![Cloud Account](./images/log-in-with-cloud-account.png)
 
@@ -44,17 +44,19 @@ When you first log in to the AAW, you will see the Kubeflow Central Dashboard. T
 
 The sidebar on the left has 
 
-- **Home** (which will take you to the central dashboard) and 
-- **Notebooks** which takes you to the notebook servers in your selected namespace.\
-- **Metrics**
-- **Github**
-- **Documentation**
+- **Home**: The Kubeflow Central Dashboard.
+- **Notebooks**: Manage your notebook servers.
+- **Metrics**: Grafana, the AAW's observability platform.
+- **Github**: The official Kubeflow Github repository.
+- **Documentation**: The official Kubeflow documentation.
+
+As a user of the Advanced Analytics Workspace, you'll only need to use **Home** and **Notebooks**.
 
 ![Kubeflow Central Dashboard Sidebar](./images/kubeflow-sidebar.png)
 
-### Namespace Selection
+## Namespace Selection
 
-When you are on the Kubeflow Central Dashboard, in the upper left corner you will find the **Select Namespace** dropdown menu. If the menu says "Select namespace" then you need to select a namespace before you can view, edit or launch any of your notebook servers. 
+When you are on the Kubeflow Central Dashboard, in the upper left corner you will find the **Select namespace** dropdown menu. If the menu says "Select namespace" then you need to select a namespace before you can view, edit or launch any of your notebook servers. 
 
 ![Selecting a Namespace](./images/select-a-namespace-1.png)
 
@@ -64,40 +66,56 @@ When you select the menu, a dropdown list will appear with all the namespaces yo
 
 ![Selecting a Namespace](./images/select-a-namespace-2.png)
 
-### You will now see the name of the namespace and you are ready to go.
+### If you see the name of a namespace, you are ready to use the AAW.
 
 Once a namespace has been selected, the name of the namespace will replace "Select namespace". If no namespaces appear in the menu, please contact us on the **#general** channel on [Slack](https://statcan-aaw.slack.com).
 
 ![Selecting a Namespace](./images/select-a-namespace-3.png)
 
+## Creating a new Notebook Server
+
 ### Click **Notebooks** from the sidebar on the left.
 
-Once you click **Notebooks** from the Central Dashboard Sidebar, you will be 
+Once you click **Notebooks** from the Central Dashboard Sidebar, you will be brought to the Notebooks management section of Kubeflow where you can **Create**, **Start**, **Stop** and **Delete** your notebook servers and storage.
 
 ![Kubeflow Notebook Servers](./images/kubeflow-sidebar-notebooks-selected.png)
 
-Note: you may need to select a namespace from the **Select namespace** dropdown menu in the upper left-hand corner.
+**Note**:  only one set of notebook servers can be viewed at a time. If you have more than one namespace. You may need to select the appropriate namespace from the **Select namespace** dropdown menu in the upper left-hand corner to see the notebook servers belonging to that particular namespace. 
 
+### Click **"+ New Notebook"**
 
-### Click the **+ New Notebook** button (upper right-hand corder).
+To create a new notebook server, press the **"+ New Notebook"** button in the upper right-hand corner.
 
 ![+ New Notebook](./images/new-notebook.png)
 
-### Configure the notebook server.
+## Configure the Notebook Server
 
-| Step                                                                                                                        | Image                                                        |
-| --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Name your notebook server.                                                                                                  | ![Selecting a Namespace](./images/make-a-new-sas-server.png) |
-| Select the notebook server type. JupyterLab is suitable for most users (unless they need SAS). For SAS you must select SAS. | ![Selecting a Namespace](./images/select-a-namespace-2.png)  |
-| Select Protected B if you need it, you will not have access to the internet if you do this.                                 | ![Selecting a Namespace](./images/select-a-namespace-3.png)  |
-| Once your notebook server has been named and you have selected the type of notebook server you can press LAUNCH.            |                                                              |
+### Name your notebook server
 
+The first thing you'll have to do is to name your Notebook Server. You must start the name with a lowercase letter and no spaces.
 
-For more detailed instructions on notebook server creation, please [follow the instructions here](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html#setup) to configure the notebook server.
+![Selecting a Namespace](./images/name-your-server.png)
 
-<!-- prettier-ignore -->
-!!! Hint "Need help creating a notebook server?"
-    We have [a Slideshow](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) with instructions on how to create a notebook server.
+### Select the notebook server type.
+
+If you need SAS, select SAS, otherwise JupyterLab is suitable for most users. The RStudio image only has RStudio and Ubuntu is a more advanced desktop image for special desktop applications.
+
+![Selecting a Namespace](./images/make-a-new-sas-server.png)
+
+### Select Protected B if you need it
+
+Select Protected B if you need it. Your notebook server will not have access to the internet if you do this.
+
+![Selecting a Namespace](./images/protected-b.png)
+
+Once your notebook server has been named and you have selected the type of notebook server you can press **LAUNCH**.
+
+![Selecting a Namespace](./images/launch.png)
+
+#### Need Assistance?
+
+- For more detailed instructions on notebook server creation, please [follow the instructions here](https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html#setup) to configure the notebook server.
+- We also have [a Slideshow](https://docs.google.com/presentation/d/12yTDlbMCmbg0ccdea2h0vwhs5YTa_GHm_3DieG5A-k8/edit?usp=sharing) with instructions on how to create a notebook server.
 
 ### Kubeflow Documentation
 
