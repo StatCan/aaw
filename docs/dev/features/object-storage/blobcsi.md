@@ -218,7 +218,7 @@ If the storage solution requires transit containers, you'll want to add this as 
 > 
 > `writers:` use the kubeflow profile name for this
 > 
-> `spn:` this has to be obtained by yo by sending a Jira ticket to the Cloud Team. See below for an example SPN request.
+> `spn:` this has to be obtained by you by sending a Jira ticket to the Cloud Team. See below for an example SPN request.
 > 
 
 ##### Example Cloud Ticket
