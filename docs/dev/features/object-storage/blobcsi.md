@@ -173,17 +173,17 @@ Add the following to `resource "kubectl_manifest" "fdi-aaw-configuration-data"`,
 4. `fdi-unclassified-internal.json: |`
 
 ```   
-      {
-              "bucketName": "<should-be-provided-for-you>",
-              "pvName":     "<acronym>-eprotb",
-              "subfolder":  "",
-              "readers":    ["<name-of-kuebeflow-profile>"],
-              "writers":    ["<name-of-kuebeflow-profile>"],
-              "spn": "aaw-<acronym>-prod-sp"
-      }
+{
+  "bucketName": "<should-be-provided-for-you>",
+  "pvName":     "<acronym>-eprotb",
+  "subfolder":  "",
+  "readers":    ["<name-of-kuebeflow-profile>"],
+  "writers":    ["<name-of-kuebeflow-profile>"],
+  "spn": "aaw-<acronym>-prod-sp"
+}
 ```
 
-##### Transit Folders
+##### Transit Containers
 
 If the storage solution requires transit containers, you'll want to add this as well. Not all solutions require this.
 
