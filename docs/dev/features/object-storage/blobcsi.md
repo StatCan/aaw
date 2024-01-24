@@ -165,41 +165,45 @@ resource "kubernetes_secret" "aaw-<acronym>-prod-sp-secret" {
 
 #### c. Add bucket info:
 
-
-Add the following to `resource "kubectl_manifest" "fdi-aaw-configuration-data"`, in one of:
+Add the following to `resource "kubectl_manifest" "fdi-aaw-configuration-data"`, in one of the following, depending on the classification of the bucket:
 
 1. `fdi-protected-b-external.json: |` or 
 2. `fdi-unclassified-external.json: |` or
 3. `fdi-protected-b-internal.json: |` or
 4. `fdi-unclassified-internal.json: |`
 
-depending on the classification of the bucket.
-
 ```   
-      {
-              "bucketName": "<should-be-provided-for-you>",
-              "pvName":     "<acronym>-eprotb",
-              "subfolder":  "",
-              "readers":    ["<name-of-kuebeflow-profile>"],
-              "writers":    ["<name-of-kuebeflow-profile>"],
-              "spn": "aaw-<acronym>-prod-sp"
-      },
-      {
-              "bucketName": "<should-be-provided-for-you>-transit",
-              "pvName":     "<acronym>-inbox-eprotb",
-              "subfolder":  "from-de",
-              "readers":    ["<name-of-kuebeflow-profile>"],
-              "writers":    ["<name-of-kuebeflow-profile>"],
-              "spn": "aaw-<acronym>-prod-sp"
-      },
-      {
-              "bucketName": "<should-be-provided-for-you>-transit",
-              "pvName":     "<acronym>-outbox-eprotb",
-              "subfolder":  "to-vers",
-              "readers":    ["<name-of-kuebeflow-profile>"],
-              "writers":    ["<name-of-kuebeflow-profile>"],
-              "spn": "aaw-<acronym>-prod-sp"
-      }
+{
+  "bucketName": "<should-be-provided-for-you>",
+  "pvName":     "<acronym>-eprotb",
+  "subfolder":  "",
+  "readers":    ["<name-of-kuebeflow-profile>"],
+  "writers":    ["<name-of-kuebeflow-profile>"],
+  "spn":        "aaw-<acronym>-prod-sp"
+}
+```
+
+##### Transit Containers
+
+If the storage solution requires transit containers, you'll want to add this as well. Not all solutions require this.
+
+```
+{
+  "bucketName": "<should-be-provided-for-you>-transit",
+  "pvName":     "<acronym>-inbox-eprotb",
+  "subfolder":  "from-de",
+  "readers":    ["<name-of-kuebeflow-profile>"],
+  "writers":    ["<name-of-kuebeflow-profile>"],
+  "spn":        "aaw-<acronym>-prod-sp"
+},
+{
+  "bucketName": "<should-be-provided-for-you>-transit",
+  "pvName":     "<acronym>-outbox-eprotb",
+  "subfolder":  "to-vers",
+  "readers":    ["<name-of-kuebeflow-profile>"],
+  "writers":    ["<name-of-kuebeflow-profile>"],
+  "spn":        "aaw-<acronym>-prod-sp"
+}
 ```
 
 ##### Info
@@ -214,10 +218,12 @@ depending on the classification of the bucket.
 > 
 > `writers:` use the kubeflow profile name for this
 > 
-> `spn:` this has to be created by YOU. Send a JIRA ticket to the Cloud Team.
+> `spn:` this has to be obtained by you by sending a Jira ticket to the Cloud Team. See below for an example SPN request.
 > 
 
 ##### Example Cloud Ticket
+
+To obtain the SPN, send a Jira ticket to the Cloud Team, follow the template below:
 
 > Hi,
 >
@@ -225,8 +231,9 @@ depending on the classification of the bucket.
 >
 > The owners should be:
 >
-> relevant.person.one@cloud.statcan.ca
-> relevant.person.two@cloud.statcan.ca
+> - relevant.person.one@cloud.statcan.ca
+> - relevant.person.two@cloud.statcan.ca
+> 
 > More info: https://jirab.statcan.ca/browse/?????-????
 >
 > Thanks!
