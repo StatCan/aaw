@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
@@ -826,38 +826,40 @@ Note: For debugging there are test containers created in all Prod and Dev storag
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>}
 </span></code></pre></div>
 <h4 id="c-add-bucket-info">c. Add bucket info:<a class="headerlink" href="#c-add-bucket-info" title="Permanent link">&para;</a></h4>
-<p>Add the following to <code>resource "kubectl_manifest" "fdi-aaw-configuration-data"</code>, in one of:</p>
+<p>Add the following to <code>resource "kubectl_manifest" "fdi-aaw-configuration-data"</code>, in one of the following, depending on the classification of the bucket:</p>
 <ol>
 <li><code>fdi-protected-b-external.json: |</code> or </li>
 <li><code>fdi-unclassified-external.json: |</code> or</li>
 <li><code>fdi-protected-b-internal.json: |</code> or</li>
 <li><code>fdi-unclassified-internal.json: |</code></li>
 </ol>
-<p>depending on the classification of the bucket.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>      {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>              &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;&quot;,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              &quot;pvName&quot;:     &quot;&lt;acronym&gt;-eprotb&quot;,
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>              &quot;subfolder&quot;:  &quot;&quot;,
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>              &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>              &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>              &quot;spn&quot;: &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>      },
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      {
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>              &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;-transit&quot;,
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>              &quot;pvName&quot;:     &quot;&lt;acronym&gt;-inbox-eprotb&quot;,
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>              &quot;subfolder&quot;:  &quot;from-de&quot;,
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>              &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>              &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>              &quot;spn&quot;: &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      },
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>      {
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>              &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;-transit&quot;,
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>              &quot;pvName&quot;:     &quot;&lt;acronym&gt;-outbox-eprotb&quot;,
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>              &quot;subfolder&quot;:  &quot;to-vers&quot;,
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>              &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>              &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>              &quot;spn&quot;: &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>      }
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;&quot;,
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  &quot;pvName&quot;:     &quot;&lt;acronym&gt;-eprotb&quot;,
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  &quot;subfolder&quot;:  &quot;&quot;,
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  &quot;spn&quot;:        &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>}
+</span></code></pre></div>
+<h5 id="transit-containers">Transit Containers<a class="headerlink" href="#transit-containers" title="Permanent link">&para;</a></h5>
+<p>If the storage solution requires transit containers, you'll want to add this as well. Not all solutions require this.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;-transit&quot;,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  &quot;pvName&quot;:     &quot;&lt;acronym&gt;-inbox-eprotb&quot;,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  &quot;subfolder&quot;:  &quot;from-de&quot;,
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  &quot;spn&quot;:        &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>},
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>{
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  &quot;bucketName&quot;: &quot;&lt;should-be-provided-for-you&gt;-transit&quot;,
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  &quot;pvName&quot;:     &quot;&lt;acronym&gt;-outbox-eprotb&quot;,
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  &quot;subfolder&quot;:  &quot;to-vers&quot;,
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  &quot;readers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  &quot;writers&quot;:    [&quot;&lt;name-of-kuebeflow-profile&gt;&quot;],
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>  &quot;spn&quot;:        &quot;aaw-&lt;acronym&gt;-prod-sp&quot;
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>}
 </span></code></pre></div>
 <h5 id="info">Info<a class="headerlink" href="#info" title="Permanent link">&para;</a></h5>
 <blockquote>
@@ -866,29 +868,32 @@ Note: For debugging there are test containers created in all Prod and Dev storag
 <p><code>subfolder:</code> use the example below unless otherwise specified.</p>
 <p><code>readers:</code> use the kubeflow profile name for this</p>
 <p><code>writers:</code> use the kubeflow profile name for this</p>
-<p><code>spn:</code> this has to be created by YOU. Send a JIRA ticket to the Cloud Team.
+<p><code>spn:</code> this has to be obtained by you by sending a Jira ticket to the Cloud Team. See below for an example SPN request.
 </p>
 </blockquote>
 <h5 id="example-cloud-ticket">Example Cloud Ticket<a class="headerlink" href="#example-cloud-ticket" title="Permanent link">&para;</a></h5>
+<p>To obtain the SPN, send a Jira ticket to the Cloud Team, follow the template below:</p>
 <blockquote>
 <p>Hi,</p>
 <p>Can I get a service principle named aaw-\&lt;acronym&gt;-prod-sp created please?</p>
 <p>The owners should be:</p>
-<p>relevant.person.one@cloud.statcan.ca
-relevant.person.two@cloud.statcan.ca
-More info: https://jirab.statcan.ca/browse/?????-????</p>
+<ul>
+<li>relevant.person.one@cloud.statcan.ca</li>
+<li>relevant.person.two@cloud.statcan.ca</li>
+</ul>
+<p>More info: https://jirab.statcan.ca/browse/?????-????</p>
 <p>Thanks!</p>
 </blockquote>
 <h3 id="2-add-variables-to-variablestf">2. Add variables to <code>variables.tf</code>:<a class="headerlink" href="#2-add-variables-to-variablestf" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>variable &quot;aaw_&lt;acronym&gt;_prod_sp_secret&quot; {
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  description = &quot;Protected-b &lt;acronym&gt; service principal client secret.&quot;
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  sensitive   = true
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>}
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>variable &quot;aaw_&lt;acronym&gt;_prod_sp_clientid&quot; {
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  description = &quot;Protected-b &lt;acronym&gt; service principal client id.&quot;
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  sensitive   = true
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>variable &quot;aaw_&lt;acronym&gt;_prod_sp_secret&quot; {
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  description = &quot;Protected-b &lt;acronym&gt; service principal client secret.&quot;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  sensitive   = true
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>}
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>variable &quot;aaw_&lt;acronym&gt;_prod_sp_clientid&quot; {
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  description = &quot;Protected-b &lt;acronym&gt; service principal client id.&quot;
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  sensitive   = true
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>}
 </span></code></pre></div>
 <h3 id="3-how-to-create-necessary-secrets">3. How to create necessary secrets<a class="headerlink" href="#3-how-to-create-necessary-secrets" title="Permanent link">&para;</a></h3>
 <p>Follow the steps below to create the necessary secrets in the Azure Portal, then add the secrets variable to the internal Gitlab CI/CD runner.</p>
@@ -998,10 +1003,10 @@ In addition, refer to the below legend for line types and colours.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
