@@ -1,8 +1,8 @@
 ## Adding a New Model
 
-**Note**: use a notebook with at least 4Gb of memory for this full guide. 
+**Note**: use a notebook with at least 6Gb of memory for this full guide. 
 
-First clone the model's repository or download and extract the archived model on your AAW notebook. In our example, we clone oncosim from gitlab:
+First clone the model's repository or download and extract the archived model on your AAW notebook. In our example, we clone oncosim from [gitlab](../6-Gitlab/Gitlab.md):
 
 ![Oncosim dir is now available](image.png)
 
@@ -14,13 +14,9 @@ We can follow the readme of the model. In this case, we set our `OM_ROOT` enviro
 
 We can now compile. We make sure that we're in the oncosim directory then run `make OM_MSG_USE=MPI RELEASE=1 all publish`. 
 
-Once compilation is complete, our compiled model files appear under `<path-to-oncosim>/ompp-linux/bin/`. Using the terminal, `cp` the files in the `bin` directory to `~/buckets/aaw-unclassified/microsim/models/bin`.
+Once compilation is complete, our compiled model files appear under `<path-to-model>/ompp-linux/bin/`. Using the terminal, `cp` the files in the `bin` directory to `~/buckets/aaw-unclassified/microsim/models/bin`.
 
 ![oncosim model files under bin](image-2.png)
-
-Using the terminal, `cp -r ` the entire model directory to `~/buckets/aaw-unclassified/microsim/models`
-
-![oncosim under microsim](image-1.png)
 
 Once complete, run `restart-oms.sh` in the terminal. This will restart the OpenM web service and allow it to pick up the new model.
 
