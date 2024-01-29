@@ -2,7 +2,7 @@
 
 **Note**: use a notebook with at least 6Gb of memory for this full guide. 
 
-First clone the model's repository or download and extract the archived model on your AAW notebook. In our example, we clone oncosim from gitlab:
+First clone the model's repository or download and extract the archived model on your AAW notebook. In our example, we clone oncosim from [gitlab](../6-Gitlab/Gitlab.md):
 
 ![Oncosim dir is now available](image.png)
 
