@@ -37,7 +37,7 @@ Selon votre cas d'utilisation, le disque ou le compartiment peuvent être les pl
 <center>
       [![Disques](../images/Disque.PNG)](../5-Stockage/Disque.md)
 </center>
-**[Disques](../5-Stockage/Disque.md)** sont ajoutés à votre serveur bloc-notes en augmentant les volumes de données.
+**[Disques](../5-Stockage/Disque.md)** sont ajoutés à votre serveur de bloc-notes en augmentant les volumes de données.
 
 ### Lacs de données (à venir)
 

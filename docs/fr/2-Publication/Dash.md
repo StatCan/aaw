@@ -7,7 +7,7 @@ L'exemple suivant illustre une application Dash hautement réactive et personnal
 avec peu de code.
 
 <!-- prettier-ignore -->
-!!! note "Exécution de votre serveur bloc-note et accès au port"
+!!! note "Exécution de votre serveur de bloc-note et accès au port"
      Lorsque vous exécutez un outil de votre bloc-note Jupyter qui publie un site Web sur un port,
      vous ne pourrez pas simplement y accéder depuis `http://localhost:5000/` car
      normalement suggéré dans la sortie lors de l'exécution de l'application Web.

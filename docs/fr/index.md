@@ -123,7 +123,7 @@ section.
 
 ### 💡 Aide
 
-- Disque (également appelé Volumes sur l'écran de création de serveur bloc-notes)
+- Disque (également appelé Volumes sur l'écran de création de serveur de bloc-notes)
 - Conteneurs (Stockage Blob)
 - Lacs de données (à venir)
 
