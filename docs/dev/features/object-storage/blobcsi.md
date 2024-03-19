@@ -265,6 +265,10 @@ Follow the steps below to create the necessary secrets in the Azure Portal, then
 8. Send the Application (client) ID to the appropriate JIRA page.
 9. Add the secret to the Gitlab CI/CD settings.
 
+### 4. Update the `EntraID group`
+As seen in this [jira ticket](https://jirab.statcan.ca/browse/CODAS-2402?focusedId=1530401&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-1530401) you will need to add the newly created SP to the relevant group, as without it the user would not be able to view the Storage Account listed from their AVD.
+Example) for the `aaw-agzero-unclassified-prod-sp` I had to add it as a member under the `AAW-PROD-External-Unclassified-SPs` entraID group
+
 # Architecture Design
 
 For more context on the blob-csi system as a whole (from deployment of infrastructure to azure containers), see the attached diagram below.
