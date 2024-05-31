@@ -55,7 +55,7 @@ chmod +x install-tools.sh
 3. Run the script
 
 ``` bash
-sudo ./install-tools.sh
+./install-tools.sh
 ```
 
 ## Connect to the Kubernetes Cluster
