@@ -77,4 +77,4 @@ At this point, users can create notebooks, but since they do not have filer secr
 The User must navigate to a page to manage their filers, after that has been done the [ontap-cvo controller](#ontap-cvo-controller) will act and create the secrets necessary for the [mutating webhook](#mutating-webhook) to work its magic.
 
 ## Diagram of the Ecosystem
-TODO
+![Image of ecosystem](NetAppEcosys.png)
