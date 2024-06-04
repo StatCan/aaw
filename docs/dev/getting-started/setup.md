@@ -28,13 +28,6 @@ AZCLI_URL=https://aka.ms/InstallAzureCLIDeb
 ARGO_CLI_VERSION=latest # v3.4.5
 ARGO_CLI_URL=https://github.com/argoproj/argo-workflows/releases/download/${ARGO_CLI_VERSION}/argo-linux-amd64.gz
 
-# kubectl
-  curl -LO "${KUBECTL_URL}" \
-  && curl -LO "https://dl.k8s.io/release/KUBECTL_URL/bin/linux/amd64/kubectl.sha256" \
-  && echo "${KUBECTL_SHA} kubectl" | sha256sum -c - \
-  && chmod +x ./kubectl \
-  && sudo mv ./kubectl /usr/local/bin/kubectl \
-&& \
 # AzureCLI - installation script from Azure
   curl -sLO "${AZCLI_URL}" \
   && bash InstallAzureCLIDeb \
@@ -48,6 +41,9 @@ ARGO_CLI_URL=https://github.com/argoproj/argo-workflows/releases/download/${ARGO
   && chmod +x argo-linux-amd64 \
   && sudo mv ./argo-linux-amd64 /usr/local/bin/argo \
   && argo version
+
+# Install kubectl and kubelogin
+az aks install-cli
 ```
 
 2. Make the script executable
