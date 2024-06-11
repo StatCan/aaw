@@ -26,7 +26,7 @@ In `goofys` the line we need to make a change to is [here](https://github.com/ka
 There are **two** controllers that this feature requires. The first is to add `labels` to the namespace as that is what the `mutatingwebhook` uses in order to inject the filer sidecar spec into created notebook pods. The second is to automatically generate secrets based on values in a user configmap.
 
 ### [Namespace Controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/cmd/namespace.go)
-This controller is built off of the existing `aaw-kubeflow-profiles-controller` and is simple. It uses the same built image that the other controllers use, with the exception that the startup command is `namespace` to run this controller. The tracking issue for this controller is BTIS-332 with more details.
+This controller is built off of the existing `aaw-kubeflow-profiles-controller` and is simple. It uses the same built image that the other controllers use, with the exception that the startup command is `namespace` to run this controller. The tracking issue for this controller is [BTIS-332](https://jirab.statcan.ca/browse/BTIS-332) with more details.
 All this does is watch profiles, and  then for that profile's generated namespace, if it does not have the label listed in `newLabels`, then in adds it. In this case it adds `filer-sidecar-injection: enabled`.
 
 ### Deployment Checklist
@@ -52,8 +52,8 @@ This works like all the other profiles controllers, and steps can be taken from 
 [This is the API we are trying to call, but do not have permissions to](https://docs.netapp.com/us-en/ontap-restapi/ontap/protocols_s3_services_svm.uuid_users_endpoint_overview.html#creating-an-s3-user-configuration)
 
 **Again, this is a work in progress.**
-It will need to change based on work done by Mathis when users select what filer (and level of) that they have access to.
-Additionally the contents of the secret will also need additions, as when I was creating this controller I was not aware of the `BUCKET` itself needing to be a part of the secret (you could get it from Mathis' created resource but this is simpler).
+It will need to change based on work done in the Manage Filers page in Central dashboard when users select what filer (and level of) that they have access to.
+Additionally the contents of the secret will also need additions, as when I was creating this controller I was not aware of the `BUCKET` itself needing to be a part of the secret (you could retrieve it from what populates the Manage Filers page but that is more complicated and another hoop to jump through).
 
 -----------------------
 
