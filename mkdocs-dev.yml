@@ -38,6 +38,7 @@ nav:
     - RBAC:
       - Non-Employee RBAC: features/rbac/non-employee-rbac.md
     - Source Control: features/source-control/gitea.md
+    - Netapp (Filer) Mounting: features/netapp-mounting/overview.md
   - Resources:
     - Overview: resources/index.md
     - Developer Tools: developer-tools.md
