@@ -639,6 +639,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#manually-creating-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually Creating Secrets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mutating-webhook" class="md-nav__link">
     <span class="md-ellipsis">
       Mutating Webhook
@@ -903,6 +912,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#manually-creating-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually Creating Secrets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mutating-webhook" class="md-nav__link">
     <span class="md-ellipsis">
       Mutating Webhook
@@ -1007,10 +1025,14 @@ All this does is watch profiles, and  then for that profile's generated namespac
 <p><strong>Again, this is a work in progress.</strong>
 It will need to change based on work done in the Manage Filers page in Central dashboard when users select what filer (and level of) that they have access to.
 Additionally the contents of the secret will also need additions, as when I was creating this controller I was not aware of the <code>BUCKET</code> itself needing to be a part of the secret (you could retrieve it from what populates the Manage Filers page but that is more complicated and another hoop to jump through).</p>
-<p><strong>Until the above works, you must manually create secrets</strong>
-To do this, you need the following information; <code>namespace</code>, <code>S3_ACCESS</code>, <code>S3_BUCKET</code>, <code>S3_SECRET</code>, and <code>S3_URL</code>. The actual entries of the secret (S3) can be retrieved from the Netapp team, as when users are onboarded someone will send you their ACCESS and SECRET keys. The bucket name would match what the share name is in the request, for example in <a href="https://jirab.statcan.ca/browse/ZPS-24?focusedId=3011155&amp;page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-3011155">this issue</a> the value for <code>S3_BUCKET</code> would be <code>istdim</code>, as the bucket names must be lowercased (another one to look out for is <code>_</code>'s get converted to <code>-</code>'s, if unsure ask Roham for the bucket name. 
+<p><strong>Until the above works, you must manually create secrets</strong></p>
+<h2 id="manually-creating-secrets">Manually Creating Secrets<a class="headerlink" href="#manually-creating-secrets" title="Permanent link">&para;</a></h2>
+<p>To do this, you need the following information; <code>namespace</code>, <code>S3_ACCESS</code>, <code>S3_BUCKET</code>, <code>S3_SECRET</code>, and <code>S3_URL</code>. The actual entries of the secret (S3) can be retrieved from the Netapp team, as when users are onboarded someone will send you their ACCESS and SECRET keys. The bucket name would match what the share name is in the request, for example in <a href="https://jirab.statcan.ca/browse/ZPS-24?focusedId=3011155&amp;page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-3011155">this issue</a> the value for <code>S3_BUCKET</code> would be <code>istdim</code>, as the bucket names must be lowercased (another one to look out for is <code>_</code>'s get converted to <code>-</code>'s, if unsure ask Roham for the bucket name. 
 For the <code>S3_URL</code> this is constant and can view the respective URL from existing secrets
 Do not forget to do encode them when creating the secret, I have a utility that just does <code>echo -n $1 | base64</code> that I call so I can copy paste it easily.</p>
+<p>The naming convention of the secret is <strong>VERY IMPORTANT</strong> it must end in <code>filer-conn-secret</code> for everything to work.
+In general, it should look like <code>{filerName}-{bucketName}-filer-conn-secret</code> where <code>filerName</code> is the name of the filer, for example if you are creating something in the field 9 filer it should be <code>fld9</code>. <code>bucketName</code> is the same value from above, this is needed in the event that a field filer has multiple buckets needed so we can distinguish and unique the secrets (for example s3bucket).</p>
+<p>So a full example secret name could be <code>fld9-s3bucket-filer-conn-secret</code></p>
 <hr />
 <h2 id="mutating-webhook"><a href="https://github.com/StatCan/filer-sidecar-injector">Mutating Webhook</a><a class="headerlink" href="#mutating-webhook" title="Permanent link">&para;</a></h2>
 <p>The filer-sidecar-injector repo is a mutatingwebhook that injects sidecar configuration for notebook pods.
