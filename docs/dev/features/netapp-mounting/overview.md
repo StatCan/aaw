@@ -56,9 +56,16 @@ It will need to change based on work done in the Manage Filers page in Central d
 Additionally the contents of the secret will also need additions, as when I was creating this controller I was not aware of the `BUCKET` itself needing to be a part of the secret (you could retrieve it from what populates the Manage Filers page but that is more complicated and another hoop to jump through).
 
 **Until the above works, you must manually create secrets**
+
+## Manually Creating Secrets
 To do this, you need the following information; `namespace`, `S3_ACCESS`, `S3_BUCKET`, `S3_SECRET`, and `S3_URL`. The actual entries of the secret (S3) can be retrieved from the Netapp team, as when users are onboarded someone will send you their ACCESS and SECRET keys. The bucket name would match what the share name is in the request, for example in [this issue](https://jirab.statcan.ca/browse/ZPS-24?focusedId=3011155&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-3011155) the value for `S3_BUCKET` would be `istdim`, as the bucket names must be lowercased (another one to look out for is `_`'s get converted to `-`'s, if unsure ask Roham for the bucket name. 
 For the `S3_URL` this is constant and can view the respective URL from existing secrets
 Do not forget to do encode them when creating the secret, I have a utility that just does `echo -n $1 | base64` that I call so I can copy paste it easily.
+
+The naming convention of the secret is **VERY IMPORTANT** it must end in `filer-conn-secret` for everything to work.
+In general, it should look like `{filerName}-{bucketName}-filer-conn-secret` where `filerName` is the name of the filer, for example if you are creating something in the field 9 filer it should be `fld9`. `bucketName` is the same value from above, this is needed in the event that a field filer has multiple buckets needed so we can distinguish and unique the secrets (for example s3bucket).
+
+So a full example secret name could be `fld9-s3bucket-filer-conn-secret`
 
 -----------------------
 
