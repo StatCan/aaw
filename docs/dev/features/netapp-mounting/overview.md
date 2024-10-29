@@ -33,7 +33,7 @@ All this does is watch profiles, and  then for that profile's generated namespac
 
 ### Deployment Checklist
 - [x] Make changes to the [aaw-kubeflow-profiles-controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0) repo on github and push and let the workflow push the image
-- [x] Modify the `profiles-controller` branch in the `statcan/charts` gitlab repository, modifying any new permissions needed, updating the tag, or adding a new controller
+- [x] Modify the `profiles-controller` branch in the [`statcan/charts`](https://gitlab.k8s.cloud.statcan.ca/cloudnative/statcan/charts/-/tree/profiles-controller?ref_type=heads) gitlab repository, modifying any new permissions needed, updating the tag, or adding a new controller
 - [x] Modify the `profiles-controller.yaml` tag in the argocd-manifests repo.
 - [x] Sync the respective `root` application in argocd, for example for prod you need to sync the `das-prod-cc-00-root` application for everything to come up.
 
@@ -49,7 +49,7 @@ The current kubernetes cluster is used for the following
 
 The Microsoft Graph API is used to get the onpremises name, as the username that the user has in the Netapp system matters as that is how the mapping of permissions is done. 
 
-The Ontap API is the main driver here we query it to;
+The Ontap API we query to;
 - Determine if a user exists S3 side, if not we will create it.
 - Check if a user group exists, if yes add the current user, if not create it and add the user. 
 - Retrieve the actual `nas_path`. This is because the user inputted path will be different from what is actually on the Netapp system and we need that `path` else our request to create the bucket will error out.
@@ -63,7 +63,7 @@ The controller then cleans up and creates or modifies the `existing-shares` conf
 For more details on how this controller works, please refer to the [README](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/ontap-cvo.md)
 
 ### Deployment Checklist
-This is currently built off of the `profiles-controller` so the deployment here is the same as the namespace controller above. Just make sure that you are on the [profiles-controller-aaw2.0 branch](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0)
+This is currently built off of the `profiles-controller` so the deployment here is the same as the [namespace controller](#namespace-controller) above. Just make sure that you are on the [profiles-controller-aaw2.0 branch](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0)
 
 -----------------------
 
