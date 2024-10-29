@@ -52,7 +52,7 @@ The Microsoft Graph API is used to get the onpremises name, as the username that
 The Ontap API we query to;
 - Determine if a user exists S3 side, if not we will create it.
 - Check if a user group exists, if yes add the current user, if not create it and add the user. 
-- Retrieve the actual `nas_path`. This is because the user inputted path will be different from what is actually on the Netapp system and we need that `path` else our request to create the bucket will error out.
+- Retrieve the actual `nas_path`. This is because the user inputted path will be different from what is actually on the Netapp system and we need that `path` else our request to create the bucket will error out. We get this from the [shares level](#shares)
 - Determine if a bucket at the user requested path exists, if not create it
 
 A TLDR;
@@ -89,3 +89,14 @@ The user then manages their filers in the UI which creates a configmap that the 
 
 ## Diagram of the Ecosystem
 ![Image of ecosystem](NetAppEcosys.png)
+
+----------------------
+## Unique Terminology
+
+### Shares
+In Ontap CVO, we have something known as `shares`. This is what our controller interacts and uses when determining where to place the user requested path. 
+Broadly speaking to get to the `share` level we have to go through an `SVM`, which for us tends to be represented as the field or sas filer, as in fld9filersvm. After that there is the `volume` associated with that `SVM`. With that `volume` there is a `QTree` associated with that and then finally a `share` with the `QTree` as in
+
+`SVM -> Volume -> Qtree -> Share`
+
+Where `share` is what we have access to and helps to determine the path in the ontap cvo solution that we need the user requested filer path (that they get from their avd) to be associated to.
