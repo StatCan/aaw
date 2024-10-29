@@ -16,8 +16,11 @@ In `goofys` the line we need to make a change to is [here](https://github.com/ka
 For deploying our modified goofys image we just need to make changes to the `filer-sidecar-injector` configmap, since that determines which metafuse goofys image we use. You can find it in the [raw-manifests/netapp/configmap.yaml](https://gitlab.k8s.cloud.statcan.ca/business-transformation/aaw/aaw-argocd-manifests/-/blob/das-dev-cc-00/raw-manifests/netapp/configmap.yaml?ref_type=heads#L15) in the argocd-manifests gitlab repo.
 After updating this you will need to synch up argo to load this new configmap into the cluster, and then restart the filer-sidecar-injector to pick up the new configuration.
 
-### The metafuse daemonset
-# TODO
+### The metafuse daemonset and driver
+We need to use a custom plugin as noted [in the documentation here](https://github.com/pfnet-research/meta-fuse-csi-plugin?tab=readme-ov-file#deploy-plugin). For this, we'd need to build [this dockerfile](https://github.com/pfnet-research/meta-fuse-csi-plugin/blob/main/cmd/csi_driver/Dockerfile) and then deployed with this [yaml](https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main/deploy)
+
+### Deployment checklist
+This is deployed in the gitlab argocd manifests under [raw-manifests/netapp/metafuse-driver.yaml](https://gitlab.k8s.cloud.statcan.ca/business-transformation/aaw/aaw-argocd-manifests/-/blob/das-prod-cc-00/raw-manifests/netapp/metafuse-driver.yaml?ref_type=heads)
 
 -----------------------
 
@@ -29,7 +32,7 @@ This controller is built off of the existing `aaw-kubeflow-profiles-controller` 
 All this does is watch profiles, and  then for that profile's generated namespace, if it does not have the label listed in `newLabels`, then in adds it. In this case it adds `filer-sidecar-injection: enabled`.
 
 ### Deployment Checklist
-- [x] Make changes to the aaw-kubeflow-profiles-controller repo on github and push and let the workflow push the image
+- [x] Make changes to the [aaw-kubeflow-profiles-controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0) repo on github and push and let the workflow push the image
 - [x] Modify the `profiles-controller` branch in the `statcan/charts` gitlab repository, modifying any new permissions needed, updating the tag, or adding a new controller
 - [x] Modify the `profiles-controller.yaml` tag in the argocd-manifests repo.
 - [x] Sync the respective `root` application in argocd, for example for prod you need to sync the `das-prod-cc-00-root` application for everything to come up.
@@ -60,6 +63,7 @@ The controller then cleans up and creates or modifies the `existing-shares` conf
 For more details on how this controller works, please refer to the [README](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/ontap-cvo.md)
 
 ### Deployment Checklist
+This is currently built off of the `profiles-controller` so the deployment here is the same as the namespace controller above. Just make sure that you are on the [profiles-controller-aaw2.0 branch](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0)
 
 -----------------------
 
@@ -69,7 +73,9 @@ For more in-depth information of how the mutating webhook works, its best to ref
 
 The main modifications were made to the `createPatch` function as instead of just having a single sidecar container, we had to loop as there is a possibility of a user having access to more than one filer. A configmap is used as a template, and then deep copied so that we can use it repeatedly when generating the spec to be `patch`ed to the pod resource that is being created.
 
+The `sidecar` that we are inserting is the custom goofys metafuse image that comes from [our statcan repo](https://github.com/StatCan/goofys/blob/a4aa306ca63e4dd0d4bf4c903c270efc75f0ae1e/Dockerfile#L1). This sidecar image drives the connection to the filers and as part of the patch we also update the working volume mounts for the user image (jupyterlab notebook) so that they can interact with their filers.
 
+For more details refer to the [README](https://github.com/StatCan/filer-sidecar-injector/blob/master/README.md)
 ### Deployment Checklist
 - [x] Build the image in `filer-sidecar-injector` and push to our acr.
 - [x] Update the image tag in the deployment in the argocd manifests repo.
@@ -79,8 +85,7 @@ The main modifications were made to the `createPatch` function as instead of jus
 
 ## Behaviour of the Ecosystem
 User logs in and creates their profile, the [Namespace Controller](#namespace-controller) then adds the label for the [mutatingwebhook](#mutating-webhook).
-At this point, users can create notebooks, but since they do not have filer secrets created, there will be no mounting of filers.
-The User must navigate to a page to manage their filers, after that has been done the [ontap-cvo controller](#ontap-cvo-controller) will act and create the secrets necessary for the [mutating webhook](#mutating-webhook) to work its magic.
+The user then manages their filers in the UI which creates a configmap that the [ontap-cvo controller](#ontap-cvo-controller) consumes to create the secrets and configmaps necessary for the [mutating webhook](#mutating-webhook) to mount user requested filer paths to running notebook pods.
 
 ## Diagram of the Ecosystem
 ![Image of ecosystem](NetAppEcosys.png)
