@@ -36,7 +36,7 @@ All this does is watch profiles, and  then for that profile's generated namespac
 
 ### [Ontap CVO controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/cmd/ontap-cvo.go)
 
-This controller is responsible for managing what buckets that a user has access to, as well as creating the secrets associated with a user and all that comes with it. This controller uses a configmap that the user generates from the UI that requests certain paths in an SVM (in this case an SVM is equivalent to a filer ex fld9filer). Using that configmap, API calls are sent off to the following; current Kubernetes cluster, Microsoft Graph, Ontap.
+This controller is responsible for managing what buckets that a user has access to, as well as creating the secrets associated with a user and all that comes with it. The bucket that is created uses a _hashed_ version of the inputted request path in order to comply with naming conventions and to avoid collision. This controller uses a configmap that the user generates from the UI that requests certain paths in an SVM (in this case an SVM is equivalent to a filer ex fld9filer). Using that configmap, API calls are sent off to the following; current Kubernetes cluster, Microsoft Graph, Ontap.
 
 The current kubernetes cluster is used for the following
 - Determine whether or not a user secret exists for an svm, and submit a create if needed.
@@ -52,6 +52,10 @@ The Ontap API is the main driver here we query it to;
 - Retrieve the actual `nas_path`. This is because the user inputted path will be different from what is actually on the Netapp system and we need that `path` else our request to create the bucket will error out.
 - Determine if a bucket at the user requested path exists, if not create it
 
+A TLDR;
+
+User selects and inputs a path in a filer they want access to via the UI which then creates a configmap. This controller picks up that configmap and checks if a user for that filer exists using the onpremname from the graph api, if not creates and assigns it the correct policy to interact with it. The controller then hashes the user inputted filer path to a bucket name and then we check if that bucket exists, if it does not create it.
+The controller then cleans up and creates or modifies the `existing-shares` configmap which is used by the filer-sidecar-injector.
 
 For more details on how this controller works, please refer to the [README](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/ontap-cvo.md)
 
