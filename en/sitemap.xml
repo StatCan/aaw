@@ -2,222 +2,178 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://statcan.github.io/aaw/en/index.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/Help.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/welcome-message.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/welcome.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Jupyter.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Kubeflow.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/MLflow.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Overview.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/RStudio.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Remote-Desktop.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Selecting-an-Image.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Virtual-Environments.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DTale_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/DrawData_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/MitoSheet_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/PyGWalker_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/ReRun_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/SweetViz_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/VisualPython_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/1-Experiments/Notebooks/YData-Profiling_EN.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Custom.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Dash.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Datasette.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/Overview.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/PowerBI.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/2-Publishing/R-Shiny.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/3-Pipelines/Argo.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/4-Collaboration/Geospatial-Analytical-Environment.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/4-Collaboration/Overview.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/4-Collaboration/Request-a-Namespace.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/5-Storage/AzureBlobStorage.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/5-Storage/KubeflowVolumes.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/5-Storage/Overview.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/6-Gitlab/Gitlab.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/Machine-Learning-Model-Cloud-Storage.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/Machine-Learning-Model-Serving.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/Machine-Learning-Training-Pipelines.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/Machine-Learning.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/Overview.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/PaaS-Integration.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/Serving.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/7-MLOps/sklearn_iris_jsondata.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/8-MicroSim/Additions.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://statcan.github.io/aaw/en/8-MicroSim/GettingStarted.html</loc>
-         <lastmod>2024-06-14</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-10-30</lastmod>
     </url>
 </urlset>
