@@ -88,6 +88,7 @@ The manage-filers page is responsible for the following tasks;
 - Gets the data to fill out the tables to display from the user's namespace, in the CMs `requesting-shares` and `existing-shares`
 - The submit button adds a new entry to the `requesting-shares` CM, which gets ingested by the ontap-controller
 - Users can delete entries from the `existing-shares` CM, which is the CM ingested by the filer-sidecar-injector
+- Display any errors from the `shares-errors` CM, which gets populated by the ontap-controller when an error occurs during the `requesting-shares` ingestion
 
 -----------------------
 
