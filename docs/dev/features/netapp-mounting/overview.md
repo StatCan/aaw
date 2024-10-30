@@ -81,6 +81,14 @@ For more details refer to the [README](https://github.com/StatCan/filer-sidecar-
 - [x] Update the image tag in the deployment in the argocd manifests repo.
 
 
+## The UI
+As referenced above, the user creates their `requesting-shares` configmap via a the manage-filers page component in [centraldashboard](https://github.com/StatCan/kubeflow/tree/kubeflow-aaw2.0/components/centraldashboard).
+The manage-filers page is responsible for the following tasks;
+- Gets the data to populate the dropdown from the `filers-list` CM in the das namespace
+- Gets the data to fill out the tables to display from the user's namespace, in the CMs `requesting-shares` and `existing-shares`
+- The submit button adds a new entry to the `requesting-shares` CM, which gets ingested by the ontap-controller
+- Users can delete entries from the `existing-shares` CM, which is the CM ingested by the filer-sidecar-injector
+
 -----------------------
 
 ## Behaviour of the Ecosystem
