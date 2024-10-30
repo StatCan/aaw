@@ -6,19 +6,21 @@ Netapp CVO ONTAP is the solution on which our legacy filers moved to.
 -----------------------
 
 ## Integration with NetApp
-Our integration with the cloud volumes relies on the use of the [meta-fuse-csi-plugin](https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main) and is deployed and persisted in gitlab argocd manifests under `raw-manifests/netapp/metafuse-driver.yaml`
+Our integration with the cloud volumes relies on the use of the [meta-fuse-csi-plugin](https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main) and is deployed and persisted in gitlab argocd manifests under `raw-manifests/netapp/metafuse-driver.yaml`. We keep a copy of the meta-fuse-csi-plugin in our [goofys fork](https://github.com/StatCan/goofys/tree/master/meta-fuse-csi-plugin) as we must modify the underlying `goofys` image and having it in one repository greatly simplifies deployment.
 
-Everything is kept exactly the same, with the exception of needing to modify the [Goofys Dockerfile](https://github.com/pfnet-research/meta-fuse-csi-plugin/blob/437dbbbbf16e5b02f9a508e3403d044b0a9dff89/examples/proxy/goofys/Dockerfile#L28)
-
-This is because we must have our own version of `goofys`, since we need to increase the point at which `multi-part` upload (multi-part upload is not a supported S3 call) is performed.
+### Why do we need to modify goofys?
+We need to increase the data threshold at which `multi-part` upload (multi-part upload is not a supported S3 call by our netapp solution) is performed.
 In `goofys` the line we need to make a change to is [here](https://github.com/kahing/goofys/blob/350ff312abaa1abcf21c5a06e143c7edffe9e2f4/internal/file.go#L202), where I just did [`size = 5000 * 1024 * 1024`](https://github.com/Jose-Matsuda/goofys/blob/a1fb9da08cf7fdeec2c72d7f83f3f1ed03e71106/internal/file.go#L244).
 
 ### Deployment Checklist
-- [x] Changed the line in goofys to increase the [`partSize`](https://github.com/kahing/goofys/blob/350ff312abaa1abcf21c5a06e143c7edffe9e2f4/internal/file.go#L186), and created a release for the metafuse plugin to use
-- [x] Changed the goofys dockerfile [to reference the modified goofys release](https://github.com/pfnet-research/meta-fuse-csi-plugin/blob/437dbbbbf16e5b02f9a508e3403d044b0a9dff89/examples/proxy/goofys/Dockerfile#L28)
-- [x] Built the goofys dockerfile via the [makefile](https://github.com/pfnet-research/meta-fuse-csi-plugin/blob/main/Makefile)
-- [x] Pushed the dockerfile to our ACR
-- [x] Updated argocd's raw-manifests' meta-fuse-csi-plugin `daemonset` image to use the new image
+For deploying our modified goofys image we just need to make changes to the `filer-sidecar-injector` configmap, since that determines which metafuse goofys image we use. You can find it in the [raw-manifests/netapp/configmap.yaml](https://gitlab.k8s.cloud.statcan.ca/business-transformation/aaw/aaw-argocd-manifests/-/blob/das-dev-cc-00/raw-manifests/netapp/configmap.yaml?ref_type=heads#L15) in the argocd-manifests gitlab repo.
+After updating this you will need to synch up argo to load this new configmap into the cluster, and then restart the filer-sidecar-injector to pick up the new configuration.
+
+### The metafuse daemonset and driver
+We need to use a custom plugin as noted [in the documentation here](https://github.com/pfnet-research/meta-fuse-csi-plugin?tab=readme-ov-file#deploy-plugin). For this, we'd need to build [this dockerfile](https://github.com/pfnet-research/meta-fuse-csi-plugin/blob/main/cmd/csi_driver/Dockerfile) and then deployed with this [yaml](https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main/deploy)
+
+### Deployment checklist
+This is deployed in the gitlab argocd manifests under [raw-manifests/netapp/metafuse-driver.yaml](https://gitlab.k8s.cloud.statcan.ca/business-transformation/aaw/aaw-argocd-manifests/-/blob/das-prod-cc-00/raw-manifests/netapp/metafuse-driver.yaml?ref_type=heads)
 
 -----------------------
 
@@ -30,42 +32,38 @@ This controller is built off of the existing `aaw-kubeflow-profiles-controller` 
 All this does is watch profiles, and  then for that profile's generated namespace, if it does not have the label listed in `newLabels`, then in adds it. In this case it adds `filer-sidecar-injection: enabled`.
 
 ### Deployment Checklist
-- [x] Make changes to the aaw-kubeflow-profiles-controller repo on github and push and let the workflow push the image
-- [x] Modify the `profiles-controller` branch in the `statcan/charts` gitlab repository, modifying any new permissions needed, updating the tag, or adding a new controller
+- [x] Make changes to the [aaw-kubeflow-profiles-controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0) repo on github and push and let the workflow push the image
+- [x] Modify the `profiles-controller` branch in the [`statcan/charts`](https://gitlab.k8s.cloud.statcan.ca/cloudnative/statcan/charts/-/tree/profiles-controller?ref_type=heads) gitlab repository, modifying any new permissions needed, updating the tag, or adding a new controller
 - [x] Modify the `profiles-controller.yaml` tag in the argocd-manifests repo.
 - [x] Sync the respective `root` application in argocd, for example for prod you need to sync the `das-prod-cc-00-root` application for everything to come up.
 
 ### [Ontap CVO controller](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/cmd/ontap-cvo.go)
-Thie is a **WIP**, with its current purpose being to generate a `filer-conn-secret` based on values in a configmap. This is a WIP as we currently do not have the ability to create an account with the permissions necessary to create the account.
 
-This controller relies on the existence of a secret that has the following information;
-- the User's username as it exists on AVD, this needs to match up exactly. For example for jose-matsuda it would be `matsujo`. This is due to how the permissions themselves are mapped.
-- the bucket or share that the user needs access to. This is required so that when we create the secret, it has the information on what level, and the mounting solution requires the bucket name.
-- The name of the filer that the bucket or share is on. This will be used to populate the secret, as the mounting solution requires the S3 url. 
+This controller is responsible for managing what buckets that a user has access to, as well as creating the secrets associated with a user and all that comes with it. The bucket that is created uses a _hashed_ version of the inputted request path in order to comply with naming conventions and to avoid collision. This controller uses a configmap that the user generates from the UI that requests certain paths in an SVM (in this case an SVM is equivalent to a filer ex fld9filer). Using that configmap, API calls are sent off to the following; current Kubernetes cluster, Microsoft Graph, Ontap.
 
-This works like all the other profiles controllers, and steps can be taken from above as well. The controller watches profile resources and will generate a unique to bucket secret (for as many filers as a user has acccess to there should be a secret) following the naming convention of `*filer-conn-secret` for the profile that contains the following fields
-- S3_ACCESS
-- S3_BUCKET
-- S3_SECRET
-- S3_URL
+The current kubernetes cluster is used for the following
+- Determine whether or not a user secret exists for an svm, and submit a create if needed.
+- Create and modify the end `existing-shares` configmap, which is used by the filer-sidecar-injector.
+- Creating and modifying the `shares-errors` configmap, which shows errors to the user.
+- Grabbing data from the `filers-list` configmap and the secrets needed to interact with the Microsoft Graph Api and Ontap.
 
-[This is the API we are trying to call, but do not have permissions to](https://docs.netapp.com/us-en/ontap-restapi/ontap/protocols_s3_services_svm.uuid_users_endpoint_overview.html#creating-an-s3-user-configuration)
+The Microsoft Graph API is used to get the onpremises name, as the username that the user has in the Netapp system matters as that is how the mapping of permissions is done. 
 
-**Again, this is a work in progress.**
-It will need to change based on work done in the Manage Filers page in Central dashboard when users select what filer (and level of) that they have access to.
-Additionally the contents of the secret will also need additions, as when I was creating this controller I was not aware of the `BUCKET` itself needing to be a part of the secret (you could retrieve it from what populates the Manage Filers page but that is more complicated and another hoop to jump through).
+The Ontap API we query to;
+- Determine if a user exists S3 side, if not we will create it.
+- Check if a user group exists, if yes add the current user, if not create it and add the user. 
+- Retrieve the actual `nas_path`. This is because the user inputted path will be different from what is actually on the Netapp system and we need that `path` else our request to create the bucket will error out. We get this from the [shares level](#shares)
+- Determine if a bucket at the user requested path exists, if not create it
 
-**Until the above works, you must manually create secrets**
+A TLDR;
 
-## Manually Creating Secrets
-To do this, you need the following information; `namespace`, `S3_ACCESS`, `S3_BUCKET`, `S3_SECRET`, and `S3_URL`. The actual entries of the secret (S3) can be retrieved from the Netapp team, as when users are onboarded someone will send you their ACCESS and SECRET keys. The bucket name would match what the share name is in the request, for example in [this issue](https://jirab.statcan.ca/browse/ZPS-24?focusedId=3011155&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-3011155) the value for `S3_BUCKET` would be `istdim`, as the bucket names must be lowercased (another one to look out for is `_`'s get converted to `-`'s, if unsure ask Roham for the bucket name. 
-For the `S3_URL` this is constant and can view the respective URL from existing secrets
-Do not forget to do encode them when creating the secret, I have a utility that just does `echo -n $1 | base64` that I call so I can copy paste it easily.
+User selects and inputs a path in a filer they want access to via the UI which then creates a configmap. This controller picks up that configmap and checks if a user for that filer exists using the onpremname from the graph api, if not creates and assigns it the correct policy to interact with it. The controller then hashes the user inputted filer path to a bucket name and then we check if that bucket exists, if it does not create it.
+The controller then cleans up and creates or modifies the `existing-shares` configmap which is used by the filer-sidecar-injector.
 
-The naming convention of the secret is **VERY IMPORTANT** it must end in `filer-conn-secret` for everything to work.
-In general, it should look like `{filerName}-{bucketName}-filer-conn-secret` where `filerName` is the name of the filer, for example if you are creating something in the field 9 filer it should be `fld9`. `bucketName` is the same value from above, this is needed in the event that a field filer has multiple buckets needed so we can distinguish and unique the secrets (for example s3bucket).
+For more details on how this controller works, please refer to the [README](https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/ontap-cvo.md)
 
-So a full example secret name could be `fld9-s3bucket-filer-conn-secret`
+### Deployment Checklist
+This is currently built off of the `profiles-controller` so the deployment here is the same as the [namespace controller](#namespace-controller) above. Just make sure that you are on the [profiles-controller-aaw2.0 branch](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0)
 
 -----------------------
 
@@ -75,18 +73,39 @@ For more in-depth information of how the mutating webhook works, its best to ref
 
 The main modifications were made to the `createPatch` function as instead of just having a single sidecar container, we had to loop as there is a possibility of a user having access to more than one filer. A configmap is used as a template, and then deep copied so that we can use it repeatedly when generating the spec to be `patch`ed to the pod resource that is being created.
 
+The `sidecar` that we are inserting is the custom goofys metafuse image that comes from [our statcan repo](https://github.com/StatCan/goofys/blob/a4aa306ca63e4dd0d4bf4c903c270efc75f0ae1e/Dockerfile#L1). This sidecar image drives the connection to the filers and as part of the patch we also update the working volume mounts for the user image (jupyterlab notebook) so that they can interact with their filers.
 
+For more details refer to the [README](https://github.com/StatCan/filer-sidecar-injector/blob/master/README.md)
 ### Deployment Checklist
 - [x] Build the image in `filer-sidecar-injector` and push to our acr.
 - [x] Update the image tag in the deployment in the argocd manifests repo.
 
 
+## The UI
+As referenced above, the user creates their `requesting-shares` configmap via a the manage-filers page component in [centraldashboard](https://github.com/StatCan/kubeflow/tree/kubeflow-aaw2.0/components/centraldashboard).
+The manage-filers page is responsible for the following tasks;
+- Gets the data to populate the dropdown from the `filers-list` CM in the das namespace
+- Gets the data to fill out the tables to display from the user's namespace, in the CMs `requesting-shares` and `existing-shares`
+- The submit button adds a new entry to the `requesting-shares` CM, which gets ingested by the ontap-controller
+- Users can delete entries from the `existing-shares` CM, which is the CM ingested by the filer-sidecar-injector
+- Display any errors from the `shares-errors` CM, which gets populated by the ontap-controller when an error occurs during the `requesting-shares` ingestion
+
 -----------------------
 
 ## Behaviour of the Ecosystem
 User logs in and creates their profile, the [Namespace Controller](#namespace-controller) then adds the label for the [mutatingwebhook](#mutating-webhook).
-At this point, users can create notebooks, but since they do not have filer secrets created, there will be no mounting of filers.
-The User must navigate to a page to manage their filers, after that has been done the [ontap-cvo controller](#ontap-cvo-controller) will act and create the secrets necessary for the [mutating webhook](#mutating-webhook) to work its magic.
+The user then manages their filers in the UI which creates a configmap that the [ontap-cvo controller](#ontap-cvo-controller) consumes to create the secrets and configmaps necessary for the [mutating webhook](#mutating-webhook) to mount user requested filer paths to running notebook pods.
 
 ## Diagram of the Ecosystem
 ![Image of ecosystem](NetAppEcosys.png)
+
+----------------------
+## Unique Terminology
+
+### Shares
+In Ontap CVO, we have something known as `shares`. This is what our controller interacts and uses when determining where to place the user requested path. 
+Broadly speaking to get to the `share` level we have to go through an `SVM`, which for us tends to be represented as the field or sas filer, as in fld9filersvm. After that there is the `volume` associated with that `SVM`. With that `volume` there is a `QTree` associated with that and then finally a `share` with the `QTree` as in
+
+`SVM -> Volume -> Qtree -> Share`
+
+Where `share` is what we have access to and helps to determine the path in the ontap cvo solution that we need the user requested filer path (that they get from their avd) to be associated to.
