@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
@@ -1103,7 +1103,6 @@
 <h1 id="netapp-or-filer-mounting">Netapp or "Filer" Mounting<a class="headerlink" href="#netapp-or-filer-mounting" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-netapp-in-relation-to-our-legacy-filers">What is NetApp in relation to our legacy filers?<a class="headerlink" href="#what-is-netapp-in-relation-to-our-legacy-filers" title="Permanent link">&para;</a></h2>
 <p>Netapp CVO ONTAP is the solution on which our legacy filers moved to.</p>
-<hr />
 <h2 id="integration-with-netapp">Integration with NetApp<a class="headerlink" href="#integration-with-netapp" title="Permanent link">&para;</a></h2>
 <p>Our integration with the cloud volumes relies on the use of the <a href="https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main">meta-fuse-csi-plugin</a> and is deployed and persisted in gitlab argocd manifests under <code>raw-manifests/netapp/metafuse-driver.yaml</code>. We keep a copy of the meta-fuse-csi-plugin in our <a href="https://github.com/StatCan/goofys/tree/master/meta-fuse-csi-plugin">goofys fork</a> as we must modify the underlying <code>goofys</code> image and having it in one repository greatly simplifies deployment.</p>
 <h3 id="why-do-we-need-to-modify-goofys">Why do we need to modify goofys?<a class="headerlink" href="#why-do-we-need-to-modify-goofys" title="Permanent link">&para;</a></h3>
@@ -1116,7 +1115,6 @@ After updating this you will need to synch up argo to load this new configmap in
 <p>We need to use a custom plugin as noted <a href="https://github.com/pfnet-research/meta-fuse-csi-plugin?tab=readme-ov-file#deploy-plugin">in the documentation here</a>. For this, we'd need to build <a href="https://github.com/pfnet-research/meta-fuse-csi-plugin/blob/main/cmd/csi_driver/Dockerfile">this dockerfile</a> and then deployed with this <a href="https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main/deploy">yaml</a></p>
 <h3 id="deployment-checklist_1">Deployment checklist<a class="headerlink" href="#deployment-checklist_1" title="Permanent link">&para;</a></h3>
 <p>This is deployed in the gitlab argocd manifests under <a href="https://gitlab.k8s.cloud.statcan.ca/business-transformation/aaw/aaw-argocd-manifests/-/blob/das-prod-cc-00/raw-manifests/netapp/metafuse-driver.yaml?ref_type=heads">raw-manifests/netapp/metafuse-driver.yaml</a></p>
-<hr />
 <h2 id="controllers">Controllers<a class="headerlink" href="#controllers" title="Permanent link">&para;</a></h2>
 <p>There are <strong>two</strong> controllers that this feature requires. The first is to add <code>labels</code> to the namespace as that is what the <code>mutatingwebhook</code> uses in order to inject the filer sidecar spec into created notebook pods. The second is to automatically generate secrets based on values in a user configmap.</p>
 <h3 id="namespace-controller"><a href="https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/cmd/namespace.go">Namespace Controller</a><a class="headerlink" href="#namespace-controller" title="Permanent link">&para;</a></h3>
@@ -1148,7 +1146,6 @@ The controller then cleans up and creates or modifies the <code>existing-shares<
 <p>For more details on how this controller works, please refer to the <a href="https://github.com/StatCan/aaw-kubeflow-profiles-controller/blob/profiles-controller-aaw2.0/ontap-cvo.md">README</a></p>
 <h3 id="deployment-checklist_3">Deployment Checklist<a class="headerlink" href="#deployment-checklist_3" title="Permanent link">&para;</a></h3>
 <p>This is currently built off of the <code>profiles-controller</code> so the deployment here is the same as the <a href="#namespace-controller">namespace controller</a> above. Just make sure that you are on the <a href="https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0">profiles-controller-aaw2.0 branch</a></p>
-<hr />
 <h2 id="mutating-webhook"><a href="https://github.com/StatCan/filer-sidecar-injector">Mutating Webhook</a><a class="headerlink" href="#mutating-webhook" title="Permanent link">&para;</a></h2>
 <p>The filer-sidecar-injector repo is a mutatingwebhook that injects sidecar configuration for notebook pods.
 For more in-depth information of how the mutating webhook works, its best to reference the <a href="https://github.com/morvencao/kube-sidecar-injector">upstream repo</a> with more details in the <a href="https://medium.com/ibm-cloud/diving-into-kubernetes-mutatingadmissionwebhook-6ef3c5695f74">medium article</a></p>
@@ -1168,13 +1165,11 @@ The manage-filers page is responsible for the following tasks;
 - The submit button adds a new entry to the <code>requesting-shares</code> CM, which gets ingested by the ontap-controller
 - Users can delete entries from the <code>existing-shares</code> CM, which is the CM ingested by the filer-sidecar-injector
 - Display any errors from the <code>shares-errors</code> CM, which gets populated by the ontap-controller when an error occurs during the <code>requesting-shares</code> ingestion</p>
-<hr />
 <h2 id="behaviour-of-the-ecosystem">Behaviour of the Ecosystem<a class="headerlink" href="#behaviour-of-the-ecosystem" title="Permanent link">&para;</a></h2>
 <p>User logs in and creates their profile, the <a href="#namespace-controller">Namespace Controller</a> then adds the label for the <a href="#mutating-webhook">mutatingwebhook</a>.
 The user then manages their filers in the UI which creates a configmap that the <a href="#ontap-cvo-controller">ontap-cvo controller</a> consumes to create the secrets and configmaps necessary for the <a href="#mutating-webhook">mutating webhook</a> to mount user requested filer paths to running notebook pods.</p>
 <h2 id="diagram-of-the-ecosystem">Diagram of the Ecosystem<a class="headerlink" href="#diagram-of-the-ecosystem" title="Permanent link">&para;</a></h2>
 <p><img alt="Image of ecosystem" src="../NetAppEcosys.png" /></p>
-<hr />
 <h2 id="unique-terminology">Unique Terminology<a class="headerlink" href="#unique-terminology" title="Permanent link">&para;</a></h2>
 <h3 id="shares">Shares<a class="headerlink" href="#shares" title="Permanent link">&para;</a></h3>
 <p>In Ontap CVO, we have something known as <code>shares</code>. This is what our controller interacts and uses when determining where to place the user requested path. 
