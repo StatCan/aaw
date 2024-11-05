@@ -91,7 +91,7 @@ User logs in and creates their profile, the [Namespace Controller](#namespace-co
 The user then manages their filers in the UI which creates a configmap that the [ontap-cvo controller](#ontap-cvo-controller) consumes to create the secrets and configmaps necessary for the [mutating webhook](#mutating-webhook) to mount user requested filer paths to running notebook pods.
 
 ## Diagram of the Ecosystem
-![Image of ecosystem](NetAppEcosys.png)
+![Image of ecosystem](netapp-Integration-arch.png)
 
 
 ## Unique Terminology
