@@ -1169,7 +1169,7 @@ The manage-filers page is responsible for the following tasks;
 <p>User logs in and creates their profile, the <a href="#namespace-controller">Namespace Controller</a> then adds the label for the <a href="#mutating-webhook">mutatingwebhook</a>.
 The user then manages their filers in the UI which creates a configmap that the <a href="#ontap-cvo-controller">ontap-cvo controller</a> consumes to create the secrets and configmaps necessary for the <a href="#mutating-webhook">mutating webhook</a> to mount user requested filer paths to running notebook pods.</p>
 <h2 id="diagram-of-the-ecosystem">Diagram of the Ecosystem<a class="headerlink" href="#diagram-of-the-ecosystem" title="Permanent link">&para;</a></h2>
-<p><img alt="Image of ecosystem" src="../NetAppEcosys.png" /></p>
+<p><img alt="Image of ecosystem" src="../netapp-Integration-arch.png" /></p>
 <h2 id="unique-terminology">Unique Terminology<a class="headerlink" href="#unique-terminology" title="Permanent link">&para;</a></h2>
 <h3 id="shares">Shares<a class="headerlink" href="#shares" title="Permanent link">&para;</a></h3>
 <p>In Ontap CVO, we have something known as <code>shares</code>. This is what our controller interacts and uses when determining where to place the user requested path. 
