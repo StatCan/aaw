@@ -3,8 +3,6 @@
 ## What is NetApp in relation to our legacy filers?
 Netapp CVO ONTAP is the solution on which our legacy filers moved to.
 
------------------------
-
 ## Integration with NetApp
 Our integration with the cloud volumes relies on the use of the [meta-fuse-csi-plugin](https://github.com/pfnet-research/meta-fuse-csi-plugin/tree/main) and is deployed and persisted in gitlab argocd manifests under `raw-manifests/netapp/metafuse-driver.yaml`. We keep a copy of the meta-fuse-csi-plugin in our [goofys fork](https://github.com/StatCan/goofys/tree/master/meta-fuse-csi-plugin) as we must modify the underlying `goofys` image and having it in one repository greatly simplifies deployment.
 
@@ -21,8 +19,6 @@ We need to use a custom plugin as noted [in the documentation here](https://gith
 
 ### Deployment checklist
 This is deployed in the gitlab argocd manifests under [raw-manifests/netapp/metafuse-driver.yaml](https://gitlab.k8s.cloud.statcan.ca/business-transformation/aaw/aaw-argocd-manifests/-/blob/das-prod-cc-00/raw-manifests/netapp/metafuse-driver.yaml?ref_type=heads)
-
------------------------
 
 ## Controllers
 There are **two** controllers that this feature requires. The first is to add `labels` to the namespace as that is what the `mutatingwebhook` uses in order to inject the filer sidecar spec into created notebook pods. The second is to automatically generate secrets based on values in a user configmap.
@@ -65,7 +61,6 @@ For more details on how this controller works, please refer to the [README](http
 ### Deployment Checklist
 This is currently built off of the `profiles-controller` so the deployment here is the same as the [namespace controller](#namespace-controller) above. Just make sure that you are on the [profiles-controller-aaw2.0 branch](https://github.com/StatCan/aaw-kubeflow-profiles-controller/tree/profiles-controller-aaw2.0)
 
------------------------
 
 ## [Mutating Webhook](https://github.com/StatCan/filer-sidecar-injector)
 The filer-sidecar-injector repo is a mutatingwebhook that injects sidecar configuration for notebook pods.
@@ -90,7 +85,6 @@ The manage-filers page is responsible for the following tasks;
 - Users can delete entries from the `existing-shares` CM, which is the CM ingested by the filer-sidecar-injector
 - Display any errors from the `shares-errors` CM, which gets populated by the ontap-controller when an error occurs during the `requesting-shares` ingestion
 
------------------------
 
 ## Behaviour of the Ecosystem
 User logs in and creates their profile, the [Namespace Controller](#namespace-controller) then adds the label for the [mutatingwebhook](#mutating-webhook).
@@ -99,7 +93,7 @@ The user then manages their filers in the UI which creates a configmap that the 
 ## Diagram of the Ecosystem
 ![Image of ecosystem](NetAppEcosys.png)
 
-----------------------
+
 ## Unique Terminology
 
 ### Shares
