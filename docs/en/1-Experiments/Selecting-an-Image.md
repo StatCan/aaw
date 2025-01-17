@@ -25,7 +25,7 @@ The jupyter notebooks are great launchpads for analytics including machine learn
 
 For users interested in working with PyTorch, there is support for quickly installing the required packaged.
 in the terminal on your created notebook, run the following command:
-`mamba clean -a -y && mamba create -n torch && mamba install -n torch -c conda-forge -c pytorch -c nvidia -y --file /usr/bin/requirements.txt`
+`mamba clean -a -y && mamba create -n torch && mamba install -n torch -c conda-forge -c pytorch -c nvidia -y --file /usr/local/bin/requirements.txt`
 The PyTorch packages (torch, torchvision, and torchaudio) will be installed in the `torch` conda environment.
 You must activate this environment to use PyTorch.
 The environment can also be added to the to the JupyterLab Launcher with the following command:
