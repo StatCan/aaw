@@ -21,11 +21,20 @@ When selecting an image, you have 3 main options:
     data transformation, numerical simulation, statistical
     modelling, machine learning and more.
 
-The jupyter notebooks are great launchpads for analytics including machine learning. The `jupyterlab-cpu` image gives a good core experience for python, including common packages such as `numpy`, `pandas` and `scikit-learn`. If you're interested specifically in using **_TensorFlow_** or **_PyTorch_**, we also have `jupyterlab-tensorflow` and `jupyterlab-pytorch` which come with those tools pre-installed.
+The jupyter notebooks are great launchpads for analytics including machine learning. The `jupyterlab-cpu` image gives a good core experience for python, including common packages such as `numpy`, `pandas` and `scikit-learn`. If you're interested specifically in using **_TensorFlow_**, we also have `jupyterlab-tensorflow` which come with those tools pre-installed.
 
-For the `jupyterlab-pytorch` image, the PyTorch packages (torch, torchvision, and torchaudio) are installed in the `torch` conda environment. You must activate this environment to use PyTorch.
+For users interested in working with PyTorch, there is support for quickly installing the required packaged.
+In the terminal on your created notebook, run the following command:
+`mamba clean -a -y && mamba create -n torch && mamba install -n torch -c conda-forge -c pytorch -c nvidia -y --file /usr/local/bin/requirements.txt`
+The PyTorch packages (torch, torchvision, and torchaudio) will be installed in the `torch` conda environment.
+You must activate this environment using `mamba activate torch` to use PyTorch.
+The environment can also be added to the to the JupyterLab Launcher with the following command:
 
-For the `jupyterlab-cpu`, `jupyterlab-tensorflow`, and `jupyterlab-pytorch` images, in the default shell the `conda activate` command may not work. This is due to the environment not being initialized properly. In this case run `bash`, you should see the AAW logo and a few instructions appear. After this `conda activate` should work properly. If you see the AAW logo on startup it means the environment is correctly initialized and `conda activate` should work properly. A fix for this bug is in the works, once this is fixed this paragraph will be removed.
+```bash
+python -m ipykernel install --user --name "torch" --display-name "PyTorch"
+```
+
+For the `jupyterlab-cpu`, and `jupyterlab-tensorflow` images, in the default shell the `conda activate` command may not work. This is due to the environment not being initialized properly. In this case run `bash`, you should see the AAW logo and a few instructions appear. After this `conda activate` should work properly. If you see the AAW logo on startup it means the environment is correctly initialized and `conda activate` should work properly. A fix for this bug is in the works, once this is fixed this paragraph will be removed.
 
 Each image comes pre-loaded with VS Code in the browser if you prefer a full IDE experience.
 
