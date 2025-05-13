@@ -16,7 +16,7 @@ Welcome to the team! :)
 |            | <https://www.youtube.com/watch?v=4ht22ReBjno&ab_channel=Deis%2CInc.>         |
 |            | <https://www.youtube.com/watch?v=PziYflu8cB8&ab_channel=Fireship>            |
 
-You can use the interactive learning on [KataCoda](https://www.katacoda.com/statcan), but not completing or understanding everything is alright as long as you have some idea.
+You can use the interactive learning on [Killercoda](https://killercoda.com/), but not completing or understanding everything is alright as long as you have some idea.
 
 ## Good Starter GitHub Repos to Explore
 
