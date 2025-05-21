@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block header %}
+<!-- Injects depreciation banner over all pages -->
+<div style="background-color: #ffdddd; color: #a00; padding: 1rem; text-align: center; font-weight: bold; font-size: 0.75rem;">
+    ⚠️ This development documentation is deprecated. Please visit <a href="https://zone.pages.cloud.statcan.ca/docs/dev/" style="color: #a00; text-decoration: underline;">The Zone dev documentation site</a>.
+</div>
+{{ super() }}
+{% endblock %}

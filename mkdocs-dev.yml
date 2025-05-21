@@ -26,6 +26,10 @@ theme:
   palette:
     primary: yellow
     accent: blue
+
+  # Injects depreciation banner 
+  custom_dir: overrides-dev
+
 nav:
   - Features:
     - Getting Started: getting-started/index.md
